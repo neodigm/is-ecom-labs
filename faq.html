@@ -9,7 +9,22 @@
   </head>
   <body>
 <style>
-.ltd_buttn {background-color: #20628F;}
+.btn-brand {
+	font-size: 1.100em;
+	font-weight: 200;
+	vertical-align: middle;
+}
+.btn-brand, .btn-brand-small {
+    background-color: #297FB8;
+}
+.btn-brand:hover, .btn-brand-small:hover {
+    background-color: #004C85;
+}
+.btn-brand:focus, .btn-brand-small:focus {
+    background-color: #003B64;
+}
+
+
 .respn_caption {color: #999; font-size: 48px; font-weight: 100; font-family: 'Roboto', sans-serif;letter-spacing: -3px;line-height: 84%;margin-bottom: 24px !important}
 .respn_caption_sub {color: #444; font-size: 32px; font-weight: 100; font-family: 'Roboto', sans-serif;letter-spacing: -1px;line-height: 84%;margin-bottom: 24px !important;}
 .respn_caption_h3  {color: #444; font-size: 24px; font-weight: 100; font-family: 'Roboto', sans-serif;letter-spacing: -1px;line-height: 84%;margin-bottom: 24px !important;}
@@ -17,7 +32,7 @@
 .respn_split {padding: 0px !important;}
 .respn_instr {color: #000; font-size: 16px; font-weight: 400; font-family: 'Roboto', sans-serif;}
 .respn_contact {color: #000; font-size: 14px; font-weight: 400; font-family: 'Roboto', sans-serif;}
-.respn_button_grp {min-height: 56px !important;}
+.xxxxrespn_button_grp .xxxxresp_btn_brand {min-height: 112px !important;}
 .togFAQs {width: 100%;padding: 16px;}
 .faq_quest {color: #000; font-size: 16px; font-weight: 400; font-family: 'Roboto', sans-serif;padding: 8px;min-height: 56px;cursor: pointer;
 	transition: background-color 480ms;
@@ -26,13 +41,13 @@
 	transition: background-color 400ms;
 	-webkit-transition: background-color 400ms;}
 .faq_ansr  {color: #000; font-size: 16px; font-weight: 400; font-family: 'Roboto', sans-serif;padding: 8px;min-height: 56px;background-color: #FFF;}
-.respn_arw {color: #999;}
-.respn_ico {color: #999;}
+.respn_arw {color: #888;}
+.respn_ico {color: #888;}
 .st_hd_ini {display: none;}
 </style>  
 <br>
-<article class="row">
-	<header class="small-12 large-7 columns">
+<section class="row">
+	<header class="columns small-12 medium-12 large-7">
 		<p class="respn_caption text-left">
 Customer Service
 		</p>	
@@ -40,14 +55,21 @@ Customer Service
 Welcome to LTD Commodities.com. We are committed to providing unique products at tremendous values for our customers. By clicking through the menu you will find detailed information on our policies, guarantee and answers to many of the questions you may have. Our goal is to help make your shopping experience with LTD a pleasant one.
 		</p>
 	</header>
-	<nav class="small-12 large-5 columns">
-		<ul class="stack radius secondary button-group even-3">
-		  <li><a href="#" class="ltd_buttn button small respn_button_grp">Forgot User ID / Password</a></li>
-		  <li><a href="#" class="ltd_buttn button small respn_button_grp">View My Account</a></li>
-		  <li><a href="#" class="ltd_buttn button small respn_button_grp">Request Account Information</a></li>
+	<nav class="columns small-12 medium-12 large-5">
+		<ul class="stack radius button-group show-for-large-up">
+		  <li><a href="#" class="button btn-brand">Forgot User Name / Password</a></li>
+		  <li><a href="#" class="button btn-brand">View My Account</a></li>
+		  <li><a href="#" class="button btn-brand">Request Account Information</a></li>
 		</ul>
+<div class="text-center">
+		<ul class="button-group round show-for-medium">
+		  <li><a href="#" class="button small">Forgot User Name / Password</a></li>
+		  <li><a href="#" class="button small">View My Account</a></li>
+		  <li><a href="#" class="button small">Request Account Information</a></li>
+		</ul>
+</div>
 	</nav>
-</article>
+</section>
 <br>
 <nav class="row">
 	<p class="respn_caption_sub text-center"><span data-tog="sub_faq" class="togCont">Frequently Asked Questions &nbsp; <i class="sub_faq respn_arw fa fa-angle-up fa-lg"></i></span></p>
