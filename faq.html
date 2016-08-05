@@ -34,12 +34,31 @@
 .respn_contact {color: #000; font-size: 14px; font-weight: 400; font-family: 'Roboto', sans-serif;}
 .xxxxrespn_button_grp .xxxxresp_btn_brand {min-height: 112px !important;}
 .togFAQs {width: 100%;padding: 16px;}
-.faq_quest {color: #000; font-size: 16px; font-weight: 400; font-family: 'Roboto', sans-serif;padding: 8px;min-height: 56px;cursor: pointer;
-	transition: background-color 480ms;
-	-webkit-transition: background-color 480ms;}
-.faq_quest:hover {color: #FFF;background-color: #2284a1;
-	transition: background-color 400ms;
-	-webkit-transition: background-color 400ms;}
+
+.faq-quest {
+	position: relative;
+	min-height: 56px; cursor: pointer;
+	transition: background-color 80ms;
+	-webkit-transition: background-color 80ms;
+}
+
+.faq-quest p {
+	color: #000; font-size: 18px; font-weight: 400; font-family: 'Roboto', sans-serif;
+}
+
+.faq-quest:hover {
+	background-color: #004C85;
+	transition: background-color 80ms;
+	-webkit-transition: background-color 80ms;
+}
+
+.faq-quest:hover p {
+	color: #FFF;
+}
+
+
+
+
 .faq_ansr  {color: #000; font-size: 16px; font-weight: 400; font-family: 'Roboto', sans-serif;padding: 8px;min-height: 56px;background-color: #FFF;}
 .respn_arw {color: #888;}
 .respn_ico {color: #888;}
@@ -56,18 +75,25 @@ Welcome to LTD Commodities.com. We are committed to providing unique products at
 		</p>
 	</header>
 	<nav class="columns small-12 medium-12 large-5">
-		<ul class="stack radius button-group show-for-large-up">
-		  <li><a href="#" class="button btn-brand">Forgot User Name / Password</a></li>
-		  <li><a href="#" class="button btn-brand">View My Account</a></li>
-		  <li><a href="#" class="button btn-brand">Request Account Information</a></li>
+		<ul class="stack button-group show-for-large-up radius">
+			<li><a href="#" class="button btn-brand">Forgot User Name / Password</a></li>
+			<li><a href="#" class="button btn-brand">View My Account</a></li>
+			<li><a href="#" class="button btn-brand">Request Account Information</a></li>
 		</ul>
-<div class="text-center">
-		<ul class="button-group round show-for-medium">
-		  <li><a href="#" class="button small">Forgot User Name / Password</a></li>
-		  <li><a href="#" class="button small">View My Account</a></li>
-		  <li><a href="#" class="button small">Request Account Information</a></li>
-		</ul>
-</div>
+		<div class="show-for-medium text-center">
+			<ul class="button-group round">
+				<li><a href="#" class="button btn-brand small">Forgot User Name / Password</a></li>
+				<li><a href="#" class="button btn-brand small">View My Account</a></li>
+				<li><a href="#" class="button btn-brand small">Request Account Information</a></li>
+			</ul>
+		</div>
+		<div class="show-for-small text-center">
+			<ul class="stack button-group radius">
+				<li><a href="#" class="button btn-brand tiny">Forgot User Name / Password</a></li>
+				<li><a href="#" class="button btn-brand tiny">View My Account</a></li>
+				<li><a href="#" class="button btn-brand tiny">Request Account Information</a></li>
+			</ul>
+		</div>
 	</nav>
 </section>
 <br>
@@ -77,28 +103,37 @@ Welcome to LTD Commodities.com. We are committed to providing unique products at
 <section id="sub_faq">
 	<section class="row">
 		<div class="small-12 large-6 columns">
-			<article class="panel radius text-center faq_quest">How do I open an account with LTD?</article>
-				<div class="st_hd_ini st_hd panel radius text-left faq_ansr">Simply request a catalog, place an order or go to <a href="http://qa.ltdcommodities.com/my_account/index.jsp">My Account</a> to create a new account.</div>
-			<article class="panel radius text-center faq_quest">How do I request a catalog?</article>
-				<div class="st_hd_ini st_hd panel radius text-left faq_ansr">If you are looking to receive a free print catalog, simply click on Send Me Free Catalogs & E-mail Offers and you will receive our most recent catalog in 2 to 3 weeks. You can also request one through an agent by calling (847) 295-5532 24 hours a day 7 days a week. Our entire catalog is also available online, so shop today!</div>
-			<article class="panel radius text-center faq_quest">What will my shipping costs be?</article>
-				<div class="st_hd_ini st_hd panel radius text-left faq_ansr">answer</div>
-			<article class="panel radius text-center faq_quest">Can I send the order as a gift?</article>
-				<div class="st_hd_ini st_hd panel radius text-left faq_ansr">answer</div>
-			<article class="panel radius text-center faq_quest">How do I check the status of my order?</article>
-				<div class="st_hd_ini st_hd panel radius text-left faq_ansr">answer</div>
+			<article class="panel radius text-center faq-quest"><p>How do I open an account with LTD?</p></article>
+				<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>Simply request a catalog, place an order or go to <a href="http://qa.ltdcommodities.com/my_account/index.jsp">My Account</a> to create a new account.
+<br><br>
+If you would like to provide your business information to maximize your shopping opportunities, you may do so by selecting the "I'd like to provide my business information?" check box during checkout or the account creation process. In doing so, we will send you bonus catalogs to share with colleagues, and you will become eligible for exclusive offers and promotions.
+				</p></div>
+			<article class="panel radius text-center faq-quest"><p>How do I request a catalog?</p></article>
+				<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>
+If you are looking to receive a free print catalog, simply
+click on<a href="/catalog_request/index.jsp"> Send Me Free Catalogs &amp; E-mail Offers</a> and
+you will receive our most recent catalog in 2 to 3 weeks. You can also request one through an
+agent by calling <span style=" color: #ED1C24;">(847) 295-5532</span> 24 hours a day 7 days a week. Our entire
+catalog is also available online, <a href="/index.jsp">so shop today!</a>
+				</p></div>
+			<article class="panel radius text-center faq-quest"><p>What will my shipping costs be?</p></article>
+				<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>answer</p></div>
+			<article class="panel radius text-center faq-quest"><p>Can I send the order as a gift?</p></article>
+				<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>answer</p></div>
+			<article class="panel radius text-center faq-quest"><p>How do I check the status of my order?</p></article>
+				<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>answer</p></div>
 		</div>
 		<div class="small-12 large-6 columns">
-			<article class="panel radius text-center faq_quest">What is your return policy?</article>
-				<div class="st_hd_ini st_hd panel radius text-left faq_ansr">answer</div>
-			<article class="panel radius text-center faq_quest">How do I update My Account information?</article>
-				<div class="st_hd_ini st_hd panel radius text-left faq_ansr">answer</div>
-			<article class="panel radius text-center faq_quest">What do you do with my email address?</article>
-				<div class="st_hd_ini st_hd panel radius text-left faq_ansr">answer</div>
-			<article class="panel radius text-center faq_quest">What kind of information do you collect from me when I visit your web site?</article>
-				<div class="st_hd_ini st_hd panel radius text-left faq_ansr">answer</div>
-			<article class="panel radius text-center faq_quest">Does LTD offer secure online ordering?</article>
-				<div class="st_hd_ini st_hd panel radius text-left faq_ansr">answer</div>
+			<article class="panel radius text-center faq-quest"><p>What is your return policy?</p></article>
+				<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>answer</p></div>
+			<article class="panel radius text-center faq-quest"><p>How do I update My Account information?</p></article>
+				<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>answer</p></div>
+			<article class="panel radius text-center faq-quest"><p>What do you do with my email address?</p></article>
+				<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>answer</p></div>
+			<article class="panel radius text-center faq-quest"><p>What kind of information do you collect from me when I visit your web site?</p></article>
+				<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>answer</p></div>
+			<article class="panel radius text-center faq-quest"><p>Does LTD offer secure online ordering?</p></article>
+				<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>answer</p></div>
 		</div>
 	</section>
 	<section class="row">
@@ -129,16 +164,16 @@ Welcome to LTD Commodities.com. We are committed to providing unique products at
 				<br>
 				<h3 id="address_change" class="respn_caption_h3">Address Change</h3>
 				<div class="small-12 large-6 columns">
-					<article class="panel radius text-center faq_quest">Question</article>
-						<div class="st_hd_ini st_hd panel radius text-left faq_ansr">answer</div>
-					<article class="panel radius text-center faq_quest">Question</article>
-						<div class="st_hd_ini st_hd panel radius text-left faq_ansr">answer</div>
+					<article class="panel radius text-center faq-quest"><p>Question</p></article>
+						<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>answer</p></div>
+					<article class="panel radius text-center faq-quest"><p>Question</p></article>
+						<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>answer</p></div>
 				</div>
 				<div class="small-12 large-6 columns">
-					<article class="panel radius text-center faq_quest">Question</article>
-						<div class="st_hd_ini st_hd panel radius text-left faq_ansr">answer</div>
-					<article class="panel radius text-center faq_quest">Question</article>
-						<div class="st_hd_ini st_hd panel radius text-left faq_ansr">answer</div>
+					<article class="panel radius text-center faq-quest"><p>Question</p></article>
+						<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>answer</p></div>
+					<article class="panel radius text-center faq-quest"><p>Question</p></article>
+						<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>answer</p></div>
 				</div>
 			</div>
 		</section>
@@ -147,16 +182,16 @@ Welcome to LTD Commodities.com. We are committed to providing unique products at
 				<br>
 				<h3 id="catalogs" class="respn_caption_h3">Catalogs</h3>
 				<div class="small-12 large-6 columns">
-					<article class="panel radius text-center faq_quest">Question</article>
-						<div class="st_hd_ini st_hd panel radius text-left faq_ansr">answer</div>
-					<article class="panel radius text-center faq_quest">Question</article>
-						<div class="st_hd_ini st_hd panel radius text-left faq_ansr">answer</div>
+					<article class="panel radius text-center faq-quest"><p>Question</p></article>
+						<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>answer</p></div>
+					<article class="panel radius text-center faq-quest"><p>Question</p></article>
+						<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>answer</p></div>
 				</div>
 				<div class="small-12 large-6 columns">
-					<article class="panel radius text-center faq_quest">Question</article>
-						<div class="st_hd_ini st_hd panel radius text-left faq_ansr">answer</div>
-					<article class="panel radius text-center faq_quest">Question</article>
-						<div class="st_hd_ini st_hd panel radius text-left faq_ansr">answer</div>
+					<article class="panel radius text-center faq-quest"><p>Question</p></article>
+						<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>answer</p></div>
+					<article class="panel radius text-center faq-quest"><p>Question</p></article>
+						<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>answer</p></div>
 				</div>
 			</div>
 		</section>
@@ -165,16 +200,16 @@ Welcome to LTD Commodities.com. We are committed to providing unique products at
 				<br>
 				<h3 id="ordering" class="respn_caption_h3">Ordering</h3>
 				<div class="small-12 large-6 columns">
-					<article class="panel radius text-center faq_quest">Question</article>
-						<div class="st_hd_ini st_hd panel radius text-left faq_ansr">answer</div>
-					<article class="panel radius text-center faq_quest">Question</article>
-						<div class="st_hd_ini st_hd panel radius text-left faq_ansr">answer</div>
+					<article class="panel radius text-center faq-quest"><p>Question</p></article>
+						<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>answer</p></div>
+					<article class="panel radius text-center faq-quest"><p>Question</p></article>
+						<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>answer</p></div>
 				</div>
 				<div class="small-12 large-6 columns">
-					<article class="panel radius text-center faq_quest">Question</article>
-						<div class="st_hd_ini st_hd panel radius text-left faq_ansr">answer</div>
-					<article class="panel radius text-center faq_quest">Question</article>
-						<div class="st_hd_ini st_hd panel radius text-left faq_ansr">answer</div>
+					<article class="panel radius text-center faq-quest"><p>Question</p></article>
+						<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>answer</p></div>
+					<article class="panel radius text-center faq-quest"><p>Question</p></article>
+						<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>answer</p></div>
 				</div>
 			</div>
 		</section>
@@ -183,16 +218,16 @@ Welcome to LTD Commodities.com. We are committed to providing unique products at
 				<br>
 				<h3 id="pay_online_help" class="respn_caption_h3">Pay Online Help</h3>
 				<div class="small-12 large-6 columns">
-					<article class="panel radius text-center faq_quest">Question</article>
-						<div class="st_hd_ini st_hd panel radius text-left faq_ansr">answer</div>
-					<article class="panel radius text-center faq_quest">Question</article>
-						<div class="st_hd_ini st_hd panel radius text-left faq_ansr">answer</div>
+					<article class="panel radius text-center faq-quest"><p>Question</p></article>
+						<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>answer</p></div>
+					<article class="panel radius text-center faq-quest"><p>Question</p></article>
+						<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>answer</p></div>
 				</div>
 				<div class="small-12 large-6 columns">
-					<article class="panel radius text-center faq_quest">Question</article>
-						<div class="st_hd_ini st_hd panel radius text-left faq_ansr">answer</div>
-					<article class="panel radius text-center faq_quest">Question</article>
-						<div class="st_hd_ini st_hd panel radius text-left faq_ansr">answer</div>
+					<article class="panel radius text-center faq-quest"><p>Question</p></article>
+						<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>answer</p></div>
+					<article class="panel radius text-center faq-quest"><p>Question</p></article>
+						<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>answer</p></div>
 				</div>
 			</div>
 		</section>
@@ -201,16 +236,16 @@ Welcome to LTD Commodities.com. We are committed to providing unique products at
 				<br>
 				<h3 id="privacy_policy" class="respn_caption_h3">Privacy Policy</h3>
 				<div class="small-12 large-6 columns">
-					<article class="panel radius text-center faq_quest">Question</article>
-						<div class="st_hd_ini st_hd panel radius text-left faq_ansr">answer</div>
-					<article class="panel radius text-center faq_quest">Question</article>
-						<div class="st_hd_ini st_hd panel radius text-left faq_ansr">answer</div>
+					<article class="panel radius text-center faq-quest"><p>Question</p></article>
+						<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>answer</p></div>
+					<article class="panel radius text-center faq-quest"><p>Question</p></article>
+						<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>answer</p></div>
 				</div>
 				<div class="small-12 large-6 columns">
-					<article class="panel radius text-center faq_quest">Question</article>
-						<div class="st_hd_ini st_hd panel radius text-left faq_ansr">answer</div>
-					<article class="panel radius text-center faq_quest">Question</article>
-						<div class="st_hd_ini st_hd panel radius text-left faq_ansr">answer</div>
+					<article class="panel radius text-center faq-quest"><p>Question</p></article>
+						<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>answer</p></div>
+					<article class="panel radius text-center faq-quest"><p>Question</p></article>
+						<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>answer</p></div>
 				</div>
 			</div>
 		</section>
@@ -219,16 +254,16 @@ Welcome to LTD Commodities.com. We are committed to providing unique products at
 				<br>
 				<h3 id="product" class="respn_caption_h3">Product</h3>
 				<div class="small-12 large-6 columns">
-					<article class="panel radius text-center faq_quest">Question</article>
-						<div class="st_hd_ini st_hd panel radius text-left faq_ansr">answer</div>
-					<article class="panel radius text-center faq_quest">Question</article>
-						<div class="st_hd_ini st_hd panel radius text-left faq_ansr">answer</div>
+					<article class="panel radius text-center faq-quest"><p>Question</p></article>
+						<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>answer</p></div>
+					<article class="panel radius text-center faq-quest"><p>Question</p></article>
+						<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>answer</p></div>
 				</div>
 				<div class="small-12 large-6 columns">
-					<article class="panel radius text-center faq_quest">Question</article>
-						<div class="st_hd_ini st_hd panel radius text-left faq_ansr">answer</div>
-					<article class="panel radius text-center faq_quest">Question</article>
-						<div class="st_hd_ini st_hd panel radius text-left faq_ansr">answer</div>
+					<article class="panel radius text-center faq-quest"><p>Question</p></article>
+						<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>answer</p></div>
+					<article class="panel radius text-center faq-quest"><p>Question</p></article>
+						<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>answer</p></div>
 				</div>
 			</div>
 		</section>
@@ -237,16 +272,16 @@ Welcome to LTD Commodities.com. We are committed to providing unique products at
 				<br>
 				<h3 id="returns" class="respn_caption_h3">Returns</h3>
 				<div class="small-12 large-6 columns">
-					<article class="panel radius text-center faq_quest">Question</article>
-						<div class="st_hd_ini st_hd panel radius text-left faq_ansr">answer</div>
-					<article class="panel radius text-center faq_quest">Question</article>
-						<div class="st_hd_ini st_hd panel radius text-left faq_ansr">answer</div>
+					<article class="panel radius text-center faq-quest"><p>Question</p></article>
+						<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>answer</p></div>
+					<article class="panel radius text-center faq-quest"><p>Question</p></article>
+						<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>answer</p></div>
 				</div>
 				<div class="small-12 large-6 columns">
-					<article class="panel radius text-center faq_quest">Question</article>
-						<div class="st_hd_ini st_hd panel radius text-left faq_ansr">answer</div>
-					<article class="panel radius text-center faq_quest">Question</article>
-						<div class="st_hd_ini st_hd panel radius text-left faq_ansr">answer</div>
+					<article class="panel radius text-center faq-quest"><p>Question</p></article>
+						<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>answer</p></div>
+					<article class="panel radius text-center faq-quest"><p>Question</p></article>
+						<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>answer</p></div>
 				</div>
 			</div>
 		</section>
@@ -255,16 +290,16 @@ Welcome to LTD Commodities.com. We are committed to providing unique products at
 				<br>
 				<h3 id="security" class="respn_caption_h3">Security</h3>
 				<div class="small-12 large-6 columns">
-					<article class="panel radius text-center faq_quest">Question</article>
-						<div class="st_hd_ini st_hd panel radius text-left faq_ansr">answer</div>
-					<article class="panel radius text-center faq_quest">Question</article>
-						<div class="st_hd_ini st_hd panel radius text-left faq_ansr">answer</div>
+					<article class="panel radius text-center faq-quest"><p>Question</p></article>
+						<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>answer</p></div>
+					<article class="panel radius text-center faq-quest"><p>Question</p></article>
+						<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>answer</p></div>
 				</div>
 				<div class="small-12 large-6 columns">
-					<article class="panel radius text-center faq_quest">Question</article>
-						<div class="st_hd_ini st_hd panel radius text-left faq_ansr">answer</div>
-					<article class="panel radius text-center faq_quest">Question</article>
-						<div class="st_hd_ini st_hd panel radius text-left faq_ansr">answer</div>
+					<article class="panel radius text-center faq-quest"><p>Question</p></article>
+						<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>answer</p></div>
+					<article class="panel radius text-center faq-quest"><p>Question</p></article>
+						<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>answer</p></div>
 				</div>
 			</div>
 		</section>
@@ -273,16 +308,16 @@ Welcome to LTD Commodities.com. We are committed to providing unique products at
 				<br>
 				<h3 id="shipping" class="respn_caption_h3">Shipping</h3>
 				<div class="small-12 large-6 columns">
-					<article class="panel radius text-center faq_quest">Question</article>
-						<div class="st_hd_ini st_hd panel radius text-left faq_ansr">answer</div>
-					<article class="panel radius text-center faq_quest">Question</article>
-						<div class="st_hd_ini st_hd panel radius text-left faq_ansr">answer</div>
+					<article class="panel radius text-center faq-quest"><p>Question</p></article>
+						<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>answer</p></div>
+					<article class="panel radius text-center faq-quest"><p>Question</p></article>
+						<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>answer</p></div>
 				</div>
 				<div class="small-12 large-6 columns">
-					<article class="panel radius text-center faq_quest">Question</article>
-						<div class="st_hd_ini st_hd panel radius text-left faq_ansr">answer</div>
-					<article class="panel radius text-center faq_quest">Question</article>
-						<div class="st_hd_ini st_hd panel radius text-left faq_ansr">answer</div>
+					<article class="panel radius text-center faq-quest"><p>Question</p></article>
+						<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>answer</p></div>
+					<article class="panel radius text-center faq-quest"><p>Question</p></article>
+						<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>answer</p></div>
 				</div>
 			</div>
 		</section>
@@ -291,16 +326,16 @@ Welcome to LTD Commodities.com. We are committed to providing unique products at
 				<br>
 				<h3 id="web_site_features" class="respn_caption_h3">Web Site Features</h3>
 				<div class="small-12 large-6 columns">
-					<article class="panel radius text-center faq_quest">Question</article>
-						<div class="st_hd_ini st_hd panel radius text-left faq_ansr">answer</div>
-					<article class="panel radius text-center faq_quest">Question</article>
-						<div class="st_hd_ini st_hd panel radius text-left faq_ansr">answer</div>
+					<article class="panel radius text-center faq-quest"><p>Question</p></article>
+						<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>answer</p></div>
+					<article class="panel radius text-center faq-quest"><p>Question</p></article>
+						<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>answer</p></div>
 				</div>
 				<div class="small-12 large-6 columns">
-					<article class="panel radius text-center faq_quest">Question</article>
-						<div class="st_hd_ini st_hd panel radius text-left faq_ansr">answer</div>
-					<article class="panel radius text-center faq_quest">Question</article>
-						<div class="st_hd_ini st_hd panel radius text-left faq_ansr">answer</div>
+					<article class="panel radius text-center faq-quest"><p>Question</p></article>
+						<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>answer</p></div>
+					<article class="panel radius text-center faq-quest"><p>Question</p></article>
+						<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>answer</p></div>
 				</div>
 			</div>
 		</section>
@@ -396,7 +431,7 @@ $(document).ready(function() {
 				$el.fadeIn('fast');	
 		}
 	});
-	$('.faq_quest').click(function(e) {
+	$('.faq-quest').click(function(e) {
 		$ans = $( this ).next();
 		//$( this ).toggleClass('respn_sel_brdr');
 		if( $ans.hasClass('st_hd') ){
