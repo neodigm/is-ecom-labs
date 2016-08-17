@@ -35,9 +35,23 @@
 .xxxxrespn_button_grp .xxxxresp_btn_brand {min-height: 112px !important;}
 .togFAQs {width: 100%;padding: 16px;}
 
+.faq-panel {
+	border-style: solid;
+    border-width: 1px;
+    border-color: #1A96BA;
+    margin-bottom: 16px;
+    padding: 14px 12px 12px 12px;
+    background: #EFEFEF;
+    color: #333333;
+    border-radius: 3px;
+}
+
 .faq-quest {
 	position: relative;
-	min-height: 56px; cursor: pointer;
+	overflow: hidden;
+	min-height: 56px;
+	height: 76PX;
+	cursor: pointer;
 	transition: background-color 80ms;
 	-webkit-transition: background-color 80ms;
 }
@@ -55,9 +69,6 @@
 .faq-quest:hover p {
 	color: #FFF;
 }
-
-
-
 
 .faq_ansr  {padding: 12px;min-height: 56px;background-color: #FFF;}
 .faq_ansr > p {color: #585858; font-size: 16px; font-weight: 400; font-family: 'Roboto', sans-serif;}
@@ -77,6 +88,7 @@ Welcome to LTD Commodities.com. We are committed to providing unique products at
 	</header>
 	<nav class="columns small-12 medium-12 large-5">
 		<ul class="stack button-group show-for-large-up radius">
+<!-- The below link should not display if the user is logged in -->
 			<li><a href="#" class="button btn-brand">Forgot User Name / Password</a></li>
 			<li><a href="#" class="button btn-brand">View My Account</a></li>
 			<li><a href="#" class="button btn-brand">Request Account Information</a></li>
@@ -104,37 +116,37 @@ Welcome to LTD Commodities.com. We are committed to providing unique products at
 <section id="sub_faq">
 	<section class="row">
 		<div class="small-12 large-6 columns">
-			<article class="panel radius text-center faq-quest"><p>How do I open an account with LTD?</p></article>
-				<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>Simply request a catalog, place an order or go to <a href="http://qa.ltdcommodities.com/my_account/index.jsp">My Account</a> to create a new account.
+			<article class="faq-panel radius text-center faq-quest"><p>How do I open an account with LTD?</p></article>
+				<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>Simply request a catalog, place an order or go to <a href="http://www.ltdcommodities.com/my_account/index.jsp">My Account</a> to create a new account.
 <br><br>
 If you would like to provide your business information to maximize your shopping opportunities, you may do so by selecting the "I'd like to provide my business information?" check box during checkout or the account creation process. In doing so, we will send you bonus catalogs to share with colleagues, and you will become eligible for exclusive offers and promotions.
 				</p></div>
-			<article class="panel radius text-center faq-quest"><p>How do I request a catalog?</p></article>
-				<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>
+			<article class="faq-panel radius text-center faq-quest"><p>How do I request a catalog?</p></article>
+				<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>
 If you are looking to receive a free print catalog, simply
 click on<a href="/catalog_request/index.jsp"> Send Me Free Catalogs &amp; E-mail Offers</a> and
 you will receive our most recent catalog in 2 to 3 weeks. You can also request one through an
 agent by calling <span style=" color: #ED1C24;">(847) 295-5532</span> 24 hours a day 7 days a week. Our entire
 catalog is also available online, <a href="/index.jsp">so shop today!</a>
 				</p></div>
-			<article class="panel radius text-center faq-quest"><p>What will my shipping costs be?</p></article>
-				<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>answer</p></div>
-			<article class="panel radius text-center faq-quest"><p>Can I send the order as a gift?</p></article>
-				<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>answer</p></div>
-			<article class="panel radius text-center faq-quest"><p>How do I check the status of my order?</p></article>
-				<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>answer</p></div>
+			<article class="faq-panel radius text-center faq-quest"><p>What will my shipping costs be?</p></article>
+				<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>answer</p></div>
+			<article class="faq-panel radius text-center faq-quest"><p>Can I send the order as a gift?</p></article>
+				<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>answer</p></div>
+			<article class="faq-panel radius text-center faq-quest"><p>How do I check the status of my order?</p></article>
+				<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>answer</p></div>
 		</div>
 		<div class="small-12 large-6 columns">
-			<article class="panel radius text-center faq-quest"><p>What is your return policy?</p></article>
-				<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>answer</p></div>
-			<article class="panel radius text-center faq-quest"><p>How do I update My Account information?</p></article>
-				<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>answer</p></div>
-			<article class="panel radius text-center faq-quest"><p>What do you do with my email address?</p></article>
-				<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>answer</p></div>
-			<article class="panel radius text-center faq-quest"><p>What kind of information do you collect from me when I visit your web site?</p></article>
-				<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>answer</p></div>
-			<article class="panel radius text-center faq-quest"><p>Does LTD offer secure online ordering?</p></article>
-				<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>answer</p></div>
+			<article class="faq-panel radius text-center faq-quest"><p>What is your return policy?</p></article>
+				<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>If you are not completely satisfied with all or part of your order, simply return it to us for a replacement, credit or refund on your invoice for the purchase price. (*Note: monogrammed and personalized items cannot be returned except when due to defect. Once placed, your order for these items cannot be returned.) Remember to keep a copy of your invoice and mailing receipt for your records, although duplicate documentation can be printed from the <a href="http://www.ltdcommodities.com/my_account/index.jsp">My Account</a> page. We have included our address label on the back of your packing list to attach to your box.</p></div>
+			<article class="faq-panel radius text-center faq-quest"><p>How do I update My Account information?</p></article>
+				<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>answer</p></div>
+			<article class="faq-panel radius text-center faq-quest"><p>What do you do with my email address?</p></article>
+				<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>answer</p></div>
+			<article class="faq-panel radius text-center faq-quest"><p>What kind of information do you collect from me when I visit your web site?</p></article>
+				<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>answer</p></div>
+			<article class="faq-panel radius text-center faq-quest"><p>Does LTD offer secure online ordering?</p></article>
+				<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>answer</p></div>
 		</div>
 	</section>
 	<section class="row">
@@ -165,16 +177,16 @@ catalog is also available online, <a href="/index.jsp">so shop today!</a>
 				<br>
 				<h3 id="address_change" class="respn_caption_h3">Address Change</h3>
 				<div class="small-12 large-6 columns">
-					<article class="panel radius text-center faq-quest"><p>Question</p></article>
-						<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>answer</p></div>
-					<article class="panel radius text-center faq-quest"><p>Question</p></article>
-						<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>answer</p></div>
+					<article class="faq-panel radius text-center faq-quest"><p>Question</p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>answer</p></div>
+					<article class="faq-panel radius text-center faq-quest"><p>Question</p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>answer</p></div>
 				</div>
 				<div class="small-12 large-6 columns">
-					<article class="panel radius text-center faq-quest"><p>Question</p></article>
-						<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>answer</p></div>
-					<article class="panel radius text-center faq-quest"><p>Question</p></article>
-						<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>answer</p></div>
+					<article class="faq-panel radius text-center faq-quest"><p>Question</p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>answer</p></div>
+					<article class="faq-panel radius text-center faq-quest"><p>Question</p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>answer</p></div>
 				</div>
 			</div>
 		</section>
@@ -183,16 +195,16 @@ catalog is also available online, <a href="/index.jsp">so shop today!</a>
 				<br>
 				<h3 id="catalogs" class="respn_caption_h3">Catalogs</h3>
 				<div class="small-12 large-6 columns">
-					<article class="panel radius text-center faq-quest"><p>Question</p></article>
-						<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>answer</p></div>
-					<article class="panel radius text-center faq-quest"><p>Question</p></article>
-						<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>answer</p></div>
+					<article class="faq-panel radius text-center faq-quest"><p>Question</p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>answer</p></div>
+					<article class="faq-panel radius text-center faq-quest"><p>Question</p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>answer</p></div>
 				</div>
 				<div class="small-12 large-6 columns">
-					<article class="panel radius text-center faq-quest"><p>Question</p></article>
-						<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>answer</p></div>
-					<article class="panel radius text-center faq-quest"><p>Question</p></article>
-						<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>answer</p></div>
+					<article class="faq-panel radius text-center faq-quest"><p>Question</p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>answer</p></div>
+					<article class="faq-panel radius text-center faq-quest"><p>Question</p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>answer</p></div>
 				</div>
 			</div>
 		</section>
@@ -201,16 +213,16 @@ catalog is also available online, <a href="/index.jsp">so shop today!</a>
 				<br>
 				<h3 id="ordering" class="respn_caption_h3">Ordering</h3>
 				<div class="small-12 large-6 columns">
-					<article class="panel radius text-center faq-quest"><p>Question</p></article>
-						<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>answer</p></div>
-					<article class="panel radius text-center faq-quest"><p>Question</p></article>
-						<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>answer</p></div>
+					<article class="faq-panel radius text-center faq-quest"><p>Question</p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>answer</p></div>
+					<article class="faq-panel radius text-center faq-quest"><p>Question</p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>answer</p></div>
 				</div>
 				<div class="small-12 large-6 columns">
-					<article class="panel radius text-center faq-quest"><p>Question</p></article>
-						<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>answer</p></div>
-					<article class="panel radius text-center faq-quest"><p>Question</p></article>
-						<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>answer</p></div>
+					<article class="faq-panel radius text-center faq-quest"><p>Question</p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>answer</p></div>
+					<article class="faq-panel radius text-center faq-quest"><p>Question</p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>answer</p></div>
 				</div>
 			</div>
 		</section>
@@ -219,16 +231,16 @@ catalog is also available online, <a href="/index.jsp">so shop today!</a>
 				<br>
 				<h3 id="pay_online_help" class="respn_caption_h3">Pay Online Help</h3>
 				<div class="small-12 large-6 columns">
-					<article class="panel radius text-center faq-quest"><p>Question</p></article>
-						<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>answer</p></div>
-					<article class="panel radius text-center faq-quest"><p>Question</p></article>
-						<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>answer</p></div>
+					<article class="faq-panel radius text-center faq-quest"><p>Question</p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>answer</p></div>
+					<article class="faq-panel radius text-center faq-quest"><p>Question</p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>answer</p></div>
 				</div>
 				<div class="small-12 large-6 columns">
-					<article class="panel radius text-center faq-quest"><p>Question</p></article>
-						<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>answer</p></div>
-					<article class="panel radius text-center faq-quest"><p>Question</p></article>
-						<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>answer</p></div>
+					<article class="faq-panel radius text-center faq-quest"><p>Question</p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>answer</p></div>
+					<article class="faq-panel radius text-center faq-quest"><p>Question</p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>answer</p></div>
 				</div>
 			</div>
 		</section>
@@ -237,16 +249,16 @@ catalog is also available online, <a href="/index.jsp">so shop today!</a>
 				<br>
 				<h3 id="privacy_policy" class="respn_caption_h3">Privacy Policy</h3>
 				<div class="small-12 large-6 columns">
-					<article class="panel radius text-center faq-quest"><p>Question</p></article>
-						<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>answer</p></div>
-					<article class="panel radius text-center faq-quest"><p>Question</p></article>
-						<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>answer</p></div>
+					<article class="faq-panel radius text-center faq-quest"><p>Question</p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>answer</p></div>
+					<article class="faq-panel radius text-center faq-quest"><p>Question</p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>answer</p></div>
 				</div>
 				<div class="small-12 large-6 columns">
-					<article class="panel radius text-center faq-quest"><p>Question</p></article>
-						<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>answer</p></div>
-					<article class="panel radius text-center faq-quest"><p>Question</p></article>
-						<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>answer</p></div>
+					<article class="faq-panel radius text-center faq-quest"><p>Question</p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>answer</p></div>
+					<article class="faq-panel radius text-center faq-quest"><p>Question</p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>answer</p></div>
 				</div>
 			</div>
 		</section>
@@ -255,16 +267,16 @@ catalog is also available online, <a href="/index.jsp">so shop today!</a>
 				<br>
 				<h3 id="product" class="respn_caption_h3">Product</h3>
 				<div class="small-12 large-6 columns">
-					<article class="panel radius text-center faq-quest"><p>Question</p></article>
-						<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>answer</p></div>
-					<article class="panel radius text-center faq-quest"><p>Question</p></article>
-						<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>answer</p></div>
+					<article class="faq-panel radius text-center faq-quest"><p>Question</p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>answer</p></div>
+					<article class="faq-panel radius text-center faq-quest"><p>Question</p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>answer</p></div>
 				</div>
 				<div class="small-12 large-6 columns">
-					<article class="panel radius text-center faq-quest"><p>Question</p></article>
-						<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>answer</p></div>
-					<article class="panel radius text-center faq-quest"><p>Question</p></article>
-						<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>answer</p></div>
+					<article class="faq-panel radius text-center faq-quest"><p>Question</p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>answer</p></div>
+					<article class="faq-panel radius text-center faq-quest"><p>Question</p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>answer</p></div>
 				</div>
 			</div>
 		</section>
@@ -273,16 +285,16 @@ catalog is also available online, <a href="/index.jsp">so shop today!</a>
 				<br>
 				<h3 id="returns" class="respn_caption_h3">Returns</h3>
 				<div class="small-12 large-6 columns">
-					<article class="panel radius text-center faq-quest"><p>Question</p></article>
-						<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>answer</p></div>
-					<article class="panel radius text-center faq-quest"><p>Question</p></article>
-						<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>answer</p></div>
+					<article class="faq-panel radius text-center faq-quest"><p>Question</p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>answer</p></div>
+					<article class="faq-panel radius text-center faq-quest"><p>Question</p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>answer</p></div>
 				</div>
 				<div class="small-12 large-6 columns">
-					<article class="panel radius text-center faq-quest"><p>Question</p></article>
-						<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>answer</p></div>
-					<article class="panel radius text-center faq-quest"><p>Question</p></article>
-						<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>answer</p></div>
+					<article class="faq-panel radius text-center faq-quest"><p>Question</p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>answer</p></div>
+					<article class="faq-panel radius text-center faq-quest"><p>Question</p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>answer</p></div>
 				</div>
 			</div>
 		</section>
@@ -291,16 +303,16 @@ catalog is also available online, <a href="/index.jsp">so shop today!</a>
 				<br>
 				<h3 id="security" class="respn_caption_h3">Security</h3>
 				<div class="small-12 large-6 columns">
-					<article class="panel radius text-center faq-quest"><p>Question</p></article>
-						<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>answer</p></div>
-					<article class="panel radius text-center faq-quest"><p>Question</p></article>
-						<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>answer</p></div>
+					<article class="faq-panel radius text-center faq-quest"><p>Question</p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>answer</p></div>
+					<article class="faq-panel radius text-center faq-quest"><p>Question</p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>answer</p></div>
 				</div>
 				<div class="small-12 large-6 columns">
-					<article class="panel radius text-center faq-quest"><p>Question</p></article>
-						<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>answer</p></div>
-					<article class="panel radius text-center faq-quest"><p>Question</p></article>
-						<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>answer</p></div>
+					<article class="faq-panel radius text-center faq-quest"><p>Question</p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>answer</p></div>
+					<article class="faq-panel radius text-center faq-quest"><p>Question</p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>answer</p></div>
 				</div>
 			</div>
 		</section>
@@ -309,16 +321,16 @@ catalog is also available online, <a href="/index.jsp">so shop today!</a>
 				<br>
 				<h3 id="shipping" class="respn_caption_h3">Shipping</h3>
 				<div class="small-12 large-6 columns">
-					<article class="panel radius text-center faq-quest"><p>Question</p></article>
-						<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>answer</p></div>
-					<article class="panel radius text-center faq-quest"><p>Question</p></article>
-						<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>answer</p></div>
+					<article class="faq-panel radius text-center faq-quest"><p>Question</p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>answer</p></div>
+					<article class="faq-panel radius text-center faq-quest"><p>Question</p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>answer</p></div>
 				</div>
 				<div class="small-12 large-6 columns">
-					<article class="panel radius text-center faq-quest"><p>Question</p></article>
-						<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>answer</p></div>
-					<article class="panel radius text-center faq-quest"><p>Question</p></article>
-						<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>answer</p></div>
+					<article class="faq-panel radius text-center faq-quest"><p>Question</p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>answer</p></div>
+					<article class="faq-panel radius text-center faq-quest"><p>Question</p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>answer</p></div>
 				</div>
 			</div>
 		</section>
@@ -327,16 +339,16 @@ catalog is also available online, <a href="/index.jsp">so shop today!</a>
 				<br>
 				<h3 id="web_site_features" class="respn_caption_h3">Web Site Features</h3>
 				<div class="small-12 large-6 columns">
-					<article class="panel radius text-center faq-quest"><p>Question</p></article>
-						<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>answer</p></div>
-					<article class="panel radius text-center faq-quest"><p>Question</p></article>
-						<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>answer</p></div>
+					<article class="faq-panel radius text-center faq-quest"><p>Question</p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>answer</p></div>
+					<article class="faq-panel radius text-center faq-quest"><p>Question</p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>answer</p></div>
 				</div>
 				<div class="small-12 large-6 columns">
-					<article class="panel radius text-center faq-quest"><p>Question</p></article>
-						<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>answer</p></div>
-					<article class="panel radius text-center faq-quest"><p>Question</p></article>
-						<div class="st_hd_ini st_hd panel radius text-left faq_ansr"><p>answer</p></div>
+					<article class="faq-panel radius text-center faq-quest"><p>Question</p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>answer</p></div>
+					<article class="faq-panel radius text-center faq-quest"><p>Question</p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>answer</p></div>
 				</div>
 			</div>
 		</section>
@@ -349,7 +361,7 @@ catalog is also available online, <a href="/index.jsp">so shop today!</a>
 <section id="sub_contact">
 	<section class="row">
 		<div class="small-12 large-4 columns">
-			<div class="panel radius">
+			<div class="faq-panel radius">
 				<p class="respn_ico">
 					<i class="respn_ico fa fa-envelope fa-lg"></i> &nbsp; Email
 				</p>
@@ -360,7 +372,7 @@ Can't find the information you're looking for? Contact us via e-mail to receive 
 			</div>
 		</div>
 		<div class="small-12 large-4 columns">
-			<div class="panel radius">
+			<div class="faq-panel radius">
 				<p class="respn_ico">
 					<i class="respn_ico fa fa-phone-square fa-lg"></i> &nbsp; Telephone
 				</p>
@@ -379,7 +391,7 @@ a catalog 24 hours a day, 7 days a week.<br>
 			</div>
 		</div>
 		<div class="small-12 large-4 columns">
-			<div class="panel radius">
+			<div class="faq-panel radius">
 				<p class="respn_ico">
 					<i class="respn_ico fa fa-map-marker fa-lg"></i> &nbsp; Address
 				</p>
@@ -408,19 +420,19 @@ $(document).ready(function() {
 			});
 		}
 	});
-	$( '.drop_nav' ).click( function(e){
+	$( '.drop_nav' ).click( function( e ){
 		if( $('#FAQ_contents').hasClass('hide') ){
 			 $( "#togFAQs" ).click();
 		}
 	});
-	$(".togFAQs").click(function(e) {
+	$(".togFAQs").click(function( e ) {
 		e.preventDefault();
 		var $txt = $( this ).text();
 		$( this ).text( $( this ).attr('data-alt') );
 		$( this ).attr('data-alt', $txt );
 		$('.FAQ_contents').toggleClass('hide');
 	});
-	$(".togCont").click(function(e) {
+	$(".togCont").click(function( e ) {
 		$el = $('#'+$( this ).attr("data-tog"));
 		$el_i = $('.'+$( this ).attr("data-tog"));
 		$el.toggleClass( "st_hd" );
@@ -432,7 +444,7 @@ $(document).ready(function() {
 				$el.fadeIn('fast');	
 		}
 	});
-	$('.faq-quest').click(function(e) {
+	$(".faq-quest").click(function( e ) {
 		$ans = $( this ).next();
 		//$( this ).toggleClass('respn_sel_brdr');
 		if( $ans.hasClass('st_hd') ){
