@@ -48,14 +48,15 @@
 
 
 
-.faq-caption {color: #999; font-size: 48px; font-weight: 100; font-family: 'Roboto', sans-serif;letter-spacing: -3px;line-height: 84%;margin-bottom: 24px !important}
+.faq-caption     {color: #999; font-size: 48px; font-weight: 100; font-family: 'Roboto', sans-serif;letter-spacing: -3px;line-height: 84%;margin-bottom: 24px !important}
 .faq-caption_sub {color: #444; font-size: 32px; font-weight: 100; font-family: 'Roboto', sans-serif;letter-spacing: -1px;line-height: 84%;margin-bottom: 24px !important;}
 .faq-caption_h3  {color: #444; font-size: 24px; font-weight: 100; font-family: 'Roboto', sans-serif;letter-spacing: -1px;line-height: 84%;margin-bottom: 24px !important;}
-.togCont {cursor: pointer;}
-.faq-split {padding: 0px !important;}
-.faq-instr {color: #000; font-size: 16px; font-weight: 400; font-family: 'Roboto', sans-serif;margin-bottom: 12px;}
-.faq-contact {color: #000; font-size: 14px; font-weight: 400; font-family: 'Roboto', sans-serif;}
+.faq-instr       {color: #000; font-size: 16px; font-weight: 400; font-family: 'Roboto', sans-serif;margin-bottom: 12px;}
+.faq-contact     {color: #000; font-size: 14px; font-weight: 400; font-family: 'Roboto', sans-serif;}
+
 .faq-togl {width: 100%;padding: 16px;}
+.faq-togl-cntnt {cursor: pointer;}
+.faq-split {padding: 0px !important;}
 
 .faq-table {
 	width: 100%;
@@ -79,9 +80,16 @@
 	border-color: #BBB;
 	margin-bottom: 16px;
 	padding: 22px 12px 4px 12px;
-	background: #f2faff;/*#DaDaDD;*/
+	background: #f2faff;
 	color: #333333;
 	border-radius: 3px;
+}
+
+.faq-panel__contact:hover {
+	background: linear-gradient(
+	rgba(255, 255, 255, 1.00), 
+	rgba(240, 231, 233, 0.56)
+	);
 }
 
 .faq-quest {
@@ -90,8 +98,8 @@
 	min-height: 56px;
 	height: 72px;
 	cursor: pointer;
-	transition: background-color 80ms;
-	-webkit-transition: background-color 80ms;
+	transition: background-color 98ms;
+	-webkit-transition: background-color 98ms;
 }
 
 .faq-quest p {
@@ -100,13 +108,13 @@
 
 .faq-quest:hover {
 	background-color: #2aa6ca;
-	transition: background-color 80ms;
-	-webkit-transition: background-color 80ms;
+	transition: background-color 98ms;
+	-webkit-transition: background-color 98ms;
 }
 .faq-quest:active {
 	background-color: #297FB8;
-	transition: background-color 80ms;
-	-webkit-transition: background-color 80ms;
+	transition: background-color 98ms;
+	-webkit-transition: background-color 98ms;
 }
 
 .faq-panel__active {
@@ -174,7 +182,7 @@ Welcome to LTD Commodities.com. We are committed to providing unique products at
 </section>
 <div class="resp_half_height"></div>
 <nav class="row">
-	<p class="faq-caption_sub text-center"><span data-tog="sub_faq" class="togCont">Frequently Asked Questions &nbsp; <i class="sub_faq respn_arw fa fa-angle-up fa-lg"></i></span></p>
+	<p class="faq-caption_sub text-center"><span data-tog="sub_faq" class="faq-togl-cntnt">Frequently Asked Questions &nbsp; <i class="sub_faq respn_arw fa fa-angle-up fa-lg"></i></span></p>
 </nav>
 <section id="sub_faq">
 	<section class="row">
@@ -449,12 +457,12 @@ catalog is also available online, <a href="https://www.ltdcommodities.com/homelt
 </section>
 <br>
 <nav class="row">
-	<p class="faq-caption_sub text-center"><span data-tog="sub_contact" class="togCont">Our Contact Information &nbsp; <i class="sub_contact respn_arw fa fa-angle-up fa-lg"></i></span></p>
+	<p class="faq-caption_sub text-center"><span data-tog="sub_contact" class="faq-togl-cntnt">Our Contact Information &nbsp; <i class="sub_contact respn_arw fa fa-angle-up fa-lg"></i></span></p>
 </nav>
 <section id="sub_contact">
 	<section class="row">
 		<div class="columns small-12 medium-6 large-4">
-			<div class="faq-panel radius">
+			<div class="faq-panel faq-panel__contact radius">
 				<p class="faq-icon">
 					<i class="faq-icon fa fa-envelope fa-lg"></i> &nbsp; Email
 				</p>
@@ -484,7 +492,7 @@ Can't find the information you're looking for? Contact us via e-mail to receive 
 			<div class="resp_full_height"></div>
 		</div>
 		<div class="columns small-12 medium-6 large-4">
-			<div class="faq-panel radius">
+			<div class="faq-panel faq-panel__contact radius">
 				<p class="faq-icon">
 					<i class="faq-icon fa fa-phone-square fa-lg"></i> &nbsp; Telephone
 				</p>
@@ -510,7 +518,7 @@ a catalog 24 hours a day, 7 days a week.<br>
 			</div>
 		</div>
 		<div class="columns small-12 medium-6 large-4">
-			<div class="faq-panel radius">
+			<div class="faq-panel faq-panel__contact radius">
 				<p class="faq-icon">
 					<i class="faq-icon fa fa-map-marker fa-lg"></i> &nbsp; Address
 				</p>
@@ -568,7 +576,7 @@ $(document).ready(function() {
 		$( this ).attr('data-alt', $txt );
 		$('.FAQ_contents').toggleClass('hide');
 	});
-	$(".togCont").click(function( e ) {
+	$(".faq-togl-cntnt").click(function( e ) {
 		$el = $('#'+$( this ).attr("data-tog"));
 		$el_i = $('.'+$( this ).attr("data-tog"));
 		$el.toggleClass( "st_hd" );
