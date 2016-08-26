@@ -530,7 +530,7 @@ Can't find the information you're looking for? Contact us via e-mail to receive 
 				title="" aria-x=""></i></a>
 				<a class="faq-smi__a" href="http://www.ltdcommodities.com/common/rss.jsp" target="_blank"><i class="faq-icon fa fa-rss-square fa-2x"
 				title="" aria-x=""></i></a>
-				<a class="faq-smi__a" href="http://blog.lakeside.com/" target="_blank"><i class="faq-icon fa fa-bullhorn fa-2x"
+				<a class="faq-smi__a" href="http://blog.ltdcommodities.com/" target="_blank"><i class="faq-icon fa fa-bullhorn fa-2x"
 				title="" aria-x=""></i></a>
 			</nav>
 			<div class="resp_full_height"></div>
@@ -594,7 +594,7 @@ Bannockburn, IL 60015
 <script>
 $(document).ready(function() {
 	$(document).foundation();
-	// Crude Equalizer - but does not make the container taller
+	// Like Equalizer - but does not make the container taller
 	$(".faq-quest > p").each(function(){
 		if( $( this ).text().length >= 56 ){
 			$( this ).parent().addClass("faq-quest__linebreak");
@@ -602,49 +602,51 @@ $(document).ready(function() {
 	});
 	// (nnn) nnn-nnnn for auto iOS and Andr
 	$(function(){
-		if( ('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0) ){
+		if( ("ontouchstart" in window) || (navigator.msMaxTouchPoints > 0) ){
 			$.each($(".tel_link"), function () {
-				$(this).wrapInner( $('<a />', {class: 'voice_link', href: 'tel:'+parseInt( $(this).text().replace(/[^0-9.]/g, "") )}) );
+				$(this).wrapInner( $("<a />", {class: "voice_link", href: "tel:"+parseInt( $(this).text().replace(/[^0-9.]/g, "") )}) );
 			});
 		}
 	});
-	$( '.drop_nav' ).click( function( e ){
-		if( $('#FAQ_contents').hasClass('hide') ){
+	$( ".drop_nav" ).click( function( e ){
+		if( $("#FAQ_contents").hasClass("hide") ){
 			 $( "#faq-togl" ).click();
 		}
 	});
 	$(".faq-togl").click(function( e ) {
 		e.preventDefault();
 		var $txt = $( this ).text();
-		$( this ).text( $( this ).attr('data-alt') );
-		$( this ).attr('data-alt', $txt );
-		$('.FAQ_contents').toggleClass('hide');
+		$( this ).text( $( this ).attr("data-alt") );
+		$( this ).attr("data-alt", $txt );
+		$(".FAQ_contents").toggleClass("hide");
 	});
 	$(".faq-togl-cntnt").click(function( e ) {
-		$el = $('#'+$( this ).attr("data-tog"));
-		$el_i = $('.'+$( this ).attr("data-tog"));
+		$el = $("#"+$( this ).attr("data-tog"));
+		$el_i = $("."+$( this ).attr("data-tog"));
 		$el.toggleClass( "st_hd" );
 		$el_i.toggleClass("fa-angle-up");
 		$el_i.toggleClass("fa-angle-down");
 		if( $el.hasClass( "st_hd" )){
-				$el.fadeOut('fast');
+				$el.fadeOut("fast");
 		}else{
-				$el.fadeIn('fast');	
+				$el.fadeIn("fast");	
 		}
 	});
 	$(".faq-quest").click(function( e ) {
+
+		$(".faq_ansr").each(function(){
+			$ans.attr("style","display: none;").removeClass("st_hd").addClass("st_hd");
+		});
+
 		$( this ).toggleClass("faq-panel__active");
 		$ans = $( this ).next();
 		//$( this ).toggleClass('respn_sel_brdr');
-		if( $ans.hasClass('st_hd') ){
-			$ans.slideDown('fast',  function(){ 
-				$ans.removeClass('st_hd');
-				 } );
+		if( $ans.hasClass("st_hd") ){
+			$ans.slideDown("fast",  function(){ 
+				$ans.removeClass("st_hd");
+			} );
 		}else{
-			$ans.attr("style","display: none;").addClass('st_hd');
-			//$ans.fadeOut('fast' , function(){ 
-				//$ans.addClass('st_hd');
-				 //} );
+			//$ans.attr("style","display: none;").addClass("st_hd");
 		}
 	});
 });</script>
