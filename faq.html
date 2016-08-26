@@ -633,21 +633,25 @@ $(document).ready(function() {
 		}
 	});
 	$(".faq-quest").click(function( e ) {
-
-		$(".faq_quest").each(function(){
-			$( this ).removeClass("faq-panel__active")
-			$( this ).next().attr("style","display: none;").removeClass("st_hd").addClass("st_hd");
+		$( this ).attr("data-faq-quest-active","true");
+		$(".faq-quest").each(function(){
+			if( $( this ).attr("data-faq-quest-active") !== "true" ){
+				$( this ).removeClass("faq-panel__active");
+				$( this ).next().attr("style","display: none;").removeClass("st_hd").addClass("st_hd");
+			}else{
+				$( this ).attr("data-faq-quest-active","false");
+			}
 		});
 
 		$( this ).toggleClass("faq-panel__active");
 		$ans = $( this ).next();
-		//$( this ).toggleClass('respn_sel_brdr');
+
 		if( $ans.hasClass("st_hd") ){
 			$ans.slideDown("fast",  function(){ 
 				$ans.removeClass("st_hd");
 			} );
 		}else{
-			//$ans.attr("style","display: none;").addClass("st_hd");
+			$ans.attr("style","display: none;").addClass("st_hd");
 		}
 	});
 });</script>
