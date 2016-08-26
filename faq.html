@@ -634,8 +634,9 @@ $(document).ready(function() {
 	});
 	$(".faq-quest").click(function( e ) {
 
-		$(".faq_ansr").each(function(){
-			$( this ).attr("style","display: none;").removeClass("st_hd").addClass("st_hd");
+		$(".faq_quest").each(function(){
+			$( this ).removeClass("faq-panel__active")
+			$( this ).next().attr("style","display: none;").removeClass("st_hd").addClass("st_hd");
 		});
 
 		$( this ).toggleClass("faq-panel__active");
