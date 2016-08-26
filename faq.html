@@ -635,7 +635,7 @@ $(document).ready(function() {
 	$(".faq-quest").click(function( e ) {
 
 		$(".faq_ansr").each(function(){
-			$ans.attr("style","display: none;").removeClass("st_hd").addClass("st_hd");
+			$( this ).attr("style","display: none;").removeClass("st_hd").addClass("st_hd");
 		});
 
 		$( this ).toggleClass("faq-panel__active");
