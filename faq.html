@@ -627,9 +627,9 @@ $(document).ready(function() {
 		$el_i.toggleClass("fa-angle-up");
 		$el_i.toggleClass("fa-angle-down");
 		if( $el.hasClass( "st_hd" )){
-				$el.fadeOut("fast");
+				$el.fadeOut("400");
 		}else{
-				$el.fadeIn("fast");	
+				$el.fadeIn("400");	
 		}
 	});
 	$(".faq-quest").click(function( e ) {
@@ -647,7 +647,7 @@ $(document).ready(function() {
 		$ans = $( this ).next();
 
 		if( $ans.hasClass("st_hd") ){
-			$ans.slideDown("fast",  function(){ 
+			$ans.slideDown("400",  function(){ 
 				$ans.removeClass("st_hd");
 			} );
 		}else{
