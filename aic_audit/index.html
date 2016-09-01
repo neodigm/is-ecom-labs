@@ -629,8 +629,8 @@ Summary of all 15 product images (MN)
 			<tr>
 				<td>Quality</td>
 				<td>100%</td>
-				<td><a class="js-cmd-80 button btn-brand tiny">80%</a></td>
-				<td><a class="js-cmd-60 button btn-brand tiny">60%</a></td>
+				<td><a class="js-cmd-80 button btn-brand tiny" style="margin-bottom: 1px;">80%</a></td>
+				<td><a class="js-cmd-60 button btn-brand tiny" style="margin-bottom: 1px;">60%</a></td>
 				<td>40%</td>
 			</tr>
 			<tr>
@@ -658,6 +658,13 @@ Summary of all 15 product images (MN)
 <script>
 $(document).ready(function() {
 	$(document).foundation();
+	$(".js-cmd-80").on("click", function(){
+		$("img").forEach(
+//aic_060_
+console.log( $( this ).attr("src") );
+		);
+
+	});
 	// Like Equalizer - but does not make the container taller
 	$(".faq-quest > p").each(function(){
 		if( $( this ).text().length >= 56 ){
