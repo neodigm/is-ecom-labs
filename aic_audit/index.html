@@ -179,7 +179,7 @@ This audit presents 15 product images optimized with Adaptive Image Compression.
 	<div class="columns small-12 medium-6 no-padding">
 		<figure>
 			<img src="img/aic_060_51054_mn.jpg">
-			<p clasjs-60--p s="faq-instr text-center">60% - 20,839 bytes
+			<p class="js-60--p faq-instr text-center">60% - 20,839 bytes
 			</p>
 			<p class="js-80--p faq-instr text-center hide">80% - x </p>
 		</figure>
@@ -677,6 +677,8 @@ $(document).ready(function() {
 
 		$("img").each( function(){
 			$( this ).attr("src", $( this ).attr("src").replace("aic_060_", "aic_080_") );
+			$(".js-80--p").removeClass("hide");
+			$(".js-60--p").removeClass("hide").addClass("hide");
 		});
 
 	});
@@ -684,6 +686,8 @@ $(document).ready(function() {
 
 		$("img").each( function(){
 			$( this ).attr("src", $( this ).attr("src").replace("aic_080_", "aic_060_") );
+			$(".js-60--p").removeClass("hide");
+			$(".js-80--p").removeClass("hide").addClass("hide");
 		});
 
 	});
