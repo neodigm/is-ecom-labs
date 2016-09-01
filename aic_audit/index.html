@@ -659,10 +659,17 @@ Summary of all 15 product images (MN)
 $(document).ready(function() {
 	$(document).foundation();
 	$(".js-cmd-80").on("click", function(){
-		$("img").forEach(
-//aic_060_
-console.log( $( this ).attr("src") );
-		);
+
+		$("img").each( function(){
+			$( this ).attr("src", $( this ).attr("src").replace("aic_060_", "aic_080_") );
+		});
+
+	});
+	$(".js-cmd-60").on("click", function(){
+
+		$("img").each( function(){
+			$( this ).attr("src", $( this ).attr("src").replace("aic_080_", "aic_060_") );
+		});
 
 	});
 	// Like Equalizer - but does not make the container taller
