@@ -824,7 +824,7 @@ function getRndImgSrc(){
 	if( (Math.random()+.5|0) === 1 ){
 		sClass = "js-img-60";
 	}
-	return $( "."+sClass+":nth("+ (Math.random() * (15)) +")" ).attr("src");
+	return $( "."+sClass+":nth("+ (    Math.floor(Math.random() * (15 - 1 + 1)) + 1    ) +")" ).attr("src");
 }
 $(document).ready(function() {
 	$(document).foundation();
