@@ -786,8 +786,8 @@ Detail Table
 			<figure class="text-center">
 					<img class="js-play--img" src="img/51054_mn.jpg">
 			</figure>
-			<hr>
 		</div>
+		<hr>
 	</section>
 	<section class="row">
 		<div class="columns small-6 text-center">
@@ -800,7 +800,7 @@ Detail Table
 	</section>
 	<section class="row">
 		<div class="columns small-12 text-center">
-			<p class="faq-caption_sub"><span class="js-play__correct">0</span> of <span class="js-play__total">0</span><p>
+			<p class="faq-caption_sub"><span class="js-play__correct">0</span> of <span class="js-play__total">1</span><p>
 		</div>
 	</section>
 </div>
@@ -818,11 +818,13 @@ Detail Table
 <!-- <script src="../foundation.js"></script> -->
 
 <script>
+var oP = {nCorrect: 0, nTotal: 0};
 $(document).ready(function() {
 	$(document).foundation();
 	$(".js-play").on("click", function( e ){
 		e.preventDefault();
-alert("click");
+		oP.nCorrect =3;	oP.nTotal =4;
+		$(".js-play__correct .js-play__total").text( 9 );
 	});
 
 
