@@ -823,9 +823,9 @@ $(document).ready(function() {
 	$(document).foundation();
 	$(".js-play").on("click", function( e ){
 		e.preventDefault();
-		oP.nCorrect =3;	oP.nTotal =4;
-		$(".js-play__correct").text( 8 );
-		$(".js-play__total").text( 16 );
+		oP.nCorrect = 3;	oP.nTotal = 4;
+		$(".js-play__correct").text( oP.nCorrect );
+		$(".js-play__total").text( oP.nTotal );
 	});
 
 
