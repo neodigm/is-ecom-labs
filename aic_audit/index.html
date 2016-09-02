@@ -791,10 +791,10 @@ Detail Table
 	</section>
 	<section class="row">
 		<div class="columns small-6 text-center">
-			<a class="button radius resp_btn_green" style="width: 256px !important">Original</a>
+			<a class="js-play--a__orig button radius resp_btn_green" style="width: 256px !important">Original</a>
 		</div>
 		<div class="columns small-6 text-center">
-			<a class="button radius resp_btn_teal"  style="width: 256px !important">Compressed</a>
+			<a class="js-play--a__comp button radius resp_btn_teal"  style="width: 256px !important">Compressed</a>
 		</div>
 		<hr>
 	</section>
@@ -838,8 +838,21 @@ $(document).ready(function() {
 		$(".js-play--img").attr("src", getRndImgSrc() );
 		console.log( $(".js-play--img").attr("src") );
 	});
- 
+	$(".js-play--a__orig").on("click", function( e ){
+		e.preventDefault();
+		if(  $(".js-play--img").attr("src").indexOf("aic_060_") >= 0 ){
 
+		}
+		$(".js-play--img").attr("src", getRndImgSrc() );
+	});
+	$(".js-play--a__comp").on("click", function( e ){
+		e.preventDefault();
+		if(  $(".js-play--img").attr("src").indexOf("aic_060_") >= 0 ){
+
+		}
+		$(".js-play--img").attr("src", getRndImgSrc() );
+	});
+ 
 	$(".js-cmd-80").on("click", function(){
 		$("img").each( function(){
 			$( this ).attr("src", $( this ).attr("src").replace("aic_060_", "aic_080_") );
