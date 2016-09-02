@@ -819,9 +819,12 @@ Detail Table
 
 <script>
 var oP = {nCorrect: 0, nTotal: 0};
-function getRndImg(){
-	var nCompOrNot = (Math.random()+.5|0);
-	var sClass
+function getRndImgSrc(){
+	var sClass = "js-img-100";
+	if( (Math.random()+.5|0) === 1 ){
+		sClass = "js-img-60";
+	}
+	return $( "."+sClass":nth(3)" ).attr("src");
 }
 $(document).ready(function() {
 	$(document).foundation();
@@ -831,6 +834,7 @@ $(document).ready(function() {
 		oP.nCorrect = 0;	oP.nTotal = 0;
 		$(".js-play__correct").text( oP.nCorrect );
 		$(".js-play__total").text( oP.nTotal );
+alert( getRndImgSrc() );
 	});
 
 
