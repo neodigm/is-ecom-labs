@@ -769,11 +769,13 @@ Detail Table
 <section class="row">
 	<div class="column small-12 text-center">
 		<nav class=" text-center">
-			<a class="button small btn-brand" data-open="modPlay">Modal</a>
+			<hr>
+			<a class="js-play button small resp_btn_teal" data-open="modPlay">Modal</a>
+			<hr>
 		</nav>
 	</div>
 </section>
-
+<div class="resp_full_height"></div>
 
 <div class="reveal" id="modPlay" data-reveal>
 	<img src="img/51054_mn.jpg">
@@ -803,23 +805,25 @@ Detail Table
 <script>
 $(document).ready(function() {
 	$(document).foundation();
-	$(".js-cmd-80").on("click", function(){
+	$(".js-play").on("click", function( e ){
+		e.preventDefault();
+alert("click");
+	});
 
+
+	$(".js-cmd-80").on("click", function(){
 		$("img").each( function(){
 			$( this ).attr("src", $( this ).attr("src").replace("aic_060_", "aic_080_") );
 			$(".js-80--p").removeClass("hide");
 			$(".js-60--p").removeClass("hide").addClass("hide");
 		});
-
 	});
 	$(".js-cmd-60").on("click", function(){
-
 		$("img").each( function(){
 			$( this ).attr("src", $( this ).attr("src").replace("aic_080_", "aic_060_") );
 			$(".js-60--p").removeClass("hide");
 			$(".js-80--p").removeClass("hide").addClass("hide");
 		});
-
 	});
 	// Like Equalizer - but does not make the container taller
 	$(".faq-quest > p").each(function(){
