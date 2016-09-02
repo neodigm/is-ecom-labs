@@ -821,17 +821,19 @@ Detail Table
 var oP = {nCorrect: 0, nTotal: 0};
 function getRndImgSrc(){
 	var sClass = "js-img-100";
+	var n1to15 = (    Math.floor(Math.random() * (15 - 1 + 1)) + 1    );
+console.log( n1to15 );
 	if( (Math.random()+.5|0) === 1 ){
 		sClass = "js-img-60";
 	}
-	return $( "."+sClass+":nth("+ (    Math.floor(Math.random() * (15 - 1 + 1)) + 1    ) +")" ).attr("src");
+	return $( "."+sClass+":nth("+ n1to15 +")" ).attr("src");
 }
 $(document).ready(function() {
 	$(document).foundation();
 	$(".js-play").on("click", function( e ){
 		e.preventDefault();
 		$(".js-cmd-60").click();
-		oP.nCorrect = 0;	oP.nTotal = 0;
+		oP.nCorrect = 0;	oP.nTotal = 1;
 		$(".js-play__correct").text( oP.nCorrect );
 		$(".js-play__total").text( oP.nTotal );
 alert( getRndImgSrc() );
