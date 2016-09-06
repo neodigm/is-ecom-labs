@@ -777,7 +777,7 @@ Detail Table
 	<div class="column small-12 text-center">
 		<nav class="text-center">
 			<hr>
-			<a class="js-play button radius resp_btn_teal" style="width: 256px !important" data-open="modPlay">Play "Is It Compressed?"</a>
+			<a class="js-play button radius resp_btn_teal" style="width: 256px !important" data-open="modPlay"><p>Play "Is It Compressed?"</p></a>
 			<hr>
 		</nav>
 	</div>
@@ -850,6 +850,7 @@ $(document).ready(function() {
 		$(".js-play__total").text( oP.nTotal );
 		$(".js-play--img").attr("src", getRndImgSrc() );
 		console.log( $(".js-play--img").attr("src") );
+		$(".js-play--output").html("");
 	});
 	$(".js-play--a__orig").on("click", function( e ){
 		e.preventDefault();
