@@ -848,9 +848,9 @@ $(document).ready(function() {
 		e.preventDefault();
 		if(  $(".js-play--img").attr("src").indexOf("aic_060_") === -1 ){
 			oP.nCorrect++;
-			$(".js-play--output").text( $(".js-play--output").text() + " " + "happy" );
+			$(".js-play--output").text( $(".js-play--output").text() + " " + "<i class='fa fa-smile-o play-green'></i>" );
 		} else {
-			$(".js-play--output").text( $(".js-play--output").text() + " " + "sad" );
+			$(".js-play--output").text( $(".js-play--output").text() + " " + "<i class='fa fa-frown-o play-red'></i>" );
 		}
 		oP.nTotal++;
 		$(".js-play__correct").text( oP.nCorrect );
@@ -862,9 +862,9 @@ $(document).ready(function() {
 		e.preventDefault();
 		if(  $(".js-play--img").attr("src").indexOf("aic_060_") >= 0 ){
 			oP.nCorrect++;
-			$(".js-play--output").text( $(".js-play--output").text() + " " + "happy" );
+			$(".js-play--output").text( $(".js-play--output").text() + " " + "<i class='fa fa-smile-o play-green'></i>" );
 		} else {
-			$(".js-play--output").text( $(".js-play--output").text() + " " + "sad" );
+			$(".js-play--output").text( $(".js-play--output").text() + " " + "<i class='fa fa-frown-o play-red'></i>" );
 		}
 		oP.nTotal++;
 		$(".js-play__correct").text( oP.nCorrect );
