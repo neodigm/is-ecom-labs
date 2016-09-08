@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel='stylesheet' type='text/css'>
   </head>
-  <body>
+  <body class="force-v-scroll">
 <style>
 /*  EXISTING RESP BEGIN  */
 .btn-brand {
@@ -47,12 +47,14 @@
 	padding: 0 !important;
 }
 /*  EXISTING RESP END  */
+.force-v-scroll {
+	overflow-y: scroll;
+}
 
 .faq-cols  {
 	padding-right: 8px !important;
 	padding-left: 8px !important;
 }
-
 
 .faq-caption     {color: #999; font-size: 48px; font-weight: 100; font-family: 'Roboto', sans-serif;letter-spacing: -3px;line-height: 84%;margin-bottom: 24px !important}
 .faq-caption_sub {color: #444; font-size: 32px; font-weight: 100; font-family: 'Roboto', sans-serif;letter-spacing: -1px;line-height: 84%;margin-bottom: 24px !important;}
@@ -61,7 +63,13 @@
 .faq-contact     {color: #000; font-size: 14px; font-weight: 400; font-family: 'Roboto', sans-serif;}
 
 .faq-togl {width: 100%;padding: 16px;}
-.faq-togl-cntnt {cursor: pointer;}
+.faq-togl-cntnt {
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
 .faq-split {padding: 0px !important;}
 
 .faq-table {
@@ -94,7 +102,7 @@
 .faq-panel--i {
 	position: absolute;
 	float: right;
-	top: 6px;
+	top: 4px;
 	right: 6px;
 	color: #AAA;
 }
@@ -111,6 +119,11 @@
 	min-height: 56px;
 	height: 72px;
 	cursor: pointer;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 	transition: background-color 80ms;
 	-webkit-transition: background-color 80ms;
 }
@@ -161,7 +174,8 @@
 .respn_arw {color: #888;}
 .faq-icon {color: #888;}
 .st_hd_ini {display: none;}
-</style>  
+</style> 
+
 <div class="resp_half_height"></div>
 <section class="row">
 	<header class="columns small-12 medium-12 large-7">
@@ -205,7 +219,7 @@ Welcome to LTD Commodities.com. We are committed to providing unique products at
 		<div class="small-12 large-6 faq-cols columns">
 			<article class="faq-panel radius text-center faq-quest"><p>How do I open an account with LTD?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
 				<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>Simply request a catalog, place an order or go to <a href="https://www.ltdcommodities.com/my_account/index.jsp">My Account</a> to create a new account.
-<br><br>
+</p><div class="resp_half_height"></div><p>
 If you would like to provide your business information to maximize your shopping opportunities, you may do so by selecting the "I'd like to provide my business information?" check box during checkout or the account creation process. In doing so, we will send you bonus catalogs to share with colleagues, and you will become eligible for exclusive offers and promotions.
 				</p></div>
 			<article class="faq-panel radius text-center faq-quest"><p>How do I request a catalog?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
@@ -252,7 +266,7 @@ catalog is also available online, <a href="https://www.ltdcommodities.com/homelt
 				<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>
 
 <p>Once you have logged into <a href="https://ltdcommodities.com/my_account/index.jsp">My Account</a>, you have the option to update and change your Sign-in &amp; Subscriptions, Address Book, Stored Payment Methods and Business Account Information. After entering the new information, click the UPDATE button for your changes to be effective.</p>
-<br>
+</p><div class="resp_half_height"></div><p>
 <p><b>abc distributing customers</b>: Your abc distributing account number, username and password are also valid on our LTD Commodities website, you can already access your abc account, view past orders, make payments, and place new orders on <a href="https://ltdcommodities.com">www.ltdcommodities.com</a> with your abc distributing sign in information.</p>
 
 				</p></div>
@@ -296,9 +310,9 @@ catalog is also available online, <a href="https://www.ltdcommodities.com/homelt
 						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>
 
 You can change your address by clicking on the <a href="https://www.ltdcommodities.com/my_account/index.jsp">My Account</a> page and selecting "Change the account information." You can also update your address on your account when you place your next order. Please note that these changes must be made prior to submitting your order. Unfortunately, we cannot change "ship to" addresses on orders already placed or in process.
-<br><br>
+</p><div class="resp_half_height"></div><p>
 If you are having difficulty completing your address change online, please call one of our account support specialists at <span class="tel_link">847-444-2365</span> from 7:00 am to 8:00 pm CST M-F.
-<br><br>
+</p><div class="resp_half_height"></div><p>
 abc distributing customers: Your abc distributing account number, username and password are also valid on our LTD Commodities website, you can already access your abc account, view past orders, make payments, and place new orders on <a href="https://www.ltdcommodities.com/homeltd">www.ltdcommodities.com</a> with your abc distributing sign in information.
 
 
@@ -307,7 +321,7 @@ abc distributing customers: Your abc distributing account number, username and p
 						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>
 
 Once you have logged into <a href="https://www.ltdcommodities.com/my_account/index.jsp">My Account</a>, you have the option to update and change your Sign-in & Subscriptions, Address Book, Stored Payment Methods and Business Account Information. After entering the new information, click the UPDATE button for your changes to be effective.
-<br><br>
+<br>
 abc distributing customers: Your abc distributing account number, username and password are also valid on our LTD Commodities website, you can already access your abc account, view past orders, make payments, and place new orders on <a href="https://www.ltdcommodities.com/homeltd">www.ltdcommodities.com</a> with your abc distributing sign in information.
 
 						</p></div>
@@ -317,13 +331,13 @@ abc distributing customers: Your abc distributing account number, username and p
 						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>
 
 You can update your account information at any time by logging into <a href="https://www.ltdcommodities.com/my_account/index.jsp">My Account</a>. In My Account you can make changes to your address, personal contact information and manage your gift addresses and email preferences. You can also update your address during the checkout process on your next order. Please note that changes to your shipping address must be made prior to submitting your order.
-<br><br>
+</p><div class="resp_half_height"></div><p>
 Or
-<br><br>
+</p><div class="resp_half_height"></div><p>
 Submit your request in writing via mail or fax. Please include the company account number and the old and new address.
-<br><br>
+</p><div class="resp_half_height"></div><p>
 Fax: (847) 283-8124<br>
-<br>
+</p><div class="resp_half_height"></div><p>
 Mail: LTD Commodities<br>
 Account Maintenance<br>
 2800 Lakeside Drive<br>
@@ -331,7 +345,7 @@ Bannockburn, IL 60015
 
 						</p></div>
 <!--					<article class="faq-panel radius text-center faq-quest"><p>Question?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
-						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>answer</p></div>-->
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ant.</p></div>-->
 				</div>
 			</div>
 		</section>
@@ -341,15 +355,15 @@ Bannockburn, IL 60015
 				<h3 id="catalogs" class="faq-caption_h3">Catalogs</h3>
 				<div class="small-12 large-6 faq-cols columns">
 					<article class="faq-panel radius text-center faq-quest"><p>Question?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
-						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>answer</p></div>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ant.</p></div>
 					<article class="faq-panel radius text-center faq-quest"><p>Question?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
-						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>answer</p></div>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ant.</p></div>
 				</div>
 				<div class="small-12 large-6 faq-cols columns">
 					<article class="faq-panel radius text-center faq-quest"><p>Question?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
-						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>answer</p></div>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ant.</p></div>
 					<article class="faq-panel radius text-center faq-quest"><p>Question?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
-						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>answer</p></div>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ant.</p></div>
 				</div>
 			</div>
 		</section>
@@ -359,15 +373,15 @@ Bannockburn, IL 60015
 				<h3 id="ordering" class="faq-caption_h3">Ordering</h3>
 				<div class="small-12 large-6 faq-cols columns">
 					<article class="faq-panel radius text-center faq-quest"><p>Question?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
-						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>answer</p></div>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ant.</p></div>
 					<article class="faq-panel radius text-center faq-quest"><p>Question?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
-						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>answer</p></div>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ant.</p></div>
 				</div>
 				<div class="small-12 large-6 faq-cols columns">
 					<article class="faq-panel radius text-center faq-quest"><p>Question?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
-						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>answer</p></div>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ant.</p></div>
 					<article class="faq-panel radius text-center faq-quest"><p>Question?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
-						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>answer</p></div>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ant.</p></div>
 				</div>
 			</div>
 		</section>
@@ -377,15 +391,15 @@ Bannockburn, IL 60015
 				<h3 id="pay_online_help" class="faq-caption_h3">Pay Online Help</h3>
 				<div class="small-12 large-6 faq-cols columns">
 					<article class="faq-panel radius text-center faq-quest"><p>Question?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
-						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>answer</p></div>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ant.</p></div>
 					<article class="faq-panel radius text-center faq-quest"><p>Question?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
-						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>answer</p></div>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ant.</p></div>
 				</div>
 				<div class="small-12 large-6 faq-cols columns">
 					<article class="faq-panel radius text-center faq-quest"><p>Question?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
-						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>answer</p></div>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ant.</p></div>
 					<article class="faq-panel radius text-center faq-quest"><p>Question?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
-						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>answer</p></div>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ant.</p></div>
 				</div>
 			</div>
 		</section>
@@ -395,15 +409,15 @@ Bannockburn, IL 60015
 				<h3 id="privacy_policy" class="faq-caption_h3">Privacy Policy</h3>
 				<div class="small-12 large-6 faq-cols columns">
 					<article class="faq-panel radius text-center faq-quest"><p>Question?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
-						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>answer</p></div>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ant.</p></div>
 					<article class="faq-panel radius text-center faq-quest"><p>Question?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
-						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>answer</p></div>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ant.</p></div>
 				</div>
 				<div class="small-12 large-6 faq-cols columns">
 					<article class="faq-panel radius text-center faq-quest"><p>Question?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
-						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>answer</p></div>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ant.</p></div>
 					<article class="faq-panel radius text-center faq-quest"><p>Question?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
-						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>answer</p></div>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ant.</p></div>
 				</div>
 			</div>
 		</section>
@@ -413,15 +427,15 @@ Bannockburn, IL 60015
 				<h3 id="product" class="faq-caption_h3">Product</h3>
 				<div class="small-12 large-6 faq-cols columns">
 					<article class="faq-panel radius text-center faq-quest"><p>Question?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
-						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>answer</p></div>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ant.</p></div>
 					<article class="faq-panel radius text-center faq-quest"><p>Question?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
-						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>answer</p></div>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ant.</p></div>
 				</div>
 				<div class="small-12 large-6 faq-cols columns">
 					<article class="faq-panel radius text-center faq-quest"><p>Question?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
-						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>answer</p></div>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ant.</p></div>
 					<article class="faq-panel radius text-center faq-quest"><p>Question?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
-						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>answer</p></div>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ant.</p></div>
 				</div>
 			</div>
 		</section>
@@ -431,15 +445,15 @@ Bannockburn, IL 60015
 				<h3 id="returns" class="faq-caption_h3">Returns</h3>
 				<div class="small-12 large-6 faq-cols columns">
 					<article class="faq-panel radius text-center faq-quest"><p>Question?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
-						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>answer</p></div>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ant.</p></div>
 					<article class="faq-panel radius text-center faq-quest"><p>Question?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
-						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>answer</p></div>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ant.</p></div>
 				</div>
 				<div class="small-12 large-6 faq-cols columns">
 					<article class="faq-panel radius text-center faq-quest"><p>Question?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
-						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>answer</p></div>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ant.</p></div>
 					<article class="faq-panel radius text-center faq-quest"><p>Question?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
-						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>answer</p></div>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ant.</p></div>
 				</div>
 			</div>
 		</section>
@@ -449,15 +463,15 @@ Bannockburn, IL 60015
 				<h3 id="security" class="faq-caption_h3">Security</h3>
 				<div class="small-12 large-6 faq-cols columns">
 					<article class="faq-panel radius text-center faq-quest"><p>Question?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
-						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>answer</p></div>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ant.</p></div>
 					<article class="faq-panel radius text-center faq-quest"><p>Question?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
-						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>answer</p></div>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ant.</p></div>
 				</div>
 				<div class="small-12 large-6 faq-cols columns">
 					<article class="faq-panel radius text-center faq-quest"><p>Question?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
-						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>answer</p></div>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ant.</p></div>
 					<article class="faq-panel radius text-center faq-quest"><p>Question?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
-						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>answer</p></div>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ant.</p></div>
 				</div>
 			</div>
 		</section>
@@ -467,15 +481,15 @@ Bannockburn, IL 60015
 				<h3 id="shipping" class="faq-caption_h3">Shipping</h3>
 				<div class="small-12 large-6 faq-cols columns">
 					<article class="faq-panel radius text-center faq-quest"><p>Question?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
-						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>answer</p></div>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ant.</p></div>
 					<article class="faq-panel radius text-center faq-quest"><p>Question?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
-						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>answer</p></div>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ant.</p></div>
 				</div>
 				<div class="small-12 large-6 faq-cols columns">
 					<article class="faq-panel radius text-center faq-quest"><p>Question?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
-						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>answer</p></div>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ant.</p></div>
 					<article class="faq-panel radius text-center faq-quest"><p>Question?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
-						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>answer</p></div>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ant.</p></div>
 				</div>
 			</div>
 		</section>
@@ -485,15 +499,15 @@ Bannockburn, IL 60015
 				<h3 id="web_site_features" class="faq-caption_h3">Web Site Features</h3>
 				<div class="small-12 large-6 faq-cols columns">
 					<article class="faq-panel radius text-center faq-quest"><p>Question?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
-						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>answer</p></div>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ant.</p></div>
 					<article class="faq-panel radius text-center faq-quest"><p>Question?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
-						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>answer</p></div>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ant.</p></div>
 				</div>
 				<div class="small-12 large-6 faq-cols columns">
 					<article class="faq-panel radius text-center faq-quest"><p>Question?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
-						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>answer</p></div>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ant.</p></div>
 					<article class="faq-panel radius text-center faq-quest"><p>Question?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
-						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>answer</p></div>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ant.</p></div>
 				</div>
 			</div>
 		</section>
