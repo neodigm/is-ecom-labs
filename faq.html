@@ -2,6 +2,16 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="manifest.json">
+<link rel="mask-icon" href="safari-pinned-tab.svg" color="#297fb8">
+<link rel="shortcut icon" href="favicon.ico">
+<meta name="msapplication-config" content="browserconfig.xml">
+<meta name="theme-color" content="#297fb8">
+
     <title>FAQ Clicked On Contact Us Open | LTD Commodities</title>
 
 <!--  <link rel="stylesheet" href="https://cdn.foundation5.zurb.com/foundation.css" />  -->
@@ -108,7 +118,7 @@
 }
 .faq-panel__contact:hover {
 	background: linear-gradient(
-	rgba(255, 255, 255, 0.24), 
+	rgba(255, 255, 255, 0.24),
 	rgba(42, 166, 202, 0.32)
 	);
 }
@@ -158,7 +168,7 @@
 .faq-quest:hover p, .faq-panel__active p {
 	color: #FFF;
 }
- 
+
 .faq_ansr {
 	padding: 12px;
 	min-height: 56px;
@@ -174,14 +184,14 @@
 .respn_arw {color: #888;}
 .faq-icon {color: #888;}
 .st_hd_ini {display: none;}
-</style> 
+</style>
 
 <div class="resp_half_height"></div>
 <section class="row">
 	<header class="columns small-12 medium-12 large-7">
 		<p class="faq-caption text-left">
 Customer Service
-		</p>	
+		</p>
 		<p class="faq-instr text-justify">
 Welcome to LTD Commodities.com. We are committed to providing unique products at tremendous values for our customers. By clicking through the menu you will find detailed information on our policies, guarantee and answers to many of the questions you may have. Our goal is to help make your shopping experience with LTD a pleasant one.
 		</p>
@@ -528,7 +538,7 @@ Bannockburn, IL 60015
 Can't find the information you're looking for? Contact us via e-mail to receive quick and accurate responses to your questions.
 				</p>
 				<a class="button resp_btn_teal expand radius" href="#">Ask a Question</a>
-				<div class="resp_half_height"></div>			
+				<div class="resp_half_height"></div>
 			</div>
 			<div class="resp_half_height"></div>
 			<nav class="faq-contact text-center">
@@ -645,7 +655,7 @@ $(document).ready(function() {
 		if( $el.hasClass( "st_hd" )){
 				$el.fadeOut("400");
 		}else{
-				$el.fadeIn("400");	
+				$el.fadeIn("400");
 		}
 	});
 	$(".faq-quest").click(function( e ) {
@@ -668,7 +678,7 @@ $(document).ready(function() {
 		$ans = $( this ).next();
 
 		if( $ans.hasClass("st_hd") ){
-			$ans.slideDown("400",  function(){ 
+			$ans.slideDown("400",  function(){
 				$ans.removeClass("st_hd");
 			} );
 		}else{
