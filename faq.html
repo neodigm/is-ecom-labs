@@ -641,11 +641,15 @@ $(document).ready(function() {
 	};
 	setInterval(jsMQ.pubVW, 1800);
 	$(document).foundation();
+	//  On Small force chevons onto new line / Do this in CSS Media Qry
+	if( jsMQ.isSmall() ){
+		$(".fa-angle-down").css("display", "block");
+		$(".fa-angle-up").css("display", "block");
+	}
 	// Like Equalizer - but does not make the container taller
 	$(".faq-quest > p").each(function(){
 		var nMxCC = 56;
 		if( jsMQ.isSmall() ) nMxCC = 48;
-console.log( "jsmq | " + jsMQ.isSmall() + " | " + nMxCC );
 		if( $( this ).text().length >= nMxCC ){
 			$( this ).parent().addClass("faq-quest__linebreak");
 		}
