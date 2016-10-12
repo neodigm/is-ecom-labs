@@ -703,8 +703,8 @@ $(document).ready(function() {
 				$( this ).removeClass("faq-panel__active");
 				$( this ).next().attr("style","display: none;").removeClass("st_hd").addClass("st_hd");
 				$el_i = $( this ).find("i");
-				$el_i.toggleClass("fa-angle-up").toggleClass("fa-angle-down");
-			}else{
+$el_i.addClass("fa-angle-up").removeClass("fa-angle-down");
+			}else{			
 				$( this ).attr("data-faq-quest-active","false");
 			}
 		});
