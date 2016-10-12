@@ -619,6 +619,7 @@ Bannockburn, IL 60015
 
 <script>
 $(document).ready(function() {
+	var CnfState = {"hist": true};
 	jsMQcallback = $.Callbacks(), jsMQcurrent = "";
 	var jsMQ = {
 		getVW : function(){
@@ -641,6 +642,12 @@ $(document).ready(function() {
 	};
 	setInterval(jsMQ.pubVW, 1800);
 	$(document).foundation();
+	//  Establish unique ids, assuming dyn content, not declairitive
+
+	history.replaceState({"uid_hash":"faq"}, document.location, "#faq");
+	$( ".faq-quest" ).each( function(){
+		$( this ).attr("id", makeId( $( this ).text() ) );
+	});
 	//  On Small force chevons onto new line / Do this in CSS Media Qry
 	if( jsMQ.isSmall() ){
 		$(".fa-angle-down").css("display", "block");
@@ -667,14 +674,14 @@ $(document).ready(function() {
 			 $( "#faq-togl" ).click();
 		}
 	});
-	$(".faq-togl").click(function( e ) {
+	$( ".faq-togl" ).click(function( e ) {
 		e.preventDefault();
 		var $txt = $( this ).text();
 		$( this ).text( $( this ).attr("data-alt") );
 		$( this ).attr("data-alt", $txt );
 		$(".FAQ_contents").toggleClass("hide");
 	});
-	$(".faq-togl-cntnt").click(function( e ) {
+	$( ".faq-togl-cntnt" ).click(function( e ) {
 		$el = $("#"+$( this ).attr("data-tog"));
 		$el_i = $("."+$( this ).attr("data-tog"));
 		$el.toggleClass( "st_hd" );
@@ -687,9 +694,9 @@ $(document).ready(function() {
 		}
 	});
 	$(".faq-quest").click(function( e ) {
+		var sHash = makeId( $( this ).text() );
 		$el_i = $( this ).find("i");
 		$el_i.toggleClass("fa-angle-up").toggleClass("fa-angle-down");
-
 		$( this ).attr("data-faq-quest-active","true");
 		$(".faq-quest").each(function(){
 			if( $( this ).attr("data-faq-quest-active") !== "true" ){
@@ -706,13 +713,35 @@ $(document).ready(function() {
 		$ans = $( this ).next();
 
 		if( $ans.hasClass("st_hd") ){
-			$ans.slideDown("400",  function(){
-				$ans.removeClass("st_hd");
+			$ans.slideDown("400",  function(){			
+				if( !CnfState.hist ){
+					CnfState.hist = true;
+				}else{
+					history.pushState({"uid_hash":sHash}, sHash, "#" + sHash);
+				}
+			$ans.removeClass("st_hd");
 			} );
 		}else{
 			$ans.attr("style","display: none;").addClass("st_hd");
 		}
 	});
+	window.addEventListener("popstate", function( e ) {
+		if (typeof e.state.uid_hash !== "undefined") {
+			if( e.state.uid_hash === "faq" ){
+					CnfState.hist = false;
+					$( ".faq-panel__active" ).click();
+					CnfState.hist = true;
+			}else{
+				if( !$( "#" + e.state.uid_hash ).hasClass("faq-panel__active") ){
+					CnfState.hist = false;
+					$( "#" + e.state.uid_hash ).click();	
+				}
+			}	
+		}
+	});
+	function makeId( sText ){
+		return sText.toLowerCase().replace(/\W+/g,"-").slice(0, -1);
+	}
 });</script>
 	</body>
 </html>
