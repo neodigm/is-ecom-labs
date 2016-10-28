@@ -20,19 +20,28 @@
 <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel='stylesheet' type='text/css'>
 <style>
 /*  EXISTING RESP BEGIN  */
-.btn-brand {
+.resp_btn_brand {
 	font-size: 1.100em;
 	font-weight: 200;
 	vertical-align: middle;
 }
-.btn-brand, .btn-brand-small {
+.resp_btn_brand, .resp_btn_brand-small {
     background-color: #297FB8;
 }
-.btn-brand:hover, .btn-brand-small:hover {
+.brand_lsc .resp_btn_brand, .brand_lsc .resp_btn_brand-small {
+    background-color: #672634;
+}
+.resp_btn_brand:hover, .resp_btn_brand-small:hover {
     background-color: #004C85;
 }
-.btn-brand:focus, .btn-brand-small:focus {
+.resp_btn_brand:focus, .resp_btn_brand-small:focus {
     background-color: #003B64;
+}
+.brand_lsc .resp_btn_brand:hover, .brand_lsc .resp_btn_brand-small:hover {
+    background-color: #7e2d3e;
+}
+.brand_lsc .resp_btn_brand:focus, .brand_lsc .resp_btn_brand-small:focus {
+    background-color: #7e2d3e;
 }
 .resp_btn_green {
 	background-color: #4FB466;
@@ -45,12 +54,12 @@
 	background-color: #2AA6CA;
 }
 .resp_btn_teal:hover, .resp_btn_teal:focus {
-	background-color: #1A96BA;
+	background-color: #1a96ba; 
 }
 .brand_lsc .resp_btn_teal {
 	background-color: #9c4a62;
 }
-.brand_lsc .resp_btn_teal:hover, .resp_btn_teal:focus {
+.brand_lsc .resp_btn_teal:hover, .brand_lsc .resp_btn_teal:focus {
 	background-color: #632434;
 }
 .resp_full_height {height: 14px;}
@@ -229,22 +238,22 @@ Welcome to LTD Commodities.com. We are committed to providing unique products at
 		<div class="resp_full_height show-for-large-up"></div>
 		<ul class="stack button-group show-for-large-up radius">
 <!-- The below link should not display if the user is logged in -->
-			<li><a href="#" class="button btn-brand">Forgot User Name / Password</a></li>
-			<li><a href="#" class="button btn-brand">View My Account</a></li>
-			<li><a href="#" class="button btn-brand">Request Account Information</a></li>
+			<li><a href="#" class="button resp_btn_brand">Forgot User Name / Password</a></li>
+			<li><a href="#" class="button resp_btn_brand">View My Account</a></li>
+			<li><a href="#" class="button resp_btn_brand">Request Account Information</a></li>
 		</ul>
 		<div class="show-for-medium text-center">
 			<ul class="button-group round">
-				<li><a href="#" class="button btn-brand small">Forgot User Name / Password</a></li>
-				<li><a href="#" class="button btn-brand small">View My Account</a></li>
-				<li><a href="#" class="button btn-brand small">Request Account Information</a></li>
+				<li><a href="#" class="button resp_btn_brand small">Forgot User Name / Password</a></li>
+				<li><a href="#" class="button resp_btn_brand small">View My Account</a></li>
+				<li><a href="#" class="button resp_btn_brand small">Request Account Information</a></li>
 			</ul>
 		</div>
 		<div class="show-for-small text-center">
 			<ul class="stack button-group radius">
-				<li><a href="#" class="button btn-brand tiny">Forgot User Name / Password</a></li>
-				<li><a href="#" class="button btn-brand tiny">View My Account</a></li>
-				<li><a href="#" class="button btn-brand tiny">Request Account Information</a></li>
+				<li><a href="#" class="button resp_btn_brand tiny">Forgot User Name / Password</a></li>
+				<li><a href="#" class="button resp_btn_brand tiny">View My Account</a></li>
+				<li><a href="#" class="button resp_btn_brand tiny">Request Account Information</a></li>
 			</ul>
 		</div>
 	</nav>
@@ -617,12 +626,20 @@ Order Department<br><span class="tel_link">(847) 295-5532</span><br>
 Place orders, check order status or request
 a catalog 24 hours a day, 7 days a week.<br>
 				</p>
-				<p class="faq-icon">
+				<p class="hide-for-small-only faq-icon">
 					<i class="faq-icon fa fa-comments-o fa-lg"></i> &nbsp; Live Chat
 				</p>
-				<aside class="text-center" style="background-color: #FFF; padding: 10px; border-radius: 8px;">
+				<p class="show-for-small-only faq-icon">
+					<i class="faq-icon fa fa-mobile fa-lg"></i> &nbsp; Tap to Call
+				</p>
+				<aside class="hide-for-small-only text-center" style="background-color: #FFF; padding: 10px; border-radius: 8px;">
 					<a href="#">
 						<img src="live_chat_ltd.png">
+					</a>
+				</aside>
+				<aside class="show-for-small-only text-center">
+					<a class="button resp_btn_teal expand radius" href="#">
+Dial Now
 					</a>
 				</aside>
 				<div class="resp_half_height"></div>
