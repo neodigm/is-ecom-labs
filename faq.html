@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -175,7 +176,7 @@
 	background-color: #2aa6ca;
 	transition: background-color 80ms;
 	-webkit-transition: background-color 80ms;
-	box-shadow: 0 5px 10px rgba(3,3,3,0.25), 0 3px 3px rgba(3,3,3,0.22);
+	box-shadow: 0 4px 8px rgba(3,3,3,0.22);/*, 0 3px 3px rgba(3,3,3,0.22);*/
 }
 .brand_lsc .faq-quest:hover {
 	background-color: #9c4a62;
@@ -210,6 +211,7 @@
 	padding: 12px;
 	min-height: 56px;
 	background-color: #FFF;
+	box-shadow: 0 4px 8px rgba(3,3,3,0.22);
 }
 .faq_ansr > p {
 	color: #111;
@@ -676,7 +678,18 @@ Bannockburn, IL 60015
 <script src="foundation.js"></script>
 
 <script>
+function setBrandfromQuery( sSelect ){  //  Set brand class based on query string
+	if( window.location.href.indexOf("brand_ltd") > -1) {
+		$( sSelect ).removeClass("brand_lsc").addClass("brand_ltd");
+	}
+	if( window.location.href.indexOf("brand_lsc") > -1) {
+		$( sSelect ).removeClass("brand_ltd").addClass("brand_lsc");		
+	}
+}
 $(document).ready(function() {
+
+	setBrandfromQuery( "body" );
+
 	var CnfState = {"hist": true};
 	jsMQcallback = $.Callbacks(), jsMQcurrent = "";
 	var jsMQ = {
@@ -783,12 +796,7 @@ $(document).ready(function() {
 		}
 	});
 	window.addEventListener("popstate", function( e ) {
-		if( window.location.href.indexOf("brand_ltd") > -1) {
-			$( "body" ).removeClass("brand_lsc").addClass("brand_ltd");
-		}
-		if( window.location.href.indexOf("brand_lsc") > -1) {
-			$( "body" ).removeClass("brand_ltd").addClass("brand_lsc");		
-		}
+		setBrandfromQuery( "body" );
 		if (typeof e.state.uid_hash !== "undefined") {
 			if( e.state.uid_hash === "faq" ){
 					CnfState.hist = false;
