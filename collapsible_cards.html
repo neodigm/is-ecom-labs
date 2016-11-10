@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Collapsible Cards Pattern</title>
+	<link rel="stylesheet" href="foundation.css" />
+</head>
+<body>
+<style>
+
+</style>
+	<section class="row">
+		<div class="column small-12 panel">
+YYYYYYYYYYYYYYYYYYYuuuuuuuuuuuuu
+		</div>
+	</section>
+<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+<script src="foundation.js"></script>
+<script>
+$(document).ready(function() {
+	$(document).foundation();
+
+	$(".faq-quest").click(function( e ) {
+		var sHash = makeId( $( this ).text() );
+		$el_i = $( this ).find("i");
+		$el_i.toggleClass("fa-angle-up").toggleClass("fa-angle-down");
+		$( this ).attr("data-faq-quest-active","true");
+		$(".faq-quest").each(function(){
+			if( $( this ).attr("data-faq-quest-active") !== "true" ){
+				$( this ).removeClass("faq-panel__active");
+				$( this ).next().attr("style","display: none;").removeClass("st_hd").addClass("st_hd");
+				$el_i = $( this ).find("i");
+				$el_i.addClass("fa-angle-down").removeClass("fa-angle-up");
+			}else{			
+				$( this ).attr("data-faq-quest-active","false");
+			}
+		});
+
+		$( this ).toggleClass("faq-panel__active");
+		$ans = $( this ).next();
+
+		if( $ans.hasClass("st_hd") ){
+			$ans.slideDown("400",  function(){			
+				if( !CnfState.hist ){
+					CnfState.hist = true;
+				}else{
+					history.pushState({"uid_hash":sHash}, sHash, "#" + sHash);
+				}
+			$ans.removeClass("st_hd");
+			} );
+		}else{
+			$ans.attr("style","display: none;").addClass("st_hd");
+		}
+	});
+});</script>
+</body>
+</html>
