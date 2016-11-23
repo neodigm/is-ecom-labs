@@ -100,7 +100,7 @@
 .faq-instr       {color: #000; font-size: 16px !important; font-weight: 400; font-family: 'Roboto', sans-serif;margin-bottom: 12px;}
 .faq-contact     {color: #000; font-size: 14px !important; font-weight: 400; font-family: 'Roboto', sans-serif;}
 
-.faq-togl {width: 100%;padding: 6px;}
+.faq-togl {width: 100%;padding: 16px;}
 .faq-togl-cntnt {
 	cursor: pointer;
 	-webkit-user-select: none;
@@ -346,10 +346,25 @@ catalog is also available online, <a href="https://www.ltdcommodities.com/homelt
 		</div>
 	</section>
 	<section class="row">
-		<div class="column hide-for-small hide-for-medium large-5 faq-cols">&nbsp;</div>
-		<div class="column small-10 large-5 faq-cols text-right">
-			<a href="#" class="button radius resp_btn_green expand YYYYsplit YYYYfaq-split">
-				<div id="faq-togl" data-alt="Hide FAQs" class="faq-togl">View All FAQs</div></a>
+		<div class="hide-for-small hide-for-medium large-5 faq-cols columns">&nbsp; </div>
+		<div class="small-10 large-5 faq-cols text-right columns">
+
+			<a href="#" class="button radius resp_btn_green expand split faq-split">
+				<div id="faq-togl" data-alt="Hide FAQs" class="faq-togl">View All FAQs</div> <span data-dropdown="view_all_faqs_drop"></span></a>
+			<div class="resp_half_height"></div>
+			<ul id="view_all_faqs_drop" class="content f-dropdown" data-dropdown-content>
+				<li><a class="drop_nav text-center" href="#address_change"   >Address Change</a></li>
+				<li><a class="drop_nav text-center" href="#catalogs"         >Catalogs</a></li>
+				<li><a class="drop_nav text-center" href="#ordering"         >Ordering</a></li>
+				<li><a class="drop_nav text-center" href="#pay_online_help"  >Pay Online Help</a></li>
+				<li><a class="drop_nav text-center" href="#privacy_policy"   >Privacy Policy</a></li>
+				<li><a class="drop_nav text-center" href="#product"          >Product</a></li>
+				<li><a class="drop_nav text-center" href="#returns"          >Returns</a></li>
+				<li><a class="drop_nav text-center" href="#security"         >Security</a></li>
+				<li><a class="drop_nav text-center" href="#shipping"         >Shipping</a></li>
+				<li><a class="drop_nav text-center" href="#web_site_features">Web Site Features</a></li>
+			</ul>
+
 		</div>
 	</section>
 	<section id="FAQ_contents" class="hide FAQ_contents">
