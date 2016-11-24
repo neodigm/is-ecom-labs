@@ -257,9 +257,9 @@ Welcome to LTD Commodities.com. We are committed to providing unique products at
 		<div class="resp_full_height show-for-large-up"></div>
 		<ul class="stack button-group show-for-large-up radius">
 <!-- The below link should not display if the user is logged in -->
-			<li><a href="#" class="button resp_btn_brand">Forgot User Name / Password</a></li>
-			<li><a href="#" class="button resp_btn_brand">View My Account</a></li>
-			<li><a href="#" class="button resp_btn_brand">Request Account Information</a></li>
+			<li><a href="#" class="button resp_btn_brand expand">Forgot User Name / Password</a></li>
+			<li><a href="#" class="button resp_btn_brand expand">View My Account</a></li>
+			<li><a href="#" class="button resp_btn_brand expand">Request Account Information</a></li>
 		</ul>
 		<div class="show-for-medium text-center">
 			<ul class="button-group round">
@@ -270,9 +270,9 @@ Welcome to LTD Commodities.com. We are committed to providing unique products at
 		</div>
 		<div class="show-for-small text-center">
 			<ul class="stack button-group radius">
-				<li><a href="#" class="button resp_btn_brand tiny">Forgot User Name / Password</a></li>
-				<li><a href="#" class="button resp_btn_brand tiny">View My Account</a></li>
-				<li><a href="#" class="button resp_btn_brand tiny">Request Account Information</a></li>
+				<li><a href="#" class="button resp_btn_brand tiny expand">Forgot User Name / Password</a></li>
+				<li><a href="#" class="button resp_btn_brand tiny expand">View My Account</a></li>
+				<li><a href="#" class="button resp_btn_brand tiny expand">Request Account Information</a></li>
 			</ul>
 		</div>
 	</nav>
@@ -691,7 +691,7 @@ function setBrandfromQuery( sSelect ){  //  Set brand class based on query strin
 }
 $(document).ready(function() {
 	faq_logic_ready();
-};
+});
 function faq_logic_ready(){
 
 	setBrandfromQuery( "body" );
@@ -819,6 +819,6 @@ function faq_logic_ready(){
 	function makeId( sText ){
 		return sText.toLowerCase().replace(/\W+/g,"-").slice(0, -1);
 	}
-});</script>
+};</script>
 	</body>
 </html>
