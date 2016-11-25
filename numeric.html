@@ -20,11 +20,12 @@
 	<script>
 		$(document).ready(function(){
             $(".js-num-only").on("keyup", function( e ){
-                this.value = this.value.replace(/[^\d\.]/g,"");
+                var C = this.value.replace(/[^\d\.]/g,"");
+                if( C.length != this.length ){ this.value = C; }
             });
-		$(document).ready(function(){
             $(".js-num-only-blur").on("blur", function( e ){
-                this.value = this.value.replace(/[^\d\.]/g,"");
+                var C = this.value.replace(/[^\d\.]/g,"");
+                if( C.length != this.length ){ this.value = C; }
             });
 		});
 	</script>
