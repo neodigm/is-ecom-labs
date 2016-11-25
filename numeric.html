@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Responsive Test Document</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<body>
+<hr>
+
+<h6>HTML5 Numeric input keypress</h6>
+<input class="js-num-only" type="number" placeholder="amount">
+<hr>
+<h6>HTML5 Numeric input blur</h6>
+<input class="js-num-only-blur" type="number" placeholder="amount">
+
+	</body>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
+
+	<script>
+		$(document).ready(function(){
+            $(".js-num-only").on("keyup", function( e ){
+                this.value = this.value.replace(/[^\d\.]/g,"");
+            });
+		$(document).ready(function(){
+            $(".js-num-only-blur").on("blur", function( e ){
+                this.value = this.value.replace(/[^\d\.]/g,"");
+            });
+		});
+	</script>
+</html>
