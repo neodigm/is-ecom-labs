@@ -1,54 +1,3 @@
-<style>
-/*  EXISTING RESP BEGIN  */
-.resp_btn_brand {
-	font-size: 1.100em;
-	font-weight: 200;
-	vertical-align: middle;
-}
-.resp_btn_brand, .resp_btn_brand-small {
-    background-color: #297FB8;
-}
-.brand_lsc .resp_btn_brand, .brand_lsc .resp_btn_brand-small {
-    background-color: #672634;
-}
-.resp_btn_brand:hover, .resp_btn_brand-small:hover {
-    background-color: #004C85;
-}
-.resp_btn_brand:focus, .resp_btn_brand-small:focus {
-    background-color: #003B64;
-}
-.brand_lsc .resp_btn_brand:hover, .brand_lsc .resp_btn_brand-small:hover {
-    background-color: #7e2d3e;
-}
-.brand_lsc .resp_btn_brand:focus, .brand_lsc .resp_btn_brand-small:focus {
-    background-color: #7e2d3e;
-}
-.resp_btn_green {
-	background-color: #4FB466;
-	margin: 0;
-}
-.resp_btn_green:hover, .resp_btn_green:focus {
-	background-color: #2F9446;
-}
-.resp_btn_teal {
-	background-color: #2AA6CA;
-}
-.resp_btn_teal:hover, .resp_btn_teal:focus {
-	background-color: #1a96ba; 
-}
-.brand_lsc .resp_btn_teal {
-	background-color: #9c4a62;
-}
-.brand_lsc .resp_btn_teal:hover, .brand_lsc .resp_btn_teal:focus {
-	background-color: #632434;
-}
-.resp_full_height {height: 14px;}
-.resp_half_height {height: 8px;}
-.resp_qtr_height {height: 4px;}
-.resp_8th_height {height: 2px;}
-.no-padding {
-	padding: 0 !important;
-}
 /*  EXISTING RESP END  */
 .force-v-scroll {
 	overflow-y: scroll;
@@ -212,8 +161,9 @@
 .faq-icon {color: #888;}
 .st_hd_ini {display: none;}
 </style>
-  </head>
-  <body class="force-v-scroll">
+
+
+
 <div class="resp_half_height"></div>
 <section class="row">
 	<header class="columns small-10 medium-10 large-6">
@@ -228,9 +178,9 @@ Welcome to LTD Commodities.com. We are committed to providing unique products at
 		<div class="resp_full_height show-for-large-up"></div>
 		<ul class="stack button-group show-for-large-up radius">
 <!-- The below link should not display if the user is logged in -->
-			<li><a href="#" class="button resp_btn_brand">Forgot User Name / Password</a></li>
-			<li><a href="#" class="button resp_btn_brand">View My Account</a></li>
-			<li><a href="#" class="button resp_btn_brand">Request Account Information</a></li>
+			<li><a href="#" class="button resp_btn_brand expand">Forgot User Name / Password</a></li>
+			<li><a href="#" class="button resp_btn_brand expand">View My Account</a></li>
+			<li><a href="#" class="button resp_btn_brand expand">Request Account Information</a></li>
 		</ul>
 		<div class="show-for-medium text-center">
 			<ul class="button-group round">
@@ -241,9 +191,9 @@ Welcome to LTD Commodities.com. We are committed to providing unique products at
 		</div>
 		<div class="show-for-small text-center">
 			<ul class="stack button-group radius">
-				<li><a href="#" class="button resp_btn_brand tiny">Forgot User Name / Password</a></li>
-				<li><a href="#" class="button resp_btn_brand tiny">View My Account</a></li>
-				<li><a href="#" class="button resp_btn_brand tiny">Request Account Information</a></li>
+				<li><a href="#" class="button resp_btn_brand expand">Forgot User Name / Password</a></li>
+				<li><a href="#" class="button resp_btn_brand expand">View My Account</a></li>
+				<li><a href="#" class="button resp_btn_brand expand">Request Account Information</a></li>
 			</ul>
 		</div>
 	</nav>
@@ -646,11 +596,7 @@ Bannockburn, IL 60015
 </section>
 <br>
 
-<!--  <script src="https://cdn.foundation5.zurb.com/foundation.js"></script>  -->
-<!-- FAQ10 -->
-<!-- <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script> -->
-<!-- <script src="foundation.js"></script> -->
-<script src="lib.ltd.footer.js"></script>
+
 <script>
 function setBrandfromQuery( sSelect ){  //  Set brand class based on query string
 	if( window.location.href.indexOf("brand_ltd") > -1) {
@@ -662,7 +608,7 @@ function setBrandfromQuery( sSelect ){  //  Set brand class based on query strin
 }
 $(document).ready(function() {
 	faq_logic_ready();
-};
+});
 function faq_logic_ready(){
 
 	setBrandfromQuery( "body" );
@@ -790,4 +736,4 @@ function faq_logic_ready(){
 	function makeId( sText ){
 		return sText.toLowerCase().replace(/\W+/g,"-").slice(0, -1);
 	}
-});</script>
+};</script>

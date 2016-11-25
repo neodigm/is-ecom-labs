@@ -28,7 +28,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel='stylesheet' type='text/css'>
 <style>
-/*  EXISTING RESP BEGIN  */
+/*  EXISTING RESP BEGIN  
 .resp_btn_brand {
 	font-size: 1.100em;
 	font-weight: 200;
@@ -78,7 +78,7 @@
 .no-padding {
 	padding: 0 !important;
 }
-/*  EXISTING RESP END  */
+  EXISTING RESP END  */
 .force-v-scroll {
 	overflow-y: scroll;
 }
@@ -240,6 +240,12 @@
 .respn_arw {color: #888;}
 .faq-icon {color: #888;}
 .st_hd_ini {display: none;}
+
+.brand_ltd .brand--lsc__show { display:none }
+.brand_ltd .brand--ltd__show { display:block }
+.brand_lsc .brand--lsc__show { display:block }
+.brand_lsc .brand--ltd__show { display:none }
+
 </style>
   </head>
   <body class="force-v-scroll">
@@ -270,9 +276,9 @@ Welcome to LTD Commodities.com. We are committed to providing unique products at
 		</div>
 		<div class="show-for-small text-center">
 			<ul class="stack button-group radius">
-				<li><a href="#" class="button resp_btn_brand tiny expand">Forgot User Name / Password</a></li>
-				<li><a href="#" class="button resp_btn_brand tiny expand">View My Account</a></li>
-				<li><a href="#" class="button resp_btn_brand tiny expand">Request Account Information</a></li>
+				<li><a href="#" class="button resp_btn_brand expand">Forgot User Name / Password</a></li>
+				<li><a href="#" class="button resp_btn_brand expand">View My Account</a></li>
+				<li><a href="#" class="button resp_btn_brand expand">Request Account Information</a></li>
 			</ul>
 		</div>
 	</nav>
@@ -663,9 +669,11 @@ Bannockburn, IL 60015
 					<i class="faq-icon fa fa-user fa-lg"></i> &nbsp; Add to Contacts
 				</p>
 				<aside class="text-center" style="background-color: #FFF; padding: 1px; border-radius: 8px;">
-					<!-- https://chart.googleapis.com/chart?cht=qr&chs=112x112&chl=https://neodigm.github.io/is-ecom-labs/ltd.vcf -->
-					<a href="/images/ltd.vcf" id="qr" target="_blank">
-						<img src="/images/qr.png" alt="qr">
+					<a class="brand--ltd__show" href="/images/ltd.vcf" target="_blank">
+						<img src="/images/qr_vcf_ltd.png" alt="qr">
+					</a>
+					<a class="brand--lsc__show" href="/images/lsc.vcf" target="_blank">
+						<img src="/images/qr_vcf_lsc.png" alt="qr">
 					</a>
 				</aside>
 				<div class="resp_half_height"></div>
@@ -681,11 +689,10 @@ Bannockburn, IL 60015
 <!-- <script src="foundation.js"></script> -->
 <script src="lib.ltd.footer.js"></script>
 <script>
-function setBrandfromQuery( sSelect ){  //  Set brand class based on query string
-	if( window.location.href.indexOf("brand_ltd") > -1) {
+function setBrand( sSelect ){
+	if( getBrand() === "LTD" ) {
 		$( sSelect ).removeClass("brand_lsc").addClass("brand_ltd");
-	}
-	if( window.location.href.indexOf("brand_lsc") > -1) {
+	} else {
 		$( sSelect ).removeClass("brand_ltd").addClass("brand_lsc");		
 	}
 }
@@ -694,7 +701,7 @@ $(document).ready(function() {
 });
 function faq_logic_ready(){
 
-	setBrandfromQuery( "body" );
+	setBrand( "body" );
 
 	var CnfState = {"hist": true};
 	jsMQcallback = $.Callbacks(), jsMQcurrent = "";
