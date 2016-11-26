@@ -21,7 +21,7 @@
 		$(document).ready(function(){
             $(".js-num-only").on("keyup", function( e ){
                 //var C = 
-                this.value.replace(/[^\d\.]/g,"");
+                this.value = this.value.replace(/[^\d\.]/g,"");
                 //if( C.length != this.length ){ this.value = C; }
             });
             $(".js-num-only-blur").on("blur", function( e ){
