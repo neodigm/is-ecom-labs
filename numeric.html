@@ -20,7 +20,7 @@
 	<script>
 		$(document).ready(function(){
             $(".js-num-only").on("keyup", function( e ){
-                this.value = Number( this.value.replace(/[^\d\.]/g,"") );
+                this.value = Number( this.value.replace(/[^\d\.]/g,"") ) && 0;
             });
             $(".js-num-only-blur").on("blur", function( e ){
                 this.value = Number( this.value.replace(/[^\d\.]/g,"") );
