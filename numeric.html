@@ -9,10 +9,10 @@
 <hr>
 
 <h6>HTML5 Numeric input keypress</h6>
-<input class="js-num-only" type="number" placeholder="amount">
+<input class="js-num-only" type="text" placeholder="amount">
 <hr>
 <h6>HTML5 Numeric input blur</h6>
-<input class="js-num-only-blur" type="number" placeholder="amount">
+<input class="js-num-only-blur" type="text" placeholder="amount">
 
 	</body>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
@@ -20,13 +20,7 @@
 	<script>
 		$(document).ready(function(){
             $(".js-num-only").on("keyup", function( e ){
-                //var C = 
-                this.value = this.value.replace(/[^\d\.]/g,"");
-                //if( C.length != this.length ){ this.value = C; }
-            });
-            $(".js-num-only-blur").on("blur", function( e ){
-                var C = this.value.replace(/[^\d\.]/g,"");
-                if( C.length != this.length ){ this.value = C; }
+                this.value = Number( this.value.replace(/[^\d\.]/g,"") );
             });
 		});
 	</script>
