@@ -20,7 +20,8 @@
 	<script>
 		$(document).ready(function(){
             $(".js-num-only").on("keyup", function( e ){
-                this.value = Number( this.value.replace(/[^\d\.]/g,"") ) || 0;
+                c = Number( this.value.replace(/[^\d\.]/g,"") );
+                this.value = ( typeof c == "NaN" ) ? c : "" ;
             });
             $(".js-num-only-blur").on("blur", function( e ){
                 this.value = Number( this.value.replace(/[^\d\.]/g,"") );
