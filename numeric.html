@@ -22,6 +22,9 @@
             $(".js-num-only").on("keyup", function( e ){
                 this.value = Number( this.value.replace(/[^\d\.]/g,"") );
             });
+            $(".js-num-only-blur").on("blur", function( e ){
+                this.value = Number( this.value.replace(/[^\d\.]/g,"") );
+            });
 		});
 	</script>
 </html>
