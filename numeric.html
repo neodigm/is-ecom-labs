@@ -6,13 +6,23 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	</head>
 	<body>
+<style>
+	input[type='number'] {
+	  -moz-appearance:textfield;
+	}
+
+	input::-webkit-outer-spin-button,
+	input::-webkit-inner-spin-button {
+	  -webkit-appearance: none;
+	}
+</style>
 <hr>
 <h6>HTML5 Text input keypress</h6>
-<input class="js-num-only" type="text" placeholder="amount">
+<input class="js-num-only" type="text" placeholder="amount"  min="0">
 
 <hr>
 <h6>HTML5 Numeric input keypress</h6>
-<input class="js-num-only" type="number" placeholder="amount">
+<input class="js-num-only" type="number" placeholder="amount"  min="0">
 
 
 	</body>
@@ -23,7 +33,7 @@
             $(".js-num-only").on("keypress", function( e ){
                 //  Currency input mask | numeric single dec
                 var ch = e.which, dc = ( this.value.indexOf(".") !== -1 );
-                 return (( ch >= 48 ) && ( ch <= 57)) || ( ch == 46 && !dc );
+                return (( ch >= 48 ) && ( ch <= 57)) || ( ch == 46 && !dc );
             });
 		});
 	</script>
