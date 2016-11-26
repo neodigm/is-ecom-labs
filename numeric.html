@@ -21,7 +21,7 @@
 		$(document).ready(function(){
             $(".js-num-only").on("keyup", function( e ){
                 c = Number( this.value );
-                this.value = ( isNaN( c ) ) ? "" : c ;
+                this.value = ( isNaN( c ) ) ? this.value.replace(/[^\d\.]/g,"") : c ;
             });
             $(".js-num-only-blur").on("blur", function( e ){
                 this.value = Number( this.value.replace(/[^\d\.]/g,"") );
