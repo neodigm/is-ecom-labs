@@ -79,8 +79,8 @@
 	padding: 0 !important;
 }
 /*  EXISTING RESP END  */
-.force-v-scroll {
-	overflow-y: scroll;
+.resp_btn_brand__1 {
+	font-size: 1em;
 }
 
 ::selection {
@@ -597,8 +597,7 @@ Bannockburn, IL 60015
 				<p class="faq-contact text-left">
 Can't find the information you're looking for? Contact us via e-mail to receive quick and accurate responses to your questions.
 				</p>
-				<a class="button resp_btn_teal expand radius js-contanct-us"
-				YYYYdata-reveal-id="rev-contact-us">Ask a Question</a>
+				<a class="button resp_btn_teal expand radius js-contanct-us">Ask a Question</a>
 				<div class="resp_half_height"></div>
 			</div>
 			<div class="resp_half_height"></div>
@@ -688,27 +687,67 @@ Bannockburn, IL 60015
 	<br>
 	<h6 class="txt_caption text-center">Contact Us</h6>
 	<p class="text-center">We will make every attempt to respond to your email within 1 day, excluding weekends and holidays. Thank you for your patience.</p>
-	<hr>
+	<br>
 	<section class="row">
 		<div class="column small-10 medium-5">
-				<input id="" class="resp_input_brand" type="text" title="First Name"
-				maxlength="28" placeholder="* First Name" aria-required="true" aria-label="First Name">
-				<input id="" class="resp_input_brand" type="text" title="Last Name"
-				maxlength="28" placeholder="* Last Name" aria-required="true" aria-label="Last Name">
+
+			<select id="" class="select-custom">
+				<option value="">* Select Topic</option>
+				<option value="">Please Choose A Service Area</option>
+				<option value="Account_Assistance">Account Assistance</option>
+				<option value="Billing_Payment_Inquiry">Billing/Payment Inquiry</option>
+				<option value="Catalog_Inquiry">Catalog Inquiry</option>
+				<option value="Order_Status">Order Status</option>
+				<option value="Product_Information">Product Information</option>
+				<option value="Return_Exchange">Return/Exchange</option>
+				<option value="Technical_Website_Help">Technical/Website Help</option>
+				<option value="General_Question">General Question</option>
+			</select>
+
+			<input id="" class="resp_input_brand" type="text" title="Name"
+				maxlength="28" placeholder="* Name" aria-required="true" aria-label="Name">
+			<input id="" class="resp_input_brand" type="text" title="Email Address"
+				maxlength="28" placeholder="* Email Address" aria-required="true" aria-label="Email Address">
+
+			<section class="row show-for-medium-up">
+					<div class="column small-5">
+						<figure class="text-center">
+							<img src="https://c22blog.files.wordpress.com/2010/10/input-black.gif"
+							style="width: auto; height: 38px;">
+						</figure>
+					</div>
+					<div class="column small-5">
+						<input id="" class="resp_input_brand" type="text" title="Confirm Humanity"
+						maxlength="28" placeholder="* Confirm Humanity" aria-required="true" aria-label="Confirm Humanity">
+					</div>
+			</section>
+
 		</div>
 		<div class="column small-10 medium-5">
-				<input id="" class="resp_input_brand" type="text" title="Email Address"
-				maxlength="28" placeholder="* Email Address" aria-required="true" aria-label="Email Address">
-				<input id="" class="resp_input_brand" type="text" title="Confirm Email Addrss"
-				maxlength="28" placeholder="* Confirm Email Addrss" aria-required="true" aria-label="Confirm Email Addrss">
+			<textarea id="" cols="" rows="12" maxlength="4000" placeholder="* Comment"></textarea>
+
+			<section class="row show-for-small-only">
+					<div class="column small-4">
+						<figure class="text-center">
+							<img src="https://c22blog.files.wordpress.com/2010/10/input-black.gif"
+							style="width: auto; height: 38px;">
+						</figure>
+					</div>
+					<div class="column small-6">
+						<input id="" class="resp_input_brand" type="text" title="Confirm Humanity"
+						maxlength="28" placeholder="* Confirm Humanity" aria-required="true" aria-label="Confirm Humanity">
+					</div>
+			</section>
+
 		</div>
 	</section>
+
 	<nav class="row">
 		<div class="columns small-10 medium-5 large-5 push-5 small-padding-top">
-			<a class="js-nav-home-stay closeMod button radius expand resp_btn_green YYYYcmd_disabled">OK</a>	
+			<a class="js-nav-home-send button closeMod radius expand resp_btn_green resp_btn_brand__1 cmd_disabled">Send Message</a>	
 		</div>
 		<div class="columns small-10 medium-5 large-5 pull-5 small-padding-top">
-			<a class="js-nav-home-leave closeMod button radius expand resp_btn_brand">Cancel</a>
+			<a class="js-nav-home-cancel button closeMod radius expand resp_btn_brand resp_btn_brand__1">Cancel</a>
 		</div>
 	</nav>
 	<a class="close-reveal-modal resp_x" aria-label="Close">x</a>
