@@ -766,9 +766,16 @@ function setBrand( sSelect ){
 		$( sSelect ).removeClass("brand_ltd").addClass("brand_lsc");		
 	}
 }
+
 $(document).ready(function() {
 	faq_logic_ready();
 });
+$(window).load(function() {
+	faq_logic_load();
+});
+function faq_logic_load(){
+	deepLinkContactUs( "contactus", ".js-contanct-us" );  //  Click Contact Us if in query string
+}
 function faq_logic_ready(){
 
 	setBrand( "body" );
@@ -902,6 +909,10 @@ function faq_logic_ready(){
 	function makeId( sText ){
 		return sText.toLowerCase().replace(/\W+/g,"-").slice(0, -1);
 	}
-};</script>
+};
+function deepLinkContactUs( sURLQuery, sButton_js ){
+	if( window.location.href.indexOf( sURLQuery ) > -1 ) $( sButton_js ).click();
+}
+</script>
 	</body>
 </html>
