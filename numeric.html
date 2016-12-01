@@ -25,7 +25,8 @@
 <h6>Numberic (HTML5 Number input keypress)</h6>
 <input class="js-number-only" type="number" placeholder="amount"  min="0">
 </form>
-<textarea id="fb" row="12"></textarea>
+<hr>
+<textarea id="fb" rows="12" cols="22"></textarea>
 
 	</body>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
@@ -42,17 +43,18 @@
 function js_currency_only( el, ev ){
 	//  Currency input mask | numeric single dec pnt
 	var inc =[0,1,2,3,4,5,6,7,8,99,118,120];
+	inc = ( ev.ctrlKey ) ? inc : inc.splice( 0, inc.length -3 );
 	var ch = ev.which, dc = ( el.value.indexOf(".") === -1 );
 $("#fb").val( $("#fb").val() + " ch | " + ch + " | dc | " + dc + "\n" );
-//$("#fb").val( $("#fb").val() + " ch | " + ch +  "\n" );
 	return (inc.indexOf( ch ) != -1 ) || (( ch >= 48 ) && ( ch <= 57 )) || ( ch == 46 && dc );
 }
 function js_number_only( el, ev ){
-		//  Currency input mask | numeric single dec
-		var inc =[0,1,2,3,4,5,6,7,8,99,118,120];
-		var ch = ev.which;
-$("#fb").val( $("#fb").val() + " ch | " + ch +  "\n" );
-		return (inc.indexOf( ch ) != -1 ) || (( ch >= 48 ) && ( ch <= 57));
+	//  Number input mask | whole num
+	var inc =[0,1,2,3,4,5,6,7,8,99,118,120];
+	inc = ( ev.ctrlKey ) ? inc : inc.splice( 0, inc.length -3 );
+	var ch = ev.which;
+$("#fb").val( $("#fb").val() + " ch | " + ch + " | ev.ctrlKey | " + ev.ctrlKey + "\n" );
+	return (inc.indexOf( ch ) != -1 ) || (( ch >= 48 ) && ( ch <= 57));
 }
 	</script>
 </html>
