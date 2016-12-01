@@ -16,25 +16,43 @@
 	  -webkit-appearance: none;
 	}
 </style>
+<form novalidate>
 <hr>
-<h6>HTML5 Text input keypress</h6>
-<input class="js-num-only" type="text" placeholder="amount"  min="0">
+<h6>Currency (HTML5 Number input keypress)</h6>
+<input class="js-currency-only" type="number" placeholder="amount"  min="0">
 
 <hr>
-<h6>HTML5 Numeric input keypress</h6>
-<input class="js-num-only" type="number" placeholder="amount"  min="0">
-
+<h6>Numberic (HTML5 Number input keypress)</h6>
+<input class="js-number-only" type="number" placeholder="amount"  min="0">
+</form>
+<textarea id="fb" row="12"></textarea>
 
 	</body>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
 
 	<script>
 		$(document).ready(function(){
-            $(".js-num-only").on("keypress", function( e ){
-                //  Currency input mask | numeric single dec
-                var ch = e.which, dc = ( this.value.indexOf(".") !== -1 );
-                return (( ch >= 48 ) && ( ch <= 57)) || ( ch == 46 && !dc );
-            });
+			$(".js-number-only").on("keypress", function( e ){
+				return js_number_only( this, e );
+			});
+			$(".js-currency-only").on("keypress", function( e ){
+				return js_currency_only( this, e );
+			});
 		});
+function js_currency_only( el, ev ){
+	//  Currency input mask | numeric single dec pnt
+	var inc =[0,1,2,3,4,5,6,7,8,99,118,120];
+	var ch = ev.which, dc = ( el.value.indexOf(".") === -1 );
+$("#fb").val( $("#fb").val() + " ch | " + ch + " | dc | " + dc + "\n" );
+//$("#fb").val( $("#fb").val() + " ch | " + ch +  "\n" );
+	return (inc.indexOf( ch ) != -1 ) || (( ch >= 48 ) && ( ch <= 57 )) || ( ch == 46 && dc );
+}
+function js_number_only( el, ev ){
+		//  Currency input mask | numeric single dec
+		var inc =[0,1,2,3,4,5,6,7,8,99,118,120];
+		var ch = ev.which;
+$("#fb").val( $("#fb").val() + " ch | " + ch +  "\n" );
+		return (inc.indexOf( ch ) != -1 ) || (( ch >= 48 ) && ( ch <= 57));
+}
 	</script>
 </html>
