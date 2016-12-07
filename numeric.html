@@ -18,12 +18,12 @@
 </style>
 <form novalidate>
 <hr>
-<h6>Currency (HTML5 Number input keypress)</h6>
-<input class="js-currency-only" type="number" placeholder="amount"  min="0">
+<h6>Currency (HTML5 Number input keypress maxlength 17)</h6>
+<input class="js-currency-only" type="number" placeholder="amount" min="0" maxlength="17">
 
 <hr>
-<h6>Numberic (HTML5 Number input keypress)</h6>
-<input class="js-number-only" type="number" placeholder="amount"  min="0">
+<h6>Numberic (HTML5 Number input keypress maxlength 17)</h6>
+<input class="js-number-only" type="number" placeholder="amount" min="0" maxlength="17">
 </form>
 <hr>
 <textarea id="fb" rows="12" cols="22"></textarea>
@@ -44,17 +44,19 @@ function js_currency_only( el, ev ){
 	//  Currency input mask | numeric single dec pnt
 	var inc =[0,1,2,3,4,5,6,7,8,99,118,120];
 	inc = ( ev.ctrlKey ) ? inc : inc.splice( 0, inc.length -3 );
-	var ch = ev.which, dc = ( el.value.indexOf(".") === -1 );
+	var ch = ev.which, dc = ( el.value.indexOf(".") === -1 ), ml = ( $(el).val().length >= $(el).attr("maxlength"));
+console.log( "stuff 1 | " + ml );
+//console.log( "stuff 2 | " + (inc.indexOf( ch ) != -1 ) || (( ch >= 48 ) && ( ch <= 57 ))  && (!ml) || ( ch == 46 && dc ) );
 $("#fb").val( $("#fb").val() + " ch | " + ch + " | dc | " + dc + "\n" );
-	return (inc.indexOf( ch ) != -1 ) || (( ch >= 48 ) && ( ch <= 57 )) || ( ch == 46 && dc );
+	return (inc.indexOf( ch ) != -1 ) || (( ch >= 48 ) && ( ch <= 57 ))  && (!ml) || ( ch == 46 && dc );
 }
 function js_number_only( el, ev ){
 	//  Number input mask | whole num
 	var inc =[0,1,2,3,4,5,6,7,8,99,118,120];
 	inc = ( ev.ctrlKey ) ? inc : inc.splice( 0, inc.length -3 );
-	var ch = ev.which;
+	var ch = ev.which, ml = ( $(el).val().length >= $(el).attr("maxlength"));
 $("#fb").val( $("#fb").val() + " ch | " + ch + " | ev.ctrlKey | " + ev.ctrlKey + "\n" );
-	return (inc.indexOf( ch ) != -1 ) || (( ch >= 48 ) && ( ch <= 57));
+	return (inc.indexOf( ch ) != -1 ) || (( ch >= 48 ) && ( ch <= 57)) && (!ml);
 }
 	</script>
 </html>
