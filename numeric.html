@@ -18,9 +18,10 @@
 </style>
 <form novalidate>
 <hr>
-<h6>Currency (HTML5 Number input keypress maxlength 17)</h6>
+<!--
+<h6>Currency (HTML5 Number input keypress)</h6>
 <input id="input__currencty" class="js-currency-only" type="number" placeholder="amount" min="0" maxlength="17">
-
+-->
 <hr>
 <h6>Numberic (HTML5 Number input keypress maxlength 17)</h6>
 <input id="input__number"    class="js-number-only"   type="number" placeholder="amount" min="0" maxlength="17">
@@ -50,7 +51,7 @@ console.log( " len = " + $(el).val().length + " max = " + $(el).attr("maxlength"
 console.log( " ch = " + ch + "  dc = " + dc + "  ml = " + ml + " ev = " + el.value );
 console.log( " rt = " + (inc.indexOf( ch ) != -1 ) || (( ch >= 48 ) && ( ch <= 57 )) && (!ml) );
 	if( ch === 46 && dc ) return false;
-	return (inc.indexOf( ch ) != -1 ) || (( ch >= 48 ) && ( ch <= 57 )) && (!ml);
+	return (inc.indexOf( ch ) != -1 ) || (( ch >= 48 ) && ( ch <= 57 ));
 }
 function js_number_only( el, ev ){
 	//  Number input mask | whole num
