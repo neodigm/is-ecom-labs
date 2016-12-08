@@ -43,8 +43,8 @@
 
 			$(".js-number-only").on("input", function( e ){
 				//  Android
-$("#fb").val( "INP" + $( this ).val() + "\n" + $("#fb").val());
-				var v = $( this ).val(); 
+				var v = $( this ).val();
+				$("#fb").val( "INP" + v.val() + "\n" + $("#fb").val()); 
 					$( this ).val( v.replace(/\./g, "9") );
 				if( v.indexOf(".") != -1 ){
 $("#fb").val( "DOT" + $( this ).val() + "\n" + $("#fb").val());
