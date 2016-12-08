@@ -45,12 +45,12 @@
 			$(".js-number-only").on("input", function( e ){
 				//  Android
 				var v = $( this ).val();
-console.log("check");
+
 $( this )[0].value = "";
-$("#fb").val( "INPvx " + v + "\n" + $("#fb").val()); 
+ 
 					$( this ).val( v.replace(/\./g, "9") );
 				if( v.indexOf(".") != -1 ){
-$("#fb").val( "DOTvx " + v + "\n" + $("#fb").val());
+
 
 				}
 
