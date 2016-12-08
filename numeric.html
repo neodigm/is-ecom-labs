@@ -42,7 +42,11 @@
 			});
 
 			$(".js-number-only").on("input", function( e ){
-				$( this ).val( $( this ).val().replace(".","") );
+				//  Android
+				var v = $( this ).val(); 
+				if( v.indexOf(".") != -1 ){
+					$( this ).val( v.replace(".", "") );
+				}
 			});
 		});
 function js_currency_only( el, ev ){
