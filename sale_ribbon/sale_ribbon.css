@@ -1,9 +1,4 @@
-.box {
-  width: 200px; height: 300px;
-  position: relative;
-  border: 1px solid #BBB;
-  background: #EEE;
-}
+/* sales_ribbon */
 .ribbon {
   position: absolute;
   right: -5px; top: -5px;
@@ -13,7 +8,7 @@
   text-align: right;
 }
 .ribbon span {
-  font-size: 9px;
+  font-size: 8.8px;
   font-weight: bold;
   color: #FFF;
   text-transform: uppercase;
