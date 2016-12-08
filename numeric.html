@@ -40,6 +40,10 @@
 			$(".js-currency-only").on("keypress", function( e ){
 				return js_currency_only( this, e );
 			});
+
+			$(".js-number-only").on("input", function( e ){
+				$( this ).val( $( this ).val().replace(".","") );
+			});
 		});
 function js_currency_only( el, ev ){
 	//  Currency input mask | numeric single dec pnt
