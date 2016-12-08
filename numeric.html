@@ -47,7 +47,7 @@ $("#fb").val( "INP" + $( this ).val() + "\n" + $("#fb").val());
 				var v = $( this ).val(); 
 				if( v.indexOf(".") != -1 ){
 $("#fb").val( "DOT" + $( this ).val() + "\n" + $("#fb").val());
-					$( this ).val( v.replace(".", "") );
+					$( this ).val( v.replace(/\./g, "") );
 				}
 
 			});
