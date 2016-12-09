@@ -597,7 +597,7 @@ Bannockburn, IL 60015
 				<p class="faq-contact text-left">
 Can't find the information you're looking for? Contact us via e-mail to receive quick and accurate responses to your questions.
 				</p>
-				<a class="button resp_btn_teal expand radius js-contanct-us">Ask a Question</a>
+				<a class="button resp_btn_teal expand radius js-contact-us">Ask a Question</a>
 				<div class="resp_half_height"></div>
 			</div>
 			<div class="resp_half_height"></div>
@@ -709,38 +709,9 @@ Bannockburn, IL 60015
 				maxlength="28" placeholder="* Name" aria-required="true" aria-label="Name">
 			<input id="" class="resp_input_brand" type="text" title="Email Address"
 				maxlength="28" placeholder="* Email Address" aria-required="true" aria-label="Email Address">
-
-<!--
-			<section class="row show-for-medium-up">
-					<div class="column small-5">
-						<figure class="text-center">
-							<img src="https://c22blog.files.wordpress.com/2010/10/input-black.gif"
-							style="width: auto; height: 38px;">
-						</figure>
-					</div>
-					<div class="column small-5">
-						<input id="" class="resp_input_brand" type="text" title="Confirm Humanity"
-						maxlength="28" placeholder="* Confirm Humanity" aria-required="true" aria-label="Confirm Humanity">
-					</div>
-			</section>
--->
 		</div>
 		<div class="column small-10 medium-5">
 			<textarea id="" cols="" rows="12" maxlength="4000" placeholder="* Comment"></textarea>
-<!--
-			<section class="row show-for-small-only">
-					<div class="column small-4">
-						<figure class="text-center">
-							<img src="https://c22blog.files.wordpress.com/2010/10/input-black.gif"
-							style="width: auto; height: 38px;">
-						</figure>
-					</div>
-					<div class="column small-6">
-						<input id="" class="resp_input_brand" type="text" title="Confirm Humanity"
-						maxlength="28" placeholder="* Confirm Humanity" aria-required="true" aria-label="Confirm Humanity">
-					</div>
-			</section>
--->
 		</div>	
 	</section>
 	
@@ -781,7 +752,7 @@ $(window).load(function() {
 	faq_logic_load();
 });
 function faq_logic_load(){
-	deepLinkContactUs( "contactus", ".js-contanct-us" );  //  Click Contact Us if in query string
+	deepLinkContactUs( "contactus", ".js-contact-us" );  //  Click Contact Us if in query string
 }
 function faq_logic_ready(){
 
@@ -811,7 +782,7 @@ function faq_logic_ready(){
 	setInterval(jsMQ.pubVW, 1800);
 	$(document).foundation();
 
-	$(".js-contanct-us").on("click", function( e ){
+	$(".js-contact-us").on("click", function( e ){
 		$("html, body").scrollTop(0);
 		$("#rev-contact-us").foundation("reveal", "open");
 		e.preventDefault();
