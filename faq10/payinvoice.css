@@ -1,0 +1,318 @@
+/*
+ * Pay Invoice Online (PIO)
+ */
+	input[type='number'] {
+	  -moz-appearance:textfield;
+	}
+
+	input::-webkit-outer-spin-button,
+	input::-webkit-inner-spin-button {
+	  -webkit-appearance: none;
+	}
+	.reveal-modal .rev-btn-close {font-weight: 100;color: #FFF; font-size: 16px;margin: 10px 10px 0 0; padding: 10px;}
+	.invc-det--aside { overflow-y:auto; overflow-x: hidden;border: 1px solid #EEE;} 
+
+	.itabl--tr__head, .itabl--tr__head td {background-color: #eee; font-weight: bold;font-size: 12.4px !important;}
+
+	.zs_true {
+		background-color: #fafafa !important;
+	}
+	.zs_false {
+		background-color: #ffffff !important;
+	}
+	.itabl--span__open    {color: #4FB466;} /* Greenish */
+	.itabl--span__pending {color: #e67e22;} /* Orangeish */
+	.itabl--span__other   {color: #c0392b;} /* Redish */
+
+	.pay-online--img {
+		margin-top: 18px;
+	}
+	.form-flow-inactive {
+		display: none;
+	}
+	.form-flow-active {
+		display: block;
+	}
+	.pio_title_caption {
+		font-size: 2.475rem;
+		font-weight: 400;
+		text-align: left;
+		margin-bottom: .5rem;
+		font-family: 'Roboto',sans-serif;
+		line-height: 1.4;
+		color: #222;
+	}
+	.fine_print {
+		font-size: .825rem !important;
+		margin-bottom: .2rem;
+		line-height: 13.8px;
+	}
+	.switch {margin-bottom:0;}
+	.switch label {margin-top:0; background-color:#c0392b;}
+	.switch input:checked+label {background: #4FB466;}
+	.switch-on {position: absolute; left: -50px; top: 8px; color: #fff; font-weight: normal; font-size: .825em;}
+	.switch-off {position: absolute; left: -25px; top: 7px; color: #fff; font-weight: normal; font-size: .825rem;}
+	.acnt_box {
+		border-radius: 8px !important;
+		padding: 20px 20px 8px 20px;
+	}
+	.acnt_box__det {
+		background-color: #fafafa;
+	}
+	.acnt_box__det .button.small {
+		line-height: normal;
+		padding: .7rem .6rem;
+		font-size: .775em;
+	}
+	.inv_btn_s {
+		line-height: normal;
+		padding: .7rem .6rem;
+		font-size: .775em;
+	}
+	.acnt_box__abt {
+		/*padding-left: 22px;*/
+		background-color: #FFF;
+		border-width: 0;
+	}
+	.acnt_box__abt p {
+		margin-bottom: 8px;
+	}
+	.acnt_box .txt_caption {
+		color: #222;
+		font-family: Roboto, sans-serif;
+		font-size: 2rem;
+		font-weight: 300;
+		text-align: left;
+		margin-bottom: 10px;
+	}	
+	p.txt_addr_line {
+		margin-bottom: 2px;
+		height: inherit;
+	}
+	.txt_addr_line {
+		color: #222;
+		font-family: Roboto, sans-serif;
+		font-size: 14px;
+		height: 22px;
+		line-height: 22.4px;
+		list-style-type: none;
+	}
+	.txt_addr_line > span {
+		font-weight: 600;
+	}
+	.txt_addr_line > p span {
+		font-weight: 600;
+	}
+
+	.itabl-conf--td { font-size: 14px !important; }
+	.itabl-conf--td__small { font-size: 11px !important; }
+
+	.pay_invoice_online   .breadcrumbs {border-bottom: .1rem solid #ccc; margin-bottom:.875rem;}
+	.pay_invoice_online ul.breadcrumbs li.current a {color: #4FB466;}
+
+	.pay_invoice_online  li.bullet-item {font-size:1.2rem !important;}
+	.pay_invoice_online .invoices strong {color:#c0392b;}
+	.pay_invoice_online .invoices table {width: 100%!important;}
+	.pay_invoice_online .invoices table th, .pay_invoice_online .invoices table tr td {text-align: center; font-size: .70em;}
+	.pay_invoice_online .invoices input:not([type="submit"]) {text-align: center; font-size: .88em:not([type="submit"]); width: 98px;}
+	.pay_invoice_online .invoices input[type=checkbox]{width: 38px;}
+	.pay_invoice_online .invoices table tr td span { font-size:.7rem; margin-top:.275rem; display: block;white-space: nowrap;}
+
+	/*.pay_invoice_online .invoices table tr td span.open {color:#4FB466;}
+	.pay_invoice_online .invoices table tr td span.pending {color:#e67e22;}
+	.pay_invoice_online .invoices table tr td span.returned {color:#c0392b;}*/
+
+	.inv-details .inv-info {border-bottom: .1rem solid #ccc; margin-bottom:1rem;}
+	.inv-details .inv-info h1 {font-weight: 300; margin-bottom:.5rem;}
+	.inv-details p.inv-num, .inv-details p.amt-due, .inv-details p.amt-paid {font-size:1.275rem !important; margin-bottom:.2rem;}
+	.inv-details p.inv-num span, .inv-details p.amt-due span, .inv-details p.amt-paid span {font-weight: 600;}
+	.inv-details p.amt-due {color:#c0392b;}
+	.inv-details p.amt-paid {color:#4FB466;}
+	.inv-details p.amt-paid em {color:#e67e22;} 
+	.inv-details p.inv-alert {color:#c0392b; font-size: 1.05rem !important; font-style:italic;}
+	.inv-details .panel {border-radius:.3rem; background-color:#fafafa; padding: 10px;margin: 6px 4px;}
+	.inv-details .panel p {margin-bottom:.1rem;}
+	.inv-details .panel p span {font-weight:600;}
+
+	.ccp-panel {
+		border-style: solid;
+		border-width: 1px;
+		border-color: #BBB;
+		margin-bottom: 16px;
+		padding: 8px 12px 4px 12px;
+		background: #f2faff;
+		color: #333333;
+		border-radius: 3px;
+	}
+
+	.ccp-panel--i {
+		position: absolute;
+		float: right;
+		top: 2px;
+		right: 8px;
+		color: #AAA;
+		font-size: 22px;
+	}
+
+	.ccp-quest {
+		position: relative;
+		overflow: hidden;
+		min-height: 42px;
+		height: 42px;
+		cursor: pointer;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+		transition: background-color 180ms;
+	}
+
+	.ccp-quest p {
+		color: #000; font-size: 18px; font-weight: 300; font-family: 'Roboto', sans-serif;
+	}
+
+	.ccp-quest:hover {
+		background-color: #2aa6ca;
+		transition: background-color 180ms;
+	}
+	.ccp-quest:hover .ccp-panel--i {
+		color: #FFF;
+	}
+	.ccp-quest:active {
+		background-color: #297FB8;
+		transition: background-color 180ms;
+	}
+
+	.ccp-panel__active {
+		background: #297FB8;
+		margin-bottom: -4px;
+	}
+
+	.ccp-quest__linebreak {
+		padding: 8px 12px 12px 18px;
+	}
+
+	.ccp-quest:hover p, .ccp-panel__active p {
+		color: #FFF;
+	}
+
+	.totl-box-output {
+		color: #333;
+		font-family: Roboto, sans-serif;
+		text-align: left;
+		line-height: 1.6;
+		font-size:1.44rem !important;
+		font-weight:500;
+		margin-bottom:.2rem !important;
+		display: block;
+	}
+
+	.totl-box-output__green {
+		color: #4FB466;
+	}
+	.resp_b {
+		font-weight: 600;
+	}
+	.cmd_half {
+		max-width: 50%;
+	}
+	.cmd_disabled {
+		background-color: #bbb !important;
+		cursor: default !important;			
+	}
+	.resp_error_inline {
+		min-height: 32px;
+		padding: .375em .25em;
+		font-size: 13px;
+		font-weight: bold;
+		font-style: italic;
+		background: #f04124;
+		color: white;
+		text-transform: none !important;
+		line-height: 1;
+	}
+	.cta-button .resp_error_inline {
+		margin: 0 auto;
+	}
+	.pio_select_invoices .resp_error_inline {
+		max-width:200px;
+		margin: 0 auto;
+	}
+	.pio_ach_details_edit .resp_error_inline {
+		max-width: inherit !important;
+	}
+
+	@media only screen and (max-width: 47.9375em) {
+		/* small */
+		.inv-details .inv-info h1 {font-size: 27px; font-weight: 100; margin-bottom:.3rem;}
+		.txt_addr_line--p {
+			margin-bottom: 2px;
+			line-height: 0.95;
+		}
+		.resp_error_inline {
+			max-width: inherit;
+		}
+		.pay-online--img {
+			margin-top: 6px;
+		}
+		.cmd_half {
+			max-width: none;
+		}
+		.acnt_box {
+			text-align: center;
+		}
+		.acnt_box .txt_caption {
+			text-align: center;
+			font-size:1.6rem;
+		}
+		.acnt_box  a {
+			display:inline-block;
+			font-size:1rem;
+		}
+		.pay_invoice_online ul.breadcrumbs {font-size:.68rem;}
+		.pay_invoice_online .invoices input:not([type="submit"]) {width: 44px;}
+		.pay_invoice_online .invoices input[type=checkbox]{width: 22px;}
+		.pio_title_caption {
+			font-size: 1.5rem;
+			font-weight: 400;
+			text-align: center;
+			margin-bottom: 0;
+		}
+		.pay_invoice_online .invoices table tr td span { font-size:.56rem; margin-top:.260rem; display: block;}
+		 td { padding: .44em .22em !important; }
+	}
+	@media only screen and (min-width:48em) and (max-width:61.1875em){
+		/* medium */
+		.cmd_half {
+			max-width: 66%;
+		}
+		.pio_title_caption {
+			margin-top: 4px !important;
+		}
+		.pay-online--img {
+			margin-top: 0 !important;
+		}
+		.pay_invoice_online ul.breadcrumbs {font-size:1rem; padding-left: 0;}
+		.pay_invoice_online .invoices input:not([type="submit"]) {width: 50px;}
+		.pay_invoice_online .invoices input[type=checkbox]{width: 34px;}
+		.pio_title_caption {
+			font-size: 1.5rem;
+			font-weight: 400;
+			text-align: center;
+			margin-bottom: 0;
+		}
+		.totl-box-output {
+			font-size:1.2rem !important;
+		}
+	}
+	@media only screen and (min-width: 90em) {
+		/* large up */
+		.pay_invoice_online ul.breadcrumbs {font-size:1rem; padding-left: 0;}
+		.pay_invoice_online .invoices input:not([type="submit"]) {width: 98px;}
+		.pay_invoice_online .invoices input[type=checkbox]{width: 48px;}
+	}
+   @media print
+   {
+		.breadcrumbs { display:none !important; }
+		#a-print { display:none !important; }
+   }
