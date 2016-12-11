@@ -84,6 +84,19 @@
 	padding: 0 !important;
 }
 /*  EXISTING RESP END  */
+/*  CliVal begin */
+.resp_error_inline {
+    min-height: 32px;
+    padding: .375em .25em;
+    font-size: 13px;
+    font-weight: bold;
+    font-style: italic;
+    background: #f04124;
+    color: white;
+    text-transform: none!important;
+    line-height: 1;
+}
+/*  CliVal begin */
 .resp_btn_brand__1 {
 	font-size: 1em;
 }
@@ -731,8 +744,10 @@ Bannockburn, IL 60015
 	</section>
 	<nav class="row">
 		<div class="column small-10 medium-5 large-5 push-5 small-padding-top">
-			<a class="js-contact-us-send button closeMod radius expand resp_btn_green resp_btn_brand__1 cmd_disabled">Send Message</a>	
+			<a class="js-contact-us-send button closeMod radius expand resp_btn_green resp_btn_brand__1 cmd_disabled">Send Message</a>
+			<aside id="error_select_invoice_new" class="panel resp_error_inline YYYYhidden" style="width: 235px;">All Information is Required</aside>
 		</div>
+
 		<div class="column small-10 medium-5 large-5 pull-5 small-padding-top">
 			<a class="js-contact-us-cancel button closeMod radius expand resp_btn_brand resp_btn_brand__1">Cancel</a>
 		</div>
