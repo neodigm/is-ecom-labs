@@ -84,7 +84,7 @@
 	padding: 0 !important;
 }
 /*  EXISTING RESP END  */
-/*  CliVal begin */
+/*  pasval begin */
 .resp_error_inline {
     min-height: 32px;
     padding: .375em .25em;
@@ -96,7 +96,11 @@
     text-transform: none!important;
     line-height: 1;
 }
-/*  CliVal begin */
+.pasval_disabled {
+	background-color: #bbb !important;
+	cursor: default !important;			
+}
+/*  pasval end */
 .resp_btn_brand__1 {
 	font-size: 1em;
 }
@@ -739,13 +743,13 @@ Bannockburn, IL 60015
 <!--<div class="g-recaptcha" data-sitekey="6LeE3b0SAAAAAJ7iAynGcCLftokz72yAYl6bWvtn"></div>-->
 <div class="g-recaptcha" data-sitekey="6LeKZg4UAAAAAH3z06S99fw-jX3SrkrbC3dLIEA5"></div>
 
-
+ 
 		</div>
 	</section>
 	<nav class="row">
 		<div class="column small-10 medium-5 large-5 push-5 small-padding-top">
-			<a class="js-contact-us-send button closeMod radius expand resp_btn_green resp_btn_brand__1 cmd_disabled">Send Message</a>
-			<aside id="error_select_invoice_new" class="panel resp_error_inline YYYYhidden" style="width: 235px;">All Information is Required</aside>
+			<a id="contact-us-send" class="js-contact-us-send button closeMod radius expand resp_btn_green resp_btn_brand__1 pasval_disabled">Send Message</a>
+			<aside id="contact-us-send__error" class="js-contact-us-send__error panel resp_error_inline YYYYhidden" style="width: 235px;">All Information is Required</aside>
 		</div>
 
 		<div class="column small-10 medium-5 large-5 pull-5 small-padding-top">
@@ -775,6 +779,30 @@ Bannockburn, IL 60015
 <!-- <script src="foundation.js"></script> -->
 <script src="lib.ltd.footer.js"></script>
 <script>
+/*  pasval begin */
+var form_state = {
+	"clickable"	: function( sId, bEnabled ){
+		( bEnabled ) ? $("#"+sId).removeClass("pasval_disabled") : $("#"+sId).addClass("pasval_disabled");
+		if (bEnabled){
+			$("#error_select_invoice").addClass("hidden");
+		}
+	},
+	"showError" : function( sButton_id, sError_id ){
+		var $eBt = $( "#"+sButton_id ), $eEm = $( "#"+sError_id ); // size error elemant to a buttons width
+		if( $eBt && $eEm ){
+			$eEm.css("width", $eBt.css("width") ).removeClass("hidden");
+			return true;
+		}
+	}
+};
+$(document).ready(function() {
+	$(".button").on("click", function( e ){
+		if( $( this ).hasClass("pasval_disabled") ) e.preventDefault();
+	});
+});
+/*  pasval end */
+
+
 function setBrand( sSelect ){
 	if( getBrand() === "LTD" ) {
 		$( sSelect ).removeClass("brand_lsc").addClass("brand_ltd");
@@ -934,7 +962,7 @@ function faq_logic_ready(){
 	function makeId( sText ){
 		return sText.toLowerCase().replace(/\W+/g,"-").slice(0, -1);
 	}
-};
+}; // faq_logic_ready
 function deepLinkContactUs( sURLQuery, sButton_js ){
 	if( window.location.href.indexOf( sURLQuery ) > -1 ) $( sButton_js ).click();
 }
