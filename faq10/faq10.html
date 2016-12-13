@@ -24,7 +24,7 @@
 <link href="global.ltd.css" rel="stylesheet" media="screen,print">
 
 
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script>-->
 
 
 <script src="lib.ltd.header.js"></script>
@@ -740,15 +740,16 @@ Bannockburn, IL 60015
 	<section class="row">
 		<div class="column small-10 text-center">
 
-<!--<div class="g-recaptcha" data-sitekey="6LeE3b0SAAAAAJ7iAynGcCLftokz72yAYl6bWvtn"></div>-->
-<div class="g-recaptcha" data-sitekey="6LeKZg4UAAAAAH3z06S99fw-jX3SrkrbC3dLIEA5"></div>
+<!--LEGACY <div class="g-recaptcha" data-sitekey="6LeE3b0SAAAAAJ7iAynGcCLftokz72yAYl6bWvtn"></div>-->
+<!--NEW ACCOUNT <div class="g-recaptcha" data-sitekey="6LeKZg4UAAAAAH3z06S99fw-jX3SrkrbC3dLIEA5"></div>-->
 
  
 		</div>
 	</section>
 	<nav class="row">
 		<div class="column small-10 medium-5 large-5 push-5 small-padding-top">
-			<a id="contact-us-send" class="js-contact-us-send button closeMod radius expand resp_btn_green resp_btn_brand__1 pasval_disabled">Send Message</a>
+			<a id="contact-us-send" class="js-contact-us-send button closeMod radius expand resp_btn_green resp_btn_brand__1 pasval_disabled"
+			pasval-action >Send Message</a>
 			<aside id="contact-us-send__error" class="js-contact-us-send__error panel resp_error_inline YYYYhidden" style="width: 235px;">All Information is Required</aside>
 		</div>
 
@@ -799,6 +800,18 @@ $(document).ready(function() {
 	$(".button").on("click", function( e ){
 		if( $( this ).hasClass("pasval_disabled") ) e.preventDefault();
 	});
+});
+$("#Continue2").hover(
+	function(){ 
+		if( $( this ).hasClass("pasval_disabled") ) {
+			$( "#error_select_invoice" ).text( errorMsgText( form_state.pio_page ) );
+			$( "#error_select_invoice" ).removeClass("hidden")} },
+	function(){ 
+		if( $( this ).hasClass("pasval_disabled") ) $("#error_select_invoice").addClass("hidden") });
+
+$("#Continue2").on("click", function(){
+	if( $( this ).hasClass("pasval_disabled") ) {
+		$( "#error_select_invoice" ).text( errorMsgText( form_state.pio_page ) ); $("#error_select_invoice").removeClass("hidden")};
 });
 /*  pasval end */
 
@@ -967,7 +980,7 @@ function deepLinkContactUs( sURLQuery, sButton_js ){
 	if( window.location.href.indexOf( sURLQuery ) > -1 ) $( sButton_js ).click();
 }
 function deepLinkThanYou( sURLQuery, sReveal_id ){
-		if( window.location.href.indexOf( sURLQuery ) > -1 ) $( sReveal_id ).foundation("reveal", "open");
+	if( window.location.href.indexOf( sURLQuery ) > -1 ) $( sReveal_id ).foundation("reveal", "open");
 }
 </script>
 	</body>
