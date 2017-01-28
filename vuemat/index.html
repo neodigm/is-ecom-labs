@@ -13,23 +13,40 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.6/vue.min.js"></script>
 
-<link rel="stylesheet" href="https://unpkg.com/vue-material@0.6.3/dist/vue-material.css">
 <script src="https://unpkg.com/vue-material@latest"></script>
 
         
 
-<div id="app">
+<div id="app" style="margin: 16px;">
   <md-toolbar>
-    <h1 class="md-title">My Title</h1>
+    <h1 class="md-title">Vue Material Design</h1>
   </md-toolbar>
   
   <div class="main-content">
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, rerum? Error sunt, aperiam dolores, atque expedita molestiae tenetur. Quis eveniet accusamus velit explicabo adipisci reiciendis modi eaque quas, officia excepturi.</p>
+    <p>We challenged ourselves to create a visual language for our users that synthesizes the classic principles of good design with the innovation and possibility of technology and science. This is material design. This spec is a living document that will be updated as we continue to develop the tenets and specifics of material design.</p>
   </div>
+
   <md-input-container>
-    <label>With label</label>
-    <md-input placeholder="My nice placeholder"></md-input>
+    <label>* Your Friend's Name</label>
+    <md-input
+    ></md-input>
   </md-input-container>
+
+  <md-input-container>
+    <label>* Your Friend's Email</label>
+    <md-input type="email"></md-input>
+  </md-input-container>
+
+  <md-input-container>
+    <label>* Your Name</label>
+    <md-input placeholder="Bruce Wayne"></md-input>
+  </md-input-container>
+
+   <md-input-container>
+    <label>* Message to Your Friend</label>
+    <md-textarea></md-textarea>
+  </md-input-container>
+
 </div>
 
 
