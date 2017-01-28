@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Vue Material Design</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<body>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://unpkg.com/vue-material@latest/dist/vue-material.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.6/vue.min.js"></script>
+
+<link rel="stylesheet" href="https://unpkg.com/vue-material@0.6.3/dist/vue-material.css">
+<script src="https://unpkg.com/vue-material@latest"></script>
+
+        
+
+<div id="app">
+  <md-toolbar>
+    <h1 class="md-title">My Title</h1>
+  </md-toolbar>
+  
+  <div class="main-content">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, rerum? Error sunt, aperiam dolores, atque expedita molestiae tenetur. Quis eveniet accusamus velit explicabo adipisci reiciendis modi eaque quas, officia excepturi.</p>
+  </div>
+  <md-input-container>
+    <label>With label</label>
+    <md-input placeholder="My nice placeholder"></md-input>
+  </md-input-container>
+</div>
+
+
+
+
+	</body>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script> -->
+
+	<style>
+.article--table_lab__roboto{
+	color: #BC8213;
+	font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	text-align: center;
+	font-size: 16px;
+	font-weight: normal;
+	margin: 2px;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+}
+	</style>
+	<script>
+
+Vue.use(VueMaterial)
+
+var App = new Vue({
+  el: '#app'
+})
+
+
+	</script>
+</html>
