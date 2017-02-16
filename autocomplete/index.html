@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>jQuery UI Autocomplete - Default functionality</title>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script>
+  $(function() {
+
+$.ui.autocomplete.prototype._renderMenu = function( ul, items ) {
+  var that = this;
+  $.each( items, function( index, item ) {
+    if( item.label.indexOf("<br>") != -1 ){
+      var secn = item.label.split("<br>");
+      item.label = secn[1];
+      item.value = secn[1];
+      oSecn = {label: secn[0], value: secn[0]};
+      that._renderItemData( ul, oSecn );
+    }
+    that._renderItemData( ul, item );
+  });
+}
+
+    var availableTags = [
+      "Categories",
+      "Brands",
+      "Products",
+      "PINS",
+      "ActionScript<br>TypeScript",
+      "AppleScript",
+      "Asp",
+      "BASIC",
+      "C",
+      "C++",
+      "Clojure",
+      "COBOL",
+      "ColdFusion",
+      "Erlang",
+      "Fortran",
+      "Groovy",
+      "Haskell",
+      "Java",
+      "JavaScript",
+      "Lisp",
+      "Perl",
+      "PHP",
+      "Python",
+      "Ruby",
+      "Scala",
+      "Scheme"
+    ];
+    $( "#tags" ).autocomplete({
+      source: availableTags
+    });
+  });
+  </script>
+</head>
+<body>
+ 
+<div class="ui-widget">
+  <label for="tags">Tags: </label>
+  <input id="tags">
+</div>
+ 
+ 
+</body>
+</html>
