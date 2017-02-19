@@ -18,7 +18,8 @@
   }
   .typhead .typhead--ul:hover {}
   .typhead .typhead--li {
-    background-color:  #FFFAFF !important;
+    color: #222 !important;
+    background-color:  #FFF !important;
     font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
     font-size: .9em !important;
     font-weight: 300 !important;
