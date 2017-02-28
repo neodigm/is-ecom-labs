@@ -611,6 +611,29 @@ $(document).ready(function(){
 										</section>
 										<figure class="resp_qtr_height"></figure>
 <p>We will never sell your email address. To learn more read our <a class="resp_u">Privacy Policy</a></p>
+<figure class="js-i--figure" style="text-align: right;margin-right: -12px;margin-bottom: -12px;cursor: pointer;">
+		<i class="fa fa-info-circle  fa-lg" style="color: #999;" aria-hidden="true"></i>
+</figure>
+<aside class="hidden">
+	<p class="no-margin-bottom">To change your email address visit <a class="resp_u">Your Account</a></p>
+	<figure class="resp_qtr_height"></figure>
+	<section class="row">
+		<div class="column small-1 text-center"
+		style="padding: 4px 0 0 0;">
+			<input class="no-margin-bottom" style="margin-left: -18px !important;" type="checkbox">
+		</div>
+		<div class="column small-9">
+			<p class="no-margin-bottom" style="padding-left: 0;margin-left: -14px;">Do not ask me again</p>
+		</div>
+	</section>
+</aside>
+<script>
+$( "document" ).ready(function(){
+	$(".js-i--figure").on("click", function(){
+		$(this).next().toggleClass("hidden");
+	});
+});
+</script>
 									</aside>
 								</div>
 
@@ -648,20 +671,20 @@ $(document).ready(function(){
 										<section class="row">
 											<div class="column small-1 text-center"
 											style="padding: 4px 0 0 0;">
-												<input class="no-margin-bottom" type="checkbox">
+												<input class="no-margin-bottom" style="margin-left: -18px !important;" type="checkbox">
 											</div>
 											<div class="column small-9">
-												<p class="no-margin-bottom">I agree to the <a class="resp_u">Terms & Conditions</a>
+												<p class="no-margin-bottom" style="padding-left: 0;margin-left: -14px;">I agree to the <a class="resp_u">Terms & Conditions</a></p>
 											</div>
 										</section>
 										<hr>
 										<section class="row">
 											<div class="column small-1 text-center"
 											style="padding: 4px 0 0 0;">
-												<input class="no-margin-bottom" type="checkbox">
+												<input class="no-margin-bottom" style="margin-left: -18px !important;" type="checkbox">
 											</div>
 											<div class="column small-9">
-												<p class="no-margin-bottom">Save my payment preference for Express Checkout.</a>
+												<p class="no-margin-bottom" style="padding-left: 0;margin-left: -14px;">Save my payment preference for Express Checkout.</a></p>
 											</div>
 										</section>
 									</aside>
@@ -722,7 +745,6 @@ $(document).ready(function(){
 
 							</section>
 						</div>
-<i class="fa fa-camera-retro fa-5x"></i> fa-5x
 					</section>
 
 					<div class="small-10 no-padding-left no-padding-right align-center columns">
