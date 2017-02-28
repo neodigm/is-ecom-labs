@@ -144,15 +144,21 @@
 	box-shadow: 0 4px 8px rgba(3,3,3,0.16);
 }
 
-.hidden {
-	display: none !important;
-}
 </style>	
 <script>
 $(document).ready(function() {
 	$(document).foundation();
+
 	$(".js-ccp").on("click", function( e ){  //  Collapsible Content Pattern
 		$( this ).toggleClass("ccp-panel__active").next().toggleClass("hidden");
+		/*
+		var $answ = $( this ).toggleClass("ccp-panel__active").next();
+		if( $( this ).hasClass("ccp-panel__active") ){
+			$answ.fadeIn(300);
+		}else{
+			$answ.fadeOut(200);
+		}
+		*/
 		$( this ).find("i").text(( $( this ).hasClass("ccp-panel__active") )?"-":"+");
 	});
 });</script>
@@ -340,7 +346,7 @@ $(document).ready(function() {
 						<img src="./order_conf_auth_files/cart.png" alt="Cart">Cart<span class="round label">0</span>	</button>	</a>
 				<ul class="hide-for-small">
 					
-	<li>Hello, Scott. <br> (<a href="javascript:document.getElementById(&#39;logoutTextLinkButton&#39;).click()" data-wsid="ws-logout">Not Scott?</a>)	<form name="siteLogout" action="https://stage2.lakeside.com/my_account/index.jsp?_DARGS=/common/includes/inc_header_responsive.jsp.headerSiteLogout" method="post"><input name="_dyncharset" value="ISO-8859-1" type="hidden"><input name="_dynSessConf" value="-6829799909585280338" type="hidden"><input name="/atg/userprofiling/ProfileFormHandler.logoutSuccessURL" value="/my_account/index.jsp?siteId=LS" type="hidden"><input name="_D:/atg/userprofiling/ProfileFormHandler.logoutSuccessURL" value=" " type="hidden"><input id="logoutTextLinkButton" style="display: none;" name="/atg/userprofiling/ProfileFormHandler.logout" type="submit"><input name="_D:/atg/userprofiling/ProfileFormHandler.logout" value=" " type="hidden"><input name="_DARGS" value="/common/includes/inc_header_responsive.jsp.headerSiteLogout" type="hidden"></form>
+	<li>Hello, Scott. <br> (<a href="javascript:document.getElementById(&#39;logoutTextLinkButton&#39;).click()" data-wsid="ws-logout">Not Scott?</a>)	<form name="siteLogout" action="https://stage2.lakeside.com/my_account/index.jsp?_DARGS=/common/includes/inc_header_responsive.jsp.headerSiteLogout" method="post"><input name="_dyncharset" value="ISO-8859-1" type="hidden"><input name="_dynSessConf" value="-6829799909585280338" type="hidden"><input name="/atg/userprofiling/ProfileFormHandler.logoutSuccessURL" value="/my_account/index.jsp?siteId=LS" type="hidden"><input name="_D:/atg/userprofiling/ProfileFormHandler.logoutSuccessURL" value=" " type="hidden"><input id="logoutTextLinkButton hidden" name="/atg/userprofiling/ProfileFormHandler.logout" type="submit"><input name="_D:/atg/userprofiling/ProfileFormHandler.logout" value=" " type="hidden"><input name="_DARGS" value="/common/includes/inc_header_responsive.jsp.headerSiteLogout" type="hidden"></form>
 	</li><li>Request A<br><a data-wsid="ws-catalogrequest" href="https://stage2.lakeside.com/catalog_request/index.jsp">FREE Catalog</a></li>	
 					<li>Sign Up For<br><a data-reveal-id="emailSignUp" href="https://stage2.lakeside.com/checkout/order_commit.jsp#" data-wsid="ws-emailsignup">Email Offers</a></li>
 					
@@ -651,8 +657,8 @@ $( "document" ).ready(function(){ // icon click hide / show
 												autocorrect="off" autocomplete="off">
 											</div>
 											<div class="column small-2 no-padding">
-<figure class="resp_full_height"></figure>
-<a class="button radius resp_btn_teal" style="font-size: 1em;">Subscribe</a>
+												<figure class="resp_full_height"></figure>
+												<a class="button radius resp_btn_teal" style="font-size: 1em;">Subscribe</a>
 											</div>
 										</section>
 										<figure class="resp_qtr_height"></figure>
@@ -668,13 +674,13 @@ $( "document" ).ready(function(){ // icon click hide / show
 											</div>
 										</section>
 										<figure class="resp_full_height"></figure>
-<figure class="js-i--figure" style="text-align: right;margin-right: -12px;margin-bottom: -12px;cursor: pointer;">
-		<i class="fa fa-info-circle  fa-lg" style="color: #999;" aria-hidden="true"></i>
-</figure>
-<aside class="hidden">
-	<p class="no-margin-bottom">To change your mobile phone number visit <a class="resp_u">Your Account</a></p>
-	<figure class="resp_half_height"></figure>
-</aside>
+										<figure class="js-i--figure" style="text-align: right;margin-right: -12px;margin-bottom: -12px;cursor: pointer;">
+												<i class="fa fa-info-circle  fa-lg" style="color: #999;" aria-hidden="true"></i>
+										</figure>
+										<aside class="hidden">
+											<p class="no-margin-bottom">To change your mobile phone number visit <a class="resp_u">Your Account</a></p>
+											<figure class="resp_half_height"></figure>
+										</aside>
 									</aside>
 								</div>
 
@@ -687,13 +693,13 @@ $( "document" ).ready(function(){ // icon click hide / show
 										<section class="row">
 											<div class="column small-8 no-padding-left">
 												<figure class="resp_half_height"></figure>
-<div style="background-color: #F4F4F4; width: 100%;height: 100%;margin-top: 6px;">
-	<p class="text-center" style="padding-top: 6px;padding-bottom: 4px;margin: 4px 0 10px 0;"><i class="fa fa-cc-visa fa-lg" aria-hidden="true"></i> XXXXXXXXXXXX1111</p>
-</div>
+												<div style="background-color: #F4F4F4; width: 100%;height: 100%;margin-top: 6px;">
+													<p class="text-center" style="padding-top: 6px;padding-bottom: 4px;margin: 4px 0 10px 0;"><i class="fa fa-cc-visa fa-lg" aria-hidden="true"></i> XXXXXXXXXXXX1111</p>
+												</div>
 											</div>
 											<div class="column small-2 no-padding">
-<figure class="resp_full_height"></figure>
-<a class="button radius resp_btn_teal" style="font-size: 1em;">Save</a>
+												<figure class="resp_full_height"></figure>
+												<a class="button radius resp_btn_teal" style="font-size: 1em;">Save</a>
 											</div>
 										</section>
 										<figure class="resp_full_height"></figure>
@@ -1403,7 +1409,7 @@ option.</span></p>
 						
 						<ul class="side-nav header-links">
 							
-									<li><a href="javascript:document.getElementById(&#39;logoutTextLinkButton&#39;).click()" data-wsid="ws-logout">Not Scott?</a>	<form name="siteLogout" action="https://stage2.lakeside.com/my_account/index.jsp?_DARGS=/common/includes/inc_left_nav_no_category.jsp.headerSiteLogout" method="post"><input name="_dyncharset" value="ISO-8859-1" type="hidden"><input name="_dynSessConf" value="-6829799909585280338" type="hidden"><input name="/atg/userprofiling/ProfileFormHandler.logoutSuccessURL" value="?siteId=LS" type="hidden"><input name="_D:/atg/userprofiling/ProfileFormHandler.logoutSuccessURL" value=" " type="hidden"><input id="logoutTextLinkButton" style="display: none;" name="/atg/userprofiling/ProfileFormHandler.logout" type="submit"><input name="_D:/atg/userprofiling/ProfileFormHandler.logout" value=" " type="hidden"><input name="_DARGS" value="/common/includes/inc_left_nav_no_category.jsp.headerSiteLogout" type="hidden"></form>
+									<li><a href="javascript:document.getElementById(&#39;logoutTextLinkButton&#39;).click()" data-wsid="ws-logout">Not Scott?</a>	<form name="siteLogout" action="https://stage2.lakeside.com/my_account/index.jsp?_DARGS=/common/includes/inc_left_nav_no_category.jsp.headerSiteLogout" method="post"><input name="_dyncharset" value="ISO-8859-1" type="hidden"><input name="_dynSessConf" value="-6829799909585280338" type="hidden"><input name="/atg/userprofiling/ProfileFormHandler.logoutSuccessURL" value="?siteId=LS" type="hidden"><input name="_D:/atg/userprofiling/ProfileFormHandler.logoutSuccessURL" value=" " type="hidden"><input id="logoutTextLinkButton hidden" name="/atg/userprofiling/ProfileFormHandler.logout" type="submit"><input name="_D:/atg/userprofiling/ProfileFormHandler.logout" value=" " type="hidden"><input name="_DARGS" value="/common/includes/inc_left_nav_no_category.jsp.headerSiteLogout" type="hidden"></form>
 	</li><li><a href="https://stage2.lakeside.com/catalog_request/index.jsp">Request A FREE Catalog</a></li>	
 							<div class="show-for-small">
 								<li><a data-reveal-id="emailSignUp" href="https://stage2.lakeside.com/checkout/order_commit.jsp#" data-wsid="ws-emailsignup">Sign Up For Email Offers</a></li>
@@ -1476,4 +1482,4 @@ $BV.SI.trackTransactionPageView({
 <script src="./order_conf_auth_files/lib.ltd.footer.js.download"></script>
 
 		
-<div id="quickView1" data-reveal="" class="reveal-modal"></div><div style="display: none;"><img src="./order_conf_auth_files/track_conversion" width="0" height="0" title="blank image" aria-hidden="true" style="display: none;" alt="track_conversion?payload=%7B%22cart%22%3A%5B%7B%22item%22%3A%22prod2440103%22%2C%22quantity%22%3A%221%22%2C%22price%22%3A%2216.98%22%2C%22unique_id%22%3A%222002297%22%7D%5D%2C%22order_number%22%3A%22506649770006%22%2C%22shipping%22%3A%227.99%22%2C%22user_info%22%3A%7B%22email%22%3A%22test%40neostudios.com%22%2C%22details%22%3A%7B%22encryptedProfileId%22%3A%22b7BcSqoB1IBXy2xqyVqSJA%253D%253D%22%7D%7"></div><div class="bv-verify-css-loaded" style="height: 0px; width: 0px; border: 0px;"></div></body></html>
+<div id="quickView1" data-reveal="" class="reveal-modal"></div><di hiddenv><img src="./order_conf_auth_files/track_conversion" width="0" height="0" title="blank image" aria-hidden="true hidden" alt="track_conversion?payload=%7B%22cart%22%3A%5B%7B%22item%22%3A%22prod2440103%22%2C%22quantity%22%3A%221%22%2C%22price%22%3A%2216.98%22%2C%22unique_id%22%3A%222002297%22%7D%5D%2C%22order_number%22%3A%22506649770006%22%2C%22shipping%22%3A%227.99%22%2C%22user_info%22%3A%7B%22email%22%3A%22test%40neostudios.com%22%2C%22details%22%3A%7B%22encryptedProfileId%22%3A%22b7BcSqoB1IBXy2xqyVqSJA%253D%253D%22%7D%7"></div><div class="bv-verify-css-loaded" style="height: 0px; width: 0px; border: 0px;"></div></body></html>
