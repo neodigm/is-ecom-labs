@@ -20,6 +20,11 @@
 <!-- LTD Responsive Header Scripts -->
 <script src="./order_conf_auth_files/lib.ltd.header.js.download"></script>
 
+
+
+
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel='stylesheet' type='text/css'>
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/css/foundation.min.css" type="text/css" media="all" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css" media="all" />
 
@@ -59,7 +64,7 @@
 	border-width: 1px;
 	border-color: #BBB;
 	margin-bottom: 16px;
-	padding: 20px 12px 2px 12px;
+	padding: 16px 12px 2px 8px;
 	background: #f2faff;
 	color: #333333;
 	border-radius: 3px;
@@ -82,7 +87,7 @@
 .ccp-quest {
 	position: relative;
 	overflow: hidden;
-	min-height: 42px;
+	min-height: 66px;
 	cursor: pointer;
 	cursor: pointer;
 	-webkit-user-select: none;
@@ -94,6 +99,7 @@
 
 .ccp-quest p {
 	color: #000; font-size: 18px !important; font-weight: 300; font-family: 'Roboto', sans-serif;
+	margin-bottom: 0;
 }
 
 .ccp-quest:hover {
@@ -585,7 +591,7 @@ $(document).ready(function(){
 							<section class="row">
 								<div class="column small-12">
 									<nav id="ccp-1" class="js-ccp ccp-panel radius text-center ccp-quest ccp-panel__active">
-										<p>Send me promotional emails and discounts<i class="ccp-panel--i">+</i></p>
+										<p>Send me promotional emails and discounts<i class="ccp-panel--i">-</i></p>
 									</nav>
 									<aside class="ccp-panel__content panel">
 										<section class="row">
@@ -598,7 +604,7 @@ $(document).ready(function(){
 											</div>
 											<div class="column small-2 no-padding">
 <figure class="resp_full_height"></figure>
-<a class="button radius resp_btn_brand_s" style="font-size: 1em;">Subscribe</a>
+<a class="button radius resp_btn_teal" style="font-size: 1em;">Subscribe</a>
 											</div>
 										</section>
 										<figure class="resp_full_height"></figure>
@@ -644,17 +650,9 @@ $( "document" ).ready(function(){ // icon click hide / show
 												value="" aria-required="true" aria-label="Mobile Phone Number"
 												autocorrect="off" autocomplete="off">
 											</div>
-											<div class="column small-2">
-												<p class="" style="text-align: center; color: #777; font-size: 9px;margin-bottom: 5px;">Subscribe</p>
-												<aside class="text-center" style="">
-													<div class="switch round float-right">
-														<input id="sms-yes-no" type="checkbox">
-														<label for="sms-yes-no">
-															<span class="switch-off">No</span>
-															<span class="switch-on">Yes</span>
-														</label>
-													</div>
-												</aside>
+											<div class="column small-2 no-padding">
+<figure class="resp_full_height"></figure>
+<a class="button radius resp_btn_teal" style="font-size: 1em;">Subscribe</a>
 											</div>
 										</section>
 										<figure class="resp_qtr_height"></figure>
@@ -669,6 +667,14 @@ $( "document" ).ready(function(){ // icon click hide / show
 												<p class="no-margin-bottom" style="padding-left: 0;margin-left: -14px;">I agree to the <a class="resp_u">Terms & Conditions</a></p>
 											</div>
 										</section>
+										<figure class="resp_full_height"></figure>
+<figure class="js-i--figure" style="text-align: right;margin-right: -12px;margin-bottom: -12px;cursor: pointer;">
+		<i class="fa fa-info-circle  fa-lg" style="color: #999;" aria-hidden="true"></i>
+</figure>
+<aside class="hidden">
+	<p class="no-margin-bottom">To change your mobile phone number visit <a class="resp_u">Your Account</a></p>
+	<figure class="resp_half_height"></figure>
+</aside>
 									</aside>
 								</div>
 
@@ -682,28 +688,18 @@ $( "document" ).ready(function(){ // icon click hide / show
 											<div class="column small-8 no-padding-left">
 												<figure class="resp_half_height"></figure>
 <div style="background-color: #F4F4F4; width: 100%;height: 100%;margin-top: 6px;">
-	<p class="text-center" style="padding-top: 12px;padding-bottom: 4px;margin: 4px 0 10px 0;"><i class="fa fa-cc-visa fa-lg" aria-hidden="true"></i> XXXXXXXXXXXX1111</p>
+	<p class="text-center" style="padding-top: 6px;padding-bottom: 4px;margin: 4px 0 10px 0;"><i class="fa fa-cc-visa fa-lg" aria-hidden="true"></i> XXXXXXXXXXXX1111</p>
 </div>
 											</div>
-											<div class="column small-2">
-												<p class="" style="text-align: center; color: #777; font-size: 9px;margin-bottom: 5px;">Save</p>
-												<aside class="text-center" style="">
-													<div class="switch round float-right">
-														<input id="exc-yes-no" type="checkbox">
-														<label for="exc-yes-no">
-															<span class="switch-off">No</span>
-															<span class="switch-on">Yes</span>
-														</label>
-													</div>
-												</aside>
+											<div class="column small-2 no-padding">
+<figure class="resp_full_height"></figure>
+<a class="button radius resp_btn_teal" style="font-size: 1em;">Save</a>
 											</div>
 										</section>
-										<figure class="resp_qtr_height"></figure>
+										<figure class="resp_full_height"></figure>
 										<p>Checkout faster by saving your payment information.
 										</p>
 								</div>
-
-
 							</section>
 						</div>
 					</section>
