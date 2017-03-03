@@ -141,33 +141,8 @@
 	background: #632434;
 	box-shadow: 0 4px 8px rgba(3,3,3,0.16);
 }
+</style>
 
-@media only screen and (max-width: 47.9375em) {
-	/* small */
-	.resp_btn_teal { font-size: 11px !important;}
-}
-@media only screen and (min-width:48em) and (max-width:61.25em){
-	/* medium */
-	.resp_btn_teal { font-size: 12px !important;}
-}
-</style>	
-<script>
-$(document).ready(function() {
-	$(document).foundation();
-
-	$(".js-ccp").on("click", function( e ){  //  Collapsible Content Pattern
-		$( this ).toggleClass("ccp-panel__active").next().toggleClass("hidden");
-		/*
-		var $answ = $( this ).toggleClass("ccp-panel__active").next();
-		if( $( this ).hasClass("ccp-panel__active") ){
-			$answ.fadeIn(300);
-		}else{
-			$answ.fadeOut(200);
-		}
-		*/
-		$( this ).find("i").text(( $( this ).hasClass("ccp-panel__active") )?"-":"+");
-	});
-});</script>
 		<meta class="foundation-data-attribute-namespace"><meta class="foundation-mq-xxlarge"><meta class="foundation-mq-xlarge-only"><meta class="foundation-mq-xlarge"><meta class="foundation-mq-large-only"><meta class="foundation-mq-large"><meta class="foundation-mq-medium-only"><meta class="foundation-mq-medium"><meta class="foundation-mq-small-only"><meta class="foundation-mq-small"><style></style><meta class="foundation-mq-topbar"><script type="text/javascript" src="./order_conf_auth_files/782377577-0" charset="utf-8" async=""></script><link media="all" rel="stylesheet" type="text/css" href="./order_conf_auth_files/screen.css"><script type="text/javascript" src="./order_conf_auth_files/782377577-1" charset="utf-8" async=""></script></head>
 		<body id="page" class="brand_lsc off-canvas hide-extras LTD clearfix resp">
 
@@ -590,13 +565,7 @@ $(document).ready(function(){
 						<h2 class="resp_title_caption no-padding">Email / Text Sign Up</h2>
                         <hr class="resp_hr">
 					</div>
-<script>
-$( "document" ).ready(function(){ // icon click hide / show
-	$(".js-i--figure").on("click", function(){
-		$(this).next().toggleClass("hidden");
-	});
-});
-</script>
+
                     <section class="row">
 						<div class="column small-10">
                             <!-- cont area begin  -->
@@ -605,9 +574,55 @@ $( "document" ).ready(function(){ // icon click hide / show
                             <!-- cont area end    -->
 						</div>
                     </section>
+<style>
+.circle {
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	font-size: 50px;
+	color: #fff;
+	line-height: 20px;
+	text-align: center;
+	background: #aaa;
+	display: inline-block;
+	font-size: 15px;
+	font-weight: bold;
+	font-family: "Courier New", Courier, monospace;
+}
+.rd-only--div {background-color: #F4F4F4; width: 100%;height: 100%;margin-top: 6px; }
+.rd-only--h6 {padding-top: 12px;padding-bottom: 4px; }
+.rd-only--p  {padding-top: 6px;padding-bottom: 4px;margin: 4px 0 10px 0; }
+.cmd-subs--a {font-size: 1em;}
+.i--figure {text-align: right;margin-right: -12px;margin-bottom: -12px;cursor: pointer;}
 
-                    <section class="row"><!-- collapsible panels begin -->
-						<div class="column small-10 medium-5">
+.chkb--div {padding: 4px 0 0 0;}
+.chkb--div .chkb--input {margin-left: -18px !important;}
+.chkb--p {padding-left: 0;margin-left: -14px;}
+
+@media only screen and (max-width: 47.9375em) {
+	/* small */
+	.resp_btn_teal { font-size: 11px !important;}
+}
+@media only screen and (min-width:48em) and (max-width:61.25em){
+	/* medium */
+	.resp_btn_teal { font-size: 12px !important;}
+}
+</style>	
+<script>
+$(document).ready(function() {
+	$(document).foundation();
+	$(".js-i--figure").on("click", function(){ // icon click hide / show
+		$(this).next().toggleClass("hidden");
+	});
+	$(".js-ccp").on("click", function( e ){  //  Collapsible Content Panel
+		$( this ).toggleClass("ccp-panel__active").next().toggleClass("hidden");
+		$( this ).find("i").text(( $( this ).hasClass("ccp-panel__active") )?"-":"+");
+	});
+});
+</script>
+                    <section class="row"><!-- collapsible card panels begin -->
+						<div class="column small-10 medium-5"> <!--  Left Column | Email Subscribe  -->
+
                             <nav id="ccp-1" class="js-ccp ccp-panel radius text-center ccp-quest ccp-panel__active">
                                 <p>Send me promotional emails and discounts<i class="ccp-panel--i">-</i></p>
                             </nav>
@@ -615,36 +630,36 @@ $( "document" ).ready(function(){ // icon click hide / show
                                 <section class="row">
                                     <div class="column small-8 no-padding-left">
                                         <figure class="resp_half_height"></figure>
-                                        <div style="background-color: #F4F4F4; width: 100%;height: 100%;margin-top: 6px;">
-                                            <h6 class="text-center" style="padding-top: 12px;padding-bottom: 4px;">email@address.com</h6>
+                                        <div    class="rd-only--div">
+                                            <h6 class="rd-only--p text-center">email@address.com</h6>
                                         </div>
                                     </div>
                                     <div class="column small-2 no-padding">
                                         <figure class="resp_full_height"></figure>
-                                        <a class="button radius resp_btn_teal" style="font-size: 1em;">Subscribe</a>
+                                        <a class="cmd-subs--a button radius resp_btn_teal">Subscribe</a>
                                     </div>
                                 </section>
                                 <figure class="resp_full_height"></figure>
                                 <p>We will never sell your email address. To learn more read our <a class="resp_u">Privacy Policy</a>.</p>
-                                <figure class="js-i--figure" style="text-align: right;margin-right: -12px;margin-bottom: -12px;cursor: pointer;">
-                                        <i class="fa fa-info-circle  fa-lg" style="color: #999;" aria-hidden="true"></i>
+                                <figure class="js-i--figure i--figure">
+										<div class="circle">i</div>
                                 </figure>
                                 <aside class="hidden">
                                     <p class="no-margin-bottom">To change your email address visit <a class="resp_u">Your Account</a></p>
                                     <figure class="resp_qtr_height"></figure>
                                     <section class="row">
-                                        <div class="column small-1 text-center"
-                                        style="padding: 4px 0 0 0;">
-                                            <input class="no-margin-bottom" style="margin-left: -18px !important;" type="checkbox">
+                                        <div class="chkb--div column small-1 text-center">
+                                            <input class="chkb--input no-margin-bottom" type="checkbox">
                                         </div>
                                         <div class="column small-9">
-                                            <p class="no-margin-bottom" style="padding-left: 0;margin-left: -14px;">Do not ask me again</p>
+                                            <p class="chkb--p no-margin-bottom">Do not ask me again</p>
                                         </div>
                                     </section>
                                 </aside>
                             </aside>
+
 						</div>
-						<div class="column small-10 medium-5">
+						<div class="column small-10 medium-5">    <!--  Right Column | SMS  -->
 
 									<nav id="ccp-2" class="js-ccp ccp-panel radius text-center ccp-quest">
 										<p>Text me when my order ships<i class="ccp-panel--i">+</i></p>
@@ -660,24 +675,23 @@ $( "document" ).ready(function(){ // icon click hide / show
 											</div>
 											<div class="column small-2 no-padding">
 												<figure class="resp_full_height"></figure>
-												<a class="button radius resp_btn_teal" style="font-size: 1em;">Subscribe</a>
+                                        		<a class="cmd-subs--a button radius resp_btn_teal">Subscribe</a>
 											</div>
 										</section>
 										<figure class="resp_qtr_height"></figure>
 										<p>Send text reminders to the mobile phone number that I entered.  Message and data rates may apply.  For help, text <strong>HELP</strong> to <strong>12345</strong>.  To opt out text <strong>STOP</strong> to <strong>12345</strong>.
 										</p>
 										<section class="row">
-											<div class="column small-1 text-center"
-											style="padding: 4px 0 0 0;">
-												<input class="no-margin-bottom" style="margin-left: -18px !important;" type="checkbox">
+											<div class="chkb--div column small-1 text-center">
+												<input class="chkb--input no-margin-bottom" type="checkbox">
 											</div>
 											<div class="column small-9">
-												<p class="no-margin-bottom" style="padding-left: 0;margin-left: -14px;">I agree to the <a class="resp_u">Terms & Conditions</a></p>
+												<p class="chkb--p no-margin-bottom">I agree to the <a class="resp_u">Terms & Conditions</a></p>
 											</div>
 										</section>
 										<figure class="resp_full_height"></figure>
-										<figure class="js-i--figure" style="text-align: right;margin-right: -12px;margin-bottom: -12px;cursor: pointer;">
-												<i class="fa fa-info-circle  fa-lg" style="color: #999;" aria-hidden="true"></i>
+                                		<figure class="js-i--figure i--figure">
+											<div class="circle">i</div>
 										</figure>
 										<aside class="hidden">
 											<p class="no-margin-bottom">To change your mobile phone number visit <a class="resp_u">Your Account</a></p>
@@ -686,10 +700,15 @@ $( "document" ).ready(function(){ // icon click hide / show
 									</aside>
 
 						</div>
-						<div class="column small-10 medium-5">
+
+
+
+
+						<div class="column small-10 medium-5">    <!--  Right Column | Express Checkout  -->
+
 
                             <nav id="ccp-2" class="js-ccp ccp-panel radius text-center ccp-quest">
-                            <p>Express Checkout<i class="ccp-panel--i">+</i></p>
+                            <p>Express Checkout<i class="ccp-panel--i">-</i></p>
                             </nav>
                             <aside class="ccp-panel__content panel hidden">
                             <section class="row">
