@@ -14,6 +14,7 @@
 			<meta name="keywords" content="">
 
 
+<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel='stylesheet' type='text/css'>
 <script type="text/javascript" async="" src="./order_conf_auth_files/min.google_mdl.js.download"></script>
 <link href="./order_conf_auth_files/min.google_mdl.css" rel="stylesheet" media="screen,print">
 			
@@ -62,6 +63,11 @@
 .switch {margin-bottom: .5rem;}
 .switch label {margin-top:0; background-color:#c0392b;}
 .switch input:checked+label {background: #4FB466;}
+
+.cmd_disabled, .cmd_locked {
+background-color: #bbb !important;
+cursor: default !important;			
+}
 
 .ccp-panel {
 	border-style: solid;
@@ -585,6 +591,12 @@ $(document).ready(function(){
 						</div>
                     </section>
 <style>
+.spinner {
+    position: absolute; z-index: 256; margin-left: 33%; margin-top: 34%;
+}
+.state_sec__blur{
+-webkit-filter: opacity(0.3);
+}
 .orderConfirm .circle {
 	width: 20px;
 	height: 20px;
@@ -648,20 +660,48 @@ $(document).ready(function() {
 		$( this ).find("i").text(( $( this ).hasClass("ccp-panel__active") )?"-":"+");
 	});
 	$("#cmd-email-subscribe").on("click", function() {
-		var data = {message: "Thank You! Check your inbox for your exclusive discount and start shopping TODAY!", timeout: 3400};
+		var nCard = 1;
+		var data = {message: "Check your inbox for your exclusive discount and start shopping TODAY!", timeout: 3400};
 		$("#gmdl-toast")[0].MaterialSnackbar.showSnackbar(data);
+		waitingCard( nCard );
 		setTimeout(function(){
-			activateNextCard( 1, 2 ); // swap cards
+			activateNextCard( nCard, 2 ); // swap cards
 		}, 3500);
 	});
 	$(".js-chkb--input__nothanks").on("click", function(){
-		var data = {message: "We will no longer ask you to subscribe to email offers.", timeout: 3400};
+		var nCard = 1;
+		var data = {message: "We will no longer ask you to subscribe to email offers.", timeout: 2400};
 		$("#gmdl-toast")[0].MaterialSnackbar.showSnackbar(data);
 		setTimeout(function(){
-			activateNextCard( 1, 2 ); // swap cards
+			activateNextCard( nCard, 2 ); // swap cards
+		}, 1800);
+	});
+	$("#cmd-sms-subscribe").on("click", function() {
+		// not disabled or locked
+		var nCard = 2;
+		var data = {message: "Please respond to the text message sent to your phone.", timeout: 3400};
+		$("#gmdl-toast")[0].MaterialSnackbar.showSnackbar(data);
+		waitingCard( nCard );
+		setTimeout(function(){
+			activateNextCard( nCard, 3 ); // swap cards
+		}, 3500);
+	});
+	$("#cmd-cc-save").on("click", function() {
+		var nCard = 3;
+		var data = {message: "Payment information saved.", timeout: 3400};
+		$("#gmdl-toast")[0].MaterialSnackbar.showSnackbar(data);
+		waitingCard( nCard );
+		setTimeout(function(){
+			activateNextCard( nCard, 0 ); // swap cards
 		}, 3500);
 	});
 });
+
+function waitingCard( CardCurrentNo ){  //  Mockup of card in waiting state
+		$("#ccp-" + CardCurrentNo ).find("p").text("Thank You!");
+		$("#ccp-" + CardCurrentNo ).next().addClass("state_sec__blur");
+		$("#ccp-" + CardCurrentNo ).next().find(".spinner").toggleClass("hidden");
+}
 
 function activateNextCard( CardCurrentNo, CardNextNo ){ // Close current card then conditionally open the next
 	var $nextCard = $("#ccp-" + CardNextNo);
@@ -677,6 +717,7 @@ function activateNextCard( CardCurrentNo, CardNextNo ){ // Close current card th
 	                                <p>Send me promotional emails and discounts<i class="ccp-panel--i">-</i></p>
 	                            </nav>
 	                            <aside class="ccp-panel__content panel">
+<img src="http://www.lakeside.com/media/global/images/foundation/img/fpo/spinner_lsc.gif" class="spinner hidden" alt="Please Wait">
 	<!--
 	                                <section class="js-ccp-panel__input">
 	-->
@@ -731,6 +772,7 @@ function activateNextCard( CardCurrentNo, CardNextNo ){ // Close current card th
 									<p>Text me when my order ships<i class="ccp-panel--i">+</i></p>
 								</nav>
 								<aside class="ccp-panel__content panel hidden">
+<img src="http://www.lakeside.com/media/global/images/foundation/img/fpo/spinner_lsc.gif" class="spinner hidden" alt="Please Wait">
 									<section class="row">
 										<div class="column small-8 no-padding-left">
 											<figure class="resp_full_height"></figure>
@@ -741,7 +783,7 @@ function activateNextCard( CardCurrentNo, CardNextNo ){ // Close current card th
 										</div>
 										<div class="column small-2 no-padding">
 											<figure class="resp_full_height"></figure>
-                                    		<a class="cmd-subs--a button radius resp_btn_teal">Subscribe</a>
+                                    		<a id="cmd-sms-subscribe" class="cmd-subs--a button radius resp_btn_teal">Subscribe</a>
 										</div>
 									</section>
 									<figure class="resp_qtr_height"></figure>
@@ -777,6 +819,7 @@ function activateNextCard( CardCurrentNo, CardNextNo ){ // Close current card th
                             	<p>Express Checkout<i class="ccp-panel--i">+</i></p>
                             </nav>
                             <aside class="ccp-panel__content panel hidden">
+<img src="http://www.lakeside.com/media/global/images/foundation/img/fpo/spinner_lsc.gif" class="spinner hidden" alt="Please Wait">
 	                            <section class="row">
 		                            <div class="column small-8 no-padding-left">
 			                            <figure class="resp_half_height"></figure>
@@ -786,7 +829,7 @@ function activateNextCard( CardCurrentNo, CardNextNo ){ // Close current card th
 		                            </div>
 		                            <div class="column small-2 no-padding">
 			                            <figure class="resp_full_height"></figure>
-			                            <a class="cmd-subs--a button radius resp_btn_teal">Save</a>
+			                            <a id="cmd-cc-save" class="cmd-subs--a button radius resp_btn_teal">Save</a>
 		                            </div>
 	                            </section>
 	                            <figure class="resp_full_height"></figure>
