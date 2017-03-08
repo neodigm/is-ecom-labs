@@ -12,6 +12,10 @@
 			<meta name="viewport" content="width=device-width, initial-scale=1.0">
 			<meta name="description" content="">
 			<meta name="keywords" content="">
+
+
+<script type="text/javascript" async="" src="./order_conf_auth_files/min.google_mdl.js.download"></script>
+<link href="./order_conf_auth_files/min.google_mdl.css" rel="stylesheet" media="screen,print">
 			
 			<script type="text/javascript" async="" src="./order_conf_auth_files/bv-analytics.js.download"></script><script type="text/javascript" async="" src="./order_conf_auth_files/ecommerce.js.download"></script><script async="" id="tealium-tag-7110" src="./order_conf_auth_files/analytics.js.download"></script><script type="text/javascript" async="" charset="utf-8" src="./order_conf_auth_files/collect.js.download" id="utag_52"></script><script src="./order_conf_auth_files/utag.js.download" type="text/javascript" async=""></script><script type="text/javascript" src="./order_conf_auth_files/custom.js.download" charset="utf-8" async=""></script><script type="text/javascript">
 
@@ -571,6 +575,12 @@ $(document).ready(function(){
                             <!-- cont area begin  -->
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas laoreet massa nec libero tincidunt, in vestibulum diam tristique. Sed aliquet convallis lorem, at cursus sapien lobortis et. Curabitur scelerisque magna at nibh imperdiet, et dictum lectus iaculis. In tempus metus ac efficitur auctor. Maecenas dignissim dolor et odio pellentesque, vitae finibus magna interdum. Proin a ultricies eros, eu semper justo. Sed ut velit dignissim, feugiat nisl eget, posuere ipsum. Donec sed euismod sapien. Etiam vel nisi non augue congue mollis.
                             </p>
+
+<div id="gmdl-toast" class="mdl-js-snackbar mdl-snackbar">
+  <div class="mdl-snackbar__text" style="padding-left: 8px !important;"></div>
+  <button class="mdl-snackbar__action hidden" type="button"></button>
+</div>
+
                             <!-- cont area end    -->
 						</div>
                     </section>
@@ -593,7 +603,8 @@ $(document).ready(function(){
 .orderConfirm .rd-only--h6 {padding-top: 12px;padding-bottom: 4px; }
 .orderConfirm .rd-only--p  {padding-top: 6px;padding-bottom: 4px;margin: 4px 0 10px 0; }
 .orderConfirm .cmd-subs--a {font-size: 1em;}
-.orderConfirm .i--figure {text-align: right;margin-right: -12px;margin-bottom: -12px;cursor: pointer;}
+.orderConfirm .i--figure {text-align: right;margin-right: -12px;margin-bottom: -12px;cursor: pointer;
+  -webkit-touch-callout: none; user-select: none;}
 
 .orderConfirm .chkb--div {padding: 4px 0 0 0;}
 .orderConfirm .chkb--div .chkb--input {margin-left: -18px !important;}
@@ -608,6 +619,13 @@ $(document).ready(function(){
 .brand_ltd .brand--lsc__showb { display:none }
 .brand_lsc .brand--ltd__showb { display:none }
 
+.spinner {
+    position: absolute; z-index: 256; margin-left: 33%; margin-top: 34%;
+}
+.state_sec__blur{
+-webkit-filter: opacity(0.3);
+}
+
 @media only screen and (max-width: 47.9375em) {
 	/* small */
 	.orderConfirm .resp_btn_teal { font-size: 11px !important;}
@@ -616,10 +634,12 @@ $(document).ready(function(){
 	/* medium */
 	.orderConfirm .resp_btn_teal { font-size: 12px !important;}
 }
-</style>	
+</style>
+
 <script>
 $(document).ready(function() {
 	$(document).foundation();
+
 	$(".js-i--figure").on("click", function(){ // icon click hide / show
 		$(this).next().toggleClass("hidden");
 	});
@@ -627,86 +647,123 @@ $(document).ready(function() {
 		$( this ).toggleClass("ccp-panel__active").next().toggleClass("hidden");
 		$( this ).find("i").text(( $( this ).hasClass("ccp-panel__active") )?"-":"+");
 	});
+	$("#cmd-email-subscribe").on("click", function() {
+		var data = {message: "Thank You! Check your inbox for your exclusive discount and start shopping TODAY!", timeout: 3400};
+		$("#gmdl-toast")[0].MaterialSnackbar.showSnackbar(data);
+		setTimeout(function(){
+			activateNextCard( 1, 2 ); // swap cards
+		}, 3500);
+	});
+	$(".js-chkb--input__nothanks").on("click", function(){
+		var data = {message: "We will no longer ask you to subscribe to email offers.", timeout: 3400};
+		$("#gmdl-toast")[0].MaterialSnackbar.showSnackbar(data);
+		setTimeout(function(){
+			activateNextCard( 1, 2 ); // swap cards
+		}, 3500);
+	});
 });
+
+function activateNextCard( CardCurrentNo, CardNextNo ){ // Close current card then conditionally open the next
+	var $nextCard = $("#ccp-" + CardNextNo);
+	if( ($nextCard.length > 0) && !$nextCard.hasClass("ccp-panel__active") ){ $nextCard.click(); }
+	$("#ccp-" + CardCurrentNo ).parent().remove();
+}
 </script>
                     <section class="row orderConfirm"><!-- collapsible card panels begin -->
 						<div class="column small-10 medium-5"> <!--  Left Column | Email Subscribe  -->
 
-                            <nav id="ccp-1" class="js-ccp ccp-panel radius text-center ccp-quest ccp-panel__active">
-                                <p>Send me promotional emails and discounts<i class="ccp-panel--i">-</i></p>
-                            </nav>
-                            <aside class="ccp-panel__content panel">
-                                <section class="row">
-                                    <div class="column small-8 no-padding-left">
-                                        <figure class="resp_half_height"></figure>
-                                        <div    class="rd-only--div">
-                                            <h6 class="rd-only--p text-center">email@address.com</h6>
-                                        </div>
-                                    </div>
-                                    <div class="column small-2 no-padding">
-                                        <figure class="resp_full_height"></figure>
-                                        <a class="cmd-subs--a button radius resp_btn_teal">Subscribe</a>
-                                    </div>
+							<article>
+	                            <nav id="ccp-1" class="js-ccp ccp-panel radius text-center ccp-quest ccp-panel__active">
+	                                <p>Send me promotional emails and discounts<i class="ccp-panel--i">-</i></p>
+	                            </nav>
+	                            <aside class="ccp-panel__content panel">
+	<!--
+	                                <section class="js-ccp-panel__input">
+	-->
+		                                <section class="row">
+		                                    <div class="column small-8 no-padding-left">
+		                                        <figure class="resp_half_height"></figure>
+		                                        <div    class="rd-only--div">
+		                                            <h6 class="rd-only--p text-center">email@address.com</h6>
+		                                        </div>
+		                                    </div>
+		                                    <div class="column small-2 no-padding">
+		                                        <figure class="resp_full_height"></figure>
+		                                        <a id="cmd-email-subscribe" class="cmd-subs--a button radius resp_btn_teal">Subscribe</a>
+		                                    </div>
+		                                </section>
+		                                <figure class="resp_full_height"></figure>
+		                                <p>We will never sell your email address. To learn more read our <a class="resp_u">Privacy Policy</a>.</p>
+		                                <figure class="js-i--figure i--figure">
+												<div class="circle">i</div>
+		                                </figure>
+<!--
                                 </section>
-                                <figure class="resp_full_height"></figure>
-                                <p>We will never sell your email address. To learn more read our <a class="resp_u">Privacy Policy</a>.</p>
-                                <figure class="js-i--figure i--figure">
-										<div class="circle">i</div>
-                                </figure>
-                                <aside class="hidden">
-                                    <p class="no-margin-bottom">To change your email address visit <a class="resp_u">Your Account</a></p>
-                                    <figure class="resp_qtr_height"></figure>
-                                    <section class="row">
-                                        <div class="chkb--div column small-1 text-center">
-                                            <input class="chkb--input no-margin-bottom" type="checkbox">
-                                        </div>
-                                        <div class="column small-9">
-                                            <p class="chkb--p no-margin-bottom">Do not ask me again</p>
-                                        </div>
-                                    </section>
-                                </aside>
-                            </aside>
-
+-->
+<!--
+                                <section class="js-ccp-panel__thanks hidden">
+									<h2 class="text-center">Thank You!</h2>
+									<hr>
+									<h6 class="text-center">Check your inbox for your exclusive discount and start shopping TODAY!</h6>
+	                                <figure class="resp_full_height"></figure>
+	                                <p>We will never sell your email address. To learn more read our <a class="resp_u">Privacy Policy</a>.</p>
+                                </section>
+-->
+	                                <aside class="hidden">
+	                                    <p class="no-margin-bottom">To change your email address visit <a class="resp_u">Your Account</a></p>
+	                                    <figure class="resp_qtr_height"></figure>
+	                                    <section class="row">
+	                                        <div class="chkb--div column small-1 text-center">
+	                                            <input class="js-chkb--input__nothanks chkb--input no-margin-bottom" type="checkbox">
+	                                        </div>
+	                                        <div class="column small-9">
+	                                            <p class="chkb--p no-margin-bottom">No Thanks, do not ask me again</p>
+	                                        </div>
+	                                    </section>
+	                                </aside>
+	                            </aside>
+                            </article>
+<!-- <figure class="resp_qtr_height"></figure>  -->
 						</div>
 						<div class="column small-10 medium-5">    <!--  Right Column | SMS  -->
 
-									<nav id="ccp-2" class="js-ccp ccp-panel radius text-center ccp-quest">
-										<p>Text me when my order ships<i class="ccp-panel--i">+</i></p>
-									</nav>
-									<aside class="ccp-panel__content panel hidden">
-										<section class="row">
-											<div class="column small-8 no-padding-left">
-												<figure class="resp_full_height"></figure>
-												<input id="subscribeSMS" class="resp_input_brand" name=""
-												type="text" maxlength="256" placeholder="* Mobile Phone Number"
-												value="" aria-required="true" aria-label="Mobile Phone Number"
-												autocorrect="off" autocomplete="off">
-											</div>
-											<div class="column small-2 no-padding">
-												<figure class="resp_full_height"></figure>
-                                        		<a class="cmd-subs--a button radius resp_btn_teal">Subscribe</a>
-											</div>
-										</section>
-										<figure class="resp_qtr_height"></figure>
-										<p>Send text reminders to the mobile phone number that I entered.  Message and data rates may apply.  For help, text <strong>HELP</strong> to <strong><span class="brand--lsc__show">58277</span><span class="brand--ltd__show">96237</span></strong>.  To opt out text <strong>STOP</strong> to <strong><span class="brand--lsc__show">58277</span><span class="brand--ltd__show">96237</span></strong>.
-										</p>
-										<section class="row">
-											<div class="chkb--div column small-1 text-center">
-												<input class="chkb--input no-margin-bottom" type="checkbox">
-											</div>
-											<div class="column small-9">
-												<p class="chkb--p no-margin-bottom">I agree to the <a class="resp_u">Terms & Conditions</a></p>
-											</div>
-										</section>
-										<figure class="resp_full_height"></figure>
-                                		<figure class="js-i--figure i--figure">
-											<div class="circle">i</div>
-										</figure>
-										<aside class="hidden">
-											<p class="no-margin-bottom">To change your mobile phone number visit <a class="resp_u">Your Account</a></p>
-											<figure class="resp_half_height"></figure>
-										</aside>
+								<nav id="ccp-2" class="js-ccp ccp-panel radius text-center ccp-quest">
+									<p>Text me when my order ships<i class="ccp-panel--i">+</i></p>
+								</nav>
+								<aside class="ccp-panel__content panel hidden">
+									<section class="row">
+										<div class="column small-8 no-padding-left">
+											<figure class="resp_full_height"></figure>
+											<input id="subscribeSMS" class="resp_input_brand" name=""
+											type="text" maxlength="256" placeholder="* Mobile Phone Number"
+											value="" aria-required="true" aria-label="Mobile Phone Number"
+											autocorrect="off" autocomplete="off">
+										</div>
+										<div class="column small-2 no-padding">
+											<figure class="resp_full_height"></figure>
+                                    		<a class="cmd-subs--a button radius resp_btn_teal">Subscribe</a>
+										</div>
+									</section>
+									<figure class="resp_qtr_height"></figure>
+									<p>Send text reminders to the mobile phone number that I entered.  Message and data rates may apply.  For help, text <strong>HELP</strong> to <strong><span class="brand--lsc__show">58277</span><span class="brand--ltd__show">96237</span></strong>.  To opt out text <strong>STOP</strong> to <strong><span class="brand--lsc__show">58277</span><span class="brand--ltd__show">96237</span></strong>.
+									</p>
+									<section class="row">
+										<div class="chkb--div column small-1 text-center">
+											<input class="chkb--input no-margin-bottom" type="checkbox">
+										</div>
+										<div class="column small-9">
+											<p class="chkb--p no-margin-bottom">I agree to the <a class="resp_u">Terms & Conditions</a></p>
+										</div>
+									</section>
+									<figure class="resp_full_height"></figure>
+                            		<figure class="js-i--figure i--figure">
+										<div class="circle">i</div>
+									</figure>
+									<aside class="hidden">
+										<p class="no-margin-bottom">To change your mobile phone number visit <a class="resp_u">Your Account</a></p>
+										<figure class="resp_half_height"></figure>
 									</aside>
+								</aside>
 
 						</div>
 
@@ -716,7 +773,7 @@ $(document).ready(function() {
 						<div class="column small-10 medium-5">    <!--  Right Column | Express Checkout  -->
 
 
-                            <nav id="ccp-2" class="js-ccp ccp-panel radius text-center ccp-quest">
+                            <nav id="ccp-3" class="js-ccp ccp-panel radius text-center ccp-quest">
                             	<p>Express Checkout<i class="ccp-panel--i">+</i></p>
                             </nav>
                             <aside class="ccp-panel__content panel hidden">
