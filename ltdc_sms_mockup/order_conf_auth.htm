@@ -133,7 +133,10 @@ cursor: default !important;
 
 .ccp-quest:hover p, .ccp-panel__active p {
 	color: #FFF;
+	fill: #FFF;
 }
+
+
 
 .brand_lsc .ccp-panel {
 	background: #FFFBFF;
@@ -650,6 +653,7 @@ $(document).ready(function(){
 
 <script>
 $(document).ready(function() {
+	'use strict'
 	$(document).foundation();
 
 	$(".js-i--figure").on("click", function(){ // icon click hide / show
@@ -661,39 +665,47 @@ $(document).ready(function() {
 	});
 	$("#cmd-email-subscribe").on("click", function() {
 		var nCard = 1;
-		var data = {message: "Check your inbox for your exclusive discount and start shopping TODAY!", timeout: 3400};
-		$("#gmdl-toast")[0].MaterialSnackbar.showSnackbar(data);
-		waitingCard( nCard );
-		setTimeout(function(){
-			activateNextCard( nCard, 2 ); // swap cards
-		}, 3500);
+		if( IsSmall() ){
+			var data = {message: "Check your inbox for your exclusive discount and start shopping TODAY!", timeout: 3400};
+			$("#gmdl-toast")[0].MaterialSnackbar.showSnackbar(data);
+			waitingCard( nCard );
+			setTimeout(function(){
+				activateNextCard( nCard, 2 ); // swap cards
+			}, 3500);
+		}
 	});
 	$(".js-chkb--input__nothanks").on("click", function(){
 		var nCard = 1;
-		var data = {message: "We will no longer ask you to subscribe to email offers.", timeout: 2400};
-		$("#gmdl-toast")[0].MaterialSnackbar.showSnackbar(data);
-		setTimeout(function(){
-			activateNextCard( nCard, 2 ); // swap cards
-		}, 1800);
+		if( IsSmall() ){
+			var data = {message: "We will no longer ask you to subscribe to email offers.", timeout: 2400};
+			$("#gmdl-toast")[0].MaterialSnackbar.showSnackbar(data);
+			setTimeout(function(){
+				activateNextCard( nCard, 2 ); // swap cards
+			}, 1800);
+		}
 	});
 	$("#cmd-sms-subscribe").on("click", function() {
 		// not disabled or locked
 		var nCard = 2;
-		var data = {message: "Please respond to the text message sent to your phone.", timeout: 3400};
-		$("#gmdl-toast")[0].MaterialSnackbar.showSnackbar(data);
-		waitingCard( nCard );
-		setTimeout(function(){
-			activateNextCard( nCard, 3 ); // swap cards
-		}, 3500);
+		if( IsSmall() ){
+			var data = {message: "Please respond to the text message sent to your phone.", timeout: 3400};
+			$("#gmdl-toast")[0].MaterialSnackbar.showSnackbar(data);
+			waitingCard( nCard );
+			setTimeout(function(){
+				activateNextCard( nCard, 3 ); // swap cards
+			}, 3500);
+		}
 	});
 	$("#cmd-cc-save").on("click", function() {
 		var nCard = 3;
-		var data = {message: "Payment information saved.", timeout: 3400};
-		$("#gmdl-toast")[0].MaterialSnackbar.showSnackbar(data);
-		waitingCard( nCard );
-		setTimeout(function(){
-			activateNextCard( nCard, 0 ); // swap cards
-		}, 3500);
+		if( IsSmall() ){
+			var data = {message: "Payment information saved.", timeout: 3400};
+			$("#gmdl-toast")[0].MaterialSnackbar.showSnackbar(data);
+			waitingCard( nCard );
+			setTimeout(function(){
+				activateNextCard( nCard, 0 ); // swap cards
+			}, 3500);
+		}
 	});
 });
 
@@ -814,9 +826,28 @@ function activateNextCard( CardCurrentNo, CardNextNo ){ // Close current card th
 
 						<div class="column small-10 medium-5">    <!--  Right Column | Express Checkout  -->
 
-
                             <nav id="ccp-3" class="js-ccp ccp-panel radius text-center ccp-quest">
-                            	<p>Express Checkout<i class="ccp-panel--i">+</i></p>
+                            	<p>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 882.16 617.71" style="width: 44px; height: 44px;">
+  <defs>
+    <style>
+      .cls-1{fill:#297fb8;}
+    </style>
+  </defs>
+  <title>
+    Asset 1
+  </title>
+  <g data-name="Layer 2" id="Layer_2">
+    <g id="Livello_1" data-name="Livello 1">
+      <path class="cls-1" d="M274.13 455.49c-10.84 0-16.38-8.22-12.31-18.27l147.6-364a22.8 22.8 0 0 0-9.87-27.77l-11.15-6.17a19.77 19.77 0 0 1-7.77-26.77l1.27-2.3a19.77 19.77 0 0 1 26.78-7.77l43.91 24.15a22.8 22.8 0 0 1 9.87 27.77l-138.2 340.81c-4.08 10 1.46 18.27 12.31 18.27H677c10.84 0 23-8.22 27.12-18.27l137.62-339.3A19.77 19.77 0 0 1 867.42 45l2.43 1a19.77 19.77 0 0 1 10.86 25.68L732.5 437.22c-4.07 10-16.28 18.27-27.12 18.27z"></path>
+      <ellipse class="cls-1" cx="312.1" cy="544.86" rx="74.27" ry="58.56" transform="rotate(-71.45 312.083 544.857)"></ellipse>
+      <ellipse class="cls-1" cx="639.33" cy="544.86" rx="74.27" ry="58.56" transform="rotate(-71.45 639.315 544.856)"></ellipse>
+      <rect class="cls-1" x="402.62" y="304.37" width="254.29" height="45.34" rx="19.71" ry="19.71"></rect>
+      <rect class="cls-1" x="434.15" y="229.46" width="301.61" height="45.34" rx="19.71" ry="19.71"></rect>
+      <path class="cls-1" d="M273.36 349.75l10.41-25.68-156.41 12.34zM127.36 157l216.14 19.77 15.41-38zM304.2 273.71l21.69-53.5L0 245.92z"></path>
+    </g>
+  </g>
+</svg>&nbsp;Express Checkout<i class="ccp-panel--i">+</i></p>
                             </nav>
                             <aside class="ccp-panel__content panel hidden">
 <img src="http://www.lakeside.com/media/global/images/foundation/img/fpo/spinner_lsc.gif" class="spinner hidden" alt="Please Wait">
