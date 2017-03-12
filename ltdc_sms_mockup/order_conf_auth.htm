@@ -91,7 +91,6 @@ cursor: default !important;
 
 .ccp-panel__content{
 	background-color: #FFF;
-	YYYYpadding-bottom: 2px;
 }
 
 .ccp-quest {
@@ -122,6 +121,13 @@ cursor: default !important;
 	background-color: #297FB8;
 }
 
+.ccp-quest svg {
+	fill: #2aa6ca;
+}
+.ccp-quest:hover svg, .ccp-panel__active svg {
+	fill: #FFF !important;
+}
+
 .ccp-panel__active {
 	background: #297FB8;
 	margin-bottom: -4px;
@@ -133,10 +139,11 @@ cursor: default !important;
 
 .ccp-quest:hover p, .ccp-panel__active p {
 	color: #FFF;
-	fill: #FFF;
 }
 
-
+.brand_lsc .ccp-quest svg {
+	fill: #632434;
+}
 
 .brand_lsc .ccp-panel {
 	background: #FFFBFF;
@@ -828,12 +835,7 @@ function activateNextCard( CardCurrentNo, CardNextNo ){ // Close current card th
 
                             <nav id="ccp-3" class="js-ccp ccp-panel radius text-center ccp-quest">
                             	<p>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 882.16 617.71" style="width: 44px; height: 44px;">
-  <defs>
-    <style>
-      .cls-1{fill:#297fb8;}
-    </style>
-  </defs>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 882.16 617.71" style="width: 34px; height: 34px;">
   <title>
     Asset 1
   </title>
@@ -847,7 +849,7 @@ function activateNextCard( CardCurrentNo, CardNextNo ){ // Close current card th
       <path class="cls-1" d="M273.36 349.75l10.41-25.68-156.41 12.34zM127.36 157l216.14 19.77 15.41-38zM304.2 273.71l21.69-53.5L0 245.92z"></path>
     </g>
   </g>
-</svg>&nbsp;Express Checkout<i class="ccp-panel--i">+</i></p>
+</svg>&nbsp; Express Checkout<i class="ccp-panel--i">+</i></p>
                             </nav>
                             <aside class="ccp-panel__content panel hidden">
 <img src="http://www.lakeside.com/media/global/images/foundation/img/fpo/spinner_lsc.gif" class="spinner hidden" alt="Please Wait">
