@@ -672,47 +672,47 @@ $(document).ready(function() {
 	});
 	$("#cmd-email-subscribe").on("click", function() {
 		var nCard = 1;
-		if( IsSmall() ){
+		//if( IsSmall() ){
 			var data = {message: "Check your inbox for your exclusive discount and start shopping TODAY!", timeout: 3400};
 			$("#gmdl-toast")[0].MaterialSnackbar.showSnackbar(data);
 			waitingCard( nCard );
 			setTimeout(function(){
 				activateNextCard( nCard, 2 ); // swap cards
 			}, 3500);
-		}
+		//}
 	});
 	$(".js-chkb--input__nothanks").on("click", function(){
 		var nCard = 1;
-		if( IsSmall() ){
+		//if( IsSmall() ){
 			var data = {message: "We will no longer ask you to subscribe to email offers.", timeout: 2400};
 			$("#gmdl-toast")[0].MaterialSnackbar.showSnackbar(data);
 			setTimeout(function(){
 				activateNextCard( nCard, 2 ); // swap cards
 			}, 1800);
-		}
+		//}
 	});
 	$("#cmd-sms-subscribe").on("click", function() {
 		// not disabled or locked
 		var nCard = 2;
-		if( IsSmall() ){
+		//if( IsSmall() ){
 			var data = {message: "Please respond to the text message sent to your phone.", timeout: 3400};
 			$("#gmdl-toast")[0].MaterialSnackbar.showSnackbar(data);
 			waitingCard( nCard );
 			setTimeout(function(){
 				activateNextCard( nCard, 3 ); // swap cards
 			}, 3500);
-		}
+		//}
 	});
 	$("#cmd-cc-save").on("click", function() {
 		var nCard = 3;
-		if( IsSmall() ){
+		//if( IsSmall() ){
 			var data = {message: "Payment information saved.", timeout: 3400};
 			$("#gmdl-toast")[0].MaterialSnackbar.showSnackbar(data);
 			waitingCard( nCard );
 			setTimeout(function(){
 				activateNextCard( nCard, 0 ); // swap cards
 			}, 3500);
-		}
+		//}
 	});
 });
 
