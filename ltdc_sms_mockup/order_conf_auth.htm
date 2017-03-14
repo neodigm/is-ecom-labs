@@ -662,13 +662,19 @@ $(document).ready(function(){
 $(document).ready(function() {
 	'use strict'
 	$(document).foundation();
+	$("#subscribeSMS").inputmask();
 
 	$(".js-i--figure").on("click", function(){ // icon click hide / show
-		$(this).next().toggleClass("hidden");
+		$( this ).next().toggleClass("hidden");
 	});
 	$(".js-ccp").on("click", function( e ){  //  Collapsible Content Panel
+		// mutex
+		if( !$( this ).hasClass("ccp-panel__active") ){
+			$(".ccp-panel__active").click();
+		}	
 		$( this ).toggleClass("ccp-panel__active").next().toggleClass("hidden");
 		$( this ).find("i").text(( $( this ).hasClass("ccp-panel__active") )?"-":"+");
+
 	});
 	$("#cmd-email-subscribe").on("click", function() {
 		var nCard = 1;
@@ -720,6 +726,7 @@ function waitingCard( CardCurrentNo ){  //  Mockup of card in waiting state
 		$("#ccp-" + CardCurrentNo ).find("p").text("Thank You!");
 		$("#ccp-" + CardCurrentNo ).next().addClass("state_sec__blur");
 		$("#ccp-" + CardCurrentNo ).next().find(".spinner").toggleClass("hidden");
+		$("#ccp-" + CardCurrentNo ).next().find(".cmd-subs--a").addClass("cmd_locked");
 }
 
 function activateNextCard( CardCurrentNo, CardNextNo ){ // Close current card then conditionally open the next
@@ -796,13 +803,14 @@ function activateNextCard( CardCurrentNo, CardNextNo ){ // Close current card th
 										<div class="column small-8 no-padding-left">
 											<figure class="resp_full_height"></figure>
 											<input id="subscribeSMS" class="resp_input_brand" name=""
-											type="text" maxlength="256" placeholder="* Mobile Phone Number"
+											data-inputmask="'mask': '(999) 999-9999'"
+											type="tel" maxlength="256" placeholder="* Mobile Phone Number"
 											value="" aria-required="true" aria-label="Mobile Phone Number"
 											autocorrect="off" autocomplete="off">
 										</div>
 										<div class="column small-2 no-padding">
 											<figure class="resp_full_height"></figure>
-                                    		<a id="cmd-sms-subscribe" class="cmd-subs--a button radius resp_btn_teal">Subscribe</a>
+                                    		<a id="cmd-sms-subscribe" class="cmd-subs--a button radius resp_btn_teal cmd_disabled">Subscribe</a>
 										</div>
 									</section>
 									<figure class="resp_qtr_height"></figure>
