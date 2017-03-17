@@ -86,12 +86,17 @@ var monetateT = new Date().getTime();
 .switch label {margin-top:0; background-color:#c0392b;}
 .switch input:checked+label {background: #4FB466;}
 
+.cmd_disabled, .cmd_locked {
+background-color: #bbb !important;
+cursor: default !important;			
+}
+
 .ccp-panel {
 	border-style: solid;
 	border-width: 1px;
 	border-color: #BBB;
 	margin-bottom: 16px;
-	padding: 16px 12px 2px 8px;
+	padding: 14px 12px 2px 8px;
 	background: #f2faff;
 	color: #333333;
 	border-radius: 3px;
@@ -113,7 +118,7 @@ var monetateT = new Date().getTime();
 .ccp-quest {
 	position: relative;
 	overflow: hidden;
-	min-height: 66px;
+	min-height: 62px;
 	cursor: pointer;
 	cursor: pointer;
 	-webkit-user-select: none;
@@ -138,6 +143,13 @@ var monetateT = new Date().getTime();
 	background-color: #297FB8;
 }
 
+.ccp-quest svg {
+	fill: #2aa6ca;
+}
+.ccp-quest:hover svg, .ccp-panel__active svg {
+	fill: #FFF !important;
+}
+
 .ccp-panel__active {
 	background: #297FB8;
 	margin-bottom: -4px;
@@ -149,6 +161,10 @@ var monetateT = new Date().getTime();
 
 .ccp-quest:hover p, .ccp-panel__active p {
 	color: #FFF;
+}
+
+.brand_lsc .ccp-quest svg {
+	fill: #632434;
 }
 
 .brand_lsc .ccp-panel {
@@ -168,15 +184,62 @@ var monetateT = new Date().getTime();
 	box-shadow: 0 4px 8px rgba(3,3,3,0.16);
 }
 
+
+
+
+
+
+.spinner {
+    position: absolute; z-index: 256; margin-left: 33%; margin-top: 34%;
+}
+.state_sec__blur{
+-webkit-filter: opacity(0.3);
+}
+.orderConfirm .circle {
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	font-size: 50px;
+	color: #fff;
+	line-height: 20px;
+	text-align: center;
+	background: #aaa;
+	display: inline-block;
+	font-size: 15px;
+	font-weight: bold;
+	font-family: "Courier New", Courier, monospace;
+}
+.orderConfirm .rd-only--div {background-color: #F4F4F4; width: 100%;min-height: 36px;margin-top: 6px; }
+.orderConfirm .rd-only--h6 {padding-top: 12px;padding-bottom: 4px; }
+.orderConfirm .rd-only--p  {padding-top: 6px;padding-bottom: 4px;margin: 4px 0 10px 0; }
+.orderConfirm .cmd-subs--a {font-size: 1em;}
+.orderConfirm .i--figure {text-align: right;margin-right: -12px;margin-bottom: -12px;cursor: pointer;
+  -webkit-touch-callout: none; user-select: none;}
+
+.orderConfirm .chkb--div {padding: 4px 0 0 0;}
+.orderConfirm .chkb--div .chkb--input {margin-left: -18px !important;}
+.orderConfirm .chkb--p {padding-left: 0;margin-left: -14px;}
+
+.brand_ltd .brand--ltd__show { display:inline }
+.brand_lsc .brand--lsc__show { display:inline }
+.brand_ltd .brand--ltd__showb { display:block }
+.brand_lsc .brand--lsc__showb { display:block }
+.brand_ltd .brand--lsc__show { display:none }
+.brand_lsc .brand--ltd__show { display:none }
+.brand_ltd .brand--lsc__showb { display:none }
+.brand_lsc .brand--ltd__showb { display:none }
+
 @media only screen and (max-width: 47.9375em) {
 	/* small */
-	.resp_btn_teal { font-size: 11px !important;}
+	.orderConfirm .resp_btn_teal { font-size: 11px !important;}
 }
 @media only screen and (min-width:48em) and (max-width:61.25em){
 	/* medium */
-	.resp_btn_teal { font-size: 12px !important;}
+	.orderConfirm .resp_btn_teal { font-size: 12px !important;}
 }
-</style>	
+</style>
+
+
 <script>
 $(document).ready(function() {
 	$(document).foundation();
@@ -686,6 +749,8 @@ function noThanks(isPayer) {
 					<input title="Confirm Email" maxlength="37" placeholder="* Confirm Email" name="/atg/userprofiling/ProfileFormHandler.transientValue.confirmEmail" value="" type="hidden" aria-required="true" aria-label="Confirm Email"><input name="_D:/atg/userprofiling/ProfileFormHandler.transientValue.confirmEmail" value=" " type="hidden"><input spellcheck="false" placeholder="* Password" autocomplete="off" type="password" autocapitalize="off" aria-label="Password" id="create_account_password" title="Password" maxlength="20" name="/atg/userprofiling/ProfileFormHandler.transientValue.password" value="" autocorrect="off" aria-required="true"><input name="_D:/atg/userprofiling/ProfileFormHandler.transientValue.password" value=" " type="hidden"><input spellcheck="false" placeholder="* Confirm Password" autocomplete="off" type="password" autocapitalize="off" aria-label="Confirm Password" id="create_account_confirm_password" title="Confirm Password" maxlength="20" name="/atg/userprofiling/ProfileFormHandler.value.confirmPassword" value="" autocorrect="off" aria-required="true"><input name="_D:/atg/userprofiling/ProfileFormHandler.value.confirmPassword" value=" " type="hidden">
 	<label><input name="/atg/userprofiling/ProfileFormHandler.transientValue.sendPromoEmail" value="true" type="checkbox" checked=""><input name="_D:/atg/userprofiling/ProfileFormHandler.transientValue.sendPromoEmail" value=" " type="hidden"> <div class="inline-block-label"><span class="resp_i">Please send me promotional emails and discounts!</span></div></label>
 
+<div class="orderConfirm">
+
 <nav id="ccp-2" class="js-ccp ccp-panel radius text-center ccp-quest">
 	<p>Text me when my order ships<i class="ccp-panel--i">+</i></p>
 </nav>
@@ -720,6 +785,48 @@ function noThanks(isPayer) {
 		<figure class="resp_half_height"></figure>
 	</aside>
 </aside>
+
+<nav id="ccp-3" class="js-ccp ccp-panel radius text-center ccp-quest">
+	<p>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 882.16 617.71" style="width: 34px; height: 34px;">
+<title>
+Asset 1
+</title>
+<g data-name="Layer 2" id="Layer_2">
+<g id="Livello_1" data-name="Livello 1">
+<path class="cls-1" d="M274.13 455.49c-10.84 0-16.38-8.22-12.31-18.27l147.6-364a22.8 22.8 0 0 0-9.87-27.77l-11.15-6.17a19.77 19.77 0 0 1-7.77-26.77l1.27-2.3a19.77 19.77 0 0 1 26.78-7.77l43.91 24.15a22.8 22.8 0 0 1 9.87 27.77l-138.2 340.81c-4.08 10 1.46 18.27 12.31 18.27H677c10.84 0 23-8.22 27.12-18.27l137.62-339.3A19.77 19.77 0 0 1 867.42 45l2.43 1a19.77 19.77 0 0 1 10.86 25.68L732.5 437.22c-4.07 10-16.28 18.27-27.12 18.27z"></path>
+<ellipse class="cls-1" cx="312.1" cy="544.86" rx="74.27" ry="58.56" transform="rotate(-71.45 312.083 544.857)"></ellipse>
+<ellipse class="cls-1" cx="639.33" cy="544.86" rx="74.27" ry="58.56" transform="rotate(-71.45 639.315 544.856)"></ellipse>
+<rect class="cls-1" x="402.62" y="304.37" width="254.29" height="45.34" rx="19.71" ry="19.71"></rect>
+<rect class="cls-1" x="434.15" y="229.46" width="301.61" height="45.34" rx="19.71" ry="19.71"></rect>
+<path class="cls-1" d="M273.36 349.75l10.41-25.68-156.41 12.34zM127.36 157l216.14 19.77 15.41-38zM304.2 273.71l21.69-53.5L0 245.92z"></path>
+</g>
+</g>
+</svg>&nbsp; Express Checkout<i class="ccp-panel--i">+</i></p>
+</nav>
+<aside class="ccp-panel__content panel hidden">
+<img src="http://www.lakeside.com/media/global/images/foundation/img/fpo/spinner_lsc.gif" class="spinner hidden" alt="Please Wait">
+    <section class="row">
+        <div class="column small-8 no-padding-left">
+            <figure class="resp_half_height"></figure>
+            <div class="rd-only--div">
+            <p class="rd-only--p text-center"><i class="fa fa-credit-card fa-2x" aria-hidden="true" style="
+margin-left: 12px;
+float: left;
+"></i> XXXXXXXXXXXX1111</p>
+        </div>
+        </div>
+        <div class="column small-2 no-padding">
+            <figure class="resp_full_height"></figure>
+            <a id="cmd-cc-save" class="cmd-subs--a button radius resp_btn_teal">Save</a>
+        </div>
+    </section>
+    <figure class="resp_full_height"></figure>
+    <p>Checkout faster by securely saving your payment information.
+    </p>
+</aside>
+
+</div> <!-- orderConfirm end -->
 						
 					<!-- /*************************
 					* START Create Account form actions section
