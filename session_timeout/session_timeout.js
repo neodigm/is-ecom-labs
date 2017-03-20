@@ -1,14 +1,5 @@
-$("body").attr("data-session-timeout", "?checkout=true&sw=1");
-
-
-
-
-
-
-
-
 var sesTimeOut = {
-  countDown_start : 181000,
+  countDown_start : 381000,
   countDown : 0,
   logOutParm : true,
   "init" : function(){
@@ -16,14 +7,31 @@ var sesTimeOut = {
     if( sesTimeOut.logOutParm && ( $("#session-dialog").length !== 0 )){ // Page Supported
       sesTimeOut.countDown = sesTimeOut.countDown_start;
       sesTimeOut.IntTimer = setInterval(sesTimeOut.sessionTimeOutInt, 1000);
+
+console.clear();
+
+var ajaxOpen = XMLHttpRequest.prototype.open;
+XMLHttpRequest.prototype.open = function() {
+    this.addEventListener('load', function() {
+    console.group(" ====    AJAX    ==== ");
+    console.log(" time | " + this.responseURL); //whatever the response was
+    if( this.responseURL.toUpperCase().indexOf("TEALEAFTARGET.JSP") === -1 ){
       $( document ).ajaxComplete( function(){ sesTimeOut.reset(); });
+    }
+    console.groupEnd();
+
+    });
+  ajaxOpen.apply(this, arguments);
+};
+
+      //$( document ).ajaxComplete( function(){ sesTimeOut.reset(); });
     }
   },
   "sessionTimeOutInt" : function(){
     sesTimeOut.countDown = ( sesTimeOut.countDown - 1000 );
     var minutes = Math.floor((sesTimeOut.countDown % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((sesTimeOut.countDown % (1000 * 60)) / 1000);
-     
+console.log("time | " + sesTimeOut.countDown);
     if( sesTimeOut.countDown <= 0 ) { // When the count down is over, redirect to my-account.
       clearInterval(sesTimeOut.IntTimer);
       $.get("/common/expire_session.jsp", function(data, status){
