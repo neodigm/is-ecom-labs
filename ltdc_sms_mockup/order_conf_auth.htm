@@ -59,19 +59,20 @@
 $( document ).ready(function(){
 	docEventReady();
 	if( window.location.search.indexOf("opt1") !== -1 ){
-		$("#ccc-1").parent().addClass("hidden");
+		$("#ccc-1").parent().addClass("js-ccc-parent__hidden");
 		$("#ccc-2").click();
 	}
 	if( window.location.search.indexOf("opt2") !== -1 ){
-		$("#ccc-2").parent().addClass("hidden");
+		$("#ccc-2").parent().addClass("js-ccc-parent__hidden");
 		$("#ccc-3").click();
 	}
 	if( window.location.search.indexOf("opt3") !== -1 ){
-		$("#ccc-3, #ccc-4, #ccc-5").parent().addClass("hidden");
+		$("#ccc-3, #ccc-4, #ccc-5").parent().addClass("js-ccc-parent__hidden");
 	}
 	if( window.location.search.indexOf("opt4") !== -1 ){
-		$("#ccc-3, #ccc-5").parent().addClass("hidden");
+		$("#ccc-2").parent().removeClass("js-ccc-parent__hidden");
 	}
+	$(".js-ccc-parent:not(.js-ccc-parent__hidden)").removeClass("hidden");
 });
 
 function docEventReady(){
@@ -732,6 +733,7 @@ function activateNextCard( CardCurrentNo, CardNextNo ){ // Close current card th
 						<div class="column small-10 medium-5"> <!--  Left Column | Email Subscribe  -->
 
 							<article>
+<section class="js-ccc-parent hidden">
 	                            <nav id="ccc-1" class="js-ccc-mutex ccc-panel radius text-center ccc-quest ccc-panel__active">
 	                                <p>Send me promotional emails and discounts<i class="ccc-panel--i">-</i></p>
 	                            </nav>
@@ -782,11 +784,12 @@ function activateNextCard( CardCurrentNo, CardNextNo ){ // Close current card th
 	                                    </section>
 	                                </aside>
 	                            </aside>
+</section>
                             </article>
 <!-- <figure class="resp_qtr_height"></figure>  -->
 						</div>
 						<div class="column small-10 medium-5">    <!--  Right Column | SMS  -->
-
+<section class="js-ccc-parent hidden">
 								<nav id="ccc-2" class="js-ccc-mutex ccc-panel radius text-center ccc-quest">
 									<p>Text me when my order ships<i class="ccc-panel--i">+</i></p>
 								</nav>
@@ -829,14 +832,14 @@ function activateNextCard( CardCurrentNo, CardNextNo ){ // Close current card th
 										<figure class="resp_half_height"></figure>
 									</aside>
 								</aside>
-
+</section>
 						</div>
 
 
 
 
 						<div class="column small-10 medium-5">    <!--  Right Column | Express Checkout  -->
-<section>
+<section class="js-ccc-parent js-ccc-parent__hidden hidden">
                             <nav id="ccc-3" class="js-ccc-mutex ccc-panel radius text-center ccc-quest">
                             	<p>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 882.16 617.71" style="width: 34px; height: 34px;">
@@ -884,7 +887,7 @@ function activateNextCard( CardCurrentNo, CardNextNo ){ // Close current card th
 	                                </aside>
                             </aside>
 </section>
-<section>
+<section class="js-ccc-parent js-ccc-parent__hidden hidden">
                             <nav id="ccc-4" class="js-ccc-mutex ccc-panel radius text-center ccc-quest">
                             	<p>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 882.16 617.71" style="width: 34px; height: 34px;">
@@ -932,7 +935,7 @@ function activateNextCard( CardCurrentNo, CardNextNo ){ // Close current card th
 	                                </aside>
                             </aside>
 </section>
-<section>
+<section class="js-ccc-parent hidden">
                             <nav id="ccc-5" class="js-ccc-mutex ccc-panel radius text-center ccc-quest">
                             	<p>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 882.16 617.71" style="width: 34px; height: 34px;">
