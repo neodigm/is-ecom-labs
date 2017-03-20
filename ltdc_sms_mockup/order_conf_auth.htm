@@ -58,6 +58,20 @@
 
 $( document ).ready(function(){
 	docEventReady();
+	if( window.location.search.indexOf("opt1") !== -1 ){
+		$("#ccc-1").parent().addClass("hidden");
+		$("#ccc-2").click();
+	}
+	if( window.location.search.indexOf("opt2") !== -1 ){
+		$("#ccc-2").parent().addClass("hidden");
+		$("#ccc-3").click();
+	}
+	if( window.location.search.indexOf("opt3") !== -1 ){
+		$("#ccc-3").parent().addClass("hidden");
+	}
+	if( window.location.search.indexOf("opt4") !== -1 ){
+		$("#ccc-4").parent().addClass("hidden");
+	}
 });
 
 function docEventReady(){

@@ -17,78 +17,99 @@ UX | Mockup and Interactive Prototype
 				</h1>
 			</header>
 		</section>
-	·        Authenticated turned off
-·        Authenticated Payment method not saved
-·        Non-authenticated (Create Account Card)
-·        Consider Installment Payment overlap
+
 		<figure class="horz-spacer"></figure>
-		<section class="row">
-<span class="round alert label">Round Alert Label</span>
-		</section>
-		<section class="row"><div class="column small-12"><hr></div></section>
-		<section class="row">
-			<aside class="column small-12 medium-8 large-8 push-4">
-				<p class="caption--p__roboto color-text__neos12">
-Nulla gravida ligula ut aliquet maximus
-				</p>
-				<p class="caption--p__opensans color-text__neos14">
-The living style guide is a collection of design patterns, components, and guidelines for creating a unified UX. It provides access to the core visual and interaction design patterns so that you can follow established best practices and build experiences that have a consistent look and feel.
-				</p>
-			</aside>
-			<aside class="column small-12 medium-4 large-4 pull-8 text-center">
-<a class="text-center" href="https://docs.google.com/document/d/1aMxbxZMYKq3zSp5SrpSSdyHKZlFskO8waD3jsvQoSlM/edit?usp=sharing" target="_blank">
-Praesent ac lectus eu felis feugiat dignissim eget eget elit. Nulla facilisi. Etiam in bibendum lorem. Curabitur sed sodales leo. Phasellus vitae molestie magna. Suspendisse consequat eget massa sed fermentum. Morbi laoreet diam elementum, vehicula tellus eget, malesuada mauris. Fusce laoreet erat a pharetra varius. Vestibulum maximus in risus et bibendum. Aliquam viverra pulvinar risus non maximus. Vivamus non iaculis tellus, rhoncus tempor velit. Duis odio massa, pretium nec lacus a, ullamcorper maximus est.
-</a>
-			</aside>
-		</section>
-		<section class="row"><div class="column small-12"><hr></div></section>
-		<section class="row">
-			<div class="column small-12 medium-8">
-<table border="0" cellpadding="2" cellspacing="2">
-<tbody>
-<tr>
-<td>
-<p class="article--table_lab__roboto">Clarity</p>
-<p class="text-center">
-<i class="fa fa-check-circle-o fa-2x"></i></p>
-</td>
-<td>
-<p class="caption--p__opensans color-text__neos06">Eliminate ambiguity. Enable people to see, understand, and act with confidence.</p>
-</td>
-</tr><tr>
-<td><p class="article--table_lab__roboto">Efficiency</p>
-<p class="text-center"><i class="fa fa-check-square fa-2x"></i></p>
-</td>
-<td>
-<p class="caption--p__opensans color-text__neos06">Streamline and optimize workflows. Intelligently anticipate needs to help people shop better, smarter, and faster.</p>
-</td>
-</tr><tr>
-<td><p class="article--table_lab__roboto">Consistency</p>
-<p class="text-center"><i class="fa fa-check-square-o fa-2x"></i></p>
-</td>
-<td>
-<p class="caption--p__opensans color-text__neos06">Create familiarity and strengthen intuition by applying the same solution to the same problem.</p>
-</td></tr>
-</tbody></table>
-			</div>
-			<div class="column small-12 medium-4 text-center">
-Praesent ac lectus eu felis feugiat dignissim eget eget elit. Nulla facilisi. Etiam in bibendum lorem. Curabitur sed sodales leo. Phasellus vitae molestie magna. Suspendisse consequat eget massa sed fermentum. Morbi laoreet diam elementum, vehicula tellus eget, malesuada mauris. Fusce laoreet erat a pharetra varius. Vestibulum maximus in risus et bibendum. Aliquam viverra pulvinar risus non maximus. Vivamus non iaculis tellus, rhoncus tempor velit. Duis odio massa, pretium nec lacus a, ullamcorper maximus est.
-			</div>
-		</section>
-
-		<section class="row"><div class="column small-12"><hr></div></section>
 
 		<section class="row">
-			<nav class="column small-12 text-center">
-Praesent ac lectus eu felis feugiat dignissim eget eget elit. Nulla facilisi. Etiam in bibendum lorem. Curabitur sed sodales leo. Phasellus vitae molestie magna. Suspendisse consequat eget massa sed fermentum. Morbi laoreet diam elementum, vehicula tellus eget, malesuada mauris. Fusce laoreet erat a pharetra varius. Vestibulum maximus in risus et bibendum. Aliquam viverra pulvinar risus non maximus. Vivamus non iaculis tellus, rhoncus tempor velit. Duis odio massa, pretium nec lacus a, ullamcorper maximus est.
+			<nav class="column small-12 text-left">
+				<h2 class="caption--p__roboto">Order Confirmation</h2>
+				<h4 class="caption--p__roboto">Authenticated user</h4>
+				<p class="caption--p__opensans">
+This "above the fold" design utilizes the Collapsable Content Card pattern (CCC).  The cards are mutually exclusive, meaning that each card can be open or closed individually, but opening one card will close any other open card.  The cards are asynchronous.  When it is submitted it will temporarily display a spinner and a message (toast) but the page will not refresh.  The card will disappear after it has been submitted then the next card in the sequence will be opened.  The current thinking is that the user’s participation in <span class="round default label">Installment Payments</span> will have no effect on the post checkout experience.
+				</p>
 			</nav>
+			<div class="column small-12 medium-10">
+				<table>
+					<tr>
+						<td>
+							<p>
+Subscribed to email
+<hr>
+<aside>
+	<div class="switch" sytle="margin: 0 auto;">
+	  <input id="js-option-1" class="js-option" type="checkbox">
+	  <label for="js-option-1"></label>
+	</div>
+</aside>
+							</p>
+						</td>
+						<td>
+							<p>
+Subscribed to SMS
+<hr>
+<aside>
+	<div class="switch" sytle="margin: 0 auto;">
+	  <input id="js-option-2" class="js-option" type="checkbox">
+	  <label for="js-option-2"></label>
+	</div>
+</aside>
+							</p>
+						</td>
+						<td>
+							<p>
+Activated Express Checkout
+<hr>
+<aside>
+	<div class="switch" sytle="margin: 0 auto;">
+	  <input id="js-option-3" class="js-option" type="checkbox">
+	  <label for="js-option-3"></label>
+	</div>
+</aside>
+							</p>
+						</td>
+						<td>
+							<p>
+Payment Saved
+<hr>
+<aside>
+	<div class="switch" sytle="margin: 0 auto;">
+	  <input id="js-option-4" class="js-option" type="checkbox">
+	  <label for="js-option-4"></label>
+	</div>
+</aside>
+							</p>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div class="column small-16 medium-2">
+				<a href="ltdc_sms_mockup/order_conf_auth.htm"
+				data-href="ltdc_sms_mockup/order_conf_auth.htm" target="_blank" class="js-launch-1 js-launch button expand">Launch</a>
+			</div>
+		</section>
+		<section class="row">
+			<div class="column small-12">
+				<h6 class="caption--p__opensans">Projects: <span class="round alert label">SMS</span>&nbsp; <span class="round success label">Express Checkout</span>&nbsp; <span class="round default label">Installment Payments</span></h6>
+			</div>
 		</section>
 
-
-
+		<section class="row"><div class="column small-12"><hr></div></section>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/js/foundation/foundation.min.js" async></script>
+<script>
+	$( document ).ready( function(){
+		$(".js-option").on("change", function( e ){
+			var sHref = "?";
+			if( $("#js-option-1").prop("checked") ) sHref = sHref + "opt1&"; 
+			if( $("#js-option-2").prop("checked") ) sHref = sHref + "opt2&"; 
+			if( $("#js-option-3").prop("checked") ) sHref = sHref + "opt3&"; 
+			if( $("#js-option-4").prop("checked") ) sHref = sHref + "opt4&"; 
+			sHref = $(".js-launch-1").attr("data-href") + sHref;
+			$(".js-launch-1").attr("href", sHref );
+		} );
+	} );
+</script>
 </body>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/js/foundation/foundation.min.js" async></script>
 
 	<style>
 table {width: 100%;}
