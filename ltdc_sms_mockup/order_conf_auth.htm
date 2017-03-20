@@ -67,10 +67,10 @@ $( document ).ready(function(){
 		$("#ccc-3").click();
 	}
 	if( window.location.search.indexOf("opt3") !== -1 ){
-		$("#ccc-3").parent().addClass("hidden");
+		$("#ccc-3, #ccc-4, #ccc-5").parent().addClass("hidden");
 	}
 	if( window.location.search.indexOf("opt4") !== -1 ){
-		$("#ccc-4").parent().addClass("hidden");
+		$("#ccc-3, #ccc-5").parent().addClass("hidden");
 	}
 });
 
@@ -836,7 +836,7 @@ function activateNextCard( CardCurrentNo, CardNextNo ){ // Close current card th
 
 
 						<div class="column small-10 medium-5">    <!--  Right Column | Express Checkout  -->
-
+<section>
                             <nav id="ccc-3" class="js-ccc-mutex ccc-panel radius text-center ccc-quest">
                             	<p>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 882.16 617.71" style="width: 34px; height: 34px;">
@@ -858,7 +858,7 @@ function activateNextCard( CardCurrentNo, CardNextNo ){ // Close current card th
                             <aside class="ccc-panel__content panel hidden">
 <img src="http://www.lakeside.com/media/global/images/foundation/img/fpo/spinner_lsc.gif" class="spinner hidden" alt="Please Wait">
 	                            <section class="row">
-		                            <div class="column small-8 no-padding-left">
+		                            <div class="column small-6 no-padding-left">
 			                            <figure class="resp_half_height"></figure>
 			                            <div class="rd-only--div">
 			                            <p class="rd-only--p text-center"><i class="fa fa-credit-card fa-2x" aria-hidden="true" style="
@@ -867,7 +867,7 @@ function activateNextCard( CardCurrentNo, CardNextNo ){ // Close current card th
 "></i> XXXXXXXXXXXX1111</p>
 		                            </div>
 		                            </div>
-		                            <div class="column small-2 no-padding">
+		                            <div class="column small-4 no-padding">
 			                            <figure class="resp_full_height"></figure>
 			                            <a id="cmd-cc-save" class="cmd-subs--a button radius resp_btn_teal">Save</a>
 		                            </div>
@@ -875,13 +875,120 @@ function activateNextCard( CardCurrentNo, CardNextNo ){ // Close current card th
 	                            <figure class="resp_full_height"></figure>
 	                            <p>Checkout faster by securely saving your payment information.
 	                            </p>
+<figure class="js-i--figure i--figure">
+		<div class="circle">i</div>
+</figure>
+	                                <aside class="hidden">
+	                                    <p class="no-margin-bottom">To manage your stored payment methods visit <a class="resp_u">Your Account</a></p>
+	                                    <figure class="resp_qtr_height"></figure>
+	                                </aside>
                             </aside>
+</section>
+<section>
+                            <nav id="ccc-4" class="js-ccc-mutex ccc-panel radius text-center ccc-quest">
+                            	<p>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 882.16 617.71" style="width: 34px; height: 34px;">
+  <title>
+    Asset 1
+  </title>
+  <g data-name="Layer 2" id="Layer_2">
+    <g id="Livello_1" data-name="Livello 1">
+      <path class="cls-1" d="M274.13 455.49c-10.84 0-16.38-8.22-12.31-18.27l147.6-364a22.8 22.8 0 0 0-9.87-27.77l-11.15-6.17a19.77 19.77 0 0 1-7.77-26.77l1.27-2.3a19.77 19.77 0 0 1 26.78-7.77l43.91 24.15a22.8 22.8 0 0 1 9.87 27.77l-138.2 340.81c-4.08 10 1.46 18.27 12.31 18.27H677c10.84 0 23-8.22 27.12-18.27l137.62-339.3A19.77 19.77 0 0 1 867.42 45l2.43 1a19.77 19.77 0 0 1 10.86 25.68L732.5 437.22c-4.07 10-16.28 18.27-27.12 18.27z"></path>
+      <ellipse class="cls-1" cx="312.1" cy="544.86" rx="74.27" ry="58.56" transform="rotate(-71.45 312.083 544.857)"></ellipse>
+      <ellipse class="cls-1" cx="639.33" cy="544.86" rx="74.27" ry="58.56" transform="rotate(-71.45 639.315 544.856)"></ellipse>
+      <rect class="cls-1" x="402.62" y="304.37" width="254.29" height="45.34" rx="19.71" ry="19.71"></rect>
+      <rect class="cls-1" x="434.15" y="229.46" width="301.61" height="45.34" rx="19.71" ry="19.71"></rect>
+      <path class="cls-1" d="M273.36 349.75l10.41-25.68-156.41 12.34zM127.36 157l216.14 19.77 15.41-38zM304.2 273.71l21.69-53.5L0 245.92z"></path>
+    </g>
+  </g>
+</svg>&nbsp; Express Checkout<i class="ccc-panel--i">+</i></p>
+                            </nav>
+                            <aside class="ccc-panel__content panel hidden">
+<img src="http://www.lakeside.com/media/global/images/foundation/img/fpo/spinner_lsc.gif" class="spinner hidden" alt="Please Wait">
+	                            <section class="row">
+		                            <div class="column small-6 no-padding-left">
+			                            <figure class="resp_half_height"></figure>
+			                            <div class="rd-only--div">
+			                            <p class="rd-only--p text-center"><i class="fa fa-credit-card fa-2x" aria-hidden="true" style="
+    margin-left: 12px;
+    float: left;
+"></i> XXXXXXXXXXXX1111</p>
+		                            </div>
+		                            </div>
+		                            <div class="column small-4 no-padding">
+			                            <figure class="resp_full_height"></figure>
+			                            <a id="cmd-cc-save" class="cmd-subs--a button radius resp_btn_teal">Activate</a>
+		                            </div>
+	                            </section>
+	                            <figure class="resp_full_height"></figure>
+	                            <p>Checkout faster by securely saving your payment information.
+	                            </p>
+<figure class="js-i--figure i--figure">
+		<div class="circle">i</div>
+</figure>
+	                                <aside class="hidden">
+	                                    <p class="no-margin-bottom">To manage your stored payment methods visit <a class="resp_u">Your Account</a></p>
+	                                    <figure class="resp_qtr_height"></figure>
+	                                </aside>
+                            </aside>
+</section>
+<section>
+                            <nav id="ccc-5" class="js-ccc-mutex ccc-panel radius text-center ccc-quest">
+                            	<p>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 882.16 617.71" style="width: 34px; height: 34px;">
+  <title>
+    Asset 1
+  </title>
+  <g data-name="Layer 2" id="Layer_2">
+    <g id="Livello_1" data-name="Livello 1">
+      <path class="cls-1" d="M274.13 455.49c-10.84 0-16.38-8.22-12.31-18.27l147.6-364a22.8 22.8 0 0 0-9.87-27.77l-11.15-6.17a19.77 19.77 0 0 1-7.77-26.77l1.27-2.3a19.77 19.77 0 0 1 26.78-7.77l43.91 24.15a22.8 22.8 0 0 1 9.87 27.77l-138.2 340.81c-4.08 10 1.46 18.27 12.31 18.27H677c10.84 0 23-8.22 27.12-18.27l137.62-339.3A19.77 19.77 0 0 1 867.42 45l2.43 1a19.77 19.77 0 0 1 10.86 25.68L732.5 437.22c-4.07 10-16.28 18.27-27.12 18.27z"></path>
+      <ellipse class="cls-1" cx="312.1" cy="544.86" rx="74.27" ry="58.56" transform="rotate(-71.45 312.083 544.857)"></ellipse>
+      <ellipse class="cls-1" cx="639.33" cy="544.86" rx="74.27" ry="58.56" transform="rotate(-71.45 639.315 544.856)"></ellipse>
+      <rect class="cls-1" x="402.62" y="304.37" width="254.29" height="45.34" rx="19.71" ry="19.71"></rect>
+      <rect class="cls-1" x="434.15" y="229.46" width="301.61" height="45.34" rx="19.71" ry="19.71"></rect>
+      <path class="cls-1" d="M273.36 349.75l10.41-25.68-156.41 12.34zM127.36 157l216.14 19.77 15.41-38zM304.2 273.71l21.69-53.5L0 245.92z"></path>
+    </g>
+  </g>
+</svg>&nbsp; Express Checkout<i class="ccc-panel--i">+</i></p>
+                            </nav>
+                            <aside class="ccc-panel__content panel hidden">
+<img src="http://www.lakeside.com/media/global/images/foundation/img/fpo/spinner_lsc.gif" class="spinner hidden" alt="Please Wait">
+	                            <section class="row">
+		                            <div class="column small-6 no-padding-left">
+			                            <figure class="resp_half_height"></figure>
+			                            <div class="rd-only--div">
+			                            <p class="rd-only--p text-center"><i class="fa fa-credit-card fa-2x" aria-hidden="true" style="
+    margin-left: 12px;
+    float: left;
+"></i> XXXXXXXXXXXX1111</p>
+		                            </div>
+		                            </div>
+		                            <div class="column small-4 no-padding">
+			                            <figure class="resp_full_height"></figure>
+			                            <a id="cmd-cc-save" class="cmd-subs--a button radius resp_btn_teal">Save / Activate</a>
+		                            </div>
+	                            </section>
+	                            <figure class="resp_full_height"></figure>
+	                            <p>Checkout faster by securely saving your payment information.
+	                            </p>
+<figure class="js-i--figure i--figure">
+		<div class="circle">i</div>
+</figure>
+	                                <aside class="hidden">
+	                                    <p class="no-margin-bottom">To manage your stored payment methods visit <a class="resp_u">Your Account</a></p>
+	                                    <figure class="resp_qtr_height"></figure>
+	                                </aside>
+                            </aside>
+</section>
+
+
+
+
+
 
 						</div>
-                    </section><!-- collapsible panels begin -->
 
-
-
+                    </section><!-- collapsible panels end -->
 
 
 					<div class="small-10 no-padding-left no-padding-right align-center columns">
