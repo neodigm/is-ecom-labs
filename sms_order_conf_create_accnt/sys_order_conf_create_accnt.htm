@@ -79,19 +79,126 @@ var monetateT = new Date().getTime();
 			<section role="main">
 			
 
+<script>
+/**    Mockup JS    **/
+
+$( document ).ready(function(){
+	docEventReady();
+});
+
+function docEventReady(){
+	'use strict';
+	$(document).foundation();
+	$("#subscribeSMS").inputmask();
+
+	$(".js-i--figure").on("click", function( e ){ // icon click hide / show
+		$( this ).next().toggleClass("hidden");
+	});
+	$(".js-ccc-mutex").on("click", function( e ){  //  Collapsible Content Card | Mutually Exclusive
+		if( !$( this ).hasClass("ccc-panel__active") ){
+			$(".ccc-panel__active").click();
+		}
+		cccTap( this );
+	});
+	$(".js-ccc").on("click", function( e ){  //  Collapsible Content Card | Not Mutually Exclusive
+		cccTap( this );
+	});
+	function cccTap( elCard ){ // Card element action
+		$( elCard ).toggleClass("ccc-panel__active").next().toggleClass("hidden");
+		$( elCard ).find("i").text(( $( elCard ).hasClass("ccc-panel__active") )?"-":"+");
+	}
+	$("#cmd-email-subscribe").on("click", function( e ) {
+		var nCard = 1;
+		if( !$( this ).is(".cmd_disabled, .cmd_locked") ){
+			var data = {message: "Check your inbox for your exclusive discounts and start shopping TODAY!", timeout: 3400};
+			$("#gmdl-toast")[0].MaterialSnackbar.showSnackbar(data);
+			waitingCard( nCard );
+			setTimeout(function(){
+				activateNextCard( nCard, 2 ); // swap cards
+			}, 3500);
+		}
+	});
+	$(".js-chkb--input__nothanks").on("click", function( e ){
+		var nCard = 1;
+		if( !$( this ).is(".cmd_disabled, .cmd_locked") ){
+			var data = {message: "We will no longer ask you to subscribe to email offers.", timeout: 2400};
+			$("#gmdl-toast")[0].MaterialSnackbar.showSnackbar(data);
+			setTimeout(function(){
+				activateNextCard( nCard, 2 ); // swap cards
+			}, 1800);
+		}
+	});
+	$("#cmd-sms-subscribe").on("click", function( e ) {
+		// not disabled or locked
+		var nCard = 2;
+		if( !$( this ).is(".cmd_disabled, .cmd_locked") ){
+			var data = {message: "Please respond to the text message sent to your phone.", timeout: 3400};
+			$("#gmdl-toast")[0].MaterialSnackbar.showSnackbar(data);
+			waitingCard( nCard );
+			setTimeout(function(){
+				activateNextCard( nCard, 3 ); // swap cards
+			}, 3500);
+		}
+	});
+	$("#cmd-cc-save").on("click", function( e ) {
+		var nCard = 3;
+		//if( IsSmall() ){
+			var data = {message: "Payment information saved.", timeout: 3400};
+			$("#gmdl-toast")[0].MaterialSnackbar.showSnackbar(data);
+			waitingCard( nCard );
+			setTimeout(function(){
+				activateNextCard( nCard, 0 ); // swap cards
+			}, 3500);
+		//}
+	});	
+} // docEventReady End
+
+function waitingCard( CardCurrentNo ){  //  Mockup of card in waiting state
+		$("#ccc-" + CardCurrentNo ).find("p").text("Thank You!");
+		$("#ccc-" + CardCurrentNo ).next().addClass("state_sec__blur");
+		$("#ccc-" + CardCurrentNo ).next().find(".spinner").toggleClass("hidden");
+		$("#ccc-" + CardCurrentNo ).next().find(".cmd-subs--a").addClass("cmd_locked");
+}
+
+function activateNextCard( CardCurrentNo, CardNextNo ){ // Close current card then conditionally open the next
+	var $nextCard = $("#ccc-" + CardNextNo);
+	if( ($nextCard.length > 0) && !$nextCard.hasClass("ccc-panel__active") ){ $nextCard.click(); }
+	$("#ccc-" + CardCurrentNo ).parent().remove();
+}
+</script>
+
+
 <style>
+/**    Passive Validation | Asynchrony    **/
+.spinner {
+    position: absolute; z-index: 256; margin-left: 33%; margin-top: 34%;
+}
+.state_sec__blur{
+-webkit-filter: opacity(0.3);
+}
+.cmd_disabled, .cmd_locked {
+	background-color: #bbb !important;
+	cursor: default !important;			
+}
+
+/**    Switch Toggle | ZF5 red green    **/
 .switch-on {position: absolute; left: -50px; top: 8px; color: #fff; font-weight: bold; font-size: 10px;}
 .switch-off {position: absolute; left: -22px; top: 8px; color: #fff; font-weight: bold; font-size: 10px;}
 .switch {margin-bottom: .5rem;}
 .switch label {margin-top:0; background-color:#c0392b;}
 .switch input:checked+label {background: #4FB466;}
 
-.cmd_disabled, .cmd_locked {
-background-color: #bbb !important;
-cursor: default !important;			
-}
+/*    Collapsible Content Card Begin   */
+.brand_ltd .brand--ltd__show { display:inline }
+.brand_lsc .brand--lsc__show { display:inline }
+.brand_ltd .brand--ltd__showb { display:block }
+.brand_lsc .brand--lsc__showb { display:block }
+.brand_ltd .brand--lsc__show { display:none }
+.brand_lsc .brand--ltd__show { display:none }
+.brand_ltd .brand--lsc__showb { display:none }
+.brand_lsc .brand--ltd__showb { display:none }
 
-.ccp-panel {
+.ccc-panel {
 	border-style: solid;
 	border-width: 1px;
 	border-color: #BBB;
@@ -102,7 +209,7 @@ cursor: default !important;
 	border-radius: 3px;
 }
 
-.ccp-panel--i {
+.ccc-panel--i {
 	position: absolute;
 	float: right;
 	top: 2px;
@@ -111,11 +218,11 @@ cursor: default !important;
 	font-size: 22px;
 }
 
-.ccp-panel__content{
+.ccc-panel__content{
 	background-color: #FFF;
 }
 
-.ccp-quest {
+.ccc-quest {
 	position: relative;
 	overflow: hidden;
 	min-height: 62px;
@@ -128,73 +235,64 @@ cursor: default !important;
 	transition: background-color .6s;
 }
 
-.ccp-quest p {
+.ccc-quest p {
 	color: #000; font-size: 18px !important; font-weight: 300; font-family: 'Roboto', sans-serif;
 	margin-bottom: 0;
 }
 
-.ccp-quest:hover {
+.ccc-quest:hover {
 	background-color: #2aa6ca;
 }
-.ccp-quest:hover .ccp-panel--i {
+.ccc-quest:hover .ccc-panel--i {
 	color: #FFF;
 }
-.ccp-quest:active {
+.ccc-quest:active {
 	background-color: #297FB8;
 }
 
-.ccp-quest svg {
+.ccc-quest svg {
 	fill: #2aa6ca;
 }
-.ccp-quest:hover svg, .ccp-panel__active svg {
+.ccc-quest:hover svg, .ccc-panel__active svg {
 	fill: #FFF !important;
 }
 
-.ccp-panel__active {
+.ccc-panel__active {
 	background: #297FB8;
 	margin-bottom: -4px;
 }
 
-.ccp-quest__linebreak {
+.ccc-quest__linebreak {
 	padding: 8px 12px 12px 18px;
 }
 
-.ccp-quest:hover p, .ccp-panel__active p {
+.ccc-quest:hover p, .ccc-panel__active p {
 	color: #FFF;
 }
 
-.brand_lsc .ccp-quest svg {
+.brand_lsc .ccc-quest svg {
 	fill: #632434;
 }
 
-.brand_lsc .ccp-panel {
+.brand_lsc .ccc-panel {
 	background: #FFFBFF;
 }
 
-.brand_lsc .ccp-quest {
+.brand_lsc .ccc-quest {
 	background: #FFFAFF;
 }
 
-.brand_lsc .ccp-quest:hover {
+.brand_lsc .ccc-quest:hover {
 	background-color: #9c4a62;
 }
 
-.brand_lsc .ccp-panel__active {
+.brand_lsc .ccc-panel__active {
 	background: #632434;
 	box-shadow: 0 4px 8px rgba(3,3,3,0.16);
 }
+/*    Collapsible Content Card End   */
 
-
-
-
-
-
-.spinner {
-    position: absolute; z-index: 256; margin-left: 33%; margin-top: 34%;
-}
-.state_sec__blur{
--webkit-filter: opacity(0.3);
-}
+/**    Order Confirmation Cards    **/
 .orderConfirm .circle {
 	width: 20px;
 	height: 20px;
@@ -220,44 +318,13 @@ cursor: default !important;
 .orderConfirm .chkb--div .chkb--input {margin-left: -18px !important;}
 .orderConfirm .chkb--p {padding-left: 0;margin-left: -14px;}
 
-.brand_ltd .brand--ltd__show { display:inline }
-.brand_lsc .brand--lsc__show { display:inline }
-.brand_ltd .brand--ltd__showb { display:block }
-.brand_lsc .brand--lsc__showb { display:block }
-.brand_ltd .brand--lsc__show { display:none }
-.brand_lsc .brand--ltd__show { display:none }
-.brand_ltd .brand--lsc__showb { display:none }
-.brand_lsc .brand--ltd__showb { display:none }
-
-@media only screen and (max-width: 47.9375em) {
-	/* small */
+@media only screen and (max-width: 47.9375em) {  /* small */
 	.orderConfirm .resp_btn_teal { font-size: 11px !important;}
 }
-@media only screen and (min-width:48em) and (max-width:61.25em){
-	/* medium */
+@media only screen and (min-width:48em) and (max-width:61.25em){  /* medium */
 	.orderConfirm .resp_btn_teal { font-size: 12px !important;}
 }
 </style>
-
-
-<script>
-$(document).ready(function() {
-	$(document).foundation();
-
-	$(".js-ccp").on("click", function( e ){  //  Collapsible Content Pattern
-		$( this ).toggleClass("ccp-panel__active").next().toggleClass("hidden");
-		/*
-		var $answ = $( this ).toggleClass("ccp-panel__active").next();
-		if( $( this ).hasClass("ccp-panel__active") ){
-			$answ.fadeIn(300);
-		}else{
-			$answ.fadeOut(200);
-		}
-		*/
-		$( this ).find("i").text(( $( this ).hasClass("ccp-panel__active") )?"-":"+");
-	});
-});</script>
-
 
 
 
@@ -751,10 +818,10 @@ function noThanks(isPayer) {
 
 <div class="orderConfirm">
 
-<nav id="ccp-2" class="js-ccp ccp-panel radius text-center ccp-quest">
-	<p>Text me when my order ships<i class="ccp-panel--i">+</i></p>
+<nav id="ccc-2" class="js-ccc ccc-panel radius text-center ccc-quest">
+	<p>Text me when my order ships<i class="ccc-panel--i">+</i></p>
 </nav>
-<aside class="ccp-panel__content panel hidden">
+<aside class="ccc-panel__content panel hidden">
 	<section class="row">
 		<div class="column small-10 no-padding">
 			<figure class="resp_full_height"></figure>
@@ -786,7 +853,7 @@ function noThanks(isPayer) {
 	</aside>
 </aside>
 
-<nav id="ccp-3" class="js-ccp ccp-panel radius text-center ccp-quest">
+<nav id="ccc-3" class="js-ccc ccc-panel radius text-center ccc-quest">
 	<p>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 882.16 617.71" style="width: 34px; height: 34px;">
 <title>
@@ -802,9 +869,9 @@ Asset 1
 <path class="cls-1" d="M273.36 349.75l10.41-25.68-156.41 12.34zM127.36 157l216.14 19.77 15.41-38zM304.2 273.71l21.69-53.5L0 245.92z"></path>
 </g>
 </g>
-</svg>&nbsp; Express Checkout<i class="ccp-panel--i">+</i></p>
+</svg>&nbsp; Express Checkout<i class="ccc-panel--i">+</i></p>
 </nav>
-<aside class="ccp-panel__content panel hidden">
+<aside class="ccc-panel__content panel hidden">
 <img src="http://www.lakeside.com/media/global/images/foundation/img/fpo/spinner_lsc.gif" class="spinner hidden" alt="Please Wait">
     <section class="row">
         <div class="column small-8 no-padding-left">
