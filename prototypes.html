@@ -22,7 +22,7 @@ UX | Mockup and Interactive Prototype
 
 		<section class="row">
 			<nav class="column small-12 text-left">
-				
+
 				<section class="row">
 					<div class="column small-12 medium-6">
 <h1 class="caption--h1__roboto">Order Confirmation</h1>
@@ -34,7 +34,7 @@ UX | Mockup and Interactive Prototype
 <h4 class="caption--p__roboto">Authenticated user</h4>
 
 				<p class="caption--p__opensans">
-This "above the fold" design utilizes the Collapsable Content Card pattern (CCC).  The cards are mutually exclusive, meaning that each card can be open or closed individually, but opening one card will close any other open card.  The cards are asynchronous.  When it is submitted it will temporarily display a spinner and a message (toast) but the page will not refresh.  The card will disappear after it has been submitted then the next card in the sequence will be opened.  The current thinking is that the user’s participation in <span class="round default label">Installment Payments</span> will have no effect on the post checkout experience.
+This "above the fold" design utilizes the Collapsable Content Card pattern (CCC).  The cards are mutually exclusive, meaning that each card can be open or closed individually, but opening one card will close any other open card.  The first card will initially be open.  The cards are asynchronous.  When it is submitted it will temporarily display a spinner and a message (toast) but the page will not refresh.  The card will disappear after it has been submitted then the next card in the sequence will be opened.  The current thinking is that the user’s participation in <span class="round default label">Installment Payments</span> will have no effect on the post checkout experience.
 				</p>
 			</nav>
 			<div class="column small-12 medium-10">
@@ -66,7 +66,7 @@ Subscribed to <span class="round alert label">SMS</span>
 						</td>
 						<td>
 							<p>
-Activated <span class="round success label">Express Checkout</span>
+Activate <span class="round success label">Express Checkout</span>
 <hr>
 <aside>
 	<div class="switch" sytle="margin: 0 auto;">
@@ -101,87 +101,36 @@ Payment Saved <span class="round success label">Express Checkout</span>
 
 		<section class="row">
 			<nav class="column small-12 text-left">
-				
+
 <h4 class="caption--p__roboto">Non-authenticated user</h4>
 
 				<p class="caption--p__opensans">
-This "above the fold" design utilizes the Collapsable Content Card pattern (CCC).  The cards are mutually exclusive, meaning that each card can be open or closed individually, but opening one card will close any other open card.  The cards are asynchronous.  When it is submitted it will temporarily display a spinner and a message (toast) but the page will not refresh.  The card will disappear after it has been submitted then the next card in the sequence will be opened.  The current thinking is that the user’s participation in <span class="round default label">Installment Payments</span> will have no effect on the post checkout experience.
+This "above the fold" design utilizes the Collapsable Content Card pattern (CCC).  A card may have a small “I” icon in the lower right corner.  This icon will toggle / expand the card if additional secondary actions or messaging exist.
 				</p>
 			</nav>
 			<div class="column small-12 medium-10">
-				<table>
-					<tr>
-						<td>
-							<p>
-Subscribed to email
-<hr>
-<aside>
-	<div class="switch" sytle="margin: 0 auto;">
-	  <input id="js-option-nonauth-1" class="js-option-nonauth" type="checkbox">
-	  <label for="js-option-nonauth-1"></label>
-	</div>
-</aside>
-							</p>
-						</td>
-						<td>
-							<p>
-Subscribed to <span class="round alert label">SMS</span>
-<hr>
-<aside>
-	<div class="switch" sytle="margin: 0 auto;">
-	  <input id="js-option-nonauth-2" class="js-option-nonauth" type="checkbox">
-	  <label for="js-option-nonauth-2"></label>
-	</div>
-</aside>
-							</p>
-						</td>
-						<td>
-							<p>
-Activated <span class="round success label">Express Checkout</span>
-<hr>
-<aside>
-	<div class="switch" sytle="margin: 0 auto;">
-	  <input id="js-option-nonauth-3" class="js-option-nonauth" type="checkbox">
-	  <label for="js-option-nonauth-3"></label>
-	</div>
-</aside>
-							</p>
-						</td>
-						<td>
-							<p>
-Payment Saved <span class="round success label">Express Checkout</span>
-<hr>
-<aside>
-	<div class="switch" sytle="margin: 0 auto;">
-	  <input id="js-option-nonauth-4" class="js-option-nonauth" type="checkbox">
-	  <label for="js-option-nonauth-4"></label>
-	</div>
-</aside>
-							</p>
-						</td>
-					</tr>
-				</table>
+<br>
 			</div>
 			<div class="column small-16 medium-2">
 				<a href="sms_order_conf_create_accnt/sys_order_conf_create_accnt.htm"
-				data-href="sms_order_conf_create_accnt/sys_order_conf_create_accnt.htm" target="_blank" class="js-launch-1 js-launch button expand">Launch</a>
+				data-href="sms_order_conf_create_accnt/sys_order_conf_create_accnt.htm" target="_blank" class="js-launch-2 js-launch button expand">Launch</a>
 			</div>
 		</section>
 
 
 
 
-		
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/js/foundation/foundation.min.js" async></script>
 <script>
 	$( document ).ready( function(){
 		$(".js-option").on("change", function( e ){
 			var sHref = "?";
-			if( $("#js-option-1").prop("checked") ) sHref = sHref + "opt1&"; 
-			if( $("#js-option-2").prop("checked") ) sHref = sHref + "opt2&"; 
-			if( $("#js-option-3").prop("checked") ) sHref = sHref + "opt3&"; 
-			if( $("#js-option-4").prop("checked") ) sHref = sHref + "opt4&"; 
+			if( $("#js-option-1").prop("checked") ) sHref = sHref + "opt1&";
+			if( $("#js-option-2").prop("checked") ) sHref = sHref + "opt2&";
+			if( $("#js-option-3").prop("checked") ) sHref = sHref + "opt3&";
+			if( $("#js-option-4").prop("checked") ) sHref = sHref + "opt4&";
 			sHref = $(".js-launch-1").attr("data-href") + sHref;
 			$(".js-launch-1").attr("href", sHref );
 		} );

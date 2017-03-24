@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <!-- saved from url=(0053)https://stage2.lakeside.com/checkout/order_commit.jsp -->
 <html class="">
-			
-	<title>Order Confirmation&nbsp;|&nbsp;Lakeside</title>	
+
+	<title>Order Confirmation&nbsp;|&nbsp;Lakeside</title>
 
 
-			<meta name="robots" content="index, follow"> 	
-		
+			<meta name="robots" content="index, follow">
+
 <!-- Site_OK -->
 
 			<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,7 +17,7 @@
 <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel='stylesheet' type='text/css'>
 <script type="text/javascript" async="" src="./order_conf_auth_files/min.google_mdl.js.download"></script>
 <link href="./order_conf_auth_files/min.google_mdl.css" rel="stylesheet" media="screen,print">
-			
+
 			<script type="text/javascript" async="" src="./order_conf_auth_files/bv-analytics.js.download"></script><script type="text/javascript" async="" src="./order_conf_auth_files/ecommerce.js.download"></script><script async="" id="tealium-tag-7110" src="./order_conf_auth_files/analytics.js.download"></script><script type="text/javascript" async="" charset="utf-8" src="./order_conf_auth_files/collect.js.download" id="utag_52"></script><script src="./order_conf_auth_files/utag.js.download" type="text/javascript" async=""></script><script type="text/javascript" src="./order_conf_auth_files/custom.js.download" charset="utf-8" async=""></script><script type="text/javascript">
 
 </script><script type="text/javascript" src="./order_conf_auth_files/entry.js.download"></script>
@@ -41,7 +41,7 @@
 		<link rel="shortcut icon" href="https://stage2.lakeside.com/images/lsc-favicon.ico">
 		<meta name="msapplication-config" content="/images/lsc-browserconfig.xml">
 		<meta name="theme-color" content="#7e2d3e">
-	
+
 
 <!-- LTD Responsive Styles -->
 <link href="./order_conf_auth_files/global.ltd.css" rel="stylesheet" media="screen,print">
@@ -51,7 +51,7 @@
 
 		<!-- LS Responsive Styles/Overrides -->
 		<link href="./order_conf_auth_files/global.lsc.css" rel="stylesheet" media="screen,print">
-	
+
 
 <script>
 /**    Mockup JS    **/
@@ -65,11 +65,14 @@ $( document ).ready(function(){
 	if( window.location.search.indexOf("opt2") !== -1 ){
 		sClose += "ccc-2,";
 	}
-	if( window.location.search.indexOf("opt3") !== -1 ){
+	if( (window.location.search.indexOf("opt3") !== -1) && (window.location.search.indexOf("opt4") !== -1) ){
 		sClose += "ccc-3,ccc-4,ccc-5,";
-	}
-	if( window.location.search.indexOf("opt4") !== -1 ){
+	} else if ( window.location.search.indexOf("opt3") !== -1 ) {
+		sClose += "ccc-3,ccc-4,ccc-5,";
+	} else if ( window.location.search.indexOf("opt4") !== -1 ) {
 		sClose += "ccc-3,ccc-5,";
+	} else {
+		sClose += "ccc-3,ccc-4,";
 	}
 
 	$(".js-ccc-parent").each(function(){
@@ -148,7 +151,7 @@ function docEventReady(){
 				activateNextCard( nCard, 0 ); // swap cards
 			}, 3500);
 		//}
-	});	
+	});
 } // docEventReady End
 
 function waitingCard( CardCurrentNo ){  //  Mockup of card in waiting state
@@ -176,7 +179,7 @@ function activateNextCard( CardCurrentNo, CardNextNo ){ // Close current card th
 }
 .cmd_disabled, .cmd_locked {
 	background-color: #bbb !important;
-	cursor: default !important;			
+	cursor: default !important;
 }
 
 /**    Switch Toggle | ZF5 red green    **/
@@ -331,12 +334,12 @@ function activateNextCard( CardCurrentNo, CardNextNo ){ // Close current card th
 			<span id="smallTest" class="show-for-small"></span>
 			<span id="mediumTest" class="show-for-medium"></span>
 			<span id="largeTest" class="show-for-large-up"></span>
-			
+
 			<a href="https://stage2.lakeside.com/checkout/order_commit.jsp#" class="exit-off-canvas" style="height: 1527px; width: 1663px;"></a>
-			
+
 			<section role="main">
-			
-				
+
+
 
 <script type="text/javascript">
 
@@ -450,13 +453,13 @@ function activateNextCard( CardCurrentNo, CardNextNo ){ // Close current card th
 	<!-- Server ID: test1d -->
 	<meta name="format-detection" content="telephone=no">
 	<meta name="msapplication-config" content="none">
-	
+
 	<!-- responsive header -->	<header>
 
-		
+
 		<div class="row utility-nav">
 			<div class="small-7 medium-4 large-5 columns no-padding-right">
-				
+
 				<div class="navigation-button hide-for-large-up">
 					<a href="https://stage2.lakeside.com/checkout/order_commit.jsp#sidebar" id="sidebarButton">
 						<button class="right radius hide-for-print">
@@ -468,15 +471,15 @@ function activateNextCard( CardCurrentNo, CardNextNo ){ // Close current card th
 					</a>
 				</div>
 				<a id="branding" title="Lakeside Collections Home" class="logo" href="https://stage2.lakeside.com/homels"></a>
-	</div>	
-					<noscript>&lt;div id="javascriptwarning"&gt;&lt;img alt="Javascript Warning" src="/media/ltd/images/header/javascript.jpg"&gt;&lt;/img&gt;&lt;/div&gt;</noscript>	
+	</div>
+					<noscript>&lt;div id="javascriptwarning"&gt;&lt;img alt="Javascript Warning" src="/media/ltd/images/header/javascript.jpg"&gt;&lt;/img&gt;&lt;/div&gt;</noscript>
 
 			<div class="small-3 columns show-for-small no-padding-left">
 				<ul class="right">
 					<li class="search-button">
 						<a href="https://stage2.lakeside.com/checkout/order_commit.jsp#">
 							<button class="right radius" data-toggle="collapse" data-target="#search-bar">
-								
+
 							</button>
 						</a>
 					</li>
@@ -498,7 +501,7 @@ function activateNextCard( CardCurrentNo, CardNextNo ){ // Close current card th
 							<input name="/atg/commerce/endeca/QueryFormHandler.search" value="Go" type="hidden"><input name="_D:/atg/commerce/endeca/QueryFormHandler.search" value=" " type="hidden">
 										<button class="radius right expand goButton">	<span>Go</span></button>
 										<button id="quickSearch-for-small-submit" type="submit"></button>
-									
+
 	</div>	<input name="_DARGS" value="/common/includes/inc_header_responsive.jsp.basicSearch" type="hidden"></form>
 				</div>
 			</div>
@@ -507,11 +510,11 @@ function activateNextCard( CardCurrentNo, CardNextNo ){ // Close current card th
 					<button class="right radius cart-button" data-wsid="ws-cart">
 						<img src="./order_conf_auth_files/cart.png" alt="Cart">Cart<span class="round label">0</span>	</button>	</a>
 				<ul class="hide-for-small">
-					
+
 	<li>Hello, Scott. <br> (<a href="javascript:document.getElementById(&#39;logoutTextLinkButton&#39;).click()" data-wsid="ws-logout">Not Scott?</a>)	<form name="siteLogout" action="https://stage2.lakeside.com/my_account/index.jsp?_DARGS=/common/includes/inc_header_responsive.jsp.headerSiteLogout" method="post"><input name="_dyncharset" value="ISO-8859-1" type="hidden"><input name="_dynSessConf" value="-6829799909585280338" type="hidden"><input name="/atg/userprofiling/ProfileFormHandler.logoutSuccessURL" value="/my_account/index.jsp?siteId=LS" type="hidden"><input name="_D:/atg/userprofiling/ProfileFormHandler.logoutSuccessURL" value=" " type="hidden"><input id="logoutTextLinkButton hidden" name="/atg/userprofiling/ProfileFormHandler.logout" type="submit"><input name="_D:/atg/userprofiling/ProfileFormHandler.logout" value=" " type="hidden"><input name="_DARGS" value="/common/includes/inc_header_responsive.jsp.headerSiteLogout" type="hidden"></form>
-	</li><li>Request A<br><a data-wsid="ws-catalogrequest" href="https://stage2.lakeside.com/catalog_request/index.jsp">FREE Catalog</a></li>	
+	</li><li>Request A<br><a data-wsid="ws-catalogrequest" href="https://stage2.lakeside.com/catalog_request/index.jsp">FREE Catalog</a></li>
 					<li>Sign Up For<br><a data-reveal-id="emailSignUp" href="https://stage2.lakeside.com/checkout/order_commit.jsp#" data-wsid="ws-emailsignup">Email Offers</a></li>
-					
+
 
 <script type="text/javascript">
 	$(document).ready(function() {
@@ -541,10 +544,10 @@ function activateNextCard( CardCurrentNo, CardNextNo ){ // Close current card th
 							$("#emailSubscribeAddressModal").add().css("color","#990000");
 							$("#emailSubscribeAddressModal").val(' Please Enter a Valid Email');
 
-							if( IsSmall() ){ 
+							if( IsSmall() ){
 								//document.getElementById('emailSignUp').scrollIntoView();
 								$('html, body').animate({ scrollTop: ($('#emailSignUp').focus().offset().top-56) },400);
-							}  
+							}
 							return false;
 					}
 				}
@@ -638,7 +641,7 @@ function activateNextCard( CardCurrentNo, CardNextNo ){ // Close current card th
 			We already have you on our List.
 		</div>
 		<div class="small-10 columns thankYouMsg">
-			Thank you for confirming your subscription! 
+			Thank you for confirming your subscription!
 
 		</div>
 		<div class="small-10 medium-4 medium-offset-3 columns">
@@ -672,7 +675,7 @@ function activateNextCard( CardCurrentNo, CardNextNo ){ // Close current card th
     <a class="close-reveal-modal"></a>
 </div>
 
-	</ul>	</div>	</div>	
+	</ul>	</div>	</div>
 		<div id="showFlyOut"></div>
 		<div id="auxQuickCartPopup">
 			<div id="quickCartPopup" class="displayNone"></div>
@@ -691,20 +694,20 @@ function activateNextCard( CardCurrentNo, CardNextNo ){ // Close current card th
 								<input name="/atg/commerce/endeca/QueryFormHandler.search" value="Go" type="hidden"><input name="_D:/atg/commerce/endeca/QueryFormHandler.search" value=" " type="hidden">
 											<button class="radius right goButton" data-wsid="ws-go">	<span>Go</span></button>
 											<button id="quickSearch-submit" type="submit"></button>
-										
-	</div>	</div>	<input name="_DARGS" value="/common/includes/inc_header_responsive.jsp.basicSearch" type="hidden"></form>
-	</li>	
 
-						<li class="medium-1 large-1 columns" data-wsid="ws-quickorderEF"><a data-wsid="ws-quickorder" href="https://stage2.lakeside.com/catalog/catalog_quick_order.jsp">Quick<br><span>Order Form</span></a> </li>	
-					<li class="medium-1 large-1 columns" data-wsid="ws-manageaccountEF"> <a data-wsid="ws-manageaccount" href="https://stage2.lakeside.com/my_account/manage_account.jsp">Your<br><span>Account</span></a></li>	
-						<li class="medium-1 large-1 columns" data-wsid="ws-orderstatusEF"><a data-wsid="ws-orderstatus" href="https://stage2.lakeside.com/my_account/order_history/order_history_listing.jsp">Order<br><span>Status</span></a></li>	
-						<li class="medium-1 large-1 columns question"><a href="https://stage2.lakeside.com/content/faq"><img src="./order_conf_auth_files/icon-questionmark.png" alt="FAQ"></a></li>	
-	</ul>	</div>	
-	</header>	
+	</div>	</div>	<input name="_DARGS" value="/common/includes/inc_header_responsive.jsp.basicSearch" type="hidden"></form>
+	</li>
+
+						<li class="medium-1 large-1 columns" data-wsid="ws-quickorderEF"><a data-wsid="ws-quickorder" href="https://stage2.lakeside.com/catalog/catalog_quick_order.jsp">Quick<br><span>Order Form</span></a> </li>
+					<li class="medium-1 large-1 columns" data-wsid="ws-manageaccountEF"> <a data-wsid="ws-manageaccount" href="https://stage2.lakeside.com/my_account/manage_account.jsp">Your<br><span>Account</span></a></li>
+						<li class="medium-1 large-1 columns" data-wsid="ws-orderstatusEF"><a data-wsid="ws-orderstatus" href="https://stage2.lakeside.com/my_account/order_history/order_history_listing.jsp">Order<br><span>Status</span></a></li>
+						<li class="medium-1 large-1 columns question"><a href="https://stage2.lakeside.com/content/faq"><img src="./order_conf_auth_files/icon-questionmark.png" alt="FAQ"></a></li>
+	</ul>	</div>
+	</header>
 
 
 			<div id="main-content" class="row checkout--order-commit">
-			
+
 			<div id="container">
 				<div class="row no-padding-left no-padding-right" id="main-content">
 
@@ -712,9 +715,9 @@ function activateNextCard( CardCurrentNo, CardNextNo ){ // Close current card th
 					    <aside class="prime-banner--aside columns small-10"> </aside>
 					    <figure class="prime-banner--figure columns small-10 resp_content_area" aria-label="Primary Banner">
 <!-- Start Order Conf banner -->
-<!-- Component  does not exist --> 
+<!-- Component  does not exist -->
 <!-- End Order Conf banner -->
-						</figure>	
+						</figure>
 					</section>
 
 
@@ -832,6 +835,7 @@ function activateNextCard( CardCurrentNo, CardNextNo ){ // Close current card th
 	</form>
 </aside>
 							<!--    SMS Subscribe Card end      -->
+							</article>
 							<article class="js-ccc-parent hidden">
 							<!--    Expr Chk Save Card begin    -->
 <nav id="ccc-3" class="js-ccc-mutex ccc-panel radius text-center ccc-quest">
@@ -915,7 +919,7 @@ function activateNextCard( CardCurrentNo, CardNextNo ){ // Close current card th
 			</div>
 		</section>
 		<figure class="resp_full_height"></figure>
-		<p>Checkout faster by securely saving your payment information.
+		<p>Checkout faster and easier by activating Express Checkout.
 		</p>
 		<figure class="js-i--figure i--figure"><div class="circle">i</div></figure>
 		<aside class="hidden">
@@ -958,11 +962,11 @@ function activateNextCard( CardCurrentNo, CardNextNo ){ // Close current card th
 			</div>
 			<div class="column small-4 no-padding">
 				<figure class="resp_full_height"></figure>
-				<a id="cmd-cc-save" class="cmd-subs--a button radius resp_btn_teal">Save / Activate</a>
+				<a id="cmd-cc-save" class="cmd-subs--a button radius resp_btn_teal">Save &amp; Activate</a>
 			</div>
 		</section>
 		<figure class="resp_full_height"></figure>
-		<p>Checkout faster by securely saving your payment information.
+		<p>Checkout faster by securely saving your payment information and activating Express Checkout.
 		</p>
 		<figure class="js-i--figure i--figure"><div class="circle">i</div></figure>
 		<aside class="hidden">
@@ -991,7 +995,7 @@ function activateNextCard( CardCurrentNo, CardNextNo ){ // Close current card th
 					</div>
 					<div class="small-10 medium-7 columns orderIntro no-padding">
 						<!-- Content area name is "order_confirmation_top"-->
-						
+
 						<header class="resp_row_head text-left small-align-center">
                         <h2 class="resp_section_title">Thank You For Your Order!</h2>
                         <p class="no-margin-bottom">Your Order Confirmation Number is: <span class="resp_ord_confn resp_break-on-small">506649770006</span></p>
@@ -1012,17 +1016,17 @@ items to ship.</p>
 					<div id="shippingInfo" class="small-10 columns no-padding padding-top">
 						<ul class="small-block-grid-1 medium-block-grid-3">
 							<li>
-							
-	<strong>Shipping Address:</strong><br>	Scott&nbsp;Krause<br>	1077 W FOSTER AVE<br>	CHICAGO,&nbsp;IL&nbsp;60640<br>	(773) 354-0198<br>	
-	</li>	
-	<li>	<strong>Billing Address:</strong>	<br>	Scott&nbsp;Krause<br>	1077 W FOSTER AVE<br>	CHICAGO,&nbsp;IL&nbsp;60640<br>	<br>	
-	</li>	
-	<li>	
-	<strong>Payment Type:</strong>	<br>	
+
+	<strong>Shipping Address:</strong><br>	Scott&nbsp;Krause<br>	1077 W FOSTER AVE<br>	CHICAGO,&nbsp;IL&nbsp;60640<br>	(773) 354-0198<br>
+	</li>
+	<li>	<strong>Billing Address:</strong>	<br>	Scott&nbsp;Krause<br>	1077 W FOSTER AVE<br>	CHICAGO,&nbsp;IL&nbsp;60640<br>	<br>
+	</li>
+	<li>
+	<strong>Payment Type:</strong>	<br>
 	Credit Card:	Visa
 	<br>	XXXXXXXXXXXX1111
-	(expires 4/2017)<br>	Order Amount: $26.84<br>	
-	</li>	</ul>	
+	(expires 4/2017)<br>	Order Amount: $26.84<br>
+	</li>	</ul>
  <p>An order confirmation will be sent to: <strong>test@section9.com</strong></p>
 					</div>
 				</div>
@@ -1043,7 +1047,7 @@ items to ship.</p>
       <div class="medium-1 large-1 text-right columns">
         <p class="resp_ctxt">Total</p>
       </div>
-    </header> 
+    </header>
 
 
 
@@ -1064,7 +1068,7 @@ items to ship.</p>
       </div>
     </div>
     <div class="row show-for-small">
-    
+
       <div class="small-4 text-left columns no-padding-right">
     <a href="https://stage2.lakeside.com/Home-Decor/Curtains---Window-Coverings/Short-Panel-Blackout-Curtain//prod2440103.jmp?productId=prod2440103&amp;navAction=jump">
 				<img src="./order_conf_auth_files/60849_1226583_PNQ_SGE_th.jpg" width="100" height="120" alt="Sage 45&quot; Panel">
@@ -1077,16 +1081,16 @@ items to ship.</p>
 
 		</p>
 		<p class="resp_msg_prod">Product Price&nbsp;
-    
-			<span class="red">$16.98</span>	
+
+			<span class="red">$16.98</span>
 
 		</p>
 		<p class="resp_msg_prod">QTY &nbsp;
     1
-	</p> 
+	</p>
     			<figure class="resp_half_height"></figure>
 					<p class="resp_msg_prod resp_msg_body_i">
-						In stock 	</p>	
+						In stock 	</p>
 
       </div>
     </div>
@@ -1102,9 +1106,9 @@ items to ship.</p>
         <div class="medium-7 text-left no-padding columns">
         	<p class="resp_msg_prod">
     <a class="resp_ord_link resp_msg_prod" href="https://stage2.lakeside.com/Home-Decor/Curtains---Window-Coverings/Short-Panel-Blackout-Curtain//prod2440103.jmp?productId=prod2440103&amp;navAction=jump">Short Panel Blackout Curtain - Sage 45" Panel</a>
-	</p> 
+	</p>
 					<br><p class="resp_msg_body_i">
-						In stock 	</p>	
+						In stock 	</p>
 
         </div>
       </div>
@@ -1130,27 +1134,27 @@ items to ship.</p>
       <div class="medium-1 large-1 text-right columns">
         <p class="resp_fire">
     $16.98
- </p> </div> </section> 
+ </p> </div> </section>
     <hr class="resp_hr">
 
 
 						<section id="cart-bottom" class="row">
 							<article class="small-10 medium-5 columns show-for-print">
 <hr class="onlyprint">
-    
+
 							</article>
 
 
 							<article class="small-10 medium-5 columns">
 								<aside class="panel radius resp_pnl_body">
 									<div class="resp_pnl_head">Order Summary</div>
-    
+
 									<aside class="row no-padding">
 										<div class="small-5 columns">
 											<div class="resp_subt_name text-left">Subtotal</div>
 										</div>
 										<div class="small-5 columns">
-											<div class="resp_subt_val text-right">$16.98&nbsp;</div>	</div>	</aside>    
+											<div class="resp_subt_val text-right">$16.98&nbsp;</div>	</div>	</aside>
 							<hr class="resp_os_hr">
 									<aside class="row no-padding">
 										<div class="small-5 columns">
@@ -1158,7 +1162,7 @@ items to ship.</p>
 											</div>
 										</div>
 										<div class="small-5 columns">
-											<div class="resp_subt_val text-right">$1.87&nbsp;	</div>	</div>	</aside>	
+											<div class="resp_subt_val text-right">$1.87&nbsp;	</div>	</div>	</aside>
 							<hr class="resp_os_hr">
 									<aside class="row no-padding">
 										<div class="small-5 columns">
@@ -1166,17 +1170,17 @@ items to ship.</p>
 											</div>
 										</div>
 										<div class="small-5 columns">
-											<div class="resp_subt_val text-right">$7.99&nbsp;	</div>	</div>	</aside> 
+											<div class="resp_subt_val text-right">$7.99&nbsp;	</div>	</div>	</aside>
 							<hr class="resp_os_hr">
 								<aside class="row no-padding">
 									<div class="small-5 columns">
 										<div class="resp_subt_name padding-top text-left" style="font-size 22px;font-weight: 500;">Total&nbsp;</div>
 									</div>
 									<div class="small-5 columns">
-										<div class="resp_subt_valt text-right">$26.84&nbsp;</div>	</div>	</aside>	</aside> <!-- esp_pnl_body --> 
+										<div class="resp_subt_valt text-right">$26.84&nbsp;</div>	</div>	</aside>	</aside> <!-- esp_pnl_body -->
 							<aside class="row padding-bottom hide-for-print">
 								<div class="columns small-10 no-padding">
-									
+
 									<a class="resp_btn_green button radius expand" href="https://stage2.lakeside.com/homels">
 <img src="./order_conf_auth_files/white-shopping-cart.png" alt="Continue Shopping" data-wsid="ws-continueshopping"> Continue Shopping</a>
 								</div>
@@ -1186,9 +1190,9 @@ items to ship.</p>
 								<div class="columns small-10 no-padding">
 
     <a data-wsid="ws-manageaccount" class="button radius expand resp_btn_brand" href="https://stage2.lakeside.com/my_account/manage_account.jsp">Manage Your Account</a>
-	</div>	</aside>	</article>	</section> <!-- end of cart-bottom row -->	</div>	</div>	<!-- /end #container -->	
-	<!-- ATG Recommendations variable which include to use in the footer.asp -->	
-	<!-- End of ATG Recommendations variable which include to use in the footer.asp -->		
+	</div>	</aside>	</article>	</section> <!-- end of cart-bottom row -->	</div>	</div>	<!-- /end #container -->
+	<!-- ATG Recommendations variable which include to use in the footer.asp -->
+	<!-- End of ATG Recommendations variable which include to use in the footer.asp -->
 	<footer>
 		<div class="row footer-first" id="footer-first">
 			<div style="float:left; width:400px;" class="show-for-large-up">"The Lakeside Collection has proudly served America's shoppers for more than a decade, committed to customer service and satisfaction. And with our incredible low prices and great selection, we really do show that the best things in life don't have to cost a fortune." <img src="./order_conf_auth_files/signature_LSC.jpg" alt="Your friends at The Lakeside Collection"></div> <div id="trust-logo-container"><div style="display: table-cell;"><a href="javascript:void(0)" onclick="javascript:window.open(&#39;https://trustsealinfo.websecurity.norton.com/splash?form_file=fdf/splash.fdf&amp;dn=www.lakeside.com&amp;lang=en&#39;,&#39;getSeal&#39;,&#39;width=550,height=470&#39;)"><img src="./order_conf_auth_files/getseal.png" alt="Norton Secured"></a></div> <div style="display: table-cell;"><a href="javascript:void(0)" onclick="javascript:window.open(&#39;https://www.bbb.org/chicago/business-reviews/mail-order-and-catalog-shopping/the-lakeside-collection-in-bannockburn-il-84000524&#39;,&#39;_blank&#39;)"><img src="./order_conf_auth_files/bbb-aplus.png" alt="BBB A+"></a></div> <div style="display: table-cell;"><a href="https://stage2.lakeside.com/common/general_content_no_nav.jsp?contentAreaName=faqpayment" target="_blank"><img src="./order_conf_auth_files/LSC_footer_payment.jpg" alt="Accepted Forms of Payment"></a></div></div>
@@ -1197,53 +1201,53 @@ items to ship.</p>
 			<div class="row footer-links show-for-small">
 				<div class="small-10 columns small-align-center">
 					<ul class="inline-list">
-						
+
 						<li><a href="https://stage2.lakeside.com/content/faq">Need Assistance</a></li>
 						<li><a href="https://stage2.lakeside.com/common/About-Us.jsp">About Us</a></li>
 						<li><a id="sidebarFButton" href="https://stage2.lakeside.com/checkout/order_commit.jsp#sidebar">Shop and More</a></li>
-						
+
 								<li><a href="http://blog.lakeside.com/">Blog</a></li>
-						
+
 					</ul>
 				</div>
 			</div>
 			<div class="row footer-links hide-for-small">
 				<div id="menuAssistance" class="small-10 medium-2 columns">
-					
-	<h5><b>Need Assistance</b></h5>	<ul>	
+
+	<h5><b>Need Assistance</b></h5>	<ul>
 	<li><p><a href="https://www.lakeside.com/common/FAQ-Clicked-On-Contact-Us-Open.jsp">Customer
-Service</a></p></li>	
-	<li><p><a onclick="showModal(this);return false;" href="https://stage2.lakeside.com/checkout/order_commit.jsp#modalOurGuarantee">Our Guarantee</a></p></li>	
+Service</a></p></li>
+	<li><p><a onclick="showModal(this);return false;" href="https://stage2.lakeside.com/checkout/order_commit.jsp#modalOurGuarantee">Our Guarantee</a></p></li>
 
     <div class="modal" id="modalOurGuarantee">
         <div class="shipping">
             Our Guarantee
                     <div class="hr"><hr></div>
-                
+
  <!-- Start of Content Block with name: lak_guarantee_modal_content --> <center> <p><span style=" font-size: x-large;"><b>Our Satisfaction Guarantee</b></span></p> <p><span style=" font-size: small;">The Lakeside Collection offers the finest selection of merchandise at the lowest prices around. We have proudly served America's shoppers for more than a decade and are committed to customer service and satisfaction. If for any reason, you are not completely happy with your purchase simply contact us so we can make it right with a convenient exchange or merchandise refund. Personalized items can only be returned when delivered defective or damaged.</span></p> </center>
             <div class="clear">&nbsp;</div>
         </div>
     </div>
 
-	<li><p><a onclick="showModal(this);return false;" href="https://stage2.lakeside.com/checkout/order_commit.jsp#modalShipping">Shipping</a></p></li>	
+	<li><p><a onclick="showModal(this);return false;" href="https://stage2.lakeside.com/checkout/order_commit.jsp#modalShipping">Shipping</a></p></li>
 
     <div class="modal" id="modalShipping">
         <div class="shipping">
             Shipping Information
                     <div class="hr"><hr></div>
-                
+
  <!-- Start of Content Block with name: lsc-holiday-shipping-modal-content --> <p><b><span style=" font-size: large;">The last date to order for 12/24/16 delivery varies by region. See map below for shipping destination.</span></b></p> <p>&nbsp;</p> <p><img src="./order_conf_auth_files/holiday-map-2016.jpg" alt="Holiday Delivery Information Map"></p><p><b><span style=" font-size: x-large;">Shipping Charges</span></b></p> <p><span style=" font-size: small;">Shipping charges are based on the dollar amount of your purchase. Each item in your order is assigned a prorated portion of the order's total shipping charge to ensure total charges do not exceed what was quoted. Items that require an additional delivery charge, due to their size and weight, are advertised with an <b><span style=" color: #4BACC6; font-size: small;">AD</span></b> icon and additional charges are noted. These charges will be billed at the time your item is shipped to you.</span></p> <table cellspacing="2" cellpadding="4" border="1" style="background-color:#ffffff;border-collapse:collapse;border:1px solid #CCCCCC;color:#000000;width:350px; text-align:center;">     <tbody>         <tr>             <td><b>If Your Order Amount Is</b></td>             <td><b>Shipping Charges Are</b></td>         </tr>         <tr>             <td>up to $14.99</td>             <td>$5.99</td>         </tr>         <tr>             <td>$15.00 to $24.99</td>             <td>$7.99</td>         </tr>         <tr>             <td>$25.00 to $49.99</td>             <td>$9.99</td>         </tr>         <tr>             <td>$50.00 to $59.99</td>             <td>$11.99</td>         </tr>         <tr>             <td>$60.00 to $74.99</td>             <td>$13.99</td>         </tr>         <tr>             <td>$75.00 to $99.99</td>             <td>$16.99</td>         </tr>         <tr>             <td>$100.00 to $149.99</td>             <td>$19.99</td>         </tr>         <tr>             <td>$150.00 to $199.99</td>             <td>$23.99</td>         </tr>         <tr>             <td>$200.00 to $249.99</td>             <td>$27.99</td>         </tr>         <tr>             <td>$250.00 to $299.99</td>             <td>$30.99</td>         </tr>         <tr>             <td>over $300.00</td>             <td>11%</td>         </tr>     </tbody> </table> <p><span style=" font-size: small;">* Please check item pages for additional delivery charges</span></p>
             <div class="clear">&nbsp;</div>
         </div>
     </div>
 
-	<li><p><a onclick="showModal(this);return false;" href="https://stage2.lakeside.com/checkout/order_commit.jsp#modalReturns">Returns</a></p></li>	
+	<li><p><a onclick="showModal(this);return false;" href="https://stage2.lakeside.com/checkout/order_commit.jsp#modalReturns">Returns</a></p></li>
 
     <div class="modal" id="modalReturns">
         <div class="shipping">
             Returns
                     <div class="hr"><hr></div>
-                
+
  <!-- Start of Content Block with name: lak_returns_modal_content --> <h3>How to Return</h3>
 <div>
     <p><b>No-hassle Returns &amp; Exchanges:</b><br>
@@ -1271,22 +1275,22 @@ Service</a></p></li>
         </div>
     </div>
 
-	<li><p><a onclick="showModal(this);return false;" href="https://stage2.lakeside.com/checkout/order_commit.jsp#modalFaqs">FAQs</a></p></li>	
-	<li><p><a href="https://stage2.lakeside.com/homels">Home</a></p></li>	
-	</ul>	
+	<li><p><a onclick="showModal(this);return false;" href="https://stage2.lakeside.com/checkout/order_commit.jsp#modalFaqs">FAQs</a></p></li>
+	<li><p><a href="https://stage2.lakeside.com/homels">Home</a></p></li>
+	</ul>
 				</div>
 				<div id="menuAbout" class="small-10 medium-2 columns">
-					
-	<h5><b>About Us</b></h5>	<ul>	
-	<li><p><a href="https://www.lakeside.com/common/About-Us.jsp">About Lakeside</a></p></li>	
-	<li><p><a href="https://stage2.lakeside.com/content/recall">Recall</a></p></li>	
-	<li><p><a onclick="showModal(this);return false;" href="https://stage2.lakeside.com/checkout/order_commit.jsp#modalProductSafety">Product Safety</a></p></li>	
+
+	<h5><b>About Us</b></h5>	<ul>
+	<li><p><a href="https://www.lakeside.com/common/About-Us.jsp">About Lakeside</a></p></li>
+	<li><p><a href="https://stage2.lakeside.com/content/recall">Recall</a></p></li>
+	<li><p><a onclick="showModal(this);return false;" href="https://stage2.lakeside.com/checkout/order_commit.jsp#modalProductSafety">Product Safety</a></p></li>
 
     <div class="modal" id="modalProductSafety">
         <div class="shipping">
             Product Safety
                     <div class="hr"><hr></div>
-                
+
  <!-- Start of Content Block with name: lak_product_safety_modal --> <p><span style=" font-size: 13px;">The Lakeside Collection� carefully selects its products from
 a large number of vendors located in both the USA and abroad. Our dedication to finding you the
 very best in housewares, clothing, furniture, toys, holiday accents and more includes thorough
@@ -1297,16 +1301,16 @@ and satisfaction of our most important asset - our customers - will always be me
         </div>
     </div>
 
-	<li><p><a href="https://www.lakeside.com/common/Career-Center.jsp">Career Center</a></p></li>	
-	<li><a href="https://stage2.lakeside.com/common/Environmental.jsp">Environmental</a></li>	
+	<li><p><a href="https://www.lakeside.com/common/Career-Center.jsp">Career Center</a></p></li>
+	<li><a href="https://stage2.lakeside.com/common/Environmental.jsp">Environmental</a></li>
 	<li><p><a onclick="showModal(this);return false;" href="https://stage2.lakeside.com/checkout/order_commit.jsp#modalTransSupply">Transparency in Supply
-Chains</a></p></li>	
+Chains</a></p></li>
 
     <div class="modal" id="modalTransSupply">
         <div class="shipping">
             Transparency in Supply Chains
                     <div class="hr"><hr></div>
-                
+
  <!-- Start of Content Block with name: lak_trans_modal --> <p><font size="4"><font face="Arial"><span style=" font-size: 13.0px;"><b>Disclosure Statement
 Pursuant to California Transparency in Supply Chains Act of 2010<br>
 </b></span></font></font><font size="5"><font face="Times New Roman"><span style=" font-size: 16.0px;"><br>
@@ -1324,57 +1328,57 @@ compliance.</span></font></font></p>
         </div>
     </div>
 
-	<li><a href="https://stage2.lakeside.com/content/company-news">Company News</a></li>	
-	</ul>	
+	<li><a href="https://stage2.lakeside.com/content/company-news">Company News</a></li>
+	</ul>
 				</div>
 				<div id="menuShop" class="small-10 medium-6 columns">
-					
+
 	<h5><b>Shop and More</b></h5>
 									<ul class="small-block-grid-4">
-								
-	<li>	<ul>	
-	<li><p><a href="https://stage2.lakeside.com/browse/Home-Decor/_/N-275b">Home Decor</a></p></li>	
-	<li><a href="https://stage2.lakeside.com/browse/Gifts/_/N-278c">Gifts</a></li>	
-	<li><a href="https://stage2.lakeside.com/browse/Holiday/_/N-287m">Holiday</a></li>	
-	<li><p><a href="https://stage2.lakeside.com/browse/Toys-Electronics/_/N-27lh">Toys + Electronics</a></p></li>	
-	<li><p><a href="https://stage2.lakeside.com/browse/Apparel-Beauty/_/N-26y3">Apparel + Beauty</a></p></li>	
-	</ul>	</li>	
-	<li>	<ul>	
-	<li><p><a href="https://stage2.lakeside.com/browse/Housewares-Dining/_/N-27cr">Housewares + Dining</a></p></li>	
-	<li><p><a href="https://stage2.lakeside.com/browse/Bed-Bath/_/N-270l">Bed + Bath</a></p></li>	
-	<li><p><a href="https://stage2.lakeside.com/browse/Books-Crafts/_/N-271r">Books + Crafts</a></p></li>	
-	<li><p><a href="https://stage2.lakeside.com/browse/Baby/_/N-26zn">Baby</a></p></li>	
-	</ul>	</li>	
-	<li>	<ul>	
-	<li><p><a href="https://stage2.lakeside.com/browse/Pets/_/N-27ge">Pets</a></p></li>	
-	<li><p><a href="https://stage2.lakeside.com/browse/Garden-Outdoor-DIY/_/N-276x">Garden, Outdoor + DIY</a></p></li>	
-	<li><p><a href="https://stage2.lakeside.com/browse/NFL-Sports/_/N-27f9">NFL + Sports</a></p></li>	
-	</ul>	</li>	
-	<li>	<ul>	
-	<li><p><a href="https://stage2.lakeside.com/catalog/catalog_quick_order.jsp">Quick Order Form</a></p></li>	
-	<li><p><a href="https://stage2.lakeside.com/catalog_request/index.jsp">Free Catalog Request</a></p></li>	
-	<li><p><a href="https://stage2.lakeside.com/content/affiliate-program">Affiliate Program</a></p></li>	
-	<li><p><a href="http://blog.lakeside.com/">Blog</a></p></li>	
-	</ul>	</li>	
-	</ul>	
-	</div>	</div>	
+
+	<li>	<ul>
+	<li><p><a href="https://stage2.lakeside.com/browse/Home-Decor/_/N-275b">Home Decor</a></p></li>
+	<li><a href="https://stage2.lakeside.com/browse/Gifts/_/N-278c">Gifts</a></li>
+	<li><a href="https://stage2.lakeside.com/browse/Holiday/_/N-287m">Holiday</a></li>
+	<li><p><a href="https://stage2.lakeside.com/browse/Toys-Electronics/_/N-27lh">Toys + Electronics</a></p></li>
+	<li><p><a href="https://stage2.lakeside.com/browse/Apparel-Beauty/_/N-26y3">Apparel + Beauty</a></p></li>
+	</ul>	</li>
+	<li>	<ul>
+	<li><p><a href="https://stage2.lakeside.com/browse/Housewares-Dining/_/N-27cr">Housewares + Dining</a></p></li>
+	<li><p><a href="https://stage2.lakeside.com/browse/Bed-Bath/_/N-270l">Bed + Bath</a></p></li>
+	<li><p><a href="https://stage2.lakeside.com/browse/Books-Crafts/_/N-271r">Books + Crafts</a></p></li>
+	<li><p><a href="https://stage2.lakeside.com/browse/Baby/_/N-26zn">Baby</a></p></li>
+	</ul>	</li>
+	<li>	<ul>
+	<li><p><a href="https://stage2.lakeside.com/browse/Pets/_/N-27ge">Pets</a></p></li>
+	<li><p><a href="https://stage2.lakeside.com/browse/Garden-Outdoor-DIY/_/N-276x">Garden, Outdoor + DIY</a></p></li>
+	<li><p><a href="https://stage2.lakeside.com/browse/NFL-Sports/_/N-27f9">NFL + Sports</a></p></li>
+	</ul>	</li>
+	<li>	<ul>
+	<li><p><a href="https://stage2.lakeside.com/catalog/catalog_quick_order.jsp">Quick Order Form</a></p></li>
+	<li><p><a href="https://stage2.lakeside.com/catalog_request/index.jsp">Free Catalog Request</a></p></li>
+	<li><p><a href="https://stage2.lakeside.com/content/affiliate-program">Affiliate Program</a></p></li>
+	<li><p><a href="http://blog.lakeside.com/">Blog</a></p></li>
+	</ul>	</li>
+	</ul>
+	</div>	</div>
 			<div class="row">
 				<div class="footer-copy-terms">
 					<div class="small-10 medium-7 columns small-align-center">
 
-					
-	� 1998 - 2017. The Lakeside Collection. All Rights Reserved.	
+
+	� 1998 - 2017. The Lakeside Collection. All Rights Reserved.
 
 					</div>
 					<div class="small-10 medium-3 columns legal small-align-center">
 						<a href="https://stage2.lakeside.com/checkout/order_commit.jsp#modalTermsConditions" onclick="showModal(this); return false;">Terms &amp; Conditions</a> | <a href="https://stage2.lakeside.com/checkout/order_commit.jsp#ModalPrivacy" onclick="showModal(this); return false;">Privacy</a>
-						
+
 
     <div class="modal" id="modalTermsConditions">
         <div class="shipping">
             Terms and Conditions
                     <div class="hr"><hr></div>
-                
+
  <!-- Start of Content Block with name: lak_termsConditionsModal --> <p><span style=" color: #ED1C24; font-size: small;">PLEASE READ THE FOLLOWING TERMS AND
 CONDITIONS CAREFULLY BEFORE ACCESSING THIS SITE. BY ACCESSING THIS SITE YOU ARE AGREEING TO
 THESE TERMS AND CONDITIONS.</span><span style=" font-size: small;"></span></p>
@@ -1414,7 +1418,7 @@ whether direct, indirect or consequential in nature.</span></p>
         <div class="shipping">
             Privacy
                     <div class="hr"><hr></div>
-                
+
  <!-- Start of Content Block with name: lak_privacy_modal --> <p>The Lakeside Collection� holds the privacy and security of our customers in the highest
 regard. The following data explains what kind of information is gathered on The Lakeside
 Collection� website and how the information is used.</p>
@@ -1486,13 +1490,13 @@ mailing list?</b></span></p>
 
 <p><span style=" font-size: small;">If, at any time, you wish to be removed from our mailing
 list please contact us by email with your name and address or click on the 'Contact Us'
-option.</span></p>  
+option.</span></p>
             <div class="clear">&nbsp;</div>
         </div>
     </div>
 
-	</div>	</div>	</div>	</div>	</footer>	<!-- /footer -->	
-			
+	</div>	</div>	</div>	</div>	</footer>	<!-- /footer -->
+
 			<script type="text/javascript">
 				var utag_data = {
 					"order_currency" : "USD",
@@ -1560,7 +1564,7 @@ option.</span></p>
 					if(typeof utag === 'undefined') {
 						console.warn('utag not defined; skipping event fire.');
 					} else {
-						if(typeof data != 'undefined') {							
+						if(typeof data != 'undefined') {
 							//console.log('firing tealium page view: ' + JSON.stringify(data));
 							if (typeof(data) == 'string'){
 								var x= JSON.parse(data);
@@ -1604,7 +1608,7 @@ option.</span></p>
 										//console.log('typeof data = ' + typeof(data));
 										//console.log(data);
 									//}
-	
+
                                 	if (typeof(data) == 'string'){
                                 		var x= JSON.parse(data);
                                 		utag.link(x);
@@ -1621,13 +1625,13 @@ option.</span></p>
 					}
 			}
 
-				
-	$(window).load(function() {	
+
+	$(window).load(function() {
 					if($('#tellAFriendConfirmationModal').length && $('#display').val() == 'Y') {
                     	fireTealiumEvent({"e_tell_friend" : "t"});
                     }
 
-					
+
 					if ($('body').hasClass('catconf')) {
 						fireTealiumEvent({
 							"e_catalog_request":"t",
@@ -1635,31 +1639,31 @@ option.</span></p>
 							"lead_type" : "request a free catalog confirm"
 						});
 					}
-					
-					
+
+
 				/* event 81 - Email Unsubscribe event */
 				if (window.location.href.indexOf("email_optout.jsp") != -1) {
-			
+
 					if($("#optOutEmail").length != 0){
-			
+
 					var emailvalue = $('#optOutEmail').val();
-			
+
 					if(emailvalue){
 						fireTealiumEvent({
 							"e_email_unsub" : "t"
 						});
 					 }
 					}
-				}					
-					
-					
+				}
+
+
 				});
 			</script>
-		
-	
+
+
 	<a href="https://stage2.lakeside.com/checkout/order_commit.jsp#" class="to-top radius button"></a>
 
-	
+
 
 	<!-- footer modal -->
 	<div id="footerModal" class="reveal-modal" data-reveal="">
@@ -1671,33 +1675,33 @@ option.</span></p>
 	</div>
 	<div id="sizeChartModal" class="reveal-modal resp_reveal--smallmed" data-reveal=""></div>
 	<div id="personalizationModal" class="reveal-modal medium personalPopup" data-reveal=""></div>
-	
+
 
 	<script defer="" src="./order_conf_auth_files/tealeaf.js.download" type="text/javascript"></script>
 
-			
+
 			</section>
 
 			<section id="sidebar" role="complementary">
 				<div class="row">
 					<div class="small-10 columns browse-nav show-for-medium-down" role="navigation">
-						
+
 						<ul class="side-nav header-links">
-							
+
 									<li><a href="javascript:document.getElementById(&#39;logoutTextLinkButton&#39;).click()" data-wsid="ws-logout">Not Scott?</a>	<form name="siteLogout" action="https://stage2.lakeside.com/my_account/index.jsp?_DARGS=/common/includes/inc_left_nav_no_category.jsp.headerSiteLogout" method="post"><input name="_dyncharset" value="ISO-8859-1" type="hidden"><input name="_dynSessConf" value="-6829799909585280338" type="hidden"><input name="/atg/userprofiling/ProfileFormHandler.logoutSuccessURL" value="?siteId=LS" type="hidden"><input name="_D:/atg/userprofiling/ProfileFormHandler.logoutSuccessURL" value=" " type="hidden"><input id="logoutTextLinkButton hidden" name="/atg/userprofiling/ProfileFormHandler.logout" type="submit"><input name="_D:/atg/userprofiling/ProfileFormHandler.logout" value=" " type="hidden"><input name="_DARGS" value="/common/includes/inc_left_nav_no_category.jsp.headerSiteLogout" type="hidden"></form>
-	</li><li><a href="https://stage2.lakeside.com/catalog_request/index.jsp">Request A FREE Catalog</a></li>	
+	</li><li><a href="https://stage2.lakeside.com/catalog_request/index.jsp">Request A FREE Catalog</a></li>
 							<div class="show-for-small">
 								<li><a data-reveal-id="emailSignUp" href="https://stage2.lakeside.com/checkout/order_commit.jsp#" data-wsid="ws-emailsignup">Sign Up For Email Offers</a></li>
 							</div>
 							<li><a href="https://stage2.lakeside.com/shopCatalogs">Shop Our Catalogs</a></li>
-							
-									<li data-wsid="ws-quickorderEF"><a data-wsid="ws-quickorder" href="https://stage2.lakeside.com/catalog/catalog_quick_order.jsp">Quick Order Form</a></li>	
-									<li data-wsid="ws-manageaccountEF"><a data-wsid="ws-manageaccount" href="https://stage2.lakeside.com/my_account/manage_account.jsp">Your Account</a></li>	
-	<li><a href="https://stage2.lakeside.com/my_account/order_history/order_history_listing.jsp">Order Status</a></li>	
-	<li><a href="https://stage2.lakeside.com/content/faq">Frequently Asked Questions</a></li>	
+
+									<li data-wsid="ws-quickorderEF"><a data-wsid="ws-quickorder" href="https://stage2.lakeside.com/catalog/catalog_quick_order.jsp">Quick Order Form</a></li>
+									<li data-wsid="ws-manageaccountEF"><a data-wsid="ws-manageaccount" href="https://stage2.lakeside.com/my_account/manage_account.jsp">Your Account</a></li>
+	<li><a href="https://stage2.lakeside.com/my_account/order_history/order_history_listing.jsp">Order Status</a></li>
+	<li><a href="https://stage2.lakeside.com/content/faq">Frequently Asked Questions</a></li>
 	</ul>
 
-	</div>	</div>	</section>	
+	</div>	</div>	</section>
 			<script type="text/javascript" src="./order_conf_auth_files/bvapi.js.download"></script>
 			<script type="text/javascript">
 				$BV.configure("global", {
@@ -1722,8 +1726,8 @@ option.</span></p>
 			    };
 				</script>
 <script type="text/javascript">
-</script>			
-		
+</script>
+
 
 <script type="text/javascript">
 $BV.SI.trackTransactionPageView({
@@ -1740,12 +1744,12 @@ $BV.SI.trackTransactionPageView({
 		{
 				"sku" : "prod2440103",
 				"name" : "Short Panel Blackout Curtain",
-				
+
 				"price" : "16.98",
 				"imageURL" : "http://stage2.lakeside.com",
 				"quantity" : "1"
 				}
-				
+
 	],
 	"userId" : "6658010018",
 	"email" : "TEST@NEOSTUDIOS.COM",
@@ -1756,5 +1760,5 @@ $BV.SI.trackTransactionPageView({
 <!-- LTD Responsive Footer Scripts -->
 <script src="./order_conf_auth_files/lib.ltd.footer.js.download"></script>
 
-		
+
 <div id="quickView1" data-reveal="" class="reveal-modal"></div><di hiddenv><img src="./order_conf_auth_files/track_conversion" width="0" height="0" title="blank image" aria-hidden="true hidden" alt="track_conversion?payload=%7B%22cart%22%3A%5B%7B%22item%22%3A%22prod2440103%22%2C%22quantity%22%3A%221%22%2C%22price%22%3A%2216.98%22%2C%22unique_id%22%3A%222002297%22%7D%5D%2C%22order_number%22%3A%22506649770006%22%2C%22shipping%22%3A%227.99%22%2C%22user_info%22%3A%7B%22email%22%3A%22test%40neostudios.com%22%2C%22details%22%3A%7B%22encryptedProfileId%22%3A%22b7BcSqoB1IBXy2xqyVqSJA%253D%253D%22%7D%7"></div><div class="bv-verify-css-loaded" style="height: 0px; width: 0px; border: 0px;"></div></body></html>
