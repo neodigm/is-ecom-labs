@@ -83,7 +83,7 @@ $( document ).ready(function(){
 			$( this ).addClass("hidden");
 		}
 	});
-
+	$(".js-ccc-parent:not(.hidden)").first().find("nav").click();
 });
 
 
@@ -771,10 +771,10 @@ function activateNextCard( CardCurrentNo, CardNextNo ){ // Close current card th
 							<article class="js-ccc-parent hidden">
 							<!--    Email Subscribe Card begin    -->
 
-<nav id="ccc-1" class="js-ccc-mutex ccc-panel radius text-center ccc-quest ccc-panel__active">
+<nav id="ccc-1" class="js-ccc-mutex ccc-panel radius text-center ccc-quest QQQQccc-panel__active">
 	<p>Send me promotional emails and discounts<i class="ccc-panel--i">-</i></p>
 </nav>
-<aside class="ccc-panel__content panel">
+<aside class="ccc-panel__content panel hidden">
 	<form>
 		<img  class="spinner hidden" src="http://www.lakeside.com/media/global/images/foundation/img/fpo/spinner_lsc.gif" alt="Please Wait">
 		<section class="row">
