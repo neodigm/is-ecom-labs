@@ -141,10 +141,10 @@ function docEventReady(){
 			}, 3500);
 		}
 	});
-	$("#cmd-cc-save").on("click", function( e ) {
+	$("#cmd-ec-save").on("click", function( e ) {
 		var nCard = 3;
 		//if( IsSmall() ){
-			var data = {message: "Payment information saved.", timeout: 3400};
+			var data = {message: "Payment Information Saved", timeout: 3400};
 			$("#gmdl-toast")[0].MaterialSnackbar.showSnackbar(data);
 			waitingCard( nCard );
 			setTimeout(function(){
@@ -152,6 +152,29 @@ function docEventReady(){
 			}, 3500);
 		//}
 	});
+	$("#cmd-ec-activate").on("click", function( e ) {
+		var nCard = 4;
+		//if( IsSmall() ){
+			var data = {message: "Express Checkout Activated", timeout: 3400};
+			$("#gmdl-toast")[0].MaterialSnackbar.showSnackbar(data);
+			waitingCard( nCard );
+			setTimeout(function(){
+				activateNextCard( nCard, 0 ); // swap cards
+			}, 3500);
+		//}
+	});
+	$("#cmd-ec-save-and-activate").on("click", function( e ) {
+		var nCard = 5;
+		//if( IsSmall() ){
+			var data = {message: "Payment Information Saved & Express Checkout Activated", timeout: 3400};
+			$("#gmdl-toast")[0].MaterialSnackbar.showSnackbar(data);
+			waitingCard( nCard );
+			setTimeout(function(){
+				activateNextCard( nCard, 0 ); // swap cards
+			}, 3500);
+		//}
+	});
+
 } // docEventReady End
 
 function waitingCard( CardCurrentNo ){  //  Mockup of card in waiting state
@@ -172,7 +195,7 @@ function activateNextCard( CardCurrentNo, CardNextNo ){ // Close current card th
 <style>
 /**    Passive Validation | Asynchrony    **/
 .spinner {
-    position: absolute; z-index: 256; margin-left: 33%; margin-top: 34%;
+    position: absolute; z-index: 256; margin-left: 33%; QQQQmargin-top: 34%;
 }
 .state_sec__blur{
 -webkit-filter: opacity(0.3);
@@ -868,7 +891,7 @@ function activateNextCard( CardCurrentNo, CardNextNo ){ // Close current card th
 			</div>
 			<div class="column small-4 no-padding">
 				<figure class="resp_full_height"></figure>
-				<a id="cmd-cc-save" class="cmd-subs--a button radius resp_btn_teal">Save</a>
+				<a id="cmd-ec-save" class="cmd-subs--a button radius resp_btn_teal">Save</a>
 			</div>
 		</section>
 		<figure class="resp_full_height"></figure>
@@ -915,7 +938,7 @@ function activateNextCard( CardCurrentNo, CardNextNo ){ // Close current card th
 			</div>
 			<div class="column small-4 no-padding">
 				<figure class="resp_full_height"></figure>
-				<a id="cmd-cc-save" class="cmd-subs--a button radius resp_btn_teal">Activate</a>
+				<a id="cmd-ec-activate" class="cmd-subs--a button radius resp_btn_teal">Activate</a>
 			</div>
 		</section>
 		<figure class="resp_full_height"></figure>
@@ -962,7 +985,7 @@ function activateNextCard( CardCurrentNo, CardNextNo ){ // Close current card th
 			</div>
 			<div class="column small-4 no-padding">
 				<figure class="resp_full_height"></figure>
-				<a id="cmd-cc-save" class="cmd-subs--a button radius resp_btn_teal">Save &amp; Activate</a>
+				<a id="cmd-ec-save-and-activate" class="cmd-subs--a button radius resp_btn_teal">Save &amp; Activate</a>
 			</div>
 		</section>
 		<figure class="resp_full_height"></figure>
