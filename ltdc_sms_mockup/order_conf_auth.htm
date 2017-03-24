@@ -83,9 +83,12 @@ $( document ).ready(function(){
 			$( this ).addClass("hidden");
 		}
 	});
-	$(".js-ccc-parent:not(.hidden)").first().find("nav").click();
+	clickNextCard();
 });
 
+function clickNextCard(){  //  Click the next visible card
+		$(".js-ccc-parent:not(.hidden)").first().find("nav").click();
+}
 
 function docEventReady(){
 	'use strict';
@@ -110,7 +113,7 @@ function docEventReady(){
 	}
 	$("#cmd-email-subscribe").on("click", function( e ) {
 		var nCard = 1;
-		if( !$( this ).is(".cmd_disabled, .cmd_locked") ){
+		if( !$( this ).is(".cmd_disabled, .cmd_locked") ){// not disabled or locked
 			var data = {message: "Check your inbox for your exclusive discounts and start shopping TODAY!", timeout: 3400};
 			$("#gmdl-toast")[0].MaterialSnackbar.showSnackbar(data);
 			waitingCard( nCard );
@@ -121,7 +124,7 @@ function docEventReady(){
 	});
 	$(".js-chkb--input__nothanks").on("click", function( e ){
 		var nCard = 1;
-		if( !$( this ).is(".cmd_disabled, .cmd_locked") ){
+		if( !$( this ).is(".cmd_disabled, .cmd_locked") ){// not disabled or locked
 			var data = {message: "We will no longer ask you to subscribe to email offers.", timeout: 2400};
 			$("#gmdl-toast")[0].MaterialSnackbar.showSnackbar(data);
 			setTimeout(function(){
@@ -130,9 +133,8 @@ function docEventReady(){
 		}
 	});
 	$("#cmd-sms-subscribe").on("click", function( e ) {
-		// not disabled or locked
 		var nCard = 2;
-		if( !$( this ).is(".cmd_disabled, .cmd_locked") ){
+		if( !$( this ).is(".cmd_disabled, .cmd_locked") ){// not disabled or locked
 			var data = {message: "Please respond to the text message sent to your phone.", timeout: 3400};
 			$("#gmdl-toast")[0].MaterialSnackbar.showSnackbar(data);
 			waitingCard( nCard );
@@ -185,9 +187,13 @@ function waitingCard( CardCurrentNo ){  //  Mockup of card in waiting state
 }
 
 function activateNextCard( CardCurrentNo, CardNextNo ){ // Close current card then conditionally open the next
+	$("#ccc-" + CardCurrentNo ).parent().remove();
+	clickNextCard();
+	/*
 	var $nextCard = $("#ccc-" + CardNextNo);
 	if( ($nextCard.length > 0) && !$nextCard.hasClass("ccc-panel__active") ){ $nextCard.click(); }
 	$("#ccc-" + CardCurrentNo ).parent().remove();
+	*/
 }
 </script>
 
