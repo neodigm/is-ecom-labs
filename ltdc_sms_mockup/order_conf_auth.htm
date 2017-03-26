@@ -55,7 +55,19 @@
 
 <script>
 /**    Mockup JS    **/
-
+var form_state = {
+	doc_ready: false,
+	"clickable"	: function( sId, bEnabled ){
+		( bEnabled ) ? $("#"+sId).removeClass("cmd_disabled") : $("#"+sId).addClass("cmd_disabled");
+	},
+	"showError" : function( sButtonId, sErrorId ){
+		var $eBt = $("#"+sButtonId), $eEm = $("#"+sErrorId); // size error elemant to a buttons width
+		if( $eBt && $eEm ){
+			$eEm.css("width", $eBt.css("width") ).removeClass("resp_error_vis__hide");
+			return true;
+		}
+	}
+};
 $( document ).ready(function(){
 	docEventReady();
 	sClose ="";
@@ -93,8 +105,53 @@ function clickNextCard(){  //  Click the next visible card
 function docEventReady(){
 	'use strict';
 	$(document).foundation();
-	$("#subscribeSMS").inputmask();
-
+	$("#subscribeSMS-phone").inputmask();
+//    Passive Validation Begin
+$( document ).on("keyup click", function(){  //  Criteria for making the action button enabled
+	if( $("#ccc-2").length !== 0 ){
+		var aMsg = errorMsgText( "smsform" );
+		$( "#error_cmd-sms-subscribe" ).text( aMsg[1] );
+		form_state.clickable("cmd-sms-subscribe", isOk( "smsform" ));
+	}
+});
+$("#cmd-sms-subscribe").hover(
+			function(){
+				if( $( this ).hasClass("cmd_disabled") ) {
+					$( "#error_cmd-sms-subscribe" ).text( errorMsgText( "smsform" )[1] ); form_state.showError("cmd-sms-subscribe", "error_cmd-sms-subscribe")} },
+			function(){
+				if( $( this ).hasClass("cmd_disabled") ) $("#error_cmd-sms-subscribe").addClass("resp_error_vis__hide") });
+		$("#cmd-sms-subscribe").on("click", function(){
+			if( $( this ).hasClass("cmd_disabled") ) {
+				$( "#error_cmd-sms-subscribe" ).text( errorMsgText( "smsform" )[1] );
+				form_state.showError("cmd-sms-subscribe","error_cmd-sms-subscribe");
+			}
+		});
+		function isOk( sScope ){  //  Return true if action button should be enabled based on the current page / state
+			var isValid = true;
+			switch( sScope ){
+				case "smsform":
+					isValid = (errorMsgText( sScope )[0] === 0) ? true : false;
+				break;
+			}
+			return isValid
+		}
+//  add this ( resp_error_vis__hide ) to resp_t2_
+		function errorMsgText( sScope ){  //  Determine Error Message Text based on Passive Validation Criteria
+			var nMsg = 0, sMsg = "";
+			switch( sScope ){
+				case "smsform":
+					var aMsg = ["Please Correct Errors", "Enter Your Mobile Phone Number", "Check I Agree to Terms"];
+					if( ($( "#subscribeSMS-phone" ).val() === "") || ($( "#subscribeSMS-phone" ).val().indexOf("_") !== -1 ) ){
+						nMsg = 1;
+					}else if( $( "#chkb-sms-terms" ).attr("checked") === undefined ){
+						nMsg = 2;
+					}
+					sMsg = aMsg[nMsg];
+				break;
+			}
+			return [nMsg, sMsg];
+		}  //  errorMsgText end
+//    Passive Validation End
 	$(".js-i--figure").on("click", function( e ){ // icon click hide / show
 		$( this ).next().toggleClass("hidden");
 	});
@@ -209,6 +266,14 @@ function activateNextCard( CardCurrentNo, CardNextNo ){ // Close current card th
 .cmd_disabled, .cmd_locked {
 	background-color: #bbb !important;
 	cursor: default !important;
+}
+.resp_error_vis__show {
+  /*visibility: visible;*/
+  display: block;
+}
+.resp_error_vis__hide {
+  /*visibility: hidden;*/
+  display: none;
 }
 
 /**    Switch Toggle | ZF5 red green    **/
@@ -778,7 +843,7 @@ function activateNextCard( CardCurrentNo, CardNextNo ){ // Close current card th
 							<article class="js-ccc-parent hidden">
 							<!--    Email Subscribe Card begin    -->
 
-<nav id="ccc-1" class="js-ccc-mutex ccc-panel radius text-center ccc-quest QQQQccc-panel__active">
+<nav id="ccc-1" class="js-ccc-mutex ccc-panel radius text-center ccc-quest">
 	<p>Send me promotional emails and discounts<i class="ccc-panel--i">-</i></p>
 </nav>
 <aside class="ccc-panel__content panel hidden">
@@ -975,7 +1040,7 @@ function activateNextCard( CardCurrentNo, CardNextNo ){ // Close current card th
 		<section class="row">
 			<div class="column small-8 no-padding-left">
 				<figure class="resp_full_height"></figure>
-				<input id="subscribeSMS" class="resp_input_brand" name=""
+				<input id="subscribeSMS-phone" class="resp_input_brand" name=""
 				data-inputmask="'mask': '(999) 999-9999'"
 				type="tel" maxlength="15" placeholder="* Mobile Phone Number"
 				value="" aria-required="true" aria-label="Mobile Phone Number"
@@ -985,7 +1050,11 @@ function activateNextCard( CardCurrentNo, CardNextNo ){ // Close current card th
 				<figure class="resp_full_height"></figure>
 				<a id="cmd-sms-subscribe" class="cmd-subs--a button radius resp_btn_teal cmd_disabled">Subscribe</a>
 
-				<aside id="error_cmd-sms-subscribe" class="mdl-tooltip mdl-tooltip--large resp_error_vis__hide" for="cmd-sms-subscribe" data-upgraded=",MaterialTooltip">Please enter all required information</aside>
+				<aside id="error_cmd-sms-subscribe" class="mdl-tooltip mdl-tooltip--large resp_error_vis__hide" for="cmd-sms-subscribe"
+				 style="background-color: #F00;">
+				Please Enter Required Information
+				</aside>
+
 			</div>
 		</section>
 		<figure class="resp_qtr_height"></figure>
@@ -993,7 +1062,7 @@ function activateNextCard( CardCurrentNo, CardNextNo ){ // Close current card th
 		</p>
 		<section class="row">
 			<div class="chkb--div column small-1 text-center">
-				<input class="chkb--input no-margin-bottom" type="checkbox">
+				<input id="chkb-sms-terms" class="chkb--input no-margin-bottom" type="checkbox">
 			</div>
 			<div class="column small-9">
 				<p class="chkb--p no-margin-bottom">I agree to the <a class="resp_u">Terms & Conditions</a></p>
@@ -1050,9 +1119,9 @@ items to ship.</p>
 						<ul class="small-block-grid-1 medium-block-grid-3">
 							<li>
 
-	<strong>Shipping Address:</strong><br>	Scott&nbsp;Krause<br>	1077 W FOSTER AVE<br>	CHICAGO,&nbsp;IL&nbsp;60640<br>	(773) 354-0198<br>
+	<strong>Shipping Address:</strong><br>	Bruce&nbsp;Wayne<br>	1077 W FOSTER AVE<br>	GOTHAM,&nbsp;IL&nbsp;60640<br>	(773) 354-0198<br>
 	</li>
-	<li>	<strong>Billing Address:</strong>	<br>	Scott&nbsp;Krause<br>	1077 W FOSTER AVE<br>	CHICAGO,&nbsp;IL&nbsp;60640<br>	<br>
+	<li>	<strong>Billing Address:</strong>	<br>	Bruce&nbsp;Wayne<br>	1077 W FOSTER AVE<br>	GOTHAM,&nbsp;IL&nbsp;60640<br>	<br>
 	</li>
 	<li>
 	<strong>Payment Type:</strong>	<br>
@@ -1552,7 +1621,7 @@ option.</span></p>
 "logged_in_state" : "logged in",
 "total_cart_count" : "1",
 "e_custom_page_view" : "t",
-"geo_city" : "CHICAGO",
+"geo_city" : "GOTHAM",
 "net90" : "false",
 "order_total" : "26.84",
 "product_qty" : ["1"],
@@ -1565,7 +1634,7 @@ option.</span></p>
 "product_subcategory" : ["Curtains-+-Window-Coverings"],
 "cart_value" : "16.98",
 "geo_state" : "IL",
-"customer_city" : "CHICAGO",
+"customer_city" : "GOTHAM",
 "customer_state" : "IL",
 "product_parent_sku" : ["131013"],
 "customer_status" : "new",
@@ -1746,7 +1815,7 @@ option.</span></p>
 			        if (window.$BV) {
 			            callback();
 			        } else {
-			            $.ajax({
+			            $.ajax({GOTHAM
 			                url: bvapiUrl,
 			                cache: true,
 			                dataType: "script",
@@ -1768,7 +1837,7 @@ $BV.SI.trackTransactionPageView({
 	"tax" : "1.87",
 	"shipping" : "7.99",
 	"total" : "26.84",
-	"city" : "CHICAGO",
+	"city" : "GOTHAM",
 	"state" : "IL",
 	"country" : "USA",
 	"currency" : "USD",
