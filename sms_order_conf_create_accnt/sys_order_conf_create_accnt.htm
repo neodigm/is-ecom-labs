@@ -35,6 +35,8 @@ var monetateT = new Date().getTime();
 <script src="./sys_order_conf_create_accnt_files/lib.ltd.header.js.download"></script>
 <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css" media="all" />
+<script type="text/javascript" async="" src="./order_conf_auth_files/min.google_mdl.js.download"></script>
+<link href="./order_conf_auth_files/min.google_mdl.css" rel="stylesheet" media="screen,print">
 
 
 <!--[if lt IE 9]><script type="text/javascript" src="/media/global/scripts/ie8.js?20170302_1010_872_MST"></script><![endif]-->
@@ -251,9 +253,9 @@ function activateNextCard( CardCurrentNo, CardNextNo ){ // Close current card th
 .ccc-quest:active {
 	background-color: #297FB8;
 }
-
 .ccc-quest svg {
 	fill: #2aa6ca;
+	vertical-align: middle;
 }
 .ccc-quest:hover svg, .ccc-panel__active svg {
 	fill: #FFF !important;
@@ -821,8 +823,8 @@ function noThanks(isPayer) {
 <div class="orderConfirm">
 
 	<article class="js-ccc-parent">
-	<!--    Expr Chk Activate Card begin    -->
-<nav id="ccc-4" class="js-ccc-mutex ccc-panel radius text-center ccc-quest">
+		<!--    Expr Chk Save / Activate Card begin    -->
+<nav id="ccc-5" class="js-ccc-mutex ccc-panel radius text-center ccc-quest">
 <p>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 882.16 617.71" style="width: 34px; height: 34px;">
 <g data-name="Layer 2" id="Layer_2">
@@ -847,16 +849,16 @@ function noThanks(isPayer) {
 <p class="rd-only--p text-center"><i class="fa fa-credit-card fa-2x" aria-hidden="true" style="
 margin-left: 12px;
 float: left;
-"></i> XXXXXXXXXXXX1111</p>
+"></i> ****1111</p>
 </div>
 </div>
 <div class="column small-4 no-padding">
 <figure class="resp_full_height"></figure>
-<a id="cmd-cc-save" class="cmd-subs--a button radius resp_btn_teal">Activate</a>
+<a id="cmd-ec-save-and-activate" class="cmd-subs--a button radius resp_btn_teal">Save &amp; Activate</a>
 </div>
 </section>
 <figure class="resp_full_height"></figure>
-<p>Checkout faster by securely saving your payment information.
+<p>Checkout faster by securely saving your payment information and activating Express Checkout.
 </p>
 <figure class="js-i--figure i--figure"><div class="circle">i</div></figure>
 <aside class="hidden">
@@ -865,43 +867,60 @@ float: left;
 </aside>
 </form>
 </aside>
-	<!--    Expr Chk Activate Card end      -->
+		<!--    Expr Chk Save / Activate Card end      -->
 	</article>
 
-<nav id="ccc-2" class="js-ccc ccc-panel radius text-center ccc-quest">
-	<p>Text me when my order ships<i class="ccc-panel--i">+</i></p>
+	<article class="js-ccc-parent">
+	<!--    SMS Subscribe Card begin    -->
+
+<nav id="ccc-2" class="js-ccc-mutex ccc-panel radius text-center ccc-quest">
+<p>Text me when my order ships<i class="ccc-panel--i">+</i></p>
 </nav>
 <aside class="ccc-panel__content panel hidden">
-	<section class="row">
-		<div class="column small-10 no-padding">
-			<figure class="resp_full_height"></figure>
-			<input id="subscribeSMS" class="resp_input_brand" name=""
-			type="text" maxlength="256" placeholder="Mobile Phone Number"
-			value="" aria-required="true" aria-label="Mobile Phone Number"
-			autocorrect="off" autocomplete="off">
-		</div>
-	</section>
-	<figure class="resp_qtr_height"></figure>
-	<p>Send text reminders to the mobile phone number that I entered.  Message and data rates may apply.  For help, text <strong>HELP</strong> to <strong>12345</strong>.  To opt out text <strong>STOP</strong> to <strong>12345</strong>.
-	</p>
-	<section class="row">
-		<div class="column small-1 text-center"
-		style="padding: 4px 0 0 0;">
-			<input id="sms-input__check" class="no-margin-bottom" style="margin-left: -18px !important;" type="checkbox">
-		</div>
-		<div class="column small-9">
-			<p class="no-margin-bottom" style="padding-left: 0;margin-left: -14px;">I agree to the <a class="resp_u">Terms & Conditions</a></p>
-		</div>
-	</section>
-	<figure class="resp_full_height"></figure>
-	<figure class="js-i--figure" style="text-align: right;margin-right: -12px;margin-bottom: -12px;cursor: pointer;">
-			<i class="fa fa-info-circle  fa-lg" style="color: #999;" aria-hidden="true"></i>
-	</figure>
-	<aside class="hidden">
-		<p class="no-margin-bottom">To change your mobile phone number visit <a class="resp_u">Your Account</a></p>
-		<figure class="resp_half_height"></figure>
-	</aside>
+<form>
+<img src="http://www.lakeside.com/media/global/images/foundation/img/fpo/spinner_lsc.gif" class="spinner hidden" alt="Please Wait">
+<section class="row">
+<div class="column small-8 no-padding-left">
+<figure class="resp_full_height"></figure>
+<input id="subscribeSMS-phone" class="resp_input_brand" name=""
+data-inputmask="'mask': '(999) 999-9999'"
+type="tel" maxlength="15" placeholder="* Mobile Phone Number"
+value="" aria-required="true" aria-label="Mobile Phone Number"
+autocorrect="off">
+</div>
+<div class="column small-2 no-padding">
+<figure class="resp_full_height"></figure>
+<a id="cmd-sms-subscribe" class="cmd-subs--a button radius resp_btn_teal cmd_disabled">Subscribe</a>
+<!--
+<aside id="error_cmd-sms-subscribe" class="mdl-tooltip mdl-tooltip--large resp_error_vis__hide" for="cmd-sms-subscribe"
+style="background-color: #F00;">
+Please Enter Required Information
 </aside>
+-->
+
+</div>
+</section>
+<figure class="resp_qtr_height"></figure>
+<p>Send text reminders to the mobile phone number that I entered.  Message and data rates may apply.  For help, text <strong>HELP</strong> to <strong><span class="brand--lsc__show">58277</span><span class="brand--ltd__show">96237</span></strong>.  To opt out text <strong>STOP</strong> to <strong><span class="brand--lsc__show">58277</span><span class="brand--ltd__show">96237</span></strong>.
+</p>
+<section class="row">
+<div class="chkb--div column small-1 text-center">
+<input id="chkb-sms-terms" class="chkb--input no-margin-bottom" type="checkbox">
+</div>
+<div class="column small-9">
+<p class="chkb--p no-margin-bottom">I agree to the <a class="resp_u">Terms & Conditions</a></p>
+</div>
+</section>
+<figure class="resp_full_height"></figure>
+<figure class="js-i--figure i--figure"><div class="circle">i</div></figure>
+<aside class="hidden">
+<p class="no-margin-bottom">To change your mobile phone number visit <a class="resp_u">Your Account</a></p>
+<figure class="resp_half_height"></figure>
+</aside>
+</form>
+</aside>
+	<!--    SMS Subscribe Card end      -->
+	</article>
 
 <label><input name="/atg/userprofiling/ProfileFormHandler.transientValue.sendPromoEmail" value="true" type="checkbox" checked=""><input name="_D:/atg/userprofiling/ProfileFormHandler.transientValue.sendPromoEmail" value=" " type="hidden"> <div class="inline-block-label"><span class="resp_i">Please send me promotional emails and discounts!</span></div></label>
 
