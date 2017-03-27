@@ -11,10 +11,13 @@
 		<link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Architects+Daughter|Open+Sans|Material+Icons" rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css" media="all" />
 		<section class="row">
-			<header class="column small-12 color-back__neos13 text-center">
+			<header class="column small-12 color-back__neos10 text-center">
 				<h1 class="caption--p__roboto color-text__white text-center">
 UX | Mockup and Interactive Prototype
 				</h1>
+				<p class="caption--p__opensans color-text__white text-center" style="color: #EEE; font-size: 14px;">
+The Interactive Prototype provides <b>technical / kinetic </b> guidance for example depicting how a card is opened, closed, validated and submitted.
+				</p>
 			</header>
 		</section>
 
@@ -34,7 +37,10 @@ UX | Mockup and Interactive Prototype
 <h4 class="caption--p__roboto">Authenticated user</h4>
 
 				<p class="caption--p__opensans">
-This "above the fold" design utilizes the Collapsable Content Card pattern.  The cards are mutually exclusive, meaning that each card can be open or closed individually, but opening one card will close any other open card.  The first card will initially be open.  The cards are asynchronous.  When it is submitted it will temporarily display a spinner and a message (<a href="https://material.io/guidelines/components/snackbars-toasts.html#snackbars-toasts-usage" target="_blank">toast</a>) but the page will not refresh.  The card will disappear after it has been submitted then the next card in the sequence will be opened.  The current thinking is that the user’s participation in <span class="round default label">Installment Payments</span> will have no effect on the post checkout experience.
+This "above the fold" design utilizes the Collapsable Content Card pattern.  The cards are mutually exclusive, meaning that each card can be open or closed individually, but opening one card will close any other open card.  The first card will initially be open.
+				</p>
+				<p class="caption--p__opensans">
+The cards are asynchronous.  When it is submitted it will temporarily display a spinner and a message (<a href="https://material.io/guidelines/components/snackbars-toasts.html#snackbars-toasts-usage" target="_blank">toast</a>) but the page will not refresh.  The card will disappear after it has been submitted then the next card in the sequence will be opened.  The current thinking is that the user’s participation in <span class="round default label">Installment Payments</span> will have no effect on the post checkout experience.
 				</p>
 			</nav>
 			<div class="column small-12 medium-10">
@@ -139,6 +145,9 @@ A Collapsable Content Card may have a small “I” icon in the lower right corn
 </body>
 
 	<style>
+.label {
+	opacity: .56;
+}
 table {width: 100%;}
 hr {
     border: 0;
