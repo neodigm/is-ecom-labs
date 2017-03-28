@@ -154,6 +154,10 @@ Payment Saved <span class="round success label">Express Checkout</span>
 			if( $("#js-option-3").prop("checked") ) sHrefOpts = sHrefOpts + "opt3&";
 			if( $("#js-option-4").prop("checked") ) sHrefOpts = sHrefOpts + "opt4&";
 			//sHref = $(".js-launch-1").attr("data-href") + sHref;
+
+localStorage.setItem("sHrefOpts", sHrefOpts);
+alert("sol | " + localStorage.getItem("sHrefOpts") );
+
 			$(".js-launch-1").each( function(){
 				sHref = $( this ).attr("data-href") + sHrefOpts;
 				$( this ).attr("href", sHref );
