@@ -93,82 +93,12 @@ $( document ).ready(function(){
 function docEventReady(){
 	'use strict';
 	$(document).foundation();
-	$("#subscribeSMS").inputmask();
+	$("#subscribeSMS-phone").inputmask();
 
-	$(".js-i--figure").on("click", function( e ){ // icon click hide / show
-		$( this ).next().toggleClass("hidden");
-	});
-	$(".js-ccc-mutex").on("click", function( e ){  //  Collapsible Content Card | Mutually Exclusive
-		if( !$( this ).hasClass("ccc-panel__active") ){
-			$(".ccc-panel__active").click();
-		}
-		cccTap( this );
-	});
-	$(".js-ccc").on("click", function( e ){  //  Collapsible Content Card | Not Mutually Exclusive
-		cccTap( this );
-	});
-	function cccTap( elCard ){ // Card element action
-		$( elCard ).toggleClass("ccc-panel__active").next().toggleClass("hidden");
-		$( elCard ).find("i").text(( $( elCard ).hasClass("ccc-panel__active") )?"-":"+");
-	}
-	$("#cmd-email-subscribe").on("click", function( e ) {
-		var nCard = 1;
-		if( !$( this ).is(".cmd_disabled, .cmd_locked") ){
-			var data = {message: "Check your inbox for your exclusive discounts and start shopping TODAY!", timeout: 3400};
-			$("#gmdl-toast")[0].MaterialSnackbar.showSnackbar(data);
-			waitingCard( nCard );
-			setTimeout(function(){
-				activateNextCard( nCard, 2 ); // swap cards
-			}, 3500);
-		}
-	});
-	$(".js-chkb--input__nothanks").on("click", function( e ){
-		var nCard = 1;
-		if( !$( this ).is(".cmd_disabled, .cmd_locked") ){
-			var data = {message: "We will no longer ask you to subscribe to email offers.", timeout: 2400};
-			$("#gmdl-toast")[0].MaterialSnackbar.showSnackbar(data);
-			setTimeout(function(){
-				activateNextCard( nCard, 2 ); // swap cards
-			}, 1800);
-		}
-	});
-	$("#cmd-sms-subscribe").on("click", function( e ) {
-		// not disabled or locked
-		var nCard = 2;
-		if( !$( this ).is(".cmd_disabled, .cmd_locked") ){
-			var data = {message: "Please respond to the text message sent to your phone.", timeout: 3400};
-			$("#gmdl-toast")[0].MaterialSnackbar.showSnackbar(data);
-			waitingCard( nCard );
-			setTimeout(function(){
-				activateNextCard( nCard, 3 ); // swap cards
-			}, 3500);
-		}
-	});
-	$("#cmd-cc-save").on("click", function( e ) {
-		var nCard = 3;
-		//if( IsSmall() ){
-			var data = {message: "Payment information saved.", timeout: 3400};
-			$("#gmdl-toast")[0].MaterialSnackbar.showSnackbar(data);
-			waitingCard( nCard );
-			setTimeout(function(){
-				activateNextCard( nCard, 0 ); // swap cards
-			}, 3500);
-		//}
+	$("#chk-sms-yes-no").on("change", function( e ) {
+		$("#sms--aside").toggleClass("hidden");
 	});
 } // docEventReady End
-
-function waitingCard( CardCurrentNo ){  //  Mockup of card in waiting state
-		$("#ccc-" + CardCurrentNo ).find("p").text("Thank You!");
-		$("#ccc-" + CardCurrentNo ).next().addClass("state_sec__blur");
-		$("#ccc-" + CardCurrentNo ).next().find(".spinner").toggleClass("hidden");
-		$("#ccc-" + CardCurrentNo ).next().find(".cmd-subs--a").addClass("cmd_locked");
-}
-
-function activateNextCard( CardCurrentNo, CardNextNo ){ // Close current card then conditionally open the next
-	var $nextCard = $("#ccc-" + CardNextNo);
-	if( ($nextCard.length > 0) && !$nextCard.hasClass("ccc-panel__active") ){ $nextCard.click(); }
-	$("#ccc-" + CardCurrentNo ).parent().remove();
-}
 </script>
 
 
@@ -821,27 +751,37 @@ function noThanks(isPayer) {
 
 
 <div class="orderConfirm">
+<style>
+	.swCard--article {background-color: #FAFAFA; height: 76px;border: 1px solid #EEE;border-radius: 4px;}
+	.swCard--article .swCard--div__box {background-color: #FFFFFF; height: 74px;border: 1px solid #E4E4E4;border-radius: 4px;}
+	.swCard--article .swCard--div__box > p {text-align: center;font-size 11px;margin: 2px 0 8px 0; font-weight: 300; font-family: 'Roboto', sans-serif;}
+	.swCard--article .swCard--div__box > nav {width: 58px; margin: 0 auto;}
+	.swCard--article .swCard--div__desc .swCard--p__caption {font-size: 18px !important; font-weight: 300; font-family: 'Roboto', sans-serif; margin-bottom: 0;}
+	.swCard--article .swCard--div__desc .swCard--p__detail {font-size: 11px;margin: 2px 0 8px 0; font-weight: 300; font-family: 'Roboto', sans-serif;line-height: 1;}
+	.swCard--article i {margin-left: 6px;color: #632434};
+	@media only screen and (max-width: 47.9375em) {  /* small */
+		.swCard--article .swCard--div__desc .swCard--p__caption {font-size: 14px !important}
+		.swCard--article .swCard--div__desc .swCard--p__detail {font-size: 10px;}
+	}
+</style>
 
-<article style="background-color: #FAFAFA; height: 76px;border: 1px solid #EEE;border-radius: 4px;">
+<article class="swCard--article">
 	<section class="row">
-		<div class="column small-3 no-padding"
-		 style="background-color: #FFFFFF; height: 74px;border: 1px solid #E4E4E4;border-radius: 4px;">
-			<aside QQQstyle="background-color: #FFFFFF; height: 74px;border: 1px solid #E4E4E4;border-radius: 4px;width: 112px;">
-				<p style="text-align: center;font-size 11px;margin: 2px 0 8px 0; font-weight: 300; font-family: 'Roboto', sans-serif;">Activate</p>
-				<div style="width: 58px; margin: 0 auto;">
-					<div class="switch round">
-						<input id="chk-expc-yes-no" type="checkbox" checked="">
-						<label for="chk-expc-yes-no">
-							<span class="switch-on">Yes</span>
-							<span class="switch-off">No</span>
-						</label>
-					</div>
+		<div class="swCard--div__box column small-3 no-padding">
+			<p>Activate</p>
+			<nav>
+				<div class="switch round">
+					<input id="chk-expc-yes-no" type="checkbox" checked="">
+					<label for="chk-expc-yes-no">
+						<span class="switch-on">Yes</span>
+						<span class="switch-off">No</span>
+					</label>
 				</div>
-			</aside>
+			</nav>
 		</div>
-		<div class="column small-7">
-			<p style="font-size: 18px !important; font-weight: 300; font-family: 'Roboto', sans-serif; margin-bottom: 0;">
-			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 882.16 617.71" style="width: 34px; height: 34px; vertical-align: middle;fill: #632434;">
+		<div class="swCard--div__desc column small-7">
+			<p class="swCard--p__caption">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 882.16 617.71" style="width: 30px; height: 30px; vertical-align: middle;fill: #632434;">
 			<path class="cls-1" d="M274.13 455.49c-10.84 0-16.38-8.22-12.31-18.27l147.6-364a22.8 22.8 0 0 0-9.87-27.77l-11.15-6.17a19.77 19.77 0 0 1-7.77-26.77l1.27-2.3a19.77 19.77 0 0 1 26.78-7.77l43.91 24.15a22.8 22.8 0 0 1 9.87 27.77l-138.2 340.81c-4.08 10 1.46 18.27 12.31 18.27H677c10.84 0 23-8.22 27.12-18.27l137.62-339.3A19.77 19.77 0 0 1 867.42 45l2.43 1a19.77 19.77 0 0 1 10.86 25.68L732.5 437.22c-4.07 10-16.28 18.27-27.12 18.27z"></path>
 			<ellipse class="cls-1" cx="312.1" cy="544.86" rx="74.27" ry="58.56" transform="rotate(-71.45 312.083 544.857)"></ellipse>
 			<ellipse class="cls-1" cx="639.33" cy="544.86" rx="74.27" ry="58.56" transform="rotate(-71.45 639.315 544.856)"></ellipse>
@@ -852,69 +792,89 @@ function noThanks(isPayer) {
 			</g>
 			</svg> &nbsp; Express Checkout</p>
 			<figure class="resp_qtr_height"></figure>
-			<p style="font-size 11px;margin: 2px 0 8px 0; font-weight: 300; font-family: 'Roboto', sans-serif;line-height: 1;">Checkout faster by activating Express Checkout.
+			<p class="swCard--p__detail">Checkout faster by activating Express Checkout.</p>
+		</div>
+	</section>
+</article>
+
+<figure class="resp_full_height"></figure>
+
+<article class="swCard--article">
+	<section class="row">
+		<div class="swCard--div__box column small-3 no-padding">
+			<p>Subscribe</p>
+			<nav>
+				<div class="switch round">
+					<input id="chk-sms-yes-no" type="checkbox">
+					<label for="chk-sms-yes-no">
+						<span class="switch-on">Yes</span>
+						<span class="switch-off">No</span>
+					</label>
+				</div>
+			</nav>
+		</div>
+		<div class="swCard--div__desc column small-7">
+			<p class="swCard--p__caption">
+<i class="fa fa-commenting-o" aria-hidden="true"></i> &nbsp;
+Shipment Notification</p>
+			<figure class="resp_half_height"></figure>
+			<p class="swCard--p__detail">Please text me when my order ships.</p>
+		</div>
+	</section>
+</article>
+
+<aside id="sms--aside" class="hidden"
+style="background-color: #FDFDFD; border: 1px solid #EEE;border-radius: 4px;">
+
+	<figure class="resp_full_height"></figure>
+	<section class="row">
+		<div class="column small-10">
+			<input id="subscribeSMS-phone" class="resp_input_brand" name=""
+			data-inputmask="'mask': '(999) 999-9999'"
+			type="tel" maxlength="15" placeholder="* Mobile Phone Number"
+			value="" aria-required="true" aria-label="Mobile Phone Number"
+			autocorrect="off">
+			<figure class="resp_half_height"></figure>
+			<section class="row">
+				<div class="chkb--div column small-1 text-center">
+					<input id="chkb-sms-terms" class="chkb--input no-margin-bottom" type="checkbox">
+				</div>
+				<div class="column small-9">
+					<p class="chkb--p no-margin-bottom">I agree to the <a class="resp_u">Terms & Conditions</a></p>
+				</div>
+			</section>
+		</div>
+	</section>
+	<figure class="resp_full_height"></figure>
+</aside>
+
+<figure class="resp_full_height"></figure>
+
+<article class="swCard--article">
+	<section class="row">
+		<div class="swCard--div__box column small-3 no-padding">
+			<p>Subscribe</p>
+			<nav>
+				<div class="switch round">
+					<input id="chk-email-yes-no" type="checkbox" checked="">
+					<label for="chk-email-yes-no">
+						<span class="switch-on">Yes</span>
+						<span class="switch-off">No</span>
+					</label>
+				</div>
+			</nav>
+		</div>
+		<div class="swCard--div__desc column small-7">
+			<p class="swCard--p__caption">
+<i class="fa fa-envelope-o" aria-hidden="true"></i> &nbsp;
+Sign Up & Save!</p>
+			<figure class="resp_half_height"></figure>
+			<p class="swCard--p__detail">Please send me promotional emails and discounts!
 			</p>
 		</div>
 	</section>
 </article>
 <figure class="resp_full_height"></figure>
-
-
-	<article style="background-color: #FAFAFA; height: 76px;border: 1px solid #EEE;border-radius: 4px;">
-		<section class="row">
-			<div class="column small-3 no-padding"
-		 style="background-color: #FFFFFF; height: 74px;border: 1px solid #E4E4E4;border-radius: 4px;">
-				<p style="text-align: center;font-size 11px;margin: 2px 0 8px 0; font-weight: 300; font- font-weight: 300; font-family: 'Roboto', sans-serif;family: 'Roboto', sans-serif;">Subscribe</p>
-				<div style="width: 58px; margin: 0 auto;">
-					<div class="switch round">
-						<input id="chk-sms-yes-no" type="checkbox">
-						<label for="chk-sms-yes-no">
-							<span class="switch-on">Yes</span>
-							<span class="switch-off">No</span>
-						</label>
-					</div>
-				</div>
-			</div>
-			<div class="column small-7">
-				<p style="font-size: 18px !important; font-weight: 300; font-family: 'Roboto', sans-serif; margin-bottom: 0;">
-<i class="fa fa-commenting-o fa-lg" aria-hidden="true"
-style="margin-left: 6px; color: #632434;"></i> &nbsp;
-Shipment Notification</p>
-				<figure class="resp_half_height"></figure>
-				<p style="font-size 11px;margin: 2px 0 8px 0; font-weight: 300; font-family: 'Roboto', sans-serif;line-height: 1;">Text me when my order ships.
-				</p>
-			</div>
-		</section>
-	</article>
-	<figure class="resp_full_height"></figure>
-
-	<article style="background-color: #FAFAFA; height: 76px;border: 1px solid #EEE;border-radius: 4px;">
-		<section class="row">
-			<div class="column small-3 no-padding"
-		 style="background-color: #FFFFFF; height: 74px;border: 1px solid #E4E4E4;border-radius: 4px;">
-				<p style="text-align: center;font-size 11px;margin: 2px 0 8px 0; font-weight: 300; font- font-weight: 300; font-family: 'Roboto', sans-serif;family: 'Roboto', sans-serif;">Subscribe</p>
-				<div style="width: 58px; margin: 0 auto;">
-					<div class="switch round">
-						<input id="chk-email-yes-no" type="checkbox" checked="">
-						<label for="chk-email-yes-no">
-							<span class="switch-on">Yes</span>
-							<span class="switch-off">No</span>
-						</label>
-					</div>
-				</div>
-			</div>
-			<div class="column small-7">
-				<p style="font-size: 18px !important; font-weight: 300; font-family: 'Roboto', sans-serif; margin-bottom: 0;">
-<i class="fa fa-envelope-o fa-lg" aria-hidden="true"
-style="margin-left: 6px; color: #632434;"></i> &nbsp;
-Sign Up & Save!</p>
-				<figure class="resp_half_height"></figure>
-				<p style="font-size 11px;margin: 2px 0 8px 0; font-weight: 300; font-family: 'Roboto', sans-serif;line-height: 1;">Please send me promotional emails and discounts!
-				</p>
-			</div>
-		</section>
-	</article>
-	<figure class="resp_full_height"></figure>
 
 <!--
 <label>
