@@ -235,7 +235,14 @@ $("#cmd-sms-subscribe").hover(
 			}, 3500);
 		//}
 	});
-
+function setLineBreak( sSelect ){ //
+	$( sSelect ).each(function(){
+		var p_height = $( this ).css("height").replace("px", "");
+		if( p_height >= 29 ){
+			$( this ).parent().addClass("ccc-quest__linebreak");
+		}
+	}
+}
 } // docEventReady End
 
 function waitingCard( CardCurrentNo ){  //  Mockup of card in waiting state
@@ -300,7 +307,7 @@ function activateNextCard( CardCurrentNo, CardNextNo ){ // Close current card th
 	border-width: 1px;
 	border-color: #BBB;
 	margin-bottom: 16px;
-	padding: 14px 12px 2px 8px;
+	padding: 14px 12px 2px 8px !important;
 	background: #f2faff;
 	color: #333333;
 	border-radius: 3px;
