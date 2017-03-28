@@ -70,18 +70,19 @@ var form_state = {
 };
 $( document ).ready(function(){
 	docEventReady();
+	var window_location_search = localStorage.getItem("sHrefOpts");  //  move querystring to local storage
 	sClose ="";
-	if( window.location.search.indexOf("opt1") !== -1 ){
+	if( window_location_search.indexOf("opt1") !== -1 ){
 		sClose += "ccc-1,";
 	}
-	if( window.location.search.indexOf("opt2") !== -1 ){
+	if( window_location_search.indexOf("opt2") !== -1 ){
 		sClose += "ccc-2,";
 	}
-	if( (window.location.search.indexOf("opt3") !== -1) && (window.location.search.indexOf("opt4") !== -1) ){
+	if( (window_location_search.indexOf("opt3") !== -1) && (window_location_search.indexOf("opt4") !== -1) ){
 		sClose += "ccc-3,ccc-4,ccc-5,";
-	} else if ( window.location.search.indexOf("opt3") !== -1 ) {
+	} else if ( window_location_search.indexOf("opt3") !== -1 ) {
 		sClose += "ccc-3,ccc-4,ccc-5,";
-	} else if ( window.location.search.indexOf("opt4") !== -1 ) {
+	} else if ( window_location_search.indexOf("opt4") !== -1 ) {
 		sClose += "ccc-3,ccc-5,";
 	} else {
 		sClose += "ccc-3,ccc-4,";
@@ -153,7 +154,6 @@ $("#cmd-sms-subscribe").hover(
 		}  //  errorMsgText end
 //    Passive Validation End
 	$(".js-i--figure").on("click", function( e ){ // icon click hide / show
-console.log("sol | " + localStorage.getItem("sHrefOpts") );
 		$( this ).next().toggleClass("hidden");
 	});
 	$(".js-ccc-mutex").on("click", function( e ){  //  Collapsible Content Card | Mutually Exclusive
