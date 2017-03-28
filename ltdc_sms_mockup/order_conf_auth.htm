@@ -71,6 +71,7 @@ var form_state = {
 $( document ).ready(function(){
 	docEventReady();
 	var window_location_search = localStorage.getItem("sHrefOpts");  //  move querystring to local storage
+	console.log("sol | " + window_location_search );
 	sClose ="";
 	if( window_location_search.indexOf("opt1") !== -1 ){
 		sClose += "ccc-1,";
