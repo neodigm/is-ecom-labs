@@ -235,13 +235,13 @@ $("#cmd-sms-subscribe").hover(
 			}, 3500);
 		//}
 	});
-function setLineBreak( sSelect ){ //
+function setLineBreak( sSelect ){
 	$( sSelect ).each(function(){
 		var p_height = $( this ).css("height").replace("px", "");
 		if( p_height >= 29 ){
 			$( this ).parent().addClass("ccc-quest__linebreak");
 		}
-	}
+	});
 }
 } // docEventReady End
 
