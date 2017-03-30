@@ -716,7 +716,7 @@ function noThanks(isPayer) {
 			<!-- /*************************
 			* START Left Container Section
 			**************************/ -->
-			<div class="columns medium-5">
+			<div class="columns medium-4">
 				<!-- /*************************
 				* START Create Account Lead-In paragraph
 				**************************/ -->
@@ -731,14 +731,27 @@ function noThanks(isPayer) {
 			<!-- /*************************
 			* START Right Container Section
 			**************************/ -->
-			<div class="columns medium-5 small-padding-top right">
+			<div class="columns medium-6 small-padding-top right">
 
 				<!-- /*************************
 				* START Create Account form
 				**************************/ -->
 
-				<form id="loginPer" novalidate="novalidate" action="https://stage2.lakeside.com/checkout/order_commit.jsp?_DARGS=/checkout/includes/order_commit_create_account_responsive.jsp.newPersonalAccount" class="resp_input_brand" method="post"><input name="_dyncharset" value="ISO-8859-1" type="hidden"><input name="_dynSessConf" value="-6669072897179327582" type="hidden"><input spellcheck="false" placeholder="* First Name" autocomplete="off" type="text" autocapitalize="off" aria-label="First Name" id="create_account_first_name" title="First Name" maxlength="19" name="/atg/userprofiling/ProfileFormHandler.address.firstName" value="Trevor" autocorrect="off" aria-required="true"><input name="_D:/atg/userprofiling/ProfileFormHandler.address.firstName" value=" " type="hidden"><input spellcheck="false" placeholder="* Last Name" autocomplete="off" type="text" autocapitalize="off" aria-label="Last Name" id="create_account_last_name" title="Last Name" maxlength="20" name="/atg/userprofiling/ProfileFormHandler.address.lastName" value="Goodchild" autocorrect="off" aria-required="true"><input name="_D:/atg/userprofiling/ProfileFormHandler.address.lastName" value=" " type="hidden"><input spellcheck="false" placeholder="* Email" class="createaccount-email no-margin-bottom" autocomplete="off" type="email" autocapitalize="off" aria-label="Email" id="create_account_email" title="Email" maxlength="37" name="/atg/userprofiling/ProfileFormHandler.value.email" value="dduck@disney.com" autocorrect="off" aria-required="true"><input name="_D:/atg/userprofiling/ProfileFormHandler.value.email" value=" " type="hidden">
-
+				<form id="loginPer" novalidate="novalidate" action="https://stage2.lakeside.com/checkout/order_commit.jsp?_DARGS=/checkout/includes/order_commit_create_account_responsive.jsp.newPersonalAccount" class="resp_input_brand" method="post">
+<section class="row">
+	<div class="column small-10 medium-5 small-no-padding no-padding-left">
+		<input name="_dyncharset" value="ISO-8859-1" type="hidden">
+		<input name="_dynSessConf" value="-6669072897179327582" type="hidden">
+		<input spellcheck="false" placeholder="* First Name" autocomplete="off" type="text" autocapitalize="off" aria-label="First Name" id="create_account_first_name" title="First Name" maxlength="19" name="/atg/userprofiling/ProfileFormHandler.address.firstName" value="Bruce" autocorrect="off" aria-required="true">
+		<input name="_D:/atg/userprofiling/ProfileFormHandler.address.firstName" value=" " type="hidden">
+	</div>
+	<div class="column small-10 medium-5 small-no-padding no-padding">
+		<input spellcheck="false" placeholder="* Last Name" autocomplete="off" type="text" autocapitalize="off" aria-label="Last Name" id="create_account_last_name" title="Last Name" maxlength="20" name="/atg/userprofiling/ProfileFormHandler.address.lastName" value="Wayne" autocorrect="off" aria-required="true">
+		<input name="_D:/atg/userprofiling/ProfileFormHandler.address.lastName" value=" " type="hidden">
+	</div>
+</section>
+					<input spellcheck="false" placeholder="* Email" class="createaccount-email no-margin-bottom" autocomplete="off" type="email" autocapitalize="off" aria-label="Email" id="create_account_email" title="Email" maxlength="37" name="/atg/userprofiling/ProfileFormHandler.value.email" value="bwayne@waynetech.io" autocorrect="off" aria-required="true">
+					<input name="_D:/atg/userprofiling/ProfileFormHandler.value.email" value=" " type="hidden">
 					<!-- /*************************
 					* standard form error messaging below
 					**************************/ -->
@@ -747,8 +760,18 @@ function noThanks(isPayer) {
 
 					<p class="no-padding"><em>Email Address will be used as your future login.</em></p>
 
-					<input title="Confirm Email" maxlength="37" placeholder="* Confirm Email" name="/atg/userprofiling/ProfileFormHandler.transientValue.confirmEmail" value="" type="hidden" aria-required="true" aria-label="Confirm Email"><input name="_D:/atg/userprofiling/ProfileFormHandler.transientValue.confirmEmail" value=" " type="hidden"><input spellcheck="false" placeholder="* Password" autocomplete="off" type="password" autocapitalize="off" aria-label="Password" id="create_account_password" title="Password" maxlength="20" name="/atg/userprofiling/ProfileFormHandler.transientValue.password" value="" autocorrect="off" aria-required="true"><input name="_D:/atg/userprofiling/ProfileFormHandler.transientValue.password" value=" " type="hidden"><input spellcheck="false" placeholder="* Confirm Password" autocomplete="off" type="password" autocapitalize="off" aria-label="Confirm Password" id="create_account_confirm_password" title="Confirm Password" maxlength="20" name="/atg/userprofiling/ProfileFormHandler.value.confirmPassword" value="" autocorrect="off" aria-required="true"><input name="_D:/atg/userprofiling/ProfileFormHandler.value.confirmPassword" value=" " type="hidden">
-
+					<section class="row">
+						<div class="column small-10 medium-5 small-no-padding no-padding-left">
+							<input title="Confirm Email" maxlength="37" placeholder="* Confirm Email" name="/atg/userprofiling/ProfileFormHandler.transientValue.confirmEmail" value="" type="hidden" aria-required="true" aria-label="Confirm Email">
+							<input name="_D:/atg/userprofiling/ProfileFormHandler.transientValue.confirmEmail" value=" " type="hidden">
+							<input spellcheck="false" placeholder="* Password" autocomplete="off" type="password" autocapitalize="off" aria-label="Password" id="create_account_password" title="Password" maxlength="20" name="/atg/userprofiling/ProfileFormHandler.transientValue.password" value="" autocorrect="off" aria-required="true">
+						</div>
+						<div class="column small-10 medium-5 small-no-padding no-padding">
+							<input name="_D:/atg/userprofiling/ProfileFormHandler.transientValue.password" value=" " type="hidden">
+							<input spellcheck="false" placeholder="* Confirm Password" autocomplete="off" type="password" autocapitalize="off" aria-label="Confirm Password" id="create_account_confirm_password" title="Confirm Password" maxlength="20" name="/atg/userprofiling/ProfileFormHandler.value.confirmPassword" value="" autocorrect="off" aria-required="true">
+							<input name="_D:/atg/userprofiling/ProfileFormHandler.value.confirmPassword" value=" " type="hidden">
+						</div>
+					</section>
 
 <div class="orderConfirm">
 <style>
@@ -942,7 +965,7 @@ Sign Up & Save!</p>
 					<form id="forgot" novalidate="novalidate" action="https://stage2.lakeside.com/checkout/order_commit.jsp?_DARGS=/checkout/includes/order_commit_create_account_responsive.jsp.forgotPassword" method="post"><input name="_dyncharset" value="ISO-8859-1" type="hidden"><input name="_dynSessConf" value="-6669072897179327582" type="hidden">
 						<p class="align-center">Please enter the email address associated with your Account. We will email your Username and a link to a page where you can easily create a New Password.</p>
 
-						<input id="forgotPassword-email" title="Email Address" placeholder="* Email Address" name="/atg/userprofiling/ForgotPasswordHandler.value.email" value="dduck@disney.com" type="email"><input name="_D:/atg/userprofiling/ForgotPasswordHandler.value.email" value=" " type="hidden"><input id="forgotPassword-email1" name="/atg/userprofiling/ForgotPasswordHandler.successMsg" value="" class="hidden" type="text"><input name="_D:/atg/userprofiling/ForgotPasswordHandler.successMsg" value=" " type="hidden">
+						<input id="forgotPassword-email" title="Email Address" placeholder="* Email Address" name="/atg/userprofiling/ForgotPasswordHandler.value.email" value="bwayne@waynetech.io" type="email"><input name="_D:/atg/userprofiling/ForgotPasswordHandler.value.email" value=" " type="hidden"><input id="forgotPassword-email1" name="/atg/userprofiling/ForgotPasswordHandler.successMsg" value="" class="hidden" type="text"><input name="_D:/atg/userprofiling/ForgotPasswordHandler.successMsg" value=" " type="hidden">
                         <div class="columns medium-10 align-center medium-no-padding-right medium-no-padding-left small-no-padding-right small-no-padding-left">
 						    <input id="passfound" name="/atg/userprofiling/ForgotPasswordHandler.forgotPassword" value="Continue" class="button radius resp_btn_brand expand" type="submit"><input name="_D:/atg/userprofiling/ForgotPasswordHandler.forgotPassword" value=" " type="hidden">
  </div>	<input name="_DARGS" value="/checkout/includes/order_commit_create_account_responsive.jsp.forgotPassword" type="hidden"></form>
@@ -983,9 +1006,9 @@ items to ship.</p>
 						<ul class="small-block-grid-1 medium-block-grid-3">
 							<li>
 
-	<strong>Shipping Address:</strong><br>	Trevor&nbsp;Goodchild<br>	7070 Foster Ave.<br>	Chicago,&nbsp;IL&nbsp;60010<br>	(388) 377-3778<br>
+	<strong>Shipping Address:</strong><br>	Bruce&nbsp;Wayne<br>	7070 Foster Ave.<br>	Chicago,&nbsp;IL&nbsp;60010<br>	(388) 377-3778<br>
 	</li>
-	<li>	<strong>Billing Address:</strong>	<br>	Trevor&nbsp;Goodchild<br>	7070 Foster Ave.<br>	Chicago,&nbsp;IL&nbsp;60010<br>	<br>
+	<li>	<strong>Billing Address:</strong>	<br>	Bruce&nbsp;Wayne<br>	7070 Foster Ave.<br>	Chicago,&nbsp;IL&nbsp;60010<br>	<br>
 	</li>
 	<li>
 	<strong>Payment Type:</strong>	<br>
@@ -993,7 +1016,7 @@ items to ship.</p>
 	<br>	XXXXXXXXXXXX1111
 	(expires 5/2019)<br>	Order Amount: $39.70<br>
 	</li>	</ul>
- <p>An order confirmation will be sent to: <strong>dduck@disney.com</strong></p>
+ <p>An order confirmation will be sent to: <strong>bwayne@waynetech.io</strong></p>
 					</div>
 				</div>
 
@@ -1510,7 +1533,7 @@ option.</span></p>
 "customer_id" : "6658380004",
 "product_subcategory_id" : ["cat80007"],
 "page_channel" : "checkout-order-confirm",
-"email_address" : "dduck@disney.com"
+"email_address" : "bwayne@waynetech.io"
 				};
 			</script>
 			<script type="text/javascript">
@@ -1715,7 +1738,7 @@ $BV.SI.trackTransactionPageView({
 
 	],
 	"userId" : "6658380004",
-	"email" : "dduck@disney.com",
+	"email" : "bwayne@waynetech.io",
 	"nickname" : ""
 });
 </script>
