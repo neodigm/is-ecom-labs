@@ -55,6 +55,7 @@
 
 <script>
 /**    Mockup JS    **/
+//    Passive Validation Init Object Begin
 var form_state = {
 	doc_ready: false,
 	"clickable"	: function( sId, bEnabled ){
@@ -68,8 +69,10 @@ var form_state = {
 		}
 	}
 };
+//    Passive Validation Init Object End
 $( document ).ready(function(){
 	docEventReady();
+	//  state simulation logic begin
 	var window_location_search = localStorage.getItem("sHrefOpts");  //  move querystring to local storage
 	console.log("sol | " + window_location_search );
 	sClose ="";
@@ -88,7 +91,6 @@ $( document ).ready(function(){
 	} else {
 		sClose += "ccc-3,ccc-4,";
 	}
-
 	$(".js-ccc-parent").each(function(){
 		$elNav = $( this ).find("nav");
 		if( sClose.indexOf( $elNav.attr("id") ) === -1){
@@ -98,11 +100,8 @@ $( document ).ready(function(){
 		}
 	});
 	clickNextCard();
+	//  state simulation logic end
 });
-
-function clickNextCard(){  //  Click the next visible card
-		$(".js-ccc-parent:not(.hidden)").first().find("nav").click();
-}
 
 function docEventReady(){
 	'use strict';
@@ -158,8 +157,14 @@ $("#cmd-sms-subscribe").hover(
 		$( this ).next().toggleClass("hidden");
 	});
 	$(".js-ccc-mutex").on("click", function( e ){  //  Collapsible Content Card | Mutually Exclusive
+		//  Im thinking that cards that have been posted should not be subject to ME.
 		if( !$( this ).hasClass("ccc-panel__active") ){
-			$(".ccc-panel__active").click();
+			$(".ccc-panel__active").each(function(){
+				if( !$( this ).parent().hasClass("js-ccc-posted") ){
+					$( this ).click();
+					return true;
+				}
+			});
 		}
 		cccTap( this );
 	});
@@ -170,98 +175,61 @@ $("#cmd-sms-subscribe").hover(
 		$( elCard ).toggleClass("ccc-panel__active").next().toggleClass("hidden");
 		$( elCard ).find("i").text(( $( elCard ).hasClass("ccc-panel__active") )?"-":"+");
 	}
+
 	$("#cmd-email-subscribe").on("click", function( e ) {
 		var nCard = 1;
-		if( !$( this ).is(".cmd_disabled, .cmd_locked") ){// not disabled or locked
 			var data = {message: "Check your inbox for your exclusive discounts and start shopping TODAY!", timeout: 3400};
 			$("#gmdl-toast")[0].MaterialSnackbar.showSnackbar(data);
 			waitingCard( nCard );
 			setTimeout(function(){
-				activateNextCard( nCard, 2 ); // swap cards
+				cccPanelContentPost( "ccc-" + nCard );
+				activateNextCard( nCard, 2 );
 			}, 3500);
-		}
 	});
+/*
 	$(".js-chkb--input__nothanks").on("click", function( e ){
 		var nCard = 1;
-		if( !$( this ).is(".cmd_disabled, .cmd_locked") ){// not disabled or locked
+		if( !$( this ).is(".cmd_disabled, .cmd_locked") ){
 			var data = {message: "We will no longer ask you to subscribe to email offers.", timeout: 2400};
 			$("#gmdl-toast")[0].MaterialSnackbar.showSnackbar(data);
 			setTimeout(function(){
-				activateNextCard( nCard, 2 ); // swap cards
+				activateNextCard( nCard, 2 );
 			}, 1800);
 		}
 	});
-	$("#cmd-sms-subscribe").on("click", function( e ) {
-		var nCard = 2;
-		if( !$( this ).is(".cmd_disabled, .cmd_locked") ){// not disabled or locked
-			var data = {message: "Please respond to the text message sent to your phone.", timeout: 3400};
-			$("#gmdl-toast")[0].MaterialSnackbar.showSnackbar(data);
-			waitingCard( nCard );
-			setTimeout(function(){
-				activateNextCard( nCard, 3 ); // swap cards
-			}, 3500);
-		}
-	});
-	$("#cmd-ec-save").on("click", function( e ) {
-		var nCard = 3;
-		//if( IsSmall() ){
-			var data = {message: "Payment Information Saved", timeout: 3400};
-			$("#gmdl-toast")[0].MaterialSnackbar.showSnackbar(data);
-			waitingCard( nCard );
-			setTimeout(function(){
-				activateNextCard( nCard, 0 ); // swap cards
-			}, 3500);
-		//}
-	});
-	$("#cmd-ec-activate").on("click", function( e ) {
-		var nCard = 4;
-		//if( IsSmall() ){
-			var data = {message: "Express Checkout Activated", timeout: 3400};
-			$("#gmdl-toast")[0].MaterialSnackbar.showSnackbar(data);
-			waitingCard( nCard );
-			setTimeout(function(){
-				activateNextCard( nCard, 0 ); // swap cards
-			}, 3500);
-		//}
-	});
-	$("#cmd-ec-save-and-activate").on("click", function( e ) {
-		var nCard = 5;
-		//if( IsSmall() ){
-			var data = {message: "Payment Information Saved & Express Checkout Activated", timeout: 3400};
-			$("#gmdl-toast")[0].MaterialSnackbar.showSnackbar(data);
-			waitingCard( nCard );
-			setTimeout(function(){
-				activateNextCard( nCard, 0 ); // swap cards
-			}, 3500);
-		//}
-	});
-
-function setLineBreak( sSelect ){
-	$( sSelect ).each(function(){
-		var p_height = $( this ).css("height").replace("px", "");
-		if( p_height >= 29 ){
-			$( this ).parent().addClass("ccc-quest__linebreak");
-		}
-	});
-}
+*/
 } // docEventReady End
+</script>
 
-function waitingCard( CardCurrentNo ){  //  Mockup of card in waiting state
-		$("#ccc-" + CardCurrentNo ).find("p").text("Thank You!");
-		$("#ccc-" + CardCurrentNo ).next().addClass("state_sec__blur");
-		$("#ccc-" + CardCurrentNo ).next().find(".spinner").toggleClass("hidden");
-		$("#ccc-" + CardCurrentNo ).next().find(".cmd-subs--a").addClass("cmd_locked");
-}
-
-function activateNextCard( CardCurrentNo, CardNextNo ){ // Close current card then conditionally open the next
-	$("#ccc-" + CardCurrentNo ).parent().remove();
-	clickNextCard();
-	/*
-	var $nextCard = $("#ccc-" + CardNextNo);
-	if( ($nextCard.length > 0) && !$nextCard.hasClass("ccc-panel__active") ){ $nextCard.click(); }
-	$("#ccc-" + CardCurrentNo ).parent().remove();
-	*/
-}
+<script>
+	//  ccc api
+	function clickNextCard(){  //  Click the next visible card
+			$(".js-ccc-parent:not(.js-ccc-posted, .hidden)").first().find("nav").click();
+	}
+	function cccPanelContentPost( CardId ){
+		console.log( "cccPanelContentPost | " + CardId );
+		var $card = $( "#"+CardId );
+		$card.next().find(".js-ccc-panel__pre").toggleClass("hidden");
+		$card.next().find(".js-ccc-panel__post").toggleClass("hidden");
+		$card.parent().addClass("js-ccc-posted");
+	}
+	function waitingCard( CardCurrentNo ){  //  Mockup of card in waiting state
+			$("#ccc-" + CardCurrentNo ).find("p").text("Thank You!");
+			$("#ccc-" + CardCurrentNo ).next().addClass("state_sec__blur");
+			$("#ccc-" + CardCurrentNo ).next().find(".spinner").toggleClass("hidden");
+			$("#ccc-" + CardCurrentNo ).next().find(".cmd-subs--a").addClass("cmd_locked");
+	}
+	function activateNextCard( CardCurrentNo, CardNextNo ){ // Close current card then conditionally open the next
+		clickNextCard();
+	}
+	function setLineBreak( sSelect ){
+		$( sSelect ).each(function(){
+			var p_height = $( this ).css("height").replace("px", "");
+			if( p_height >= 29 ){
+				$( this ).parent().addClass("ccc-quest__linebreak");
+			}
+		});
+	}
 </script>
 
 
@@ -412,8 +380,8 @@ function activateNextCard( CardCurrentNo, CardNextNo ){ // Close current card th
 	font-size: 15px;
 	font-weight: bold;
 	font-family: "Courier New", Courier, monospace;
-	margin-bottom: 8px;
-	margin-right: 8px;
+	margin-bottom: 12px;
+	margin-right: 10px;
 }
 .orderConfirm .rd-only--div {background-color: #F4F4F4; width: 100%;min-height: 36px;margin-top: 6px; }
 .orderConfirm .rd-only--h6 {padding-top: 12px;padding-bottom: 4px; }
@@ -836,7 +804,7 @@ Express Checkout then SMS and last Promotions & discounts reminder
 -->
 
 					<div class="small-10 no-padding-left no-padding-right align-center columns">
-						<h2 class="resp_title_caption no-padding">Email / Text Sign Up</h2>
+						<h2 class="resp_title_caption no-padding">Custom Preferences</h2>
                         <hr class="resp_hr">
 					</div>
 
@@ -867,24 +835,35 @@ Express Checkout then SMS and last Promotions & discounts reminder
 </nav>
 <aside class="ccc-panel__content panel hidden">
 	<form>
-		<img  class="spinner hidden" src="http://www.lakeside.com/media/global/images/foundation/img/fpo/spinner_lsc.gif" alt="Please Wait">
-		<section class="row">
-			<div class="column small-7 no-padding-left">
-				<figure class="resp_half_height"></figure>
-				<div    class="rd-only--div">
-					<h6 class="rd-only--p text-center">email@address.com</h6>
-				</div>
-			</div>
-			<div class="column small-3 no-padding">
+		<section class="js-ccc-panel__pre">
+				<img  class="spinner hidden" src="http://www.lakeside.com/media/global/images/foundation/img/fpo/spinner_lsc.gif" alt="Please Wait">
+				<section class="row">
+					<div class="column small-12">
+						<h6 class="text-left">Be the first to hear about special promotional offers, new product arrivals and limited-time sales.</h6>
+					</div>
+				</section>
+				<section class="row">
+					<div class="column small-7 no-padding-left">
+						<figure class="resp_half_height"></figure>
+						<div class="rd-only--div">
+							<h6 class="rd-only--p text-center">email@address.com</h6>
+						</div>
+					</div>
+					<div class="column small-3 no-padding">
+						<figure class="resp_full_height"></figure>
+						<a id="cmd-email-subscribe" class="cmd-subs--a button radius resp_btn_teal">Subscribe</a>
+					</div>
+				</section>
 				<figure class="resp_full_height"></figure>
-				<a id="cmd-email-subscribe" class="cmd-subs--a button radius resp_btn_teal">Subscribe</a>
-			</div>
+				<p>We will never sell your email address. To learn more read our <a class="resp_u">Privacy Policy</a>.</p>
 		</section>
-		<figure class="resp_full_height"></figure>
-		<p>We will never sell your email address. To learn more read our <a class="resp_u">Privacy Policy</a>.</p>
+		<section class="js-ccc-panel__post hidden">
+			<p class="text-left">Thank you for signing up for our emails. Now that you are on our list, you’ll be the first to know about our latest offers and more. Don’t forget to check your inbox often for our awesome deals, exclusive coupons, and newest products. Get ready to enjoy our unique items and incredible savings!
+			</p>
+		</section>
 		<figure class="js-i--figure i--figure"><div class="circle">i</div></figure>
 
-		<aside class="hidden">
+		<summary class="hidden">
 			<p class="no-margin-bottom">To change your email address or email preferences visit <a class="resp_u">Your Account</a></p>
 			<figure class="resp_qtr_height"></figure>
 			<section class="row">
@@ -895,7 +874,7 @@ Express Checkout then SMS and last Promotions & discounts reminder
 					<p class="chkb--p no-margin-bottom">No Thanks, do not ask me again</p>
 				</div>
 			</section>
-		</aside>
+		</summary>
 		</form>
 </aside>
 							<!--    Email Subscribe Card end      -->
@@ -944,10 +923,10 @@ Express Checkout then SMS and last Promotions & discounts reminder
 		<p>Checkout faster by securely saving your payment information.
 		</p>
 		<figure class="js-i--figure i--figure"><div class="circle">i</div></figure>
-		<aside class="hidden">
+		<summary class="hidden">
 			<p class="no-margin-bottom">To manage your stored payment methods visit <a class="resp_u">Your Account</a></p>
 			<figure class="resp_qtr_height"></figure>
-		</aside>
+		</summary>
 	</form>
 </aside>
 							<!--    Expr Chk Save Card end      -->
@@ -991,10 +970,10 @@ Express Checkout then SMS and last Promotions & discounts reminder
 		<p>Checkout faster and easier by activating Express Checkout.
 		</p>
 		<figure class="js-i--figure i--figure"><div class="circle">i</div></figure>
-		<aside class="hidden">
+		<summary class="hidden">
 			<p class="no-margin-bottom">To manage your stored payment methods visit <a class="resp_u">Your Account</a></p>
 			<figure class="resp_qtr_height"></figure>
-		</aside>
+		</summary>
 	</form>
 </aside>
 							<!--    Expr Chk Activate Card end      -->
@@ -1038,10 +1017,10 @@ Express Checkout then SMS and last Promotions & discounts reminder
 		<p>Checkout faster by securely saving your payment information and activating Express Checkout.
 		</p>
 		<figure class="js-i--figure i--figure"><div class="circle">i</div></figure>
-		<aside class="hidden">
+		<summary class="hidden">
 			<p class="no-margin-bottom">To manage your stored payment methods visit <a class="resp_u">Your Account</a></p>
 			<figure class="resp_qtr_height"></figure>
-		</aside>
+		</summary>
 	</form>
 </aside>
 							<!--    Expr Chk Save / Activate Card end      -->
