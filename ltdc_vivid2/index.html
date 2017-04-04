@@ -9,7 +9,7 @@
             html { 
             	background: url(lsc_back.png) no-repeat !important; 
             }
-            .mg-pail--img__star {
+            .mg-pale--img__star {
             	position: relative;
             	max-width: 144px;
             	max-height: 144px;
@@ -17,6 +17,14 @@
             	filter: grayscale(1.0);
             	opacity: .4;
             	margin: 2px;
+            	transform-origin: 50% 50%;
+            }
+            .mg--img__star {
+            	position: relative;
+            	max-width: 158px;
+            	max-height: 158px;
+            	display: inline-block;
+            	margin: 1px;
             	transform-origin: 50% 50%;
             }
         </style>
@@ -28,13 +36,17 @@
 
 	$(document).on("ready", function(){
 
-		var tl = new TimelineMax({repeat:-1, repeatDelay:0});
-		var mc = $(".mg-pail--img__star");
+		var tlPale = new TimelineMax({repeat:-1, repeatDelay:0});
+		var tlFall = new TimelineMax({repeat: 4, repeatDelay:4});
+		var aStarPale = $(".mg-pale--img__star");
+		var eStar1 = $(".js-img__star1");
 
-		//tl.append( TweenLite.to(mc, 1, {x:100}) );
-		//tl.append( TweenLite.to(mc, 1, {y:50}) );
-		//tl.append( TweenLite.to(mc, 1, {alpha:.4}) );
-		tl.append( TweenLite.to(mc, 4, {rotation:360}) );
+		//tlPale.append( TweenLite.to(aStarPale, 1, {x:100}) );
+		//tlPale.append( TweenLite.to(aStarPale, 1, {y:50}) );
+		//tlPale.append( TweenLite.to(aStarPale, 1, {alpha:.4}) );
+		tlPale.append( TweenLite.to(aStarPale, 4, {rotation:360}) );
+		tlFall.append( TweenLite.to(eStar1, 16, {rotation:360}) );
+		tlFall.append( TweenLite.to(eStar1, 16, {y:500}) );
 
 	});
 
@@ -48,12 +60,14 @@ background: -webkit-linear-gradient(top, #38043B 0%,#ad1283 50%,#38043B 100%);
 background: linear-gradient(to bottom, #38043B 0%,#ad1283 50%,#38043B 100%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#38043B', endColorstr='#38043B',GradientType=0 );">
 
+			<img class="js-img__star1 mg--img__star" src="star.png">
+
 			<aside style="margin-top: 20%;margin-left: 4px;">
-						<img class="mg-pail--img__star" src="star.png">
-						<img class="mg-pail--img__star" src="star.png">
-						<img class="mg-pail--img__star" src="star.png">
-						<img class="mg-pail--img__star" src="star.png">
-						<img class="mg-pail--img__star" src="star.png">
+					<img class="mg-pale--img__star" src="star.png">
+					<img class="mg-pale--img__star" src="star.png">
+					<img class="mg-pale--img__star" src="star.png">
+					<img class="mg-pale--img__star" src="star.png">
+					<img class="mg-pale--img__star" src="star.png">
 			</aside>
         </div>
 	</body>
