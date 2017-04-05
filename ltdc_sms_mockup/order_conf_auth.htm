@@ -158,9 +158,9 @@ $("#cmd-sms-subscribe").hover(
 	});
 	$(".js-ccc-mutex").on("click", function( e ){  //  Collapsible Content Card | Mutually Exclusive
 		//  Im thinking that cards that have been posted should not be subject to ME.
-		if( !$( this ).hasClass("ccc-panel__active") ){
+		if( !$( this ).hasClass("ccc-panel__active") ){ // if not currently open
 			$(".ccc-panel__active").each(function(){
-				if( !$( this ).parent().hasClass("js-ccc-posted") ){
+				if( !$( this ).parent().hasClass("js-ccc-posted") ){ // Click if not already posted
 					$( this ).click();
 					return true;
 				}
@@ -212,9 +212,17 @@ $("#cmd-sms-subscribe").hover(
 		$card.next().find(".js-ccc-panel__pre").toggleClass("hidden");
 		$card.next().find(".js-ccc-panel__post").toggleClass("hidden");
 		$card.parent().addClass("js-ccc-posted");
+		$( "#"+CardId ).next().removeClass("state_sec__blur");
 	}
 	function waitingCard( CardCurrentNo ){  //  Mockup of card in waiting state
-			$("#ccc-" + CardCurrentNo ).find("p").text("Thank You!");
+			var PostedCaptionMsg = "Thank You!"
+			switch ( CardCurrentNo ) {
+				case 1:
+					PostedCaptionMsg = "Thank You for Subscribing!";
+				break;
+				default:
+			}
+			$("#ccc-" + CardCurrentNo ).find("p").text( PostedCaptionMsg ).append("<i class='ccc-panel--i'>-</i>");
 			$("#ccc-" + CardCurrentNo ).next().addClass("state_sec__blur");
 			$("#ccc-" + CardCurrentNo ).next().find(".spinner").toggleClass("hidden");
 			$("#ccc-" + CardCurrentNo ).next().find(".cmd-subs--a").addClass("cmd_locked");
@@ -866,6 +874,7 @@ Express Checkout then SMS and last Promotions & discounts reminder
 		<summary class="hidden">
 			<p class="no-margin-bottom">To change your email address or email preferences visit <a class="resp_u">Your Account</a></p>
 			<figure class="resp_qtr_height"></figure>
+<!--
 			<section class="row">
 				<div class="chkb--div column small-1 text-center">
 					<input class="js-chkb--input__nothanks chkb--input no-margin-bottom" type="checkbox">
@@ -874,6 +883,7 @@ Express Checkout then SMS and last Promotions & discounts reminder
 					<p class="chkb--p no-margin-bottom">No Thanks, do not ask me again</p>
 				</div>
 			</section>
+-->
 		</summary>
 		</form>
 </aside>
