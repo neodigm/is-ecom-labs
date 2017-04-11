@@ -141,7 +141,7 @@ $("#cmd-sms-subscribe").hover(
 			var nMsg = 0, sMsg = "";
 			switch( sScope ){
 				case "smsform":
-					var aMsg = ["Please Correct Errors", "Enter Your Mobile Phone Number", "Check I Agree to Terms"];
+					var aMsg = ["Please correct errors", "Enter your mobile phone number", "Check I agree to terms and conditions"];
 					if( ($( "#subscribeSMS-phone" ).val() === "") || ($( "#subscribeSMS-phone" ).val().indexOf("_") !== -1 ) ){
 						nMsg = 1;
 					}else if( $( "#chkb-sms-terms" ).attr("checked") === undefined ){
@@ -157,13 +157,13 @@ $("#cmd-sms-subscribe").hover(
 		$( this ).next().toggleClass("hidden");
 	});
 	$(".js-ccc-mutex").on("click", function( e ){  //  Collapsible Content Card | Mutually Exclusive
-		//  Im thinking that cards that have been posted should not be subject to ME.
+		//  Im thinking that cards that have been posted should not be subject to ME. NOT!!
 		if( !$( this ).hasClass("ccc-panel__active") ){ // if not currently open
 			$(".ccc-panel__active").each(function(){
-				if( !$( this ).parent().hasClass("js-ccc-posted") ){ // Click if not already posted
+				//if( !$( this ).parent().hasClass("js-ccc-posted") ){ // Click if not already posted
 					$( this ).click();
 					return true;
-				}
+				//}
 			});
 		}
 		cccTap( this );
@@ -179,11 +179,25 @@ $("#cmd-sms-subscribe").hover(
 	$("#cmd-email-subscribe").on("click", function( e ) {
 		var nCard = 1;
 			var data = {message: "Check your inbox for your exclusive discounts and start shopping TODAY!", timeout: 3400};
-			$("#gmdl-toast")[0].MaterialSnackbar.showSnackbar(data);
+			if( IsSmall() ){
+					$("#gmdl-toast")[0].MaterialSnackbar.showSnackbar(data);
+			}
 			waitingCard( nCard );
 			setTimeout(function(){
 				cccPanelContentPost( "ccc-" + nCard );
 				activateNextCard( nCard, 2 );
+			}, 3500);
+	});
+	$("#cmd-ec-save-and-activate").on("click", function( e ) {
+		var nCard = 5;
+			var data = {message: "Checking out is now a breeze because you’ve activated Express Checkout", timeout: 3400};
+			if( IsSmall() ){
+					$("#gmdl-toast")[0].MaterialSnackbar.showSnackbar(data);
+			}
+			waitingCard( nCard );
+			setTimeout(function(){
+				cccPanelContentPost( "ccc-" + nCard );
+				activateNextCard( nCard, 6 );
 			}, 3500);
 	});
 /*
@@ -218,7 +232,7 @@ $("#cmd-sms-subscribe").hover(
 			var PostedCaptionMsg = "Thank You!"
 			switch ( CardCurrentNo ) {
 				case 1:
-					PostedCaptionMsg = "Thank You for Subscribing!";
+					PostedCaptionMsg = "Thank You for signing up for our emails!";
 				break;
 				default:
 			}
@@ -866,7 +880,7 @@ Express Checkout then SMS and last Promotions & discounts reminder
 				<p>We will never sell your email address. To learn more read our <a class="resp_u">Privacy Policy</a>.</p>
 		</section>
 		<section class="js-ccc-panel__post hidden">
-			<p class="text-left">Thank you for signing up for our emails. Now that you are on our list, you’ll be the first to know about our latest offers and more. Don’t forget to check your inbox often for our awesome deals, exclusive coupons, and newest products. Get ready to enjoy our unique items and incredible savings!
+			<p class="text-left">Now that you are on our list, you’ll be the first to know about our latest offers and more. Don’t forget to check your inbox often for our awesome deals, exclusive coupons, and newest products. Get ready to enjoy our unique items and incredible savings!
 			</p>
 		</section>
 		<figure class="js-i--figure i--figure"><div class="circle">i</div></figure>

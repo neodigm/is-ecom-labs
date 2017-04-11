@@ -14,7 +14,7 @@
 UX | Mockup and Interactive Prototype
 				</h1>
 				<p class="caption--p__opensans color-text__white text-center" style="color: #EEE; font-size: 14px;">
-The Interactive Prototype provides <b>technical / kinetic </b> guidance.  It visually depictis a card opened, closed, validated and submitted.
+The Interactive Prototype provides <b>technical / kinetic </b> guidance.  It visually depictis a card expanded, collapsed, validated and submitted.
 				</p>
 			</header>
 		</section>
@@ -34,13 +34,20 @@ The Interactive Prototype provides <b>technical / kinetic </b> guidance.  It vis
 				</section>
 
 				<p class="caption--p__opensans">
-This "above the fold" design utilizes the Collapsable Content Card pattern.  The <a href="https://material.io/guidelines/components/cards.html#cards-content" target="_blank">Cards</a> are mutually exclusive, meaning that each card can be open or closed individually but opening one card will close any other open card.  The first card will initially be open.
+This "above the fold" design utilizes the Collapsible Content Card pattern.  These Cards are mutually exclusive, meaning that each card can be expanded or collapsed individually but expanding one card will collapse all other cards.  This 'one at a time' behavior prevents the user from becoming overwhelmed with choices.
+The cards are passive in that they can be expanded or collapsed at will.  The user can engage them in any order, however they are hard-wired with a preferred sequence.  This preferred sequence is evident by the card's positional layout (top-bottom / left-right) and also nuanced in its behavior.  For example after the Express Checkout card has been submitted the SMS card will automatically become expanded.  Resulting in a passive yet guided experience.
 				</p>
 				<p class="caption--p__opensans">
-The cards are asynchronous.  When it is submitted it will temporarily display a spinner on a faded backbround. The page will not be refreshed.  Upon success the card will update both its caption and details section with a contextual message. The "posted" card will no longer participate in mutual exclusion but can be opened or closed independently. The next card in the sequence will then be opened.  The current thinking is that the user’s participation in <span class="round default label">Installment Payments</span> will have no effect on the post checkout experience.
+The cards are asynchronous.  When a card is submitted it will temporarily display a spinner on a faded background. The page will not be refreshed.
 				</p>
 				<p class="caption--p__opensans">
-A Collapsable Content Card may have a small “I” icon in the lower right corner.  This icon will toggle / expand the card if additional <a href="https://www.nngroup.com/articles/progressive-disclosure/" target="_blank">secondary actions or messaging</a> exist.
+Once the card has been successfully submitted its caption will display congratulatory micro-copy making it clear that the operation was a success.  Ideally the caption message would contain a confirmation, a noun and a verb.  For example 'Thank You for subscribing to our emails!'.  A successfully submitted card will be collapsed if there is another yet to be submitted card available.  The next card in the sequence will then be expanded.
+				</p>
+				<p class="caption--p__opensans">
+A Collapsible Content Card may have a small “I” icon in the lower right corner.  This icon will toggle / expand the card if secondary actions or messaging exist.
+				</p>
+				<p class="caption--p__opensans">
+The user's participation in <span class="round default label">Installment Payments</span> will have no effect on the post checkout experience.
 				</p>
 <br>
 <h4 class="caption--p__roboto text-center">Authenticated User</h4>
@@ -169,6 +176,29 @@ console.log( $( this ).attr("href") );
 		} );
 	} );
 </script>
+
+
+<!-- At the bottom of your page but inside of the body tag -->
+<ol class="joyride-list" data-joyride>
+  <li data-id="firstStop" data-text="Next" data-options="tip_location: top; prev_button: false">
+    <p>Hello and welcome to the Joyride <br>documentation page.</p>
+  </li>
+  <li data-id="numero1" data-class="custom so-awesome" data-text="Next" data-prev-text="Prev">
+    <h4>Stop #1</h4>
+    <p>You can control all the details for you tour stop. Any valid HTML will work inside of Joyride.</p>
+  </li>
+  <li data-id="numero2" data-button="Next" data-prev-text="Prev" data-options="tip_location:top;tip_animation:fade">
+    <h4>Stop #2</h4>
+    <p>Get the details right by styling Joyride with a custom stylesheet!</p>
+  </li>
+  <li data-button="End" data-prev-text="Prev">
+    <h4>Stop #3</h4>
+    <p>It works as a modal too!</p>
+  </li>
+</ol>
+
+
+
 </body>
 
 	<style>
