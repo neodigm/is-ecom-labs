@@ -1508,9 +1508,38 @@ $(document).ready(function() {
 $(window).load(function() {
 	faq_logic_load();
 });
+
 function faq_logic_load(){
-	deepLinkContactUs( "contactus", ".js-contact-us" );  //  Click Contact Us if in query string
-	deepLinkThanYou( "thankyou", "#rev-thank-you" );     //  Open Reveal if in query string
+
+  function getUrlParameter( query ) {
+    query = query.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+    var regex = new RegExp('[\\?&]' + query + '=([^&#]*)');
+    var results = regex.exec(location.search);
+    return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+  };
+
+  function deepLink( dlCommand, urlQuery, oTarget ){
+    if( window.location.href.indexOf( urlQuery ) > -1 ){
+      if( $( oTarget ).length > 0 ){
+        switch( dlCommand ){
+          case "DEEP_LINK_REVEAL":
+            $( oTarget ).foundation("reveal", "open");
+          break;
+          case "DEEP_LINK_CARD":
+            $( "#faq-togl-1" ).click();
+            $("html, body").animate({ scrollTop: ($( oTarget ).click().offset().top-56) }, 400);
+          break;
+          case "DEEP_LINK_CLICK":
+            $( oTarget ).click();
+          break;
+        }
+        return true;
+      }
+    }
+  }
+	deepLink( "DEEP_LINK_CLICK", "contactus", ".js-contact-us" ); // declarative
+	deepLink( "DEEP_LINK_CARD", "card=", ("#" + getUrlParameter("card")) ); // declarative
+
 	if( ("ontouchstart" in window) || (navigator.msMaxTouchPoints > 0) ){
 		wrapPhoneNumbers( "tel_link" );
 	}
@@ -1532,13 +1561,13 @@ function faq_logic_ready(){
 		e.preventDefault();
 	});
 
-	$(".js-contact-us").on("click", function( e ){
-		$.get("/cartridges/ContactusModal/ContactusModal.jsp", function( data ) {
-			$('#contact-us-container').empty().append( data );
-			$("#rev-contact-us").foundation("reveal", "open");
-		});
-		e.preventDefault();
-	});
+  $(".js-contact-us").on("click", function( e ){
+    $.get("/cartridges/ContactusModal/ContactusModal.jsp", function( data ) {
+  		$('#contact-us-container').empty().append( data );
+  		$("#rev-contact-us").foundation("reveal", "open");
+  	});
+  	e.preventDefault();
+  });
 
 	$(".fa-rss-square").on("click", function(e){
 		if( !jsMQ.isLarge() || isBrowser("chrome") ){
@@ -1560,7 +1589,7 @@ function faq_logic_ready(){
 	});
 
 	history.replaceState({"uid_hash":"faq"}, document.location, "#faq");
-	$( ".faq-quest" ).each( function(){//  Establish unique ids, assuming dyn content, not declairative
+	$( ".faq-quest" ).each( function(){//  Establish unique ids, assuming dyn content
 		$( this ).attr("id", makeId( $( this ).text() ) );
 	});
 	//  On Small force chevons onto new line / Do this in CSS Media Qry
@@ -1600,7 +1629,7 @@ function faq_logic_ready(){
 		}
 	});
 	$(".faq-quest").click(function( e ) {
-		var sHash = makeId( $( this ).text() );
+		var sHash = $( this ).attr("id");//makeId( $( this ).text() );
 		$el_i = $( this ).find("i");
 		$el_i.toggleClass("fa-angle-up").toggleClass("fa-angle-down");
 		$( this ).attr("data-faq-quest-active","true");
@@ -1646,14 +1675,11 @@ function faq_logic_ready(){
 			}
 		}
 	});
-	function makeId( sText ){
-		return sText.toLowerCase().replace(/\W+/g,"-").slice(0, -1);
+	function makeId( uid ){
+    uid = uid.replace(/\W+/g,"-").slice(0, -1);
+    uid = uid.charAt(1) + uid.charAt(5) + uid.length + uid.charAt( uid.length-1 );
+    uid += "_" + $("[id^='"+uid+"']" ).length;
+		return uid;
 	}
 };
-function deepLinkContactUs( sURLQuery, sButton_js ){
-	//if( window.location.href.indexOf( sURLQuery ) > -1 ) $( sButton_js ).click();
-}
-function deepLinkThanYou( sURLQuery, sReveal_id ){
-	//if( window.location.href.indexOf( sURLQuery ) > -1 ) $( sReveal_id ).foundation("reveal", "open");
-}
 </script>

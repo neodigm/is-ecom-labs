@@ -760,9 +760,9 @@ When using our prepaid UPS return label, there is no up-front charge, however yo
 <section class="row">
 <div class="column hide-for-small hide-for-medium large-5 faq-cols">&nbsp;</div>
 <div class="column small-10 large-5 faq-cols text-right">
-<a href="https://www.lakeside.com/content/faq#" class="button radius resp_btn_green expand">
+<a  class="button radius resp_btn_green expand">
 <div id="faq-togl-1" class="faq-togl">View All FAQs <i class="vaf--i respn_arw fa fa-angle-down fa-lg"></i></div></a>
-<a href="https://www.lakeside.com/content/faq#" class="button radius resp_btn_green expand hidden">
+<a  class="button radius resp_btn_green expand hidden">
 <div id="faq-togl-2" class="faq-togl">Hide FAQs <i class="vaf--i respn_arw fa fa-angle-up fa-lg"></i></div></a>
 </div>
 </section>
@@ -1974,13 +1974,51 @@ faq_logic_ready();
 $(window).load(function() {
 faq_logic_load();
 });
+//QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ new function
+function openContactUs(){
+	$.get("/cartridges/ContactusModal/ContactusModal.jsp", function( data ) {
+		$('#contact-us-container').empty().append( data );
+		$("#rev-contact-us").foundation("reveal", "open");
+	});
+}
+//QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ new function
 function faq_logic_load(){
-deepLink( "contactus", ".js-contact-us" ); // Click Contact Us if in query string
-//deepLinkThankYou( "thankyou", "#rev-thank-you" ); // Open Reveal if in query string
+
+function getUrlParameter( query ) {
+  query = query.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+  var regex = new RegExp('[\\?&]' + query + '=([^&#]*)');
+  var results = regex.exec(location.search);
+  return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+};
+
+	function deepLink( dlCommand, urlQuery, oTarget ){
+console.log( "dl:" + ( window.location.href.indexOf( urlQuery ) > -1 ) );
+		if( window.location.href.indexOf( urlQuery ) > -1 ){
+			switch( dlCommand ){
+				case "DEEP_LINK_CALL":
+					oTarget();
+					return true;
+				break;
+				case "DEEP_LINK_REVEAL":
+					$( oTarget ).foundation("reveal", "open");
+					return true;
+				break;
+				case "DEEP_LINK_CARD":
+					$( "#faq-togl-1" ).click();
+					$( "#" + oTarget ).click();
+					return true;
+				break;
+			}
+		}
+	}
+	deepLink( "DEEP_LINK_CALL", "contactus", openContactUs ); // declairative
+	deepLink( "DEEP_LINK_REVEAL", "rss", "#modalRSSConfirm" ); // declairative
+	deepLink( "DEEP_LINK_CARD", "card=", getUrlParameter("card") ); // declairative
+
 if( ("ontouchstart" in window) || (navigator.msMaxTouchPoints > 0) ){
-wrapPhoneNumbers( "tel_link" );
+	wrapPhoneNumbers( "tel_link" );
 }
-}
+} // faq_logic_load
 function wrapPhoneNumbers( span_class ){
 $.each($("."+span_class), function () {
 // (nnn) nnn-nnnn for auto iOS and Andr
@@ -1997,14 +2035,12 @@ $(".js-click-href").on("click", function( e ){
 $('a[href="#modalLowPriceGuarantee"]')[0].click();
 e.preventDefault();
 });
-
+//QQQQQQQQQQQQQQQQQQQQQQQQQQQQQ new function
 $(".js-contact-us").on("click", function( e ){
-$.get("/cartridges/ContactusModal/ContactusModal.jsp", function( data ) {
-$('#contact-us-container').empty().append( data );
-$("#rev-contact-us").foundation("reveal", "open");
+	openContactUs();
+	e.preventDefault();
 });
-e.preventDefault();
-});
+//QQQQQQQQQQQQQQQQQQQQQQQQQQQQQ new function
 
 $(".fa-rss-square").on("click", function(e){
 if( !jsMQ.isLarge() || isBrowser("chrome") ){
@@ -2116,10 +2152,6 @@ function makeId( sText ){
 return sText.toLowerCase().replace(/\W+/g,"-").slice(0, -1);
 }
 };
-function deepLink( sURLQuery, sButton_js ){
-if( window.location.href.indexOf( sURLQuery ) > -1 ) $( sButton_js ).click();
-//if( window.location.href.indexOf( sURLQuery ) > -1 ) $( sReveal_id ).foundation("reveal", "open");
-}
 </script>
 </div>
 
