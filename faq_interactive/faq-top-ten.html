@@ -1,211 +1,3 @@
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel='stylesheet' type='text/css'>
-<style>
-.faq_ansr a {text-decoration: underline !important;}
-.vaf--i {
-    position: absolute;
-    float: right;
-    top: 4px;
-    right: 6px;
-    color: #AFA !important;
-}
-
-.resp_btn_brand__1 {
-	font-size: 1em;
-}
-
-::selection {
-    background: #fff600;
-    color: #7D2A35;
-    text-shadow: none;
-}
-
-ul { margin-left: 14px; }
-
-.faq-cols  {
-	padding-right: 8px !important;
-	padding-left: 8px !important;
-}
-
-.faq-caption     {color: #999; font-size: 48px !important; font-weight: 100; font-family: 'Roboto', sans-serif;letter-spacing: -3px;line-height: 84%;margin-bottom: 24px !important}
-.faq-caption_sub {color: #444; font-size: 32px !important; font-weight: 100; font-family: 'Roboto', sans-serif;letter-spacing: -1px;line-height: 84%;margin-bottom: 24px !important;}
-.faq-caption_h3  {color: #444; font-size: 24px !important; font-weight: 100; font-family: 'Roboto', sans-serif;letter-spacing: -1px;line-height: 84%;margin-bottom: 24px !important;}
-.faq-instr       {color: #000; font-size: 16px !important; font-weight: 400; font-family: 'Roboto', sans-serif;margin-bottom: 12px;}
-.faq-contact     {color: #000; font-size: 14px !important; font-weight: 400; font-family: 'Roboto', sans-serif;}
-
-.faq-togl {width: 100%;padding: 6px;}
-.faq-togl-cntnt {
-	cursor: pointer;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-}
-.faq-split {padding: 0px !important;}
-
-.faq-table {
-	width: 100%;
-}
-
-.faq-smi__a {
-	margin-right: 8px;
-}
-
-.faq-smi__a > i {
-	color: #888;
-}
-
-.faq-smi__a:hover > i {
-	color: #2aa6ca;
-}
-.brand_lsc .faq-smi__a:hover > i {
-	color: #632434;
-}
-
-.faq-panel {
-	border-style: solid;
-	border-width: 1px;
-	border-color: #BBB;
-	margin-bottom: 16px;
-	padding: 22px 12px 4px 12px;
-	background: #f2faff;
-	color: #333333;
-	border-radius: 3px;
-}
-
-.brand_lsc .faq-panel__contact {
-	background: #FFFBFF;
-}
-
-.brand_lsc .faq-quest {
-	background: #FFFAFF;
-}
-
-.faq-panel--i {
-	position: absolute;
-	float: right;
-	top: 4px;
-	right: 6px;
-	color: #AAA;
-}
-.faq-panel__contact:hover {
-	background: linear-gradient(
-	rgba(255, 255, 255, 0.24),
-	rgba(42, 166, 202, 0.32)
-	);
-}
-.brand_lsc .faq-panel__contact:hover {
-	background: linear-gradient(
-	rgba(255, 255, 255, 0.24),
-	rgba(156, 74, 98, 0.32)
-	);
-}
-
-.faq-quest {
-	position: relative;
-	overflow: hidden;
-	min-height: 56px;
-	height: 72px;
-	cursor: pointer;
-	cursor: pointer;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-	transition: background-color 80ms;
-	-webkit-transition: background-color 80ms;
-}
-
-.faq-quest p {
-	color: #000; font-size: 16px !important; font-weight: 300; font-family: 'Roboto', sans-serif;
-}
-
-.faq-quest:hover {
-	background-color: #2aa6ca;
-	transition: background-color 80ms;
-	-webkit-transition: background-color 80ms;
-	box-shadow: 0 4px 8px rgba(3,3,3,0.22);/*, 0 3px 3px rgba(3,3,3,0.22);*/
-}
-.brand_lsc .faq-quest:hover {
-	background-color: #9c4a62;
-}
-.faq-quest:hover .faq-panel--i {
-	color: #FFF;
-}
-.faq-quest:active {
-	background-color: #297FB8;
-	transition: background-color 80ms;
-	-webkit-transition: background-color 80ms;
-}
-
-.faq-panel__active {
-	background: #297FB8;
-	margin-bottom: -4px;
-	box-shadow: 0 4px 8px rgba(3,3,3,0.16);
-}
-
-.brand_lsc .faq-panel__active {
-	background: #632434;
-	box-shadow: 0 4px 8px rgba(3,3,3,0.16);
-}
-
-.faq-quest__linebreak {
-	padding: 8px 22px 12px 18px;
-}
-
-.faq-quest:hover p, .faq-panel__active p {
-	color: #FFF;
-}
-
-.faq_ansr {
-	padding: 12px;
-	min-height: 56px;
-	background-color: #FFF;
-	box-shadow: 0 4px 8px rgba(3,3,3,0.22);
-}
-.faq_ansr p {
-	color: #111;
-	font-size: 16px !important;
-	font-weight: 400;
-	font-family: 'Roboto', sans-serif;
-	margin-bottom: 4px;
-}
-.faq_ansr li > p {
-	color: #111;
-	font-size: 14px !important;
-	font-weight: 400;
-	font-family: 'Roboto', sans-serif;
-	margin-bottom: 4px;
-}
-.respn_arw {color: #888;}
-.faq-icon {color: #888;}
-.st_hd_ini {display: none;}
-
-.brand_ltd .brand--ltd__show { display:inline }
-.brand_lsc .brand--lsc__show { display:inline }
-.brand_ltd .brand--ltd__showb { display:block }
-.brand_lsc .brand--lsc__showb { display:block }
-.brand_ltd .brand--lsc__show { display:none }
-.brand_lsc .brand--ltd__show { display:none }
-.brand_ltd .brand--lsc__showb { display:none }
-.brand_lsc .brand--ltd__showb { display:none }
-
-.resp_no_wrap {
-	white-space: nowrap;
-}
-</style>
-
-<div class="resp_half_height"></div>
-<section class="row">
-	<header class="column small-10">
-		<p class="faq-caption text-left">
-Customer Service
-		</p>
-		<p class="faq-instr text-justify">
-Welcome to <span class="brand--lsc__show">Lakeside</span><span class="brand--ltd__show">LTD Commodities</span>.com. We are committed to providing unique products at tremendous values for our customers. By clicking through the menu you will find detailed information on our policies, guarantee and answers to many of the questions you may have. Our goal is to help make your shopping experience with <span class="brand--lsc__show">Lakeside</span><span class="brand--ltd__show">LTD</span> a pleasant one.
-		</p>
-	</header>
-</section>
 <div class="resp_full_height"></div>
 <nav class="row">
 	<p class="faq-caption_sub text-center"><span data-tog="sub_faq" class="faq-togl-cntnt">Frequently Asked Questions &nbsp; <i class="sub_faq respn_arw fa fa-angle-up fa-lg"></i></span></p>
@@ -414,7 +206,7 @@ Your credit card will not be charged until your merchandise has been shipped. Ho
 						<article class="faq-panel radius text-center faq-quest"><p>Does <span class="brand--lsc__show">Lakeside</span><span class="brand--ltd__show">LTD</span> Commodities guarantee its prices?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
 						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr">
 <p>
-Yes - If within two weeks of your order/purchase from <span class="brand--lsc__show">Lakeside</span><span class="brand--ltd__show">LTD</span> Commodities you find the identical item advertised elsewhere for less, we will refund 115% of the difference between our price and our competitor's price. For additional details, please refer to our <a class="js-click-href" data-href="#modalLowPriceGuarantee" >115% Lowest Price Guarantee</a>.
+Yes - If within two weeks of your order/purchase from <span class="brand--lsc__show">Lakeside</span><span class="brand--ltd__show">LTD</span> Commodities you find the identical item advertised elsewhere for less, we will refund 115% of the difference between our price and our competitor's price. For additional details, please refer to our <a class="js-click-href" href="#">115% Lowest Price Guarantee</a>.
 </p>
 						</div>
 </output>
@@ -422,7 +214,7 @@ Yes - If within two weeks of your order/purchase from <span class="brand--lsc__s
 						<article class="faq-panel radius text-center faq-quest"><p>What competitor ads qualify for the 115% Lowest Price Guarantee?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
 						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr">
 <p>
-Yes - If within two weeks of your order/purchase from <span class="brand--lsc__show">Lakeside</span><span class="brand--ltd__show">LTD</span> Commodities you find the identical item advertised elsewhere for less, we will refund 115% of the difference between our price and our competitor's price. For additional details, please refer to our <a class="js-click-href"  data-href="#modalLowPriceGuarantee" >115% Lowest Price Guarantee</a>.
+Yes - If within two weeks of your order/purchase from <span class="brand--lsc__show">Lakeside</span><span class="brand--ltd__show">LTD</span> Commodities you find the identical item advertised elsewhere for less, we will refund 115% of the difference between our price and our competitor's price. For additional details, please refer to our <a class="js-click-href" href="#">115% Lowest Price Guarantee</a>.
 </p>
 </div>
 					<article class="faq-panel radius text-center faq-quest"><p>What competitor ads qualify for the 115% Lowest Price Guarantee?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
@@ -437,7 +229,7 @@ To qualify for this exclusive offer:
 	<li>Items may not be found or purchased from an on-line auction site, a private individual, overstock liquidation dealer, or from outside the U.S., nor in used condition. The advertised price must be provided for verification via untouched print media or reprinted on-line advertisement, and must include the date to ensure pricing is current.</li>
 </ol>
 
-For additional details, please refer to our <a class="js-click-href" data-href="#modalLowPriceGuarantee" >115% Lowest Price Guarantee</a>.
+For additional details, please refer to our <a class="js-click-href" href="#">115% Lowest Price Guarantee</a>.
 </p>
 						</div>
 </output>
@@ -485,7 +277,7 @@ If you find a competitor advertising a qualified purchase for less, simply call 
 	<li>Credit card and account refunds may take up to 72 hours to be applied; refunds issued by check may take up to 10 days.</li>
 	<li>This offer is valid on phone, mail, fax and web orders that have been placed.</li>
 </ul>
-For additional details, please refer to our <a class="js-click-href"  data-href="#modalLowPriceGuarantee" >115% Lowest Price Guarantee</a>.
+For additional details, please refer to our <a class="js-click-href" href="#">115% Lowest Price Guarantee</a>.
 </p>
 						</div>
 </output>
@@ -494,7 +286,7 @@ For additional details, please refer to our <a class="js-click-href"  data-href=
 						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr">
 <p>
 No - while you may certainly submit your claim prior to placing your order, if you find a competitor advertising a qualified purchase for less within 2 weeks of placing your order, simply call 847-295-6058 and one of our associates will assist you in taking advantage of our 115% Lowest Price Guarantee.
-For additional details, please refer to our <a class="js-click-href" data-href="#modalLowPriceGuarantee">115% Lowest Price Guarantee</a>.
+For additional details, please refer to our <a class="js-click-href" href="#">115% Lowest Price Guarantee</a>.
 </p>
 						</div>
 </output>
@@ -684,37 +476,9 @@ Please check your order status to determine if only a portion of your order ship
 <article class="faq-panel radius text-center faq-quest"><p>
 I can't find the T&amp;C I agreed to when I enrolled in the installment payment plan.<i class="faq-panel--i fa fa-angle-down"></i></p>
 </article>
-<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr">
-<aside style="height: 420px; overflow: scroll">
-<h3 class="text-center">Lakeside Pay Your Way Terms &amp; Conditions</h3>
-<h6 class="text-justify">NOTICE TO THE BUYER: THESE TERMS &amp; CONDITIONS INCLUDE PROVISIONS THAT EFFECT YOUR LEGAL RIGHTS. DO NOT USE THE LAKESIDE PAY YOUR WAY PLAN BEFORE YOU READ THEM.</h6>
-<hr>
-<p>
-The Lakeside Collection is offering a select group of customers the opportunity to pay for qualifying lakeside.com items, including tax and shipping charges, with four (4) equal monthly installments by credit or debit card. The Lakeside Pay Your Way plan is subject to the following Terms &amp; Conditions that you must read and agree to in order to be eligible to participate in the plan.
+<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>
+Answer.
 </p>
-<p>
-The Lakeside Collection is offering a select group of customers the opportunity to pay for qualifying lakeside.com items, including tax and shipping charges, with four (4) equal monthly installments by credit or debit card. The Lakeside Pay Your Way plan is subject to the following Terms &amp; Conditions that you must read and agree to in order to be eligible to participate in the plan.
-</p>
-<p>
-The Lakeside Collection is offering a select group of customers the opportunity to pay for qualifying lakeside.com items, including tax and shipping charges, with four (4) equal monthly installments by credit or debit card. The Lakeside Pay Your Way plan is subject to the following Terms &amp; Conditions that you must read and agree to in order to be eligible to participate in the plan.
-</p>
-<p>
-The Lakeside Collection is offering a select group of customers the opportunity to pay for qualifying lakeside.com items, including tax and shipping charges, with four (4) equal monthly installments by credit or debit card. The Lakeside Pay Your Way plan is subject to the following Terms &amp; Conditions that you must read and agree to in order to be eligible to participate in the plan.
-</p>
-<p>
-The Lakeside Collection is offering a select group of customers the opportunity to pay for qualifying lakeside.com items, including tax and shipping charges, with four (4) equal monthly installments by credit or debit card. The Lakeside Pay Your Way plan is subject to the following Terms &amp; Conditions that you must read and agree to in order to be eligible to participate in the plan.
-</p>
-<p>
-The Lakeside Collection is offering a select group of customers the opportunity to pay for qualifying lakeside.com items, including tax and shipping charges, with four (4) equal monthly installments by credit or debit card. The Lakeside Pay Your Way plan is subject to the following Terms &amp; Conditions that you must read and agree to in order to be eligible to participate in the plan.
-</p>
-
-<a class="js-inter-card" href="#oo33e_0">Sales Tax</a>
-<br><br><br>
-
-<a class="js-click-href" data-href="#modalTermsConditions">Lakeside Terms</a>
-
-</aside>
-
 </div>
 
     </div>  <!-- right col -->
@@ -1372,7 +1136,7 @@ Forward suspicious emails to <strong>security@<span class="brand--lsc__show">lak
     </div>
 
     <article class="faq-panel radius text-center faq-quest"><p>
-    I want to stop receiving shipping confirmation text messages.
+    I want to stop receiving shipping confirmations text messages.
     <i class="faq-panel--i fa fa-angle-down"></i></p>
     </article>
     <div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>
@@ -1403,7 +1167,7 @@ Forward suspicious emails to <strong>security@<span class="brand--lsc__show">lak
     		<div class="small-10 large-5 faq-cols columns">
 
     <article class="faq-panel radius text-center faq-quest"><p>
-    My mobile number has changed. How do I update it?<i class="faq-panel--i fa fa-angle-down"></i></p>
+    My mobile number has changed. How do I updated it?<i class="faq-panel--i fa fa-angle-down"></i></p>
     </article>
     <div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>
     If you are signed up to receive <span class="brand--lsc__show">Lakeside</span><span class="brand--ltd__show">LTD</span> Shipping Alerts, you can update your mobile phone number in Your Account by clicking on Shipping Text Alerts and then click on the Change Phone Number link. </p>
@@ -1698,8 +1462,7 @@ function faq_logic_ready(){
 	});
 
 	$(".js-click-href").on("click", function( e ){
-    // data-href = #modalLowPriceGuarantee"
-		$('a[href="'+$(this).attr("data-href")+'"]')[0].click();
+		$('a[href="#modalLowPriceGuarantee"]')[0].click();
 		e.preventDefault();
 	});
 
@@ -1817,7 +1580,7 @@ function faq_logic_ready(){
 			}
 		}
 	});
-	function makeId( uid ){  //  Deterministic algorithm (data-set)
+	function makeId( uid ){
     uid = uid.replace(/\W+/g,"-").slice(0, -1);
     uid = uid.charAt(1) + uid.charAt(5) + uid.length + uid.charAt( uid.length-1 );
     uid += "_" + $("[id^='"+uid+"']" ).length;
