@@ -1,0 +1,215 @@
+<section id="PUT REVEAL MODAL NAME HERE" class="row medium reveal-modal" data-reveal
+style="padding: 4px;">
+<style>
+	.tabbys {
+		position: relative;
+		min-height: 420px;
+		clear: both;
+	}
+	.tabby { float: left; }
+	.tabby label {
+		background: #eee; 
+		border: 1px solid #ccc; 
+		position: relative;
+		user-select: none;
+		margin: 4px !important;
+		padding: 4px !important;
+	}
+	.tabby [type=radio] {display: none; }
+	.tabby-content {
+		overflow: scroll;
+		position: absolute;
+		top: 28px; left: 0;
+		background: white;
+		right: 0; bottom: 0;
+		padding: 8px;
+		border: 1px solid #ccc; 
+	}
+	[type=radio]:checked ~ label {
+		background: white;
+		border-bottom: 1px solid white;
+		z-index: 2;
+	}
+	[type=radio]:checked ~ label ~ .tabby-content { z-index: 1; }
+	@media only screen and (max-width: 47.9375em) {
+		.tabby label { font-size: 11px;	}
+	}
+	.terms_ul p {font-size: 14px !important; margin-bottom: 8px; }
+</style>
+
+<script>
+	$(document).ready(function(){
+		$(".js-data-tabby-click").on("click", function( e ){ // Inter Tabby Click
+			$( "#" + $( this ).attr("data-tabby-click") ).prop("checked", true);
+			e.preventDefault();
+		});
+	});
+</script>
+	<a class="close-reveal-modal resp_x">&#215;</a>
+
+<nav class="tabbys" style="margin-top: 38px;">
+	<div class="tabby">
+		<input id="tabby-1" type="radio" name="tabby-group-1" checked>
+		<label for="tabby-1">Terms &amp; Conditions</label>
+		<div class="tabby-content">
+<h4 class="text-center">Lakeside Pay Your Way Terms &amp; Conditions</h4>
+<p class="text-justify">NOTICE TO THE BUYER: THESE TERMS &amp; CONDITIONS INCLUDE PROVISIONS THAT EFFECT YOUR LEGAL RIGHTS. DO NOT USE THE LAKESIDE PAY YOUR WAY PLAN BEFORE YOU READ THEM.</p>
+<hr>
+<p>
+The Lakeside Collection is offering a select group of customers the opportunity to pay for qualifying lakeside.com items, including tax and shipping charges, with four (4) equal monthly installments by credit or debit card. The Lakeside Pay Your Way plan is subject to the following Terms &amp; Conditions that you must read and agree to in order to be eligible to participate in the plan.
+</p>
+<br>
+<ul class="terms_ul">
+  <li><p>Qualified customers making qualified orders will be offered the Lakeside Pay Your Way option at check out.  Customers or orders that are NOT offered the Lakeside Pay Your Way option at check out are not eligible for the plan.
+  </p></li>
+  <li><p>Only orders of $100 or more (excluding taxes, shipping charges or other fees) will be qualified orders that are eligible for the plan.
+  </p></li>
+  <li><p>The offer is only available for orders placed on our website at www.lakeside.com.
+  </p></li>
+  <li><p>All orders are subject to review by The Lakeside Collection after they are submitted.  The Lakeside Collection reserves the right to disqualify any customer or order from participating in the Lakeside Pay Your Way Plan in its sole discretion and without recourse.  Customers or orders that are disqualified from participating in the plan will be notified electronically and/or by phone, and the submitted order will be cancelled.  Disqualified orders may be resubmitted if paid completely at the time of check out.
+  </p></li>
+  <li><p>An offer to participate in the Lakeside Pay Your Way plan is not transferrable to any other customer or order.
+  </p></li>
+  <li><p>The Lakeside Pay Your Way plan is only available for items sold and shipped by The Lakeside Collection.
+  </p></li>
+  <li><p>Participation in the Lakeside Pay Your Way plan is available only to customers residing in and placing orders for shipment to addresses in the United States of America.  The Lakeside Pay Your Way plan is void where prohibited by state or local law.
+  </p></li>
+  <li><p>In order to be eligible for the Lakeside Pay Your Way plan, customers must provide a current, valid email address and telephone number.  By providing an email and telephone number, you agree to receive electronic communications, telephone calls and pre-recorded messages made from automated dialing systems about your order or account.  You are solely responsible for normal communications, data or mobile charges assessed by your carrier or other third party provider.
+  </p></li>
+  <li><p>Customers must pay by credit or debit card in order to participate in the Lakeside Pay Your Way plan.  Credit or debit cards used for payment must have an expiration date that is at least six (6) months after the order date.  Payments by cash, check, electronic funds transfer, or other methods are not eligible.
+  </p></li>
+  <li><p>The Lakeside Pay Your Way plan is subject to change or cancellation at any time without further notice.  Changes in these Terms &amp; Conditions will be posted on this website and will be effective as soon as they are posted.
+  </p></li>
+  <li><p>No interest or finance charges apply to installments under the Pay Your Way plan.  Any interest, finance charges or fees assessed by your credit or debit card issuer will still apply.
+  </p></li>
+  <li><p>Taxes may apply in certain states/jurisdictions. <a class="js-data-tabby-click resp_u resp_no_wrap"
+  data-tabby-click="tabby-2">Click Here</a> for more information on taxes.</p></li>
+    <li><p>Payments under the Pay Your Way plan will be charged to your credit or debit card as follows:
+    </p>
+    <table class="faq_table_left" border="1" cellpadding="2" cellspacing="2" width="100%">
+      <tr>
+        <td><b>Payment</b>
+        </td>
+        <td><b>Due Date</b>
+        </td>
+      </tr>
+      <tr>
+        <td>Initial Payment
+        </td>
+        <td>Shipment Date
+        </td>
+      </tr>
+      <tr>
+        <td>First Payment
+        </td>
+        <td>30 Days from the Shipment Date
+        </td>
+      </tr>
+      <tr>
+        <td>Second Payment
+        </td>
+        <td>60 Days from the Shipment Date
+        </td>
+      </tr>
+      <tr>
+        <td>Third Payment
+        </td>
+        <td>90 Days from the Shipment Date
+        </td>
+      </tr>
+    </table>
+  </li>
+    <li><p>In situations where certain products are not available for shipment at the same time as other products, The Lakeside Collection may, in its sole discretion, ship part of the order.  Because initial payment is due on the shipment date, each shipment may create a separate payment plan subject to the schedule above.  In the event that The Lakeside Collection ships a partial order, the customer will be notified by email.  The customer may cancel any unshipped portion of any partially shipped order without cost by contacting Customer Service at <span class="tel_link">847-444-3150</span>.
+    </p></li>
+    <li><p>By choosing the Lakeside Pay Your Way plan at checkout, you authorize us to charge each payment to the credit or debit card account you provide us at the time your order is submitted.  If we are unable to complete a charge using that payment method, for any reason, we will contact you electronically and/or by telephone to request an alternate credit or debit card for payment.  If you do not provide a valid alternate payment method, we may immediately terminate your participation in the Lakeside Pay Your Way plan and require immediate payment of any remaining balance.
+    </p></li>
+    <li><p>If the credit or debit card payment method you provide is terminated, expires or is otherwise unable to be charged at any time before your final payment, you agree to contact our Credit Department at <span class="tel_link">847-444-3188</span> with a new payment method at least 10 days prior to the next payment due date.
+    </p></li>
+    <li><p>Payments that are not received by the scheduled due date, as identified above, are subject to a late payment charge of $5.00 for each occurrence (until complete and final payment is received) up to a maximum of $15.00 per eligible order.
+    </p></li>
+    <li><p>You may pay any balance due on an order made under the Lakeside Pay Your Way plan at any time, without penalty, prior to the payment due dates noted in the schedule above.
+    </p></li>
+    <li><p>All orders are governed by the <a class="js-data-tabby-click resp_u resp_no_wrap"
+  data-tabby-click="tabby-3">Terms &amp; Conditions</a> posted on our website, including without limitation our Privacy and Return policies. Credits and refunds will first be applied against any unpaid balance - applying to the Third Payment first.  Refund/Credit amounts greater than the unpaid balance with then credited back to the original payment card.
+    </p></li>
+    <li><p>These Terms &amp; Conditions are governed by Illinois law.  Any legal action relating to an order made under the Lakeside Pay Your Way plan or these Terms &amp; Conditions must be filed and litigated in the state or federal courts in Chicago, Illinois.
+    </p></li>
+</ul>
+		</div> 
+	</div>
+	<div class="tabby">
+		<input id="tabby-2" type="radio" name="tabby-group-1">
+		<label for="tabby-2">Taxes</label>
+		<div class="tabby-content">
+<p>Lakeside is not required to and does not collect sales or use taxes in all states. We currently collect sales tax only to orders shipped within Illinois. Sales tax for Illinois orders should be calculated at 7.5% of total, including merchandise subtotal and shipping charges.
+</p>
+<br>
+<p>
+For all other states imposing sales or use taxes, your purchase is subject to sales/use tax unless it is specifically exempt from taxation. Your purchase is not exempt merely because it is made over the Internet, by catalog or other remote means. You are still responsible for tax on your purchase. Most states require purchasers to file a use tax return to report any purchase that was not taxed and pay tax on the purchase. Details of how to report and pay tax to your state may be found at your state taxing authority's website. In addition, the states of Colorado, Kentucky, Oklahoma, South Dakota and Vermont require us to provide the following additional information:
+</p>
+<br><br>
+<p>
+<strong>Kentucky</strong> <br>
+For Kentucky purchasers: Lakeside is not required to and does not collect Kentucky sales or use tax. Your purchase may be subject to Kentucky use tax unless the purchase is exempt from tax in Kentucky. The purchase is not exempt merely because it is made over the Internet, by catalog or by other remote means. The Commonwealth of Kentucky requires Kentucky purchasers to report all purchases of tangible personal property or digital property that are not taxed by the retailer and pay use tax on those purchases unless exempt under Kentucky law. The tax may be reported and paid on the Kentucky individual income tax return or by filing a consumer use tax return with the Kentucky Department of Revenue. These forms and corresponding instructions may be found on the Kentucky Department of Revenue's Internet Web site at www.revenue.ky.gov/individual/usetax.
+<br><br>
+<strong>Oklahoma</strong> <br>
+For Oklahoma purchasers, the tax may be reported and paid on the Oklahoma individual income tax return or by filing a consumer use tax return. The referenced forms and corresponding instructions are available on the Oklahoma Tax Commissioner website at www.tax.ok.gov.
+<br><br>
+<strong>South Dakota</strong> <br>
+For South Dakota purchasers, the tax may be reported and paid on the South Dakota use tax form. The use tax form and corresponding instructions are available from the South Dakota Department of Revenue website at www.state.sd.us/drr/.
+<br><br>
+<strong>Vermont</strong> <br>
+For Vermont purchasers, the tax may be reported and paid on the Vermont use tax form. The use tax form and corresponding instructions are available from the Vermont Department of Revenue website at www.state.vt.us/tax/usetax.
+<br><br>
+<strong>Colorado</strong> <br>
+For Colorado purchasers, the tax may be reported and paid on the Colorado use tax form. Details of how to file this return may be found at the Colorado Department of Revenue's website at www.taxcolorado.com.
+</p>
+		</div> 
+	</div>
+	<div class="tabby">
+		<input id="tabby-3" type="radio" name="tabby-group-1">
+		<label for="tabby-3">Site Terms</label>
+		<div class="tabby-content">
+<!--  Site Terms Tab Content  -->
+<div class="shipping">
+            Terms and Conditions
+                    <div class="hr"><hr></div>
+                
+ <!-- Start of Content Block with name: lak_termsConditionsModal --> <p><span style=" color: #ED1C24; font-size: small;">PLEASE READ THE FOLLOWING TERMS AND
+CONDITIONS CAREFULLY BEFORE ACCESSING THIS SITE. BY ACCESSING THIS SITE YOU ARE AGREEING TO
+THESE TERMS AND CONDITIONS.</span><span style=" font-size: small;"></span></p>
+
+<p><span style=" font-size: small;">USE OF SITE: This site is operated by The Lakeside
+Collection® ("Lakeside") from its offices within the State of Illinois, United States of
+America. Lakeside makes no warranty or representation that materials in this site are
+appropriate or available for use outside the United States. Persons who access this site from
+locations outside the United States are solely and individually responsible for compliance with
+all local laws which may be applicable.</span></p>
+
+<p><span style=" font-size: small;">COPYRIGHT: All of the text, graphics, design and other
+content of this website Copyright 2000-2015 The Lakeside Collection® All rights reserved. You
+may electronically copy or print in hard copy portions of this site for the sole purpose of
+shopping or placing an order with Lakeside. Any other use, reproduction, modification,
+distribution or republication of the materials on this site is prohibited.</span></p>
+
+<p><span style=" font-size: small;">TRADEMARKS: Lakeside is a service mark of The Lakeside
+Collection® All other trademarks, product names and company names and logos are the property of
+their respective owners.</span></p>
+
+<p><span style=" font-size: small;">DISCLAIMERS: This site and its contents are provided on an
+"as is" basis without any representations or warranties of any kind. Lakeside expressly
+disclaims all such warranties, including without limitation warranties of merchantability or
+fitness for a particular purpose. Although Lakeside has made reasonable efforts to provide
+information accurate as of its publication date, Lakeside does not warrant that the information
+accessible via this site is accurate, complete or current. Price and availability information
+are subject to change without notice. Lakeside and its officers, directors, employees and other
+representatives shall not be liable for any claims or damages arising out of use of this site,
+whether direct, indirect or consequential in nature.</span></p>
+            <div class="clear">&nbsp;</div>
+        </div>
+<!--  Site Terms Tab Content  -->
+		</div> 
+	</div>
+</nav>
+
+</section>
