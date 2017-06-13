@@ -236,56 +236,66 @@ f;f=d[e];e++)if(a.hasOwnProperty(f)&&"undefined"!=typeof a[f])try{var g=[];c[f]=
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
 <style>
+	.to-top {
+		bottom: 4em;
+	}
 	.cafeMessage {
-		height: 84px;
+		transition: all 0.8s ease;
+		height: 58px;
 		position: fixed;
 		bottom: -4px;
-		width: 33%;
-		z-index: 111;
-		margin-left: 33%;
+		width: 56%;
+		margin-left: 22%;
 		border-top-left-radius:14px;
 		border-top-right-radius:14px;
-		background-color: rgba(42,166,202,0.88);
-		padding: 10px 6px 6px 6px !important;
+		z-index: 111;
+		background-color: rgba(41,127,184,0.84);
+		padding: 12px 6px 6px 6px !important;
 	}
 	.cafeMessage:hover {
 		background-color: rgba(42,166,202,1);
 	}
 	.cafeMessage i {
+		display: none;
 		position: absolute;
-		right: 4px; top: 4px;
+		right: 6px; top: 6px;
 		user-select: none;
 		cursor: pointer;
-		color: #297fb8;
+		color: #196fa8;
 	}
-	.cafeMessage i:hover {
-		color: #edba08;
+	.cafeMessage:hover i {
+		display: inline;
 	}
 	.cafeMessage p {
 		line-height: .946;
 		padding: 4px !important;
 		margin: 2px !important;
 		font-family: 'Roboto Slab', serif;
-		font-size: 22px !important;
+		font-size: 18px !important;
 		color: #FFF;
 		user-select: none;
 		cursor: default;
 	}
 	@media only screen and (max-width: 47.9375em) {
 		/* small */
+		.cafeMessage {
+			width: 100%;
+			margin-left: 0;
+		}
 		.cafeMessage p {
 			line-height: 1;
-			font-size: 18px !important;
-		}
-		.cafeMessage {
-			width: 50%;
-			margin-left: 25%;
+			font-size: 16px !important;
 		}
 	}
 	@media only screen and (min-width:48em) and (max-width:61.1875em){
 	/* medium */
 		.cafeMessage {
-			padding: 6px 6px 6px 6px !important;
+			width: 60%;
+			margin-left: 20%;
+		}
+		.cafeMessage p {
+			line-height: 1;
+			font-size: 17px !important;
 		}
 	}
 </style>
@@ -296,7 +306,7 @@ f;f=d[e];e++)if(a.hasOwnProperty(f)&&"undefined"!=typeof a[f])try{var g=[];c[f]=
 		});
 		setTimeout(function(){
 			$(".cafeMessage").slideUp();
-		}, 10000);
+		}, 22000);
 	});
 </script>
 <div class="cafeMessage text-center">
