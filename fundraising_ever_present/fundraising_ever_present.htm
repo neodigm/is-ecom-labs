@@ -233,14 +233,17 @@ f;f=d[e];e++)if(a.hasOwnProperty(f)&&"undefined"!=typeof a[f])try{var g=[];c[f]=
 	<!-- Server ID: prod2d -->
 	<meta name="format-detection" content="telephone=no">
 	<meta name="msapplication-config" content="none">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
 <style>
 	.to-top {
 		bottom: 4em;
 	}
 	.cafeMessage {
-		transition: all 0.8s ease;
+		/*transition: all 0.8s ease;*/
 		height: 58px;
 		position: fixed;
 		bottom: -4px;
@@ -276,6 +279,18 @@ f;f=d[e];e++)if(a.hasOwnProperty(f)&&"undefined"!=typeof a[f])try{var g=[];c[f]=
 		user-select: none;
 		cursor: default;
 	}
+	.cafeMessage .shoppingFor {
+		font-family: 'Courgette', cursive;
+		font-size: 28px !important;
+		position: absolute;
+		left: 16px; top: -22px;
+		user-select: none;
+		color: #3BC2FF;
+		text-shadow: 3px 3px 3px rgba(66, 66, 66, 0.6);
+	}
+	.cafeMessage:hover .shoppingFor {
+		color: #EDBA08;
+	}
 	@media only screen and (max-width: 47.9375em) {
 		/* small */
 		.cafeMessage {
@@ -302,15 +317,16 @@ f;f=d[e];e++)if(a.hasOwnProperty(f)&&"undefined"!=typeof a[f])try{var g=[];c[f]=
 <script>
 	$( document ).ready(function(){
 		$(".js-cafeMessage--slide").on("click", function(){
-			$(".cafeMessage").slideToggle();
+			$(".cafeMessage").slideToggle("slow");
 		});
 		setTimeout(function(){
-			$(".cafeMessage").slideUp();
+			$(".cafeMessage").slideUp("slow");
 		}, 22000);
 	});
 </script>
 <div class="cafeMessage text-center">
 	<i class="js-cafeMessage--slide fa fa-chevron-circle-down fa-lg" aria-hidden="true"></i>
+	<p class="shoppingFor">Shopping For</p>
 	<p>San Antonio Independent School District</p>
 </div>
 <!--  San Antonio Independent School District  -->
