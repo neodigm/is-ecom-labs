@@ -1,0 +1,38 @@
+/*
+--------------------------------------------------
+LTD Commodities script to determine
+Site Catalyst Account
+--------------------------------------------------
+*/
+
+function GetSiteCatalystAccount(siteId)
+{
+
+    if(	siteId == 'LTD')
+    {
+         return "ltdcomltd2dev"; //test
+         //return "ltdcomltd2"; //production
+    }
+    else if (siteId == 'ABC')
+    {
+        return "ltdcomabc2dev"; //test
+        //return "ltdcomabc2"; //production
+
+
+    }
+    else if (siteId == 'LS')
+    {
+        return "ltdcomlake2dev"; //test
+        //return "lltdcomlake2"; //production
+
+
+    }
+    else
+    {
+         return "ltdcomltd2dev"; //test
+         //return "ltdcomltd2"; //production
+
+
+    }
+
+}
