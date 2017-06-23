@@ -200,7 +200,7 @@ f;f=d[e];e++)if(a.hasOwnProperty(f)&&"undefined"!=typeof a[f])try{var g=[];c[f]=
 	$( document ).ready(function( e ){
 		$(".js-pay-with--input").on("change", function( e ){
 			$( ".js-pay-with--container" ).addClass( "hidden" );
-			$( "#"+$( this ).attr("data-container") ).toggleClass("hidden");
+			$( "."+$( this ).attr("data-container") ).toggleClass("hidden");
 		});
 	});
 </script>
@@ -209,9 +209,9 @@ f;f=d[e];e++)if(a.hasOwnProperty(f)&&"undefined"!=typeof a[f])try{var g=[];c[f]=
 
 							<label class="resp_msg_il">
 								<input class="js-pay-with--input" name="selectPaymentMethod" id="selectACH" value="default" type="radio"
-								data-container="pay-with__ach"> Pay with ACH
+								data-container="js-pay-with__ach"> Pay with ACH
 							</label>
-							<section id="pay-with__ach" class="js-pay-with--container hidden">
+							<section class="js-pay-with__ach js-pay-with--container hidden">
 <!--  PAY WITH ACH MARKUP BEGIN  -->
 <p>Please enter the following information as it appears on your check. <a class="resp_u" data-reveal-id="reveal_where_checking">Where to find Checking Account and Routing Numbers</a>.</p>
 
@@ -247,9 +247,9 @@ f;f=d[e];e++)if(a.hasOwnProperty(f)&&"undefined"!=typeof a[f])try{var g=[];c[f]=
 
 							<label class="resp_msg_il">
 								<input class="js-pay-with--input" name="selectPaymentMethod" id="selectCreditCard" value="" type="radio"
-								data-container="pay-with__cc"> Pay with Credit Card <img src="./paymentInfo_files/checkout-credit-cards.png" alt="Pay with Credit Card">
+								data-container="js-pay-with__cc"> Pay with Credit Card <img src="./paymentInfo_files/checkout-credit-cards.png" alt="Pay with Credit Card">
 							</label>
-							<section id="pay-with__cc" class="js-pay-with--container hidden">
+							<section class="js-pay-with__cc js-pay-with--container hidden">
 <!--  PAY WITH CC MARKUP BEGIN  -->
 <!-- Start inc_update_credit_card_acap.jsp -->
 <article class="columns small-10 medium-5 large-10 resp_right_pad-6 no-padding">
@@ -444,7 +444,7 @@ f;f=d[e];e++)if(a.hasOwnProperty(f)&&"undefined"!=typeof a[f])try{var g=[];c[f]=
 		</aside>
 -->
 		<div class="column small-10 medium-5">
-			<p>Please take a moment to ensure the accuracy of your banking information. Returned check or late fees resulting from the input of incorrect bank/account information will remain your responsibility and not that of LTD Commodities.</p>
+			<p  class="js-pay-with__ach js-pay-with--container hidden">Please take a moment to ensure the accuracy of your banking information. Returned check or late fees resulting from the input of incorrect bank/account information will remain your responsibility and not that of LTD Commodities.</p>
 			<p><span class="resp_b">Please Note:</span> You will have another opportunity to review your information before submitting your payment.</p>
 				<a id="continue-w-pay" href="agreement.htm" class="button radius resp_btn_green cmd_half cmd_enabled" data-cont-ach-details="addAccountForm|Bank-3456">Continue with Payment</a>
 				<aside id="error_select_invoice_new" class="panel resp_error_inline hidden">All Information is Required</aside>
