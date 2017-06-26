@@ -199,15 +199,19 @@ f;f=d[e];e++)if(a.hasOwnProperty(f)&&"undefined"!=typeof a[f])try{var g=[];c[f]=
 <script>
 	$( document ).ready(function( e ){
 		$(".js-pay-with--input").on("change", function( e ){
+			$("#profileCreditCard-default")[0].checked = true;
 			$( ".js-pay-with--container" ).addClass( "hidden" );
 			$( "."+$( this ).attr("data-container") ).toggleClass("hidden");
 			$("#continue-w-pay2").text("Continue with Payment");
+			$("#profileCreditCard-default").click();
+			$("#profileCreditCard-default")[0].checked = true;
 		});
 
 		$(".js-cmd-edit").on("click", function( e ){
 			$('input:radio[id=creditCardChooseBox]')[0].checked = true;
 			$("#addEditCreditCard").html("<b>masterCard XXXXXXXXXXXX1234<br>Exp. Date: 4/2018</b>");
 			$("#continue-w-pay2").text("Save and Continue");
+			$(".js-add-new-cc-container").addClass("hidden");
 			$( "#id-edit-cc" ).removeClass("hidden");
 			e.preventDefault();
 		});
@@ -362,12 +366,12 @@ f;f=d[e];e++)if(a.hasOwnProperty(f)&&"undefined"!=typeof a[f])try{var g=[];c[f]=
 	<article class="columns small-10 medium-5 large-10 resp_right_pad-6 no-padding">
 			<aside class="columns no-padding small-10">
 				<label class="resp_access_label">* Card holder Name</label>
-				<input id="cardholderName-field" spellcheck="false" maxlength="40" placeholder=" * Card holder Name" name="/ltd/commerce/order/purchase/LTDBillingFormHandler.creditCard.cardHolderName" value="" autocorrect="off" class="resp_input_brand resp_input_offset" type="text" autocomplete="off" aria-required="true" autocapitalize="off" aria-label="Card holder Name"><input name="_D:/ltd/commerce/order/purchase/LTDBillingFormHandler.creditCard.cardHolderName" value=" " type="hidden">
+				<input id="cardholderName-field" spellcheck="false" maxlength="40" placeholder=" * Card holder Name" name="/ltd/commerce/order/purchase/LTDBillingFormHandler.creditCard.cardHolderName" autocorrect="off" class="resp_input_brand resp_input_offset" type="text" autocomplete="off" aria-required="true" autocapitalize="off" aria-label="Card holder Name"><input name="_D:/ltd/commerce/order/purchase/LTDBillingFormHandler.creditCard.cardHolderName" value=" " type="hidden">
 	        </aside>
 	        <aside class="columns no-padding small-10">
 		        <label class="inputText required hidden" id="creditCardTypeLabel">
 		        	<input id="creditCardType-disabledField" readonly="readonly" class="resp_input_brand resp_input_offset" type="text">
-		        	<input id="creditCardType-field" name="/ltd/commerce/order/purchase/LTDBillingFormHandler.creditCard.creditCardType" value="" type="hidden"><input name="_D:/ltd/commerce/order/purchase/LTDBillingFormHandler.creditCard.creditCardType" value=" " type="hidden">
+		        	<input id="creditCardType-field" name="/ltd/commerce/order/purchase/LTDBillingFormHandler.creditCard.creditCardType" value="0000000000001234" type="hidden"><input name="_D:/ltd/commerce/order/purchase/LTDBillingFormHandler.creditCard.creditCardType" value=" " type="hidden">
 	 </label> </aside>
 			<aside class="columns no-padding small-10">
 				<label class="resp_access_label">* Card Number</label>
@@ -482,16 +486,16 @@ f;f=d[e];e++)if(a.hasOwnProperty(f)&&"undefined"!=typeof a[f])try{var g=[];c[f]=
 	<article class="columns small-10 medium-5 large-10 resp_right_pad-6 no-padding">
 		<aside class="columns no-padding small-10">
 		<label class="resp_access_label">* Card holder Name</label>
-		<input id="cardholderName-field" spellcheck="false" maxlength="40" placeholder=" * Card holder Name" name="/ltd/commerce/order/purchase/LTDBillingFormHandler.creditCard.cardHolderName" value="" autocorrect="off" class="resp_input_brand resp_input_offset" type="text" autocomplete="off" aria-required="true" autocapitalize="off" aria-label="Card holder Name" readonly="readonly"><input name="_D:/ltd/commerce/order/purchase/LTDBillingFormHandler.creditCard.cardHolderName" value=" " type="hidden">
+		<input id="cardholderName-field" value="Scott Krause" spellcheck="false" maxlength="40" placeholder=" * Card holder Name" name="/ltd/commerce/order/purchase/LTDBillingFormHandler.creditCard.cardHolderName" value="" autocorrect="off" class="resp_input_brand resp_input_offset" type="text" autocomplete="off" aria-required="true" autocapitalize="off" aria-label="Card holder Name" readonly="readonly"><input name="_D:/ltd/commerce/order/purchase/LTDBillingFormHandler.creditCard.cardHolderName" value=" " type="hidden">
 		</aside>
 		<aside class="columns no-padding small-10">
 		<label class="inputText required" id="creditCardTypeLabel">
-		<input id="creditCardType-disabledField" readonly="readonly" class="resp_input_brand resp_input_offset" type="text">
+		<input id="creditCardType-disabledField" value="MasterCard" readonly="readonly" class="resp_input_brand resp_input_offset" type="text">
 		<input id="creditCardType-field" name="/ltd/commerce/order/purchase/LTDBillingFormHandler.creditCard.creditCardType" value="masterCard" type="hidden"><input name="_D:/ltd/commerce/order/purchase/LTDBillingFormHandler.creditCard.creditCardType" value=" " type="hidden">
 		</label> </aside>
 		<aside class="columns no-padding small-10">
 		<label class="resp_access_label">* Card Number</label>
-		<input id="creditCardNumber-field" spellcheck="false" maxlength="16" placeholder=" * Card Number" name="/ltd/commerce/order/purchase/LTDBillingFormHandler.creditCard.creditCardNumber" value="" autocorrect="off" class="resp_input_brand resp_input_offset" type="tel" autocomplete="off" aria-required="true" autocapitalize="off" aria-label="Card Number" readonly="readonly"><input name="_D:/ltd/commerce/order/purchase/LTDBillingFormHandler.creditCard.creditCardNumber" value=" " type="hidden">
+		<input id="creditCardNumber-field" value="XXXXXXXXXXXX1234" spellcheck="false" maxlength="16" placeholder=" * Card Number" name="/ltd/commerce/order/purchase/LTDBillingFormHandler.creditCard.creditCardNumber" value="" autocorrect="off" class="resp_input_brand resp_input_offset" type="tel" autocomplete="off" aria-required="true" autocapitalize="off" aria-label="Card Number" readonly="readonly"><input name="_D:/ltd/commerce/order/purchase/LTDBillingFormHandler.creditCard.creditCardNumber" value=" " type="hidden">
 		</aside>
 		<aside class="columns no-padding small-10">
 		<section class="row">
