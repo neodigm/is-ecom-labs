@@ -234,9 +234,8 @@ f;f=d[e];e++)if(a.hasOwnProperty(f)&&"undefined"!=typeof a[f])try{var g=[];c[f]=
 	<meta name="format-detection" content="telephone=no">
 	<meta name="msapplication-config" content="none">
 
-
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 <!--
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
 -->
@@ -264,7 +263,7 @@ f;f=d[e];e++)if(a.hasOwnProperty(f)&&"undefined"!=typeof a[f])try{var g=[];c[f]=
 	.cafeMessage:hover {
 		background-color:  rgba(241, 196, 15, 1);
 	}
-	.cafeMessage i {
+	.cafeMessage .cafeMessageChrevron {
 		display: none;
 		position: absolute;
 		right: 6px; top: 6px;
@@ -272,7 +271,7 @@ f;f=d[e];e++)if(a.hasOwnProperty(f)&&"undefined"!=typeof a[f])try{var g=[];c[f]=
 		cursor: pointer;
 		color: #196fa8;
 	}
-	.cafeMessage:hover i {
+	.cafeMessage:hover .cafeMessageChrevron {
 		display: inline;
 	}
 	.cafeMessage p {
@@ -341,7 +340,15 @@ f;f=d[e];e++)if(a.hasOwnProperty(f)&&"undefined"!=typeof a[f])try{var g=[];c[f]=
 	});
 </script>
 <div class="cafeMessage text-center">
+<!---
 	<i class="js-cafeMessage--slide fa fa-chevron-circle-down fa-lg" aria-hidden="true"></i>
+-->
+<span class="js-cafeMessage--slide cafeMessageChrevron" aria-hidden="true">
+<svg viewBox="0 0 184 184" style="width: 20px; height: 20px; vertical-align: middle;fill: #196fa8;color: #196fa8;">
+<path transform="scale(0.1,-0.1) translate(0,-1536)" d="M813 237l454 454q19 19 19 45t-19 45l-102 102q-19 19 -45 19t-45 -19l-307 -307l-307 307q-19 19 -45 19t-45 -19l-102 -102q-19 -19 -19 -45t19 -45l454 -454q19 -19 45 -19t45 19zM1536 640q0 -209 -103 -385.5t-279.5 -279.5t-385.5 -103t-385.5 103t-279.5 279.5 t-103 385.5t103 385.5t279.5 279.5t385.5 103t385.5 -103t279.5 -279.5t103 -385.5z"></path></svg>
+</span>
+
+
 	<p class="shoppingFor">Shopping For</p>
 	<p>San Antonio Independent School District</p>
 </div>
