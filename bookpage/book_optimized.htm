@@ -3,11 +3,19 @@
 PROJECT NOTES
 
 Validate structured data | https://search.google.com/structured-data/testing-tool/u/0/
+	With prototype https://search.google.com/structured-data/testing-tool#url=https%3A%2F%2Fneodigm.github.io%2Fis-ecom-labs%2Fbookpage%2Fbook_optimized.htm
+
+Pinterest - Rich pin support
+	 https://developers.pinterest.com/docs/rich-pins/validator/
+
+
 
 
 -->
 <!-- saved from url=(0067)https://stage.ltdcommodities.com/browse/What-s-New-2017/_/N-1z0uo43 -->
-<html class=" js flexbox flexboxlegacy canvas canvastext webgl touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths" lang="en"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<html class="" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
 
 		<link rel="apple-touch-icon" sizes="180x180" href="https://stage.ltdcommodities.com/images/ltd-apple-touch-icon.png">
 		<link rel="icon" type="image/png" href="https://stage.ltdcommodities.com/images/ltd-favicon-32x32.png" sizes="32x32">
@@ -18,12 +26,10 @@ Validate structured data | https://search.google.com/structured-data/testing-too
 		<meta name="msapplication-config" content="/images/ltd-browserconfig.xml">
 		<meta name="theme-color" content="#297fb8">
 
-
 <!-- LTD Responsive Styles -->
 
 <!-- siteId: LTD -->
 
-<meta class="foundation-mq-topbar">
 </head>
 <body>
 <style>
@@ -33,27 +39,25 @@ Validate structured data | https://search.google.com/structured-data/testing-too
 		grid-template-columns: repeat(5, 1fr);
 		QQQQgrid-row-gap: 10px;
 		QQQQgrid-column-gap: 10px;
-		width: 980px;
+		width: 970px;
 		margin: 0 auto !important;
 	}
 	.crdPrd a, figure, picture, img, figcaption, section {
 		padding: 0; margin: 0;
 	}
 	.crdPrd {
-		padding: 0; margin: 0 4px 8px 4px;
-	border: solid .4px #ccc;
+		padding: 0; margin: 0 6px 8px 6px;
 	}
 
 	.crdPrd .crdPrd--pic {
 		display: block;
-background-color: red;
+background-color: #f2faff; /*THEME*/
 		position: relative;
 		padding-bottom: 122%; /*377:460*/
 		height: 0;
 		overflow: hidden;
 	}
 	.crdPrd .crdPrd--img {
-opacity: 0.8;
   position: absolute;
   top: 0; left: 0;
 	height: 100%; width: 100%;
@@ -137,6 +141,56 @@ opacity: 0.8;
 				</figure>
 			</a>
 		</article>
+		<article class="crdPrd" itemscope itemtype="http://schema.org/Product"
+			aria-describedby="id-prod-COUNTER" role="gridcell">
+			<a class="crdPrd--a" itemprop="url"
+			href="">
+				<figure class="crdPrd--fig">
+					<picture class="crdPrd--pic">
+						<img class="crdPrd--img" itemprop="image"
+						src="https://www.ltdcommodities.com/images/product/63666_1235626_HCX_GCR_mn.jpg"
+						alt="product name">
+					</picture>
+					<figcaption class="crdPrd--figcap">
+						<section itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+							<p class="crdPrd--p">
+								<span itemprop="priceCurrency" content="USD">$</span><span itemprop="price" content="19.00">19.00</span>
+							</p>
+						</section>
+						<h2 id="id-prod-COUNTER" class="crdPrd--h2" itemprop="name">NAME</h2>
+  					<section itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+							<meta itemprop="ratingValue" content="averageRating"><meta itemprop="ratingCount" content="5">
+							<div class="review-stars four-star" itemprop="ratingValue" content="4"></div>
+  					</section>
+					</figcaption>
+				</figure>
+			</a>
+		</article>
+		<article class="crdPrd" itemscope itemtype="http://schema.org/Product"
+			aria-describedby="id-prod-COUNTER" role="gridcell">
+			<a class="crdPrd--a" itemprop="url"
+			href="">
+				<figure class="crdPrd--fig">
+					<picture class="crdPrd--pic">
+						<img class="crdPrd--img" itemprop="image"
+						src="https://www.ltdcommodities.com/images/product/63666_1235626_HCX_GCR_mn.jpg"
+						alt="product name">
+					</picture>
+					<figcaption class="crdPrd--figcap">
+						<section itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+							<p class="crdPrd--p">
+								<span itemprop="priceCurrency" content="USD">$</span><span itemprop="price" content="19.00">19.00</span>
+							</p>
+						</section>
+						<h2 id="id-prod-COUNTER" class="crdPrd--h2" itemprop="name">NAME</h2>
+  					<section itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+							<meta itemprop="ratingValue" content="averageRating"><meta itemprop="ratingCount" content="5">
+							<div class="review-stars four-star" itemprop="ratingValue" content="4"></div>
+  					</section>
+					</figcaption>
+				</figure>
+			</a>
+		</article>
 				<article class="crdPrd" itemscope itemtype="http://schema.org/Product"
 					aria-describedby="id-prod-COUNTER" role="gridcell">
 					<a class="crdPrd--a" itemprop="url"
@@ -287,56 +341,6 @@ opacity: 0.8;
 										</figure>
 									</a>
 								</article>
-										<article class="crdPrd" itemscope itemtype="http://schema.org/Product"
-											aria-describedby="id-prod-COUNTER" role="gridcell">
-											<a class="crdPrd--a" itemprop="url"
-											href="">
-												<figure class="crdPrd--fig">
-													<picture class="crdPrd--pic">
-														<img class="crdPrd--img" itemprop="image"
-														src="https://www.ltdcommodities.com/images/product/63666_1235626_HCX_GCR_mn.jpg"
-														alt="product name">
-													</picture>
-													<figcaption class="crdPrd--figcap">
-														<section itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-															<p class="crdPrd--p">
-																<span itemprop="priceCurrency" content="USD">$</span><span itemprop="price" content="19.00">19.00</span>
-															</p>
-														</section>
-														<h2 id="id-prod-COUNTER" class="crdPrd--h2" itemprop="name">NAME</h2>
-								  					<section itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
-															<meta itemprop="ratingValue" content="averageRating"><meta itemprop="ratingCount" content="5">
-															<div class="review-stars four-star" itemprop="ratingValue" content="4"></div>
-								  					</section>
-													</figcaption>
-												</figure>
-											</a>
-										</article>
-										<article class="crdPrd" itemscope itemtype="http://schema.org/Product"
-											aria-describedby="id-prod-COUNTER" role="gridcell">
-											<a class="crdPrd--a" itemprop="url"
-											href="">
-												<figure class="crdPrd--fig">
-													<picture class="crdPrd--pic">
-														<img class="crdPrd--img" itemprop="image"
-														src="https://www.ltdcommodities.com/images/product/63666_1235626_HCX_GCR_mn.jpg"
-														alt="product name">
-													</picture>
-													<figcaption class="crdPrd--figcap">
-														<section itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-															<p class="crdPrd--p">
-																<span itemprop="priceCurrency" content="USD">$</span><span itemprop="price" content="19.00">19.00</span>
-															</p>
-														</section>
-														<h2 id="id-prod-COUNTER" class="crdPrd--h2" itemprop="name">NAME</h2>
-								  					<section itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
-															<meta itemprop="ratingValue" content="averageRating"><meta itemprop="ratingCount" content="5">
-															<div class="review-stars four-star" itemprop="ratingValue" content="4"></div>
-								  					</section>
-													</figcaption>
-												</figure>
-											</a>
-										</article>
 		<article class="crdPrd" itemscope itemtype="http://schema.org/Product"
 			aria-describedby="id-prod-COUNTER" role="gridcell">
 			<a class="crdPrd--a" itemprop="url"
