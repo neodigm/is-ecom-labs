@@ -34,17 +34,32 @@ Pinterest - Rich pin support
 <body>
 <style>
 /*  Above the fold begin  */
-	.grid-crd {
+/*  Category Base  */
+	.crdPrd, .crdHeadNav a, figure, picture, img, figcaption, section {
+		padding: 0; margin: 0;
+	}
+/*  Category Layout  */
+/*  Category Module  */
+/*  Category State  */
+/*  Category Theme  */
+	.grid-HeadNav {
 		display: grid;
-		grid-template-columns: repeat(5, 1fr);
-		QQQQgrid-row-gap: 10px;
-		QQQQgrid-column-gap: 10px;
+		grid-template-columns: 1fr;
 		width: 980px;
 		margin: 0 auto !important;
 	}
-	.crdPrd a, figure, picture, img, figcaption, section {
-		padding: 0; margin: 0;
+	.crdHeadNav {
+		padding: 0; margin: 0 5px 8px 5px;
+		border: solid 1px #edba08;
+		height: 42px;
 	}
+	.grid-crd {
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+		width: 980px;
+		margin: 0 auto !important;
+	}
+
 	.crdPrd {
 		padding: 0; margin: 0 5px 8px 5px;
 	}
@@ -112,6 +127,11 @@ background-color: #f2faff; /*THEME*/
 }
 /*  Above the fold end  */
 </style>
+<section class="grid-HeadNav" role="grid"><!--  GRID CONTAINER BEGIN -->
+	<nav class="crdHeadNav">
+QQQQ
+	</nav>
+</section>
 
 <section class="grid-crd" role="grid"><!--  GRID CONTAINER BEGIN -->
 		<article class="crdPrd" itemscope itemtype="http://schema.org/Product"
