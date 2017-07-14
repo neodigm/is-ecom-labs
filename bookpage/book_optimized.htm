@@ -2,6 +2,8 @@
 <!--
 PROJECT NOTES
 
+PSI - https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fneodigm.github.io%2Fis-ecom-labs%2Fbookpage%2Fbook_optimized.htm
+
 Validate structured data | https://search.google.com/structured-data/testing-tool/u/0/
 	With prototype https://search.google.com/structured-data/testing-tool#url=https%3A%2F%2Fneodigm.github.io%2Fis-ecom-labs%2Fbookpage%2Fbook_optimized.htm
 
@@ -37,6 +39,7 @@ Pinterest - Rich pin support
 	/*  CSS category Layout   */ /*  border display height media width ...  */
 		.grid-HeadNav {
 			display: grid;
+			display: -ms-grid;
 			grid-template-columns: 1fr;
 			width: 980px;
 			margin: 0 auto;
@@ -73,6 +76,7 @@ Pinterest - Rich pin support
 	}
 	.grid-crd {
 		display: grid;
+		display: -ms-grid;
 		grid-template-columns: repeat(5, 1fr);
 		width: 980px;
 		margin: 0 auto !important;
@@ -147,7 +151,17 @@ background-color: #f2faff; /*THEME*/
 </style>
 <section class="grid-HeadNav" role="grid"><!--  GRID CONTAINER BEGIN -->
 	<nav class="crdHeadNav">
+<section style="display: grid; grid-template-columns: repeat(6, 1fr);">
+	<nav style="border-right: solid 1px #EDBA08; height: 43px;">
 QQQQ
+	</nav>
+	<nav style="">
+QQQQ
+	</nav>
+	<nav style="">
+QQQQ
+	</nav>
+</section>
 	</nav>
 </section>
 
