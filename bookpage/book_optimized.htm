@@ -23,38 +23,41 @@ Pinterest - Rich pin support
 	<meta name="theme-color" content="#297fb8">
 </head>
 <body>
-<style>
+<!--
 /*========================================*/
 /*  Component: HeadNav                    */
 /*================================ begin =*/
+-->
+<style>
 /*  Above the fold begin    */
-	/*  CSS category Base     */
-		.crdPrd, .crdHeadNav a, figure, picture, img, figcaption, section {
+	/*  CSS category Base     */ /*  reset margin padding ...  */
+		.crdHeadNav a, figure, picture, img, figcaption, section {
 			padding: 0; margin: 0;
 		}
-	/*  CSS category Layout   */
+	/*  CSS category Layout   */ /*  bordder display height width ...  */
+		.grid-HeadNav {
+			display: grid;
+			grid-template-columns: 1fr;
+			width: 980px;
+			margin: 0 auto;
+		}
+		.crdHeadNav {
+			padding: 0; margin: 0 5px 8px 5px;
+			border: solid 1px #edba08;
+			height: 42px;
+		}
 /*  Above the fold end      */
 </style>
-
-<link rel="preload" href="HeadNav.css" as="style" onload="this.rel='stylesheet'">
-<!--link rel="stylesheet" href="HeadNav.css" type="text/css" media="all"-->
-
-<style>
-	/*  CSS category State    */
-	/*  CSS category Theme    */
+<link rel="preload" href="components/HeadNav/HeadNav_skin.css" as="style" onload="this.rel='stylesheet'">
+<script src="components/HeadNav/HeadNav.js"></script>
+<!--
 /*========================================*/
 /*  Component: HeadNav                    */
 /*================================ end ===*/
-	.grid-HeadNav {
-		display: grid;
-		grid-template-columns: 1fr;
-		width: 980px;
-		margin: 0 auto !important;
-	}
-	.crdHeadNav {
-		padding: 0; margin: 0 5px 8px 5px;
-		border: solid 1px #edba08;
-		height: 42px;
+-->
+<style>
+	.crdPrd, a, figure, picture, img, figcaption, section {
+		padding: 0; margin: 0;
 	}
 	.grid-crd {
 		display: grid;
