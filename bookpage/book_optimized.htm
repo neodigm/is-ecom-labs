@@ -34,7 +34,7 @@ Pinterest - Rich pin support
 		.crdHeadNav a, figure, picture, img, figcaption, section {
 			padding: 0; margin: 0;
 		}
-	/*  CSS category Layout   */ /*  bordder display height width ...  */
+	/*  CSS category Layout   */ /*  border display height media width ...  */
 		.grid-HeadNav {
 			display: grid;
 			grid-template-columns: 1fr;
@@ -45,6 +45,18 @@ Pinterest - Rich pin support
 			padding: 0; margin: 0 5px 8px 5px;
 			border: solid 1px #edba08;
 			height: 42px;
+		}
+		@media only screen and (max-width: 47.9375em) {
+			/* small */
+			.grid-HeadNav {
+				width: inherit;
+			}
+		}
+		@media only screen and (min-width:48em) and (max-width:61.1875em){
+			/* medium */
+			.grid-HeadNav {
+				width: inherit;
+			}
 		}
 /*  Above the fold end      */
 </style>
