@@ -4,3 +4,6 @@
 .crdHeadNav {
 	background-color: #f9f8f6;
 }
+.crdHeadNav--li:hover {
+	background-color: #fcfcfc;
+}
