@@ -24,9 +24,8 @@ Pinterest - Rich pin support
 	<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
 	<meta name="msapplication-config" content="/images/ltd-browserconfig.xml">
 	<meta name="theme-color" content="#297fb8">
-
 </head>
-<body>
+<body data-brand="ltd">
 <!--
 /*========================================*/
 /*  Component: HeadNav                    */
@@ -35,7 +34,7 @@ Pinterest - Rich pin support
 <style>
 /*  Above the fold begin    */
 	/*  CSS category Base     */ /*  reset margin padding ...  */
-.crdHeadNav a, figure, picture, img, figcaption, section, ul, li {
+.crdHeadNav a, body, figure, picture, img, figcaption, section, ul, li, input {
 	margin: 0;
 	padding: 0;
 }
@@ -52,18 +51,45 @@ Pinterest - Rich pin support
 	font-size: 0;
 }
 .crdHeadNav--li {
-	font-size: 14px;
 	border-right: 1px solid #ccc;
 	cursor: pointer;
 	display: inline-table;
+	font-size: 14px;
 	height: 38px;
 	list-style: none;
 	padding-top: 4px;
-	text-align: center;
-	width: 118px;
 }
-.crdHeadNav--li__search { width: 44.6%; }
-.crdHeadNav--li__faq { width: 64px; border-right-width: 0; }
+.crdHeadNav--li__link {
+	max-width: 118px;
+	text-align: center;
+	width: 12%;
+}
+.crdHeadNav--li__search {
+	cursor: auto;
+	width: 44.6%;
+}
+.crdHeadNav--li__faq {
+	border-right-width: 0;
+	text-align: center;
+	width: 64px;
+}
+.crdHeadNav--input {
+padding: 0 0 0 8px;
+margin: 0 2px 2px 4px;
+outline: none;
+	background-color: #fff;
+	border-color: #ccc;
+	/*padding: 0 8px;*/
+	border-radius: 0;
+	border-style: solid;
+	border-width: 1px;
+	box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+	color: rgba(0,0,0,0.75);
+	display: block;
+	height: 30px;
+	width: 100%;
+	font-size: 15px;
+}
 .crdHeadNav--span { font-size: 1.16em; color: #605446; }
 .crdHeadNav--a {
 	font-family: sans-serif;
@@ -74,13 +100,19 @@ color: #7e2d3e;
 }
 @media only screen and (max-width: 47.9375em) {
 	/* small */
-	.grid-HeadNav {
+	.crdHeadNav {
 		width: inherit;
+	}
+	.crdHeadNav--li__search {
+		width: 100%;
+	}
+	.crdHeadNav--li__link, .crdHeadNav--li__faq {
+		display: none;
 	}
 }
 @media only screen and (min-width:48em) and (max-width:61.1875em){
 	/* medium */
-	.grid-HeadNav {
+	.crdHeadNav {
 		width: inherit;
 	}
 }
@@ -172,20 +204,24 @@ background-color: #f2faff; /*THEME*/
 
 	<nav class="crdHeadNav">
 		<ul class="crdHeadNav--ul">
-			<li class="crdHeadNav--li">
+			<li class="crdHeadNav--li crdHeadNav--li__link">
 				<a class="crdHeadNav--a" href="/shopCatalogs">Shop our<br><span class="crdHeadNav--span">Catalogs</span></a>
 			</li>
 			<li class="crdHeadNav--li crdHeadNav--li__search">
-				<input id="id-crdHeadNav__search" class=""
-				placeholder="Search item# or keyword" name="/atg/commerce/endeca/QueryFormHandler.question" type="text" aria-required="true" aria-label="Search item# or keyword" autocomplete="off">
+<div style="width: 90%;padding: 0;position: relative;float: left;">
+			<input id="id-crdHeadNav__search" class="crdHeadNav--input"
+			placeholder="Search item# or keyword" name="/atg/commerce/endeca/QueryFormHandler.question" type="text" aria-required="true" aria-label="Search item# or keyword" autocomplete="off">
+</div>
+<div style="width: 10%;display: inline-table;">Go
+</div>
 			</li>
-			<li class="crdHeadNav--li">
+			<li class="crdHeadNav--li crdHeadNav--li__link">
 				<a class="crdHeadNav--a" href="/catalog/catalog_quick_order.jsp">Quick<br><span class="crdHeadNav--span">Order Form</span></a>
 			</li>
-			<li class="crdHeadNav--li">
+			<li class="crdHeadNav--li crdHeadNav--li__link">
 				<a class="crdHeadNav--a" href="/my_account/manage_account.jsp">Your<br><span class="crdHeadNav--span">Account</span></a>
 			</li>
-			<li class="crdHeadNav--li">
+			<li class="crdHeadNav--li crdHeadNav--li__link">
 				<a class="crdHeadNav--a" href="/my_account/order_history/order_history_listing.jsp">Order<br><span class="crdHeadNav--span">Status</span></a>
 			</li>
 			<li class="crdHeadNav--li crdHeadNav--li__faq">(?)</li>
