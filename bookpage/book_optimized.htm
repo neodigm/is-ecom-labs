@@ -1,17 +1,4 @@
 <!DOCTYPE html>
-<!--
-PROJECT NOTES
-
-PSI - https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fneodigm.github.io%2Fis-ecom-labs%2Fbookpage%2Fbook_optimized.htm
-
-Validate structured data | https://search.google.com/structured-data/testing-tool/u/0/
-	With prototype https://search.google.com/structured-data/testing-tool#url=https%3A%2F%2Fneodigm.github.io%2Fis-ecom-labs%2Fbookpage%2Fbook_optimized.htm
-
-Pinterest - Rich pin support
-	 https://developers.pinterest.com/docs/rich-pins/validator/
-
--->
-<!-- saved from url=(0067)https://stage.ltdcommodities.com/browse/What-s-New-2017/_/N-1z0uo43 -->
 <html class="" lang="en">
 <head>
 	<title>Autumn Style 2017 | LTD</title>
@@ -24,8 +11,6 @@ Pinterest - Rich pin support
 	<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
 	<meta name="msapplication-config" content="/images/ltd-browserconfig.xml">
 	<meta name="theme-color" content="#297fb8">
-</head>
-<body data-brand="ltd">
 <!--
 /*========================================*/
 /*  Component: HeadNav                    */
@@ -146,12 +131,23 @@ Pinterest - Rich pin support
 /*  Component: HeadNav                    */
 /*================================ end ===*/
 -->
+<!--
+/*========================================*/
+/*  Component: ProductCard                    */
+/*================================ begin =*/
+-->
 <style>
+/*  Above the fold begin    */
+	/*  CSS category Base     */ /*  reset margin padding ...  */
+.crdPrd body, figure, picture, img, figcaption, section, ul, li, input {
+	margin: 0;
+	padding: 0;
+}
 .crdPrd, a, figure, picture, img, figcaption, section {
-	padding: 0; margin: 0;
+	margin: 0;
+	padding: 0;
 }
 .grid-crd {
-	display: -ms-grid;
 	display: grid;
 	grid-template-columns: repeat(5, 1fr);
 	margin: 0 auto !important;
@@ -170,8 +166,6 @@ Pinterest - Rich pin support
 	overflow: hidden;
 	padding-bottom: 122%; /*377:460*/
 	position: relative;
-
-background-color: #f2faff; /*THEME*/
 }
 .crdPrd .crdPrd--img {
 	height: 100%; width: 100%;
@@ -196,7 +190,15 @@ background-color: #f2faff; /*THEME*/
 	margin: 0;
 	text-decoration: underline;
 }
-
+.four-star {
+    background-position: 0 -144px;
+}
+.review-stars {
+    height: 18px;
+    margin: 5px auto 0 auto;
+    width: 92px;
+}
+	/*  CSS category Layout   */ /*  border display height media width ...  */
 @media only screen and (max-width: 47.9375em) {
 	/* small */
 	.grid-crd {
@@ -214,18 +216,18 @@ background-color: #f2faff; /*THEME*/
 		width: inherit;
 	}
 }
-.four-star {
-    background-position: 0 -144px;
-}
-.review-stars {
-    background: url(./N-1z0uo43_files/review-stars-sprite.png) no-repeat;
-    height: 18px;
-    margin: 5px auto 0 auto;
-    width: 92px;
-}
-/*  Above the fold end  */
+/*  Above the fold end      */
 </style>
+<link rel="preload" href="components/ProductCard/ProductCard_skin.css" as="style" onload="this.rel='stylesheet'">
 
+<!--
+/*========================================*/
+/*  Component: ProductCard                    */
+/*================================ end ===*/
+-->
+
+</head>
+<body data-brand="ltd">
 	<nav class="crdHeadNav">
 		<ul class="crdHeadNav--ul">
 			<li class="crdHeadNav--li crdHeadNav--li__link">
@@ -254,7 +256,6 @@ background-color: #f2faff; /*THEME*/
 			</li>
 		</ul>
 	</nav>
-
 
 <section class="grid-crd" role="grid"><!--  GRID CONTAINER BEGIN -->
 	<article class="crdPrd" itemscope itemtype="http://schema.org/Product"
