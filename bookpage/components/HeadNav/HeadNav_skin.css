@@ -8,10 +8,7 @@
 .crdHeadNav--li:hover {
 	background-color: #fcfcfc;
 }
-.crdHeadNav--li {
-	cursor: pointer;
-}
-.crdHeadNav--li__link {
+.crdHeadNav--li, .crdHeadNav--li__link, .faq-circle {
 	cursor: pointer;
 }
 .crdHeadNav--input {
@@ -23,16 +20,25 @@
 .crdHeadNav--span { color: #605446; }
 .crdHeadNav--a {
 	text-decoration: none;
-	color: #7e2d3e;
 }
-.circle {
+body[data-brand="lsc"] .crdHeadNav--a { color: #7e2d3e; }
+body[data-brand="ltd"] .crdHeadNav--a { color: #2ba6cb; }
+
+.faq-circle {
 	background: #bfc2c7;
 	border-radius: 50%;
 	color: #fff;
-	cursor: pointer;
 	font-family: monospace;
 	font-size: 15px;
 	font-weight: bold;
 	text-align: center;
 	text-decoration: none;
 }
+.crdHeadNav--search__go {
+	border-radius: 3px;
+	color: #fff;
+	cursor: pointer;
+	text-align: center;
+}
+body[data-brand="lsc"] .crdHeadNav--search__go { background-color: #7e2d3e; }
+body[data-brand="ltd"] .crdHeadNav--search__go { background-color: #2ba6cb; }

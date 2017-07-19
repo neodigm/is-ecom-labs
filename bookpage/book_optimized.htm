@@ -64,7 +64,7 @@ Pinterest - Rich pin support
 	width: 12%;
 }
 .crdHeadNav--li__search {
-	cursor: auto;
+	cursor: auto!important;
 	width: 44.6%;
 }
 .crdHeadNav--li__faq {
@@ -74,7 +74,7 @@ Pinterest - Rich pin support
 	text-align: left;
 	width: 64px;
 }
-.circle {
+.faq-circle {
 	height: 24px;
 	left: 18px;
 	line-height: 24px;
@@ -89,10 +89,6 @@ Pinterest - Rich pin support
 	display: inline-table;
 }
 .crdHeadNav--search__go {
-	background-color: #7e2d3e;
-	border-radius: 3px;
-	color: #fff;
-	cursor: pointer;
 	float: right;
 	font-family: sans-serif;
 	font-size: 1em;
@@ -103,7 +99,6 @@ Pinterest - Rich pin support
 	padding: 0 .75em;
 	position: absolute;
 	top: 8px;
-	vertical-align: middle;
 }
 .crdHeadNav--input {
 	border: solid 1px #ccc;
@@ -137,6 +132,9 @@ Pinterest - Rich pin support
 	/* medium */
 	.crdHeadNav {
 		width: inherit;
+	}
+	.crdHeadNav--li__faq {
+		width: 6.8vw;
 	}
 }
 /*  Above the fold end      */
@@ -205,6 +203,9 @@ background-color: #f2faff; /*THEME*/
 		grid-template-columns: 1fr 1fr;
 		width: inherit;
 	}
+	.crdHeadNav--search__go {
+		width: 8vw;
+	}
 }
 @media only screen and (min-width:48em) and (max-width:61.1875em){
 	/* medium */
@@ -249,7 +250,7 @@ background-color: #f2faff; /*THEME*/
 				<a class="crdHeadNav--a" href="/my_account/order_history/order_history_listing.jsp">Order<br><span class="crdHeadNav--span">Status</span></a>
 			</li>
 			<li class="crdHeadNav--li crdHeadNav--li__faq">
-				<a class="circle" href="/content/faq">?</a>
+				<a class="faq-circle" href="/content/faq">?</a>
 			</li>
 		</ul>
 	</nav>
