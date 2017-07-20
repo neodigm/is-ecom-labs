@@ -1,6 +1,6 @@
 /*  CSS category State    */ /*  color display font visibility ...  */
   .review-stars {
-    background: url(./N-1z0uo43_files/review-stars-sprite.png) no-repeat;
+    background: url('../../media/global/images/sprites/review-stars-sprite.png') no-repeat;
   }
 
 /*  CSS category Theme    */ /*  color background-color hover ...  */
