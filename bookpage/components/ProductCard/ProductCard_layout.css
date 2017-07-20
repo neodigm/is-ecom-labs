@@ -3,10 +3,8 @@
 margin: 0;
 padding: 0;
 }
-.crdPrd, a, figure, picture, img, figcaption, section {
-margin: 0;
-padding: 0;
-}
+
+	/*  CSS category Layout   */ /*  border display height media width ...  */
 .grid-crd {
 display: grid;
 grid-template-columns: repeat(5, 1fr);
