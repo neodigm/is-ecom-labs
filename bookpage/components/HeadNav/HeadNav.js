@@ -1,1 +1,1 @@
-console.log("component js");
+console.log("component HeadNav.js");
