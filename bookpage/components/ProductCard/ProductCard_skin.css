@@ -4,5 +4,5 @@
   }
 
 /*  CSS category Theme    */ /*  color background-color hover ...  */
-  body[data-brand="lsc"] .crdPrd .crdPrd--pic { background-color: #f2faff; }
-  body[data-brand="ltd"] .crdPrd .crdPrd--pic { background-color: #edba08; }
+  body[data-brand="lsc"] .crdPrd .crdPrd--pic { background-color: #FFFAFF; }
+  body[data-brand="ltd"] .crdPrd .crdPrd--pic { background-color: #F2FAFF; }
