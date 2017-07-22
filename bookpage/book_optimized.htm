@@ -26,15 +26,6 @@
 	}
 
 	/*  CSS category Layout   */ /*  border display height media width ...  */
-	.QQQQgrid-HeadLogo {
-	display: grid;
-	grid-template-columns: repeat(6, 1fr);
-	}
-	.QQQQnavHeadLogo {
-	padding: 0; margin: 0 5px 8px 5px;
-	border: solid 1px #edba08;
-	}
-
 
 	.grid-HeadLogo {
 	  display: flex;
@@ -43,20 +34,29 @@
 		height: 89px;
 		width: 980px;
 		padding: 8px 0 1px;
+	border: solid 1px #edba08;
+  justify-content: space-between;
+		QQQQflex-wrap: nowrap;
+    list-style: none;
+		font-size: 0;
+
+	}
+
+	.navHeadLogo {
 		border: solid 1px #edba08;
+		background-image: url('images/ltd-logo-lg.jpg');
+		height: 100%;
 	}
 
 	.grid-HeadLogo > nav {
-	  flex: 1;
+flex: 0 0 50%;
 	}
 
-	.grid-HeadLogo {
+	.QQQQgrid-HeadLogo {
 	  display: grid;
 	  grid-gap: 10px;
 	  grid-template-columns: repeat(6, auto);
 	}
-
-
 
 
 
