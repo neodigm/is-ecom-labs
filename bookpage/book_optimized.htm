@@ -28,41 +28,40 @@
 	/*  CSS category Layout   */ /*  border display height media width ...  */
 
 	.grid-HeadLogo {
-	  display: flex;
-	  align-items: center;
-		margin: 0 auto !important;
+		/* align-content: not used if only one row */
+		align-items: stretch;
+border: solid 1px #edba08;
+		display: flex;
+		flex-flow: row nowrap; /* Shorthand for flex-direction and flex-wrap */
 		height: 89px;
-		width: 980px;
+		justify-content: space-between;
+		list-style: none;
+		margin: 0 auto;
 		padding: 8px 0 1px;
-	border: solid 1px #edba08;
-  justify-content: space-between;
-		QQQQflex-wrap: nowrap;
-    list-style: none;
-		font-size: 0;
-
+		width: 980px;
+	}
+	.HeadLogo__hb {
+border: solid 1px #edba08;
+		background-color: #edba08;
+		height: 100%;
+		display: none;
 	}
 
-	.navHeadLogo {
-		border: solid 1px #edba08;
+	.HeadLogo__img {
+border: solid 1px #edba08;
 		background-image: url('images/ltd-logo-lg.jpg');
 		height: 100%;
 	}
 
 	.grid-HeadLogo > nav {
-flex: 0 0 50%;
+		flex: 1 1 auto; /* Shorthand for flex-grow, flex-shrink and flex-basis */
 	}
-
-	.QQQQgrid-HeadLogo {
-	  display: grid;
-	  grid-gap: 10px;
-	  grid-template-columns: repeat(6, auto);
-	}
-
-
 
 	@media only screen and (max-width: 47.9375em) {
 	/* small */
-
+	.HeadLogo__hb {
+		display: block;
+	}
 	}
 	@media only screen and (min-width:48em) and (max-width:61.1875em){
 	/* medium */
@@ -118,17 +117,17 @@ flex: 0 0 50%;
 </head>
 <body data-brand="ltd">
 	<section class="grid-HeadLogo" role="grid"><!--  GRID CONTAINER BEGIN -->
-		<nav class="navHeadLogo" role="gridcell">QQQQ
+		<nav class="HeadLogo__hb" role="gridcell">QQQQ
 		</nav>
-		<nav class="navHeadLogo" role="gridcell">QQQQ
+		<nav class="HeadLogo__img" role="gridcell">QQQQ
 		</nav>
-		<nav class="navHeadLogo" role="gridcell">QQQQ
+		<nav class="" role="gridcell">QQQQ
 		</nav>
-		<nav class="navHeadLogo" role="gridcell">QQQQ
+		<nav class="" role="gridcell">QQQQ
 		</nav>
-		<nav class="navHeadLogo" role="gridcell">QQQQ
+		<nav class="" role="gridcell">QQQQ
 		</nav>
-		<nav class="navHeadLogo" role="gridcell">QQQQ
+		<nav class="" role="gridcell">QQQQ
 		</nav>
 	</section><!--  GRID CONTAINER END -->
 
