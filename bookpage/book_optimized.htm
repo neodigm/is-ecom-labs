@@ -70,6 +70,9 @@
 		cursor: pointer;
 		white-space: nowrap;
 	}
+	.HeadLogo__cart {
+		margin-left: 6px;
+	}
 
 body[data-brand="lsc"] .HeadLogo__link a { color: #7e2d3e; }
 body[data-brand="ltd"] .HeadLogo__link a { color: #2ba6cb; }
@@ -87,12 +90,15 @@ body[data-brand="ltd"] .grid-HeadLogo { height: 89px; }
 
 	@media only screen and (max-width: 47.9375em) {
 	/* small */
-	.HeadLogo__link {
-		display: none;
+		.HeadLogo__link {
+			display: none;
+		}
 	}
 	@media only screen and (min-width:48em) and (max-width:61.1875em){
 	/* medium */
-
+		.HeadLogo__img {
+			width: 40vw;
+		}
 	}
 	@media only screen and (max-width:61.1875em){
 	/* small and medium */
@@ -175,7 +181,7 @@ Request A<br><a class="HeadLogo--a" href="/catalog_request/index.jsp">FREE Catal
 		style="width: 74px;">
 Sign Up For<br><a data-reveal-id="emailSignUp" href="#">Email Offers</a>
 		</nav>
-		<nav class="" role="gridcell">
+		<nav class="HeadLogo__cart" role="gridcell">
 
 <div style="width: 104px; height: 39px; background-color: #297fb8; border-radius: 4px;"></div>
 
