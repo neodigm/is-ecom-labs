@@ -29,7 +29,7 @@
 
 	.grid-HeadLogo {
 		/* align-content: not used if only one row */
-		align-items: stretch;
+		align-items: center;
 		display: flex;
 		flex-flow: row nowrap; /* Shorthand for flex-direction and flex-wrap */
 		height: 89px;
@@ -40,42 +40,70 @@
 		width: 980px;
 	}
 	.HeadLogo__hb {
-		background-color: #edba08;
-		height: 100%;
+		background-color: #999;
+		color: #fff;
 		display: none;
+		height: 36px;
+		min-width: 46px;
+		width: 26px;
 	}
 	.HeadLogo__img {
-		background-image: url('images/ltd-logo-lg.jpg');
-		background-repeat: no-repeat;
+		background-image: url("images/ltd-logo-lg.jpg");
 		background-position: 8px 0;
+		background-repeat: no-repeat;
 		height: 100%;
-		width: 512px;
+		width: 568px;
 	}
-body[data-brand="lsc"] .HeadLogo__img { background-image: url('images/lsc-logo-lg.jpg'); }
-body[data-brand="ltd"] .HeadLogo__img { background-image: url('images/ltd-logo-lg.jpg'); }
+	.HeadLogo__link {
+		border-right: solid .6px #999;
+		color: #666;
+		font-family: sans-serif;
+		font-size: 11px;
+		height: 32px;
+		line-height: 16px;
+		margin: 1px 1px 1px 1px;
+		padding: 1px 0 1px 6px;
+		flex-shrink: 1;
+		flex-grow: 0;
+	}
+	.HeadLogo__link a {
+		cursor: pointer;
+		white-space: nowrap;
+	}
+
+body[data-brand="lsc"] .HeadLogo__link a { color: #7e2d3e; }
+body[data-brand="ltd"] .HeadLogo__link a { color: #2ba6cb; }
+body[data-brand="lsc"] .HeadLogo__link a:hover, a:focus { color: #5e0d1e; }
+body[data-brand="ltd"] .HeadLogo__link a:hover, a:focus { color: #0078a0; }
+
+body[data-brand="lsc"] .HeadLogo__img { background-image: url("images/lsc-logo-lg.jpg"); background-size: 380px 112px; }
+body[data-brand="ltd"] .HeadLogo__img { background-image: url("images/ltd-logo-lg.jpg"); background-size: auto 88px; }
 body[data-brand="lsc"] .grid-HeadLogo { height: 114px; }
 body[data-brand="ltd"] .grid-HeadLogo { height: 89px; }
-body[data-brand="lsc"] .HeadLogo__img { background-size: 380px 112px; }
-body[data-brand="ltd"] .HeadLogo__img { background-size: auto 88px; }
 
 	.grid-HeadLogo > nav {
-		flex: 1 1 auto; /* Shorthand for flex-grow, flex-shrink and flex-basis */
+		QQQQflex: 0 1 auto; /* Shorthand for flex-grow, flex-shrink and flex-basis */
 	}
 
 	@media only screen and (max-width: 47.9375em) {
 	/* small */
-		.grid-HeadLogo {
-			width: inherit;
-		}
-		.HeadLogo__hb {
-			display: block;
-		}
+	.HeadLogo__link {
+		display: none;
 	}
 	@media only screen and (min-width:48em) and (max-width:61.1875em){
 	/* medium */
+
+	}
+	@media only screen and (max-width:61.1875em){
+	/* small and medium */
+		.HeadLogo__hb {
+			display: block;
+		}
 		.grid-HeadLogo {
 			width: inherit;
 		}
+		body[data-brand="lsc"] .HeadLogo__img { background-image: url("images/lsc-logo-md-sm.jpg"); }
+		body[data-brand="ltd"] .HeadLogo__img { background-image: url("images/ltd-logo-md.jpg"); background-size: auto auto; }
 	}
 	/*  Above the fold end      */
 	</style>
@@ -125,25 +153,32 @@ body[data-brand="ltd"] .HeadLogo__img { background-size: auto 88px; }
 </script>
 
 </head>
-<body data-brand="lsc">
+<body data-brand="ltd">
 	<section class="grid-HeadLogo" role="grid"><!--  GRID CONTAINER BEGIN -->
-		<nav class="HeadLogo__hb" role="gridcell">
+		<nav class="HeadLogo__hb" role="gridcell">☰
 		</nav>
 		<nav class="HeadLogo__img" role="gridcell">
 		</nav>
-		<nav class="" role="gridcell">
+		<nav class="HeadLogo__link" role="gridcell"
+		style="width: 50px;">
 Hello,<br><a class="HeadLogo--a" href="/my_account/index.jsp">Sign In</a>
 		</nav>
-		<nav class="" role="gridcell">
-Hello,<br><a class="HeadLogo--a" href="/my_account/index.jsp">Sign In</a>
+		<nav class="HeadLogo__link" role="gridcell"
+		style="width: 92px;">
+New Customer?<br><a class="HeadLogo--a" href="/my_account/index.jsp">Register</a>
+		</nav>
+		<nav class="HeadLogo__link" role="gridcell"
+		style="width: 83px;">
+Request A<br><a class="HeadLogo--a" href="/catalog_request/index.jsp">FREE Catalog</a>
+		</nav>
+		<nav class="HeadLogo__link" role="gridcell"
+		style="width: 74px;">
+Sign Up For<br><a data-reveal-id="emailSignUp" href="#">Email Offers</a>
 		</nav>
 		<nav class="" role="gridcell">
-Hello,<br><a class="HeadLogo--a" href="/my_account/index.jsp">Sign In</a>
-		</nav>
-		<nav class="" role="gridcell">
-Hello,<br><a class="HeadLogo--a" href="/my_account/index.jsp">Sign In</a>
-		</nav>
-		<nav class="" role="gridcell">QQQQ
+
+<div style="width: 104px; height: 39px; background-color: #297fb8; border-radius: 4px;"></div>
+
 		</nav>
 	</section><!--  GRID CONTAINER END -->
 
@@ -159,7 +194,9 @@ Hello,<br><a class="HeadLogo--a" href="/my_account/index.jsp">Sign In</a>
 					placeholder="Search item# or keyword" name="/atg/commerce/endeca/QueryFormHandler.question" type="text" aria-required="true"
 					aria-label="Search item# or keyword" autocomplete="off">
 				</div>
+<!--
 					<div class="crdHeadNav--search__right"><span class="crdHeadNav--search__go">Go</span>
+-->
 				</div>
 			</li>
 			<li class="crdHeadNav--li crdHeadNav--li__link">
