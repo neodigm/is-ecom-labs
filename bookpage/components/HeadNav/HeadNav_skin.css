@@ -35,7 +35,7 @@
 		cursor: pointer;
 		text-align: center;
 	}
-	/*  CSS category Theme    */ /*  color background-color hover ...  */
+	/*  CSS category Theme    */ /*  color background hover ...  */
 	body[data-brand="lsc"] .crdHeadNav--a { color: #7e2d3e; }
 	body[data-brand="ltd"] .crdHeadNav--a { color: #2ba6cb; }
 	body[data-brand="lsc"] .crdHeadNav--search__go { background-color: #7e2d3e; }

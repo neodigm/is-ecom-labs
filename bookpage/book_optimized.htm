@@ -30,28 +30,33 @@
 	.grid-HeadLogo {
 		/* align-content: not used if only one row */
 		align-items: stretch;
-border: solid 1px #edba08;
 		display: flex;
 		flex-flow: row nowrap; /* Shorthand for flex-direction and flex-wrap */
 		height: 89px;
 		justify-content: space-between;
 		list-style: none;
 		margin: 0 auto;
-		padding: 8px 0 1px;
+		padding: 8px 0 2px;
 		width: 980px;
 	}
 	.HeadLogo__hb {
-border: solid 1px #edba08;
 		background-color: #edba08;
 		height: 100%;
 		display: none;
 	}
-
 	.HeadLogo__img {
-border: solid 1px #edba08;
 		background-image: url('images/ltd-logo-lg.jpg');
+		background-repeat: no-repeat;
+		background-position: 8px 0;
 		height: 100%;
+		width: 512px;
 	}
+body[data-brand="lsc"] .HeadLogo__img { background-image: url('images/lsc-logo-lg.jpg'); }
+body[data-brand="ltd"] .HeadLogo__img { background-image: url('images/ltd-logo-lg.jpg'); }
+body[data-brand="lsc"] .grid-HeadLogo { height: 114px; }
+body[data-brand="ltd"] .grid-HeadLogo { height: 89px; }
+body[data-brand="lsc"] .HeadLogo__img { background-size: 380px 112px; }
+body[data-brand="ltd"] .HeadLogo__img { background-size: auto 88px; }
 
 	.grid-HeadLogo > nav {
 		flex: 1 1 auto; /* Shorthand for flex-grow, flex-shrink and flex-basis */
@@ -59,13 +64,18 @@ border: solid 1px #edba08;
 
 	@media only screen and (max-width: 47.9375em) {
 	/* small */
-	.HeadLogo__hb {
-		display: block;
-	}
+		.grid-HeadLogo {
+			width: inherit;
+		}
+		.HeadLogo__hb {
+			display: block;
+		}
 	}
 	@media only screen and (min-width:48em) and (max-width:61.1875em){
 	/* medium */
-
+		.grid-HeadLogo {
+			width: inherit;
+		}
 	}
 	/*  Above the fold end      */
 	</style>
@@ -115,17 +125,23 @@ border: solid 1px #edba08;
 </script>
 
 </head>
-<body data-brand="ltd">
+<body data-brand="lsc">
 	<section class="grid-HeadLogo" role="grid"><!--  GRID CONTAINER BEGIN -->
-		<nav class="HeadLogo__hb" role="gridcell">QQQQ
+		<nav class="HeadLogo__hb" role="gridcell">
 		</nav>
-		<nav class="HeadLogo__img" role="gridcell">QQQQ
+		<nav class="HeadLogo__img" role="gridcell">
 		</nav>
-		<nav class="" role="gridcell">QQQQ
+		<nav class="" role="gridcell">
+Hello,<br><a class="HeadLogo--a" href="/my_account/index.jsp">Sign In</a>
 		</nav>
-		<nav class="" role="gridcell">QQQQ
+		<nav class="" role="gridcell">
+Hello,<br><a class="HeadLogo--a" href="/my_account/index.jsp">Sign In</a>
 		</nav>
-		<nav class="" role="gridcell">QQQQ
+		<nav class="" role="gridcell">
+Hello,<br><a class="HeadLogo--a" href="/my_account/index.jsp">Sign In</a>
+		</nav>
+		<nav class="" role="gridcell">
+Hello,<br><a class="HeadLogo--a" href="/my_account/index.jsp">Sign In</a>
 		</nav>
 		<nav class="" role="gridcell">QQQQ
 		</nav>
