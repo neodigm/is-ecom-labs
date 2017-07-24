@@ -3,15 +3,128 @@
 <head>
 	<title>Autumn Style 2017 | LTD</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="apple-touch-icon" sizes="180x180" href="ltd-apple-touch-icon.png">
-	<link rel="icon" type="image/png" href="ltd-favicon-16x16.png" sizes="16x16">
-	<link rel="icon" type="image/png" href="ltd-favicon-32x32.png" sizes="32x32">
-	<link rel="manifest" href="ltd-manifest.json">
-	<link rel="mask-icon" href="ltd-safari-pinned-tab.svg" color="#297fb8">
-	<link rel="shortcut icon" href="ltd-favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="/images/ltd-apple-touch-icon.png">
+	<link rel="icon" type="image/png" href="/images/ltd-favicon-16x16.png" sizes="16x16">
+	<link rel="icon" type="image/png" href="/images/ltd-favicon-32x32.png" sizes="32x32">
+	<link rel="manifest" href="/images/ltd-manifest.json">
+	<link rel="mask-icon" href="/images/ltd-safari-pinned-tab.svg" color="#297fb8">
+	<link rel="shortcut icon" href="/images/ltd-favicon.ico">
 	<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
 	<meta name="msapplication-config" content="/images/ltd-browserconfig.xml">
 	<meta name="theme-color" content="#297fb8">
+	<!--
+	/*========================================*/
+	/*  Component: HeadLogo                   */
+	/*================================ begin =*/
+	-->
+	<style>
+	/*  Above the fold begin    */
+	/*  CSS category Base     */ /*  reset margin padding ...  */
+	.grid-HeadLogo, body, figure, picture, img, figcaption, section, ul, li, input {
+	margin: 0;
+	padding: 0;
+	}
+
+	/*  CSS category Layout   */ /*  border display height media width ...  */
+
+	.grid-HeadLogo {
+		/* align-content: not used if only one row */
+		align-items: center;
+		display: flex;
+		flex-flow: row nowrap; /* Shorthand for flex-direction and flex-wrap */
+		height: 89px;
+		justify-content: space-between;
+		list-style: none;
+		margin: 0 auto;
+		padding: 8px 0 2px;
+		width: 980px;
+	}
+	.HeadLogo__hb {
+		background-color: #999;
+		color: #fff;
+		display: none;
+		height: 36px;
+		min-width: 46px;
+		width: 26px;
+	}
+	.HeadLogo__img {
+		background-image: url("images/ltd-logo-lg.jpg");
+		background-position: 8px 0;
+		background-repeat: no-repeat;
+		height: 100%;
+		width: 568px;
+	}
+	.HeadLogo__link {
+		border-right: solid .6px #999;
+		color: #666;
+		font-family: sans-serif;
+		font-size: 11px;
+		height: 32px;
+		line-height: 16px;
+		margin: 1px 1px 1px 1px;
+		padding: 1px 0 1px 6px;
+		flex-shrink: 1;
+		flex-grow: 0;
+	}
+	.HeadLogo__link a {
+		cursor: pointer;
+		white-space: nowrap;
+	}
+	.HeadLogo__cart {
+		margin-left: 6px;
+	}
+	.HeadLogo--input__cart {
+		width: 104px; height: 39px; background-color: #297fb8; border-radius: 4px;
+	}
+	.NeadLogo--input__cart svg {
+		margin: 6px 1px 1px 6px;
+	}
+
+body[data-brand="lsc"] .HeadLogo__link a { color: #7e2d3e; }
+body[data-brand="ltd"] .HeadLogo__link a { color: #2ba6cb; }
+body[data-brand="lsc"] .HeadLogo__link a:hover, a:focus { color: #5e0d1e; }
+body[data-brand="ltd"] .HeadLogo__link a:hover, a:focus { color: #0078a0; }
+
+body[data-brand="lsc"] .HeadLogo__img { background-image: url("images/lsc-logo-lg.jpg"); background-size: 380px 112px; }
+body[data-brand="ltd"] .HeadLogo__img { background-image: url("images/ltd-logo-lg.jpg"); background-size: auto 88px; }
+body[data-brand="lsc"] .grid-HeadLogo { height: 114px; }
+body[data-brand="ltd"] .grid-HeadLogo { height: 89px; }
+
+	.grid-HeadLogo > nav {
+		QQQQflex: 0 1 auto; /* Shorthand for flex-grow, flex-shrink and flex-basis */
+	}
+
+	@media only screen and (max-width: 47.9375em) {
+	/* small */
+		.HeadLogo__link {
+			display: none;
+		}
+	}
+	@media only screen and (min-width:48em) and (max-width:61.1875em){
+	/* medium */
+		.HeadLogo__img {
+			width: 40vw;
+		}
+	}
+	@media only screen and (max-width:61.1875em){
+	/* small and medium */
+		.HeadLogo__hb {
+			display: block;
+		}
+		.grid-HeadLogo {
+			width: inherit;
+		}
+		body[data-brand="lsc"] .HeadLogo__img { background-image: url("images/lsc-logo-md-sm.jpg"); }
+		body[data-brand="ltd"] .HeadLogo__img { background-image: url("images/ltd-logo-md.jpg"); background-size: auto auto; }
+	}
+	/*  Above the fold end      */
+	</style>
+	<link rel="preload" href="components/HeadLogo/HeadLogo_skin.css" as="style" onload="this.rel='stylesheet'">
+	<!--
+	/*========================================*/
+	/*  Component: HeadLogo                   */
+	/*================================ end ===*/
+	-->
 <!--
 /*========================================*/
 /*  Component: HeadNav                    */
@@ -31,7 +144,7 @@
 
 <!--
 /*========================================*/
-/*  Component: ProductCard                    */
+/*  Component: ProductCard                */
 /*================================ begin =*/
 -->
 <style>
@@ -43,7 +156,7 @@
 
 <!--
 /*========================================*/
-/*  Component: ProductCard                    */
+/*  Component: ProductCard                */
 /*================================ end ===*/
 -->
 <script data-ver="loadCSS v1.3.1">
@@ -53,6 +166,44 @@
 
 </head>
 <body data-brand="ltd">
+	<section class="grid-HeadLogo" role="grid"><!--  GRID CONTAINER BEGIN -->
+		<nav class="HeadLogo__hb" role="gridcell">☰
+		</nav>
+		<nav class="HeadLogo__img" role="gridcell">
+			<a href="/homeltd" style="width: 100%; height: 100%; display: block;"></a>
+		</nav>
+		<nav class="HeadLogo__link" role="gridcell"
+		style="width: 50px;">
+Hello,<br><a class="HeadLogo--a" href="/my_account/index.jsp">Sign In</a>
+		</nav>
+		<nav class="HeadLogo__link" role="gridcell"
+		style="width: 92px;">
+New Customer?<br><a class="HeadLogo--a" href="/my_account/index.jsp">Register</a>
+		</nav>
+		<nav class="HeadLogo__link" role="gridcell"
+		style="width: 83px;">
+Request A<br><a class="HeadLogo--a" href="/catalog_request/index.jsp">FREE Catalog</a>
+		</nav>
+		<nav class="HeadLogo__link" role="gridcell"
+		style="width: 74px;">
+Sign Up For<br><a data-reveal-id="id-email-sign-up-dialog" href="#">Email Offers</a>
+		</nav>
+		<nav class="HeadLogo__cart" role="gridcell">
+
+<button class="HeadLogo--input__cart">
+
+	<svg fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+	    <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/>
+	    <path d="M0 0h24v24H0z" fill="none"/>
+	    Cart<span class="round label">0</span>	
+	</svg>
+
+</button>
+
+		</nav>
+	</section><!--  GRID CONTAINER END -->
+
+
 	<nav class="crdHeadNav">
 		<ul class="crdHeadNav--ul">
 			<li class="crdHeadNav--li crdHeadNav--li__link">
@@ -64,7 +215,9 @@
 					placeholder="Search item# or keyword" name="/atg/commerce/endeca/QueryFormHandler.question" type="text" aria-required="true"
 					aria-label="Search item# or keyword" autocomplete="off">
 				</div>
+<!--
 					<div class="crdHeadNav--search__right"><span class="crdHeadNav--search__go">Go</span>
+-->
 				</div>
 			</li>
 			<li class="crdHeadNav--li crdHeadNav--li__link">
@@ -1084,6 +1237,7 @@
 		</a>
 	</article>
 </section><!--  GRID CONTAINER END -->
+<script src="components/HeadLogo/HeadLogo.js" async></script>
 <script src="components/HeadNav/HeadNav.js" async></script>
 <script src="components/ProductCard/ProductCard.js" async></script>
 </body>
