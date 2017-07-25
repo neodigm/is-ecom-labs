@@ -97,13 +97,13 @@
 	font-size: 14px;
 	font-weight: 300;
 		height: 39px;
-		width: 104px;
+		min-width: 104px;
 	}
 	.HeadLogo--input__cart:hover, .HeadLogo--input__cart:focus {
 background-color: #20628f;
 	}
 	.HeadLogo--input__cart svg {
-		margin: 2px 1px 1px 8px;
+		margin: 2px 1px 1px 4px;
 	}
 	.HeadLogo--input__cartqty {
 	background-color: #fff;
@@ -111,7 +111,7 @@ background-color: #20628f;
 	font-weight: bold;
 		padding: 2px 8px 2px 8px;
 		border-radius: 1000px;
-		margin-left: 6px;
+		margin: 0 1px 0 6px;
 	}
 body[data-brand="lsc"] .HeadLogo__link a { color: #7e2d3e; }
 body[data-brand="ltd"] .HeadLogo__link a { color: #2ba6cb; }
@@ -123,7 +123,6 @@ body[data-brand="ltd"] .HeadLogo__img { background-image: url("images/ltd-logo-l
 body[data-brand="lsc"] .grid-HeadLogo { height: 114px; }
 body[data-brand="ltd"] .grid-HeadLogo { height: 89px; }
 
-
 	.grid-HeadLogo > nav {
 		QQQQflex: 0 1 auto; /* Shorthand for flex-grow, flex-shrink and flex-basis */
 	}
@@ -134,7 +133,7 @@ body[data-brand="ltd"] .grid-HeadLogo { height: 89px; }
 			display: none;
 		}
 		.HeadLogo--input__cart {
-			width: 66px;
+			min-width: 66px;
 		}
 	}
 	@media only screen and (min-width:48em) and (max-width:61.1875em){
@@ -233,13 +232,13 @@ Sign Up For<br><a data-reveal-id="id-email-sign-up-dialog" href="#">Email Offers
 	    <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/>
 	    <path d="M0 0h24v24H0z" fill="none"/>
 	</svg>
-<span>Cart</span><span class="HeadLogo--input__cartqty">0</span>
+<span>Cart</span><span class="HeadLogo--input__cartqty">999</span>
 </button>
 
 		</nav>
 	</section><!--  GRID CONTAINER END -->
 
-
+<!--
 	<nav class="crdHeadNav">
 		<ul class="crdHeadNav--ul">
 			<li class="crdHeadNav--li crdHeadNav--li__link">
@@ -251,9 +250,7 @@ Sign Up For<br><a data-reveal-id="id-email-sign-up-dialog" href="#">Email Offers
 					placeholder="Search item# or keyword" name="/atg/commerce/endeca/QueryFormHandler.question" type="text" aria-required="true"
 					aria-label="Search item# or keyword" autocomplete="off">
 				</div>
-<!--
 					<div class="crdHeadNav--search__right"><span class="crdHeadNav--search__go">Go</span>
--->
 				</div>
 			</li>
 			<li class="crdHeadNav--li crdHeadNav--li__link">
@@ -270,6 +267,7 @@ Sign Up For<br><a data-reveal-id="id-email-sign-up-dialog" href="#">Email Offers
 			</li>
 		</ul>
 	</nav>
+-->
 
 <section class="grid-crd" role="grid"><!--  GRID CONTAINER BEGIN -->
 	<article class="crdPrd" itemscope itemtype="http://schema.org/Product"
