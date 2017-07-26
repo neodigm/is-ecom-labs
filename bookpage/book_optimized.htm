@@ -47,12 +47,30 @@
 		width: 980px;
 	}
 	.HeadLogo__hb {
-		background-color: #999;
-		color: #fff;
 		display: none;
-		height: 36px;
-		min-width: 46px;
-		width: 26px;
+		padding: 8px 0 8px 8px;
+	}
+	.HeadLogo__hb__a {
+	background-color: #999;
+	color: #fff;
+		display: block;
+		border-radius: 3px;
+		height: 46px;
+		width: 34px;
+		margin: 0 auto;
+	}
+	.HeadLogo__hb__hr {
+		line-height: 2px;
+    width: 55%;
+    border-top: 2px solid #FFF;
+    margin: 5px auto;
+	}
+	.HeadLogo__hb__p {
+		font-family: sans-serif;
+		font-size: 9px;
+		line-height: .8;
+		margin: 0;
+		text-align: center;
 	}
 	.HeadLogo__img {
 		background-image: url("images/ltd-logo-lg.jpg");
@@ -119,7 +137,7 @@ body[data-brand="lsc"] .HeadLogo__link a:hover, a:focus { color: #5e0d1e; }
 body[data-brand="ltd"] .HeadLogo__link a:hover, a:focus { color: #0078a0; }
 
 body[data-brand="lsc"] .HeadLogo__img { background-image: url("images/lsc-logo-lg.jpg"); background-size: 380px 112px; }
-body[data-brand="ltd"] .HeadLogo__img { background-image: url("images/ltd-logo-lg.jpg"); background-size: auto 88px; }
+body[data-brand="ltd"] .HeadLogo__img { background-image: url("images/ltd-logo-lg.jpg"); background-size: auto 87px; }
 body[data-brand="lsc"] .grid-HeadLogo { height: 114px; }
 body[data-brand="ltd"] .grid-HeadLogo { height: 89px; }
 
@@ -150,6 +168,9 @@ body[data-brand="ltd"] .grid-HeadLogo { height: 89px; }
 		.grid-HeadLogo {
 			width: inherit;
 		}
+		body[data-brand="lsc"] .grid-HeadLogo { height: 72px !important; }
+		body[data-brand="ltd"] .grid-HeadLogo { height: 66px !important; }
+
 		body[data-brand="lsc"] .HeadLogo__img { background-image: url("images/lsc-logo-md-sm.jpg"); }
 		body[data-brand="ltd"] .HeadLogo__img { background-image: url("images/ltd-logo-md.jpg"); background-size: auto auto; }
 	}
@@ -203,7 +224,13 @@ body[data-brand="ltd"] .grid-HeadLogo { height: 89px; }
 </head>
 <body data-brand="ltd">
 	<section class="grid-HeadLogo" role="grid"><!--  GRID CONTAINER BEGIN -->
-		<nav class="HeadLogo__hb" role="gridcell">☰
+		<nav class="HeadLogo__hb" role="gridcell">
+
+			<a class="HeadLogo__hb__a radius hide-for-print">
+				<hr class="HeadLogo__hb__hr"><hr class="HeadLogo__hb__hr"><hr class="HeadLogo__hb__hr">
+				<p class="HeadLogo__hb__p" >MENU</p>
+			</a>
+
 		</nav>
 		<nav class="HeadLogo__img" role="gridcell">
 			<a class="brand--ltd__showb HeadLogo__img--a" href="/homeltd"></a>
