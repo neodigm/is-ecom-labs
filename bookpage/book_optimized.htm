@@ -41,7 +41,7 @@
 		flex-flow: row nowrap; /* Shorthand for flex-direction and flex-wrap */
 		height: 89px;
 		justify-content: space-between;
-		list-style: none;
+		/*list-style: none;*/
 		margin: 0 auto;
 		padding: 8px 0 2px;
 		width: 980px;
@@ -101,7 +101,7 @@
 		white-space: nowrap;
 	}
 	.HeadLogo__cart {
-		margin-left: 6px;
+		margin: 0 2px 0 6px;
 	}
 	.HeadLogo--input__cart {
 		align-items: center;
@@ -210,10 +210,35 @@ body[data-brand="ltd"] .grid-HeadLogo { height: 89px; }
 /*  Above the fold end      */
 </style>
 <link rel="preload" href="components/ProductCard/ProductCard_skin.css" as="style" onload="this.rel='stylesheet'">
-
 <!--
 /*========================================*/
 /*  Component: ProductCard                */
+/*================================ end ===*/
+-->
+<!--
+/*========================================*/
+/*  Component: Mockup (delete me)         */
+/*================================ begin =*/
+-->
+<style>
+/*  Above the fold begin    */
+.c-Mockup {
+background-color: #eee;
+	margin: 0 auto;
+	padding: 8px 0 2px;
+	width: 980px;
+}
+@media only screen and (max-width:61.1875em){
+/* small and medium */
+	.c-Mockup {
+		width: inherit;
+	}
+}
+/*  Above the fold end      */
+</style>
+<!--
+/*========================================*/
+/*  Component: Mockup                     */
 /*================================ end ===*/
 -->
 <script data-ver="loadCSS v1.3.1">
@@ -254,16 +279,28 @@ Sign Up For<br><a data-reveal-id="id-email-sign-up-dialog" href="#">Email Offers
 		</nav>
 		<nav class="HeadLogo__cart" role="gridcell">
 
-<button class="HeadLogo--input__cart">
-	<svg class="" fill="#FFFFFF" height="26" width="26" viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg">
-	    <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/>
-	    <path d="M0 0h24v24H0z" fill="none"/>
-	</svg>
-<span>Cart</span><span class="HeadLogo--input__cartqty">999</span>
-</button>
+			<button class="HeadLogo--input__cart">
+				<svg class="" fill="#FFFFFF" height="26" width="26" viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg">
+				    <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/>
+				    <path d="M0 0h24v24H0z" fill="none"/>
+				</svg>
+			<span>Cart</span><span class="HeadLogo--input__cartqty">999</span>
+			</button>
 
 		</nav>
 	</section><!--  GRID CONTAINER END -->
+
+<!--  header 2: c-  -->
+<aside class="c-Mockup" style="	border: 1px #e0dfdd solid;height: 44px;padding: 0; margin: 0 auto 10px auto;"></aside>
+
+<!--  primary banner: c-priban  -->
+<aside class="c-Mockup" style="	border: 1px #e0dfdd solid;height: 80px;padding: 0; margin: 0 auto 10px auto;"></aside>
+
+<!--  bread page: c-breadpage  -->
+<aside class="c-Mockup" style="	border: 1px #e0dfdd solid;height: 48px;padding: 0; margin: 0 auto 8px  auto;"></aside>
+
+<!--  refinements: c-refine -->
+<aside class="c-Mockup" style="	border: 1px #e0dfdd solid;height: 32px;padding: 0; margin: 0 auto 16px auto;"></aside>
 
 <!--
 	<nav class="crdHeadNav">
@@ -1298,6 +1335,13 @@ Sign Up For<br><a data-reveal-id="id-email-sign-up-dialog" href="#">Email Offers
 		</a>
 	</article>
 </section><!--  GRID CONTAINER END -->
+
+<!--  bread page: c-breadpage  -->
+<aside class="c-Mockup" style="	border: 1px #e0dfdd solid;height: 48px;padding: 0; margin: 0 auto 8px  auto;"></aside>
+
+<!--  footer 1: c-footone  -->
+<aside class="c-Mockup" style="	border: 1px #e0dfdd solid;height: 226px;padding: 0; margin: 24px auto 0 auto;"></aside>
+
 <script src="components/HeadLogo/HeadLogo.js" async></script>
 <script src="components/HeadNav/HeadNav.js" async></script>
 <script src="components/ProductCard/ProductCard.js" async></script>
