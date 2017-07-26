@@ -105,7 +105,6 @@
 	}
 	.HeadLogo--input__cart {
 		align-items: center;
-	background-color: #297fb8;
 		border-radius: 3px;
 		border: none;
 	color: #FFF;
@@ -116,9 +115,6 @@
 	font-weight: 300;
 		height: 39px;
 		min-width: 104px;
-	}
-	.HeadLogo--input__cart:hover, .HeadLogo--input__cart:focus {
-background-color: #20628f;
 	}
 	.HeadLogo--input__cart svg {
 		margin: 2px 1px 1px 4px;
@@ -140,6 +136,11 @@ body[data-brand="lsc"] .HeadLogo__img { background-image: url("images/lsc-logo-l
 body[data-brand="ltd"] .HeadLogo__img { background-image: url("images/ltd-logo-lg.jpg"); background-size: auto 87px; }
 body[data-brand="lsc"] .grid-HeadLogo { height: 114px; }
 body[data-brand="ltd"] .grid-HeadLogo { height: 89px; }
+
+body[data-brand="lsc"] .HeadLogo--input__cart { background-color: #7e2d3e; }
+body[data-brand="ltd"] .HeadLogo--input__cart { background-color: #297fb8; }
+body[data-brand="lsc"] .HeadLogo--input__cart:hover, .HeadLogo--input__cart:focus { background-color: #672634; }
+body[data-brand="ltd"] .HeadLogo--input__cart:hover, .HeadLogo--input__cart:focus { background-color: #20628f; }
 
 	.grid-HeadLogo > nav {
 		QQQQflex: 0 1 auto; /* Shorthand for flex-grow, flex-shrink and flex-basis */
@@ -1341,6 +1342,9 @@ Sign Up For<br><a data-reveal-id="id-email-sign-up-dialog" href="#">Email Offers
 
 <!--  footer 1: c-footone  -->
 <aside class="c-Mockup" style="	border: 1px #e0dfdd solid;height: 226px;padding: 0; margin: 24px auto 0 auto;"></aside>
+
+<!--  footer 2: c-foottwo  -->
+<aside class="c-Mockup" style="	border: 1px #e0dfdd solid;height: 276px;padding: 24px 0 0 0; margin: 0 auto 0 auto; width: inherit!important"></aside>
 
 <script src="components/HeadLogo/HeadLogo.js" async></script>
 <script src="components/HeadNav/HeadNav.js" async></script>
