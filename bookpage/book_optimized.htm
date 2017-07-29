@@ -40,7 +40,7 @@ Add Quick view on Large
 
 	.grid-HeadLogo {
 		/* align-content: not used if only one row */
-		align-items: center;
+		align-items: flex-start;
 		display: flex;
 		flex-flow: row nowrap; /* Shorthand for flex-direction and flex-wrap */
 		height: 89px;
@@ -52,14 +52,16 @@ Add Quick view on Large
 	}
 	.HeadLogo__hb {
 		display: none;
-		padding: 8px 0 8px 8px;
 	}
+	body[data-brand="lsc"] .HeadLogo__hb { padding: 8px 0 8px 8px; }
+	body[data-brand="ltd"] .HeadLogo__hb { padding: 1px 0 8px 8px; }
+
 	.HeadLogo__hb__a {
 	background-color: #999;
 	color: #fff;
 		display: block;
 		border-radius: 3px;
-		height: 46px;
+		height: 40px;
 		width: 34px;
 		margin: 0 auto;
 		padding-top: 4px;
@@ -81,7 +83,7 @@ Add Quick view on Large
 		background-position: 8px 0;
 		background-repeat: no-repeat;
 		height: 100%;
-		width: 568px;
+		width: 620px;
 	}
 	.HeadLogo__img--a {
 		display: block;
@@ -95,11 +97,14 @@ Add Quick view on Large
 		font-size: 11px;
 		height: 32px;
 		line-height: 16px;
-		margin: 1px 1px 1px 1px;
+		margin: 36px 1px 1px 1px;
 		padding: 1px 0 1px 6px;
 		flex-shrink: 1;
 		flex-grow: 0;
 	}
+	body[data-brand="lsc"] .HeadLogo__link { margin: 36px 1px 1px 1px; }
+	body[data-brand="ltd"] .HeadLogo__link { margin: 25px 1px 1px 1px; }
+
 	.HeadLogo__link a {
 		cursor: pointer;
 		white-space: nowrap;
@@ -111,15 +116,19 @@ Add Quick view on Large
 		align-items: center;
 		border-radius: 3px;
 		border: none;
-	color: #FFF;
 		cursor: pointer;
 		display: inline-flex;
+		height: 39px;
+		margin: 34px 1px 0 0;
+		min-width: 104px;
+	color: #FFF;
 	font-family: sans-serif;
 	font-size: 14px;
 	font-weight: 300;
-		height: 39px;
-		min-width: 104px;
 	}
+	body[data-brand="lsc"] .HeadLogo--input__cart { margin: 34px 1px 0 0; }
+	body[data-brand="ltd"] .HeadLogo--input__cart { margin: 22px 1px 0 0; }
+
 	.HeadLogo--input__cart svg {
 		margin: 2px 1px 1px 4px;
 	}
@@ -146,10 +155,6 @@ body[data-brand="ltd"] .HeadLogo--input__cart { background-color: #297fb8; }
 body[data-brand="lsc"] .HeadLogo--input__cart:hover, .HeadLogo--input__cart:focus { background-color: #672634; }
 body[data-brand="ltd"] .HeadLogo--input__cart:hover, .HeadLogo--input__cart:focus { background-color: #20628f; }
 
-	.grid-HeadLogo > nav {
-		QQQQflex: 0 1 auto; /* Shorthand for flex-grow, flex-shrink and flex-basis */
-	}
-
 	@media only screen and (max-width: 47.9375em) {
 	/* small */
 		.HeadLogo__link, .HeadLogo--input__cart span:first-of-type {
@@ -158,26 +163,37 @@ body[data-brand="ltd"] .HeadLogo--input__cart:hover, .HeadLogo--input__cart:focu
 		.HeadLogo--input__cart {
 			min-width: 66px;
 		}
+		body[data-brand="lsc"] .grid-HeadLogo { height: 66px !important; }
+		body[data-brand="ltd"] .grid-HeadLogo { height: 56px !important; }
+		body[data-brand="lsc"] .HeadLogo__hb { padding: 12px 0 8px 8px; }
+		body[data-brand="ltd"] .HeadLogo__hb { padding: 0 0 8px 8px; }
+
+		body[data-brand="lsc"] .HeadLogo--input__cart { margin: 1px 6px 0 0; }
+		body[data-brand="ltd"] .HeadLogo--input__cart { margin: 0 6px 0 0; }
 	}
 	@media only screen and (min-width:48em) and (max-width:61.1875em){
 	/* medium */
-		.HeadLogo__img {
-			width: 40vw;
-		}
+		body[data-brand="lsc"] .grid-HeadLogo { height: 63px !important; }
+		body[data-brand="ltd"] .grid-HeadLogo { height: 56px !important; }
+
+		body[data-brand="lsc"] .HeadLogo--input__cart { margin: 1px 1px 0 0; }
+		body[data-brand="ltd"] .HeadLogo--input__cart { margin: 0 1px 0 0; }
 	}
 	@media only screen and (max-width:61.1875em){
 	/* small and medium */
-		.HeadLogo__hb {
-			display: block;
-		}
 		.grid-HeadLogo {
 			width: inherit;
 		}
-		body[data-brand="lsc"] .grid-HeadLogo { height: 72px !important; }
-		body[data-brand="ltd"] .grid-HeadLogo { height: 66px !important; }
-
-		body[data-brand="lsc"] .HeadLogo__img { background-image: url("images/lsc-logo-md-sm.jpg"); }
+		.HeadLogo__hb {
+			display: block;
+		}
+		.HeadLogo__img {
+			width: 352px;
+		}
+		body[data-brand="lsc"] .HeadLogo__img { background-image: url("images/lsc-logo-md-sm.jpg"); background-size: auto;}
 		body[data-brand="ltd"] .HeadLogo__img { background-image: url("images/ltd-logo-md.jpg"); background-size: auto auto; }
+		body[data-brand="lsc"] .HeadLogo__link { margin: 7px 1px 1px 1px; }
+		body[data-brand="ltd"] .HeadLogo__link { margin: 5px 1px 1px 1px; }
 	}
 	/*  Above the fold end      */
 	</style>
@@ -252,7 +268,7 @@ background-color: #eee;
 </script>
 
 </head>
-<body data-brand="ltd">
+<body data-brand="lsc">
 	<section class="grid-HeadLogo" role="grid"><!--  GRID CONTAINER BEGIN -->
 		<nav class="HeadLogo__hb" role="gridcell">
 
@@ -289,7 +305,7 @@ Sign Up For<br><a data-reveal-id="id-email-sign-up-dialog" href="#">Email Offers
 				    <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/>
 				    <path d="M0 0h24v24H0z" fill="none"/>
 				</svg>
-			<span>Cart</span><span class="HeadLogo--input__cartqty">999</span>
+			<span>Cart</span><span class="HeadLogo--input__cartqty">0</span>
 			</button>
 
 		</nav>
