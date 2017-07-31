@@ -93,16 +93,32 @@ color: #666;
 		height: 28px;
 		margin: 4px 2px 2px 8px;
 		padding: 0 0 0 8px;
-		width: 88%;
+		width: 100%;
 	}
-	.headnav__search--grid-r {
+	.QQQQheadnav__search--grid-r {
 
 	 }
-	.headnav__search--go {
+	 .headnav__search--go {
+font-size: 1em;
+font-weight: 400;
+padding: 4px;
+width: 35px;
+height: 28px;
+margin: 6px 8px 6px 6px;
+min-width: 36px;
 border-radius: 3px;
-color: #fff;
 cursor: pointer;
 text-align: center;
+transition: background-color 300ms ease-out;
+box-shadow: none;
+border: 0;
+ 	 }
+
+body[data-brand="lsc"] .headnav__search--go:hover, .headnav__search--go:focus { background-color: #edba08; }
+body[data-brand="ltd"] .headnav__search--go:hover, .headnav__search--go:focus { background-color: #007095; }
+
+	.headnav__search--gotxt {
+color: #fff;
 	 }
 	body[data-brand="lsc"] .headnav__search--go { background-color: #7e2d3e; }
 	body[data-brand="ltd"] .headnav__search--go { background-color: #2ba6cb; }
@@ -134,6 +150,9 @@ body[data-brand="ltd"] .headnav__link--a { color: #2ba6cb; }
 		display: none;
 	}
 	.headnav__search { width: 100%; }
+	.headnav__search--go {
+min-width: 112px;
+	}
 }
 @media only screen and (min-width:48em) and (max-width:61.1875em){
 /* medium */
@@ -228,7 +247,8 @@ background-color: #eee;
 			</nav>
 			<nav class="headlogo__cart" role="gridcell">
 				<button class="headlogo--input__cart">
-					<svg class="" fill="#FFFFFF" height="26" width="26" viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg">
+					<svg class="" fill="#FFFFFF" height="26" width="26" viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg"
+					alt="Cart">
 					    <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/>
 					    <path d="M0 0h24v24H0z" fill="none"/>
 					</svg>
@@ -245,14 +265,16 @@ background-color: #eee;
 
 				<section class="headnav__search--grid">
 
-<div class="headnav__search--grid-l">
+
 	<input class="headnav__search--input"
 	placeholder="Search item# or keyword" type="text" aria-required="true"
 	aria-label="Search item# or keyword" autocomplete="off">
-</div>
-<div class="headnav__search--grid-r">
-	<span class="headnav__search--go">Go</span>
-</div>
+
+
+	<button class="headnav__search--go">
+		<span class="headnav__search--gotxt">Go</span>
+	</button>
+
 
 				</section>
 
