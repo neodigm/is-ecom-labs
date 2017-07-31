@@ -1,5 +1,4 @@
 	/*  CSS category State    */ /*  color display font visibility ...  */
-	/*  CSS category Theme    */ /*  color background hover ...  */
   .headlogo__hb {
     cursor: pointer;
   }
@@ -12,7 +11,6 @@
     font-family: sans-serif;
   }
   .headlogo__img {
-/*background-image: url("images/ltd-logo-lg.jpg");*/
     background-position: 8px 0;
     background-repeat: no-repeat;
   }
@@ -32,6 +30,7 @@
     background-color: #fff;
     color: #4fb466;
   }
+	/*  CSS category Theme    */ /*  color background hover ...  */
   body[data-brand="lsc"] .headlogo__link a { color: #7e2d3e; }
   body[data-brand="ltd"] .headlogo__link a { color: #2ba6cb; }
   body[data-brand="lsc"] .headlogo__link a:hover, a:focus { color: #5e0d1e; }
