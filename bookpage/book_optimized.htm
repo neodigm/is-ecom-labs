@@ -50,6 +50,22 @@ body[data-brand=lsc] .brand--lsc__show,body[data-brand=ltd] .brand--ltd__show{di
 	/*  Component: headnav                    */
 	/*================================ end ===*/
 	-->
+	<!--
+	/*========================================*/
+	/*  Component: primebanr                  */
+	/*================================ begin =*/
+	-->
+	<style>
+	/*  Above the Fold begin    */
+
+	/*  Above the Fold end      */
+	</style>
+	<!--
+	/*========================================*/
+	/*  Component: primebanr                  */
+	/*================================ end ===*/
+	-->
+
 
 <!--
 /*========================================*/
@@ -101,7 +117,7 @@ background-color: #eee;
 </head>
 <body data-brand="ltd">
 
-		<section id="js-headlogo" class="l-grid-headlogo" role="grid"><!--  Grid Container Begin  -->
+		<section id="js-headlogo" class="l-grid-headlogo" role="grid"><!--  Component Begin  -->
 			<nav class="headlogo__hb" role="gridcell">
 				<a class="headlogo__hb--a" @click="hb_menu">
 					<hr class="headlogo__hb--hr"><hr class="headlogo__hb--hr"><hr class="headlogo__hb--hr">
@@ -134,9 +150,9 @@ background-color: #eee;
 				<span class="headlogo--input__carttxt">Cart</span><span class="headlogo--input__cartqty">999</span>
 				</button>
 			</nav>
-		</section><!--  Grid Container End  -->
+		</section><!--  Component End  -->
 
-		<section id="js-headnav" class="l-grid-headnav" role="grid"><!--  Grid Container Begin  -->
+		<section id="js-headnav" class="l-grid-headnav" role="grid"><!--  Component Begin  -->
 			<nav class="headnav__shop headnav__link" role="gridcell">
 				<a class="headnav__link--a" href="/shopCatalogs">Shop our<br><span class="headnav__link--span">Catalogs</span></a>
 			</nav>
@@ -161,21 +177,43 @@ background-color: #eee;
 			<nav class="headnav__faq headnav__link" role="gridcell">
 				<a class="faq-circle" href="/content/faq">?</a>
 			</nav>
-		</section><!--  Grid Container End  -->
+		</section><!--  Component End  -->
 
-<br><hr><br>
+<style>
+.prime-banner--section {
+    padding-left: 0;
+    padding-right: 0;
+}
+.prime-banner--aside {
+    height: 0px;
+}
+.prime-banner--figure {
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 10px;
+}
+</style>
+		<section class="l-primebanr" role="banner"><!--  Component Begin  -->
+	    <aside class="l-primebanr__whitespace"></aside>
+	    <figure class="primebanr__fig" aria-label="Primary Banner">
+	         <img class="l-primebanr__img" QQQQsrc="./N-1z0uo43_files/prime_banner_lg.png" alt="Special Offer" title="Special Offer"
+sizes="(max-width: 47.9em) 96vw, (min-width:48em) and (max-width:61.25em) 58vw, (min-width: 62em) 38vw"
+srcset="./N-1z0uo43_files/prime_banner_sm.png 360w, ./N-1z0uo43_files/prime_banner_md.png 580w, ./N-1z0uo43_files/prime_banner_lg.png 990w"
+					 >
+	    </figure>
+	</section>
 
 <!--  primary banner: c-priban  -->
-<aside class="c-Mockup" style="	border: 1px #e0dfdd solid;height: 80px;padding: 0; margin: 0 auto 10px auto;"></aside>
+<aside class="c-Mockup" style="	border: 1px #e0dfdd solid;height: 80px;padding: 0; margin: 0 auto 10px auto;"> Primary Banner</aside>
 
 <!--  bread page: c-breadpage  -->
-<aside class="c-Mockup" style="	border: 1px #e0dfdd solid;height: 48px;padding: 0; margin: 0 auto 8px  auto;"></aside>
+<aside class="c-Mockup" style="	border: 1px #e0dfdd solid;height: 48px;padding: 0; margin: 0 auto 8px  auto;"> Bread crumbs - pages</aside>
 
 <!--  refinements: c-refine -->
-<aside class="c-Mockup" style="	border: 1px #e0dfdd solid;height: 32px;padding: 0; margin: 0 auto 16px auto;">refine</aside>
+<aside class="c-Mockup" style="	border: 1px #e0dfdd solid;height: 32px;padding: 0; margin: 0 auto 16px auto;"> Refine</aside>
 
 
-<section class="grid-crd" role="grid"><!--  Grid Container Begin  -->
+<section class="grid-crd" role="grid"><!--  Component Begin  -->
 	<article class="crdPrd" itemscope itemtype="http://schema.org/Product"
 		aria-describedby="id-prod-COUNTER" role="gridcell">
 		<a class="crdPrd--a" itemprop="url"
@@ -1176,19 +1214,19 @@ background-color: #eee;
 			</figure>
 		</a>
 	</article>
-</section><!--  Grid Container End  -->
+</section><!--  Component End  -->
 
 <!--  bread page: c-breadpage  -->
-<aside class="c-Mockup" style="	border: 1px #e0dfdd solid;height: 48px;padding: 0; margin: 0 auto 8px  auto;"></aside>
+<aside class="c-Mockup" style="	border: 1px #e0dfdd solid;height: 48px;padding: 0; margin: 0 auto 8px  auto;">Pages</aside>
 
 <!--  footer 1: c-footone  -->
-<aside class="c-Mockup" style="	border: 1px #e0dfdd solid;height: 226px;padding: 0; margin: 24px auto 0 auto;"></aside>
+<aside class="c-Mockup" style="	border: 1px #e0dfdd solid;height: 226px;padding: 0; margin: 24px auto 0 auto;">footer one</aside>
 
 <!--  footer 2: c-foottwo  -->
-<aside class="c-Mockup" style="	border: 1px #e0dfdd solid;height: 276px;padding: 24px 0 0 0; margin: 0 auto 0 auto; width: inherit!important"></aside>
+<aside class="c-Mockup" style="	border: 1px #e0dfdd solid;height: 276px;padding: 24px 0 0 0; margin: 0 auto 0 auto; width: inherit!important">footer two</aside>
 
 
-<script src="js/vue.runtime.min.js"></script>
+<script src="components/vue.runtime.min.js"></script>
 <script src="components/headlogo/headlogo.js" async></script>
 <script src="components/headnav/headnav.js" async></script>
 <script src="components/productcard/productcard.js" async></script>
