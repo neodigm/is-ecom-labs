@@ -96,14 +96,14 @@ text-align: center;
 text-decoration: none;
 }
 .productcard .productcard__figcap {
-	position: absolute;
+	position: relative;
 }
 .productcard .productcard__a--qv {
 	display: none;
 }
 .productcard:hover .productcard__a--qv {
 	border-radius: 3px;
-	bottom: 84px;
+	top: -68px;
 	color: #fff;
 	cursor: pointer;
 	display: block;
@@ -118,14 +118,16 @@ text-decoration: none;
 	width: 60%;
 	z-index: 176;
 }
+
 body[data-brand="lsc"] .productcard__a--qv { background-color: #7e2d3e; }
 body[data-brand="ltd"] .productcard__a--qv { background-color: #2b7ec0; }
+
 .productcard__excl {
 	font-size: 9px;
 	margin: 0;
 	padding: 4px;
 	position: absolute;
-	top: -18px;
+	top: -22px;
 }
 .productcard__excl--lsc {
 	background-color: #7e2d40;
@@ -356,34 +358,34 @@ background-color: #eee;
 	}
 }
 </script>
-
-	<article class="productcard" itemscope itemtype="http://schema.org/Product"
-		aria-describedby="id-prod-COUNTER" role="gridcell">
-		<a class="productcard__a" itemprop="url"
-		href="">
+	<article class="productcard" aria-describedby="id-prod-COUNTER" role="gridcell">
+		<a class="productcard__a" href="">
 			<figure class="productcard__fig">
 				<picture class="productcard__pic">
-					<img class="productcard__img" itemprop="image"
+					<img class="productcard__img"
 					src="./N-1z0uo43_files/61167_1227049_R3W_mn.jpg"
 					alt="product name">
 				</picture>
 				<figcaption class="productcard__figcap">
-					<section itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+					<section>
 						<p class="productcard__p">
-							<span itemprop="priceCurrency" content="USD">$</span><span itemprop="price" content="19.00">19.00</span>
+							<span>19.00</span>
 						</p>
 					</section>
-					<h2 id="id-prod-COUNTER" class="productcard__h2" itemprop="name">Tote with Hot/Cold Casserole Carrier</h2>
-					<section itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
-						<meta itemprop="ratingValue" content="averageRating"><meta itemprop="ratingCount" content="5">
-						<div class="review-stars four-star" itemprop="ratingValue" content="4"></div>
+					<h2 id="id-prod-COUNTER" class="productcard__h2">Tote with Hot/Cold Casserole Carrier</h2>
+					<section itemprop="aggregateRating">
+						<div class="review-stars four-star" content="4"></div>
 					</section>
-					<meta itemprop="availability" itemtype="https://schema.org/ItemAvailability" content="https://schema.org/InStock" />
+	<a class="productcard__a--qv">Quick View</a>
+	<span class="js-productcard-excl QQQQhidden">
+	<p class="productcard__excl productcard__excl--lsc brand--lsc__show">LAKESIDE EXCLUSIVE</p>
+	<p class="productcard__excl productcard__excl--ltd brand--ltd__show">LTD EXCLUSIVE</p>
+	</span>
 				</figcaption>
 			</figure>
 		</a>
-<a class="productcard__a--qv">Quick View</a>
 	</article>
+
 	<article class="productcard" itemscope itemtype="http://schema.org/Product"
 		aria-describedby="id-prod-COUNTER" role="gridcell">
 		<a class="productcard__a" itemprop="url"
