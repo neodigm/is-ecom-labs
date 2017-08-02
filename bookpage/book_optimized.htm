@@ -23,7 +23,7 @@ Add Quick view on Large
 	-->
 	<style>
 	/*  Brand Themes required Above the Fold  */
-body[data-brand=lsc] .brand--lsc__show,body[data-brand=ltd] .brand--ltd__show{display:inline}body[data-brand=lsc] .brand--lsc__showb,body[data-brand=ltd] .brand--ltd__showb{display:block}body[data-brand=lsc] .brand--ltd__show,body[data-brand=lsc] .brand--ltd__showb,body[data-brand=ltd] .brand--lsc__show,body[data-brand=ltd] .brand--lsc__showb{display:none!important}
+body[data-brand=lsc] .brand--lsc__show,body[data-brand=ltd] .brand--ltd__show{display:inline}body[data-brand=lsc] .brand--lsc__showb,body[data-brand=ltd] .brand--ltd__showb{display:block}body[data-brand=lsc] .brand--ltd__show,body[data-brand=lsc] .brand--ltd__showb,body[data-brand=ltd] .brand--lsc__show,body[data-brand=ltd] .brand--lsc__showb{display:none!important}.hidden{display:none;}
 	/*  Above the Fold begin    */
 	body,figcaption,figure,img,input,li,picture,section,ul{margin:0;padding:0}.l-grid-headlogo{align-items:flex-start;display:flex;flex-flow:row nowrap;height:89px;justify-content:space-between;margin:0 auto;padding:8px 0 2px;width:980px}.headlogo__hb{display:none}body[data-brand=lsc] .headlogo__hb{padding:8px 0 8px 8px}body[data-brand=ltd] .headlogo__hb{padding:1px 0 8px 8px}.l-grid-headlogo nav:nth-of-type(3){width:50px}.l-grid-headlogo nav:nth-of-type(4){width:92px}.l-grid-headlogo nav:nth-of-type(5){width:83px}.l-grid-headlogo nav:nth-of-type(6){width:74px}.headlogo__hb--a{display:block;height:40px;margin:0 auto;padding-top:4px;width:34px}.headlogo__hb--hr{border-top:1px solid #fff;margin:5px auto;width:55%}.headlogo__hb--p{font-family:sans-serif;font-size:9px;line-height:.8;margin:0;text-align:center}.headlogo__img{height:100%;width:620px}.headlogo__img--a{display:block;height:100%;width:88%}.headlogo__link{border-right:solid .6px #999;flex-grow:0;flex-shrink:1;font-size:11px;height:32px;line-height:16px;padding:1px 0 1px 6px}.headlogo__link,body[data-brand=lsc] .headlogo__link{margin:36px 1px 1px}body[data-brand=ltd] .headlogo__link{margin:25px 1px 1px}.headlogo__cart{margin:0 2px 0 6px}.headlogo--input__cart{border-radius:3px;border:0;cursor:pointer;display:inline-flex;font-size:14px;font-weight:300;height:39px;margin:34px 1px 0 0;min-width:104px}body[data-brand=lsc] .headlogo--input__cart{margin:34px 1px 0 0}body[data-brand=ltd] .headlogo--input__cart{margin:22px 1px 0 0}.headlogo--input__cart svg{margin:2px 1px 1px 4px}.headlogo--input__cartqty{border-radius:1000px;font-weight:700;margin:4px 2px 4px 6px;padding:2px 8px}.headlogo--input__carttxt{margin-top:5px}body[data-brand=lsc] .headlogo__img{background-image:url(images/lsc-logo-lg.jpg);background-size:380px 112px}body[data-brand=ltd] .headlogo__img{background-image:url(images/ltd-logo-lg.jpg);background-size:auto 87px}body[data-brand=lsc] .l-grid-headlogo{height:114px}body[data-brand=ltd] .l-grid-headlogo{height:89px}@media only screen and (max-width:47.9375em){.headlogo--input__cart span:first-of-type,.headlogo__link{display:none}.headlogo--input__cart{min-width:66px}body[data-brand=lsc] .l-grid-headlogo{height:66px!important}body[data-brand=ltd] .l-grid-headlogo{height:56px!important}body[data-brand=lsc] .headlogo__hb{padding:12px 0 8px 8px}body[data-brand=ltd] .headlogo__hb{padding:0 0 8px 8px}body[data-brand=lsc] .headlogo--input__cart{margin:1px 6px 0 0}body[data-brand=ltd] .headlogo--input__cart{margin:0 6px 0 0}}@media only screen and (min-width:48em) and (max-width:61.1875em){body[data-brand=lsc] .l-grid-headlogo{height:63px!important}body[data-brand=ltd] .l-grid-headlogo{height:56px!important}body[data-brand=lsc] .headlogo--input__cart{margin:1px 1px 0 0}body[data-brand=ltd] .headlogo--input__cart{margin:0 1px 0 0}}@media only screen and (max-width:61.1875em){.l-grid-headlogo{width:inherit}.headlogo__hb{display:block}.headlogo__img{width:352px}body[data-brand=lsc] .headlogo__img{background-image:url(images/lsc-logo-md-sm.jpg);background-size:auto}body[data-brand=ltd] .headlogo__img{background-image:url(images/ltd-logo-md.jpg);background-size:auto auto}body[data-brand=lsc] .headlogo__link{margin:7px 1px 1px}body[data-brand=ltd] .headlogo__link{margin:5px 1px 1px}}
 	/*  Above the Fold end      */
@@ -89,27 +89,51 @@ width: 980px;
 }
 .productcard {
 padding: 0; margin: 0 5px 8px 5px;
+position: relative;
 }
 .productcard .productcard__a {
 text-align: center;
 text-decoration: none;
 }
+.productcard .productcard__figcap {
+	position: absolute;
+}
 .productcard .productcard__a--qv {
-font-family: sans-serif;
-text-align: center;
-text-decoration: none;
-border-radius: 3px;
-background-color: #2b7ec0;
-position: relative;
-top: -88px;
-left: 0;
-width: 70%;
-margin: 0 15%;
-padding: 8px 0;
-font-size: 17px;
-font-weight: 300;
-color: #fff;
-z-index: 245;
+	display: none;
+}
+.productcard:hover .productcard__a--qv {
+	border-radius: 3px;
+	bottom: 84px;
+	color: #fff;
+	cursor: pointer;
+	display: block;
+	font-family: sans-serif;
+	font-size: 16px;
+	font-weight: 300;
+	margin: 2px 20%;
+	padding: 8px 6px;
+	position: absolute;
+	text-align: center;
+	text-decoration: none;
+	width: 60%;
+	z-index: 176;
+}
+body[data-brand="lsc"] .productcard__a--qv { background-color: #7e2d3e; }
+body[data-brand="ltd"] .productcard__a--qv { background-color: #2b7ec0; }
+.productcard__excl {
+	font-size: 9px;
+	margin: 0;
+	padding: 4px;
+	position: absolute;
+	top: -18px;
+}
+.productcard__excl--lsc {
+	background-color: #7e2d40;
+	color: #fff;
+}
+.productcard__excl--ltd {
+	background-color: #297fb8;
+	color: #fff;
 }
 .productcard .productcard__pic {
 display: block;
@@ -273,8 +297,8 @@ background-color: #eee;
 	    <aside class="l-primebanr__whitespace"></aside>
 	    <figure class="primebanr__fig" aria-label="Primary Banner">
 	         <img class="l-primebanr__img" src="./N-1z0uo43_files/prime_banner_lg.png" alt="Special Offer" title="Special Offer"
-srcset="./N-1z0uo43_files/prime_banner_sm.png 764w, ./N-1z0uo43_files/prime_banner_md.png 978w, ./N-1z0uo43_files/prime_banner_lg.png 990w"
-sizes="(max-width: 766px) 764px, (min-width: 768px) and (max-width: 980px) 978px, (min-width: 982px) 990px">
+						srcset="./N-1z0uo43_files/prime_banner_sm.png 764w, ./N-1z0uo43_files/prime_banner_md.png 978w, ./N-1z0uo43_files/prime_banner_lg.png 990w"
+						sizes="(max-width: 766px) 764px, (min-width: 768px) and (max-width: 980px) 978px, (min-width: 982px) 990px">
 	    </figure>
 		</section><!--  Component End  -->
 
@@ -286,35 +310,53 @@ sizes="(max-width: 766px) 764px, (min-width: 768px) and (max-width: 980px) 978px
 
 
 <section class="l-grid-productcard" role="grid"><!--  Component Begin  -->
-	<article class="productcard" itemscope itemtype="http://schema.org/Product"
-		aria-describedby="id-prod-COUNTER" role="gridcell">
-		<a class="productcard__a" itemprop="url"
-		href="">
+	<article class="productcard" aria-describedby="id-prod-COUNTER" role="gridcell">
+		<a class="productcard__a" href="">
 			<figure class="productcard__fig">
 				<picture class="productcard__pic">
-					<img class="productcard__img" itemprop="image"
+					<img class="productcard__img"
 					src="./N-1z0uo43_files/60256_mn.jpg"
 					alt="product name">
-
 				</picture>
-<a class="productcard__a--qv">Quick View</a>
 				<figcaption class="productcard__figcap">
-					<section itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+					<section>
 						<p class="productcard__p">
-							<span itemprop="priceCurrency" content="USD">$</span><span itemprop="price" content="19.00">19.00</span>
+							<span>19.00</span>
 						</p>
 					</section>
-					<h2 id="id-prod-COUNTER" class="productcard__h2" itemprop="name">Tote with Hot/Cold Casserole Carrier</h2>
-					<section itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
-						<meta itemprop="ratingValue" content="averageRating"><meta itemprop="ratingCount" content="5">
-						<div class="review-stars four-star" itemprop="ratingValue" content="4"></div>
+					<h2 id="id-prod-COUNTER" class="productcard__h2">Tote with Hot/Cold Casserole Carrier</h2>
+					<section itemprop="aggregateRating">
+						<div class="review-stars four-star" content="4"></div>
 					</section>
-					<meta itemprop="availability" itemtype="https://schema.org/ItemAvailability" content="https://schema.org/InStock" />
-
+<a class="productcard__a--qv">Quick View</a>
+<span class="js-productcard-excl QQQQhidden">
+	<p class="productcard__excl productcard__excl--lsc brand--lsc__show">LAKESIDE EXCLUSIVE</p>
+	<p class="productcard__excl productcard__excl--ltd brand--ltd__show">LTD EXCLUSIVE</p>
+</span>
 				</figcaption>
 			</figure>
 		</a>
 	</article>
+<script type="application/ld+json">
+{
+	"@context": "http://schema.org/",
+	"@type": "Product",
+	"name": "Tote with Hot/Cold Casserole Carrier",
+	"image": "https://neodigm.github.io/is-ecom-labs/bookpage/N-1z0uo43_files/60256_mn.jpg",
+	"description": "This 2-in-1 Tote with Hot/Cold Casserole Carrier is perfect for picnics, parties, tailgating and more. It lets you store hot or cold food and dry items in one convenient place. The tote holds dry goods and has an interior zippered pocket and a durable aluminum handle with grip.",
+	"offers": {
+	  "@type": "Offer",
+	  "priceCurrency": "USD",
+	  "price": "11.98",
+	  "availability": "http://schema.org/InStock",
+	  "seller": {
+	    "@type": "Organization",
+	    "name": "LTD Commodities"
+	  }
+	}
+}
+</script>
+
 	<article class="productcard" itemscope itemtype="http://schema.org/Product"
 		aria-describedby="id-prod-COUNTER" role="gridcell">
 		<a class="productcard__a" itemprop="url"
@@ -340,6 +382,7 @@ sizes="(max-width: 766px) 764px, (min-width: 768px) and (max-width: 980px) 978px
 				</figcaption>
 			</figure>
 		</a>
+<a class="productcard__a--qv">Quick View</a>
 	</article>
 	<article class="productcard" itemscope itemtype="http://schema.org/Product"
 		aria-describedby="id-prod-COUNTER" role="gridcell">
