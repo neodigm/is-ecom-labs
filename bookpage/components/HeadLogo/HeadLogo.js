@@ -9,6 +9,7 @@ var c_headlogo = new Vue({
   methods: {
     hb_menu: function( e ){
       console.log("hb menu click");
+      document.getElementsByTagName("body")[0].setAttribute("data-brand", "lsc");
     }
   }
 });
