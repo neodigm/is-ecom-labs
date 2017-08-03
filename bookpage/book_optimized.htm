@@ -79,7 +79,6 @@ body[data-brand=lsc] .brand--lsc__show,body[data-brand=ltd] .brand--ltd__show{di
 margin: 0;
 padding: 0;
 }
-
 /*  CSS category Layout   */ /*  border display height media width ...  */
 .l-grid-productcard {
 display: grid;
@@ -118,10 +117,8 @@ text-decoration: none;
 	width: 60%;
 	z-index: 176;
 }
-
 body[data-brand="lsc"] .productcard__a--qv { background-color: #7e2d3e; }
 body[data-brand="ltd"] .productcard__a--qv { background-color: #2b7ec0; }
-
 .productcard__excl {
 	font-size: 9px;
 	margin: 0;
@@ -174,6 +171,9 @@ text-decoration: underline;
     grid-template-columns: 1fr 1fr;
     width: inherit;
   }
+	.productcard:hover .productcard__a--qv {
+		display: none;
+	}
 }
 @media only screen and (min-width:48em) and (max-width:61.1875em){
 /* medium */
@@ -225,30 +225,30 @@ background-color: #eee;
 </head>
 <body data-brand="ltd">
 
-		<section id="js-headlogo" class="l-grid-headlogo" role="grid"><!--  Component Begin  -->
-			<nav class="headlogo__hb" role="gridcell">
+		<section id="js-headlogo" class="l-grid-headlogo"><!--  Component Begin  -->
+			<nav class="headlogo__hb">
 				<a class="headlogo__hb--a" @click="hb_menu">
 					<hr class="headlogo__hb--hr"><hr class="headlogo__hb--hr"><hr class="headlogo__hb--hr">
 					<p class="headlogo__hb--p">MENU</p>
 				</a>
 			</nav>
-			<nav class="headlogo__img" role="gridcell">
+			<nav class="headlogo__img">
 				<a class="brand--ltd__showb headlogo__img--a" href="/homeltd"></a>
 				<a class="brand--lsc__showb headlogo__img--a" href="/homels"></a>
 			</nav>
-			<nav class="headlogo__link" role="gridcell">
+			<nav class="headlogo__link">
 	Hello,<br><a class="headlogo--a" href="/my_account/index.jsp">Sign In</a>
 			</nav>
-			<nav class="headlogo__link" role="gridcell">
+			<nav class="headlogo__link">
 	New Customer?<br><a class="headlogo--a" href="/my_account/index.jsp">Register</a>
 			</nav>
-			<nav class="headlogo__link" role="gridcell">
+			<nav class="headlogo__link">
 	Request A<br><a class="headlogo--a" href="/catalog_request/index.jsp">FREE Catalog</a>
 			</nav>
-			<nav class="headlogo__link" role="gridcell">
+			<nav class="headlogo__link">
 	Sign Up For<br><a data-reveal-id="id-email-sign-up-dialog" href="#">Email Offers</a>
 			</nav>
-			<nav class="headlogo__cart" role="gridcell">
+			<nav class="headlogo__cart">
 				<button class="headlogo--input__cart">
 					<svg class="" fill="#FFFFFF" height="26" width="26" viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg"
 					alt="Cart">
@@ -260,11 +260,11 @@ background-color: #eee;
 			</nav>
 		</section><!--  Component End  -->
 
-		<section id="js-headnav" class="l-grid-headnav" role="grid"><!--  Component Begin  -->
-			<nav class="headnav__shop headnav__link" role="gridcell">
+		<section id="js-headnav" class="l-grid-headnav"><!--  Component Begin  -->
+			<nav class="headnav__shop headnav__link">
 				<a class="headnav__link--a" href="/shopCatalogs">Shop our<br><span class="headnav__link--span">Catalogs</span></a>
 			</nav>
-			<nav class="headnav__search" role="gridcell">
+			<nav class="headnav__search">
 				<section class="headnav__search--grid">
 					<input class="headnav__search--input" placeholder="Search item# or keyword" type="text" aria-required="true"
 						aria-label="Search item# or keyword" autocomplete="off">
@@ -273,16 +273,16 @@ background-color: #eee;
 					</button>
 				</section>
 			</nav>
-			<nav class="headnav__quick headnav__link" role="gridcell">
+			<nav class="headnav__quick headnav__link">
 				<a class="headnav__link--a" href="/catalog/catalog_quick_order.jsp">Quick<br><span class="headnav__link--span">Order Form</span></a>
 			</nav>
-			<nav class="headnav__your headnav__link" role="gridcell">
+			<nav class="headnav__your headnav__link">
 				<a class="headnav__link--a" href="/my_account/manage_account.jsp">Your<br><span class="headnav__link--span">Account</span></a>
 			</nav>
-			<nav class="headnav__order headnav__link" role="gridcell">
+			<nav class="headnav__order headnav__link">
 				<a class="headnav__link--a" href="/my_account/order_history/order_history_listing.jsp">Order<br><span class="headnav__link--span">Status</span></a>
 			</nav>
-			<nav class="headnav__faq headnav__link" role="gridcell">
+			<nav class="headnav__faq headnav__link">
 				<a class="faq-circle" href="/content/faq">?</a>
 			</nav>
 		</section><!--  Component End  -->
@@ -302,11 +302,14 @@ background-color: #eee;
 <!--  refinements: c-refine -->
 <aside class="c-Mockup" style="	border: 1px #e0dfdd solid;height: 32px;padding: 0; margin: 0 auto 16px auto;"> Refine</aside>
 
+<ltdc-productcard role="grid">
+<QQQQ role="rowgroup">
 
-<section class="l-grid-productcard" role="grid"><!--  Component Begin  -->
 
-<article class="productcard" aria-describedby="id-prod-COUNTER" role="gridcell">
-	<a class="productcard__a" href="">
+<ltdc-productcard role="grid"><!--  Component Begin  -->
+	<section class="l-grid-productcard" role="rowgroup">
+<article class="productcard" aria-describedby="id-prod-COUNTER" role="row">
+	<a class="productcard__a" href="" role="gridcell">
 		<figure class="productcard__fig">
 			<picture class="productcard__pic">
 				<img class="productcard__img"
@@ -351,8 +354,8 @@ background-color: #eee;
 	}
 }
 </script>
-<article class="productcard" aria-describedby="id-prod-COUNTER" role="gridcell">
-	<a class="productcard__a" href="">
+<article class="productcard" aria-describedby="id-prod-COUNTER" role="row">
+	<a class="productcard__a" href="" role="gridcell">
 		<figure class="productcard__fig">
 			<picture class="productcard__pic">
 				<img class="productcard__img"
@@ -397,8 +400,8 @@ background-color: #eee;
 	}
 }
 </script>
-<article class="productcard" aria-describedby="id-prod-COUNTER" role="gridcell">
-	<a class="productcard__a" href="">
+<article class="productcard" aria-describedby="id-prod-COUNTER" role="row">
+	<a class="productcard__a" href="" role="gridcell">
 		<figure class="productcard__fig">
 			<picture class="productcard__pic">
 				<img class="productcard__img"
@@ -443,8 +446,8 @@ background-color: #eee;
 	}
 }
 </script>
-<article class="productcard" aria-describedby="id-prod-COUNTER" role="gridcell">
-	<a class="productcard__a" href="">
+<article class="productcard" aria-describedby="id-prod-COUNTER" role="row">
+	<a class="productcard__a" href="" role="gridcell">
 		<figure class="productcard__fig">
 			<picture class="productcard__pic">
 				<img class="productcard__img"
@@ -489,8 +492,8 @@ background-color: #eee;
 	}
 }
 </script>
-<article class="productcard" aria-describedby="id-prod-COUNTER" role="gridcell">
-	<a class="productcard__a" href="">
+<article class="productcard" aria-describedby="id-prod-COUNTER" role="row">
+	<a class="productcard__a" href="" role="gridcell">
 		<figure class="productcard__fig">
 			<picture class="productcard__pic">
 				<img class="productcard__img"
@@ -535,8 +538,8 @@ background-color: #eee;
 	}
 }
 </script>
-<article class="productcard" aria-describedby="id-prod-COUNTER" role="gridcell">
-	<a class="productcard__a" href="">
+<article class="productcard" aria-describedby="id-prod-COUNTER" role="row">
+	<a class="productcard__a" href="" role="gridcell">
 		<figure class="productcard__fig">
 			<picture class="productcard__pic">
 				<img class="productcard__img"
@@ -581,8 +584,8 @@ background-color: #eee;
 	}
 }
 </script>
-<article class="productcard" aria-describedby="id-prod-COUNTER" role="gridcell">
-	<a class="productcard__a" href="">
+<article class="productcard" aria-describedby="id-prod-COUNTER" role="row">
+	<a class="productcard__a" href="" role="gridcell">
 		<figure class="productcard__fig">
 			<picture class="productcard__pic">
 				<img class="productcard__img"
@@ -627,8 +630,8 @@ background-color: #eee;
 	}
 }
 </script>
-<article class="productcard" aria-describedby="id-prod-COUNTER" role="gridcell">
-	<a class="productcard__a" href="">
+<article class="productcard" aria-describedby="id-prod-COUNTER" role="row">
+	<a class="productcard__a" href="" role="gridcell">
 		<figure class="productcard__fig">
 			<picture class="productcard__pic">
 				<img class="productcard__img"
@@ -673,8 +676,8 @@ background-color: #eee;
 	}
 }
 </script>
-<article class="productcard" aria-describedby="id-prod-COUNTER" role="gridcell">
-	<a class="productcard__a" href="">
+<article class="productcard" aria-describedby="id-prod-COUNTER" role="row">
+	<a class="productcard__a" href="" role="gridcell">
 		<figure class="productcard__fig">
 			<picture class="productcard__pic">
 				<img class="productcard__img"
@@ -719,8 +722,8 @@ background-color: #eee;
 	}
 }
 </script>
-<article class="productcard" aria-describedby="id-prod-COUNTER" role="gridcell">
-	<a class="productcard__a" href="">
+<article class="productcard" aria-describedby="id-prod-COUNTER" role="row">
+	<a class="productcard__a" href="" role="gridcell">
 		<figure class="productcard__fig">
 			<picture class="productcard__pic">
 				<img class="productcard__img"
@@ -765,8 +768,8 @@ background-color: #eee;
 	}
 }
 </script>
-<article class="productcard" aria-describedby="id-prod-COUNTER" role="gridcell">
-	<a class="productcard__a" href="">
+<article class="productcard" aria-describedby="id-prod-COUNTER" role="row">
+	<a class="productcard__a" href="" role="gridcell">
 		<figure class="productcard__fig">
 			<picture class="productcard__pic">
 				<img class="productcard__img"
@@ -811,8 +814,8 @@ background-color: #eee;
 	}
 }
 </script>
-<article class="productcard" aria-describedby="id-prod-COUNTER" role="gridcell">
-	<a class="productcard__a" href="">
+<article class="productcard" aria-describedby="id-prod-COUNTER" role="row">
+	<a class="productcard__a" href="" role="gridcell">
 		<figure class="productcard__fig">
 			<picture class="productcard__pic">
 				<img class="productcard__img"
@@ -857,8 +860,8 @@ background-color: #eee;
 	}
 }
 </script>
-<article class="productcard" aria-describedby="id-prod-COUNTER" role="gridcell">
-	<a class="productcard__a" href="">
+<article class="productcard" aria-describedby="id-prod-COUNTER" role="row">
+	<a class="productcard__a" href="" role="gridcell">
 		<figure class="productcard__fig">
 			<picture class="productcard__pic">
 				<img class="productcard__img"
@@ -903,8 +906,8 @@ background-color: #eee;
 	}
 }
 </script>
-<article class="productcard" aria-describedby="id-prod-COUNTER" role="gridcell">
-	<a class="productcard__a" href="">
+<article class="productcard" aria-describedby="id-prod-COUNTER" role="row">
+	<a class="productcard__a" href="" role="gridcell">
 		<figure class="productcard__fig">
 			<picture class="productcard__pic">
 				<img class="productcard__img"
@@ -949,8 +952,8 @@ background-color: #eee;
 	}
 }
 </script>
-<article class="productcard" aria-describedby="id-prod-COUNTER" role="gridcell">
-	<a class="productcard__a" href="">
+<article class="productcard" aria-describedby="id-prod-COUNTER" role="row">
+	<a class="productcard__a" href="" role="gridcell">
 		<figure class="productcard__fig">
 			<picture class="productcard__pic">
 				<img class="productcard__img"
@@ -995,8 +998,8 @@ background-color: #eee;
 	}
 }
 </script>
-<article class="productcard" aria-describedby="id-prod-COUNTER" role="gridcell">
-	<a class="productcard__a" href="">
+<article class="productcard" aria-describedby="id-prod-COUNTER" role="row">
+	<a class="productcard__a" href="" role="gridcell">
 		<figure class="productcard__fig">
 			<picture class="productcard__pic">
 				<img class="productcard__img"
@@ -1041,8 +1044,8 @@ background-color: #eee;
 	}
 }
 </script>
-<article class="productcard" aria-describedby="id-prod-COUNTER" role="gridcell">
-	<a class="productcard__a" href="">
+<article class="productcard" aria-describedby="id-prod-COUNTER" role="row">
+	<a class="productcard__a" href="" role="gridcell">
 		<figure class="productcard__fig">
 			<picture class="productcard__pic">
 				<img class="productcard__img"
@@ -1087,8 +1090,8 @@ background-color: #eee;
 	}
 }
 </script>
-<article class="productcard" aria-describedby="id-prod-COUNTER" role="gridcell">
-	<a class="productcard__a" href="">
+<article class="productcard" aria-describedby="id-prod-COUNTER" role="row">
+	<a class="productcard__a" href="" role="gridcell">
 		<figure class="productcard__fig">
 			<picture class="productcard__pic">
 				<img class="productcard__img"
@@ -1133,8 +1136,8 @@ background-color: #eee;
 	}
 }
 </script>
-<article class="productcard" aria-describedby="id-prod-COUNTER" role="gridcell">
-	<a class="productcard__a" href="">
+<article class="productcard" aria-describedby="id-prod-COUNTER" role="row">
+	<a class="productcard__a" href="" role="gridcell">
 		<figure class="productcard__fig">
 			<picture class="productcard__pic">
 				<img class="productcard__img"
@@ -1179,8 +1182,8 @@ background-color: #eee;
 	}
 }
 </script>
-<article class="productcard" aria-describedby="id-prod-COUNTER" role="gridcell">
-	<a class="productcard__a" href="">
+<article class="productcard" aria-describedby="id-prod-COUNTER" role="row">
+	<a class="productcard__a" href="" role="gridcell">
 		<figure class="productcard__fig">
 			<picture class="productcard__pic">
 				<img class="productcard__img"
@@ -1225,8 +1228,8 @@ background-color: #eee;
 	}
 }
 </script>
-<article class="productcard" aria-describedby="id-prod-COUNTER" role="gridcell">
-	<a class="productcard__a" href="">
+<article class="productcard" aria-describedby="id-prod-COUNTER" role="row">
+	<a class="productcard__a" href="" role="gridcell">
 		<figure class="productcard__fig">
 			<picture class="productcard__pic">
 				<img class="productcard__img"
@@ -1271,8 +1274,8 @@ background-color: #eee;
 	}
 }
 </script>
-<article class="productcard" aria-describedby="id-prod-COUNTER" role="gridcell">
-	<a class="productcard__a" href="">
+<article class="productcard" aria-describedby="id-prod-COUNTER" role="row">
+	<a class="productcard__a" href="" role="gridcell">
 		<figure class="productcard__fig">
 			<picture class="productcard__pic">
 				<img class="productcard__img"
@@ -1317,8 +1320,8 @@ background-color: #eee;
 	}
 }
 </script>
-<article class="productcard" aria-describedby="id-prod-COUNTER" role="gridcell">
-	<a class="productcard__a" href="">
+<article class="productcard" aria-describedby="id-prod-COUNTER" role="row">
+	<a class="productcard__a" href="" role="gridcell">
 		<figure class="productcard__fig">
 			<picture class="productcard__pic">
 				<img class="productcard__img"
@@ -1363,8 +1366,8 @@ background-color: #eee;
 	}
 }
 </script>
-<article class="productcard" aria-describedby="id-prod-COUNTER" role="gridcell">
-	<a class="productcard__a" href="">
+<article class="productcard" aria-describedby="id-prod-COUNTER" role="row">
+	<a class="productcard__a" href="" role="gridcell">
 		<figure class="productcard__fig">
 			<picture class="productcard__pic">
 				<img class="productcard__img"
@@ -1409,8 +1412,8 @@ background-color: #eee;
 	}
 }
 </script>
-<article class="productcard" aria-describedby="id-prod-COUNTER" role="gridcell">
-	<a class="productcard__a" href="">
+<article class="productcard" aria-describedby="id-prod-COUNTER" role="row">
+	<a class="productcard__a" href="" role="gridcell">
 		<figure class="productcard__fig">
 			<picture class="productcard__pic">
 				<img class="productcard__img"
@@ -1455,8 +1458,8 @@ background-color: #eee;
 	}
 }
 </script>
-<article class="productcard" aria-describedby="id-prod-COUNTER" role="gridcell">
-	<a class="productcard__a" href="">
+<article class="productcard" aria-describedby="id-prod-COUNTER" role="row">
+	<a class="productcard__a" href="" role="gridcell">
 		<figure class="productcard__fig">
 			<picture class="productcard__pic">
 				<img class="productcard__img"
@@ -1501,8 +1504,8 @@ background-color: #eee;
 	}
 }
 </script>
-<article class="productcard" aria-describedby="id-prod-COUNTER" role="gridcell">
-	<a class="productcard__a" href="">
+<article class="productcard" aria-describedby="id-prod-COUNTER" role="row">
+	<a class="productcard__a" href="" role="gridcell">
 		<figure class="productcard__fig">
 			<picture class="productcard__pic">
 				<img class="productcard__img"
@@ -1547,8 +1550,8 @@ background-color: #eee;
 	}
 }
 </script>
-<article class="productcard" aria-describedby="id-prod-COUNTER" role="gridcell">
-	<a class="productcard__a" href="">
+<article class="productcard" aria-describedby="id-prod-COUNTER" role="row">
+	<a class="productcard__a" href="" role="gridcell">
 		<figure class="productcard__fig">
 			<picture class="productcard__pic">
 				<img class="productcard__img"
@@ -1593,8 +1596,8 @@ background-color: #eee;
 	}
 }
 </script>
-<article class="productcard" aria-describedby="id-prod-COUNTER" role="gridcell">
-	<a class="productcard__a" href="">
+<article class="productcard" aria-describedby="id-prod-COUNTER" role="row">
+	<a class="productcard__a" href="" role="gridcell">
 		<figure class="productcard__fig">
 			<picture class="productcard__pic">
 				<img class="productcard__img"
@@ -1639,8 +1642,8 @@ background-color: #eee;
 	}
 }
 </script>
-<article class="productcard" aria-describedby="id-prod-COUNTER" role="gridcell">
-	<a class="productcard__a" href="">
+<article class="productcard" aria-describedby="id-prod-COUNTER" role="row">
+	<a class="productcard__a" href="" role="gridcell">
 		<figure class="productcard__fig">
 			<picture class="productcard__pic">
 				<img class="productcard__img"
@@ -1685,8 +1688,8 @@ background-color: #eee;
 	}
 }
 </script>
-<article class="productcard" aria-describedby="id-prod-COUNTER" role="gridcell">
-	<a class="productcard__a" href="">
+<article class="productcard" aria-describedby="id-prod-COUNTER" role="row">
+	<a class="productcard__a" href="" role="gridcell">
 		<figure class="productcard__fig">
 			<picture class="productcard__pic">
 				<img class="productcard__img"
@@ -1731,8 +1734,8 @@ background-color: #eee;
 	}
 }
 </script>
-<article class="productcard" aria-describedby="id-prod-COUNTER" role="gridcell">
-	<a class="productcard__a" href="">
+<article class="productcard" aria-describedby="id-prod-COUNTER" role="row">
+	<a class="productcard__a" href="" role="gridcell">
 		<figure class="productcard__fig">
 			<picture class="productcard__pic">
 				<img class="productcard__img"
@@ -1777,8 +1780,8 @@ background-color: #eee;
 	}
 }
 </script>
-<article class="productcard" aria-describedby="id-prod-COUNTER" role="gridcell">
-	<a class="productcard__a" href="">
+<article class="productcard" aria-describedby="id-prod-COUNTER" role="row">
+	<a class="productcard__a" href="" role="gridcell">
 		<figure class="productcard__fig">
 			<picture class="productcard__pic">
 				<img class="productcard__img"
@@ -1823,8 +1826,8 @@ background-color: #eee;
 	}
 }
 </script>
-<article class="productcard" aria-describedby="id-prod-COUNTER" role="gridcell">
-	<a class="productcard__a" href="">
+<article class="productcard" aria-describedby="id-prod-COUNTER" role="row">
+	<a class="productcard__a" href="" role="gridcell">
 		<figure class="productcard__fig">
 			<picture class="productcard__pic">
 				<img class="productcard__img"
@@ -1869,8 +1872,8 @@ background-color: #eee;
 	}
 }
 </script>
-<article class="productcard" aria-describedby="id-prod-COUNTER" role="gridcell">
-	<a class="productcard__a" href="">
+<article class="productcard" aria-describedby="id-prod-COUNTER" role="row">
+	<a class="productcard__a" href="" role="gridcell">
 		<figure class="productcard__fig">
 			<picture class="productcard__pic">
 				<img class="productcard__img"
@@ -1915,8 +1918,8 @@ background-color: #eee;
 	}
 }
 </script>
-<article class="productcard" aria-describedby="id-prod-COUNTER" role="gridcell">
-	<a class="productcard__a" href="">
+<article class="productcard" aria-describedby="id-prod-COUNTER" role="row">
+	<a class="productcard__a" href="" role="gridcell">
 		<figure class="productcard__fig">
 			<picture class="productcard__pic">
 				<img class="productcard__img"
@@ -1961,8 +1964,8 @@ background-color: #eee;
 	}
 }
 </script>
-<article class="productcard" aria-describedby="id-prod-COUNTER" role="gridcell">
-	<a class="productcard__a" href="">
+<article class="productcard" aria-describedby="id-prod-COUNTER" role="row">
+	<a class="productcard__a" href="" role="gridcell">
 		<figure class="productcard__fig">
 			<picture class="productcard__pic">
 				<img class="productcard__img"
@@ -2007,8 +2010,8 @@ background-color: #eee;
 	}
 }
 </script>
-<article class="productcard" aria-describedby="id-prod-COUNTER" role="gridcell">
-	<a class="productcard__a" href="">
+<article class="productcard" aria-describedby="id-prod-COUNTER" role="row">
+	<a class="productcard__a" href="" role="gridcell">
 		<figure class="productcard__fig">
 			<picture class="productcard__pic">
 				<img class="productcard__img"
@@ -2053,8 +2056,8 @@ background-color: #eee;
 	}
 }
 </script>
-<article class="productcard" aria-describedby="id-prod-COUNTER" role="gridcell">
-	<a class="productcard__a" href="">
+<article class="productcard" aria-describedby="id-prod-COUNTER" role="row">
+	<a class="productcard__a" href="" role="gridcell">
 		<figure class="productcard__fig">
 			<picture class="productcard__pic">
 				<img class="productcard__img"
@@ -2099,8 +2102,8 @@ background-color: #eee;
 	}
 }
 </script>
-<article class="productcard" aria-describedby="id-prod-COUNTER" role="gridcell">
-	<a class="productcard__a" href="">
+<article class="productcard" aria-describedby="id-prod-COUNTER" role="row">
+	<a class="productcard__a" href="" role="gridcell">
 		<figure class="productcard__fig">
 			<picture class="productcard__pic">
 				<img class="productcard__img"
@@ -2145,7 +2148,8 @@ background-color: #eee;
 	}
 }
 </script>
-</section><!--  Component End  -->
+</section>
+</ltdc-productcard><!--  Component End  -->
 
 <!--  bread page: c-breadpage  -->
 <aside class="c-Mockup" style="	border: 1px #e0dfdd solid;height: 48px;padding: 0; margin: 0 auto 8px  auto;">Pages</aside>
