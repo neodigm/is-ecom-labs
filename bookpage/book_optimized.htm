@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <html class="" lang="en">
 <head>
-<!--
-Add Quick view on Large
-
--->
 	<title>Autumn Style 2017 | LTD</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="apple-touch-icon" sizes="180x180" href="/images/ltd-apple-touch-icon.png">
@@ -57,7 +53,7 @@ body[data-brand=lsc] .brand--lsc__show,body[data-brand=ltd] .brand--ltd__show{di
 	-->
 	<style>
 	/*  Above the Fold begin    */
-.l-primebanr{margin:0 auto;padding:0;width:980px}.l-primebanr__whitespace{height:10px}.l-primebanr__img{width:100%}@media only screen and (max-width:61.1875em){.l-primebanr{width:inherit}}
+.l-primebanr{display:block;margin:0 auto;padding:0;width:980px}.l-primebanr__whitespace{height:10px}.l-primebanr__img{width:100%}@media only screen and (max-width:61.1875em){.l-primebanr{width:inherit}}
 	/*  Above the Fold end      */
 	</style>
 	<!--
@@ -74,118 +70,10 @@ body[data-brand=lsc] .brand--lsc__show,body[data-brand=ltd] .brand--ltd__show{di
 -->
 <style>
 /*  Above the Fold begin    */
-/*  CSS category Base     */ /*  reset margin padding ...  */
-.productcard, body, figure, picture, img, figcaption, section, ul, li, input {
-margin: 0;
-padding: 0;
-}
-/*  CSS category Layout   */ /*  border display height media width ...  */
-.l-grid-productcard {
-display: grid;
-grid-template-columns: repeat(5, 1fr);
-margin: 0 auto !important;
-width: 980px;
-}
-.productcard {
-padding: 0; margin: 0 5px 8px 5px;
-position: relative;
-}
-.productcard .productcard__a {
-text-align: center;
-text-decoration: none;
-}
-.productcard .productcard__figcap {
-	position: relative;
-}
-.productcard .productcard__a--qv {
-	display: none;
-}
-.productcard:hover .productcard__a--qv {
-	border-radius: 3px;
-	top: -68px;
-	color: #fff;
-	cursor: pointer;
-	display: block;
-	font-family: sans-serif;
-	font-size: 16px;
-	font-weight: 300;
-	margin: 2px 20%;
-	padding: 8px 6px;
-	position: absolute;
-	text-align: center;
-	text-decoration: none;
-	width: 60%;
-	z-index: 176;
-}
-body[data-brand="lsc"] .productcard__a--qv { background-color: #7e2d3e; }
-body[data-brand="ltd"] .productcard__a--qv { background-color: #2b7ec0; }
-.productcard__excl {
-	font-size: 9px;
-	margin: 0;
-	padding: 4px;
-	position: absolute;
-	top: -22px;
-}
-.productcard__excl--lsc {
-	background-color: #7e2d40;
-	color: #fff;
-}
-.productcard__excl--ltd {
-	background-color: #297fb8;
-	color: #fff;
-}
-.productcard .productcard__pic {
-display: block;
-height: 0;
-overflow: hidden;
-padding-bottom: 122%; /*377:460*/
-position: relative;
-}
-.productcard .productcard__img {
-height: 100%; width: 100%;
-margin: auto;
-position: absolute;
-top: 0; left: 0;
-}
-.productcard .productcard__p {
-font-family: sans-serif;
-margin: 4px;
-color: #cc2d41;
-font-size: 1.125em;
-font-weight: 700;
-line-height: 1em;
-}
-.productcard .productcard__h2 {
-color: #273546;
-display: block;
-font-family: sans-serif;
-font-size: 11px;
-font-weight: normal;
-margin: 0;
-text-decoration: underline;
-}
-/*  CSS category Layout   */ /*  border display height media width ...  */
-@media only screen and (max-width: 47.9375em) {
-/* small */
-  .l-grid-productcard {
-    grid-template-columns: 1fr 1fr;
-    width: inherit;
-  }
-	.productcard:hover .productcard__a--qv {
-		display: none;
-	}
-}
-@media only screen and (min-width:48em) and (max-width:61.1875em){
-/* medium */
-  .l-grid-productcard {
-    grid-template-columns: repeat(5, 1fr);
-    width: inherit;
-  }
-}
-
+body,figcaption,figure,img,input,li,picture,section,ul{margin:0;padding:0}.l-grid-productcard>section{display:grid;grid-template-columns:repeat(5,1fr);margin:0 auto!important;width:980px}.productcard{padding:0;margin:0 5px 8px}.productcard .productcard__a{text-align:center;text-decoration:none}.productcard,.productcard .productcard__figcap{position:relative}.productcard .productcard__a--qv{display:none}.productcard:hover .productcard__a--qv{border-radius:3px;cursor:pointer;display:block;font-family:sans-serif;font-size:16px;font-weight:300;margin:2px 20%;padding:8px 6px;position:absolute;text-align:center;text-decoration:none;top:-68px;width:60%;z-index:176}.productcard__excl{font-size:9px;margin:0;padding:4px;position:absolute;top:-22px}.productcard .productcard__pic{display:block;height:0;overflow:hidden;padding-bottom:122%;position:relative}.productcard .productcard__img{height:100%;width:100%;margin:auto;position:absolute;top:0;left:0}.productcard .productcard__p{font-family:sans-serif;font-size:1.125em;font-weight:700;line-height:1em;margin:4px}.productcard .productcard__h2{display:block;font-family:sans-serif;font-size:11px;font-weight:400;margin:0;text-decoration:underline}@media only screen and (max-width:47.9375em){.l-grid-productcard{grid-template-columns:1fr 1fr;width:inherit}.productcard:hover .productcard__a--qv{display:none}}@media only screen and (min-width:48em) and (max-width:61.1875em){.l-grid-productcard{grid-template-columns:repeat(5,1fr);width:inherit}}
 /*  Above the Fold end      */
 </style>
-<link rel="preload" href="components/productcard/productcard_skin.css" as="style" onload="this.rel='stylesheet'">
+<link rel="preload" href="components/productcard/productcard_skin.min.css" as="style" onload="this.rel='stylesheet'">
 <!--
 /*========================================*/
 /*  Component: ProductCard                */
@@ -225,7 +113,7 @@ background-color: #eee;
 </head>
 <body data-brand="ltd">
 
-		<section id="js-headlogo" class="l-grid-headlogo"><!--  Component Begin  -->
+		<ltdc-headlogo id="js-headlogo" class="l-grid-headlogo"><!--  Component Begin  -->
 			<nav class="headlogo__hb">
 				<a class="headlogo__hb--a" @click="hb_menu">
 					<hr class="headlogo__hb--hr"><hr class="headlogo__hb--hr"><hr class="headlogo__hb--hr">
@@ -258,9 +146,9 @@ background-color: #eee;
 				<span class="headlogo--input__carttxt">Cart</span><span class="headlogo--input__cartqty">999</span>
 				</button>
 			</nav>
-		</section><!--  Component End  -->
+		</ltdc-headlogo><!--  Component End  -->
 
-		<section id="js-headnav" class="l-grid-headnav"><!--  Component Begin  -->
+		<ltdc-headnav id="js-headnav" class="l-grid-headnav"><!--  Component Begin  -->
 			<nav class="headnav__shop headnav__link">
 				<a class="headnav__link--a" href="/shopCatalogs">Shop our<br><span class="headnav__link--span">Catalogs</span></a>
 			</nav>
@@ -285,16 +173,16 @@ background-color: #eee;
 			<nav class="headnav__faq headnav__link">
 				<a class="faq-circle" href="/content/faq">?</a>
 			</nav>
-		</section><!--  Component End  -->
+		</ltdc-headnav><!--  Component End  -->
 
-		<section class="l-primebanr" role="banner"><!--  Component Begin  -->
+		<ltdc-primebanr class="l-primebanr" role="banner"><!--  Component Begin  -->
 	    <aside class="l-primebanr__whitespace"></aside>
 	    <figure class="primebanr__fig" aria-label="Primary Banner">
 	         <img class="l-primebanr__img" src="./N-1z0uo43_files/prime_banner_lg.png" alt="Special Offer" title="Special Offer"
 						srcset="./N-1z0uo43_files/prime_banner_sm.png 764w, ./N-1z0uo43_files/prime_banner_md.png 978w, ./N-1z0uo43_files/prime_banner_lg.png 990w"
 						sizes="(max-width: 766px) 764px, (min-width: 768px) and (max-width: 980px) 978px, (min-width: 982px) 990px">
 	    </figure>
-		</section><!--  Component End  -->
+		</ltdc-primebanr><!--  Component End  -->
 
 <!--  bread page: c-breadpage  -->
 <aside class="c-Mockup" style="	border: 1px #e0dfdd solid;height: 48px;padding: 0; margin: 0 auto 8px  auto;"> Bread crumbs - pages</aside>
@@ -302,12 +190,8 @@ background-color: #eee;
 <!--  refinements: c-refine -->
 <aside class="c-Mockup" style="	border: 1px #e0dfdd solid;height: 32px;padding: 0; margin: 0 auto 16px auto;"> Refine</aside>
 
-<ltdc-productcard role="grid">
-<QQQQ role="rowgroup">
-
-
-<ltdc-productcard role="grid"><!--  Component Begin  -->
-	<section class="l-grid-productcard" role="rowgroup">
+<ltdc-productcard class="l-grid-productcard" role="grid"><!--  Component Begin  -->
+	<section role="rowgroup">
 <article class="productcard" aria-describedby="id-prod-COUNTER" role="row">
 	<a class="productcard__a" href="" role="gridcell">
 		<figure class="productcard__fig">
@@ -1704,7 +1588,7 @@ background-color: #eee;
 				</section>
 				<h2 id="id-prod-COUNTER" class="productcard__h2">Tote with Hot/Cold Casserole Carrier</h2>
 				<section itemprop="aggregateRating">
-					<div class="five-star review-stars" content="4"></div>
+					<div class="four-half-star review-stars" content="4"></div>
 				</section>
 				<a class="productcard__a--qv">Quick View</a>
 				<span class="js-productcard-excl hidden">
@@ -1750,7 +1634,7 @@ background-color: #eee;
 				</section>
 				<h2 id="id-prod-COUNTER" class="productcard__h2">Tote with Hot/Cold Casserole Carrier</h2>
 				<section itemprop="aggregateRating">
-					<div class="five-star review-stars" content="4"></div>
+					<div class="three-half-star review-stars" content="4"></div>
 				</section>
 				<a class="productcard__a--qv">Quick View</a>
 				<span class="js-productcard-excl hidden">
@@ -1842,7 +1726,7 @@ background-color: #eee;
 				</section>
 				<h2 id="id-prod-COUNTER" class="productcard__h2">Tote with Hot/Cold Casserole Carrier</h2>
 				<section itemprop="aggregateRating">
-					<div class="five-star review-stars" content="4"></div>
+					<div class="two-half-star review-stars" content="4"></div>
 				</section>
 				<a class="productcard__a--qv">Quick View</a>
 				<span class="js-productcard-excl hidden">
@@ -1888,7 +1772,7 @@ background-color: #eee;
 				</section>
 				<h2 id="id-prod-COUNTER" class="productcard__h2">Tote with Hot/Cold Casserole Carrier</h2>
 				<section itemprop="aggregateRating">
-					<div class="five-star review-stars" content="4"></div>
+					<div class="one-half-star review-stars" content="4"></div>
 				</section>
 				<a class="productcard__a--qv">Quick View</a>
 				<span class="js-productcard-excl hidden">
@@ -1934,7 +1818,7 @@ background-color: #eee;
 				</section>
 				<h2 id="id-prod-COUNTER" class="productcard__h2">Tote with Hot/Cold Casserole Carrier</h2>
 				<section itemprop="aggregateRating">
-					<div class="five-star review-stars" content="4"></div>
+					<div class="half-star review-stars" content="4"></div>
 				</section>
 				<a class="productcard__a--qv">Quick View</a>
 				<span class="js-productcard-excl hidden">
@@ -1980,7 +1864,7 @@ background-color: #eee;
 				</section>
 				<h2 id="id-prod-COUNTER" class="productcard__h2">Tote with Hot/Cold Casserole Carrier</h2>
 				<section itemprop="aggregateRating">
-					<div class="five-star review-stars" content="4"></div>
+					<div class="one-star review-stars" content="4"></div>
 				</section>
 				<a class="productcard__a--qv">Quick View</a>
 				<span class="js-productcard-excl hidden">
@@ -2026,7 +1910,7 @@ background-color: #eee;
 				</section>
 				<h2 id="id-prod-COUNTER" class="productcard__h2">Tote with Hot/Cold Casserole Carrier</h2>
 				<section itemprop="aggregateRating">
-					<div class="five-star review-stars" content="4"></div>
+					<div class="two-star review-stars" content="4"></div>
 				</section>
 				<a class="productcard__a--qv">Quick View</a>
 				<span class="js-productcard-excl hidden">
@@ -2072,7 +1956,7 @@ background-color: #eee;
 				</section>
 				<h2 id="id-prod-COUNTER" class="productcard__h2">Tote with Hot/Cold Casserole Carrier</h2>
 				<section itemprop="aggregateRating">
-					<div class="five-star review-stars" content="4"></div>
+					<div class="three-star review-stars" content="4"></div>
 				</section>
 				<a class="productcard__a--qv">Quick View</a>
 				<span class="js-productcard-excl hidden">
@@ -2118,7 +2002,7 @@ background-color: #eee;
 				</section>
 				<h2 id="id-prod-COUNTER" class="productcard__h2">Tote with Hot/Cold Casserole Carrier</h2>
 				<section itemprop="aggregateRating">
-					<div class="five-star review-stars" content="4"></div>
+					<div class="four-star review-stars" content="4"></div>
 				</section>
 				<a class="productcard__a--qv">Quick View</a>
 				<span class="js-productcard-excl hidden">
