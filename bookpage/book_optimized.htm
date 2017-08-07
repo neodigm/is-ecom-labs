@@ -185,6 +185,7 @@ background-color: #eee;
 	    </figure>
 		</ltdc-primebanr><!--  Component End  -->
 
+
 <!--  bread page: c-breadpage  -->
 <aside class="c-Mockup" style="	border: 1px #e0dfdd solid;height: 48px;padding: 0; margin: 0 auto 8px  auto;"> Bread crumbs - pages</aside>
 
@@ -212,7 +213,7 @@ background-color: #eee;
 					<div class="five-star review-stars" content="4"></div>
 				</section>
 				<a class="productcard__a--qv">Quick View</a>
-				<span class="js-productcard-excl hidden">
+				<span class="js-productcard-excl isnot-hidden">
 					<p class="productcard__excl productcard__excl--lsc brand--lsc__show">LAKESIDE EXCLUSIVE</p>
 					<p class="productcard__excl productcard__excl--ltd brand--ltd__show">LTD EXCLUSIVE</p>
 				</span>
@@ -2050,5 +2051,120 @@ background-color: #eee;
 <script src="components/headlogo/headlogo.js" async></script>
 <script src="components/headnav/headnav.js" async></script>
 <script src="components/productcard/productcard.js" async></script>
+
+<section
+style="
+position: fixed;
+top: 0;
+background-color: #888;
+opacity: .6;
+z-index: 8;
+bottom: 0;
+left: 0;
+right: 0;">
+</section>
+<nav
+style="
+position: fixed;
+top: 0;
+background-color: #edba08;
+width: 390px;
+z-index: 16;
+bottom: 0;">
+</nav>
+
+<div id="duck">
+	<drawerleft-slideout>QQQQ</drawerleft-slideout>
+</div>
+
+<!-- Zap Slideout Template -->
+<script id="drawerleft-slideout" type="text/x-template">
+  <div class="drawerleft-slideout"
+       :class="{ isOpen: isOpen }">
+    <div class="drawerleft-slideout-opener"
+         @click="toggle">{{openerText}}</div>
+    <ul class="drawerleft-slideout-menu">
+      <li class="drawerleft-slideout-menu-item">
+
+      </li>
+      <li class="drawerleft-slideout-menu-item"
+      	v-for="item in menu">{{item}}</li>
+      <li class="drawerleft-slideout-menu-item--small"
+      	v-for="item in smallMenu">{{item}}</li>
+    </ul>
+  </div>
+</script>
+
+<style>
+.drawerleft-slideout {
+  position: relative;
+  width: 240px;
+  height: 100vh;
+  padding: 30px;
+  background-color: #34495e;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: -webkit-transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: -webkit-transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.drawerleft-slideout.isOpen {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.drawerleft-slideout-opener {
+  position: absolute;
+  top: 20px;
+  left: 100%;
+  margin-left: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #EDBA08;
+  cursor: pointer;
+}
+.drawerleft-slideout-opener:hover {
+  text-decoration: underline;
+}
+
+.drawerleft-slideout-menu {
+  font-weight: 600;
+  color: #fff;
+}
+
+.drawerleft-slideout-menu-item,
+.drawerleft-slideout-menu-item--small {
+  cursor: pointer;
+}
+.drawerleft-slideout-menu-item:hover,
+.drawerleft-slideout-menu-item--small:hover {
+  text-decoration: underline;
+}
+.drawerleft-slideout-menu-item + .drawerleft-slideout-menu-item,
+.drawerleft-slideout-menu-item--small + .drawerleft-slideout-menu-item, .drawerleft-slideout-menu-item +
+.drawerleft-slideout-menu-item--small,
+.drawerleft-slideout-menu-item--small +
+.drawerleft-slideout-menu-item--small {
+  margin-top: 20px;
+}
+
+.drawerleft-slideout-menu-item {
+  font-size: 36px;
+}
+.drawerleft-slideout-menu-item + .drawerleft-slideout-menu-item--small {
+  margin-top: 30px;
+}
+
+.drawerleft-slideout-menu-item--small {
+  font-size: 18px;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #ecf0f1;
+}
+</style>
+
 </body>
 </html>
