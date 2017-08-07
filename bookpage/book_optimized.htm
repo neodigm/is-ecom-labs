@@ -12,6 +12,53 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
 	<meta name="msapplication-config" content="/images/ltd-browserconfig.xml">
 	<meta name="theme-color" content="#297fb8">
+	<!--
+	/*========================================*/
+	/*  Component: drawerleft                 */
+	/*================================ begin =*/
+	-->
+	<style>
+	/*  Above the Fold begin    */
+.drawerleft__menu {
+	display: none;
+	background-color: #fff;
+	position: fixed;
+	top: 0; bottom: 0;
+	width: 388px;
+	z-index: 16;
+}
+.drawerleft__scrim {
+	display: none;
+	background-color: #000;
+	opacity: .4;
+	position: fixed;
+	top: 0;	right: 0; bottom: 0; left: 0;
+	z-index: 8;
+	cursor: pointer;
+}
+.isOpen {
+	display: block;
+}
+@media only screen and (max-width: 47.9375em) {
+/* small */
+}
+@media only screen and (min-width:48em) and (max-width:61.1875em){
+/* medium */
+	.drawerleft__menu {
+		width: 288px;
+	}
+}
+@media only screen and (max-width:61.1875em){
+/* small and medium */
+}
+	/*  Above the Fold end      */
+	</style>
+	<link rel="preload" href="components/drawerleft/drawerleft_skin.min.css" as="style" onload="this.rel='stylesheet'">
+	<!--
+	/*========================================*/
+	/*  Component: drawerleft                 */
+	/*================================ end ===*/
+	-->
 
 	<!--
 	/*========================================*/
@@ -191,6 +238,10 @@ background-color: #eee;
 
 <!--  refinements: c-refine -->
 <aside class="c-Mockup" style="	border: 1px #e0dfdd solid;height: 32px;padding: 0; margin: 0 auto 16px auto;"> Refine</aside>
+
+<div id="ltdc-drawerleft__container">
+	<ltdc-drawerleft></ltdc-drawerleft>
+</div>
 
 <ltdc-productcard class="l-grid-productcard" role="grid"><!--  Component Begin  -->
 	<section role="rowgroup">
@@ -2046,125 +2097,20 @@ background-color: #eee;
 <!--  footer 2: c-foottwo  -->
 <aside class="c-Mockup" style="	border: 1px #e0dfdd solid;height: 276px;padding: 24px 0 0 0; margin: 0 auto 0 auto; width: inherit!important">footer two</aside>
 
-
 <script src="components/vue.runtime.min.js"></script>
 <script src="components/headlogo/headlogo.js" async></script>
 <script src="components/headnav/headnav.js" async></script>
+<script src="components/drawerleft/drawerleft.js" async></script>
 <script src="components/productcard/productcard.js" async></script>
 
-<section
-style="
-position: fixed;
-top: 0;
-background-color: #888;
-opacity: .6;
-z-index: 8;
-bottom: 0;
-left: 0;
-right: 0;">
-</section>
-<nav
-style="
-position: fixed;
-top: 0;
-background-color: #edba08;
-width: 390px;
-z-index: 16;
-bottom: 0;">
-</nav>
-
-<div id="duck">
-	<drawerleft-slideout>QQQQ</drawerleft-slideout>
-</div>
-
-<!-- Zap Slideout Template -->
-<script id="drawerleft-slideout" type="text/x-template">
-  <div class="drawerleft-slideout"
-       :class="{ isOpen: isOpen }">
-    <div class="drawerleft-slideout-opener"
-         @click="toggle">{{openerText}}</div>
-    <ul class="drawerleft-slideout-menu">
-      <li class="drawerleft-slideout-menu-item">
-
-      </li>
-      <li class="drawerleft-slideout-menu-item"
-      	v-for="item in menu">{{item}}</li>
-      <li class="drawerleft-slideout-menu-item--small"
-      	v-for="item in smallMenu">{{item}}</li>
-    </ul>
-  </div>
+<script id="ltdc-drawerleft__template" type="text/x-template">
+	<section>
+		<section class="drawerleft__menu" :class="{ isOpen: isOpen }">
+		</section>
+		<nav class="drawerleft__scrim" :class="{ isOpen: isOpen }" @click="toggle">
+		</nav>
+	</section>
 </script>
-
-<style>
-.drawerleft-slideout {
-  position: relative;
-  width: 240px;
-  height: 100vh;
-  padding: 30px;
-  background-color: #34495e;
-  -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
-  -webkit-transition: -webkit-transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
-  transition: -webkit-transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
-  transition: transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
-  transition: transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
-}
-.drawerleft-slideout.isOpen {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
-}
-
-.drawerleft-slideout-opener {
-  position: absolute;
-  top: 20px;
-  left: 100%;
-  margin-left: 20px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: #EDBA08;
-  cursor: pointer;
-}
-.drawerleft-slideout-opener:hover {
-  text-decoration: underline;
-}
-
-.drawerleft-slideout-menu {
-  font-weight: 600;
-  color: #fff;
-}
-
-.drawerleft-slideout-menu-item,
-.drawerleft-slideout-menu-item--small {
-  cursor: pointer;
-}
-.drawerleft-slideout-menu-item:hover,
-.drawerleft-slideout-menu-item--small:hover {
-  text-decoration: underline;
-}
-.drawerleft-slideout-menu-item + .drawerleft-slideout-menu-item,
-.drawerleft-slideout-menu-item--small + .drawerleft-slideout-menu-item, .drawerleft-slideout-menu-item +
-.drawerleft-slideout-menu-item--small,
-.drawerleft-slideout-menu-item--small +
-.drawerleft-slideout-menu-item--small {
-  margin-top: 20px;
-}
-
-.drawerleft-slideout-menu-item {
-  font-size: 36px;
-}
-.drawerleft-slideout-menu-item + .drawerleft-slideout-menu-item--small {
-  margin-top: 30px;
-}
-
-.drawerleft-slideout-menu-item--small {
-  font-size: 18px;
-  font-weight: normal;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: #ecf0f1;
-}
-</style>
 
 </body>
 </html>
