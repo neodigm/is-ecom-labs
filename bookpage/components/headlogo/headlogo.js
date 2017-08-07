@@ -5,13 +5,15 @@ Vue.config.devtools = true;
 var c_headlogo = new Vue({
   el: "#js-headlogo",
   data: {
-    duck: 333
+    isOpen__menu: false,
+    isOpen__scrim: false,
   },
   methods: {
     hb_menu: function( e ){
-      alert("hb menu click");
+      this.isOpen__menu = !this.isOpen__menu;
+      this.isOpen__scrim = !this.isOpen__scrim;
       console.log("hb menu click");
-      document.getElementsByTagName("body")[0].setAttribute("data-brand", "lsc");
+      //document.getElementsByTagName("body")[0].setAttribute("data-brand", "lsc");
     }
   }
 });
