@@ -75,6 +75,31 @@ font-weight: normal;
 margin: 0;
 text-decoration: underline;
 }
+.drawerright__menu {
+  box-shadow: -4px -4px 2px #767676;
+  background-color: #fff;
+  position: fixed;
+  top: 0; bottom: 0; right: -400px;
+  transition: all 0.3s;
+  width: 0;
+  z-index: 16;
+}
+.drawerright__scrim {
+  background-color: #000;
+  cursor: pointer;
+  display: none;
+  opacity: .4;
+  position: fixed;
+  top: 0;	right: 0; bottom: 0; left: 0;
+  z-index: 8;
+}
+.isOpenR__menu {
+  right: 0;
+  width: 352px;
+}
+.isOpenR__scrim {
+  display: block;
+}
 /*  CSS category Layout   */ /*  border display height media width ...  */
 @media only screen and (max-width: 47.9375em) {
 /* small */
@@ -82,9 +107,9 @@ text-decoration: underline;
     grid-template-columns: 1fr 1fr;
     width: inherit;
   }
-	.productcard:hover .productcard__a--qv {
-		display: none;
-	}
+  .productcard:hover .productcard__a--qv {
+    display: none;
+  }
 }
 @media only screen and (min-width:48em) and (max-width:61.1875em){
 /* medium */

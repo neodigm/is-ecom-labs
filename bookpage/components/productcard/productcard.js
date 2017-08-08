@@ -4,14 +4,14 @@ Vue.config.devtools = true;
 var c_productcard = new Vue({
   el: "#js-productcard",
   data: {
-    isOpen__menu: false,
-    isOpen__scrim: false,
+    isOpenR__menu: false,
+    isOpenR__scrim: false,
   },
   methods: {
     toggle: function( e ){
       console.log("quick view click");
-      this.isOpen__menu = !this.isOpen__menu;
-      this.isOpen__scrim = !this.isOpen__scrim;
+      this.isOpenR__menu = !this.isOpenR__menu;
+      this.isOpenR__scrim = !this.isOpenR__scrim;
     }
   }
 });
