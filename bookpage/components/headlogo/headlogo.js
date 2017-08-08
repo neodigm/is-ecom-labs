@@ -9,7 +9,7 @@ var c_headlogo = new Vue({
     isOpen__scrim: false,
   },
   methods: {
-    hb_menu: function( e ){
+    toggle: function( e ){
       this.isOpen__menu = !this.isOpen__menu;
       this.isOpen__scrim = !this.isOpen__scrim;
       console.log("hb menu click");
