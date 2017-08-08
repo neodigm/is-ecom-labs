@@ -114,7 +114,6 @@ body[data-brand="ltd"] .l-grid-headlogo { height: 89px; }
   cursor: pointer;
 }
 .isOpen__menu {
-  display: block;
   left: 0;
 }
 .isOpen__scrim {
@@ -136,7 +135,7 @@ body[data-brand="ltd"] .l-grid-headlogo { height: 89px; }
 
   body[data-brand="lsc"] .headlogo--input__cart { margin: 1px 6px 0 0; }
   body[data-brand="ltd"] .headlogo--input__cart { margin: 0 6px 0 0; }
-  .drawerleft__menu {
+  .isOpen__menu {
     width: 70%;
   }
 }
@@ -147,7 +146,7 @@ body[data-brand="ltd"] .l-grid-headlogo { height: 89px; }
 
   body[data-brand="lsc"] .headlogo--input__cart { margin: 1px 1px 0 0; }
   body[data-brand="ltd"] .headlogo--input__cart { margin: 0 1px 0 0; }
-  .drawerleft__menu {
+  .isOpen__menu {
     width: 32%;
   }
 }
