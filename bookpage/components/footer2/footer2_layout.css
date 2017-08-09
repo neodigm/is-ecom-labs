@@ -1,0 +1,17 @@
+
+/*  CSS category Base     */ /*  reset margin padding ...  */
+.productcard, body, figure, picture, img, figcaption, section, ul, li, input {
+margin: 0;
+padding: 0;
+}
+/*  CSS category Layout   */ /*  border display height media width ...  */
+
+/*  CSS category Layout   */ /*  border display height media width ...  */
+@media only screen and (max-width: 47.9375em) {
+/* small */
+
+}
+@media only screen and (min-width:48em) and (max-width:61.1875em){
+/* medium */
+
+}
