@@ -68,6 +68,10 @@ font-weight: 700;
 line-height: 1em;
 margin: 4px;
 }
+.productcard .productcard__p--orig-price {
+font-size: 13px;
+font-weight: 600;
+}
 .productcard .productcard__h2 {
 display: block;
 font-family: sans-serif;

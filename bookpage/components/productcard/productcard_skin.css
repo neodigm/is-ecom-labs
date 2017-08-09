@@ -13,6 +13,9 @@ color: #fff;
 .productcard .productcard__p {
 color: #cc2d41;
 }
+.productcard .productcard__p--orig-price {
+color: #898989;
+}
 .productcard .productcard__h2 {
 color: #273546;
 }
