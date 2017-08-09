@@ -1,9 +1,9 @@
-console.log("component headlogo.js");
+console.log("component headtop.js");
 console.log("Vue Version " +Vue.version );
 Vue.config.devtools = true;
 
-var c_headlogo = new Vue({
-  el: "#js-headlogo",
+var c_headtop = new Vue({
+  el: "#js-headtop",
   data: {
     isOpen__menu: false,
     isOpen__scrim: false,
