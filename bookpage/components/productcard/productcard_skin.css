@@ -13,8 +13,12 @@ color: #fff;
 .productcard .productcard__p {
 color: #cc2d41;
 }
-.productcard .productcard__p--orig-price {
+.productcard .productcard__p--comp-price {
 color: #898989;
+}
+.productcard .productcard__p--old-price {
+color: #525a65;
+text-decoration: line-through;
 }
 .productcard .productcard__h2 {
 color: #273546;

@@ -1,4 +1,3 @@
-
 /*  CSS category Base     */ /*  reset margin padding ...  */
 .productcard, body, figure, picture, img, figcaption, section, ul, li, input {
 margin: 0;
@@ -63,14 +62,21 @@ top: 0; left: 0;
 }
 .productcard .productcard__p {
 font-family: sans-serif;
-font-size: 1.125em;
+font-size: 16px;
 font-weight: 700;
 line-height: 1em;
 margin: 4px;
 }
-.productcard .productcard__p--orig-price {
+.productcard .productcard__p--comp-price {
+display: block;
 font-size: 13px;
-font-weight: 600;
+font-weight: 500;
+line-height: 1.2;
+}
+.productcard .productcard__p--old-price {
+display: block;
+font-size: 12px;
+font-weight: 700;
 }
 .productcard .productcard__h2 {
 display: block;
