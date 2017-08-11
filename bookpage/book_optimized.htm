@@ -175,7 +175,7 @@ body[data-brand="ltd"] .l-grid-footer2 { background-color: #1f5f8b; }
 </script>
 
 </head>
-<body data-brand="ltd">
+<body data-brand="ltd" {{ isSignedIn = true }}>
 
 		<ltdc-headtop id="js-headtop" class="l-grid-headtop"><!--  Component Begin  -->
 			<nav class="headtop__hb">
@@ -191,7 +191,7 @@ body[data-brand="ltd"] .l-grid-footer2 { background-color: #1f5f8b; }
 			<nav class="headtop__link">
 	Hello,<br><a class="headtop--a" href="/my_account/index.jsp">Sign In</a>
 			</nav>
-			<nav class="headtop__link">
+			<nav class="headtop__link" :class="{ hidden: isSignedIn }">
 	New Customer?<br><a class="headtop--a" href="/my_account/index.jsp">Register</a>
 			</nav>
 			<nav class="headtop__link">

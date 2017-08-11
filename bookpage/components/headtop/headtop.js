@@ -7,6 +7,7 @@ var c_headtop = new Vue({
   data: {
     isOpen__menu: false,
     isOpen__scrim: false,
+    isSignedIn: false
   },
   methods: {
     toggle: function( e ){
