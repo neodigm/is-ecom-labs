@@ -24,6 +24,7 @@ body[data-brand="ltd"] .headtop__hb { padding: 1px 0 8px 8px; }
 .l-grid-headtop nav:nth-of-type(4) { width: 92px; }
 .l-grid-headtop nav:nth-of-type(5) { width: 83px; }
 .l-grid-headtop nav:nth-of-type(6) { width: 74px; }
+.is-signed-in .l-grid-headtop nav:nth-of-type(4) { width: 0; }
 .headtop__hb--a {
   display: block;
   height: 40px;
