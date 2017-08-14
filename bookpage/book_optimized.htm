@@ -89,7 +89,6 @@ body,figcaption,figure,img,input,li,picture,section,ul{margin:0;padding:0}.l-gri
 	-->
 	<style>
 	/*  Above the Fold begin    */
-border: 1px #e0dfdd solid;height: 276px;padding: 24px 0 0 0; margin: 0 auto 0 auto; width: inherit!important
 
 /*  CSS category Base     */ /*  reset margin padding ...  */
 .l-grid-footer2, body, figure, picture, img, figcaption, section, ul, li, input {
@@ -98,57 +97,102 @@ border: 1px #e0dfdd solid;height: 276px;padding: 24px 0 0 0; margin: 0 auto 0 au
 }
 /*  CSS category Layout   */ /*  border display height media width ...  */
 .l-footer2 {
-	display: block;
-	  height: 276px;
+font-family: sans-serif;
+display: block;
+padding-bottom: 18px;
 }
 .l-grid-footer2 {
   /* align-content: not used if only one row */
   align-items: flex-start;
-	color: #fff;
+color: #fff;
   display: flex;
   flex-flow: row nowrap; /* Shorthand for flex-direction and flex-wrap */
-
   justify-content: space-between;
   margin: 0 auto;
-  padding: 8px 0 2px;
+  padding: 24px 0 2px;
   width: 980px;
 }
-.footer2__need {
-	border: solid 1px #edba08;
-	padding: 2px 10px;
-	height: 100%;
-	width: 26%;
-
+.l-grid-footer2__shop {
+  /* align-content: not used if only one row */
+  align-items: flex-start;
+  display: flex;
+  flex-flow: row nowrap; /* Shorthand for flex-direction and flex-wrap */
+  justify-content: space-between;
 }
-.footer2__about {
-	border: solid 1px #edba08;
-	padding: 2px 10px;
-	height: 100%;
-	width: 26%;
-
+.l-grid-footer2__bottom {
+  /* align-content: not used if only one row */
+  align-items: flex-start;
+  display: flex;
+  flex-flow: row nowrap; /* Shorthand for flex-direction and flex-wrap */
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 964px;
+  border-top: 1px solid #fff;
 }
-.footer2__shop {
-	border: solid 1px #edba08;
-	padding: 2px 10px;
-	height: 100%;
-	width: 60%;
+.l-grid-footer2__bottom aside { padding-top: 10px; }
+.l-grid-footer2__bottom aside:nth-of-type(1) { text-align: left; }
+.l-grid-footer2__bottom aside:nth-of-type(2) { text-align: right; }
 
+.footer2__aside {
+	padding: 2px 6px;
 }
+.footer2__aside--need { width: 20%; }
+.footer2__aside--about { width: 20%; }
+.footer2__aside--shop { width: 60%; }
 
-.l-grid-headtop nav:nth-of-type(3) { width: 50px; }
-.l-grid-headtop nav:nth-of-type(4) { width: 92px; }
-.l-grid-headtop nav:nth-of-type(5) { width: 83px; }
-.l-grid-headtop nav:nth-of-type(6) { width: 74px; }
+.footer2__aside h5 {
+	color: #fff;
+	font-size: 16px;
+	font-weight: 600;
+	border-bottom: 1px solid #fff;
+	padding-bottom: 8px;
+	margin: 4px 0 8px 0;
+}
+.footer2__aside ul {
+	padding: 8px 0 0 0;
+}
+.footer2__aside--ul {
+	margin-bottom: 20px;
+	list-style: none;
+}
+.l-footer2 a {
+	font-size: 12px;
+}
+.l-grid-footer2 .footer2__aside--li a {
+	text-decoration: none;
+}
+.l-footer2 a:hover {
+color: #fff!important;
+}
+.footer2__copyr {
+	color: #fff;
+	font-family: sans-serif;
+	font-size: 12px;
+	line-height: 12px;
+}
+body[data-brand="lsc"] .l-footer2 a { color: #fcb9c7; }
+body[data-brand="ltd"] .l-footer2 a { color: #9de8ff; }
 
 body[data-brand="lsc"] .l-footer2 { background-color: #7e2d3e; }
 body[data-brand="ltd"] .l-footer2 { background-color: #1f5f8b; }
 @media only screen and (max-width: 47.9375em) {
 /* small */
+.l-grid-footer2 {
+	display: none;
+}
 }
 @media only screen and (min-width:48em) and (max-width:61.1875em){
 /* medium */
+}
 @media only screen and (max-width:61.1875em){
 /* small and medium */
+.l-grid-footer2 {
+  width: inherit;
+}
+.l-grid-footer2__bottom {
+padding: 0 8px;
+  width: inherit;
+}
 }
 	/*  Above the Fold end      */
 	</style>
@@ -2127,13 +2171,73 @@ body[data-brand="ltd"] .l-footer2 { background-color: #1f5f8b; }
 <!--  footer 1: c-footone  -->
 <aside class="c-Mockup" style="	border: 1px #e0dfdd solid;height: 226px;padding: 0; margin: 24px auto 0 auto;">footer one</aside>
 
-<ltdc-footer2 class="l-footer2" role="grid"><!--  Component Begin  -->
+<ltdc-footer2 class="l-footer2"><!--  Component Begin  -->
 	<section class="l-grid-footer2">
-		<aside class="footer2__need">QQQQ
+		<aside class="footer2__aside footer2__aside--need">
+			<h5>Need Assistance</h5>
+			<ul class="footer2__aside--ul">
+				<li class="footer2__aside--li">
+					<a href="">Customer Service</a></li>
+				<li class="footer2__aside--li">
+					<a href="">Our Guarantee</a></li>
+				<li class="footer2__aside--li">
+					<a href="">115% Lowest Price Guarantee</a></li>
+				<li class="footer2__aside--li">
+					<a href="">Shipping</a></li>
+				<li class="footer2__aside--li">
+					<a href="">Returns</a></li>
+				<li class="footer2__aside--li">
+					<a href="">FAQs</a></li>
+			</ul>
 		</aside>
-		<aside class="footer2__about">QQQQ
+		<aside class="footer2__aside footer2__aside--about">
+			<h5>About Us</h5>
+			<ul class="footer2__aside--ul">
+				<li class="footer2__aside--li">
+					<a href="">About LTD</a></li>
+			</ul>
 		</aside>
-		<aside class="footer2__shop">QQQQ
+		<aside class="footer2__aside footer2__aside--shop">
+			<h5>Shop and More</h5>
+			<section class="l-grid-footer2__shop">
+				<aside>
+					<ul class="footer2__aside--ul">
+						<li class="footer2__aside--li">
+							<a href="">Home Decor</a></li>
+						<li class="footer2__aside--li">
+							<a href="">Gift Ideas + Personalized</a></li>
+					</ul>
+				</aside>
+				<aside>
+					<ul class="footer2__aside--ul">
+						<li class="footer2__aside--li">
+							<a href="">Kitchen + Dining</a></li>
+					</ul>
+				</aside>
+				<aside>
+					<ul class="footer2__aside--ul">
+						<li class="footer2__aside--li">
+							<a href="">Holiday</a></li>
+					</ul>
+				</aside>
+				<aside>
+					<ul class="footer2__aside--ul">
+						<li class="footer2__aside--li">
+							<a href="">Quick Order Form</a></li>
+					</ul>
+				</aside>
+			</section>
+		</aside>
+	</section>
+	<section class="l-grid-footer2__bottom">
+		<aside>
+			<p class="brand--lsc__show footer2__copyr">&copy; 1998 - 2017. The Lakeside Collection. All Rights Reserved.</p>
+			<p class="brand--ltd__show footer2__copyr">&copy; 1998 - 2017. LTD Commodities. All Rights Reserved.</p>
+		</aside>
+		<aside>
+			<a href="#modalTermsConditions">Terms &amp; Conditions</a>
+			<span class="footer2__copyr"> | </span>
+			<a href="#modalTermsConditions">Privacy</a>
 		</aside>
 	</section>
 </ltdc-footer2><!--  Component End  -->
@@ -2141,7 +2245,7 @@ body[data-brand="ltd"] .l-footer2 { background-color: #1f5f8b; }
 
 <script src="components/vue.runtime.min.js"></script>
 <script src="components/headtop/headtop.js" async></script>
-<script src="components/headnav/headnav.js" async></script>
+<script src="components/head1/headnav.js" async></script>
 <script src="components/productcard/productcard.js" async></script>
 
 </body>

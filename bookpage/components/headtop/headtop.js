@@ -12,8 +12,6 @@ var c_headtop = new Vue({
     toggle: function( e ){
       this.isOpen__menu = !this.isOpen__menu;
       this.isOpen__scrim = !this.isOpen__scrim;
-      console.log("hb menu click");
-      //document.getElementsByTagName("body")[0].setAttribute("data-brand", "lsc");
   }
   }
 });
