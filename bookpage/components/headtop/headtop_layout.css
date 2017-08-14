@@ -24,7 +24,8 @@ body[data-brand="ltd"] .headtop__hb { padding: 1px 0 8px 8px; }
 .l-grid-headtop nav:nth-of-type(4) { width: 92px; }
 .l-grid-headtop nav:nth-of-type(5) { width: 83px; }
 .l-grid-headtop nav:nth-of-type(6) { width: 74px; }
-.is-signed-in .l-grid-headtop nav:nth-of-type(4) { width: 0; }
+.is-signed-in nav:nth-of-type(3) { width: 11% !important; }
+.is-signed-in nav:nth-of-type(4) { display: none; }
 .headtop__hb--a {
   display: block;
   height: 40px;
@@ -92,8 +93,8 @@ body[data-brand="ltd"] .headtop--input__cart { margin: 22px 1px 0 0; }
   padding: 2px 8px 2px 8px;
 }
 .headtop--input__carttxt { margin-top: 5px; }
-body[data-brand="lsc"] .headtop__img { background-image: url("images/lsc-logo-lg.jpg"); background-size: 380px 112px; }
-body[data-brand="ltd"] .headtop__img { background-image: url("images/ltd-logo-lg.jpg"); background-size: auto 87px; }
+body[data-brand="lsc"] .headtop__img { background-image: url("media/global/images/foundation/img/fpo/lsc-logo-lg.jpg"); background-size: 380px 112px; }
+body[data-brand="ltd"] .headtop__img { background-image: url("media/global/images/foundation/img/fpo/ltd-logo-lg.jpg"); background-size: auto 87px; }
 body[data-brand="lsc"] .l-grid-headtop { height: 114px; }
 body[data-brand="ltd"] .l-grid-headtop { height: 89px; }
 .drawerleft__menu {
@@ -162,8 +163,9 @@ body[data-brand="ltd"] .l-grid-headtop { height: 89px; }
   .headtop__img {
     width: 352px;
   }
-  body[data-brand="lsc"] .headtop__img { background-image: url("images/lsc-logo-md-sm.jpg"); background-size: auto;}
-  body[data-brand="ltd"] .headtop__img { background-image: url("images/ltd-logo-md.jpg"); background-size: auto auto; }
+  body[data-brand="lsc"] .headtop__img { background-image: url("media/global/images/foundation/img/fpo/lsc-logo-md-sm.jpg"); background-size: auto;}
+  body[data-brand="ltd"] .headtop__img { background-image: url("media/global/images/foundation/img/fpo/ltd-logo-md.jpg"); background-size: auto auto; }
   body[data-brand="lsc"] .headtop__link { margin: 7px 1px 1px 1px; }
   body[data-brand="ltd"] .headtop__link { margin: 5px 1px 1px 1px; }
+  .is-signed-in nav:nth-of-type(3) { width: 15% !important; }
 }

@@ -7,7 +7,6 @@ var c_headtop = new Vue({
   data: {
     isOpen__menu: false,
     isOpen__scrim: false,
-    isSignedIn: false
   },
   methods: {
     toggle: function( e ){
@@ -15,6 +14,6 @@ var c_headtop = new Vue({
       this.isOpen__scrim = !this.isOpen__scrim;
       console.log("hb menu click");
       //document.getElementsByTagName("body")[0].setAttribute("data-brand", "lsc");
-    }
+  }
   }
 });
