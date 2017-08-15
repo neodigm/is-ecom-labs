@@ -136,6 +136,7 @@ color: #fff;
 .footer2__aside {
 	padding: 2px 6px;
 }
+.footer2__top--small {text-align: center; padding: 8px;}
 .footer2__aside--need { width: 20%; }
 .footer2__aside--about { width: 20%; }
 .footer2__aside--shop { width: 60%; }
@@ -170,6 +171,9 @@ color: #fff!important;
 	font-size: 12px;
 	line-height: 12px;
 }
+.footer2__top--small {
+	display: none;
+}
 body[data-brand="lsc"] .l-footer2 a { color: #fcb9c7; }
 body[data-brand="ltd"] .l-footer2 a { color: #9de8ff; }
 
@@ -177,8 +181,18 @@ body[data-brand="lsc"] .l-footer2 { background-color: #7e2d3e; }
 body[data-brand="ltd"] .l-footer2 { background-color: #1f5f8b; }
 @media only screen and (max-width: 47.9375em) {
 /* small */
+.l-grid-footer2__bottom aside {
+    text-align: center!important;
+}
+
+.l-grid-footer2__bottom {
+	display: block;
+}
 .l-grid-footer2 {
 	display: none;
+}
+.footer2__top--small {
+	display: block;
 }
 }
 @media only screen and (min-width:48em) and (max-width:61.1875em){
@@ -2188,6 +2202,8 @@ padding: 0 8px;
 					<a href="">Returns</a></li>
 				<li class="footer2__aside--li">
 					<a href="">FAQs</a></li>
+				<li class="footer2__aside--li">
+					<a href="">Home</a></li>
 			</ul>
 		</aside>
 		<aside class="footer2__aside footer2__aside--about">
@@ -2228,6 +2244,12 @@ padding: 0 8px;
 				</aside>
 			</section>
 		</aside>
+	</section>
+	<section class="footer2__top--small">
+		<a href="">Need Assistance</a>&nbsp;
+		<a href="">About Us</a>&nbsp;
+		<a href="">Shop and More</a>&nbsp;
+		<a href="">Blog</a>
 	</section>
 	<section class="l-grid-footer2__bottom">
 		<aside>
