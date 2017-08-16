@@ -2160,50 +2160,47 @@ body,figcaption,figure,img,input,li,picture,section,ul{margin:0;padding:0}.l-foo
 <script src="components/headnav/headnav.js" async></script>
 <script src="components/productcard/productcard.js" async></script>
 <script src="components/reveal/reveal.js" async></script>
-<!--
+
 <a href="#" data-reveal-id="mod1">Click Here 1</a> 
 <a href="#" data-reveal-id="mod2">Click Here 2</a> 
 <a href="#" data-reveal-id="mod3">Click Here 3</a> 
 
 <div id="reveal_templates">
-	<section id="mod1" class="reveal-modal small" data-reveal>
-		<a class="close-reveal-modal">&#215;</a>
+	<section id="mod1" class="reveal-modal small" data-reveal aria-hidden="true">
+		<a class="close-reveal-modal resp_x">&#215;</a>
 	Content 1
 	</section>
-	<section id="mod2" class="reveal-modal medium" data-reveal>
-		<a class="close-reveal-modal">&#215;</a>
+	<section id="mod2" class="reveal-modal medium" data-reveal aria-hidden="true">
+		<a class="close-reveal-modal resp_x">&#215;</a>
 	Content 2
 	</section>
-	<section id="mod3" class="reveal-modal large" data-reveal>
-		<a class="close-reveal-modal">&#215;</a>
+	<section id="mod3" class="reveal-modal large"  data-reveal aria-hidden="true">
+		<a class="close-reveal-modal resp_x">&#215;</a>
 	Content 3
 	</section>
 </div>
--->
+
 <script>
 var ltdc_reveal = {
 	aRevAct: 0,
 	"init" : function() {
 		aRevAct = document.querySelectorAll("[data-reveal-id]");
-		for (var i = 0, len = aRevAct.length; i < len; i++) {
+		for (var i = 0, ln = aRevAct.length; i < ln; i++) {
 		    aRevAct[i].addEventListener("click", ltdc_reveal.open, false);
 		}
-
-//aRevAct = Array.prototype.slice.call(aRevAct);
-//alert(aRevAct.length);
-//aRevAct.forEach(ShowResults);
-
-		console.log( aRevAct );
 	},
-	"open" : function(){
-		alert("ducks");
+	"open" : function( e ){
+		var sRevId = e.target.getAttribute("data-reveal-id");
+		if( sRevId ){
+			document.getElementById( sRevId ).classList.add("hidden");
+			//aria-hidden=false
+		}
 	}
-
 };
 ltdc_reveal.init();
-
-
 </script>
+<style>
 
+</style>
 </body>
 </html>
