@@ -1,3 +1,4 @@
+
 /*  CSS category State    */ /*  color display font visibility ...  */
 .l-reveal .reveal__box {
 display: block !important;
@@ -36,13 +37,16 @@ width: 60%;
 .l-reveal .large {
 width: 70%;
 }
-.l-reveal .resp_x {
+.l-reveal .resp_x, .resp_x:hover {
 position: absolute;
 right: 10px;
 font-family: monospace;
 font-size: 28px;
 font-weight: 800;
-color: #444;
+color: #444!important;
 top: 2px;
 cursor: pointer;
+}
+.l-reveal  .resp_x:hover {
+color: #444!important;
 }
