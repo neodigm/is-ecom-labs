@@ -99,6 +99,21 @@ body,figcaption,figure,img,input,li,picture,section,ul{margin:0;padding:0}.l-foo
 	/*================================ end ===*/
 	-->
 
+
+	<!--
+	/*========================================*/
+	/*  Component: reveal                     */
+	/*================================ begin =*/
+	-->
+	<link rel="preload" href="components/reveal/reveal_skin.min.css" as="style" onload="this.rel='stylesheet'">
+	<!--
+	/*========================================*/
+	/*  Component: reveal                     */
+	/*================================ end ===*/
+	-->
+
+
+
 	<!--
 	/*========================================*/
 	/*  Component: Mockup (delete me)         */
@@ -157,14 +172,14 @@ body,figcaption,figure,img,input,li,picture,section,ul{margin:0;padding:0}.l-foo
 	Sign Up For<br><a data-reveal-id="id-email-sign-up-dialog" href="#">Email Offers</a>
 			</nav>
 			<nav class="headtop__cart">
-				<button class="headtop--input__cart">
+				<a class="headtop--input__cart">
 					<svg class="" fill="#FFFFFF" height="26" width="26" viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg"
 					alt="Cart">
 					    <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/>
 					    <path d="M0 0h24v24H0z" fill="none"/>
 					</svg>
 				<span class="headtop--input__carttxt">Cart</span><span class="headtop--input__cartqty">0</span>
-				</button>
+				</a>
 			</nav>
 			<section class="drawerleft__menu" :class="{ isOpen__menu: isOpen__menu }"></section>
 			<nav class="drawerleft__scrim" :class="{ isOpen__scrim: isOpen__scrim }" @click="toggle"></nav>
@@ -2150,7 +2165,7 @@ body,figcaption,figure,img,input,li,picture,section,ul{margin:0;padding:0}.l-foo
 		<aside>
 			<a href="#modalTermsConditions">Terms &amp; Conditions</a>
 			<span class="footer2__copyr"> | </span>
-			<a href="#modalTermsConditions">Privacy</a>
+			<a data-reveal-id="modalTermsConditions">Privacy</a> 
 		</aside>
 	</section>
 </ltdc-footer2><!--  Component End  -->
@@ -2161,46 +2176,90 @@ body,figcaption,figure,img,input,li,picture,section,ul{margin:0;padding:0}.l-foo
 <script src="components/productcard/productcard.js" async></script>
 <script src="components/reveal/reveal.js" async></script>
 
-<a href="#" data-reveal-id="mod1">Click Here 1</a> 
-<a href="#" data-reveal-id="mod2">Click Here 2</a> 
-<a href="#" data-reveal-id="mod3">Click Here 3</a> 
+<ltdc-reveal class="l-reveal"><!--  Component Begin  -->
+	<aside id="id-reveal__scrim" class="close-reveal-modal"></aside>
 
-<div id="reveal_templates">
-	<section id="mod1" class="reveal-modal small" data-reveal aria-hidden="true">
+	<section id="modalTermsConditions" class="reveal-modal large" data-reveal aria-hidden="true">
 		<a class="close-reveal-modal resp_x">&#215;</a>
-	Content 1
-	</section>
-	<section id="mod2" class="reveal-modal medium" data-reveal aria-hidden="true">
-		<a class="close-reveal-modal resp_x">&#215;</a>
-	Content 2
-	</section>
-	<section id="mod3" class="reveal-modal large"  data-reveal aria-hidden="true">
-		<a class="close-reveal-modal resp_x">&#215;</a>
-	Content 3
-	</section>
-</div>
 
-<script>
-var ltdc_reveal = {
-	aRevAct: 0,
-	"init" : function() {
-		aRevAct = document.querySelectorAll("[data-reveal-id]");
-		for (var i = 0, ln = aRevAct.length; i < ln; i++) {
-		    aRevAct[i].addEventListener("click", ltdc_reveal.open, false);
-		}
-	},
-	"open" : function( e ){
-		var sRevId = e.target.getAttribute("data-reveal-id");
-		if( sRevId ){
-			document.getElementById( sRevId ).classList.add("hidden");
-			//aria-hidden=false
-		}
-	}
-};
-ltdc_reveal.init();
-</script>
-<style>
 
-</style>
+<div class="shipping">
+            Privacy
+                    <div class="hr"><hr></div>
+                
+ <!-- Start of Content Block with name: ltd_privacy_modal --> <p><span style=" font-size: small;">LTD Commodities LLC holds the privacy and security of our customers in the highest regard. The following data explains what kind of information is gathered on the LTD Commodities website and how the information is used.</span></p>
+<p><span style=" font-size: small;">LTD Commodities LLC will treat your email address as confidential information; we will not rent, sell or trade the contents of our email list to any outside parties.</span></p>
+<p><span style=" font-size: small;"><b>Does LTD Commodities offer secure online ordering?</b></span></p>
+<p><span style=" font-size: small;">Yes, we do. All customer and order information is securely stored behind a firewall and protected from unauthorized access. Your online session is encrypted using SSL with a certificate provided by Verisign. Therefore, none of your personal information, including credit card number, name and address, can be read as the information travels over the internet. Your credit card number is protected by our encryption methods as soon as we capture it and before it is stored in our database to protect it from potential theft. LTD Commodities does not store your CVV2 credit card security code anywhere on its system.</span></p>
+<p><span style=" font-size: small;"><b>What do you do with my email address?</b></span></p>
+<p><span style=" font-size: small;">LTD Commodities LLC collects your email address as part of your registration with us. We use this address to communicate with you about your account. We do not sell your email address to others.</span></p>
+<p><span style=" font-size: small;"><b>What kind of information do you collect from me when I visit your web site?</b></span></p>
+<p><span style=" font-size: small;">We do not collect any personally identifiable information from those merely visiting our site. We do ask for additional information if you would like to place an order, request an order status or a free catalog, or if you need to communicate with us regarding an account issue.</span></p>
+<p><span style=" font-size: small;"><b>What are 'cookies' and how do you use them?</b></span></p>
+<p><span style=" font-size: small;">"Cookies" are files that are stored on your device's hard drive by your web browser and are used to improve your online experience. Cookies help us identify account holders and optimize their shopping experience by allowing functions such as online shopping carts.  Accepting cookies through your web browser is your personal choice. You can set your browser to disable cookies. <br>
+<br>
+However, if you choose not to accept cookies, we may not be able to provide you with as good of an experience as one that is specifically tailored to your needs by utilizing the cookie. <br>
+<br>
+We may also use technologies, such as our own cookies, to provide you with personalized online display advertising tailored to your interests.  To opt out of our cookies used for this online advertising, <a href="http://dtmc.ltdcommodities.com/adinfo/choice/prod/?type=fpc&amp;cid=2846&amp;cname=LTD%20Commodities&amp;cmagic=eb9fc3&amp;clogo=LTD_logo.png&amp;loc=us&amp;lang=en-us" target="_blank">click here</a>.  We may use the services of third parties to collect and use anonymous information about your visits to and interactions with our website through the use of technologies such as cookies to personalize advertisements for goods and services. To learn more, or to opt-out of receiving advertisements tailored to your interests by our third party partners, visit the Network Advertising Initiative at <a href="https://networkadvertising.org/choices" target="_blank">www.networkadvertising.org/choices</a>. </span></p>
+<p><span style=" font-size: small;"><b>Does LTD share information it collects from me with outside parties?</b></span></p>
+<p><span style=" font-size: small;">The information you provided on the website is used to fulfill a product order, a catalog request or research a customer inquiry. The information that you provide is stored in-house separate from the Internet.</span></p>
+<p><span style=" font-size: small;">We do occasionally share name and address information with other catalog companies that offer similar products. We will not share any personal financial information. If you are on our catalog mailing list, or order from one of our catalogs, and would prefer not to have your name shared with other catalog companies, please email at <b>MarketingDepartment@ltdcommodities.com</b> and ask that your name not be shared.</span></p>
+<p><span style=" font-size: small;">From time to time, we may modify or amend this privacy and security policy in order to comply with new laws or regulations or to reflect future changes in our business practices. All such modifications and amendments to the privacy and security policy shall be posted here in the Customer Service section of www.ltdcommodities.com. The current policy has been in effect since April 2015.</span></p>
+<p><span style=" font-size: small;"><b>How else do you use information about my company?</b></span></p>
+<p><span style=" font-size: small;">Once you make a purchase from us, your company becomes a part of our customer file. As a valued LTD Commodities customer, we will add you to our mailing list to receive future catalogs and offers.</span></p>
+<p><span style=" font-size: small;"><b>How do I remove my company name from LTD's mailing lists?</b></span></p>
+<p><span style=" font-size: small;">&nbsp;Contact us by email, mail or fax and we will remove you from our mailing list. Please include the company account number, company name and address, and your name and title.</span></p>
+<p><span style=" font-size: small;"><b>How can I contact LTD?</b></span></p>
+<table cellpadding="0">
+    <tbody>
+        <tr>
+            <td width="54">&nbsp;</td>
+            <td width="85" valign="top"><span style=" font-size: small;"><b>Email:</b></span></td>
+            <td width="283"><a href="/common/FAQ-Clicked-On-Contact-Us-Open.jsp"><span style=" font-size: small;">Click Here</span></a><span style=" font-size: small;"> to contact us via email.<br>
+            <br>
+            </span></td>
+        </tr>
+        <tr>
+            <td width="54" height="95">&nbsp;</td>
+            <td width="85" valign="top"><span style=" font-size: small;"><b>Telephone:</b></span></td>
+            <td width="283"><span style=" font-size: small;">Order Department (847) 295-5532<br>
+            Customer Service (847) 295-6058<br>
+            <br>
+            Our office hours are:<br>
+            Monday - Friday<br>
+            7:00am - 8:00pm<br>
+            Central Time<br>
+            <br>
+            </span></td>
+        </tr>
+        <tr>
+            <td width="54">&nbsp;</td>
+            <td width="85" valign="top"><span style=" font-size: small;"><b>Fax:</b></span></td>
+            <td width="283"><span style=" font-size: small;">(847) 604-7600<br>
+            <br>
+            </span></td>
+        </tr>
+        <tr>
+            <td width="54">&nbsp;</td>
+            <td width="85" valign="top"><span style=" font-size: small;"><b>Address:</b></span></td>
+            <td width="283"><span style=" font-size: small;">LTD Commodities LLC, 2800 Lakeside Drive, Bannockburn, IL 60015<br>
+            <br>
+            </span></td>
+        </tr>
+    </tbody>
+</table>
+<p><span style=" font-size: small;"><b>Amendments to our Privacy Policy</b></span></p>
+<p><span style=" font-size: small;">If we amend our Privacy Policy, we will post the changes on our website for your review.</span></p>
+            <div class="clear">&nbsp;</div>
+        </div>
+
+
+
+
+
+
+	</section>
+</ltdc-reveal><!--  Component End  -->
+
 </body>
 </html>
