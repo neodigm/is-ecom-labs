@@ -1,0 +1,1 @@
+console.log("component footer1.js");

@@ -1,0 +1,54 @@
+
+/*  CSS category Base     */ /*  reset margin padding ...  */
+
+/*  CSS category Layout   */ /*  border display height media width ...  */
+.l-grid-footer1 {
+align-items: center;
+border-top: 1px solid #ccc;
+display: flex;
+flex-flow: row nowrap; /* Shorthand for flex-direction and flex-wrap */
+justify-content: space-between;
+margin: 0 auto;
+padding-top: 26px;
+padding: 24px 0 2px;
+text-align: center;
+width: 980px;
+}
+.l-grid-footer1 nav {
+margin-bottom: 42px;
+}
+.l-grid-footer1 .footer1__sig {
+font-family: sans-serif;
+font-size: 13px;
+line-height: 20px;
+margin: 0 0 8px 0;
+}
+.l-grid-footer1 .footer1__a {}
+.l-grid-footer1 .footer1__img {}
+@media only screen and (max-width: 47.9375em) {
+/* small */
+.l-grid-footer1 {
+padding: 26px 6px 0 6px !important;
+}
+.l-grid-footer1 img {
+width: 18vw;
+}
+}
+@media only screen and (min-width:48em) and (max-width:61.1875em){
+/* medium */
+.l-grid-footer1 {
+padding: 26px 26px 0 26px;
+}
+}
+@media only screen and (max-width:61.1875em){
+/* small and medium */
+.l-grid-footer1 {
+width: inherit;
+padding: 26px 26px 0 26px;
+}
+.l-grid-footer1 .footer1__sig {
+display: none;
+}
+}
+body[data-brand="lsc"] .l-grid-footer1 .footer1__sig { max-width: 400px; }
+body[data-brand="ltd"] .l-grid-footer1 .footer1__sig { max-width: 216px; }
