@@ -1,0 +1,33 @@
+	/*  CSS category State    */ /*  color display font visibility ...  */
+	.l-grid-headnav {
+		background-color: #eee;
+	}
+	.headnav__link:hover, .headnav__link:focus {
+		background-color: #ddd;
+		cursor: pointer;
+	}
+	.headnav__link--a {
+		text-decoration: none;
+	}
+	.headnav__link--span {
+		color: #666;
+	}
+	.headnav__search--go {
+		cursor: pointer;
+		transition: background-color 300ms ease-out;
+	 }
+	 .headnav__search--gotxt {
+ 		color: #fff;
+ 	 }
+	 .faq-circle {
+	 	background: #bfc2c7;
+	 	color: #fff;
+	 }
+
+	/*  CSS category Theme    */ /*  color background hover ...  */
+	body[data-brand="lsc"] .headnav__search--go { background-color: #672634; }
+	body[data-brand="ltd"] .headnav__search--go { background-color: #007095; }
+	body[data-brand="lsc"] .headnav__link--a { color: #7e2d3e; }
+	body[data-brand="ltd"] .headnav__link--a { color: #2ba6cb; }
+	body[data-brand="lsc"] .headnav__search--go:hover, .headnav__search--go:focus { background-color: #470614; }
+	body[data-brand="ltd"] .headnav__search--go:hover, .headnav__search--go:focus { background-color: #285370; }

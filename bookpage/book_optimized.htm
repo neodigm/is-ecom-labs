@@ -67,6 +67,47 @@ body,figcaption,figure,img,input,li,picture,section,ul{margin:0;padding:0}.l-gri
 
 	<!--
 	/*========================================*/
+	/*  Component: breadpage                  */
+	/*================================ begin =*/
+	-->
+	<style>
+	/*  Above the Fold begin    */
+.l-grid-breadpage {
+align-items: center;
+border-top: 1px solid #ccc;
+display: flex;
+flex-flow: row nowrap; /* Shorthand for flex-direction and flex-wrap */
+justify-content: space-between;
+margin: 0 auto;
+padding-top: 26px;
+padding: 24px 0 2px;
+text-align: center;
+width: 980px;
+}
+.l-bread {
+
+}
+.l-bread-a {
+
+}
+.l-grid-page {
+
+}
+body[data-brand="lsc"] .QQQQ a { color: #7e2d3e; }
+body[data-brand="ltd"] .QQQQ a { color: #2ba6cb; }
+		</section>
+	</section>
+	/*  Above the Fold end      */
+	</style>
+	<link rel="preload" href="components/breadpage/breadpage_skin.min.css" as="style" onload="this.rel='stylesheet'">
+	<!--
+	/*========================================*/
+	/*  Component: breadpage                  */
+	/*================================ end ===*/
+	-->
+
+	<!--
+	/*========================================*/
 	/*  Component: ProductCard                */
 	/*================================ begin =*/
 	-->
@@ -115,7 +156,6 @@ body,figcaption,figure,img,input,li,picture,section,ul{margin:0;padding:0}.l-foo
 	/*================================ end ===*/
 	-->
 
-
 	<!--
 	/*========================================*/
 	/*  Component: reveal                     */
@@ -127,8 +167,6 @@ body,figcaption,figure,img,input,li,picture,section,ul{margin:0;padding:0}.l-foo
 	/*  Component: reveal                     */
 	/*================================ end ===*/
 	-->
-
-
 
 	<!--
 	/*========================================*/
@@ -240,6 +278,19 @@ body,figcaption,figure,img,input,li,picture,section,ul{margin:0;padding:0}.l-foo
 
 <!--  bread page: c-breadpage  -->
 <aside class="c-Mockup" style="	border: 1px #e0dfdd solid;height: 48px;padding: 0; margin: 0 auto 8px  auto;"> Bread crumbs - pages</aside>
+
+<ltdc-breadpage>
+	<section class="l-grid-breadpage">
+		<aside class="l-bread">
+			<a class="l-bread-a">QQQ</a>&nbsp;/&nbsp;
+			<a class="l-bread-a">QQQ</a>&nbsp;/&nbsp;
+			<a class="l-bread-a">QQQ</a>
+		</aside>
+		<section class="l-grid-page">
+QQQQ
+		</section>
+	</section>
+</ltdc-breadpage>
 
 <!--  refinements: c-refine -->
 <aside class="c-Mockup" style="	border: 1px #e0dfdd solid;height: 32px;padding: 0; margin: 0 auto 16px auto;"> Refine</aside>

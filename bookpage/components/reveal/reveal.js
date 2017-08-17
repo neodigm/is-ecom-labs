@@ -13,7 +13,8 @@ var ltdc_reveal = {
     eRevScrim = document.getElementById( "id-reveal__scrim" );
   },
   "open" : function( e ){
-    sRevId = e.target.getAttribute( "data-reveal-id" );
+    //sRevId = e.target.getAttribute( "data-reveal-id" );
+    sRevId = e.srcElement.getAttribute( "data-reveal-id" );
     if( sRevId ){
       eRevScrim.classList.add( "reveal__scrim" );
       eRev = document.getElementById( sRevId );
