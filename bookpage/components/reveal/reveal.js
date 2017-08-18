@@ -8,13 +8,13 @@ var ltdc_reveal = {
     }
     aRevAct = document.querySelectorAll( "[data-reveal-id]" );
     for (var i = 0, ln = aRevAct.length; i < ln; i++) {
+console.log( aRevAct[i] );
         aRevAct[i].addEventListener("click", ltdc_reveal.open, false);
     }
     eRevScrim = document.getElementById( "id-reveal__scrim" );
   },
   "open" : function( e ){
-    //sRevId = e.target.getAttribute( "data-reveal-id" );
-    sRevId = e.srcElement.getAttribute( "data-reveal-id" );
+    sRevId = this.getAttribute( "data-reveal-id" );
     if( sRevId ){
       eRevScrim.classList.add( "reveal__scrim" );
       eRev = document.getElementById( sRevId );
