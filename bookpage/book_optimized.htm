@@ -74,27 +74,56 @@ body,figcaption,figure,img,input,li,picture,section,ul{margin:0;padding:0}.l-gri
 	/*  Above the Fold begin    */
 .l-grid-breadpage {
 align-items: center;
+border-bottom: 1px solid #ccc;
 border-top: 1px solid #ccc;
 display: flex;
 flex-flow: row nowrap; /* Shorthand for flex-direction and flex-wrap */
 justify-content: space-between;
-margin: 0 auto;
-padding-top: 26px;
-padding: 24px 0 2px;
+margin: 4px auto;
+width: 976px;
+}
+.bread {
+margin: 14px 0 18px 16px;
+}
+.bread-a {
+font-family: sans-serif;
+font-size: 13px;
+line-height: 18px;
+cursor: pointer;
+text-transform: none;
+text-decoration: underline;
+}
+.bread span {
+color: #aaa;
+cursor: default;
+margin: 0 8px;
+}
+@media only screen and (max-width: 47.9375em) {
+/* small */
+.l-grid-breadpage {
+justify-content: center;
+}
+.breadpage__top .l-grid-page {
+display: none;
+}
+.breadpage__bottom .l-grid-breadpage {
+display: block;
 text-align: center;
-width: 980px;
 }
-.l-bread {
 
 }
-.l-bread-a {
-
+@media only screen and (min-width:48em) and (max-width:61.1875em){
+/* medium */
 }
-.l-grid-page {
-
+@media only screen and (max-width:61.1875em){
+/* small and medium */
+.l-grid-breadpage {
+width: inherit;
+margin: 4px 6px;
 }
-body[data-brand="lsc"] .QQQQ a { color: #7e2d3e; }
-body[data-brand="ltd"] .QQQQ a { color: #2ba6cb; }
+}
+body[data-brand="lsc"] .bread-a { color: #7e2d3e; }
+body[data-brand="ltd"] .bread-a { color: #2ba6cb; }
 		</section>
 	</section>
 	/*  Above the Fold end      */
@@ -276,21 +305,18 @@ body,figcaption,figure,img,input,li,picture,section,ul{margin:0;padding:0}.l-foo
 		</ltdc-primebanr><!--  Component End  -->
 
 
-<!--  bread page: c-breadpage  -->
-<aside class="c-Mockup" style="	border: 1px #e0dfdd solid;height: 48px;padding: 0; margin: 0 auto 8px  auto;"> Bread crumbs - pages</aside>
-
-<ltdc-breadpage>
+<ltdc-breadpage class="breadpage__top"><!--  Component Begin  -->
 	<section class="l-grid-breadpage">
-		<aside class="l-bread">
-			<a class="l-bread-a">QQQ</a>&nbsp;/&nbsp;
-			<a class="l-bread-a">QQQ</a>&nbsp;/&nbsp;
-			<a class="l-bread-a">QQQ</a>
+		<aside class="bread">
+			<a class="bread-a">Home</a><span>/</span>
+			<a class="bread-a">Catalogs</a><span>/</span>
+			<a class="bread-a">Book</a>
 		</aside>
 		<section class="l-grid-page">
-QQQQ
+Page
 		</section>
 	</section>
-</ltdc-breadpage>
+</ltdc-breadpage><!--  Component End  -->
 
 <!--  refinements: c-refine -->
 <aside class="c-Mockup" style="	border: 1px #e0dfdd solid;height: 32px;padding: 0; margin: 0 auto 16px auto;"> Refine</aside>
@@ -2143,8 +2169,18 @@ QQQQ
 <nav class="drawerright__scrim" :class="{ isOpenR__scrim: isOpenR__scrim }" @click="toggle"></nav>
 </ltdc-productcard><!--  Component End  -->
 
-<!--  bread page: c-breadpage  -->
-<aside class="c-Mockup" style="	border: 1px #e0dfdd solid;height: 48px;padding: 0; margin: 0 auto 8px  auto;">Pages</aside>
+<ltdc-breadpage class="breadpage__bottom"><!--  Component Begin  -->
+	<section class="l-grid-breadpage">
+		<aside class="bread">
+			<a class="bread-a">Home</a><span>/</span>
+			<a class="bread-a">Catalogs</a><span>/</span>
+			<a class="bread-a">Book</a>
+		</aside>
+		<section class="l-grid-page">
+Page
+		</section>
+	</section>
+</ltdc-breadpage><!--  Component End  -->
 
 <!--  footer 1: c-footone 
 <aside class="c-Mockup" style="	border: 1px #e0dfdd solid;height: 226px;padding: 0; margin: 24px auto 0 auto;">footer one</aside> -->
