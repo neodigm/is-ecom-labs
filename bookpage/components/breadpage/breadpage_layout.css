@@ -1,91 +1,102 @@
-/*  CSS category Base     */ /*  reset margin padding ...  */
-.l-grid-headnav, body, figure, picture, img, figcaption, section, ul, li, input {
-	margin: 0;
-	padding: 0;
+.l-grid-breadpage {
+align-items: center;
+border-bottom: 1px solid #ccc;
+border-top: 1px solid #ccc;
+display: flex;
+flex-flow: row nowrap; /* Shorthand for flex-direction and flex-wrap */
+justify-content: space-between;
+margin: 4px auto;
+width: 976px;
 }
-/*  CSS category Layout   */ /*  border display height media width ...  */
-.l-grid-headnav {
-	align-items: flex-start;
-	border: 1px #ccc solid;
-	display: flex;
-	flex-flow: row nowrap; /* Shorthand for flex-direction and flex-wrap */
-	height: 42px;
-	justify-content: space-between;
-	margin: 0 auto;
-	width: 980px;
+.l-grid-breadpage .l-grid-page {
+align-items: center;
+display: flex;
+flex-flow: row nowrap; /* Shorthand for flex-direction and flex-wrap */
+justify-content: space-between;
 }
-.l-grid-headnav nav {
-	border-right: solid 1px #ccc;
-	height: 98%;
-	padding-top: 2px;
+.l-grid-breadpage .l-grid-page__nav {
+align-items: center;
+display: flex;
+flex-flow: row nowrap; /* Shorthand for flex-direction and flex-wrap */
+justify-content: space-between;
 }
-.headnav__link {
-	text-align: center;
+.l-grid-breadpage .bread {
+margin: 14px 0 18px 16px;
 }
-.headnav__link--a {
-	font-family: sans-serif;
-	font-size: 12px;
-	line-height: 16.6px;
+.l-grid-breadpage .bread-a {
+cursor: pointer;
+font-family: sans-serif;
+font-size: 13px;
+line-height: 18px;
+text-decoration: underline;
+text-transform: none;
 }
-.headnav__link--span {
-	font-size: 14px;
+.l-grid-breadpage .bread span {
+cursor: default;
+margin: 0 8px;
 }
-.headnav__shop { width: 12%; }
-.headnav__search { width: 44%; }
-.headnav__search--grid { display: flex; }
-.headnav__search--grid-l { width: 86%; }
-.headnav__search--input {
-	border: solid 1px #ccc;
-	border-radius: 0;
-	display: block;
-	font-size: 15px;
-	height: 28px;
-	margin: 4px 2px 2px 8px;
-	padding: 0 0 0 8px;
-	width: 100%;
+.l-grid-breadpage .page__p {
+font-family: sans-serif;
+font-size: 12px;
+height: 20px;
+line-height: 22px;
+margin: 8px 8px;
 }
-.headnav__search--go {
-	border-radius: 3px;
-	border: 0;
-	box-shadow: none;
-	font-size: 1em;
-	font-weight: 400;
-	height: 28px;
-	margin: 6px 8px 6px 6px;
-	min-width: 36px;
-	padding: 4px;
-	text-align: center;
-	width: 35px;
- }
-.headnav__quick { width: 13%;	}
-.headnav__your { width: 12%;	}
-.headnav__order { width: 12%;	}
-.headnav__faq { width: 7%; border: none!important; }
-.faq-circle {
-	border-radius: 50%;
-	display: inline-block;
-	font-family: monospace;
-	font-size: 17px;
-	height: 24px;
-	left: 18px;
-	line-height: 24px;
-	margin-top: 6px;
-	text-decoration: none;
-	width: 24px;
+.l-grid-breadpage .page__num {
+background: 0;
+border-left: 0;
+border-radius: 3px;
+border: 1px solid #e9e9e9;
+cursor: pointer;
+font-family: sans-serif;
+font-size: 12px;
+font-weight: normal;
+line-height: 18px;
+padding: .8px 5px .8px 5px;
+text-decoration: none;
+}
+.l-grid-breadpage .page__num--current {
+cursor: default;
+font-weight: bold;
 }
 @media only screen and (max-width: 47.9375em) {
 /* small */
-	.headnav__link {
-		display: none;
-	}
-	.headnav__search { width: 100%; }
-	.headnav__search--go {
-		min-width: 112px;
-	}
+.l-grid-page {
+justify-content: center;
+}
+.l-grid-breadpage {
+justify-content: center;
+}
+.breadpage__top .l-grid-page {
+display: none;
+}
+.breadpage__bottom .l-grid-page {
+flex-flow: column-reverse wrap; /* Shorthand for flex-direction and flex-wrap */
+justify-content: center;
+}
+.breadpage__bottom .l-grid-breadpage {
+display: block;
+text-align: center;
+border-top: 1px solid #fff;
+}
+.l-grid-breadpage .page__num {
+font-size: 22px;
+line-height: 35px;
+padding: 1px 9px 1px 9px;
+}
+}
+@media only screen and (min-width:48em) and (max-width:61.1875em){
+/* medium */
+.l-grid-breadpage .page__num {
+font-size: 15px;
+line-height: 22px;
+padding: .9px 6px .9px 6px;
+}
 }
 @media only screen and (max-width:61.1875em){
 /* small and medium */
-	.l-grid-headnav {
-		width: inherit;
-	}
+.l-grid-breadpage {
+width: inherit;
+margin: 4px 6px;
+}
 }

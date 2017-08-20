@@ -72,107 +72,7 @@ body,figcaption,figure,img,input,li,picture,section,ul{margin:0;padding:0}.l-gri
 	-->
 	<style>
 	/*  Above the Fold begin    */
-.l-grid-breadpage {
-align-items: center;
-border-bottom: 1px solid #ccc;
-border-top: 1px solid #ccc;
-display: flex;
-flex-flow: row nowrap; /* Shorthand for flex-direction and flex-wrap */
-justify-content: space-between;
-margin: 4px auto;
-width: 976px;
-}
-.l-grid-breadpage .l-grid-page {
-align-items: center;
-display: flex;
-flex-flow: row nowrap; /* Shorthand for flex-direction and flex-wrap */
-justify-content: space-between;
-}
-.l-grid-breadpage .l-grid-page__nav {
-align-items: center;
-display: flex;
-flex-flow: row nowrap; /* Shorthand for flex-direction and flex-wrap */
-justify-content: space-between;
-}
-.l-grid-breadpage .bread {
-margin: 14px 0 18px 16px;
-}
-.l-grid-breadpage .bread-a {
-font-family: sans-serif;
-font-size: 13px;
-line-height: 18px;
-cursor: pointer;
-text-transform: none;
-text-decoration: underline;
-}
-.l-grid-breadpage .bread span {
-color: #aaa;
-cursor: default;
-margin: 0 8px;
-}
-.l-grid-breadpage .page__p {
-color: #888;
-font-family: sans-serif;
-font-size: 12px;
-height: 20px;
-line-height: 22px;
-margin: 8px 8px;
-}
-.l-grid-breadpage .page_num {
-border-radius: 3px;
-background: 0;
-color: #999;
-font-size: 1em;
-font-weight: normal;
-line-height: 18px;
-padding: .0625em .4375em .0625em;
-border: 1px solid #e9e9e9;
-border-left: 0;
-text-decoration: none;
-font-family: sans-serif;
-font-size: 12px;
-
-
-padding-top: 0.8px;
-padding-right: 5px;
-padding-bottom: 0.8px;
-padding-left: 5px;
-
-
-
-cursor: pointer;
-}
-@media only screen and (max-width: 47.9375em) {
-/* small */
-.l-grid-page {
-justify-content: center;
-}
-.l-grid-breadpage {
-justify-content: center;
-}
-.breadpage__top .l-grid-page {
-display: none;
-}
-.breadpage__bottom .l-grid-breadpage {
-display: block;
-text-align: center;
-}
-
-}
-@media only screen and (min-width:48em) and (max-width:61.1875em){
-/* medium */
-}
-@media only screen and (max-width:61.1875em){
-/* small and medium */
-.l-grid-breadpage {
-width: inherit;
-margin: 4px 6px;
-}
-}
-body[data-brand="lsc"] .l-grid-breadpage .bread-a { color: #7e2d3e; }
-body[data-brand="ltd"] .l-grid-breadpage .bread-a { color: #2ba6cb; }
-		</section>
-	</section>
+.l-grid-breadpage{border-bottom:1px solid #ccc;border-top:1px solid #ccc;margin:4px auto;width:976px}.l-grid-breadpage,.l-grid-breadpage .l-grid-page,.l-grid-breadpage .l-grid-page__nav{align-items:center;display:flex;flex-flow:row nowrap;justify-content:space-between}.l-grid-breadpage .bread{margin:14px 0 18px 16px}.l-grid-breadpage .bread-a{cursor:pointer;font-family:sans-serif;font-size:13px;line-height:18px;text-decoration:underline;text-transform:none}.l-grid-breadpage .bread span{cursor:default;margin:0 8px}.l-grid-breadpage .page__p{font-family:sans-serif;font-size:12px;height:20px;line-height:22px;margin:8px}.l-grid-breadpage .page__num{background:0;border-radius:3px;border:1px solid #e9e9e9;cursor:pointer;font-family:sans-serif;font-size:12px;font-weight:400;line-height:18px;padding:.8px 5px;text-decoration:none}.l-grid-breadpage .page__num--current{cursor:default;font-weight:700}@media only screen and (max-width:47.9375em){.l-grid-breadpage,.l-grid-page{justify-content:center}.breadpage__top .l-grid-page{display:none}.breadpage__bottom .l-grid-page{flex-flow:column-reverse wrap;justify-content:center}.breadpage__bottom .l-grid-breadpage{display:block;text-align:center;border-top:1px solid #fff}.l-grid-breadpage .page__num{font-size:22px;line-height:35px;padding:1px 9px}}@media only screen and (min-width:48em) and (max-width:61.1875em){.l-grid-breadpage .page__num{font-size:15px;line-height:22px;padding:.9px 6px}}@media only screen and (max-width:61.1875em){.l-grid-breadpage{width:inherit;margin:4px 6px}}
 	/*  Above the Fold end      */
 	</style>
 	<link rel="preload" href="components/breadpage/breadpage_skin.min.css" as="style" onload="this.rel='stylesheet'">
@@ -276,7 +176,7 @@ body,figcaption,figure,img,input,li,picture,section,ul{margin:0;padding:0}.l-foo
 </script>
 
 </head>
-<body data-brand="ltd">
+<body data-brand="lsc">
 
 		<ltdc-headtop id="js-headtop" class="l-grid-headtop is-signed-in"><!--  Component Begin  -->
 			<nav class="headtop__hb">
@@ -359,13 +259,16 @@ body,figcaption,figure,img,input,li,picture,section,ul{margin:0;padding:0}.l-foo
 			<a class="bread-a" aria-current="true">Book</a>
 		</aside>
 		<aside class="l-grid-page">
-			<p class="page__p">Items 1 - <span class="js-page__num--of">20</span> of <span class="js-page__num--total">9999</span></p>		
+			<p class="page__p">Items 1 - <span class="js-page__num--of">20</span> of <span class="js-page__num--total">9999</span></p>
 			<section class="l-grid-page__nav" aria-label="Pagination Navigation">
-				<a class="page_num" aria-current="true">1</a>
-				<a class="page_num">2</a>
-				<a class="page_num">3</a>
-				<a class="page_num">4</a>
-				<a class="page_num">»</a>
+				<a class="page__num page__num--current" aria-current="true">1</a>
+				<a class="page__num">2</a>
+				<a class="page__num">3</a>
+				<a class="page__num">4</a>
+				<a class="page__num">5</a>
+				<a class="page__num">6</a>
+				<a class="page__num">7</a>
+				<a class="page__num">»</a>
 			</section>
 		</aside>
 	</section>
@@ -2227,19 +2130,25 @@ body,figcaption,figure,img,input,li,picture,section,ul{margin:0;padding:0}.l-foo
 		<aside class="bread">
 			<a class="bread-a" aria-label="breadcrumb">Home</a><span>/</span>
 			<a class="bread-a" aria-label="breadcrumb">Catalogs</a><span>/</span>
-			<a class="bread-a" aria-label="page">Book</a>
+			<a class="bread-a" aria-current="true">Book</a>
 		</aside>
 		<aside class="l-grid-page">
-			<p class="page__p">
-Items 1 - 40 of 624</p>		
-			<section class="l-grid-page__nav">
-[][][]
+			<p class="page__p">Items 1 - <span class="js-page__num--of">20</span> of <span class="js-page__num--total">9999</span></p>
+			<section class="l-grid-page__nav" aria-label="Pagination Navigation">
+				<a class="page__num page__num--current" aria-current="true">1</a>
+				<a class="page__num">2</a>
+				<a class="page__num">3</a>
+				<a class="page__num">4</a>
+				<a class="page__num">5</a>
+				<a class="page__num">6</a>
+				<a class="page__num">7</a>
+				<a class="page__num">»</a>
 			</section>
 		</aside>
 	</section>
 </ltdc-breadpage><!--  Component End  -->
 
-<!--  footer 1: c-footone 
+<!--  footer 1: c-footone
 <aside class="c-Mockup" style="	border: 1px #e0dfdd solid;height: 226px;padding: 0; margin: 24px auto 0 auto;">footer one</aside> -->
 <ltdc-footer1>
 <!--
@@ -2379,7 +2288,7 @@ Items 1 - 40 of 624</p>
 		<aside>
 			<a data-reveal-id="modalTermsConditions">Terms &amp; Conditions</a>
 			<span class="footer2__copyr"> | </span>
-			<a data-reveal-id="modalPrivacy">Privacy</a> 
+			<a data-reveal-id="modalPrivacy">Privacy</a>
 		</aside>
 	</section>
 <ltdc-reveal class="l-reveal"><!--  Component Begin  -->
