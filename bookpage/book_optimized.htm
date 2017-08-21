@@ -51,6 +51,38 @@ body,figcaption,figure,img,input,li,picture,section,ul{margin:0;padding:0}.l-gri
 
 	<!--
 	/*========================================*/
+	/*  Component: topfab                     */
+	/*================================ begin =*/
+	-->
+	<style>
+	/*  Above the Fold begin    */
+.l-topfab .l-topfab__a {
+border-color: #fff;
+border-radius: 3px;
+bottom: 30px;
+cursor: pointer;
+display: inline;
+left: 90%;ß
+margin: 0;
+padding: 6px;
+position: fixed;
+width: 26px;
+z-index: 96;
+}
+body[data-brand="lsc"] .l-topfab .l-topfab__a { background-color: #672634; }
+body[data-brand="ltd"] .l-topfab .l-topfab__a { background-color: #246fa1; }
+
+	/*  Above the Fold end      */
+	</style>
+	<link rel="preload" href="components/topfab/topfab_skin.min.css" as="style" onload="this.rel='stylesheet'">
+	<!--
+	/*========================================*/
+	/*  Component: topfab                     */
+	/*================================ end ===*/
+	-->
+
+	<!--
+	/*========================================*/
 	/*  Component: primebanr                  */
 	/*================================ begin =*/
 	-->
@@ -203,7 +235,7 @@ body,figcaption,figure,img,input,li,picture,section,ul{margin:0;padding:0}.l-foo
 			</nav>
 			<nav class="headtop__cart">
 				<a class="headtop--input__cart">
-					
+
 					<svg class="" fill="#FFFFFF" height="26" width="26" viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg"
 					alt="Cart">
 					    <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/>
@@ -243,6 +275,15 @@ body,figcaption,figure,img,input,li,picture,section,ul{margin:0;padding:0}.l-foo
 				<a class="faq-circle" href="/content/faq">?</a>
 			</nav>
 		</ltdc-headnav><!--  Component End  -->
+
+		<ltdc-topfab class="l-topfab"><!--  Component Begin  -->
+			<a id="js-topfab__id" class="l-topfab__a hidden">
+				<svg fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+				    <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/>
+				    <path d="M0 0h24v24H0z" fill="none"/>
+				</svg>
+			</a>
+		</ltdc-topfab><!--  Component End  -->
 
 		<ltdc-primebanr class="l-primebanr" role="banner"><!--  Component Begin  -->
 	    <aside class="l-primebanr__whitespace"></aside>
@@ -2322,6 +2363,7 @@ body,figcaption,figure,img,input,li,picture,section,ul{margin:0;padding:0}.l-foo
 <script src="components/vue.runtime.min.js"></script>
 <script src="components/headtop/headtop.js" async></script>
 <script src="components/headnav/headnav.js" async></script>
+<script src="components/topfab/topfab.js" async></script>
 <script src="components/productcard/productcard.js" async></script>
 <script src="components/reveal/reveal.js" async></script>
 
