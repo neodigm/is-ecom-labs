@@ -56,7 +56,6 @@ body,figcaption,figure,img,input,li,picture,section,ul{margin:0;padding:0}.l-gri
 	-->
 	<style>
 	/*  Above the Fold begin    */
-
 	/*  Above the Fold end      */
 	</style>
 	<link rel="preload" href="components/topfab/topfab_skin.min.css" as="style" onload="this.rel='stylesheet'">
@@ -96,6 +95,95 @@ body,figcaption,figure,img,input,li,picture,section,ul{margin:0;padding:0}.l-gri
 	<!--
 	/*========================================*/
 	/*  Component: breadpage                  */
+	/*================================ end ===*/
+	-->
+
+	<!--
+	/*========================================*/
+	/*  Component: refinesort                 */
+	/*================================ begin =*/
+	-->
+	<style>
+	/*  Above the Fold begin    */
+/*  CSS category Base     */ /*  reset margin padding ...  */
+.l-grid-refinesort, body, figure, picture, img, figcaption, section, ul, li, input {
+	margin: 0;
+	padding: 0;
+}
+/*  CSS category Layout   */ /*  border display height media width ...  */
+.l-grid-refinesort {
+align-items: center;
+border-bottom: 1px solid #ccc;
+border-top: 1px solid #ccc;
+display: flex;
+flex-flow: row nowrap; /* Shorthand for flex-direction and flex-wrap */
+height: 54px;
+justify-content: space-between;
+margin: 4px auto;
+width: 976px;	
+}
+.l-grid-refinesort .l-grid-sort {
+align-items: center;
+display: flex;
+flex-flow: row nowrap; /* Shorthand for flex-direction and flex-wrap */
+justify-content: space-between;
+}
+.l-grid-refinesort .dropdown__a {
+position: relative;
+color: #333;
+cursor: pointer;
+background-color: #fff;
+border: 1px solid #d0d0d0;
+border-radius: 3px;
+font-family: sans-serif;
+font-size: 12px;
+font-weight: 700;
+margin: 0 2px 0 4px;
+text-align: center;
+padding: 6px 32px 6px 6px;
+}
+.l-grid-refinesort .dropdown__a:hover {
+    background-color: #ededed;
+}
+.l-grid-refinesort .dropdown__a::after {
+box-sizing: border-box;
+border-width: .4375em;
+right: 1.3125em;
+margin-top: -0.15625em;
+border-style: solid;
+border-color: #333 transparent transparent transparent;
+content: "";
+display: block;
+height: 0;
+position: absolute;
+top: 50%;
+width: 0;
+}
+body[data-brand="lsc"] .l-grid-refinesort .QQQQ { height: 63px !important; }
+body[data-brand="ltd"] .l-grid-refinesort .QQQQ { height: 56px !important; }
+
+@media only screen and (max-width: 47.9375em) {
+/* small */
+	.l-grid-refinesort .view {
+		display: none;
+	}
+}
+@media only screen and (min-width:48em) and (max-width:61.1875em){
+/* medium */
+}
+@media only screen and (max-width:61.1875em){
+/* small and medium */
+	.l-grid-refinesort {
+		margin: 4px 6px;
+		width: inherit;
+	}
+}
+	/*  Above the Fold end      */
+	</style>
+	<link rel="preload" href="components/refinesort/refinesort_skin.min.css" as="style" onload="this.rel='stylesheet'">
+	<!--
+	/*========================================*/
+	/*  Component: refinesort                 */
 	/*================================ end ===*/
 	-->
 
@@ -319,8 +407,29 @@ body,figcaption,figure,img,input,li,picture,section,ul{margin:0;padding:0}.l-foo
 	</section>
 </ltdc-breadpage><!--  Component End  -->
 
-<!--  refinements: c-refine -->
-<aside class="c-Mockup" style="	border: 1px #e0dfdd solid;height: 32px;padding: 0; margin: 0 auto 16px auto;"> Refine</aside>
+<ltdc-refinesort><!--  Component Begin  -->
+	<section class="l-grid-refinesort">
+		<section class="refine">
+			<a class="dropdown__a" aria-expanded="false">Refine</a>
+		</section>
+		<aside class="l-grid-sort">
+			<section class="sort">
+				<a class="dropdown__a" aria-expanded="false">Sort</a>
+
+<ul id="includeSort" data-dropdown-content class="f-dropdown tiny open f-open-dropdown" style="position: absolute; left: 134.578px; top: 30px;" aria-hidden="true">
+<li><a href="/browse//4254/_/N-1z0t72k?Ns=product.lowPriceLS%7C0">Price: Low to High</a></li>	
+<li><a href="/browse//4254/_/N-1z0t72k?Ns=product.lowPriceLS%7C1">Price: High to Low</a></li>	
+<li><a href="/browse//4254/_/N-1z0t72k?Ns=pageNumber_4254%7C0">Page: First Page to Last</a></li>	
+<li><a href="/browse//4254/_/N-1z0t72k?Ns=pageNumber_4254%7C1">Page: Last Page to First</a></li>	
+</ul>
+
+			</section>
+			<section class="view">
+				<a class="dropdown__a" aria-expanded="false">Item View</a>
+			</section>
+		</aside>
+	</section>
+</ltdc-refinesort><!--  Component End  -->
 
 <ltdc-productcard id="js-productcard" class="l-grid-productcard" role="grid"><!--  Component Begin  -->
 	<section role="rowgroup">

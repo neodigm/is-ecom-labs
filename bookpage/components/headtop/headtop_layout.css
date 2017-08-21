@@ -80,6 +80,7 @@ body[data-brand="ltd"] .headtop__link { margin: 25px 1px 1px 1px; }
   height: 39px;
   margin: 34px 1px 0 0;
   min-width: 104px;
+  text-decoration: none;
 }
 .headtop--input__cart p {
   margin: 0;
