@@ -159,6 +159,33 @@ position: absolute;
 top: 50%;
 width: 0;
 }
+.sort {
+
+}
+.l-grid-refinesort .dropdown__ul {
+	position: absolute;
+	width: 216px;
+	z-index: 112;
+	list-style: none;
+max-width: 150px;
+margin-top: 8px;
+    text-align: left;
+    background-color: #fff;
+}
+.l-grid-refinesort .dropdown__ul li:hover {
+    background-color: #eee;
+}
+.l-grid-refinesort .dropdown__ul--a {
+	font-family: sans-serif;
+    font-size: 12px;
+    display: block;
+    padding: 6px;
+    color: #555;
+    line-height: 16px;
+    text-decoration: none;
+    background: transparent;
+
+}
 body[data-brand="lsc"] .l-grid-refinesort .QQQQ { height: 63px !important; }
 body[data-brand="ltd"] .l-grid-refinesort .QQQQ { height: 56px !important; }
 
@@ -416,11 +443,11 @@ body,figcaption,figure,img,input,li,picture,section,ul{margin:0;padding:0}.l-foo
 			<section class="sort">
 				<a class="dropdown__a" aria-expanded="false">Sort</a>
 
-<ul id="includeSort" data-dropdown-content class="f-dropdown tiny open f-open-dropdown" style="position: absolute; left: 134.578px; top: 30px;" aria-hidden="true">
-<li><a href="/browse//4254/_/N-1z0t72k?Ns=product.lowPriceLS%7C0">Price: Low to High</a></li>	
-<li><a href="/browse//4254/_/N-1z0t72k?Ns=product.lowPriceLS%7C1">Price: High to Low</a></li>	
-<li><a href="/browse//4254/_/N-1z0t72k?Ns=pageNumber_4254%7C0">Page: First Page to Last</a></li>	
-<li><a href="/browse//4254/_/N-1z0t72k?Ns=pageNumber_4254%7C1">Page: Last Page to First</a></li>	
+<ul id="includeSort" data-dropdown-content class="dropdown__ul" aria-hidden="true">
+	<li><a class="dropdown__ul--a" href="?Ns=product.lowPriceLS%7C0">Price: Low to High</a></li>	
+	<li><a class="dropdown__ul--a" href="?Ns=product.lowPriceLS%7C1">Price: High to Low</a></li>	
+	<li><a class="dropdown__ul--a" href="?Ns=pageNumber_4254%7C0">Page: First Page to Last</a></li>	
+	<li><a class="dropdown__ul--a" href="?Ns=pageNumber_4254%7C1">Page: Last Page to First</a></li>	
 </ul>
 
 			</section>
