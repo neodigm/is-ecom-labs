@@ -1,4 +1,4 @@
-console.log("component headtop.js");
+console.log("component headtop.js 1111");
 console.log("Vue Version " +Vue.version );
 Vue.config.devtools = true;
 
@@ -13,5 +13,8 @@ var c_headtop = new Vue({
       this.isOpen__menu = !this.isOpen__menu;
       this.isOpen__scrim = !this.isOpen__scrim;
   }
+},
+  mounted: function(){
+console.log(99999);
   }
 });
