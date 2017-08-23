@@ -1,33 +1,35 @@
+"use strict";
 console.log("component reveal.js");
+
 var ltdc_reveal = {
   aRevAct: 0, aRevX: 0, sRevId: "", eRev: 0, eRevScrim: 0,
   "init" : function() {
-    aRevX = document.getElementsByClassName( "close-reveal-modal" );
-    for (var i = 0, ln = aRevX.length; i < ln; i++) {
-        aRevX[i].addEventListener("click", ltdc_reveal.close, false);
+    ltdc_reveal.aRevX = document.getElementsByClassName( "close-reveal-modal" );
+    for (var i = 0, ln = ltdc_reveal.aRevX.length; i < ln; i++) {
+        ltdc_reveal.aRevX[i].addEventListener("click", ltdc_reveal.close, false);
     }
-    aRevAct = document.querySelectorAll( "[data-reveal-id]" );
-    for (var i = 0, ln = aRevAct.length; i < ln; i++) {
-        aRevAct[i].addEventListener("click", ltdc_reveal.open, false);
+    ltdc_reveal.aRevAct = document.querySelectorAll( "[data-reveal-id]" );
+    for (var i = 0, ln = ltdc_reveal.aRevAct.length; i < ln; i++) {
+        ltdc_reveal.aRevAct[i].addEventListener("click", ltdc_reveal.open, false);
     }
-    eRevScrim = document.getElementById( "id-reveal__scrim" );
+    ltdc_reveal.eRevScrim = document.getElementById( "id-reveal__scrim" );
   },
   "open" : function( e ){
-    sRevId = this.getAttribute( "data-reveal-id" );
-    if( sRevId ){
-      eRevScrim.classList.add( "reveal__scrim" );
-      eRev = document.getElementById( sRevId );
-      eRev.classList.add( "reveal__box" );
-      eRev.setAttribute("style", "top: "+ (window.pageYOffset+84) +"px;");
-      eRev.setAttribute("aria-hidden", "false");
+    ltdc_reveal.sRevId = this.getAttribute( "data-reveal-id" );
+    if( ltdc_reveal.sRevId ){
+      ltdc_reveal.eRevScrim.classList.add( "reveal__scrim" );
+      ltdc_reveal.eRev = document.getElementById( ltdc_reveal.sRevId );
+      ltdc_reveal.eRev.classList.add( "reveal__box" );
+      ltdc_reveal.eRev.setAttribute("style", "top: "+ (window.pageYOffset+84) +"px;");
+      ltdc_reveal.eRev.setAttribute("aria-hidden", "false");
       e.preventDefault();
     }
     return false;
   },
   "close" : function( e ){
-    eRevScrim.classList.remove( "reveal__scrim" );
-    eRev.classList.remove( "reveal__box" );
-    eRev.setAttribute("aria-hidden", "true");
+    ltdc_reveal.eRevScrim.classList.remove( "reveal__scrim" );
+    ltdc_reveal.eRev.classList.remove( "reveal__box" );
+    ltdc_reveal.eRev.setAttribute("aria-hidden", "true");
     e.preventDefault();
   }
 };
