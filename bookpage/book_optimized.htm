@@ -211,6 +211,8 @@ z-index: 124;
 	display: inherit;
 	padding: 2px 8px 4px 8px;
 	margin: 2px;
+	cursor: pointer;
+	user-select: none;
 }
 .portal .portal__top .portal__top--a p {
 	color: #fff;
@@ -226,7 +228,12 @@ z-index: 124;
 }
 .portal .portal__bottom {
 	padding: 4px;
-
+height: 100%;
+max-height: 200px;
+    overflow-y: scroll;
+    padding: 2px;
+    border: 1px solid #c3c3c3;
+    border-top: 0;
 }
 
 @media only screen and (max-width: 47.9375em) {
@@ -486,7 +493,7 @@ body,figcaption,figure,img,input,li,picture,section,ul{margin:0;padding:0}.l-foo
 	<section class="l-grid-refinesort h-no-border__top">
 		<section class="refine">
 			<a class="js-dropdown_show dropdown__a" aria-expanded="false">Refine</a>
-<article id="js-portal__id" class="portal hidden" aria-hidden="true">
+<article class="portal hidden" aria-hidden="true">
 	<aside class="portal__top">
 		<a class="portal__top--a">
 
@@ -510,6 +517,9 @@ Done
 		</a>
 	</aside>
 	<aside class="portal__bottom">
+<hr><br><hr><br><hr><br><hr><br><hr><br><hr><br><hr><br>
+<hr><br><hr><br><hr><br><hr><br><hr><br><hr><br><hr><br>
+<hr><br><hr><br><hr><br><hr><br><hr><br><hr><br><hr><br>
 	</aside>
 </article>
 		</section>
