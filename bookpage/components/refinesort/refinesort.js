@@ -18,6 +18,14 @@ var ltdc_refinesort = {
 		window.addEventListener("click", ltdc_refinesort.close, true);
 	},
 	"close" : function( e ){
+		var eTarget = e.target;
+		while( eTarget.tagName !== "HTML" ){
+			if( eTarget.classList.contains("portal") ){
+				e.stopPropagation();
+				return true;
+			}
+			eTarget=eTarget.parentNode;
+		}
 		ltdc_refinesort.dropdown__ul.classList.add("hidden");
 		ltdc_refinesort.dropdown__a.setAttribute("aria-expanded", "false");
 		ltdc_refinesort.dropdown__ul.setAttribute("aria-hidden", "true");
