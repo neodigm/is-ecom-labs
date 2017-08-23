@@ -135,6 +135,9 @@ body[data-brand="ltd"] .l-grid-headtop { height: 89px; }
   .headtop--input__cart {
     min-width: 66px;
   }
+  .headtop--input__cartqty {
+    margin: 0;
+  }
   body[data-brand="lsc"] .l-grid-headtop { height: 66px !important; }
   body[data-brand="ltd"] .l-grid-headtop { height: 56px !important; }
   body[data-brand="lsc"] .headtop__hb { padding: 12px 0 8px 8px; }
