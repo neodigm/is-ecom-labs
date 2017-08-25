@@ -27,12 +27,7 @@ var ltdc_refinesort = {
 	"portal_close" : function( e ){
 		var eTarget = e.target;
 		while( eTarget.tagName !== "HTML" ){
-			//if( eTarget.classList.contains("portal__top") ){ return true; }
-			//if( eTarget.classList.contains("portal__bottom") ){ return true; }
-			if( eTarget.classList.contains("portal") ){
-				//e.stopPropagation();
-				return true;
-			}
+			if( eTarget.classList.contains("portal") ){ return true; }
 			eTarget = eTarget.parentNode;
 		}
 		ltdc_refinesort.dropdown__ul.classList.add("hidden");
