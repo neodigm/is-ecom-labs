@@ -218,11 +218,11 @@ z-index: 188;
 	color: #fff;
 	font-size: 12px;
 	font-weight: 700;
-	line-height: 1.88;
+	line-height: 2.28;
 	margin: 2px;
 }
 .portal .portal__top .portal__top--a svg {
-	margin: 6px 0 0 0;
+	margin: 8px 0 0 0;
 	height: 14px;
 	width: 14px;
 }
@@ -235,6 +235,22 @@ max-height: 200px;
     border: 1px solid #c3c3c3;
     border-top: 0;
 }
+.portal__bottom--nav {
+align-items: center;
+border-bottom: 1px solid #ccc;
+color: #6c6c68;
+display: flex;
+flex-flow: row nowrap; /* Shorthand for flex-direction and flex-wrap */
+justify-content: space-between;
+margin: 4px auto;
+cursor: pointer;
+user-select: none;
+padding: 0 0 0 4px;
+}
+.portal__bottom--opened svg.js-nav-minus { display: block; }
+.portal__bottom--opened svg.js-nav-plus  { display: none; }
+.portal__bottom--closed svg.js-nav-minus { display: none; }
+.portal__bottom--closed svg.js-nav-plus  { display: block; }
 
 @media only screen and (max-width: 47.9375em) {
 /* small */
@@ -261,6 +277,8 @@ max-height: 200px;
 }
 body[data-brand="lsc"] .portal .portal__top { background-color: #7e2d3e; }
 body[data-brand="ltd"] .portal .portal__top { background-color: #2b7ec0; }
+body[data-brand="lsc"] .portal .portal__top .portal__top--a:hover { background-color: #9c4a62; }
+body[data-brand="ltd"] .portal .portal__top .portal__top--a:hover { background-color: #2ba6cb; }
 	/*  Above the Fold end      */
 	</style>
 	<!--
@@ -496,30 +514,57 @@ body,figcaption,figure,img,input,li,picture,section,ul{margin:0;padding:0}.l-foo
 <article class="portal hidden" aria-hidden="true">
 	<aside class="portal__top">
 		<a class="portal__top--a">
-
-<svg fill="#FFFFFF" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-    <path d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm5 13.59L15.59 17 12 13.41 8.41 17 7 15.59 10.59 12 7 8.41 8.41 7 12 10.59 15.59 7 17 8.41 13.41 12 17 15.59z"/>
-    <path d="M0 0h24v24H0z" fill="none"/>
-</svg>
-<p>
-Cancel
-</p>
+			<svg fill="#FFFFFF" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+			    <path d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm5 13.59L15.59 17 12 13.41 8.41 17 7 15.59 10.59 12 7 8.41 8.41 7 12 10.59 15.59 7 17 8.41 13.41 12 17 15.59z"/>
+			    <path d="M0 0h24v24H0z" fill="none"/>
+			</svg>
+			<p>Cancel</p>
 		</a>
 		<a class="portal__top--a">
-
-<svg fill="#FFFFFF" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-    <path d="M0 0h24v24H0z" fill="none"/>
-    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-</svg>
-<p>		
-Done
-</p>
+			<svg fill="#FFFFFF" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+			    <path d="M0 0h24v24H0z" fill="none"/>
+			    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+			</svg>
+			<p>Done</p>
 		</a>
 	</aside>
 	<aside class="portal__bottom">
-<hr><br><hr><br><hr><br><hr><br><hr><br><hr><br><hr><br>
-<hr><br><hr><br><hr><br><hr><br><hr><br><hr><br><hr><br>
-<hr><br><hr><br><hr><br><hr><br><hr><br><hr><br><hr><br>
+		<nav class="portal__bottom--nav portal__bottom--opened">
+			<p>Departments (<span class="js-qty">12</span>)</p>
+			<svg class="js-nav-plus" fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+			    <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/><path d="M0 0h24v24H0z" fill="none"/>
+			</svg>
+			<svg class="js-nav-minus" fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+				<path d="M19 13H5v-2h14v2z"/><path d="M0 0h24v24H0z" fill="none"/>
+			</svg>
+		</nav>
+		<section class="portal__bottom--content hidden">
+			<hr>
+		</section>
+		<nav class="portal__bottom--nav portal__bottom--closed">
+			<p>Avg. Customer Reviews (<span class="js-qty">6</span>)</p>
+			<svg class="js-nav-plus" fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+			    <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/><path d="M0 0h24v24H0z" fill="none"/>
+			</svg>
+			<svg class="js-nav-minus" fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+				<path d="M19 13H5v-2h14v2z"/><path d="M0 0h24v24H0z" fill="none"/>
+			</svg>
+		</nav>
+		<section class="portal__bottom--content hidden">
+			<hr>
+		</section>
+		<nav class="portal__bottom--nav portal__bottom--closed">
+			<p>Color (<span class="js-qty">16</span>)</p>
+			<svg class="js-nav-plus" fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+			    <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/><path d="M0 0h24v24H0z" fill="none"/>
+			</svg>
+			<svg class="js-nav-minus" fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+				<path d="M19 13H5v-2h14v2z"/><path d="M0 0h24v24H0z" fill="none"/>
+			</svg>
+		</nav>
+		<section class="portal__bottom--content hidden">
+			<hr>
+		</section>
 	</aside>
 </article>
 		</section>
