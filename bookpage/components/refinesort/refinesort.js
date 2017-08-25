@@ -7,29 +7,30 @@ var ltdc_refinesort = {
 	"init" : function() {
 		ltdc_refinesort.aDrop = document.getElementsByClassName( "js-dropdown_show" );
 		for (var i = 0, ln = ltdc_refinesort.aDrop.length; i < ln; i++) {
-			ltdc_refinesort.aDrop[i].addEventListener("click", ltdc_refinesort.open_portal, false);
+			ltdc_refinesort.aDrop[i].addEventListener("click", ltdc_refinesort.portal_open, false);
 		}
 		ltdc_refinesort.aDrop = document.getElementsByClassName( "portal__bottom--nav" );
 		for (var i = 0, ln = ltdc_refinesort.aDrop.length; i < ln; i++) {
 			ltdc_refinesort.aDrop[i].addEventListener("click", ltdc_refinesort.toggle_drawer, false);
 		}
+		document.getElementById("js-portal-cancel__id").addEventListener("click", ltdc_refinesort.portal_cancel, false);
+		document.getElementById("js-portal-done__id").addEventListener("click",   ltdc_refinesort.portal_done,   false);
 	},
-	"open_portal" : function( e ){
+	"portal_open" : function( e ){
 		ltdc_refinesort.dropdown__ul = this.nextElementSibling;
 		ltdc_refinesort.dropdown__a = this;
 		ltdc_refinesort.dropdown__ul.classList.remove("hidden");
 		ltdc_refinesort.dropdown__a.setAttribute("aria-expanded", "true");
 		ltdc_refinesort.dropdown__ul.setAttribute("aria-hidden", "false");
-		window.addEventListener("click", ltdc_refinesort.close_portal, true);
+		window.addEventListener("click", ltdc_refinesort.portal_close, true);
 	},
-	"close_portal" : function( e ){
+	"portal_close" : function( e ){
 		var eTarget = e.target;
 		while( eTarget.tagName !== "HTML" ){
-			if( eTarget.classList.contains("portal__bottom") ){
-				return true;
-			}
+			//if( eTarget.classList.contains("portal__top") ){ return true; }
+			//if( eTarget.classList.contains("portal__bottom") ){ return true; }
 			if( eTarget.classList.contains("portal") ){
-				e.stopPropagation();
+				//e.stopPropagation();
 				return true;
 			}
 			eTarget = eTarget.parentNode;
@@ -37,8 +38,16 @@ var ltdc_refinesort = {
 		ltdc_refinesort.dropdown__ul.classList.add("hidden");
 		ltdc_refinesort.dropdown__a.setAttribute("aria-expanded", "false");
 		ltdc_refinesort.dropdown__ul.setAttribute("aria-hidden", "true");
-		window.removeEventListener("click", ltdc_refinesort.close_portal, true);
+		window.removeEventListener("click", ltdc_refinesort.portal_close, true);
 		e.stopPropagation();
+	},
+	"portal_done" : function( e ){
+		// Implementation:  This submit form
+		console.log("portal_done");
+	},
+	"portal_cancel" : function( e ){
+		// Implementation:  This submit form
+		console.log("portal_cancel");
 	},
 	"toggle_drawer" : function( e ){
 		ltdc_refinesort.portal__bottom_nav  = this;
