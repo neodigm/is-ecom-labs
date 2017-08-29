@@ -108,204 +108,10 @@ body,figcaption,figure,img,input,li,picture,section,ul{margin:0;padding:0}.l-gri
 	-->
 	<style>
 	/*  Above the Fold begin    */
-/* Refinement and Sort / Item are completely rendered below the fold */
-/*  CSS category Base     */ /*  reset margin padding ...  */
-.l-grid-refinesort, body, figure, picture, img, figcaption, section, ul, li, input {
-margin: 0;
-padding: 0;
-}
-/*  CSS category Layout   */ /*  border display height media width ...  */
-.l-grid-refinesort {
-align-items: center;
-border-bottom: 1px solid #ccc;
-border-top: 1px solid #ccc;
-display: flex;
-flex-flow: row nowrap; /* Shorthand for flex-direction and flex-wrap */
-height: 54px;
-justify-content: space-between;
-margin: 4px auto;
-width: 976px;
-}
-.l-grid-refinesort .l-grid-sort {
-align-items: center;
-display: flex;
-flex-flow: row nowrap; /* Shorthand for flex-direction and flex-wrap */
-justify-content: space-between;
-}
-.l-grid-refinesort .dropdown__a {
-background-color: #fff;
-border-radius: 3px;
-border: 1px solid #d0d0d0;
-color: #333;
-cursor: pointer;
-font-family: sans-serif;
-font-size: 12px;
-font-weight: 700;
-margin: 0 2px 0 4px;
-padding: 6px 32px 6px 6px;
-position: relative;
-text-align: center;
-user-select: none;
-}
-.l-grid-refinesort .dropdown__a:hover {
-background-color: #ededed;
-}
-.l-grid-refinesort .dropdown__a::after {
-border-color: #333 transparent transparent transparent;
-border-style: solid;
-border-width: .4375em;
-box-sizing: border-box;
-content: "";
-display: block;
-height: 0;
-margin-top: -0.15625em;
-position: absolute;
-right: 1.3125em;
-top: 50%;
-width: 0;
-}
-.l-grid-refinesort .dropdown__ul {
-background-color: #fff;
-list-style: none;
-margin-top: 8px;
-max-width: 150px;
-position: absolute;
-text-align: left;
-width: 216px;
-z-index: 112;
-}
-.l-grid-refinesort .dropdown__ul li:hover {
-background-color: #eee;
-}
-.l-grid-refinesort .dropdown__ul--a {
-background: transparent;
-color: #555;
-display: block;
-font-family: sans-serif;
-font-size: 12px;
-line-height: 16px;
-padding: 6px;
-text-decoration: none;
-}
-.l-grid-refinesort .portal {
-/*min-height: 200px;
-max-height: 340px;*/
-min-width: 200px;
-position: absolute;
-margin-top: 8px;
-background-color: #fffef0;
-font-family: sans-serif;
-z-index: 188;
-}
-.portal .portal__top {
-	height: 40px;
-	padding: 4px;
-	display: flex;
-	flex-flow: row nowrap; /* Shorthand for flex-direction and flex-wrap */
-	justify-content: space-between;
-}
-.portal .portal__top .portal__top--a {
-	height: auto;
-	border: solid 2px #fff;
-	border-radius: 4px;
-	display: inherit;
-	padding: 2px 8px 4px 8px;
-	margin: 2px;
-	cursor: pointer;
-	user-select: none;
-}
-.portal .portal__top .portal__top--a p {
-	color: #fff;
-	font-size: 12px;
-	font-weight: 700;
-	line-height: 2.28;
-	margin: 2px;
-}
-.portal .portal__top .portal__top--a svg {
-	margin: 8px 0 0 0;
-	height: 14px;
-	width: 14px;
-}
-.portal .portal__bottom {
-padding: 4px;
-height: 100%;
-max-height: 300px;
-overflow-y: scroll;
-padding: 2px;
-border: 1px solid #c3c3c3;
-border-top: 0;
-}
-.portal .portal_expanded {
-height: 300px;
-}
-.portal__bottom--nav {
-align-items: center;
-border-bottom: 1px solid #fff;
-border-top: 1px solid #fff;
-color: #6c6c68;
-display: flex;
-flex-flow: row nowrap; /* Shorthand for flex-direction and flex-wrap */
-justify-content: space-between;
-margin: 4px auto;
-cursor: pointer;
-user-select: none;
-padding: 0 0 0 4px;
-}
-.criterion__li {
-}
-.criterion__li:hover {
-background-color: #eee;
-}
-.criterion__li input {
-margin: 8px;
-padding: 8px;
-}
-.criterion__li label {
-font-family: sans-serif;
-font-size: 12px;
-color: #606060;
-text-align: center;
-cursor: pointer;
-user-select: none;
-line-height: 2.2;
-}
-.portal__bottom--opened svg.js-nav-minus { display: block; }
-.portal__bottom--opened svg.js-nav-plus  { display: none; }
-.portal__bottom--closed svg.js-nav-minus { display: none; }
-.portal__bottom--closed svg.js-nav-plus  { display: block; }
-
-@media only screen and (max-width: 47.9375em) {
-/* small */
-	.l-grid-refinesort .view {
-		display: none;
-	}
-	.l-grid-refinesort .portal {
-		min-width: 200px;
-		width: 60%;
-	}
-}
-@media only screen and (min-width:48em) and (max-width:61.1875em){
-/* medium */
-}
-@media only screen and (max-width:61.1875em){
-/* small and medium */
-	.l-grid-refinesort {
-		margin: 4px 6px;
-		width: inherit;
-	}
-	.l-grid-sort ul:nth-of-type(2n+1) {
-		right: 32px;
-	}
-}
-body[data-brand="lsc"] .portal .portal__top { background-color: #7e2d3e; }
-body[data-brand="ltd"] .portal .portal__top { background-color: #2b7ec0; }
-body[data-brand="lsc"] .portal .portal__top .portal__top--a:hover { background-color: #9c4a62; }
-body[data-brand="ltd"] .portal .portal__top .portal__top--a:hover { background-color: #2ba6cb; }
-body[data-brand="lsc"] .portal__bottom--nav { background-color: #FFFAFF; }
-body[data-brand="ltd"] .portal__bottom--nav { background-color: #f2faff; }
 
 	/*  Above the Fold end      */
 	</style>
+		<link rel="preload" href="components/refinesort/refinesort_skin.min.css" as="style" onload="this.rel='stylesheet'">
 	<!--
 	/*========================================*/
 	/*  Component: refinesort                 */
@@ -424,6 +230,11 @@ body,figcaption,figure,img,input,li,picture,section,ul{margin:0;padding:0}.l-foo
 
 </head>
 <body data-brand="ltd">
+<!-- This is a test of the single-file vue component build
+<div id="app">
+<ltdc-test>999</ltdc-test>
+</div>
+This is a test of the single-file vue component build -->
 
 		<ltdc-headtop id="js-headtop" class="l-grid-headtop is-signed-in"><!--  Component Begin  -->
 			<nav class="headtop__hb">
@@ -589,8 +400,24 @@ body,figcaption,figure,img,input,li,picture,section,ul{margin:0;padding:0}.l-foo
 		</nav>
 		<section class="portal__bottom--content hidden">
 			<ul>
-<li class="criterion__li"><label class="five-star review-stars"><input type="checkbox">
-<QQQQimg QQQQsrc="media/global/images/sprites/review-stars-sprite.png"></label></li>
+<li class="criterion__li"><label><input type="checkbox"></label>
+<figure class="five-star review-stars"></figure><span>(111)</span>
+</li>
+<li class="criterion__li"><label><input type="checkbox"></label>
+<figure class="four-star review-stars"></figure><span>&Up (44)</span>
+</li>
+<li class="criterion__li"><label><input type="checkbox"></label>
+<figure class="three-star review-stars"></figure><span>&Up (34)</span>
+</li>
+<li class="criterion__li"><label><input type="checkbox"></label>
+<figure class="two-star review-stars"></figure><span>&Up (23)</span>
+</li>
+<li class="criterion__li"><label><input type="checkbox"></label>
+<figure class="one-star review-stars"></figure><span>&Up (8)</span>
+</li>
+<li class="criterion__li"><label><input type="checkbox"></label>
+<span>Not Yet Reviewed (9)</span>
+</li>
 			</ul>
 		</section>
 		<nav class="portal__bottom--nav portal__bottom--closed">
@@ -630,10 +457,10 @@ body,figcaption,figure,img,input,li,picture,section,ul{margin:0;padding:0}.l-foo
 				<a class="js-dropdown_show dropdown__a" aria-expanded="false">Sort</a>
 
 <ul class="dropdown__ul hidden" aria-hidden="true">
-	<li><a class="dropdown__ul--a" href="?Ns=product.lowPriceLS%7C0">Price: Low to High</a></li>	
-	<li><a class="dropdown__ul--a" href="?Ns=product.lowPriceLS%7C1">Price: High to Low</a></li>	
-	<li><a class="dropdown__ul--a" href="?Ns=pageNumber_4254%7C0">Page: First Page to Last</a></li>	
-	<li><a class="dropdown__ul--a" href="?Ns=pageNumber_4254%7C1">Page: Last Page to First</a></li>	
+	<li><a class="dropdown__ul--a" href="?Ns=product.lowPriceLS%7C0">Price: Low to High</a></li>
+	<li><a class="dropdown__ul--a" href="?Ns=product.lowPriceLS%7C1">Price: High to Low</a></li>
+	<li><a class="dropdown__ul--a" href="?Ns=pageNumber_4254%7C0">Page: First Page to Last</a></li>
+	<li><a class="dropdown__ul--a" href="?Ns=pageNumber_4254%7C1">Page: Last Page to First</a></li>
 </ul>
 
 			</section>
@@ -2700,6 +2527,9 @@ body,figcaption,figure,img,input,li,picture,section,ul{margin:0;padding:0}.l-foo
 <script src="components/productcard/productcard.js" async></script>
 <script src="components/reveal/reveal.js" async></script>
 <script src="components/refinesort/refinesort.js" async></script>
+
+<!--<script src="bookvue/dist/build.js" async></script>-->
+
 
 </body>
 </html>
