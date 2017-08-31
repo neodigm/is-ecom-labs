@@ -272,23 +272,29 @@ This is a test of the single-file vue component build -->
 			</nav>
 			<section id="js-headtop-menu__id" class="drawerleft__menu">
 
+
+
+
+
+
+
 <template id="v-leftnav__templ">
   <li>
-    <nav
-      :class="{hidden: hidden}"
-      @click="toggle">
+    <nav class="l-grid-leftnav"
+      :class="{hidden: hidden, leftnav__open: open, leftnav__close: !open}">
+      <a href="{{model.href}}">
       {{model.name}}
-      <span v-if="isFolder">[{{open ? "-" : "+"}}]</span>
-
-<svg class="js-nav-plus" fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+      </a>
+<svg class="js-nav-plus" v-if="isFolder" @click="toggle" fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
     <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"></path><path d="M0 0h24v24H0z" fill="none"></path>
 </svg>
-<svg class="js-nav-minus" fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+
+<svg class="js-nav-minus" v-if="isFolder" @click="toggle" fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
 	<path d="M19 13H5v-2h14v2z"></path><path d="M0 0h24v24H0z" fill="none"></path>
 </svg>
 
-
     </nav>
+
     <ul v-show="open" v-if="isFolder">
       <ltdc-leftnav
         class="item"
@@ -299,31 +305,40 @@ This is a test of the single-file vue component build -->
   </li>
 </template>
 
-<section id="v-leftnav__id"><!--  Component Begin  -->
+<section id="v-leftnav__id" class="c-leftnav"><!--  Component Begin  -->
 	<script>
 	var ltdc_leftnav__hier = {
-	  name: "level0",
+	  name: "level0", href: "/",
 	  children: [
-	    { name: "Home Decore",
+	    { name: "Home Decore", href: "/",
 	    children: [
-		    { name: "Furniture",
+		    { name: "Furniture", href: "/",
 		    children: [
-				{ name: "Room Accents" },
-				{ name: "Outdoors" }
+				{ name: "Room Accents", href: "/" },
+				{ name: "Outdoors", href: "/" }
 		    ] },
-		    { name: "Slipcovers" }
+		    { name: "Slipcovers", href: "/" }
 	    ] },
-	    { name: "Garden + Outdoors" }
+	    { name: "Garden + Outdoors", href: "/" }
 	  ]
 	};
 	</script>
 	<ul>
-		<ltdc-leftnav
-			class="item"
-			:model="ltdc_leftnav__hier">
+		<ltdc-leftnav :model="ltdc_leftnav__hier">
 		</ltdc-leftnav>
 	</ul>
 </section><!--  Component End  -->
+
+
+
+
+
+
+
+
+
+
+
 
 			</section>
 			<nav id="js-headtop-scrim__id" class="drawerleft__scrim"></nav>

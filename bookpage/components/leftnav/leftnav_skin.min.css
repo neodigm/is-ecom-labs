@@ -1,0 +1,41 @@
+/*  CSS category State    */ /*  color display font visibility ...  */
+.c-leftnav .l-grid-leftnav {
+align-items: center;
+border-bottom: 1px solid #ccc;
+border-top: 1px solid #ccc;
+display: flex;
+flex-flow: row nowrap; /* Shorthand for flex-direction and flex-wrap */
+height: 32px;
+justify-content: space-between;
+cursor: pointer;
+user-select: none;
+}
+.c-leftnav li {
+list-style-position: outside;
+list-style-type: none;
+display: block;
+}
+.c-leftnav a {
+color: #4a4d4a;
+font-family: sans-serif;
+font-size: 14px;
+font-weight: bold;
+line-height: 26px;
+padding-left: 6px;
+text-decoration: none;
+width: 100%;
+}
+.c-leftnav a:hover {
+color: #000;
+}
+.c-leftnav li li li a {
+color: #ff0000 !important;
+padding-left: 16px !important;
+}
+
+/*  CSS category Theme    */ /*  color background hover ...  */
+
+.c-leftnav .leftnav__open svg.js-nav-minus { display: block; }
+.c-leftnav .leftnav__open svg.js-nav-plus  { display: none; }
+.c-leftnav .leftnav__close svg.js-nav-minus { display: none; }
+.c-leftnav .leftnav__close svg.js-nav-plus  { display: block; } 
