@@ -1,4 +1,15 @@
 /*  CSS category State    */ /*  color display font visibility ...  */
+.l-grid-leftnav {
+align-items: center;
+border-bottom: 1px solid #ccc;
+border-top: 1px solid #ccc;
+display: flex;
+flex-flow: row nowrap; /* Shorthand for flex-direction and flex-wrap */
+height: 54px;
+justify-content: space-between;
+margin: 4px auto;
+width: 976px;
+}
 
 /*  CSS category Theme    */ /*  color background hover ...  */
 

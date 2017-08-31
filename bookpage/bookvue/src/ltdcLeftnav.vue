@@ -1,28 +1,58 @@
-<template>
-  <div id="ltdcLeftnav">
-    <h1>{{ msg }}</h1>
-    <h2>Ducks</h2>
-  </div>
-
-<ltdc-leftnav id="js-leftnav__id">1111
-  <ltdc-leftnav-nav level="1" desc="" href="">QQQQ</ltdc-leftnav-nav>
-</ltdc-leftnav>
-
+<template id="v-leftnav__templ">
+  <li>
+    <div
+      :class="{hidden: hidden}"
+      @click="toggle">
+      {{model.name}}
+      <span v-if="isFolder">[{{open ? '-' : '+'}}]</span>
+    </div>
+    <ul v-show="open" v-if="isFolder">
+      <ltdc-leftnav
+        class="item"
+        v-for="model in model.children"
+        :model="model">
+      </ltdc-leftnav>
+    </ul>
+  </li>
 </template>
 
 <script>
 export default {
-  name: 'ltdcLeftnav',
-  data () {
+  name: 'ltdc-leftnav',
+  props: {
+    model: Object
+  },
+  data: function () {
     return {
-      msg: 'leftnav'
+      ltdc_leftnav__hier: {name: "ltdc_leftnav__hier"},
+      open: false,
+      hidden: false
+    }
+  },
+  computed: {
+    isFolder: function () {
+      return this.model.children &&
+        this.model.children.length
+    }
+  },
+  methods: {
+    toggle: function () {
+      if (this.isFolder) {
+        this.open = !this.open
+      }
+    }
+  },
+  mounted: function(){
+    if( this.model.name === "level0" ){
+      this.open = true;
+      this.hidden = true;
     }
   }
 }
 </script>
 
 <style>
-  #ltdcLeftnav {
+  .item {
     background-color: #edba08;
   }
 </style>

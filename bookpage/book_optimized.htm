@@ -125,23 +125,6 @@ body,figcaption,figure,img,input,li,picture,section,ul{margin:0;padding:0}.l-gri
 	-->
 	<style>
 	/*  Above the Fold begin    */
-/*  CSS category Base     */ /*  reset margin padding ...  */
-.l-grid-leftnav, body, figure, picture, img, figcaption, section, ul, li, input {
-margin: 0;
-padding: 0;
-}
-/*  CSS category Layout   */ /*  border display height media width ...  */
-.l-grid-leftnav {
-align-items: center;
-border-bottom: 1px solid #ccc;
-border-top: 1px solid #ccc;
-display: flex;
-flex-flow: row nowrap; /* Shorthand for flex-direction and flex-wrap */
-height: 54px;
-justify-content: space-between;
-margin: 4px auto;
-width: 976px;
-}
 	/*  Above the Fold end      */
 	</style>
 	<link rel="preload" href="components/leftnav/leftnav_skin.min.css" as="style" onload="this.rel='stylesheet'">
@@ -288,46 +271,51 @@ This is a test of the single-file vue component build -->
 				</p></a>
 			</nav>
 			<section id="js-headtop-menu__id" class="drawerleft__menu">
-<!--
-<section id="v-leftnav__id">
-	<ltdc-leftnav id="test1">
-		<ltdc-leftnav-l1 v-bind:desc="desc" href="">Home Decore</ltdc-leftnav-l1>
-			<ltdc-leftnav-l2 desc="" href="">Furniture</ltdc-leftnav-l2>
-				<ltdc-leftnav-l3 desc="" href="">Room Accents</ltdc-leftnav-l3>
-				<ltdc-leftnav-l3 desc="" href="">Outdoor</ltdc-leftnav-l3>
-			<ltdc-leftnav-l2 desc="" href="">Slip Covers</ltdc-leftnav-l2>
-		<ltdc-leftnav-l1 v-bind:desc="desc" href="">Garden + Outdoors</ltdc-leftnav-l1>
-			<ltdc-leftnav-l2 desc="" href="">Outdoor Decore</ltdc-leftnav-l2>
-	</ltdc-leftnav>
-</section>
--->
 
-<!-- item template -->
 <template id="v-leftnav__templ">
   <li>
-    <div
+    <nav
       :class="{hidden: hidden}"
       @click="toggle">
       {{model.name}}
-      <span v-if="isFolder">[{{open ? '-' : '+'}}]</span>
-    </div>
+      <span v-if="isFolder">[{{open ? "-" : "+"}}]</span>
+    </nav>
     <ul v-show="open" v-if="isFolder">
-      <item
+      <ltdc-leftnav
         class="item"
         v-for="model in model.children"
         :model="model">
-      </item>
+      </ltdc-leftnav>
     </ul>
   </li>
 </template>
 
-<!-- root instance element -->
-<ul id="v-leftnav__id">
-  <item
-    class="item"
-    :model="treeData">
-  </item>
-</ul>
+<section id="v-leftnav__id"><!--  Component Begin  -->
+	<script>
+	var ltdc_leftnav__hier = {
+	  name: "level0",
+	  children: [
+	    { name: "Home Decore",
+	    children: [
+		    { name: "Furniture",
+		    children: [
+				{ name: "Room Accents" },
+				{ name: "Outdoors" }
+		    ] },
+		    { name: "Slipcovers" }
+	    ] },
+	    { name: "Garden + Outdoors" }
+	  ]
+	};
+	</script>
+	<ul>
+		<ltdc-leftnav
+			class="item"
+			:model="ltdc_leftnav__hier">
+		</ltdc-leftnav>
+	</ul>
+</section><!--  Component End  -->
+
 			</section>
 			<nav id="js-headtop-scrim__id" class="drawerleft__scrim"></nav>
 		</ltdc-headtop><!--  Component End  -->
