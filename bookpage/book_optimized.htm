@@ -125,7 +125,23 @@ body,figcaption,figure,img,input,li,picture,section,ul{margin:0;padding:0}.l-gri
 	-->
 	<style>
 	/*  Above the Fold begin    */
-
+/*  CSS category Base     */ /*  reset margin padding ...  */
+.l-grid-leftnav, body, figure, picture, img, figcaption, section, ul, li, input {
+margin: 0;
+padding: 0;
+}
+/*  CSS category Layout   */ /*  border display height media width ...  */
+.l-grid-leftnav {
+align-items: center;
+border-bottom: 1px solid #ccc;
+border-top: 1px solid #ccc;
+display: flex;
+flex-flow: row nowrap; /* Shorthand for flex-direction and flex-wrap */
+height: 54px;
+justify-content: space-between;
+margin: 4px auto;
+width: 976px;
+}
 	/*  Above the Fold end      */
 	</style>
 	<link rel="preload" href="components/leftnav/leftnav_skin.min.css" as="style" onload="this.rel='stylesheet'">
@@ -238,7 +254,7 @@ This is a test of the single-file vue component build -->
 
 		<ltdc-headtop id="js-headtop" class="l-grid-headtop is-signed-in"><!--  Component Begin  -->
 			<nav class="headtop__hb">
-				<a class="headtop__hb--a" @click="toggle">
+				<a id="js-headtop-hb__id" class="headtop__hb--a">
 					<hr class="headtop__hb--hr"><hr class="headtop__hb--hr"><hr class="headtop__hb--hr">
 					<p class="headtop__hb--p">MENU</p>
 				</a>
@@ -271,8 +287,49 @@ This is a test of the single-file vue component build -->
 				<span class="headtop--input__carttxt">Cart</span><span class="headtop--input__cartqty">0</span>
 				</p></a>
 			</nav>
-			<section class="drawerleft__menu" :class="{ isOpen__menu: isOpen__menu }"></section>
-			<nav class="drawerleft__scrim" :class="{ isOpen__scrim: isOpen__scrim }" @click="toggle"></nav>
+			<section id="js-headtop-menu__id" class="drawerleft__menu">
+<!--
+<section id="v-leftnav__id">
+	<ltdc-leftnav id="test1">
+		<ltdc-leftnav-l1 v-bind:desc="desc" href="">Home Decore</ltdc-leftnav-l1>
+			<ltdc-leftnav-l2 desc="" href="">Furniture</ltdc-leftnav-l2>
+				<ltdc-leftnav-l3 desc="" href="">Room Accents</ltdc-leftnav-l3>
+				<ltdc-leftnav-l3 desc="" href="">Outdoor</ltdc-leftnav-l3>
+			<ltdc-leftnav-l2 desc="" href="">Slip Covers</ltdc-leftnav-l2>
+		<ltdc-leftnav-l1 v-bind:desc="desc" href="">Garden + Outdoors</ltdc-leftnav-l1>
+			<ltdc-leftnav-l2 desc="" href="">Outdoor Decore</ltdc-leftnav-l2>
+	</ltdc-leftnav>
+</section>
+-->
+
+<!-- item template -->
+<template id="v-leftnav__templ">
+  <li>
+    <div
+      :class="{hidden: hidden}"
+      @click="toggle">
+      {{model.name}}
+      <span v-if="isFolder">[{{open ? '-' : '+'}}]</span>
+    </div>
+    <ul v-show="open" v-if="isFolder">
+      <item
+        class="item"
+        v-for="model in model.children"
+        :model="model">
+      </item>
+    </ul>
+  </li>
+</template>
+
+<!-- root instance element -->
+<ul id="v-leftnav__id">
+  <item
+    class="item"
+    :model="treeData">
+  </item>
+</ul>
+			</section>
+			<nav id="js-headtop-scrim__id" class="drawerleft__scrim"></nav>
 		</ltdc-headtop><!--  Component End  -->
 
 		<ltdc-headnav id="js-headnav" class="l-grid-headnav"><!--  Component Begin  -->
@@ -2351,12 +2408,7 @@ This is a test of the single-file vue component build -->
 	</section>
 </ltdc-breadpage><!--  Component End  -->
 
-<!--  footer 1: c-footone
-<aside class="c-Mockup" style="	border: 1px #e0dfdd solid;height: 226px;padding: 0; margin: 24px auto 0 auto;">footer one</aside> -->
 <ltdc-footer1>
-<!--
-
--->
 	<section class="brand--lsc__showb">
 		<aside class="l-grid-footer1 h-no-border__top">
 			<nav class="footer1__sig">
@@ -2528,8 +2580,9 @@ This is a test of the single-file vue component build -->
 <script src="components/reveal/reveal.js" async></script>
 <script src="components/refinesort/refinesort.js" async></script>
 
-<!--<script src="bookvue/dist/build.js" async></script>-->
+<script src="components/leftnav/leftnav.js" async></script>
 
+<!--<script src="bookvue/dist/build.js" async></script>-->
 
 </body>
 </html>
