@@ -1,8 +1,7 @@
 /*  CSS category State    */ /*  color display font visibility ...  */
 .c-leftnav .l-grid-leftnav {
 align-items: center;
-border-bottom: 1px solid #ccc;
-border-top: 1px solid #ccc;
+border-bottom: 1px solid #cacaca;
 display: flex;
 flex-flow: row nowrap; /* Shorthand for flex-direction and flex-wrap */
 height: 32px;
@@ -29,7 +28,8 @@ width: 100%;
 color: #000;
 }
 .c-leftnav li li li a {
-color: #ff0000;
+color: #000;
+font-weight: normal;
 padding-left: 16px;
 }
 .c-leftnav li li li li a {
@@ -38,10 +38,14 @@ font-size: 12px;
 font-weight: normal;
 padding-left: 24px;
 }
+.c-leftnav li li li nav { background-color: #fff !important;}
 
 /*  CSS category Theme    */ /*  color background hover ...  */
 
-.c-leftnav .leftnav__open svg.js-nav-minus { display: block; }
-.c-leftnav .leftnav__open svg.js-nav-plus  { display: none; }
+.c-leftnav .leftnav__open  svg.js-nav-minus { display: block; }
+.c-leftnav .leftnav__open  svg.js-nav-plus  { display: none; }
 .c-leftnav .leftnav__close svg.js-nav-minus { display: none; }
 .c-leftnav .leftnav__close svg.js-nav-plus  { display: block; } 
+
+body[data-brand="lsc"] .c-leftnav .isFolder { background-color: #fffaff; }
+body[data-brand="ltd"] .c-leftnav .isFolder { background-color: #f2faff; }
