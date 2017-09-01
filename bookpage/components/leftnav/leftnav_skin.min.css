@@ -29,8 +29,14 @@ width: 100%;
 color: #000;
 }
 .c-leftnav li li li a {
-color: #ff0000 !important;
-padding-left: 16px !important;
+color: #ff0000;
+padding-left: 16px;
+}
+.c-leftnav li li li li a {
+color: #949694;
+font-size: 12px;
+font-weight: normal;
+padding-left: 24px;
 }
 
 /*  CSS category Theme    */ /*  color background hover ...  */
