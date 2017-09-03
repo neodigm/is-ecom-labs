@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentTemplate xmlns="http://endeca.com/schema/content-template/2008" 
+                 xmlns:editors="editors"
+                 type="MainContent" 
+                 id="SearchBar">
+    <Description>Displays web site header for the book page</Description>
+    <ThumbnailUrl>/ifcr/tools/xmgr/img/template_thumbnails/Main_Slot.png</ThumbnailUrl>
+    <ContentItem>
+        <Name>Book Page Header</Name>      
+    </ContentItem>    
+    <EditorPanel>
+        <BasicContentItemEditor>
+        </BasicContentItemEditor>
+    </EditorPanel>
+</ContentTemplate>

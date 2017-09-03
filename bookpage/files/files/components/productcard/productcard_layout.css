@@ -5,16 +5,12 @@ padding: 0;
 }
 /*  CSS category Layout   */ /*  border display height media width ...  */
 .l-grid-productcard > section {
-align-items: flex-start;
-justify-content: center;
-display: flex;
-flex-flow: row wrap;
-align-content: space-between;
+display: grid;
+grid-template-columns: repeat(5, 1fr);
 margin: 0 auto !important;
 width: 980px;
 }
 .productcard {
-flex-basis: 18.8%;
 padding: 0; margin: 0 5px 8px 5px;
 position: relative;
 }
@@ -52,7 +48,6 @@ position: absolute;
 top: -22px;
 }
 .productcard .productcard__pic {
-background-color: #f2faff;
 display: block;
 height: 0;
 overflow: hidden;
@@ -126,9 +121,6 @@ text-decoration: underline;
   .productcard:hover .productcard__a--qv {
     display: none;
   }
-	.productcard {
-		flex-basis: 45vw;
-	}
 }
 @media only screen and (min-width:48em) and (max-width:61.1875em){
 /* medium */
@@ -136,7 +128,4 @@ text-decoration: underline;
     grid-template-columns: repeat(5, 1fr);
     width: inherit;
   }
-	.productcard {
-		flex-basis: 18.2vw;
-	}
 }

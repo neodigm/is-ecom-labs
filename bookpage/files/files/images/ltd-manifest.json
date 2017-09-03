@@ -1,0 +1,13 @@
+{
+	"name": "LTD",
+	"short_name": "LTD",
+	"icons": [
+		{
+			"src": "\/images\/ltd_android-chrome-192x192.png",
+			"sizes": "192x192",
+			"type": "image\/png"
+		}
+	],
+	"theme_color": "#297fb8",
+	"display": "standalone"
+}
