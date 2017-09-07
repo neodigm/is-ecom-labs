@@ -105,6 +105,7 @@ body[data-brand="ltd"] .l-grid-headtop { height: 89px; }
 .drawerleft__menu {
   box-shadow: 4px 4px 2px #767676;
   background-color: #fff;
+  overflow-x: scroll;
   position: fixed;
   top: 0; bottom: 0; left: -400px;
   transition: all 0.3s;
