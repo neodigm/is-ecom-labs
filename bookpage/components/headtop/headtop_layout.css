@@ -98,20 +98,27 @@ body[data-brand="ltd"] .headtop--input__cart { margin: 22px 1px 0 0; }
   padding: 2px 8px 2px 8px;
 }
 .headtop--input__carttxt { margin-top: 5px; }
-body[data-brand="lsc"] .headtop__img { background-image: url("media/global/images/foundation/img/fpo/lsc-logo-lg.jpg"); background-size: 380px 112px; }
-body[data-brand="ltd"] .headtop__img { background-image: url("media/global/images/foundation/img/fpo/ltd-logo-lg.jpg"); background-size: auto 87px; }
+body[data-brand="lsc"] .headtop__img { background-image: url("/media/global/images/foundation/img/fpo/lsc-logo-lg.jpg"); background-size: 380px 112px; }
+body[data-brand="ltd"] .headtop__img { background-image: url("/media/global/images/foundation/img/fpo/ltd-logo-lg.jpg"); background-size: auto 87px; }
 body[data-brand="lsc"] .l-grid-headtop { height: 114px; }
 body[data-brand="ltd"] .l-grid-headtop { height: 89px; }
 .drawerleft__menu {
   box-shadow: 4px 4px 2px #767676;
   background-color: #fff;
-  overflow-x: scroll;
+  overflow-y: scroll;
   position: fixed;
   top: 0; bottom: 0; left: -400px;
   transition: all 0.3s;
   width: 0;
   z-index: 16;
 }
+
+.drawerleft__menu::-webkit-scrollbar { width: 8px; }
+.drawerleft__menu::-webkit-scrollbar-track { background: rgba(0, 0, 0, 0.1); }
+
+body[data-brand="lsc"] .drawerleft__menu::-webkit-scrollbar-thumb { background: rgba(126, 45, 62, 0.5); }
+body[data-brand="ltd"] .drawerleft__menu::-webkit-scrollbar-thumb { background: rgba(41, 127, 184, 0.5); }
+
 .drawerleft__scrim {
   display: none;
   background-color: #000;
@@ -172,8 +179,8 @@ body[data-brand="ltd"] .l-grid-headtop { height: 89px; }
   .headtop__img {
     width: 352px;
   }
-  body[data-brand="lsc"] .headtop__img { background-image: url("media/global/images/foundation/img/fpo/lsc-logo-md-sm.jpg"); background-size: auto;}
-  body[data-brand="ltd"] .headtop__img { background-image: url("media/global/images/foundation/img/fpo/ltd-logo-md.jpg"); background-size: auto auto; }
+  body[data-brand="lsc"] .headtop__img { background-image: url("/media/global/images/foundation/img/fpo/lsc-logo-md-sm.jpg"); background-size: auto;}
+  body[data-brand="ltd"] .headtop__img { background-image: url("/media/global/images/foundation/img/fpo/ltd-logo-md.jpg"); background-size: auto auto; }
   body[data-brand="lsc"] .headtop__link { margin: 7px 1px 1px 1px; }
   body[data-brand="ltd"] .headtop__link { margin: 5px 1px 1px 1px; }
   .is-signed-in nav:nth-of-type(3) { width: 15% !important; }

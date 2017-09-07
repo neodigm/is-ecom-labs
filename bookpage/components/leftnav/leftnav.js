@@ -62,14 +62,14 @@ var vleftnav__id = new Vue({
               nL2Ct++;
             break;
             case 3:
-              if(typeof( oPush.children[nL2Ct] )!="undefined"){
-                if(typeof( oPush.children[nL2Ct].children )=="undefined"){
+              if(typeof( oPush.children[nL2Ct] )!="undefined"){ 
+                if(typeof( oPush.children[nL2Ct].children )=="undefined"){ 
                     oPush.children[nL2Ct].children=[];
                 }
                   oPush.children[nL2Ct].children.push( {name: sName, href: sHref} );
               }
           }
-      }
+      }      
     }
   },
   created: function(){
