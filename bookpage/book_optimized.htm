@@ -266,19 +266,16 @@ body,figcaption,figure,img,input,li,picture,section,ul{margin:0;padding:0}.l-foo
 			</nav>
 			<section id="js-headtop-menu__id" class="drawerleft__menu">
 
-
-
-
-
-
-
-
+<script>
+var ltdc_leftnav = { name: "level0", href: "/", children: []};
+var jsnCat = <dsp:include page="/cartridges/CategoryList/CategoryListJson.jsp"/>;
+</script>
 
 <template id="v-leftnav__templ">
   <li>
     <nav class="l-grid-leftnav"
       :class="{hidden: hidden, leftnav__open: open, leftnav__close: !open, isFolder: isFolder}">
-      <a href="{{model.href}}">
+      <a :href="model.href">
       {{model.name}}
       </a>
 
@@ -305,46 +302,11 @@ body,figcaption,figure,img,input,li,picture,section,ul{margin:0;padding:0}.l-foo
 </template>
 
 <section id="v-leftnav__id" class="c-leftnav"><!--  Component Begin  -->
-	<script>
-	var ltdc_leftnav__hier = {
-	  name: "level0", href: "/",
-	  children: [
-	    { name: "Home Decore", href: "/",
-	    children: [
-		    { name: "Furniture", href: "/",
-		    children: [
-				{ name: "Room Accents", href: "/" },
-				{ name: "Outdoors", href: "/" }
-		    ] },
-		    { name: "Slipcovers", href: "/" },
-		    { name: "Storage", href: "/" },
-		    { name: "Lighting + Lamps", href: "/" },
-		    { name: "Rugs + Doormats", href: "/" },
-	    ] },
-	    { name: "Garden + Outdoors", href: "/",
-	    children: [
-		    { name: "Outdoor Decore", href: "/" },
-		    { name: "Solar + Outdoor Lighting", href: "/" }
-	    ] }
-	  ]
-	};
-	</script>
 	<ul>
-		<ltdc-leftnav :model="ltdc_leftnav__hier">
+		<ltdc-leftnav :model="ltdc_leftnav">
 		</ltdc-leftnav>
 	</ul>
 </section><!--  Component End  -->
-
-
-
-
-
-
-
-
-
-
-
 
 			</section>
 			<nav id="js-headtop-scrim__id" class="drawerleft__scrim"></nav>
