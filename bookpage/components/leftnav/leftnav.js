@@ -43,7 +43,6 @@ var vleftnav__id = new Vue({
   },
   methods: {
     parseJSONCat: function(){
-console.log(jsnCat);
       var oPush={}, nLvl=0, sName="", sHref="", nL2Ct = -1;
       for (var key in jsnCat) {
           nLvl=1;
@@ -56,7 +55,6 @@ console.log(jsnCat);
               oPush={name: sName, href: sHref};
               ltdc_leftnav.children.push( oPush );
               nL2Ct = -1;
-console.log( oPush );
             break;
             case 2:
               if(typeof( oPush.children )=="undefined"){ oPush.children=[]; }
