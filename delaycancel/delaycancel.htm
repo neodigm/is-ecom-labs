@@ -979,7 +979,7 @@ $(document).ready(function(){
 <style>
 	.l-delaycancel .caption__panel{
 		margin: 2px;
-		padding: 8px;
+		padding: 4px;
 	}
 	.l-delaycancel .caption__panel p {
 		font-family: sans-serif;
@@ -987,20 +987,20 @@ $(document).ready(function(){
 		margin-bottom: 4px;
 	}
 	.l-delaycancel .productcard{
-		margin: 2px;
-		padding: 2px;
+		margin: 4px 2px;
+		padding: 4px 2px;
 		border-bottom: solid 1px #ccc;
 	}
 	.l-delaycancel p {
 		font-size: 10px;
 	}
 	.l-delaycancel .qty__p {
-		color: #4fb466;
+		color: #3ca554;
 		font-size: 12px;
 	}
 	.l-delaycancel .productcard__th{
 		height: auto;
-		width: 100px;
+		width: 148px;
 	}
 	.l-delaycancel .desc__img--grid{
 		align-items: flex-start;
@@ -1026,11 +1026,46 @@ $(document).ready(function(){
 		font-size: 11px !important;
 		line-height: 18px;
 	}
-	.l-delaycancel .switch label {
-    	width: 96px;
+	.l-delaycancel .switch{
+		margin-top: 66px;
+	}
+	.l-delaycancel .switch-on{
+		margin-top: 3px;
+		font-size: 10px;
+		left: -62px;
+	}
+	.l-delaycancel .switch-off{
+		margin-top: 3px;
+		font-size: 10px;
+		left: -36px;
+	}
+	.l-delaycancel input:checked+label {
+		background: #3ca554;
+	}
+	.l-delaycancel input:checked+label .switch-off {
+		display: none;
 	}
 	@media only screen and (max-width: 47.9375em) {
 	/* small */
+		.l-delaycancel .desc__img--grid{
+			flex-flow: column-reverse;
+			align-items: center;
+		}
+		.l-delaycancel .productcard__th{
+			width: 174px;
+		}
+		.l-delaycancel .productcard__p{
+			font-size: 11px !important;
+			white-space: nowrap !important;
+			margin: 2px;
+		}
+		.l-delaycancel .productcard__p span{
+			display: inline !important;
+			color: #000;
+		}
+		.l-delaycancel .switch{
+			margin-top: 0;
+		}
 	}
 	@media only screen and (min-width:48em) and (max-width:61.1875em){
 	/* medium */
@@ -1039,14 +1074,9 @@ $(document).ready(function(){
 	/* small and medium */
 	}
 
-.l-delaycancel .productcard div {
-border: solid 1px #edba08;
-}
-
 </style>
 <script type="text/javascript">
-		$( document).ready(fucntion(){
-alert( "yikes!" );
+		$( document ).ready(function(){
 			$("#js-chk-keep__1--id").on("change", function( e ){
 console.log( e.target );
 			});
@@ -1055,24 +1085,28 @@ console.log( e.target );
 <section class=" l-delaycancel">
 	<section class="row hide-for-small-only panel caption__panel">
 		<div class="column medium-4"><p>Description</p></div>
-		<div class="column medium-3"><p>Product #</p></div>
-		<div class="column medium-1"><p>Quantity</p></div>
-		<div class="column medium-2"><p>Action</p></div>
+		<div class="column medium-3"><p class="text-center">Product #</p></div>
+		<div class="column medium-1"><p class="text-center">Quantity</p></div>
+		<div class="column medium-2"><p class="text-center">Action</p></div>
 	</section>
+	<!-- Product Card Begin -->
 	<section class="row productcard">
-		<div class="column medium-4 desc__img--grid">
+		<div class="column small-10 medium-4 desc__img--grid">
 			<img class="productcard__th" src="./delaycancel_files/65019_1237032_C4N_CAT_th.jpg" alt="Product desc">
-			<aside class="desc__img--aside">
+			<aside class="desc__img--aside small-text-center">
 				<a class="desc__img--a">Critter Boot Toppers - Cat</a>
 				<p class="desc__img--p">Ready to ship by MM/DD/YYYY</p>
 			</aside>
 		</div>
-		<div class="column medium-3">
-			<p>176477-8C4N-CAT</p>
+		<div class="column small-10 medium-3 text-center">
+			<p class="productcard__p"><span class="show-for-small">Product # </span>176477-8C4N-CAT</p>
 		</div>
-		<div class="column medium-1"><p class="qty__p text-center">2</p></div>
-		<div class="column medium-2 text-center">
-			<div class="switch">
+		<div class="column small-10 medium-1">
+			<p class="productcard__p qty__p text-center"><span class="show-for-small">Quantity </span>2</p>
+		</div>
+		<div class="column small-10 medium-2 text-center">
+			<figure class="resp_full_height show-for-small"></figure>
+			<div class="switch large round">
 				<input id="js-chk-keep__1--id" type="checkbox" checked="">
 				<label for="js-chk-keep__1--id">
 					<span class="switch-on">Keep</span>
@@ -1081,6 +1115,34 @@ console.log( e.target );
 			</div>
 		</div>
 	</section>
+	<!-- Product Card End -->
+	<!-- Product Card Begin -->
+	<section class="row productcard">
+		<div class="column small-10 medium-4 desc__img--grid">
+			<img class="productcard__th" src="./delaycancel_files/64811_1235750_SCC_FCS_th.jpg" alt="Product desc">
+			<aside class="desc__img--aside small-text-center">
+				<a class="desc__img--a">Cozy Plush-Lined Slipper Socks - Owl</a>
+				<p class="desc__img--p">Ready to ship by MM/DD/YYYY</p>
+			</aside>
+		</div>
+		<div class="column small-10 medium-3 text-center">
+			<p class="productcard__p"><span class="show-for-small">Product # </span>142746-7SDO-OWL</p>
+		</div>
+		<div class="column small-10 medium-1">
+			<p class="productcard__p qty__p text-center"><span class="show-for-small">Quantity </span>1</p>
+		</div>
+		<div class="column small-10 medium-2 text-center">
+			<figure class="resp_full_height show-for-small"></figure>
+			<div class="switch large round">
+				<input id="js-chk-keep__2--id" type="checkbox" checked="">
+				<label for="js-chk-keep__2--id">
+					<span class="switch-on">Keep</span>
+					<span class="switch-off">Cancel</span>
+				</label>
+			</div>
+		</div>
+	</section>
+	<!-- Product Card End -->
 </section>
 
 
