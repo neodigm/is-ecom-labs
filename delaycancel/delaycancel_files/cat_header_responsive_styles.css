@@ -1,0 +1,95 @@
+/* ------------------------------
+			Category Header Styles
+------------------------------*/
+#main-content .categoryHero {
+	/* width: 792px; */
+	/* min-height: 300px; */
+	/* padding: 20px 0 0 0; */
+	margin: 0;
+}
+
+#main-content .categoryHeroLeft {
+	width: 495px;
+	min-height: 300px;
+	margin-right: 5px;
+	float: left;
+}
+
+#main-content .categoryHeroRight {
+	/* width: 285px; */
+	max-height: 300px;
+	margin-right: 0;
+	overflow-y:scroll;
+	overflow-x:hidden;
+	float: left;
+}
+#main-content .cat-desc {font-size: 0.85em; }
+#main-content .heroCopy1 {/* width: 220px; margin: 10px 10px 0 10px; */}
+#main-content .heroCopy1 h1 {font-size: 30px; font-weight: lighter; color: #48515F; margin-top: 0 !important;}
+#main-content .heroCopy1 p {font-size: 12px; color:#46515F; padding-right: 8px;}
+#main-content .heroCopy1, #main-content .categoryHeroLeft img {float: left; text-align: left; line-height: 1.1em;}
+#main-content .heroCopy1 a { font-size:14px; font-weight: bold; color:#46515F; text-decoration: underline;}
+#main-content .heroCopy1 a:hover {color:#46515F; text-decoration: none;}
+
+#main-content .scrollContent1 {
+	width: 265px;
+	min-height: 148px;
+	border-bottom: 1px solid #ccc;
+	float: left;
+	text-align: left;
+}
+
+#main-content .scrollContent1 img {margin-right: 10px; float:left;}
+
+#main-content .scrollCopy1 {width: 120px; float: left;}
+#main-content .scrollCopy1 a {font-size: 15px !important; font-weight: bold; color: #46515F; margin-bottom: 5px; display: inline-block; line-height: 1.1em;}
+#main-content .scrollCopy1 p {font-size: 11px !important; font-weight: normal; color: #46515F; line-height: 1.1em;}
+#main-content .scrollCopy1 em {display: inline-block; color: #999999; margin-left: 2px;}
+
+.grey {color:#999999;}
+
+.mt24 {margin-top: 24px;}
+
+/* ------------------------------
+		Webkit Scrollbar Styles
+------------------------------*/
+#main-content .categoryHeroRight::-webkit-scrollbar {
+	width: 12px;
+}
+
+#main-content .categoryHeroRight::-webkit-scrollbar-track {
+	border: 1px solid #e4e4e4;
+	border-radius: 10px;
+}
+
+#main-content .categoryHeroRight::-webkit-scrollbar-thumb {
+	background-color: #d1d1d1;
+	border-radius: 10px;
+}
+
+/* ------------------------------
+			Clear Fix
+------------------------------*/
+.clear{clear:both;display:block;overflow:hidden;visibility:hidden;width:0;height:0}.clearfix:after{clear:both;content:' ';display:block;font-size:0;line-height:0;visibility:hidden;width:0;height:0}* html .clearfix,*:first-child+html .clearfix{zoom:1}
+
+
+/* ------------------------------
+		Control Image Size
+------------------------------*/
+.heroImage{width:252px;height:300px;}
+.carouselImage{width:105px;height:124px;}
+
+#main-content .scrollCopy1 a {text-decoration:none;}
+
+
+/* Small Displays: 0 - 767px, 0 - 47.9375em. Note this is min-width triggered, not an enforced range.*/
+@media only screen and (max-width: 47.9375em) {
+	#main-content .heroCopy1 {
+		 text-align:center;
+		 width: 100%;
+	}
+	
+	#main-content .heroCopy1 h1 {
+		margin-bottom: 0;
+	}
+}
