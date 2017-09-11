@@ -24,6 +24,37 @@
 	 	color: #fff;
 	 }
 
+/*  Type Ahead */
+.typhead {
+width: 400px;
+padding: 2px;
+border: solid 1px #aaa;
+-webkit-transition: -webkit-transform .15s linear;
+-webkit-box-shadow: 0 3px 6px rgba(0,0,0,.25);
+-moz-box-shadow:    0 3px 6px rgba(0,0,0,.25);  
+}
+.typhead .typhead--ul {
+margin: 6px 0;
+padding: 0 14px;
+}
+.typhead .typhead--ul:hover {}
+.typhead .typhead--li {
+color: #222;
+background-color:  #FFF;
+font-family: sans-serif;
+font-size: 10px;
+line-height: 1.4;
+cursor: pointer; 
+margin-left: 8px;
+}
+.typhead .typhead--li__cap {
+font-size: 1.2em;
+font-weight: 500;
+line-height: 1.5;
+color: #7D2A35;
+cursor: default;
+margin-left: -8px;
+}
 	/*  CSS category Theme    */ /*  color background hover ...  */
 	body[data-brand="lsc"] .headnav__search--go { background-color: #672634; }
 	body[data-brand="ltd"] .headnav__search--go { background-color: #007095; }
@@ -31,3 +62,6 @@
 	body[data-brand="ltd"] .headnav__link--a { color: #2ba6cb; }
 	body[data-brand="lsc"] .headnav__search--go:hover, .headnav__search--go:focus { background-color: #470614; }
 	body[data-brand="ltd"] .headnav__search--go:hover, .headnav__search--go:focus { background-color: #285370; }
+
+body[data-brand="lsc"] .typhead .typhead--li:hover { background-color: #7e2d3e; }
+body[data-brand="ltd"] .typhead .typhead--li:hover { background-color: #2ba6cb; }
