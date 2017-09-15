@@ -1000,6 +1000,7 @@ $(document).ready(function(){
 	}
 	.l-delaycancel .productcard__th{
 		height: auto;
+		margin-bottom: 4px;
 		width: 100px;
 	}
 	.l-delaycancel .desc__img--grid{
@@ -1050,7 +1051,7 @@ $(document).ready(function(){
 	/* small */
 		.l-delaycancel .desc__img--grid{
 			flex-flow: column-reverse;
-			align-items: center;
+			QQQQalign-items: center;
 		}
 		.l-delaycancel .productcard__th{
 			QQQQwidth: 68vw;
@@ -1064,6 +1065,9 @@ $(document).ready(function(){
 		.l-delaycancel .productcard__p span{
 			display: inline !important;
 			color: #000;
+		}
+		.l-delaycancel .desc__img--figcaption {
+		    margin-left: 0;
 		}
 		.l-delaycancel .switch{
 			margin-top: 0;
@@ -1094,20 +1098,23 @@ console.log( e.target );
 
 	<!-- Product Card Begin -->
 	<section class="row productcard">
-		<figure class="column small-10 medium-5 desc__img--grid">
-			<img class="productcard__th" src="./delaycancel_files/65019_mn.jpg" alt="Product desc">
-			<figcaption class="desc__img--figcaption small-text-center">
+		<figure class="column small-4 medium-5 desc__img--grid">
+			<div class="desc__img--grid">
+				<p class="show-for-small-only">ducks</p>
+				<img class="productcard__th" src="./delaycancel_files/65019_mn.jpg" alt="Product desc">
+			</div>
+			<figcaption class="desc__img--figcaption QQQsmall-text-center">
 				<a class="desc__img--a">Critter Boot Toppers - Cat</a>
 				<p class="desc__img--p">Ready to ship by MM/DD/YYYY</p>
 			</figcaption>
 		</figure>
-		<div class="column small-10 medium-2 text-center">
+		<div class="column small-2 medium-2 text-center">
 			<p class="productcard__p"><span class="show-for-small">Product # </span>138258-9SCC-FCS</p>
 		</div>
-		<div class="column small-10 medium-1">
+		<div class="column small-1 medium-1">
 			<p class="productcard__p qty__p text-center"><span class="show-for-small">Quantity </span>1</p>
 		</div>
-		<div class="column small-10 medium-2 text-center">
+		<div class="column small-3 medium-2 text-center">
 			<figure class="resp_full_height show-for-small"></figure>
 			<div class="switch large round">
 				<input id="js-chk-keep__1--id" type="checkbox" checked="">
