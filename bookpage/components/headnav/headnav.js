@@ -13,23 +13,25 @@ var vTA = new Vue({
 	el: "#c_headnavtype__id",
 	data: {
 		ta_data: "",
-		ta_response: {}
+		ta_response: {},
+		is_hidden: "hidden"
 	},
 	watch: {
 	 ta_data: function( e ){
 	   console.log("WATCH | " + this.ta_data);
-	
+
 	   if( isNumeric( this.ta_data ) && (this.ta_data.length > 5)){
-	      axios.get( 'https://www.lakeside.com/common/includes/inc_search_type_ahead.jsp?q=1418930&limit=12&timestamp=1504554461655&environment=typeAhead_queries&sort=alpha&searchFrom=&Ntt=1418930*&_=1504554389332' )
+	      //axios.get( 'https://www.lakeside.com/common/includes/inc_search_type_ahead.jsp?q=1418930&limit=12&timestamp=1504554461655&environment=typeAhead_queries&sort=alpha&searchFrom=&Ntt=1418930*&_=1504554389332' )
+	      axios.get( "cat.json" )
 	      .then(function (response) {
-	        this.ta_response = response;
+	        //this.ta_response = response;
 	        console.log(response);
 	      })
 	      .catch(function (error) {
 	        console.log(error);
-	      }); 
+	      });
 	   }
-	
+
 	 }
 	},
 	methods: {
@@ -37,7 +39,7 @@ var vTA = new Vue({
 
 		}
 	}
-}); 
+});
 
 
 function isNumeric(n) {
