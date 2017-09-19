@@ -1402,6 +1402,21 @@ items to ship.</p>
 $16.98
 </p> </div>
 </section>
+
+<!-- NAVEENS SNIPPET BEGIN -->
+<div id="shareBtn" class="btn btn-success clearfix">Share</div>
+<script>
+document.getElementById('shareBtn').onclick = function() {
+  FB.ui({
+    method: 'share',
+    display: 'popup',
+    quote: 'Look What I Just Bought – Thought you’d like to get one too',
+    href: 'https://stage2.lakeside.com/Apparel---Beauty/Fashion-Accessories/Socks--Hosiery/5-Pair-Star-Wars-Licensed-Socks//prod2700075.jmp',
+  }, function(response){});
+}
+</script>
+<!-- NAVEENS SNIPPET END -->
+
 <!-- PRODUCT END -->
 
 <!-- PRODUCT BEGIN -->
