@@ -1258,30 +1258,47 @@ items to ship.</p>
 
 <style>
 	.share__panel {
-		padding: 6px;
-		background-color: #FFFAFF !important;
-	}
-	.share__panel--md {
-		padding: 6px 6px 10px 6px;
-		background-color: #FFFAFF !important;
-	}
-	.share__panel--lg {
 		padding: 4px 4px 4px 4px;
-		background-color: #FFFAFF !important;
+		background-color: #fff !important;
 	}
-	.share__panel--lg .share__span {
+	.share__panel .share__span {
 		line-height: 2.1;
 	}
 	.share__span {
 		font-family: sans-serif;
 		font-size: 14px;
 		font-weight: 300;
-		color: #7e2d3e;
+		color: #333;
 		text-align: center;
 	}
 	.share__nav {
 		display: inline;
 		float: right;
+	}
+	.share__panel .share__btn--fb {
+		font-size: 13px;
+		font-family: Helvetica, Arial, sans-serif;
+		vertical-align: middle;
+		float: right;
+		padding: 4px 6px 3px 6px;
+		border-radius: 3px;
+		line-height: 1.4; text-align: right; width: 72px;
+		background: #4267b2;
+		border: 1px solid #4267b2;
+		color: #fff;
+		cursor: pointer;
+		font-weight: 400;
+	}
+	.share__panel .share__btn--fb:hover {
+		background: #365899;
+		border: 1px solid #365899;
+	}
+	.share__panel .share__btn--fb svg {
+		width: 14px; height: 14px;
+		vertical-align: middle;
+		fill: #fff;
+		margin-right: 4px;
+		margin-top: -2px;
 	}
 </style>
 
@@ -1317,30 +1334,10 @@ items to ship.</p>
 <section class="row show-for-small">
 	<div class="column small-10">
 		<figure class="resp_half_height"></figure>
-		<aside class="share__panel--lg text-center panel radius">
-<span class="share__span" style="float: left">
-<svg fill="#9c4a62" height="18" viewBox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg">
-    <path d="M0 0h24v24H0z" fill="none"/>
-    <path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"/>
-</svg>
-</span>
+		<aside class="share__panel text-center panel radius">
+
 			<span class="share__span">Look at what I bought </span>
-			<script>(function(d, s, id) {
-			  var js, fjs = d.getElementsByTagName(s)[0];
-			  if (d.getElementById(id)) return;
-			  js = d.createElement(s); js.id = id;
-			  js.src = "https://connect.facebook.net/en_US/all.js#xfbml=1&version=v2.10&appId=1413773718873852";
-			  fjs.parentNode.insertBefore(js, fjs);
-			}(document, 'script', 'facebook-jssdk'));
-		</script>
-			<nav class="share__nav">
-				<div class="fb-share-button" data-href="https://stage2.lakeside.com/Home-Decor/Curtains---Window-Coverings/Short-Panel-Blackout-Curtain//prod2440103.jmp" LUBAdata-layout="button" data-size="large" data-mobile-iframe="true">
-				  <a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fstage2.lakeside.com%2FHome-Decor%2FCurtains---Window-Coverings%2FShort-Panel-Blackout-Curtain%2F%2Fprod2440103.jmp&amp;src=sdkpreparse">
-				  Share
-				  </a>
-				</div>
-			</nav>
-			<div id="fb-root"></div>
+
 		</aside>
 	</div>
 </section>
@@ -1358,30 +1355,17 @@ items to ship.</p>
 <br><p class="resp_msg_body_i">In stock</p>
 
 <!-- Load Facebook SDK for JavaScript -->
-<aside class="share__panel--lg text-center panel radius">
-<span class="share__span" style="float: left">
-<svg fill="#9c4a62" height="18" viewBox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg">
-    <path d="M0 0h24v24H0z" fill="none"/>
-    <path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"/>
-</svg>
-</span>
+<aside class="share__panel text-center panel radius">
+
 	<span class="share__span">Look at what I bought </span>
-	<script>(function(d, s, id) {
-	  var js, fjs = d.getElementsByTagName(s)[0];
-	  if (d.getElementById(id)) return;
-	  js = d.createElement(s); js.id = id;
-	  js.src = "https://connect.facebook.net/en_US/all.js#xfbml=1&version=v2.10&appId=1413773718873852";
-	  fjs.parentNode.insertBefore(js, fjs);
-	}(document, 'script', 'facebook-jssdk'));
-	</script>
-	<nav class="share__nav">
-		<div class="fb-share-button" data-href="https://stage2.lakeside.com/Home-Decor/Curtains---Window-Coverings/Short-Panel-Blackout-Curtain//prod2440103.jmp" data-layout="button" data-size="large" data-mobile-iframe="true">
-		  <a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fstage2.lakeside.com%2FHome-Decor%2FCurtains---Window-Coverings%2FShort-Panel-Blackout-Curtain%2F%2Fprod2440103.jmp&amp;src=sdkpreparse">
-		  Share
-		  </a>
-		</div>
-	</nav>
-	<div id="fb-root"></div>
+
+<a class="button share__btn--fb">
+<svg viewBox="0 0 184 184">
+<path transform="scale(0.1,-0.1) translate(0,-1536)"
+d="M1451 1408q35 0 60 -25t25 -60v-1366q0 -35 -25 -60t-60 -25h-391v595h199l30 232h-229v148q0 56 23.5 84t91.5 28l122 1v207q-63 9 -178 9q-136 0 -217.5 -80t-81.5 -226v-171h-200v-232h200v-595h-735q-35 0 -60 25t-25 60v1366q0 35 25 60t60 25h1366z"
+/></svg>Share
+</a>
+
 </aside>
 <!-- End Facebook SDK for JavaScript -->
 
@@ -1405,17 +1389,31 @@ $16.98
 
 <!-- NAVEENS SNIPPET BEGIN 
 <div id="shareBtn" class="button expand">Share</div>
+
+<script src="https://connect.facebook.net/en_US/all.js#xfbml=1&version=v2.10&appId=1413773718873852" async></script>
+<div id="shareBtn" class="button radius resp_btn_brand">Share</div>
 <script>
-document.getElementById('shareBtn').onclick = function() {
+document.getElementById('shareBtn').onclick = function(){
+  fireTealiumEvent({"e_order_confirm_fb_share_click" : "t"});
   FB.ui({
-    method: 'share',
-    display: 'popup',
-    quote: 'Look What I Just Bought – Thought you’d like to get one too',
-    href: 'https://stage2.lakeside.com/Apparel---Beauty/Fashion-Accessories/Socks--Hosiery/5-Pair-Star-Wars-Licensed-Socks//prod2700075.jmp',
-  }, function(response){});
+	method: 'share',
+	display: 'popup',
+	quote: 'Look What I Just Bought Thought you would like to get one too..',
+	href: 'https://stage.lakeside.com/Apparel---Beauty/Fashion-Accessories/Socks--Hosiery/5-Pair-Star-Wars-Licensed-Socks//prod2700075.jmp',
+  }, function(response){
+   	  console.log(response);
+   	  if (response && !response.error_message) {
+                fireTealiumEvent({"e_order_confirm_fb_share_post" : "t"});
+       	} else {
+         	fireTealiumEvent({"e_order_confirm_fb_share_cancel" : "t"});
+       	}
+  });
+}
+function fireTealiumEvent(o){
+	console.log( o.toString() );
 }
 </script>
-NAVEENS SNIPPET END -->
+<!--  NAVEENS SNIPPET END -->
 
 <!-- PRODUCT END -->
 
@@ -1450,29 +1448,16 @@ NAVEENS SNIPPET END -->
 <section class="row show-for-small">
 	<div class="column small-10">
 		<figure class="resp_half_height"></figure>
-		<aside class="share__panel--lg text-center panel radius">
-<span class="share__span" style="float: left">
-<svg fill="#9c4a62" height="18" viewBox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg">
-    <path d="M0 0h24v24H0z" fill="none"/>
-    <path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"/>
-</svg>
-</span>
+		<aside class="share__panel text-center panel radius">
+
 			<span class="share__span">Look at what I bought </span>
-			<script>(function(d, s, id) {
-			  var js, fjs = d.getElementsByTagName(s)[0];
-			  if (d.getElementById(id)) return;
-			  js = d.createElement(s); js.id = id;
-			  js.src = "https://connect.facebook.net/en_US/all.js#xfbml=1&version=v2.10&appId=1413773718873852";
-			  fjs.parentNode.insertBefore(js, fjs);
-			}(document, 'script', 'facebook-jssdk'));
-			</script>
-			<nav class="share__nav">
-		<div class="fb-share-button" data-href="https://stage2.lakeside.com/Garden--Outdoor---DIY/Garden/Outdoor-Lighting/6-Pc--Solar-Lighted-Stake-Sets//prod1940017.jmp" data-layout="button" data-size="large" data-mobile-iframe="true">
-			<a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fstage2.lakeside.com%2FGarden--Outdoor---DIY%2FGarden%2FOutdoor-Lighting%2F6-Pc--Solar-Lighted-Stake-Sets%2F%2Fprod1940017.jmp&amp;src=sdkpreparse">
-				  Share
-				  </a>
-				</div>
-			</nav>
+
+<a class="button share__btn--fb">
+<svg viewBox="0 0 184 184">
+<path transform="scale(0.1,-0.1) translate(0,-1536)"
+d="M1451 1408q35 0 60 -25t25 -60v-1366q0 -35 -25 -60t-60 -25h-391v595h199l30 232h-229v148q0 56 23.5 84t91.5 28l122 1v207q-63 9 -178 9q-136 0 -217.5 -80t-81.5 -226v-171h-200v-232h200v-595h-735q-35 0 -60 25t-25 60v1366q0 35 25 60t60 25h1366z"
+/></svg>Share
+</a>
 			<div id="fb-root"></div>
 		</aside>
 	</div>
@@ -1490,30 +1475,17 @@ NAVEENS SNIPPET END -->
 <br><p class="resp_msg_body_i">In stock</p>
 
 <!-- Load Facebook SDK for JavaScript -->
-<aside class="share__panel--lg text-center panel radius">
-<span class="share__span" style="float: left">
-<svg fill="#9c4a62" height="18" viewBox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg">
-    <path d="M0 0h24v24H0z" fill="none"/>
-    <path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"/>
-</svg>
-</span>
+<aside class="share__panel text-center panel radius">
+
 	<span class="share__span">Look at what I bought </span>
-	<script>(function(d, s, id) {
-	  var js, fjs = d.getElementsByTagName(s)[0];
-	  if (d.getElementById(id)) return;
-	  js = d.createElement(s); js.id = id;
-	  js.src = "https://connect.facebook.net/en_US/all.js#xfbml=1&version=v2.10&appId=1413773718873852";
-	  fjs.parentNode.insertBefore(js, fjs);
-	}(document, 'script', 'facebook-jssdk'));
-	</script>
-	<nav class="share__nav">
-		<div class="fb-share-button" data-href="https://stage2.lakeside.com/Garden--Outdoor---DIY/Garden/Outdoor-Lighting/6-Pc--Solar-Lighted-Stake-Sets//prod1940017.jmp" data-layout="button" data-size="large" data-mobile-iframe="true">
-			<a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fstage2.lakeside.com%2FGarden--Outdoor---DIY%2FGarden%2FOutdoor-Lighting%2F6-Pc--Solar-Lighted-Stake-Sets%2F%2Fprod1940017.jmp&amp;src=sdkpreparse">
-		  Share
-		  </a>
-		</div>
-	</nav>
-	<div id="fb-root"></div>
+
+<a class="button share__btn--fb">
+<svg viewBox="0 0 184 184">
+<path transform="scale(0.1,-0.1) translate(0,-1536)"
+d="M1451 1408q35 0 60 -25t25 -60v-1366q0 -35 -25 -60t-60 -25h-391v595h199l30 232h-229v148q0 56 23.5 84t91.5 28l122 1v207q-63 9 -178 9q-136 0 -217.5 -80t-81.5 -226v-171h-200v-232h200v-595h-735q-35 0 -60 25t-25 60v1366q0 35 25 60t60 25h1366z"
+/></svg>Share
+</a>
+
 </aside>
 <!-- End Facebook SDK for JavaScript -->
 
@@ -1568,30 +1540,17 @@ $10.88
 <section class="row show-for-small">
 	<div class="column small-10">
 		<figure class="resp_half_height"></figure>
-		<aside class="share__panel--lg text-center panel radius">
-<span class="share__span" style="float: left">
-<svg fill="#9c4a62" height="18" viewBox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg">
-    <path d="M0 0h24v24H0z" fill="none"/>
-    <path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"/>
-</svg>
-</span>
+		<aside class="share__panel text-center panel radius">
+
 			<span class="share__span">Look at what I bought </span>
-			<script>(function(d, s, id) {
-			  var js, fjs = d.getElementsByTagName(s)[0];
-			  if (d.getElementById(id)) return;
-			  js = d.createElement(s); js.id = id;
-			  js.src = "https://connect.facebook.net/en_US/all.js#xfbml=1&version=v2.10&appId=1413773718873852";
-			  fjs.parentNode.insertBefore(js, fjs);
-			}(document, 'script', 'facebook-jssdk'));
-			</script>
-			<nav class="share__nav">
-		<div class="fb-share-button" data-href="https://stage2.lakeside.com/Apparel---Beauty/Fashion-Accessories/Socks--Hosiery/5-Pair-Star-Wars-Licensed-Socks//prod2700075.jmp?fm=search" data-layout="button" data-size="large" data-mobile-iframe="true">
-			<a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fstage2.lakeside.com%2FApparel---Beauty%2FFashion-Accessories%2FSocks--Hosiery%2F5-Pair-Star-Wars-Licensed-Socks%2F%2Fprod2700075.jmp&amp;src=sdkpreparse">
-				  Share
-				  </a>
-				</div>
-			</nav>
-			<div id="fb-root"></div>
+
+<a class="button share__btn--fb">
+<svg viewBox="0 0 184 184">
+<path transform="scale(0.1,-0.1) translate(0,-1536)"
+d="M1451 1408q35 0 60 -25t25 -60v-1366q0 -35 -25 -60t-60 -25h-391v595h199l30 232h-229v148q0 56 23.5 84t91.5 28l122 1v207q-63 9 -178 9q-136 0 -217.5 -80t-81.5 -226v-171h-200v-232h200v-595h-735q-35 0 -60 25t-25 60v1366q0 35 25 60t60 25h1366z"
+/></svg>Share
+</a>
+
 		</aside>
 	</div>
 </section>
@@ -1609,30 +1568,17 @@ $10.88
 <br><p class="resp_msg_body_i">In stock</p>
 
 <!-- Load Facebook SDK for JavaScript -->
-<aside class="share__panel--lg text-center panel radius">
-<span class="share__span" style="float: left">
-<svg fill="#9c4a62" height="18" viewBox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg">
-    <path d="M0 0h24v24H0z" fill="none"/>
-    <path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"/>
-</svg>
-</span>
+<aside class="share__panel text-center panel radius">
+
 	<span class="share__span">Look at what I bought </span>
-	<script>(function(d, s, id) {
-	  var js, fjs = d.getElementsByTagName(s)[0];
-	  if (d.getElementById(id)) return;
-	  js = d.createElement(s); js.id = id;
-	  js.src = "https://connect.facebook.net/en_US/all.js#xfbml=1&version=v2.10&appId=1413773718873852";
-	  fjs.parentNode.insertBefore(js, fjs);
-	}(document, 'script', 'facebook-jssdk'));
-	</script>
-	<nav class="share__nav">
-		<div class="fb-share-button" data-href="https://stage2.lakeside.com/Apparel---Beauty/Fashion-Accessories/Socks--Hosiery/5-Pair-Star-Wars-Licensed-Socks//prod2700075.jmp?fm=search" data-layout="button" data-size="large" data-mobile-iframe="true">
-			<a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fstage2.lakeside.com%2FApparel---Beauty%2FFashion-Accessories%2FSocks--Hosiery%2F5-Pair-Star-Wars-Licensed-Socks%2F%2Fprod2700075.jmp&amp;src=sdkpreparse">
-		  Share
-		  </a>
-		</div>
-	</nav>
-	<div id="fb-root"></div>
+
+<a class="button share__btn--fb">
+<svg viewBox="0 0 184 184">
+<path transform="scale(0.1,-0.1) translate(0,-1536)"
+d="M1451 1408q35 0 60 -25t25 -60v-1366q0 -35 -25 -60t-60 -25h-391v595h199l30 232h-229v148q0 56 23.5 84t91.5 28l122 1v207q-63 9 -178 9q-136 0 -217.5 -80t-81.5 -226v-171h-200v-232h200v-595h-735q-35 0 -60 25t-25 60v1366q0 35 25 60t60 25h1366z"
+/></svg>Share
+</a>
+
 </aside>
 <!-- End Facebook SDK for JavaScript -->
 
