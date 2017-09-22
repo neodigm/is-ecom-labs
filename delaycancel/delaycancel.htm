@@ -986,7 +986,11 @@ $(document).ready(function(){
 		font-size: 12px; font-weight: 400;
 		margin-bottom: 4px;
 	}
-	.l-delaycancel .prodcrd{
+	.l-delaycancel .caption__panel div:nth-of-type(3) {
+		padding-left: 18px;
+	}
+
+	.l-delaycancel .prodcrd--zf5{
 		margin: 4px 2px;
 		padding: 4px 2px;
 		border-bottom: solid 1px #ccc;
@@ -1002,16 +1006,6 @@ $(document).ready(function(){
 		height: auto;
 		margin-bottom: 4px;
 		width: 100px;
-	}
-	.l-delaycancel .desc__img--grid{
-		align-items: flex-start;
-		display: flex;
-		flex-flow: row nowrap;
-		justify-content: flex-start;
-	}
-	.l-delaycancel .desc__img--figcaption{
-		margin-left: 8px;
-		width: 100%;
 	}
 	.l-delaycancel .desc__img--a{
 		text-decoration: underline;
@@ -1047,35 +1041,9 @@ $(document).ready(function(){
 	.l-delaycancel input:checked+label .switch-off {
 		display: none;
 	}
-	.prodcrd .prodcrd__col--grid {
-			align-items: flex-start;
-			display: flex;
-			flex-flow: row nowrap;
-			justify-content: flex-start;
-			width: 100%;
-	}
-	.prodcrd .prodcrd__left--grid {
-			align-items: flex-start;
-			display: flex;
-			flex-flow: row nowrap;
-			justify-content: space-around;
-			width: 100%;
-	}
-	.prodcrd .prodcrd__right--grid {
-			align-items: flex-start;
-			display: flex;
-			flex-flow: row nowrap;
-			justify-content: space-around;
-			width: 100%;
-	}
+
 	@media only screen and (max-width: 47.9375em) {
 	/* small */
-		.l-delaycancel .prodcrd__left--grid {
-			flex-flow: column-reverse;
-		}
-		.l-delaycancel .prodcrd__right--grid {
-			flex-flow: column;
-		}
 		.l-delaycancel .productcard__p{
 			font-size: 11px !important;
 			white-space: nowrap !important;
@@ -1084,9 +1052,6 @@ $(document).ready(function(){
 		.l-delaycancel .productcard__p span{
 			display: inline !important;
 			color: #000;
-		}
-		.l-delaycancel .desc__img--figcaption {
-		    margin-left: 0;
 		}
 	}
 </style>
@@ -1106,7 +1071,42 @@ console.log( e.target );
 		<div class="column medium-2"><p class="text-center">Action</p></div>
 	</section>
 
-		<!-- Product Card Begin -->
+		<!-- Product Card zF5 Begin -->
+		<section class="row prodcrd--zf5">
+			<div class="column small-5 medium-5">
+				<section class="row">
+					<div class="column small-10 medium-7 push-3">
+						<a class="desc__img--a">10-Pair Women's Critter Crew Socks - Critter Faces</a>
+						<p class="desc__img--p">Ready to ship by MM/DD/YYYY</p>
+					</div>
+					<div class="column small-10 medium-3 pull-7">
+						<img class="productcard__th" src="./delaycancel_files/64811_1235750_SCC_FCS_th.jpg" alt="Product desc">
+					</div>
+				</section>
+			</div>		
+			<div class="column small-5 medium-5">
+				<section class="row">
+					<div class="column small-10 medium-4">
+						<p class="productcard__p"><span class="show-for-small">Product # </span>138333-9SGG-FCS</p>
+					</div>
+					<div class="column small-10 medium-2 text-center">
+						<p class="productcard__p qty__p"><span class="show-for-small">Quantity </span>2</p>
+					</div>
+					<div class="column small-10 medium-4 text-center">
+						<div class="switch large round">
+							<input id="js-chk-keep__1--id" type="checkbox" checked="">
+							<label for="js-chk-keep__1--id">
+								<span class="switch-on">Keep</span>
+								<span class="switch-off">Cancel</span>
+							</label>
+						</div>
+					</div>
+				</section>		
+			</div>	
+		</section>
+		<!-- Product Card zF5 End -->
+
+		<!-- Product Card zF5 Begin -->
 		<section class="row prodcrd--zf5">
 			<div class="column small-5 medium-5">
 				<section class="row">
@@ -1139,7 +1139,7 @@ console.log( e.target );
 				</section>		
 			</div>	
 		</section>
-		<!-- Product Card End -->
+		<!-- Product Card zF5 End -->
 
 		<!-- Product Card Begin -->
 		<section class="row prodcrd">
