@@ -1,4 +1,12 @@
 "use strict";
+
+/*
+As per Naveen.  The checkbox persisted state should be handled (passed back) by the server.
+Build a window.location value from a data model then upon click of [ DONE ] update location.href
+CANCEL should just close the dropdown, reset the data model to its state before it was opened
+Make sure that the GET values from the sort dropdown do not get stepped on.
+*/
+
 console.log("component refinesort.js");
 
 var ltdc_refinesort = {

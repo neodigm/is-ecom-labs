@@ -43,3 +43,6 @@ width: 92px;
 /*  CSS category Theme    */ /*  color background hover ...  */
 body[data-brand="lsc"] .productcard__a--qv { background-color: #7e2d3e; }
 body[data-brand="ltd"] .productcard__a--qv { background-color: #2b7ec0; }
+body[data-brand="lsc"] .productcard__pic { background-color: #7e2d3e; }
+body[data-brand="ltd"] .productcard__pic { background-color: #2b7ec0; }
+
