@@ -49,8 +49,8 @@ var vTA = new Vue({
 				vTA.ta_response = "";
 			});
 		},
-			this.ta_data = e.currentTarget.firstChild.innerHTML;
 		pinClick: function( e ){
+			this.ta_data = e.currentTarget.firstChild.innerHTML;
 		}
 	},
 	created: function() {
