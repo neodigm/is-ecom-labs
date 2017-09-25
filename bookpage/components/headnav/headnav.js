@@ -54,7 +54,7 @@ var vTA = new Vue({
 		}
 	},
 	created: function() {
-		//document.getElementById("js-headnavtype__id").classList.remove("hidden");
+		document.getElementById("js-headnavtype__id").classList.remove("hidden");
 	}
 });
 
