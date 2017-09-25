@@ -49,12 +49,12 @@ var vTA = new Vue({
 				vTA.ta_response = "";
 			});
 		},
-		pinClick: function( e ){
 			this.ta_data = e.currentTarget.firstChild.innerHTML;
+		pinClick: function( e ){
 		}
 	},
 	created: function() {
-		document.getElementById("js-headnavtype__id").classList.remove("hidden");
+		//document.getElementById("js-headnavtype__id").classList.remove("hidden");
 	}
 });
 
