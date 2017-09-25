@@ -52,9 +52,12 @@ var vTA = new Vue({
 		pinClick: function( e ){
 			this.ta_data = e.currentTarget.firstChild.innerHTML;
 		}
+	},
+	created: function() {
+		document.getElementById("js-headnavtype__id").classList.remove("hidden");
 	}
 });
 
 function isNumeric(n) {
-  return !isNaN(parseFloat(n)) && isFinite(n);
+	return !isNaN(parseFloat(n)) && isFinite(n);
 }

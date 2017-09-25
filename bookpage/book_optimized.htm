@@ -330,7 +330,7 @@ var jsnCat = {"cat51851":{"level1CategoryUrl":"/browse/For-the-Home/_/N-oni","le
 						</button>
 					</section>
 				</nav>
-				<aside class="headnavtype" :class="{'hidden':is_hidden}">
+				<aside id="js-headnavtype__id" class="headnavtype hidden" :class="{'hidden':is_hidden}">
 					<ul>
 						<li class="headnavtype__type--li" v-for="(ta_pin, i) in ta_responseTMP">
 							<a class="headnavtype__type--grid" @click="pinClick">
@@ -338,12 +338,6 @@ var jsnCat = {"cat51851":{"level1CategoryUrl":"/browse/For-the-Home/_/N-oni","le
 								<p>{{ ta_pin[1] }}</p>
 							</a>
 						</li>
-						<!--<li class="headnavtype__type--li">
-							<a class="headnavtype__type--grid">
-								<p>176477-8C4N-CAT</p>
-								<p>Critter Boot Toppers - Cat</p>
-							</a>
-						</li>-->
 					</ul>
 				</aside>
 			</div>
