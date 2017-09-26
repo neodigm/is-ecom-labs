@@ -17,18 +17,22 @@ TODO | Brand logic | Build Query string
 var vTA = new Vue({
 	el: "#c_headnavtype__id",
 	data: {
+		brand: "ltd",
 		ta_data: "",
 		ta_response: "",
 		is_hidden: true,
+		is_watched: true,
 		form_id: "basicSearch",
 		async_base: "/common/includes/inc_search_type_ahead.jsp"
 	},
 	watch: {
 		ta_data: function(){
-			if( isNumeric( this.ta_data ) && ( this.ta_data.length > 5 ) ){
-				this.getSearch();
-			}else{
-				this.ta_response = "";
+			if( this.is_watched ){
+				if( isNumeric( this.ta_data ) && ( this.ta_data.length > 5 ) ){
+					this.getSearch();
+				}else{
+					this.ta_response = "";
+				}
 			}
 		},
 		ta_response: function(){
@@ -39,9 +43,10 @@ var vTA = new Vue({
 		getSearch: function( e ){
 			vTA = this;
 			//axios.get( 'https://www.lakeside.com/common/includes/inc_search_type_ahead.jsp?q=1418930&limit=12&timestamp=1504554461655&environment=typeAhead_queries&sort=alpha&searchFrom=&Ntt=1418930*&_=1504554389332' )
+			//axios.get( this.async_base + "?q=609140&limit=12&timestamp=1504554461655&environment=typeAhead_queries&sort=alpha&searchFrom=&Ntt=609140*&_=1504554389332" )
 			axios.get( "ta.html" )
 			.then(function ( response ) {
-				var aTmp = [], aPins = response.data.split( "\n" ); // may need to pop last value
+				var aTmp = [], aPins = response.data.split( "\n" );
 				for (var i=0; i<(aPins.length - 1); ++i) {
 					var nPos = aPins[i].indexOf(" ");
 					aTmp.push( [aPins[i].substr(0,nPos), aPins[i].substr(nPos)] );
@@ -50,9 +55,11 @@ var vTA = new Vue({
 			})
 			.catch(function ( error ) {
 				vTA.ta_response = "";
+			console.log( error );
 			});
 		},
 		pinClick: function( e ){
+			this.is_watched = false;
 			this.ta_data = e.currentTarget.firstChild.innerHTML;
 			var eF = document.getElementById( this.form_id );
 			if( eF ){
@@ -62,6 +69,7 @@ var vTA = new Vue({
 	},
 	created: function() {
 		document.getElementById("js-headnavtype__id").classList.remove("hidden");
+		this.brand = document.querySelector("[data-brand]").dataset.brand;
 	}
 });
 
