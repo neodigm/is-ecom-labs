@@ -19,7 +19,9 @@ var vTA = new Vue({
 	data: {
 		ta_data: "",
 		ta_response: "",
-		is_hidden: true
+		is_hidden: true,
+		form_id: "basicSearch",
+		async_base: "/common/includes/inc_search_type_ahead.jsp"
 	},
 	watch: {
 		ta_data: function(){
@@ -52,7 +54,7 @@ var vTA = new Vue({
 		},
 		pinClick: function( e ){
 			this.ta_data = e.currentTarget.firstChild.innerHTML;
-			var eF = document.getElementById("basicSearch");
+			var eF = document.getElementById( this.form_id );
 			if( eF ){
 				eF.submit();
 			}
