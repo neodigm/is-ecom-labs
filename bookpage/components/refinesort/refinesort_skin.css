@@ -207,3 +207,10 @@ body[data-brand="lsc"] .portal .portal__top .portal__top--a:hover { background-c
 body[data-brand="ltd"] .portal .portal__top .portal__top--a:hover { background-color: #2ba6cb; }
 body[data-brand="lsc"] .portal__bottom--nav { background-color: #fffaff; }
 body[data-brand="ltd"] .portal__bottom--nav { background-color: #f2faff; }
+
+
+.portal__bottom::-webkit-scrollbar { width: 8px; }
+.portal__bottom::-webkit-scrollbar-track { background: rgba(0, 0, 0, 0.1); }
+
+body[data-brand="lsc"] .portal__bottom::-webkit-scrollbar-thumb { background: rgba(126, 45, 62, 0.5); }
+body[data-brand="ltd"] .portal__bottom::-webkit-scrollbar-thumb { background: rgba(41, 127, 184, 0.5); }
