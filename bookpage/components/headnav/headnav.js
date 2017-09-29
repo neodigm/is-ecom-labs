@@ -4,12 +4,7 @@ console.log("component HeadNav.js");
 console.log("Vue Version " +Vue.version );
 Vue.config.devtools = true;
 
-/*
-Optim Book Axios - New Type Ahead | SCK
-Lakeside prod enter 143210 (lsc) then execute this snippet
-sudo curl -o /Users/neodigm/2016/is-ecom-labs/ta.json "https://www.lakeside.com/common/includes/inc_search_type_ahead.jsp?q=1418930&limit=12&timestamp=1504554461655&environment=typeAhead_queries&sort=alpha&searchFrom=&Ntt=1418930*&_=1504554389332"
-TODO | Brand logic | Build Query string
-*/
+/*  Optim Book Axios - New Type Ahead | SCK  */
 
 var vTA = new Vue({
 	el: "#c_headnavtype__id",
@@ -24,17 +19,7 @@ var vTA = new Vue({
 	},
 	watch: {
 		ta_data: function(){
-			if( this.is_watched ){
-				if( isNumeric( this.ta_data.substr(0,6) ) && ( this.ta_data.length > 5 ) ){
-					if( this.brand === "ltd" ){
-						if( this.ta_data.length === 6 ){ this.ta_data+="-"; }
-						if( this.ta_data.length === 12){ this.ta_data+="-"; }
-					}
-					this.getSearch();
-				}else{
-					this.ta_response = "";
-				}
-			}
+
 		},
 		ta_response: function(){
 			this.is_hidden = ( this.ta_response === "" );
@@ -44,8 +29,8 @@ var vTA = new Vue({
 		getSearch: function( e ){
 			vTA = this;
 			//axios.get( 'https://www.lakeside.com/common/includes/inc_search_type_ahead.jsp?q=1418930&limit=12&timestamp=1504554461655&environment=typeAhead_queries&sort=alpha&searchFrom=&Ntt=1418930*&_=1504554389332' )
-			//axios.get( "ta.html" )
-			axios.get( this.async_base + "?q=130089-6STQ-BLK&limit=12&timestamp=1506443680856&environment=typeAhead_queries&sort=alpha&searchFrom=&Ntt=130089-6STQ-BLK*&_=1506443671523" )
+			//axios.get( this.async_base + "?q=130089-6STQ-BLK&limit=12&timestamp=1506443680856&environment=typeAhead_queries&sort=alpha&searchFrom=&Ntt=130089-6STQ-BLK*&_=1506443671523" )
+			axios.get( "ta.html" )
 			.then(function ( response ) {
 				var aTmp = [], aPins = response.data.split( "\n" );
 				for (var i=0; i<(aPins.length - 1); ++i) {
@@ -60,13 +45,24 @@ var vTA = new Vue({
 			});
 		},
 		pinClick: function( e ){
-			this.is_watched = false;
 			this.ta_data = e.currentTarget.firstChild.innerHTML;
 			var eF = document.getElementById( this.form_id );
-			document.getElementById("quickSearch-query").value=this.ta_data;
 			if( eF ){
 				eF.submit();
 			}
+		},
+		searchKey: function( e ) {
+				if( isNumeric( this.ta_data.substr(0,6) ) && ( this.ta_data.length > 5 ) ){
+					if( this.brand === "ltd" ){
+						if( e.key !== "Backspace" ){
+							if( this.ta_data.length === 6 ){ this.ta_data+="-"; }
+							if( this.ta_data.length === 12){ this.ta_data+="-"; }
+						}
+					}
+					this.getSearch();
+				}else{
+					this.ta_response = "";
+				}
 		}
 	},
 	created: function() {

@@ -228,7 +228,7 @@ body,figcaption,figure,img,input,li,picture,section,ul{margin:0;padding:0}.l-foo
 </script>
 
 </head>
-<body data-brand="lsc">
+<body data-brand="ltd">
 		<ltdc-headtop id="js-headtop" class="l-grid-headtop is-signed-in"><!--  Component Begin  -->
 			<nav class="headtop__hb">
 				<a id="js-headtop-hb__id" class="headtop__hb--a">
@@ -324,7 +324,8 @@ var jsnCat = {"cat51851":{"level1CategoryUrl":"/browse/For-the-Home/_/N-oni","le
 					<section class="headnav__search--grid">
 						<input class="headnav__search--input" placeholder="Search item# or keyword" type="text" aria-required="true"
 							aria-label="Search item# or keyword" autocomplete="off"
-							v-model="ta_data">
+							v-model="ta_data"
+							@keyup="searchKey">
 						<button class="headnav__search--go">
 							<span class="headnav__search--gotxt">Go</span>
 						</button>
