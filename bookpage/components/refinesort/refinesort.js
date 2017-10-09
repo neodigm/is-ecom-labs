@@ -63,10 +63,6 @@ var ltdc_refnsrt = {
 			ltdc_refnsrt.portal_close( e );
 	},
 	"toggle_drawer" : function( e ){  //  Toggle secondary container(s)
-console.log( "=======toggle 1");
-console.log( this );
-console.log( ltdc_refnsrt.portal_cnt );
-console.log( "=======toggle 2");
 		ltdc_refnsrt.portal__bottom_nav  = this;
 		ltdc_refnsrt.portal__bottom  = this.parentElement;
 		ltdc_refnsrt.portal__bottom_content  = this.nextElementSibling;
@@ -123,14 +119,13 @@ console.log( "=======toggle 2");
 					ePortl.firstElementChild.outerHTML = sTmplMU;
 					eParnt = document.querySelector("[data-dim-name='"+ sName +"']"); // nav
 				}
-				//eParnt.parentElement.classList.add("portal_expanded");
 				eParnt.classList.remove("portal__bottom--closed");	
 				eParnt.classList.add("portal__bottom--opened");				
 				eParnt = eParnt.nextElementSibling;  //  aside
 				eParnt.classList.remove("hidden");
 				eParnt = eParnt.firstElementChild;  //  ul
 				eParnt.insertBefore( aPreChck[i], eParnt.childNodes[0] ); 
-//document.querySelector("#js-"+ sName +"__id").innerHTML++;
+				document.querySelector("#js-"+ sName +"__id").innerHTML++;
 				for(var i2 = 0, ln = this.aUNVal.length; i2 < ln; i2++) { // Gen data-add-action of checked
 					if( aPreChck[i].dataset.addAction.indexOf( this.aUNVal[i2] ) === -1 ){
 						aPreChck[i].dataset.addAction = "N-"+this.aUNVal[i2]+"Z"+this.sNBase+"?"; break;

@@ -601,7 +601,26 @@ article {
  box-shadow: inset 0 0 10px 5px rgba(0, 0, 0, 0.15);
 }
 
-
+article.artc_opened .box {
+ background-image: url('images/ltd-gc-hdr-bg.jpg');
+  -webkit-transform: rotateY(-97deg);
+          transform: rotateY(-97deg);
+  -webkit-perspective-origin: 0;
+          perspective-origin: 0;
+  -webkit-transition: all .4s ease-in;
+  transition: all .4s ease-in;
+}
+article.artc_opened .box h2 {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+article.artc_opened .bauble {
+  display: inline-block;
+  -webkit-animation: shake 1s;
+          animation: shake 1s;
+  -webkit-transform-origin: 50% 0;
+          transform-origin: 50% 0;
+}
 
 article:hover .box {
  background-image: url('images/ltd-gc-hdr-bg.jpg');
@@ -669,6 +688,17 @@ article:hover .bauble {
 
 		}
 	</style>
+	<script>
+	$( document ).ready(function(){
+		$("article").on("click",function( e ){
+			if( $(this).hasClass("artc_opened") ){
+				$(this).removeClass("artc_opened");
+			}else{
+				$(this).addClass("artc_opened");
+			}
+		});
+	});
+	</script>
 
 	<div class="ltd-lp">
 
