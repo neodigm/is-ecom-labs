@@ -6,7 +6,7 @@ padding: 0;
 /*  CSS category Layout   */ /*  border display height media width ...  */
 .l-grid-productcard > section {
 align-items: flex-start;
-justify-content: center;
+justify-content: left;
 display: flex;
 flex-flow: row wrap;
 align-content: space-between;
