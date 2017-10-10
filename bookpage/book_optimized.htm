@@ -2593,7 +2593,7 @@ var jsnCat = {"cat51851":{"level1CategoryUrl":"/browse/For-the-Home/_/N-oni","le
 		top: -22px;
 		right: -30px;
 	}
-	.eml-modal .elm-msg__padding{
+	.eml-modal .eml-msg__padding{
 		padding: 32px;
 	}
 	.eml-modal h4{
@@ -2609,34 +2609,95 @@ var jsnCat = {"cat51851":{"level1CategoryUrl":"/browse/For-the-Home/_/N-oni","le
 		margin: 4px;
 	}
 	.eml-modal p{
+		color: #222;
 		font-size: 14px;
 	}
 	.eml-modal .l-grid{
 		align-items: flex-start;
 		display: flex;
 		flex-flow: row nowrap;
-		justify-content: space-between;
+		justify-content: space-around;
 	}
+	.eml-modal .l-grid div:nth-of-type(1){
+		width: 66%;
+	}
+	.eml-modal .l-grid div:nth-of-type(2){
+		width: 30%;
+	}
+	.eml-modal .eml-msg__input{
+		background-color: #fff;
+		border: #ccc solid 1px;
+		padding: 9px 6px;
+		margin: 2px 0 10px 0;
+		width: 100%;
+	}
+	.eml-modal .eml-msg__button{
+		border-radius: 3px;
+		color: #fff !important;
+		cursor: pointer;
+		display: block;
+		font-family: sans-serif;
+		font-size: 16px;
+		font-weight: 300;
+		margin: 2px 20%;
+		padding: 8px 6px;
+		text-align: center;
+		text-decoration: none;
+		width: 76%;
+	}
+	.eml-modal .eml-msg__legal{
+		color: #666;
+		font-size: 13px;
+		font-weight: 600;
+		margin: 22px;
+		text-align: center;
+	}
+	.eml-modal .eml-msg__legal .eml-msg__legal--a{
+		cursor: pointer;
+		text-decoration: underline;
+	}
+
+	.eml-modal p{
+		color: #222;
+		font-size: 14px;
+		margin-bottom: 38px;
+	}
+
+	body[data-brand="lsc"] .eml-modal p { margin-bottom: 22px; }
+	body[data-brand="ltd"] .eml-modal p { margin-bottom: 38px; }
+
+	body[data-brand="lsc"] .eml-msg__button { background-color: #7e2d3e; }
+	body[data-brand="ltd"] .eml-msg__button { background-color: #2ba6cb; }
+	body[data-brand="lsc"] .eml-msg__button:hover { background-color: #672634; }
+	body[data-brand="ltd"] .eml-msg__button:hover { background-color: #007095; }
+
+	body[data-brand="lsc"] .eml-modal .eml-msg__legal .eml-msg__legal--a { color: #7e2d3e; }
+	body[data-brand="ltd"] .eml-modal .eml-msg__legal .eml-msg__legal--a { color: #2ba6cb; }
+	body[data-brand="lsc"] .eml-modal .eml-msg__legal .eml-msg__legal--a:hover { color: #7e2d3e !important; }
+	body[data-brand="ltd"] .eml-modal .eml-msg__legal .eml-msg__legal--a:hover { color: #0078a0 !important; }
 }
 </style>
 		<a class="close-reveal-modal resp_x eml-msg__x">
 <svg fill="#FFF" height="38" viewBox="0 0 38 38" width="38" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M14.59 8L12 10.59 9.41 8 8 9.41 10.59 12 8 14.59 9.41 16 12 13.41 14.59 16 16 14.59 13.41 12 16 9.41 14.59 8zM12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>
 		</a>
-		<div class="elm-msg__padding">
-			<h4>ENJOY $5 SHIPPING* when you sign up for emails</h4>
-			<h3>Sign Up &amp; Save! Be the first to hear about special promotional offers, new product arrivals and limited-time sales.</h3>
+		<div class="eml-msg__padding">
+			<h4 class="brand--lsc__showb">ENJOY $5 SHIPPING*</h4>
+			<h4 class="brand--ltd__showb">ENJOY $5 SHIPPING* when you sign up for emails</h4>
+			<h3 class="brand--lsc__showb">On your next purchase* when you sign up for emails. Be the first to hear about special promotional offers, new product arrivals and limited-time sales.</h3>
+			<h3 class="brand--ltd__showb">Sign Up &amp; Save! Be the first to hear about special promotional offers, new product arrivals and limited-time sales.</h3>
 			<p>*Orders of $50 or more. Valid for new subscribers only.</p>
 			<form>
 				<section class="l-grid">
 					<div>
-						<input id="" class="" type="email" name="" value=""
-						placeholder="* Email Address"
-						maxlength="128">
+						<input id="" class="eml-msg__input" type="email" name="" value=""
+						placeholder="* Email Address" title="Email Address"
+						maxlength="128" aria-required="true" aria-label="Email Address">
 					</div>
 					<div>
-						<a class="">Sign Up</a>
+						<a class="eml-msg__button">Sign Up</a>
 					</div>
 				</section>
+				<p class="eml-msg__legal">We will never sell your email address. To learn more read our <a class="eml-msg__legal--a">Privacy Policy</a>.</p>
 			</form>
 		</div>
 	</section>
