@@ -2486,6 +2486,14 @@ var jsnCat = {"cat51851":{"level1CategoryUrl":"/browse/For-the-Home/_/N-oni","le
 		  align-items: flex-start;
 		  display: flex;
 		  flex-flow: row nowrap; /* Shorthand for flex-direction and flex-wrap */
+		  justify-content: space-around;
+		  padding: 0;
+	}
+	.l-grid-qv__textoptions {
+		  /* align-content: not used if only one row */
+		  align-items: flex-start;
+		  display: flex;
+		  flex-flow: row wrap; /* Shorthand for flex-direction and flex-wrap */
 		  justify-content: space-between;
 		  padding: 0;
 	}
@@ -2564,6 +2572,59 @@ var jsnCat = {"cat51851":{"level1CategoryUrl":"/browse/For-the-Home/_/N-oni","le
 		margin: 6px;
 		padding: 6px;
 	}
+	.qv__person--container {
+		background-color: #fff;
+		border: solid 1px #aaaaaa;
+		border-radius: 4px;
+		margin: 16px 0 8px 0;
+		padding: 6px;
+	}
+	.qv__person--container > p {
+		color: #484848;
+		font-family: "roboto", Helvetica, Arial, "Sans Serif";
+		font-size: 14px;
+		font-weight: 300;
+		line-height: .84;
+		margin: 4px 0 10px 0;
+		position: relative;
+		text-align: left;
+	}
+	.qv__person--disclaimer {
+		color: #484848;
+		font-family: "roboto", Helvetica, Arial, "Sans Serif";
+		font-size: 12px;
+		font-weight: 300;
+		margin: 4px 0 10px 0;
+		position: relative;
+		text-align: left;
+	}
+	.qv__person--nopo {
+		color: #484848;
+		font-family: "roboto", Helvetica, Arial, "Sans Serif";
+		font-size: 11px;
+		font-weight: 600;
+		margin: 4px 0 10px 0;
+		position: relative;
+		text-align: left;
+	}
+	.qv__person--container > svg {
+		cursor: pointer;
+		float: right;
+		position: relative;
+		top: -25px;
+		fill: #297fb8;
+	}
+	.qv__person--container > svg:hover {
+		fill: #2ba6cb;
+	}
+	.qv__person--closed aside { display: none; }
+	.qv__person--opened aside { display: block; }
+	}
+	.qv__person--closed .qv__person-svg--plus { display: block; }
+	.qv__person--closed .qv__person-svg--minus { display: none; }
+	.qv__person--opened .qv__person-svg--plus { display: none; }
+	.qv__person--opened .qv__person-svg--minus { display: block; }
+
 .qv__region::-webkit-scrollbar { width: 8px; }
 .qv__region::-webkit-scrollbar-track { background: rgba(0, 0, 0, 0.1); }
 
@@ -2601,7 +2662,7 @@ body[data-brand="ltd"] select.select-custom { border-color: #2795b6; }
 			<aside style="text-align: left;">
 			<img class="qv__image--brand" src="./N-1z0uo43_files/qv_nfl.jpg" alt="Football">
 			</aside>
-			<img class="qv__image--mn" src="./N-1z0uo43_files/64632_1238996_WMV_MSG_zm.jpg" alt="Message in a bottle">
+			<img class="qv__image--mn" src="./N-1z0uo43_files/64632_1238996_WMV_MSG_zm_exc.jpg" alt="Message in a bottle">
 
 			<nav class="l-grid-qv__thumbnails">
 				<a class="" href="#">
@@ -2647,17 +2708,35 @@ body[data-brand="ltd"] select.select-custom { border-color: #2795b6; }
 						<option value="208047-1BIW-ABR">16&quot; x 20&quot;</option>
 					</select>
 					<div class="pin__selected--show">
-						<section class="l-grid-qv__thumbnails">
+						<section class="l-grid-qv__textoptions">
 							<div><p class="qv__pin">Item #: 142013-2FPK-RED</p></div>
 							<div><p class="qv__instock">In Stock</p></div>
 						</section>
-						<section class="l-grid-qv__thumbnails">
+						<section class="l-grid-qv__textoptions">
 							<div><p class="qv__shipping">
-							<!--<svg style="" height="14" viewBox="0 0 24 24" width="14" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg>-->
+							<svg style="" height="14" viewBox="0 0 24 24" width="14" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg>
 							 additional delivery $4.00 each</p></div>
-							<div><p class="qv__instock">Ships Directly from the Manufacturer</p></div>
+							<div><p class="qv__instock">Ships Directly from<br>the Manufacturer</p></div>
 						</section>
 					</div>
+					<br>
+					<section class="qv__person--container qv__person--closed">
+						<p class="">Personalization Details</p>
+						<svg class="js-qv__person-svg qv__person-svg--plus" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11H7v-2h10v2z"/></svg>
+						<svg class="js-qv__person-svg qv__person-svg--minus" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg>
+						<aside class="">
+							<p class="qv__person--disclaimer">Monogrammed and personalized items cannot be returned except when due to defect. Once placed, your order for these items cannot be returned.</p>
+							<p class="qv__person--nopo">This item cannot be shipped to PO, APO, or FPO addresses.</p>
+						</aside>
+					</section>
+
+				</form>
+				<br>
+			</article>
+		</section>
+
+						</aside>
+					</section>
 
 				</form>
 				<br>
@@ -2677,6 +2756,24 @@ body[data-brand="ltd"] select.select-custom { border-color: #2795b6; }
 				}, false);
     }
 	})(document);
+
+	(function(d){ //  Expand Collapse
+		"use strict";
+		var nSVG = d.getElementsByClassName("js-qv__person-svg");
+    for (var i = 0, ln = nSVG.length; i < ln; i++) {
+        	nSVG[i].addEventListener("click", function(){
+					var eCont = d.getElementsByClassName("qv__person--container")[0];
+					if( eCont.classList.contains("qv__person--closed") ){
+						eCont.classList.remove("qv__person--closed");
+						eCont.classList.add("qv__person--opened");
+					}else{
+						eCont.classList.add("qv__person--closed");
+						eCont.classList.remove("qv__person--opened");
+					}
+				}, false);
+    }
+	})(document);
+
 </script>
 
 
