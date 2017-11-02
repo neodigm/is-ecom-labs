@@ -2445,14 +2445,12 @@ var jsnCat = {"cat51851":{"level1CategoryUrl":"/browse/For-the-Home/_/N-oni","le
 	.l-quickerview {
 
 	}
-	.QQQQl-quickerview .QQQQqv__caption {
-		color: #646464;
-		font-family: "roboto", Helvetica, Arial, "Sans Serif";
-		font-size: 18px;
-		font-weight: normal;
-		text-align: center;
-		margin: 16px 0 8px 0;
-	}
+
+.pin__selected   .pin__selected--hide{display:none!important}
+.pin__selected   .pin__selected--show{display:block!important}
+.pin__unselected .pin__selected--hide{display:block!important}
+.pin__unselected .pin__selected--show{display:none!important}
+
 	.l-quickerview .qv__rule {
 	  display: block;
 	  height: 1px;
@@ -2471,6 +2469,10 @@ var jsnCat = {"cat51851":{"level1CategoryUrl":"/browse/For-the-Home/_/N-oni","le
 	.l-quickerview .qv__image--mn {
 		margin: 0 6px;
 		width: 96%;
+	}
+	.l-quickerview .qv__image--brand {
+		display: inline-block;
+		margin: 0 8px;
 	}
 	.l-quickerview .qv__region {
 		height: 92vh;
@@ -2507,20 +2509,59 @@ var jsnCat = {"cat51851":{"level1CategoryUrl":"/browse/For-the-Home/_/N-oni","le
 		margin: 4px 0 10px 0;
 		text-align: center;
 	}
+	.qv__pin {
+		color: #484848;
+		font-family: "roboto", Helvetica, Arial, "Sans Serif";
+		font-size: 11px;
+		font-weight: 400;
+		margin: 8px 2px;
+		text-align: center;
+	}
+	.qv__instock {
+		color: #686868;
+		font-family: "roboto", Helvetica, Arial, "Sans Serif";
+		font-size: 11px;
+		font-weight: 400;
+		margin: 8px 2px;
+		text-align: center;
+		font-style: italic;
+	}
+	.qv__was {
+		color: #888;
+		font-family: "roboto", Helvetica, Arial, "Sans Serif";
+		font-size: 13px;
+		font-weight: 400;
+		margin: 8px 2px;
+		text-align: center;
+		text-decoration: line-through;
+	}
+	.qv__save {
+		color: #cf2d42;
+		font-family: "roboto", Helvetica, Arial, "Sans Serif";
+		font-size: 13px;
+		font-weight: 300;
+		margin: 4px 0 10px 0;
+		text-align: center;
+	}
+	.qv__um {
+		color: #626262;
+		font-size: 12px;
+		margin-left: 6px;
+	}
 	.qv__select--container {
-		background-color: #f2faff;
-		border: solid 1px rgb(48, 97, 154);
+		background-color: #fcfcfc;
+		border: solid 1px #aaaaaa;
 		border-radius: 4px;
-		margin: 0 8px;
-	height: 86px:
+		padding: 12px;
 	}
 .qv__region::-webkit-scrollbar { width: 8px; }
 .qv__region::-webkit-scrollbar-track { background: rgba(0, 0, 0, 0.1); }
 
 select.select-custom {
+		cursor: pointer;
     height: 38px;
     line-height: 38px;
-    font-size: 16px;
+    font-size: 12px;
     color: rgba(0,0,0,0.5);
     border: 1px solid #ccc;
     padding: 0 .25em;
@@ -2533,49 +2574,95 @@ select.select-custom {
     appearance: none;
     cursor: pointer;
     background: transparent linear-gradient(to bottom,#FFF 0,#f3f3f3 100%) repeat scroll 0 0;
+		width: 100%;
 }
 
 body[data-brand="lsc"] select.select-custom { border-color: #7e2d3e; }
 body[data-brand="ltd"] select.select-custom { border-color: #2795b6; }
 
 </style>
-	<ltdc-quickerview class="l-quickerview"><!--  Component Begin  -->
+
+	<ltdc-quickerview class="l-quickerview pin__unselected"><!--  Component Begin  -->
 		<p class="qv__desc">Oversized NFL Soup Mug with Steam Lid</p>
 		<hr class="qv__rule">
 		<section class="qv__region">
-			<img class="qv__image--mn" src="./N-1z0uo43_files/58710_1221040_BIW_OHS_mn.jpg" alt="Ohio State">
+			<aside style="text-align: left;">
+			<img class="qv__image--brand" src="./N-1z0uo43_files/qv_nfl.jpg" alt="Football">
+			</aside>
+			<img class="qv__image--mn" src="./N-1z0uo43_files/64632_1238996_WMV_MSG_zm.jpg" alt="Message in a bottle">
 
 			<nav class="l-grid-qv__thumbnails">
 				<a class="" href="#">
 					<svg class="qv__arrows" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M15.41 16.09l-4.58-4.59 4.58-4.59L14 5.5l-6 6 6 6z"/><path d="M0-.5h24v24H0z" fill="none"/></svg>
 				</a>
 				<a class="qv__image--th">
-					<img class="" src="./N-1z0uo43_files/58710_1221033_BIW_ABR_mn.jpg" alt="Auburn">
+					<img class="" src="./N-1z0uo43_files/64632_1238996_WMV_MSG_zm.jpg" alt="Message in a bottle">
 				</a>
 				<a class="qv__image--th">
-					<img class="" src="./N-1z0uo43_files/58710_1221035_BIW_GEO_mn.jpg" alt="Georgia">
+					<img class="" src="./N-1z0uo43_files/64632_1238995_WMV_LKE_zm.jpg" alt="Lake Retreat">
 				</a>
 				<a class="qv__image--th">
-					<img class="" src="./N-1z0uo43_files/58710_1221039_BIW_NEB_mn.jpg" alt="Nebraska">
+					<img class="" src="./N-1z0uo43_files/64632_1238997_WMV_LKE_zm.jpg" alt="Frame">
 				</a>
 				<a class="" href="#">
 					<svg class="qv__arrows" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"/><path d="M0-.25h24v24H0z" fill="none"/></svg>
 				</a>
 			</nav>
-			<p class="qv__price">$7.79</p>
+
+				<div class="pin__selected--hide">
+					<p class="qv__price">$16.49 - $56.98<span class="qv__um">ea.</span></p>
+				</div>
+				<div class="pin__selected--show">
+					<p class="qv__price">$16.49<span class="qv__um">ea.</span>
+					<span class="qv__was">was: $32.98</span> <span class="qv__save">SAVE 50%</span></p>
+					<img class="" src="./N-1z0uo43_files/qv_stars.png">
+				</div>
+
 			<article class="qv__select--container">
+				<br>
 				<form>
-					<select title="Please Select an Item" class="select-custom">
-						<option value="208047-1BIW-OHS">Ohio State</option>
-						<option value="208047-1BIW-ABR">Auburn</option>
-						<option value="208047-1BIW-GEO">Georgia</option>
-						<option value="208047-1BIW-NEB">Nebraska</option>
-						<option value="208047-1BIW-WSV">West Virginia</option>
+
+					<select title="Please Make a Selection" class="select-custom qv__picker">
+						<option value="">Choose a Print</option>
+						<option value="208047-1BIW-OHS">Lake Retreat</option>
+						<option value="208047-1BIW-ABR">Message in a bottle</option>
+						<option value="208047-1BIW-GEO">Heart Wall</option>
 					</select>
+					<br><br>
+					<select title="Please Make a Selection" class="select-custom qv__picker">
+						<option value="">Choose a Size</option>
+						<option value="208047-1BIW-OHS">11&quot; x 14&quot;</option>
+						<option value="208047-1BIW-ABR">16&quot; x 20&quot;</option>
+					</select>
+					<div class="pin__selected--show">
+						<section class="l-grid-qv__thumbnails">
+							<div><p class="qv__pin">Item #: 142013-2FPK-RED</p></div>
+							<div><p class="qv__instock">In Stock</p></div>
+						</section>
+					</div>
+
 				</form>
+				<br>
 			</article>
 		</section>
 	</ltdc-quickerview><!--  Component End  -->
+
+<script>
+	(function(d){
+		"use strict";
+		var ePicker = d.getElementsByClassName("qv__picker");
+    for (var i = 0, ln = ePicker.length; i < ln; i++) {
+        ePicker[i].addEventListener("change", function(){
+					var eQV = d.getElementsByClassName("l-quickerview")[0];
+					eQV.classList.remove("pin__unselected");
+					eQV.classList.add("pin__selected");
+				}, false);
+    }
+	})(document);
+</script>
+
+
+
 </nav>
 <nav id="js-drawerrignt__scrim" class="drawerright__scrim"></nav>
 </ltdc-productcard><!--  Component End  -->
