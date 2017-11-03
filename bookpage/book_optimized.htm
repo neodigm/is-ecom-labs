@@ -2475,7 +2475,7 @@ var jsnCat = {"cat51851":{"level1CategoryUrl":"/browse/For-the-Home/_/N-oni","le
 		margin: 0 8px;
 	}
 	.l-quickerview .qv__region {
-		height: 92vh;
+		height: 94vh;
 		overflow-x: hidden !important;
 		overflow-y: scroll !important;
 		text-align: center;
@@ -2493,7 +2493,7 @@ var jsnCat = {"cat51851":{"level1CategoryUrl":"/browse/For-the-Home/_/N-oni","le
 		  /* align-content: not used if only one row */
 		  align-items: flex-start;
 		  display: flex;
-		  flex-flow: row wrap; /* Shorthand for flex-direction and flex-wrap */
+		  flex-flow: row nowrap; /* Shorthand for flex-direction and flex-wrap */
 		  justify-content: space-between;
 		  padding: 0;
 	}
@@ -2592,11 +2592,14 @@ var jsnCat = {"cat51851":{"level1CategoryUrl":"/browse/For-the-Home/_/N-oni","le
 	.qv__person--disclaimer {
 		color: #484848;
 		font-family: "roboto", Helvetica, Arial, "Sans Serif";
-		font-size: 12px;
+		font-size: 14px;
 		font-weight: 300;
 		margin: 4px 0 10px 0;
 		position: relative;
 		text-align: left;
+	}
+	.qv__person--checkbox {
+		margin: 6px;
 	}
 	.qv__person--nopo {
 		color: #484848;
@@ -2632,22 +2635,36 @@ body[data-brand="lsc"] .qv__region::-webkit-scrollbar-thumb { background: rgba(1
 body[data-brand="ltd"] .qv__region::-webkit-scrollbar-thumb { background: rgba(41, 127, 184, 0.5); }
 
 select.select-custom {
-		cursor: pointer;
-    height: 38px;
-    line-height: 38px;
-    font-size: 12px;
-    color: rgba(0,0,0,0.5);
-    border: 1px solid #ccc;
-    padding: 0 .25em;
-    outline: 0;
-    display: inline-block;
-    border-radius: 5px;
-    box-sizing: border-box;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    background: transparent linear-gradient(to bottom,#FFF 0,#f3f3f3 100%) repeat scroll 0 0;
-		width: 100%;
+	cursor: pointer;
+	height: 38px;
+	line-height: 38px;
+	font-size: 12px;
+	color: rgba(0,0,0,0.5);
+	border: 1px solid #ccc;
+	padding: 0 .25em;
+	outline: 0;
+	display: inline-block;
+	border-radius: 5px;
+	box-sizing: border-box;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	background: transparent linear-gradient(to bottom,#FFF 0,#f3f3f3 100%) repeat scroll 0 0;
+	width: 100%;
+}
+.qv__person--input {
+    border-radius: 3px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 1em;
+    padding: 0 .5em;
+    background-color: #fff;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #ccc;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+    color: rgba(0,0,0,0.75);
+    width: 94%;
 }
 
 body[data-brand="lsc"] select.select-custom { border-color: #7e2d3e; }
@@ -2727,6 +2744,17 @@ body[data-brand="ltd"] select.select-custom { border-color: #2795b6; }
 						<aside class="">
 							<p class="qv__person--disclaimer">Monogrammed and personalized items cannot be returned except when due to defect. Once placed, your order for these items cannot be returned.</p>
 							<p class="qv__person--nopo">This item cannot be shipped to PO, APO, or FPO addresses.</p>
+							<br>
+							<input class="qv__person--input" type="text" placeholder="* Name 1">
+							<br><br>
+							<section class="l-grid-qv__textoptions">
+								<div>
+									<input  class="qv__person--checkbox" type="checkbox">
+								</div>
+								<div>
+<p class="qv__person--disclaimer">I HAVE REVIEWED the personalization instructions and CONFIRM my personalization details are correct. I understand I cannot return this item unless it is defective.</p>
+								</div>
+							</section>
 						</aside>
 					</section>
 
@@ -2748,8 +2776,8 @@ body[data-brand="ltd"] select.select-custom { border-color: #2795b6; }
 	(function(d){ //  Toggle State as if a PIN where selected
 		"use strict";
 		var ePicker = d.getElementsByClassName("qv__picker");
-    for (var i = 0, ln = ePicker.length; i < ln; i++) {
-        ePicker[i].addEventListener("change", function(){
+    	for (var i = 0, ln = ePicker.length; i < ln; i++) {
+        			ePicker[i].addEventListener("change", function(){
 					var eQV = d.getElementsByClassName("l-quickerview")[0];
 					eQV.classList.remove("pin__unselected");
 					eQV.classList.add("pin__selected");
