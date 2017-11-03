@@ -2592,7 +2592,7 @@ var jsnCat = {"cat51851":{"level1CategoryUrl":"/browse/For-the-Home/_/N-oni","le
 	.qv__person--disclaimer {
 		color: #484848;
 		font-family: "roboto", Helvetica, Arial, "Sans Serif";
-		font-size: 14px;
+		font-size: 12px;
 		font-weight: 300;
 		margin: 4px 0 10px 0;
 		position: relative;
@@ -2676,7 +2676,7 @@ select.select-custom {
 	font-family: sans-serif;
 	font-size: 12px;
 	font-weight: 700;
-	margin: 6px;
+	margin: 4px 6px 6px 6px;
 	padding: 8px 14px;
 	position: relative;
 	text-align: center;
@@ -2685,6 +2685,35 @@ select.select-custom {
 .qv__button--a2c:hover {
 	background-color: #2f9446;
 }
+.qv__button--expand {
+	background-color: #00ff00;
+	border-radius: 3px;
+	border: 1px solid #d0d0d0;
+	color: #fff;
+	cursor: pointer;
+	display: inline-block;
+	font-family: sans-serif;
+	font-size: 12px;
+	font-weight: 700;
+	margin: 6px;
+	padding: 8px 14px;
+	position: relative;
+	text-align: center;
+	user-select: none;
+}
+.qv__button--expand:hover {
+	background-color: #2f9446;
+}
+.qv__prod--desc {
+		color: #484848;
+		font-family: "roboto", Helvetica, Arial, "Sans Serif";
+		font-size: 12px;
+		font-weight: 300;
+		margin: 8px;
+		position: relative;
+		text-align: left;
+}
+
 body[data-brand="lsc"] select.select-custom { border-color: #7e2d3e; }
 body[data-brand="ltd"] select.select-custom { border-color: #2795b6; }
 
@@ -2783,26 +2812,36 @@ body[data-brand="ltd"] select.select-custom { border-color: #2795b6; }
 				</form>
 				<br>
 			</article>
+<p class="qv__prod--desc">
+This Personalized Romantic Retreat Wall Art is perfect for newlyweds or anyone celebrating an anniversary. Lake Retreat lets you personalize the sign to the right side of the dock. Add your own message to the 2 lines (up to 15 characters per line). Message in a Bottle lets you personalize the names on a love letter. One name is at the beginning of the letter and one at the end (up to 15 characters, each). The only legible parts of the letter are the names you add. This fine art gicle print is finished behind a UV-resistant laminate and arrives ready to hang on a wooden block. Web and phone agents orders only. Sorry, mail/fax orders are not accepted. This item cannot be shipped to P.O. boxes.
+</p>
+<p class="qv__prod--desc">
+Perfect for any couple that loves the great outdoors.
+</p>
+
 		</section>
 
 						</aside>
 					</section>
 
 				</form>
-				<br>
 			</article>
 		</section>
 	</ltdc-quickerview><!--  Component End  -->
 
 <script>
+var nChanges = 0;
 	(function(d){ //  Toggle State as if a PIN where selected
 		"use strict";
 		var ePicker = d.getElementsByClassName("qv__picker");
     	for (var i = 0, ln = ePicker.length; i < ln; i++) {
-        			ePicker[i].addEventListener("change", function(){
-					var eQV = d.getElementsByClassName("l-quickerview")[0];
-					eQV.classList.remove("pin__unselected");
-					eQV.classList.add("pin__selected");
+        	ePicker[i].addEventListener("change", function(){
+						nChanges++;
+						if( nChanges === 2 ){
+							var eQV = d.getElementsByClassName("l-quickerview")[0];
+							eQV.classList.remove("pin__unselected");
+							eQV.classList.add("pin__selected");
+						}
 				}, false);
     }
 	})(document);
