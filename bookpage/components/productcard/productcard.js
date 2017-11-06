@@ -27,7 +27,7 @@ console.log("component productcard.js");
       ltdc_productcard.eScrim.classList.remove("isOpenR__scrim");
     }
   };
-  ltdc_productcard.init();
+  //QQQQltdc_productcard.init();
 })();
 
 /*
