@@ -4,7 +4,7 @@ console.log("component flyoutcart.js");
 var ltdc_flyoutcart = (function( doc, eID ) {
   var nWidthAdj = doc.documentElement.clientWidth;
 	if ( nWidthAdj >= 980 ) { // Position horz if large
-    doc.getElementById( eID ).style.right = ( ((nWidthAdj - 980) / 2) + 210 + "px" );
+    doc.getElementById( eID ).style.right = ( ((nWidthAdj - 980) / 2) + 212 + "px" );
 	}
   //  wire close ancher
   return {
