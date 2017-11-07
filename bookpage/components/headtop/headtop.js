@@ -29,6 +29,10 @@ var ltdc_headtop = {
     ltdc_headtop.eScrim.addEventListener("click", ltdc_headtop.toggle, false);
   },
   "toggle" : function( e ){
+    ltdc_headtop.autoToggle();
+    e.preventDefault();
+  },
+  "autoToggle" : function(){
     if( ltdc_headtop.bOpen ){
       ltdc_headtop.eMenu.classList.remove("isOpen__menu");
       ltdc_headtop.eScrim.classList.remove("isOpen__scrim");
@@ -37,7 +41,6 @@ var ltdc_headtop = {
       ltdc_headtop.eScrim.classList.add("isOpen__scrim");
     }
     ltdc_headtop.bOpen = !ltdc_headtop.bOpen;
-    e.preventDefault();
   }
 };
 ltdc_headtop.init();

@@ -1,7 +1,7 @@
 "use strict";
 console.log("component productcard.js");
 
-(function(){
+//(function(){
   var ltdc_productcard = {
     eQV: null, eMenu: null, eScrim: null, eX: null, eBody: null,
     "init": function(){
@@ -28,7 +28,7 @@ console.log("component productcard.js");
     }
   };
   ltdc_productcard.init();
-})();
+//})();
 
 /*
 var c_productcard = new Vue({
