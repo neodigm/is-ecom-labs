@@ -2491,6 +2491,14 @@ var jsnCat = {"cat51851":{"level1CategoryUrl":"/browse/For-the-Home/_/N-oni","le
 	  align-items: flex-start;
 	  display: flex;
 	  flex-flow: row nowrap; /* Shorthand for flex-direction and flex-wrap */
+	  justify-content: space-between;
+	  padding: 0;
+}
+.l-grid-qv__buttons {
+	  /* align-content: not used if only one row */
+	  align-items: flex-start;
+	  display: flex;
+	  flex-flow: row nowrap; /* Shorthand for flex-direction and flex-wrap */
 	  justify-content: space-evenly;
 	  padding: 0;
 }
@@ -2517,7 +2525,7 @@ var jsnCat = {"cat51851":{"level1CategoryUrl":"/browse/For-the-Home/_/N-oni","le
 .qv__pin {
 	color: #545454;
 	font-family: "roboto", Helvetica, Arial, "Sans Serif";
-	font-size: 11px;
+	font-size: 14px;
 	font-weight: 400;
 	margin: 8px 2px;
 	text-align: center;
@@ -2526,7 +2534,7 @@ var jsnCat = {"cat51851":{"level1CategoryUrl":"/browse/For-the-Home/_/N-oni","le
 	color: #545454;
 	fill: #545454;
 	font-family: "roboto", Helvetica, Arial, "Sans Serif";
-	font-size: 11px;
+	font-size: 14px;
 	font-weight: 400;
 	margin: 8px 2px;
 	text-align: center;
@@ -2537,7 +2545,7 @@ var jsnCat = {"cat51851":{"level1CategoryUrl":"/browse/For-the-Home/_/N-oni","le
 	font-size: 11px;
 	font-weight: 400;
 	margin: 8px 2px;
-	text-align: center;
+	text-align: left;
 	font-style: italic;
 }
 .qv__was {
@@ -2552,7 +2560,7 @@ var jsnCat = {"cat51851":{"level1CategoryUrl":"/browse/For-the-Home/_/N-oni","le
 .qv__save {
 	color: #cf2d42;
 	font-family: "roboto", Helvetica, Arial, "Sans Serif";
-	font-size: 13px;
+	font-size: 14px;
 	font-weight: 300;
 	margin: 4px 0 10px 0;
 	text-align: center;
@@ -2647,30 +2655,6 @@ select.select-custom {
 	background: #fff;
 	width: 100%;
 }
-QQQQlabel.select-label:after, QQQQlabel.select-label:before {
-    content: '';
-    width: 0;
-    height: 0;
-    border-width: 5px;
-    border-style: solid inset inset;
-    -moz-border-top-colors: none;
-    -moz-border-right-colors: none;
-    -moz-border-bottom-colors: none;
-    -moz-border-left-colors: none;
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    appearance: none;
-    border-image: none;
-    right: 10px;
-    top: 24px;
-    position: absolute;
-    pointer-events: none;
-}
-QQQQlabel.select-label {
-    position: relative;
-    margin-bottom: 0;
-}
-
 .qv__person--input {
   border-radius: 3px;
   height: 40px;
@@ -2832,6 +2816,7 @@ select.qv__select--arrow:focus {
 						<option value="208047-1BIW-OHS">Home</option>
 						<option value="208047-1BIW-ABR">Away</option>
 					</select>
+
 					<div class="pin__selected--show">
 						<section class="l-grid-qv__textoptions">
 							<div><p class="qv__pin">Item #: 142013-2FPK-RED</p></div>
@@ -2844,7 +2829,7 @@ select.qv__select--arrow:focus {
 							<div><p class="qv__instock">Ships Directly from<br>the Manufacturer</p></div>
 						</section>
 					</div>
-					<br>
+					<br class="pin__selected--hide">
 					<section class="qv__person--container qv__person--closed">
 						<p class="">Personalization Details</p>
 						<svg class="js-qv__person-svg qv__person-svg--minus" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11H7v-2h10v2z"/></svg>
@@ -2867,7 +2852,7 @@ select.qv__select--arrow:focus {
 						</aside>
 					</section>
 					<br>
-					<section class="l-grid-qv__textoptions">
+					<section class="l-grid-qv__buttons">
 						<img class="" src="./N-1z0uo43_files/qv_add2cart.png">
 						<a id="js-qv__button-a2c--id" class="qv__button--a2c">Add to Cart</a>
 					</section>
