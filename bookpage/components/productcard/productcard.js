@@ -29,9 +29,9 @@ console.log("component productcard.js");
     "close": function(){
       //ltdc_productcard.eMenu.classList.remove("isOpenR__menu");
       ltdc_productcard.bPers = false;
-      TweenMax.to(ltdc_productcard.ePersInstr, .4, {right: -560, ease:Power4.easeInOut,
+      TweenMax.to(ltdc_productcard.ePersInstr, .3, {right: -560, ease:Power4.easeInOut,
       onComplete:function(){
-        TweenMax.to(document.getElementById("js-drawerright__menu"), .8, {right: -380, ease:Power4.easeInOut,
+        TweenMax.to(document.getElementById("js-drawerright__menu"), .6, {right: -380, ease:Power4.easeInOut,
           onComplete:function(){
           ltdc_productcard.eBody.classList.remove("qv--open");
           ltdc_productcard.eScrim.classList.remove("isOpenR__scrim");
