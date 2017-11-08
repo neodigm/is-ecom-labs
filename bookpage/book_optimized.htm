@@ -2583,7 +2583,9 @@ var jsnCat = {"cat51851":{"level1CategoryUrl":"/browse/For-the-Home/_/N-oni","le
 	background-color: #fff;
 	border: solid 1px #999;
 	border-radius: 4px;
+	height: 24px;
 	margin: 16px 0 8px 0;
+	overflow: hidden;
 	padding: 6px;
 }
 .qv__person--container > p {
@@ -2628,8 +2630,8 @@ var jsnCat = {"cat51851":{"level1CategoryUrl":"/browse/For-the-Home/_/N-oni","le
 .qv__person--container > svg:hover {
 	fill: #2ba6cb;
 }
-.qv__person--closed aside { display: none; }
-.qv__person--opened aside { display: block; }
+.qv__person--closed QQQQaside { display: none; }
+.qv__person--opened QQQQaside { display: block; }
 }
 .qv__person--closed .qv__person-svg--plus { display: block; }
 .qv__person--closed .qv__person-svg--minus { display: none; }
@@ -2954,9 +2956,11 @@ var nChanges = 0;
 					if( eCont.classList.contains("qv__person--closed") ){
 						eCont.classList.remove("qv__person--closed");
 						eCont.classList.add("qv__person--opened");
+						TweenMax.to(eCont, 1, {height: 347, ease:Power4.easeInOut});
 					}else{
 						eCont.classList.add("qv__person--closed");
 						eCont.classList.remove("qv__person--opened");
+						TweenMax.to(eCont, 1, {height: 24, ease:Power4.easeInOut});
 					}
 				}, false);
     }
