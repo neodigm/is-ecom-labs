@@ -2464,10 +2464,6 @@ var jsnCat = {"cat51851":{"level1CategoryUrl":"/browse/For-the-Home/_/N-oni","le
 	text-align: center;
 	margin: 10px 0 8px 0;
 }
-.l-quickerview .qv__image--mn {
-	margin: 0 6px;
-	width: 96%;
-}
 .l-quickerview .qv__image--brand {
 	display: inline-block;
 	margin: 0 8px;
@@ -2480,13 +2476,40 @@ var jsnCat = {"cat51851":{"level1CategoryUrl":"/browse/For-the-Home/_/N-oni","le
 		background: #fff;
 
 }
-.l-grid-qv__thumbnails {
+.l-grid-qv__images {
 	  /* align-content: not used if only one row */
 	  align-items: flex-start;
 	  display: flex;
-	  flex-flow: row nowrap; /* Shorthand for flex-direction and flex-wrap */
+	  flex-direction: row;
+		flex-wrap: nowrap;
 	  justify-content: space-around;
 	  padding: 0;
+}
+.l-grid-qv__thumbnails {
+	  /* align-content: not used if only one row */
+	  align-items: center;
+	  display: flex;
+	  flex-flow: row wrap; /* Shorthand for flex-direction and flex-wrap */
+	  padding: 0;
+}
+.qv-svg__arrows {
+	cursor: pointer;
+	position: absolute;
+}
+.l-quickerview .qv__image--mn {
+	margin: 4px 12px;
+	width: 100%;
+}
+.qv__image--th {
+	cursor: pointer;
+	margin: 4px 2px 4px 2px;
+}
+.qv__image--th > img {
+	height: auto;
+	width: 119px;
+}
+.qv__image--th > img:hover {
+	box-shadow: 2px 2px 3px 0px rgba(56, 56, 56, 0.56);
 }
 .l-grid-qv__textoptions {
 	  /* align-content: not used if only one row */
@@ -2503,14 +2526,6 @@ var jsnCat = {"cat51851":{"level1CategoryUrl":"/browse/For-the-Home/_/N-oni","le
 	  flex-flow: row nowrap; /* Shorthand for flex-direction and flex-wrap */
 	  justify-content: space-evenly;
 	  padding: 0;
-}
-.qv__image--th {
-	cursor: pointer;
-	margin: 6px;
-}
-.qv__image--th > img {
-	height: auto;
-	width: 100%;
 }
 .qv__arrows {
 	fill: #545454;
@@ -2774,25 +2789,27 @@ select.qv__select--arrow:focus {
 			<aside style="text-align: left;">
 			<img class="qv__image--brand" src="./N-1z0uo43_files/qv_nfl.jpg" alt="Football">
 			</aside>
-			<img class="qv__image--mn" src="./N-1z0uo43_files/65054_mn.jpg" alt="Message in a bottle">
 
-			<nav class="l-grid-qv__thumbnails">
-				<a class="" href="#">
-					<svg class="qv__arrows" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M15.41 16.09l-4.58-4.59 4.58-4.59L14 5.5l-6 6 6 6z"/><path d="M0-.5h24v24H0z" fill="none"/></svg>
-				</a>
-				<a class="qv__image--th">
-					<img id="js-qv__image_1--id" class="" src="./N-1z0uo43_files/65054_mn.jpg" alt="Cowboys">
-				</a>
-				<a class="qv__image--th">
-					<img id="js-qv__image_2--id" class="" src="./N-1z0uo43_files/65054_1239766_HAZ_CWB_mn.jpg" alt="Steelers">
-				</a>
-				<a class="qv__image--th">
-					<img id="js-qv__image_3--id" class="" src="./N-1z0uo43_files/65054_1239761_HAZ_STL_mn.jpg" alt="Packers">
-				</a>
-				<a class="" href="#">
-					<svg class="qv__arrows" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"/><path d="M0-.25h24v24H0z" fill="none"/></svg>
-				</a>
-			</nav>
+<svg xmlns="http://www.w3.org/2000/svg" class="qv-svg__arrows" style="right: 22px; top: 52px; isolation:isolate" viewBox="0 0 119 28" width="119" height="28"><defs><clipPath id="a"><path d="M0 0h119v28H0z"/></clipPath></defs><g clip-path="url(#a)"><path d="M59.5 0l26.618 12.522L119 28H0l32.882-15.478L59.5 0zm0 3.826l25.14 11.826L119 28H0l34.36-12.348L59.5 3.826z" fill-rule="evenodd" fill="#989898"/></g></svg>
+
+			<section class="l-grid-qv__images">
+				<img class="qv__image--mn" src="./N-1z0uo43_files/65054_mn.jpg" alt="NFL">
+				<nav class="l-grid-qv__thumbnails">
+
+					<a class="qv__image--th">
+						<img id="js-qv__image_1--id" class="" src="./N-1z0uo43_files/65054_mn.jpg" alt="Cowboys">
+					</a>
+					<a class="qv__image--th">
+						<img id="js-qv__image_2--id" class="" src="./N-1z0uo43_files/65054_1239766_HAZ_CWB_mn.jpg" alt="Steelers">
+					</a>
+					<a class="qv__image--th">
+						<img id="js-qv__image_3--id" class="" src="./N-1z0uo43_files/65054_1239761_HAZ_STL_mn.jpg" alt="Packers">
+					</a>
+
+				</nav>
+			</section>
+
+<svg xmlns="http://www.w3.org/2000/svg" class="qv-svg__arrows" style="right: 22px; isolation:isolate" viewBox="0 0 119 28" width="119" height="28"><defs><clipPath id="a"><path d="M0 0h119v28H0z"/></clipPath></defs><g clip-path="url(#a)"><path d="M59.5 28l26.618-12.522L119 0H0l32.882 15.478L59.5 28zm0-3.826l25.14-11.826L119 0H0l34.36 12.348L59.5 24.174z" fill-rule="evenodd" fill="#989898"/></g></svg>
 
 				<div class="pin__selected--hide">
 					<p class="qv__price">$16.49 - $56.98<span class="qv__um">ea.</span></p>
@@ -2887,14 +2904,14 @@ The NFL Home and Away Salt &amp; Pepper Shakers are a must-have for your gameday
 	</ltdc-quickerview><!--  Component End  -->
 
 <style>
-.qv-persinstr__contianer {
+.qv-persinstr__container {
 background-color: #fcfcfc;
     border: solid 1px #999;
     border-radius: 4px;
 display: block;
 margin: 8px 8px 8px 8px;
 padding: 8px 8px 8px 8px;
-position: fixed; right: -560px; top: 256px;
+position: fixed; right: -560px; top: 118px;
 width: 480px;
 z-index: -8;
 }
@@ -2925,7 +2942,7 @@ color: #fff;
 width: 88%;
 }
 </style>
-<section id="js-qv-persinstr__contianer--id" class="qv-persinstr__contianer" style="">
+<section id="js-qv-persinstr__container--id" class="qv-persinstr__container" style="">
 	<a id="js-qv-persinstr__handle--id" class="qv-persinstr__handle" style="">Personalization Instructions</a>
 	<img id="" class="qv-persinstr__image" src="./N-1z0uo43_files/47475_pm.jpg">
 </section>
