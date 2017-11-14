@@ -11,24 +11,32 @@
   <ul>
     <li>
       <a class="refine-check" href="https://www.google.com">
-        <input type="checkbox"> <span>Google</span>
+        <input type="checkbox">Beige<span>(26)</span>
       </a>
     </li>
   </ul>
   <script>
     $( document ).ready(function(){
       //$('body').on('click', '.refine-check', function(e){
-      $('.refine-check').on('click', function(e){
-        alert( e.target.type );
-        alert( e.target.tagName );
+      var nRefine = document.getElementsByClassName("refine-check");
+      if( nRefine ){
+        for (var i = 0, ln = nRefine.length; i < ln; i++) {
+            nRefine[i].firstElementChild.addEventListener("click", function( e ){
+              e.preventDefault();
+              setTimeout(function() { console.log( e.target ); e.target.checked = !e.target.checked; }, 120);
+              //return false;
+            }, true);
+        }
+      }
+      $('.refine-check').on('click', function( e ){
         //this.stopPropegation();
-
+        e.preventDefault();
         if(e.target.tagName === 'A') {
-alert("ducks");
                e.preventDefault();
-               e.stopPropegation();
+               e.stopPropagation();
         }
       });
+
     });
   </script>
 </body>

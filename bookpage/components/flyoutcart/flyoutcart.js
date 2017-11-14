@@ -9,7 +9,7 @@ var ltdc_flyoutcart = (function( doc, eID ) {
   //  wire close ancher
   return {
     open: function(){
-      doc.getElementById( eID ).style.right = "354px"; // assumes that QV is open
+      doc.getElementById( eID ).style.right = "546px"; // assumes that QV is open
       doc.getElementById( eID ).style.top = document.documentElement.scrollTop + "px"; // assumes that QV is open
       doc.getElementById( eID ).classList.remove("hidden");
       setTimeout( this.close, 2800 );
