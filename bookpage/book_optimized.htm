@@ -519,7 +519,7 @@ var jsnCat = {"cat51851":{"level1CategoryUrl":"/browse/For-the-Home/_/N-oni","le
 
 </li>
 <li class="criterion__li"><label><input type="checkbox"></label>
-<figure class="four-star review-stars"></figure><span>&Up (44)</span>
+<figure clss="four-star review-stars"></figure><span>&Up (44)</span>
 </li>
 <li class="criterion__li"><label><input type="checkbox"></label>
 <figure class="three-star review-stars"></figure><span>&Up (34)</span>
@@ -2500,11 +2500,13 @@ var jsnCat = {"cat51851":{"level1CategoryUrl":"/browse/For-the-Home/_/N-oni","le
 	cursor: pointer;
 	fill: #a9a9a9;
 	position: absolute;
+	user-select: none;
 }
 .qv-svg__arrows:hover {
 	fill: #297fb8;
 }
 .l-quickerview .qv__image--mn {
+	/*cursor: crosshair;*/
 	margin: 4px 12px;
 	user-select: none;
 	width: 100%;
@@ -2802,12 +2804,13 @@ select.qv__select--arrow:focus {
 			<img class="qv__image--brand" src="./N-1z0uo43_files/qv_nfl.jpg" alt="Football">
 			</aside>
 <div style="position: relative;">
-<svg  id="js-qv-svg__arrow-u--id" class="qv-svg__arrows" height="24" viewBox="0 0 24 24"
-style="right: 56px; top: -30px; isolation:isolate"width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/><path d="M0 0h24v24H0z" fill="none"/></svg>
+<svg  id="js-qv-svg__arrow-u--id" class="qv-svg__arrows" height="32" viewBox="0 0 24 24"
+style="right: 58px; top: -30px; isolation:isolate" width="32" xmlns="http://www.w3.org/2000/svg"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/><path d="M0 0h24v24H0z" fill="none"/></svg>
 
 			<section class="l-grid-qv__images">
 				<picture id="js-qv__image-zoom--id" class="qv__image--mn" style="">
-				<img id="js-qv__image-mn--id" src="./N-1z0uo43_files/65054_mn.jpg" alt="NFL">
+				<img id="js-qv__image-mn--id" src="./N-1z0uo43_files/65054_zm.jpg" alt="NFL"
+				style="width: 377px;">
 				</picture>
 
 				<aside
@@ -2823,7 +2826,7 @@ style="right: 56px; top: -30px; isolation:isolate"width="24" xmlns="http://www.w
 			</section>
 
 <svg id="js-qv-svg__arrow-d--id" class="qv-svg__arrows"
-style="right: 56px; isolation:isolate" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"/><path d="M0-.75h24v24H0z" fill="none"/></svg>
+style="right: 58px; isolation:isolate" height="32" viewBox="0 0 24 24" width="32" xmlns="http://www.w3.org/2000/svg"><path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"/><path d="M0-.75h24v24H0z" fill="none"/></svg>
 
 </div>
 				<div class="pin__selected--hide">
@@ -3066,7 +3069,7 @@ var nChanges = 0;
 
 	if( $ ){
 		$( document ).ready(function(){
-				$('#js-qv__image-zoom--id').zoom({ on:'click', "magnify": 2 });
+				$('#js-qv__image-zoom--id').zoom({ "magnify": 1.4 });
 		});
 	}
 
