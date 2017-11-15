@@ -262,6 +262,8 @@ body,figcaption,figure,img,input,li,picture,section,ul{margin:0;padding:0}.l-foo
 !function(a){"use strict";var b=function(b,c,d){function e(a){return h.body?a():void setTimeout(function(){e(a)})}function f(){i.addEventListener&&i.removeEventListener("load",f),i.media=d||"all"}var g,h=a.document,i=h.createElement("link");if(c)g=c;else{var j=(h.body||h.getElementsByTagName("head")[0]).childNodes;g=j[j.length-1]}var k=h.styleSheets;i.rel="stylesheet",i.href=b,i.media="only x",e(function(){g.parentNode.insertBefore(i,c?g:g.nextSibling)});var l=function(a){for(var b=i.href,c=k.length;c--;)if(k[c].href===b)return a();setTimeout(function(){l(a)})};return i.addEventListener&&i.addEventListener("load",f),i.onloadcssdefined=l,l(f),i};"undefined"!=typeof exports?exports.loadCSS=b:a.loadCSS=b}("undefined"!=typeof global?global:this);
 !function(a){if(a.loadCSS){var b=loadCSS.relpreload={};if(b.support=function(){try{return a.document.createElement("link").relList.supports("preload")}catch(b){return!1}},b.poly=function(){for(var b=a.document.getElementsByTagName("link"),c=0;c<b.length;c++){var d=b[c];"preload"===d.rel&&"style"===d.getAttribute("as")&&(a.loadCSS(d.href,d,d.getAttribute("media")),d.rel=null)}},!b.support()){b.poly();var c=a.setInterval(b.poly,300);a.addEventListener&&a.addEventListener("load",function(){b.poly(),a.clearInterval(c)}),a.attachEvent&&a.attachEvent("onload",function(){a.clearInterval(c)})}}}(this);
 </script>
+<script src="components/jquery/jquery-2.2.4.min.js"></script>
+<script src="components/jquery_zoom/jquery.zoom.min.js"></script>
 
 </head>
 <body data-brand="ltd">
@@ -2803,11 +2805,13 @@ select.qv__select--arrow:focus {
 <svg id="js-qv-svg__arrow-u--id" class="qv-svg__arrows" xmlns="http://www.w3.org/2000/svg" style="right: 14px; top: -30px; isolation:isolate" viewBox="0 0 119 28" width="119" height="28"><defs><clipPath id="a"><path d="M0 0h119v28H0z"/></clipPath></defs><g clip-path="url(#a)"><path d="M59.5 0l26.618 12.522L119 28H0l32.882-15.478L59.5 0zm0 3.826l25.14 11.826L119 28H0l34.36-12.348L59.5 3.826z" fill-rule="evenodd"/></g></svg>
 
 			<section class="l-grid-qv__images">
-				<img class="qv__image--mn" src="./N-1z0uo43_files/65054_mn.jpg" alt="NFL">
+				<picture id="js-qv__image-zoom--id" class="qv__image--mn" style="">
+				<img id="js-qv__image-mn--id" src="./N-1z0uo43_files/65054_mn.jpg" alt="NFL">
+				</picture>
+
 				<aside
 				  style="poistion: absolute;width: 192px; overflow: hidden;">
-				<nav id="js-qv__thumbnails--id" class="l-grid-qv__thumbnails"
-			  	style="QQQQposition:absolute;">
+				<nav id="js-qv__thumbnails--id" class="l-grid-qv__thumbnails">
 
 <a id="js-qv__image-th1--id" class="qv__image--th"><img class="" src="./N-1z0uo43_files/65054_1239761_HAZ_STL_mn.jpg" alt=""></a>
 <a id="js-qv__image-th2--id" class="qv__image--th"><img class="" src="./N-1z0uo43_files/65054_1239762_HAZ_BAR_mn.jpg" alt=""></a>
@@ -3036,12 +3040,6 @@ var nChanges = 0;
 		var eArrow_u = d.getElementById( "js-qv-svg__arrow-u--id" );
 		var eArrow_d = d.getElementById( "js-qv-svg__arrow-d--id" );
 		eArrow_u.addEventListener("click", function(){
-console.log("---------");
-console.log("eTh1.sku | "+eTh1.sku);
-console.log("eTh2.sku | "+eTh2.sku);
-console.log("eTh3.sku | "+eTh3.sku);
-console.log("length   | "+aImages.length);
-console.log("---------");
 			if( eTh1.sku == 0 ) {eTh1.sku = (aImages.length -1) }else{ eTh1.sku-- };
 			if( eTh2.sku == 0 ) {eTh2.sku = (aImages.length -1) }else{ eTh2.sku-- };
 			if( eTh3.sku == 0 ) {eTh3.sku = (aImages.length -1) }else{ eTh3.sku-- };
@@ -3050,12 +3048,6 @@ console.log("---------");
 			eTh3.src = aImages[ eTh3.sku ];
 		});
 		eArrow_d.addEventListener("click", function(){
-console.log("---------");
-console.log("eTh1.sku | "+eTh1.sku);
-console.log("eTh2.sku | "+eTh2.sku);
-console.log("eTh3.sku | "+eTh3.sku);
-console.log("length   | "+aImages.length);
-console.log("---------");
 			if( eTh1.sku >= (aImages.length -1) ) {eTh1.sku = 0 }else{ eTh1.sku++ };
 			if( eTh2.sku >= (aImages.length -1) ) {eTh2.sku = 0 }else{ eTh2.sku++ };
 			if( eTh3.sku >= (aImages.length -1) ) {eTh3.sku = 0 }else{ eTh3.sku++ };
@@ -3068,6 +3060,12 @@ console.log("---------");
 	document.getElementById("js-qv__button-a2c--id").addEventListener("click", function(){
 		ltdc_flyoutcart.open();
 	});
+
+	if( $ ){
+		$( document ).ready(function(){
+				$('#js-qv__image-zoom--id').zoom({ on:'click', "magnify": 2 });
+		});
+	}
 
 </script>
 
@@ -3303,6 +3301,7 @@ console.log("---------");
 <!-- <script src="components/vue.runtime.min.js"></script> -->
 <script src="components/vue.js"></script>
 <script src="components/axios.min.js"></script>
+
 <script src="components/headtop/headtop.js" async></script>
 <script src="components/flyoutcart/flyoutcart.js" async></script>
 <script src="components/quickerview/quickerview.js" async></script>
