@@ -262,11 +262,9 @@ body,figcaption,figure,img,input,li,picture,section,ul{margin:0;padding:0}.l-foo
 !function(a){"use strict";var b=function(b,c,d){function e(a){return h.body?a():void setTimeout(function(){e(a)})}function f(){i.addEventListener&&i.removeEventListener("load",f),i.media=d||"all"}var g,h=a.document,i=h.createElement("link");if(c)g=c;else{var j=(h.body||h.getElementsByTagName("head")[0]).childNodes;g=j[j.length-1]}var k=h.styleSheets;i.rel="stylesheet",i.href=b,i.media="only x",e(function(){g.parentNode.insertBefore(i,c?g:g.nextSibling)});var l=function(a){for(var b=i.href,c=k.length;c--;)if(k[c].href===b)return a();setTimeout(function(){l(a)})};return i.addEventListener&&i.addEventListener("load",f),i.onloadcssdefined=l,l(f),i};"undefined"!=typeof exports?exports.loadCSS=b:a.loadCSS=b}("undefined"!=typeof global?global:this);
 !function(a){if(a.loadCSS){var b=loadCSS.relpreload={};if(b.support=function(){try{return a.document.createElement("link").relList.supports("preload")}catch(b){return!1}},b.poly=function(){for(var b=a.document.getElementsByTagName("link"),c=0;c<b.length;c++){var d=b[c];"preload"===d.rel&&"style"===d.getAttribute("as")&&(a.loadCSS(d.href,d,d.getAttribute("media")),d.rel=null)}},!b.support()){b.poly();var c=a.setInterval(b.poly,300);a.addEventListener&&a.addEventListener("load",function(){b.poly(),a.clearInterval(c)}),a.attachEvent&&a.attachEvent("onload",function(){a.clearInterval(c)})}}}(this);
 </script>
-<script src="components/jquery/jquery-2.2.4.min.js"></script>
-<script src="components/jquery_zoom/jquery.zoom.min.js"></script>
-
 </head>
 <body data-brand="ltd">
+
 		<ltdc-headtop id="js-headtop" class="l-grid-headtop is-signed-in"><!--  Component Begin  -->
 			<nav class="headtop__hb">
 				<a id="js-headtop-hb__id" class="headtop__hb--a">
@@ -2507,7 +2505,7 @@ var jsnCat = {"cat51851":{"level1CategoryUrl":"/browse/For-the-Home/_/N-oni","le
 }
 .l-quickerview .qv__image--mn {
 	/*cursor: crosshair;*/
-		cursor: -moz-zoom-in; 
+		cursor: -moz-zoom-in;
 		cursor: -webkit-zoom-in;
 		cursor: zoom-in;
 	margin: 4px 12px;
@@ -2811,10 +2809,9 @@ select.qv__select--arrow:focus {
 style="right: 58px; top: -30px; isolation:isolate" width="32" xmlns="http://www.w3.org/2000/svg"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/><path d="M0 0h24v24H0z" fill="none"/></svg>
 
 			<section class="l-grid-qv__images">
-				<picture id="js-qv__image-zoom--id" class="qv__image--mn" style="">
-				<img id="js-qv__image-mn--id" src="./N-1z0uo43_files/65054_zm.jpg" alt="NFL"
+
+				<img id="js-qv__image-mn--id" class="qv__image--mn" src="./N-1z0uo43_files/65054_zm.jpg" alt="NFL"
 				style="width: 377px;">
-				</picture>
 
 				<aside
 				  style="poistion: absolute;width: 192px; overflow: hidden;">
@@ -2985,6 +2982,11 @@ width: 88%;
 	<img id="" class="qv-persinstr__image" src="./N-1z0uo43_files/47475_pm.jpg">
 </section>
 
+
+<script src="components/jquery/jquery-2.2.4.min.js"></script>
+	<script src='QQQQhttp://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'></script>
+
+<script src="components/jquery_zoom/easyzoom.js"></script>
 <script>
 var nChanges = 0;
 	(function(d){ //  Toggle State as if a PIN was selected (twice)
@@ -3069,12 +3071,6 @@ var nChanges = 0;
 	document.getElementById("js-qv__button-a2c--id").addEventListener("click", function(){
 		ltdc_flyoutcart.open();
 	});
-
-	if( $ ){
-		$( document ).ready(function(){
-				$('#js-qv__image-zoom--id').zoom({ "magnify": 1.4 });
-		});
-	}
 
 </script>
 
@@ -3325,9 +3321,7 @@ var nChanges = 0;
 <script src="components/leftnav/leftnav.js" async></script>
 
 <script>
-	setTimeout(function(){
-		ltdc_productcard.open();
-	}, 3000);
+	//setTimeout(function(){ ltdc_productcard.open(); }, 2000);
 </script>
 
 </body>

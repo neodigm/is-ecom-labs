@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+  <title>Demo Dev Tools</title>
+</head>
+<body>
+  <h1>Demo Dev Tools</h1>
+  <!--  In the Chrome dev tools select the P element > break on > Attrib Modifications
+  -->
+  <p id="js-my-text__id">This is text</p>
+  <a id="js-click-me__id">Click Me</a>
+  <hr>
+  <a id="js-log-stuff__id">Log Stuff to Console</a>
+  <script>
+    document.getElementById("js-click-me__id").addEventListener("click", function(){
+      var eMyText = document.getElementById("js-my-text__id");
+      eMyText.style.color = "#FF0000";
+    }, true);
+    document.getElementById("js-log-stuff__id").addEventListener("click", function(){
+      var eMyText = document.getElementById("js-my-text__id");
+      console.clear();
+      console.group("Refine debug");
+        console.dir( eMyText );
+        console.count("ducks!");
+        console.count("ducks!");
+        console.error("Yikes!");
+      console.groupEnd("Refine debug");
+    }, true);
+  </script>
+</body>
+</html>
