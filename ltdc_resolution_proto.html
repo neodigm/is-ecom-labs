@@ -49,11 +49,9 @@
   <main id="js-main__id" class="ltdc-main"><p id="js-width__id" style="font-size: 24px;font-family: sans-serif;text-align: center;color: #EDBA08;margin: 0;padding: 8px;">DUCKS</p></main>
   <script>
 (function(){
-  "QQQQuse strict";
+  "use strict";
   var eMain   = document.getElementById("js-main__id");
   var eOutput = document.getElementById("js-width__id");
-console.dir( eMain );
-console.dir( eOutput );
   setInterval(function(){ eOutput.innerHTML = eMain.clientWidth; }, 400);
 })();
   </script>
