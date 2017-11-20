@@ -25,12 +25,28 @@
       /* rgb(190, 219, 254); */
       /* rgb(74, 144, 226); */
       /* rgb(48, 97, 154); */
+    .ltdc-main { 
+      background-color: #888;
+      height: 980px;
+      padding: 0;
+
+      margin: 0;    
+      width: 100%;
+    }
+    @media only screen and (min-width: 2000px) {
+      /* content container */
+        .ltdc-main { 
+          margin: 0 auto;
+          width: 1920px;
+        }
+    }
   </style>
   <header class="ltdc-header">
     <div  class="ltdc-header__email"></div>
     <nav  class="ltdc-header__logo"></nav>
     <nav  class="ltdc-header__search"></nav>
   </header>
+  <main class="ltdc-main"></main>
   <script>
   </script>
 </body>
