@@ -1,0 +1,78 @@
+/* completely rendered below the fold */
+/*  CSS category Base     */ /*  reset margin padding ...  */
+/*  CSS category Layout   */ /*  border display height media width ...  */
+.l-quickerview {
+	font-family: "roboto", Helvetica, Arial, "Sans Serif";
+}
+.l-quickerview .l-grid{
+	align-items: flex-start;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-around;
+	padding: 14px;
+	width: 940px;
+}
+.l-quickerview .l-grid__left {
+	text-align: center;
+	width: 66%;
+}
+.l-quickerview .l-grid__right {
+	width: 100%;
+}
+.l-quickerview .hero__image{
+	background-color: #ddd;
+	height: 460px; width: 377px; /*mn ratio*/
+}
+
+.l-quickerview .thumb-nav{
+	margin: 14px 0 8px 0;
+}
+.l-quickerview .thumb-nav__svg{
+	cursor: pointer;
+	margin: 36px 0;
+}
+.l-quickerview .thumb-nav__img{
+	cursor: pointer;
+	margin: 0 4px;
+	height: 109px; width: 89px; /*alt ratio*/
+}
+
+body[data-brand="lsc"] .l-quickerview .thumb-nav__svg { fill: #7e2d3e; }
+body[data-brand="ltd"] .l-quickerview .thumb-nav__svg { fill: #297fb8; }
+body[data-brand="lsc"] .l-quickerview .thumb-nav__svg:hover { fill: #9c4a62; }
+body[data-brand="ltd"] .l-quickerview .thumb-nav__svg:hover { fill: #2ba6cb; }
+
+
+
+
+.tabbys {
+	position: relative;
+	min-height: 420px;
+	clear: both;
+}
+.tabbys .tabby { float: left; }
+.tabbys .tabby label {
+	background: #eee; 
+	border: 1px solid #ccc; 
+	cursor: pointer;
+	position: relative;
+	user-select: none;
+	margin: 4px !important;
+	padding: 4px !important;
+}
+.tabbys .tabby [type=radio] {display: none; }
+.tabbys .QQQQtabby-content {
+	overflow: scroll;
+	position: absolute;
+	top: 28px; left: 0;
+	background: white;
+	right: 0; bottom: 0;
+	padding: 8px;
+	border: 1px solid #ccc; 
+}
+.tabbys [type=radio]:checked ~ label {
+	background: white;
+	border-bottom: 1px solid white;
+	z-index: 2;
+}
+.tabbys [type=radio]:checked ~ label ~ .tabby-content { z-index: 1; }

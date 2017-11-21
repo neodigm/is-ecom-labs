@@ -1,0 +1,21 @@
+/* completely rendered below the fold */
+/*  CSS category Base     */ /*  reset margin padding ...  */
+/*  CSS category Layout   */ /*  border display height media width ...  */
+.l-quickerview {
+
+}
+.l-quickerview .l-grid{
+	align-items: flex-start;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: space-around;
+}
+.l-quickerview .l-grid div:nth-of-type(1){
+	width: 50%;
+}`
+.l-quickerview .l-grid div:nth-of-type(2){
+	width: 50%;
+}
+
+body[data-brand="lsc"] .l-quickerview .QQQQ { color: #7e2d3e; }
+body[data-brand="ltd"] .l-quickerview .QQQQ { color: #2ba6cb; }

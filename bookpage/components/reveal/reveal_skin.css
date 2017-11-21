@@ -50,3 +50,8 @@ cursor: pointer;
 .l-reveal  .resp_x:hover {
 color: #444!important;
 }
+.l-reveal .eml-msg__x{
+	position: absolute;
+	top: -22px;
+	right: -30px;
+}

@@ -47,7 +47,7 @@ console.log("component productcard.js");
       ltdc_productcard.bPers = !ltdc_productcard.bPers;
     }
   };
-  ltdc_productcard.init();
+  //ltdc_productcard.init();
 //})();
 
 /*

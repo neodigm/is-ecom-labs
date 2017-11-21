@@ -20,7 +20,9 @@ var ltdc_reveal = {
       ltdc_reveal.eRevScrim.classList.add( "reveal__scrim" );
       ltdc_reveal.eRev = document.getElementById( ltdc_reveal.sRevId );
       ltdc_reveal.eRev.classList.add( "reveal__box" );
-      ltdc_reveal.eRev.setAttribute("style", "top: "+ (window.pageYOffset+84) +"px;");
+      ltdc_reveal.eRev.parentElement.classList.remove( "reveal__init" );
+        ltdc_reveal.eRev.style.top = String( window.pageYOffset + 84 ) + "px";
+        ltdc_reveal.eRev.style.visibility = "visible";
       ltdc_reveal.eRev.setAttribute("aria-hidden", "false");
       e.preventDefault();
     }
@@ -29,8 +31,9 @@ var ltdc_reveal = {
   "close" : function( e ){
     ltdc_reveal.eRevScrim.classList.remove( "reveal__scrim" );
     ltdc_reveal.eRev.classList.remove( "reveal__box" );
-    ltdc_reveal.eRev.setAttribute("aria-hidden", "true");
-    e.preventDefault();
+    ltdc_reveal.eRev.parentElement.classList.add( "reveal__init" );
+    ltdc_reveal.eRev.setAttribute( "aria-hidden", "true" );
+    if( e ){ e.preventDefault(); }
   }
 };
 ltdc_reveal.init();
