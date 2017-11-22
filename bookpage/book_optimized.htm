@@ -49,6 +49,68 @@ body,figcaption,figure,img,input,li,picture,section,ul{margin:0;padding:0}.l-gri
 
 		<!--
 		/*========================================*/
+		/*  Component: tabmutex                */
+		/*================================ begin =*/
+		-->
+	<style>
+	/*  Above the Fold begin    */
+
+.l-tabmutex .tabmutex-tablist {
+align-items: stretch;
+border-bottom:    1px solid #297fb8;
+display: flex;
+flex-flow: row nowrap; /* Shorthand for flex-direction and flex-wrap */
+justify-content: flex-start;
+margin: 0 auto;
+padding: 0 0 0 14px;
+width: 96%
+}
+.l-tabmutex .tabmutex-tab {
+background-color: #fff;
+border-top:    1px solid #297fb8;
+border-right:  1px solid #297fb8;
+border-left:   1px solid #297fb8;
+border-top-right-radius: 6px;
+border-top-left-radius: 6px;
+cursor: pointer;
+display: block;
+list-style: none;
+margin: 2px 4px 0 4px;
+padding: 4px 8px;
+user-select: none;
+}
+.l-tabmutex li:nth-of-type(1) {
+/*margin: 2px 4px 0 14px;*/
+}
+.l-tabmutex .tabmutex-tab__selected {
+margin-bottom: -1px;
+}
+.l-tabmutex .tabmutex-tab__link {
+font-size: 13px;
+font-weight: 400;
+text-decoration: none;
+}
+.l-tabmutex .tabmutex-tabpanel {
+
+}
+
+body[data-brand="lsc"] .l-tabmutex .tabmutex-tab__link { color: #7e2d3e; }
+body[data-brand="ltd"] .l-tabmutex .tabmutex-tab__link { color: #297fb8; }
+body[data-brand="lsc"] .l-tabmutex .tabmutex-tab__link:hover { color: #9c4a62; }
+body[data-brand="ltd"] .l-tabmutex .tabmutex-tab__link:hover { color: #2ba6cb; }
+
+
+	/*  Above the Fold end      */
+	</style>
+		<link rel="preload" href="components/tabmutex/tabmutex_skin.min.css" as="style" onload="this.rel='stylesheet'">
+		<!--
+		/*========================================*/
+		/*  Component: tabmutex                */
+		/*================================ end ===*/
+		-->
+
+		<!--
+		/*========================================*/
 		/*  Component: quickerview                */
 		/*================================ begin =*/
 		-->
@@ -2627,12 +2689,6 @@ width: 88%;
 	<a id="js-qv-persinstr__handle--id" class="qv-persinstr__handle" style="">Personalization Instructions</a>
 	<img id="" class="qv-persinstr__image" src="./N-1z0uo43_files/47475_pm.jpg">
 </section>
-
-
-<script src="components/jquery/jquery-2.2.4.min.js"></script>
-	<script src='QQQQhttp://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'></script>
-
-<script src="components/jquery_zoom/easyzoom.js"></script>
 <script>
 var nChanges = 0;
 	(function(d){ //  Toggle State as if a PIN was selected (twice)
@@ -2942,16 +2998,20 @@ var nChanges = 0;
 			</article>
 			<article class="l-grid__right">
 
-				<nav class="tabbys">
-					<div class="tabby">
-						<input id="tabby-1" type="radio" name="tabby-group-1" checked>
-						<label for="tabby-1">Personalization</label>
-					</div>
-					<div class="tabby">
-						<input id="tabby-2" type="radio" name="tabby-group-1">
-						<label for="tabby-2">Overview</label>
-					</div>
-				</nav>
+				<ltdc-tabmutex class="l-tabmutex"><!--  Component Begin  -->
+
+					<ul class="tabmutex-tablist" role="tablist">
+						<li id="js-tabmutex-tab__1--id" class="tabmutex-tab tabmutex-tab__selected" role="presentation" aria-selected="true">
+							<a class="tabmutex-tab__link" role="tab" href="" tabindex="0">Personalization</a>
+						</li>
+						<li id="js-tabmutex-tab__2--id" class="tabmutex-tab" role="presentation">
+							<a class="tabmutex-tab__link" role="tab" href="" tabindex="-1">Overview</a>
+						</li>
+					</ul>
+					<article id="js-tabmutex-tabpanel__1--id" class="tabmutex-tabpanel" role="tabpanel" aria-hidden="false">AAAA</article>
+					<article id="js-tabmutex-tabpanel__2--id" class="tabmutex-tabpanel" role="tabpanel" aria-hidden="true">BBBB</article>
+
+				</ltdc-tabmutex><!--  Component End  -->
 
 			</article>
 		</section>
@@ -2997,6 +3057,7 @@ var nChanges = 0;
 
 <script src="components/headtop/headtop.js" async></script>
 <script src="components/flyoutcart/flyoutcart.js" async></script>
+<script src="components/tabmutex/tabmutex.js" async></script>
 <script src="components/quickerview/quickerview.js" async></script>
 <script src="components/headnav/headnav.js" async></script>
 <script src="components/topfab/topfab.js" async></script>
@@ -3007,10 +3068,6 @@ var nChanges = 0;
 <script src="components/gsap/TweenMax.min.js" async></script>
 
 <script src="components/leftnav/leftnav.js" async></script>
-
-<script>
-	//setTimeout(function(){ ltdc_productcard.open(); }, 2000);
-</script>
 
 </body>
 </html>
