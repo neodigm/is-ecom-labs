@@ -1,28 +1,36 @@
-"use strict";
 console.log("component tabmutex.js");
 
 var ltdc_tabmutex = (function( doc, sSelector ) {
-  var naTabs = doc.getElementsByClassName( sSelector );
+  "use strict";
+
+  var naTabs = doc.getElementsByClassName( sSelector ), naPanel =[];
   if( sSelector && naTabs ){
 
     return {
-      init: function(){
+      init: function(){ // Wire events
         for(var i = 0, ln = naTabs.length; i < ln; i++) {
           naTabs[i].addEventListener("click", this.selected, true);
+          naPanel[i] = doc.getElementById( naTabs[i].dataset.panel );
         }
       },
-      selected: function( e ){
+      selected: function( e ){ // A tab has been selected
         var eTab = ( e.target.tagName === "LI" ) ? e.target : e.target.parentElement;
         e.preventDefault();
-console.dir( eTab );
         for(var i = 0, ln = naTabs.length; i < ln; i++) {
-          naTabs[i].classList.remove("tabmutex-tab__selected");
+          if( eTab === naTabs[i] ){
+            eTab.classList.add("tabmutex-tab__selected");
+            eTab.setAttribute("aria-selected", "true");
+            naPanel[i].classList.remove("hidden");           
+          }else{
+            naTabs[i].classList.remove("tabmutex-tab__selected");
+            naTabs[i].setAttribute("aria-selected", "false");
+            naPanel[i].classList.add("hidden");            
+          }
         }
-console.log( e.target.tagName );
-        eTab.classList.add("tabmutex-tab__selected");
-      },
-      debug: function(){
-        console.dir( this );
+
+//naTabs[i].setAttribute("aria-hidden", "false");
+
+
       }
     }
 

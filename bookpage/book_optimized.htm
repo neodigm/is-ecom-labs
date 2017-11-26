@@ -88,6 +88,7 @@ margin-bottom: -1px;
 .l-tabmutex .tabmutex-tab__link {
 font-size: 13px;
 font-weight: 400;
+outline: none;
 text-decoration: none;
 }
 .l-tabmutex .tabmutex-tabpanel {
@@ -3001,13 +3002,18 @@ var nChanges = 0;
 				<ltdc-tabmutex class="l-tabmutex"><!--  Component Begin  -->
 
 					<ul class="tabmutex-tablist" role="tablist">
-						<li id="js-tabmutex-tab__1--id" class="tabmutex-tab tabmutex-tab__selected" role="presentation" aria-selected="true">
+						<li id="js-tabmutex-tab__1--id" class="tabmutex-tab tabmutex-tab__selected"
+						data-panel="js-tabmutex-tabpanel__1--id"
+						role="presentation" aria-selected="true">
 							<a class="tabmutex-tab__link" role="tab" href="" tabindex="0">Personalization</a>
 						</li>
-						<li id="js-tabmutex-tab__2--id" class="tabmutex-tab" role="presentation">
+						<li id="js-tabmutex-tab__2--id" class="tabmutex-tab"
+						data-panel="js-tabmutex-tabpanel__2--id"
+						role="presentation" aria-selected="false">
 							<a class="tabmutex-tab__link" role="tab" href="" tabindex="-1">Overview</a>
 						</li>
 					</ul>
+
 					<article id="js-tabmutex-tabpanel__1--id" class="tabmutex-tabpanel" role="tabpanel" aria-hidden="false">AAAA</article>
 					<article id="js-tabmutex-tabpanel__2--id" class="tabmutex-tabpanel" role="tabpanel" aria-hidden="true">BBBB</article>
 
