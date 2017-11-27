@@ -36,8 +36,166 @@
 	margin: 0 4px;
 	height: 109px; width: 89px; /*alt ratio*/
 }
+.l-quickerview .sku-desc__caption{
+	color: #535353;
+	font-size: 22px;
+	margin: 8px 0;
+	text-align: left;
+}
+.l-quickerview .sku-desc__price{
+	color: #cf2d42;
+	font-size: 25px;
+	font-weight: 600;
+}
+.l-quickerview .sku-desc__review--stars {
+    background: url(../../media/global/images/sprites/review-stars-sprite.png) no-repeat;
+    height: 18px;
+    width: 92px;
+}
+.l-quickerview .sku-desc__review--half-star {background-position: 0 -18px;}
+.l-quickerview .sku-desc__review--one-star {background-position: 0 -36px;}
+.l-quickerview .sku-desc__review--one-half-star {background-position: 0 -54px;}
+.l-quickerview .sku-desc__review--two-star {background-position: 0 -72px;}
+.l-quickerview .sku-desc__review--two-half-star {background-position: 0 -90px;}
+.l-quickerview .sku-desc__review--three-star {background-position: 0 -108px;}
+.l-quickerview .sku-desc__review--three-half-star {background-position: 0 -126px;}
+.l-quickerview .sku-desc__review--four-star {background-position: 0 -144px;}
+.l-quickerview .sku-desc__review--four-half-star {background-position: 0 -162px;}
+.l-quickerview .sku-desc__review--five-star {background-position: 0 -180px;}
+
+.l-quickerview .sku-panel {
+	background-color: #f5faff; 
+	border: solid 1px #275f9b;
+	border-radius: 4px;
+	padding: 8px 48px;
+}
+
+.l-quickerview .sku-panel__inner {
+	background-color: #fff; 
+	border: solid 1px #ccc;
+	border-radius: 2px;
+	padding: 8px;
+}
+
+.l-quickerview .sku-pers__instruct{
+	color: #535353;
+	font-size: 14px;
+	text-align: left;
+}
+.l-quickerview .sku-pers__instruct--b{
+	color: #000;
+	font-size: 14px;
+	font-weight: 600;
+	text-align: left;
+}
 
 body[data-brand="lsc"] .l-quickerview .thumb-nav__svg { fill: #7e2d3e; }
 body[data-brand="ltd"] .l-quickerview .thumb-nav__svg { fill: #297fb8; }
 body[data-brand="lsc"] .l-quickerview .thumb-nav__svg:hover { fill: #9c4a62; }
 body[data-brand="ltd"] .l-quickerview .thumb-nav__svg:hover { fill: #2ba6cb; }
+
+.qv__select--container {
+	background-color: #fcfcfc;
+	border: solid 1px #999;
+	border-radius: 4px;
+	margin: 6px;
+	padding: 6px;
+}
+
+/*  legacy dropdown begin  */
+
+select.select-custom {
+	cursor: pointer;
+	height: 38px;
+	line-height: 38px;
+	font-size: 14px;
+	color: #297fb8; /*rgba(0,0,0,0.5);*/
+	border: 1px solid #ccc;
+	padding: 0 12px;
+	outline: 0;
+	display: inline-block;
+	border-radius: 4px;
+	box-sizing: border-box;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	background: #fff;
+	width: 100%;
+}
+
+select.qv__select--arrow {
+  background-image:
+    linear-gradient(45deg, transparent 50%, #297fb8 50%),
+    linear-gradient(135deg, #297fb8 50%, transparent 50%);
+  background-position:
+    calc(100% - 20px) calc(1em + 2px),
+    calc(100% - 15px) calc(1em + 2px),
+    calc(100% - 2.5em) 0.5em;
+  background-size:
+    5px 5px,
+    5px 5px;
+  background-repeat: no-repeat;
+}
+
+select.qv__select--arrow:focus {
+  background-image:
+    linear-gradient(45deg, green 50%, transparent 50%),
+    linear-gradient(135deg, transparent 50%, #297fb8 50%);
+  background-position:
+    calc(100% - 15px) 1em,
+    calc(100% - 20px) 1em,
+    calc(100% - 2.5em) 0.5em;
+  background-size:
+    5px 5px,
+    5px 5px;
+  background-repeat: no-repeat;
+  border-color: green;
+  outline: 0;
+}
+
+/*  legacy dropdown end  */
+
+.qv__person--input {
+  border-radius: 3px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 1em;
+  padding: 0 .5em;
+  background-color: #fff;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #ccc;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  color: rgba(0,0,0,0.75);
+  width: 90%;
+  margin: 0 9px;
+}
+
+/*  Center the placeholder  */
+.qv__person--input::-webkit-input-placeholder { text-align: center;}
+.qv__person--input:-moz-placeholder { text-align: center; }
+.qv__person--input::-moz-placeholder { text-align: center; }
+.qv__person--input:-ms-input-placeholder { text-align: center; }
+
+
+
+.l-grid-qv__textoptions {
+    align-items: flex-start;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding: 0;
+}
+
+.qv__person--checkbox {
+	margin: 6px;
+}
+.qv__person--disclaimer {
+    color: #484848;
+    font-family: "roboto", Helvetica, Arial, "Sans Serif";
+    font-size: 14px;
+    font-weight: 300;
+    margin: 4px 0 10px 0;
+    position: relative;
+    text-align: left;
+}

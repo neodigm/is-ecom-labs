@@ -21,16 +21,14 @@ var ltdc_tabmutex = (function( doc, sSelector ) {
             eTab.classList.add("tabmutex-tab__selected");
             eTab.setAttribute("aria-selected", "true");
             naPanel[i].classList.remove("hidden");           
+            naPanel[i].setAttribute("aria-hidden", "false");           
           }else{
             naTabs[i].classList.remove("tabmutex-tab__selected");
             naTabs[i].setAttribute("aria-selected", "false");
-            naPanel[i].classList.add("hidden");            
+            naPanel[i].classList.add("hidden");
+            naPanel[i].setAttribute("aria-hidden", "true");
           }
         }
-
-//naTabs[i].setAttribute("aria-hidden", "false");
-
-
       }
     }
 
