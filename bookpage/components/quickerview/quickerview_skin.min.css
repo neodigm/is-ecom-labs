@@ -116,10 +116,10 @@
     text-decoration: none;
  }
 
-body[data-brand="lsc"] .l-quickerview .qv-button__cta { background-color: #7e2d3e; }
-body[data-brand="ltd"] .l-quickerview .qv-button__cta { background-color: #297fb8; }
-body[data-brand="lsc"] .l-quickerview .qv-button__cta:hover { background-color: #9c4a62; }
-body[data-brand="ltd"] .l-quickerview .qv-button__cta:hover { background-color: #2ba6cb; }
+body[data-brand="lsc"] .l-quickerview .qv-button__cta { background-color: #9c4a62; }
+body[data-brand="ltd"] .l-quickerview .qv-button__cta { background-color: #2ba6cb; }
+body[data-brand="lsc"] .l-quickerview .qv-button__cta:hover { background-color: #7c2a42; }
+body[data-brand="ltd"] .l-quickerview .qv-button__cta:hover { background-color: #0b86ab; }
 
 body[data-brand="lsc"] .l-quickerview .thumb-nav__svg { fill: #7e2d3e; }
 body[data-brand="ltd"] .l-quickerview .thumb-nav__svg { fill: #297fb8; }
@@ -194,20 +194,25 @@ select.qv__select--arrow:focus {
 /*  legacy dropdown end  */
 
 .qv__person--input {
-  border-radius: 3px;
-  height: 40px;
-  line-height: 40px;
-  font-size: 1em;
-  padding: 0 .5em;
-  background-color: #fff;
-  border-style: solid;
-  border-width: 1px;
-  border-color: #ccc;
-  box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
-  color: rgba(0,0,0,0.75);
-  width: 90%;
-  margin: 0 9px;
+border-radius: 3px;
+height: 40px;
+line-height: 40px;
+font-size: 1em;
+outline: none;
+padding: 0 .5em;
+background-color: #fff;
+border-style: solid;
+border-width: 1px;
+border-color: #ccc;
+box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+color: rgba(0,0,0,0.75);
+width: 90%;
+margin: 0 9px;
 }
+body[data-brand="lsc"] .qv__person--input:focus { border-color: #9c4a62; }
+body[data-brand="ltd"] .qv__person--input:focus { border-color: #2ba6cb; }
+
+.qv__person--input:focus { border-color: #2ba6cb;}
 
 /*  Center the placeholder  */
 .qv__person--input::-webkit-input-placeholder { text-align: center;}
@@ -237,6 +242,25 @@ select.qv__select--arrow:focus {
     position: relative;
     text-align: left;
 }
-.qv__aaa{
 
+.qv__aaa span:nth-of-type(1) {
+cursor: pointer;
+font-size: 10px;
+margin: 2px;
 }
+.qv__aaa span:nth-of-type(2) {
+cursor: zoom-in;
+font-size: 14px;
+margin: 2px;
+}
+.qv__aaa span:nth-of-type(3) {
+cursor: zoom-in;
+font-size: 18px;
+margin: 2px;
+}
+
+/*
+<span class="normalFont active" style="font-size: 10px;color: #555;">A</span>
+<span class="mediumFont" style="font-size: 13px;">A</span>
+<span class="largeFont" style="font-size: 16px;">A</span>
+*/

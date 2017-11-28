@@ -57,55 +57,7 @@ body,figcaption,figure,img,input,li,picture,section,ul{margin:0;padding:0}.l-gri
 		-->
 	<style>
 	/*  Above the Fold begin    */
-.l-tabmutex .tabmutex-tablist {
-align-items: stretch;
-display: flex;
-flex-flow: row nowrap; /* Shorthand for flex-direction and flex-wrap */
-justify-content: flex-start;
-margin: 0 14px;
-padding: 0 0 0 14px;
-width: 96%
-}
-.l-tabmutex .tabmutex-tab {
-background-color: #fff;
-border-top-right-radius: 6px;
-border-top-left-radius: 6px;
-cursor: pointer;
-display: block;
-list-style: none;
-margin: 2px 4px 0 4px;
-padding: 4px 8px;
-user-select: none;
-}
-.l-tabmutex li:nth-of-type(1) {
-/*margin: 2px 4px 0 14px;*/
-}
-.l-tabmutex .tabmutex-tab__selected {
-margin-bottom: -1px;
-}
-.l-tabmutex .tabmutex-tab__link {
-font-size: 13px;
-font-weight: 400;
-outline: none;
-text-decoration: none;
-}
-.l-tabmutex .tabmutex-tab__selected .tabmutex-tab__link {
-font-weight: 600;
-}
-.tabmutex-tabpanel {
-margin: 0 0 0 14px;
-width: 100%;
-}
-body[data-brand="lsc"] .l-tabmutex .tabmutex-tab { border-top: 1px solid #7e2d3e; border-right: 1px solid #7e2d3e; border-left: 1px solid #7e2d3e;}
-body[data-brand="ltd"] .l-tabmutex .tabmutex-tab { border-top: 1px solid #297fb8; border-right: 1px solid #297fb8; border-left: 1px solid #297fb8; }
-
-body[data-brand="lsc"] .l-tabmutex .tabmutex-tablist { border-bottom: 1px solid #7e2d3e; }
-body[data-brand="ltd"] .l-tabmutex .tabmutex-tablist { border-bottom: 1px solid #297fb8; }
-
-body[data-brand="lsc"] .l-tabmutex .tabmutex-tab__link { color: #7e2d3e; }
-body[data-brand="ltd"] .l-tabmutex .tabmutex-tab__link { color: #297fb8; }
-body[data-brand="lsc"] .l-tabmutex .tabmutex-tab__link:hover { color: #9c4a62; }
-body[data-brand="ltd"] .l-tabmutex .tabmutex-tab__link:hover { color: #2ba6cb; }
+.l-tabmutex .tabmutex-tablist{align-items:stretch;display:flex;flex-flow:row nowrap;justify-content:flex-start;margin:0 14px;padding:0 0 0 14px;width:96%}.l-tabmutex .tabmutex-tab{background-color:#fff;border-top-right-radius:6px;border-top-left-radius:6px;cursor:pointer;display:block;list-style:none;margin:2px 4px 0;padding:4px 10px;user-select:none}.l-tabmutex .tabmutex-tab__selected{margin-bottom:-1px}.l-tabmutex .tabmutex-tab__link{font-size:15px;font-weight:400;outline:0;text-decoration:none}.l-tabmutex .tabmutex-tab__selected .tabmutex-tab__link{font-weight:600}.tabmutex-tabpanel{margin:0 0 0 14px;width:100%}body[data-brand=lsc] .l-tabmutex .tabmutex-tab{border-top:1px solid #7e2d3e;border-right:1px solid #7e2d3e;border-left:1px solid #7e2d3e}body[data-brand=ltd] .l-tabmutex .tabmutex-tab{border-top:1px solid #297fb8;border-right:1px solid #297fb8;border-left:1px solid #297fb8}body[data-brand=lsc] .l-tabmutex .tabmutex-tablist{border-bottom:1px solid #7e2d3e}body[data-brand=ltd] .l-tabmutex .tabmutex-tablist{border-bottom:1px solid #297fb8}body[data-brand=lsc] .l-tabmutex .tabmutex-tab__link{color:#7e2d3e}body[data-brand=ltd] .l-tabmutex .tabmutex-tab__link{color:#297fb8}
 	/*  Above the Fold end      */
 	</style>
 		<link rel="preload" href="components/tabmutex/tabmutex_skin.min.css" as="style" onload="this.rel='stylesheet'">
@@ -2858,7 +2810,7 @@ var nChanges = 0;
 						<li id="js-tabmutex-tab__1--id" class="tabmutex-tab tabmutex-tab__selected"
 						data-panel="js-tabmutex-tabpanel__1--id"
 						role="presentation" aria-selected="true">
-							<a class="tabmutex-tab__link" role="tab" href="" tabindex="0">Personalization</a>
+							<a class="tabmutex-tab__link" role="tab" href="" tabindex="0">Details</a>
 						</li>
 						<li id="js-tabmutex-tab__2--id" class="tabmutex-tab"
 						data-panel="js-tabmutex-tabpanel__2--id"
@@ -2883,8 +2835,8 @@ var nChanges = 0;
 						<p class="sku-desc__caption">Choose a Product
 						</p>
 							<form>
-<select title="Please Make a Selection" class="select-custom qv__picker qv__select--arrow">
-	<option value="">Choose a Team</option>
+<select class="select-custom qv__picker qv__select--arrow">
+	<option value="">Please Make a Selection</option>
 	<option value="208047-1BIW-OHS">Steelers</option>
 	<option value="208047-1BIW-ABR">Cowboys</option>
 	<option value="208047-1BIW-GEO">Packers</option>
@@ -2927,10 +2879,10 @@ var nChanges = 0;
 				</article>
 				<article id="js-tabmutex-tabpanel__2--id" class="tabmutex-tabpanel hidden" role="tabpanel" aria-hidden="true">
 		
-<p class="qv__aaa" style="">
-<span class="normalFont active" style="font-size: 10px;color: #555;cursor:pointer">A</span>
-<span class="mediumFont" style="font-size: 13px;cursor:pointer">A</span>
-<span class="largeFont" style="font-size: 16px;cursor:pointer">A</span>
+<p class="qv__aaa">
+<span class="qv__aaa--small">A</span>
+<span class="qv__aaa--medium">A</span>
+<span class="qv__aaa--large">A</span>
 </p>
 					
 					<p class="sku-pers__instruct">See your name on your team's jersey with this Personalized NFL Action Collage. In the center, it shows one of your team's players wearing a uniform printed with your last name (12-character max). Under his photo, the "#1 Draft Pick" sign can be personalized with your full name (18-character max). Four current members of the team are pictured in the corners of the collage with their name, number and signature. 16&quot;W x 13&quot;L. Vinyl. Ready to hang. <span class="sku-pers__instruct--b">Web and phone agent orders only.</span> Sorry, mail/fax orders not accepted. <span class="sku-pers__instruct--b">This item cannot be shipped to P.O. boxes and APO/FPO addresses.</span>
