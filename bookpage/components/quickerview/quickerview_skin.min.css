@@ -13,6 +13,7 @@
 	/*width: 940px;*/
 }
 .l-quickerview .l-grid__left {
+	font-size: 12px; /* dont ask */
 	text-align: center;
 	width: 66%;
 }
@@ -88,12 +89,33 @@
 	font-weight: 600;
 	text-align: left;
 }
+.l-quickerview .qv-button__cta{
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-size: 18px;
+    font-weight: 300;
+    margin: 2px 20%;
+    padding: 8px 6px;
+    text-align: center;
+    text-decoration: none;
+ }
+
+body[data-brand="lsc"] .l-quickerview .qv-button__cta { background-color: #7e2d3e; }
+body[data-brand="ltd"] .l-quickerview .qv-button__cta { background-color: #297fb8; }
+body[data-brand="lsc"] .l-quickerview .qv-button__cta:hover { background-color: #9c4a62; }
+body[data-brand="ltd"] .l-quickerview .qv-button__cta:hover { background-color: #2ba6cb; }
 
 body[data-brand="lsc"] .l-quickerview .thumb-nav__svg { fill: #7e2d3e; }
 body[data-brand="ltd"] .l-quickerview .thumb-nav__svg { fill: #297fb8; }
 body[data-brand="lsc"] .l-quickerview .thumb-nav__svg:hover { fill: #9c4a62; }
 body[data-brand="ltd"] .l-quickerview .thumb-nav__svg:hover { fill: #2ba6cb; }
 
+body[data-brand="lsc"] .l-quickerview .h-hr__branded { border: .6px #7e2d3e solid; }
+body[data-brand="ltd"] .l-quickerview .h-hr__branded { border: .6px #297fb8 solid; }
+
+    
 .qv__select--container {
 	background-color: #fcfcfc;
 	border: solid 1px #999;
