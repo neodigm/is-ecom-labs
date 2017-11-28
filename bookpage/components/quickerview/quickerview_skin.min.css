@@ -48,6 +48,22 @@
 	font-size: 25px;
 	font-weight: 600;
 }
+.l-quickerview .sku-desc__except--red{
+	color: #cf2d42;
+	font-size: 14px;
+	font-style: oblique;
+	font-weight: 600;
+	margin: 4px;
+	text-align: center;
+}
+.l-quickerview .sku-desc__except--dark{
+	color: #535353;
+	font-size: 14px;
+	font-style: oblique;
+	font-weight: 300;
+	margin: 4px;
+	text-align: center;
+}
 .l-quickerview .sku-desc__review--stars {
     background: url(../../media/global/images/sprites/review-stars-sprite.png) no-repeat;
     height: 18px;
@@ -65,8 +81,6 @@
 .l-quickerview .sku-desc__review--five-star {background-position: 0 -180px;}
 
 .l-quickerview .sku-panel {
-	background-color: #f5faff; 
-	border: solid 1px #275f9b;
 	border-radius: 4px;
 	padding: 8px 48px;
 }
@@ -115,6 +129,8 @@ body[data-brand="ltd"] .l-quickerview .thumb-nav__svg:hover { fill: #2ba6cb; }
 body[data-brand="lsc"] .l-quickerview .h-hr__branded { border: .6px #7e2d3e solid; }
 body[data-brand="ltd"] .l-quickerview .h-hr__branded { border: .6px #297fb8 solid; }
 
+body[data-brand="lsc"] .l-quickerview .sku-panel { background-color: #FFFAFF; border: solid 1px #ccc; }
+body[data-brand="ltd"] .l-quickerview .sku-panel { background-color: #f2faff; border: solid 1px #ccc; }
     
 .qv__select--container {
 	background-color: #fcfcfc;
@@ -220,4 +236,7 @@ select.qv__select--arrow:focus {
     margin: 4px 0 10px 0;
     position: relative;
     text-align: left;
+}
+.qv__aaa{
+
 }
