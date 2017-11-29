@@ -108,22 +108,39 @@
 }
 
 .l-quickerview .qv-button__cta{
-    border-radius: 3px;
-    color: #fff;
-    cursor: pointer;
-    display: block;
-    font-size: 18px;
-    font-weight: 300;
-    margin: 2px 20%;
-    padding: 8px 6px;
-    text-align: center;
-    text-decoration: none;
- }
+border-radius: 3px;
+color: #fff;
+cursor: pointer;
+display: block;
+font-size: 18px;
+font-weight: 300;
+margin: 2px 20%;
+padding: 8px 6px;
+text-align: center;
+text-decoration: none;
+}
 
 body[data-brand="lsc"] .l-quickerview .qv-button__cta { background-color: #9c4a62; }
 body[data-brand="ltd"] .l-quickerview .qv-button__cta { background-color: #2ba6cb; }
 body[data-brand="lsc"] .l-quickerview .qv-button__cta:hover { background-color: #7c2a42; }
 body[data-brand="ltd"] .l-quickerview .qv-button__cta:hover { background-color: #0b86ab; }
+
+.l-quickerview .qv-button__cta--green{
+background-color: #27ae60; 
+border-radius: 3px;
+color: #fff;
+cursor: pointer;
+display: block;
+font-size: 18px;
+font-weight: 300;
+margin: 2px 20%;
+padding: 8px 6px;
+text-align: center;
+text-decoration: none;
+}
+.l-quickerview .qv-button__cta--green:hover {
+background-color: #078e40; 
+}
 
 body[data-brand="lsc"] .l-quickerview .thumb-nav__svg { fill: #7e2d3e; }
 body[data-brand="ltd"] .l-quickerview .thumb-nav__svg { fill: #297fb8; }
@@ -261,4 +278,21 @@ margin: 2px;
 cursor: zoom-in;
 font-size: 18px;
 margin: 2px;
+}
+
+
+
+.svg-icon {
+  display: inline-flex;
+  align-self: center;
+  position: relative;
+  height: 1em;
+  width: 1em;
+}
+.svg-icon svg {
+  height:1.4em;
+  width:1.4em;
+}
+.svg-icon.svg-baseline svg {
+  position: absolute;
 }
