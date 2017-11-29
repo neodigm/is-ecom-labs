@@ -103,6 +103,10 @@
 	font-weight: 600;
 	text-align: left;
 }
+.l-quickerview .sku-pers__instruct--unordered{
+	margin: 24px;
+}
+
 .l-quickerview .qv-button__cta{
     border-radius: 3px;
     color: #fff;
@@ -258,9 +262,3 @@ cursor: zoom-in;
 font-size: 18px;
 margin: 2px;
 }
-
-/*
-<span class="normalFont active" style="font-size: 10px;color: #555;">A</span>
-<span class="mediumFont" style="font-size: 13px;">A</span>
-<span class="largeFont" style="font-size: 16px;">A</span>
-*/
