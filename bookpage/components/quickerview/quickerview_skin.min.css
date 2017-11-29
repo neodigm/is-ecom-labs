@@ -82,14 +82,14 @@
 
 .l-quickerview .sku-panel {
 	border-radius: 4px;
-	padding: 8px 48px;
+	padding: 8px 40px;
 }
 
 .l-quickerview .sku-panel__inner {
 	background-color: #fff; 
 	border: solid 1px #ccc;
 	border-radius: 2px;
-	padding: 8px;
+	padding: 12px;
 }
 
 .l-quickerview .sku-pers__instruct{
@@ -112,12 +112,13 @@ border-radius: 3px;
 color: #fff;
 cursor: pointer;
 display: block;
-font-size: 18px;
+font-size: 17px;
 font-weight: 300;
 margin: 2px 20%;
 padding: 8px 6px;
 text-align: center;
 text-decoration: none;
+user-select: none;
 }
 
 body[data-brand="lsc"] .l-quickerview .qv-button__cta { background-color: #9c4a62; }
@@ -131,12 +132,13 @@ border-radius: 3px;
 color: #fff;
 cursor: pointer;
 display: block;
-font-size: 18px;
+font-size: 17px;
 font-weight: 300;
-margin: 2px 20%;
-padding: 8px 6px;
+margin: 6px 2px;
+padding: 8px 28px;
 text-align: center;
 text-decoration: none;
+user-select: none;
 }
 .l-quickerview .qv-button__cta--green:hover {
 background-color: #078e40; 
