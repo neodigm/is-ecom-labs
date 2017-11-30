@@ -188,22 +188,27 @@ body[data-brand="ltd"] .l-quickerview .h-hr__branded { border: .6px #297fb8 soli
 body[data-brand="lsc"] .l-quickerview .sku-panel { background-color: #FFFAFF; border: solid 1px #ccc; }
 body[data-brand="ltd"] .l-quickerview .sku-panel { background-color: #f2faff; border: solid 1px #ccc; }
     
-.qv__select--container {
-	background-color: #fcfcfc;
-	border: solid 1px #999;
-	border-radius: 4px;
-	margin: 6px;
-	padding: 6px;
-}
-
 /*  legacy dropdown begin  */
 
-select.select-custom {
-	cursor: pointer;
+.l-quickerview .qv__person--select {
+cursor: pointer;
+background-color: #fff;	
+border: solid 1px #ccc;
+border-radius: 3px;
+color: #535353;
+font-size: 1em;
+height: 40px;
+line-height: 40px;
+outline: none;
+padding: 0 8px;
+width: 100%;
+
+-moz-appearance: none;
+	/*cursor: pointer;
 	height: 38px;
 	line-height: 38px;
 	font-size: 14px;
-	color: #297fb8; /*rgba(0,0,0,0.5);*/
+	color: #297fb8;
 	border: 1px solid #ccc;
 	padding: 0 12px;
 	outline: 0;
@@ -214,10 +219,13 @@ select.select-custom {
 	-moz-appearance: none;
 	appearance: none;
 	background: #fff;
-	width: 100%;
+	width: 100%;*/
 }
 
-select.qv__select--arrow {
+body[data-brand="lsc"] .qv__person--select:focus { border-color: #9c4a62; }
+body[data-brand="ltd"] .qv__person--select:focus { border-color: #2ba6cb; }
+
+QQQQselect.QQQQqv__select--arrow {
   background-image:
     linear-gradient(45deg, transparent 50%, #297fb8 50%),
     linear-gradient(135deg, #297fb8 50%, transparent 50%);
@@ -231,7 +239,7 @@ select.qv__select--arrow {
   background-repeat: no-repeat;
 }
 
-select.qv__select--arrow:focus {
+QQQQselect.QQQQqv__select--arrow:focus {
   background-image:
     linear-gradient(45deg, green 50%, transparent 50%),
     linear-gradient(135deg, transparent 50%, #297fb8 50%);
@@ -251,19 +259,17 @@ select.qv__select--arrow:focus {
 
 
 .qv__person--input {
+background-color: #fff;	
+border: solid 1px #ccc;
 border-radius: 3px;
+color: #535353;
+font-size: 1em;
 height: 40px;
 line-height: 40px;
-font-size: 1em;
+margin: 0 9px;
 outline: none;
 padding: 0 .5em;
-background-color: #fff;
-border-style: solid;
-border-width: 1px;
-border-color: #ccc;
-color: #535353;
 width: 90%;
-margin: 0 9px;
 }
 body[data-brand="lsc"] .qv__person--input:focus { border-color: #9c4a62; }
 body[data-brand="ltd"] .qv__person--input:focus { border-color: #2ba6cb; }
