@@ -56,18 +56,44 @@
 	margin: 4px;
 	text-align: center;
 }
-.l-quickerview .sku-desc__except--dark{
-	color: #535353;
-	font-size: 14px;
-	font-style: oblique;
-	font-weight: 300;
-	margin: 4px;
-	text-align: center;
+.l-quickerview  .sku-desc__except--pin {
+color: #535353;
+font-size: 14px;
+font-weight: 400;
+margin: 8px 2px;
+text-align: center;
 }
+.l-quickerview  .sku-desc__except--shipping {
+color: #535353;
+fill: #535353;
+font-size: 11px;
+font-weight: 400;
+margin: 8px 2px;
+text-align: center;
+}
+.l-quickerview  .sku-desc__except--instock {
+color: #535353;
+font-size: 11px;
+font-weight: 400;
+margin: 8px 2px;
+text-align: center;
+font-style: oblique;
+}
+.l-quickerview .sku-desc__viewmore--link{
+cursor: pointer;
+font-size: 18px;
+font-weight: 500;
+}
+.l-quickerview .sku-desc__viewmore--link:hover {
+text-decoration: underline;
+}
+body[data-brand="lsc"] .l-quickerview .sku-desc__viewmore--link { color: #7e2d3e; }
+body[data-brand="ltd"] .l-quickerview .sku-desc__viewmore--link { color: #297fb8; }
+
 .l-quickerview .sku-desc__review--stars {
-    background: url(../../media/global/images/sprites/review-stars-sprite.png) no-repeat;
-    height: 18px;
-    width: 92px;
+background: url(../../media/global/images/sprites/review-stars-sprite.png) no-repeat;
+height: 18px;
+width: 92px;
 }
 .l-quickerview .sku-desc__review--half-star {background-position: 0 -18px;}
 .l-quickerview .sku-desc__review--one-star {background-position: 0 -36px;}
