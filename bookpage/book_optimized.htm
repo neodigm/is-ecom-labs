@@ -283,7 +283,7 @@ body,figcaption,figure,img,input,li,picture,section,ul{margin:0;padding:0}.l-foo
 !function(a){if(a.loadCSS){var b=loadCSS.relpreload={};if(b.support=function(){try{return a.document.createElement("link").relList.supports("preload")}catch(b){return!1}},b.poly=function(){for(var b=a.document.getElementsByTagName("link"),c=0;c<b.length;c++){var d=b[c];"preload"===d.rel&&"style"===d.getAttribute("as")&&(a.loadCSS(d.href,d,d.getAttribute("media")),d.rel=null)}},!b.support()){b.poly();var c=a.setInterval(b.poly,300);a.addEventListener&&a.addEventListener("load",function(){b.poly(),a.clearInterval(c)}),a.attachEvent&&a.attachEvent("onload",function(){a.clearInterval(c)})}}}(this);
 </script>
 </head>
-<body data-brand="ltd">
+<body data-brand="lsc">
 
 		<ltdc-headtop id="js-headtop" class="l-grid-headtop is-signed-in"><!--  Component Begin  -->
 			<nav class="headtop__hb">
@@ -2810,12 +2810,12 @@ var nChanges = 0;
 						<li id="js-tabmutex-tab__1--id" class="tabmutex-tab tabmutex-tab__selected"
 						data-panel="js-tabmutex-tabpanel__1--id"
 						role="presentation" aria-selected="true">
-							<a class="tabmutex-tab__link" role="tab" href="" tabindex="0">Details</a>
+							<a class="tabmutex-tab__link" role="tab" href="" tabindex="0">Overview</a>
 						</li>
 						<li id="js-tabmutex-tab__2--id" class="tabmutex-tab"
 						data-panel="js-tabmutex-tabpanel__2--id"
 						role="presentation" aria-selected="false">
-							<a class="tabmutex-tab__link" role="tab" href="" tabindex="-1">Overview</a>
+							<a class="tabmutex-tab__link" role="tab" href="" tabindex="-1">Details</a>
 						</li>
 					</ul>
 				</ltdc-tabmutex><!--  Component End  -->
@@ -2825,7 +2825,7 @@ var nChanges = 0;
 					<p class="sku-desc__caption">NFL Home and Away Salt &amp; Pepper Shakers
 					</p>
 					<p class="sku-desc__caption">
-						<span class="sku-desc__price">$13.98</span>
+						<span class="sku-desc__price">$13.98</span> <span class="sku-desc__um">each</span>
 					</p>
 					<a class="" href="#">
 						<div class="sku-desc__review--stars sku-desc__review--five-star"></div>
@@ -2859,10 +2859,12 @@ var nChanges = 0;
 
 								<section class="l-grid-qv__textoptions">
 									<div>
-										<input class="qv__person--checkbox" type="checkbox">
+										<input id="js-qv__person-checkbox--id" class="qv__person--checkbox" type="checkbox">
 									</div>
 									<div>
+										<label for="js-qv__person-checkbox--id">
 										<p class="qv__person--disclaimer">I HAVE REVIEWED the personalization instructions and CONFIRM my personalization details are correct. I understand I cannot return this item unless it is defective.</p>
+										</label>
 									</div>
 								</section>
 							</form>
@@ -2880,26 +2882,26 @@ var nChanges = 0;
 								<svg style="left: -10px;" fill="#FFF" height="26" width="26" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0zm18.31 6l-2.76 5z" fill="none"
 									aria-label="Add to Cart"/><path d="M11 9h2V6h3V4h-3V1h-2v3H8v2h3v3zm-4 9c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2zm-9.83-3.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.86-7.01L19.42 4h-.01l-1.1 2-2.76 5H8.53l-.13-.27L6.16 6l-.95-2-.94-2H1v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.13 0-.25-.11-.25-.25z"/></svg>
 								</div> Add to Cart</a>
+						</section>
+						<!-- sku exceptions begin -->
+						<figure class="h-height__half"></figure>
+						<p class="sku-desc__except--red">
+						Available Online Only
+						</p>
 
+						<section class="l-grid-qv__textoptions">
+							<div><p class="sku-desc__except--pin">Item #: 142013-2FPK-RED</p></div>
+							<div><p class="sku-desc__except--instock">In Stock</p></div>
 						</section>
 
+						<section class="l-grid-qv__textoptions">
+							<div><p class="sku-desc__except--shipping">
+							<svg style="" height="14" viewBox="0 0 24 24" width="14" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"></path><path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"></path></svg>
+							 additional delivery $4.00 each</p></div>
+							<div><p class="sku-desc__except--instock">Ships Directly from the Manufacturer</p></div>
+						</section>
+						<!-- sku exceptions end -->
 					</aside>
-					<figure class="h-height__half"></figure>
-					<p class="sku-desc__except--red">
-					Available Online Only
-					</p>
-
-					<section class="l-grid-qv__textoptions">
-						<div><p class="sku-desc__except--pin">Item #: 142013-2FPK-RED</p></div>
-						<div><p class="sku-desc__except--instock">In Stock</p></div>
-					</section>
-
-					<section class="l-grid-qv__textoptions">
-						<div><p class="sku-desc__except--shipping">
-						<svg style="" height="14" viewBox="0 0 24 24" width="14" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"></path><path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"></path></svg>
-						 additional delivery $4.00 each</p></div>
-						<div><p class="sku-desc__except--instock">Ships Directly from the Manufacturer</p></div>
-					</section>
 
 				</article>
 				<article id="js-tabmutex-tabpanel__2--id" class="tabmutex-tabpanel hidden" role="tabpanel" aria-hidden="true">
@@ -2921,9 +2923,7 @@ var nChanges = 0;
 					<hr class="h-hr__branded">
 				</article>
 				<figure class="h-height__full"></figure>
-				<p style="text-align: center; margin: 0">
-					<a class="qv-button__cta">View More Details</a>
-				</p>
+				<a class="qv-button__cta">View More Details</a>
 			</article>
 		</section>
 	</ltdc-quickerview><!--  Component End  -->

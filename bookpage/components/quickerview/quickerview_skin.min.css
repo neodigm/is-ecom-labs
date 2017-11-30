@@ -39,13 +39,18 @@
 }
 .l-quickerview .sku-desc__caption{
 	color: #535353;
-	font-size: 22px;
+	font-size: 24px;
 	margin: 8px 0;
 	text-align: left;
 }
 .l-quickerview .sku-desc__price{
 	color: #cf2d42;
 	font-size: 25px;
+	font-weight: 600;
+}
+.l-quickerview .sku-desc__um{
+	color: #535353;
+	font-size: 18px;
 	font-weight: 600;
 }
 .l-quickerview .sku-desc__except--red{
