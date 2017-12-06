@@ -11,7 +11,7 @@ var ltdc_snackbar = (function( doc, eID ) {
     if( _aQ.length != 0 ){ setTimeout( _fOpen, 1200 ); } // If more messages open again
   };
   var _fOpen = function(){
-    _eSbText.innerHTML = _aQ[0];
+    _eSbText.innerHTML = _aQ[0].replace("|","<br>");
     _eSb.classList.remove("snackbar__cont--hide");
     _eSb.classList.add("snackbar__cont--show");
     setTimeout( _fClose, _nTimeout );
