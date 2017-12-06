@@ -112,6 +112,22 @@ body,figcaption,figure,img,input,li,picture,section,ul{margin:0;padding:0}.l-gri
 	/*================================ end ===*/
 	-->
 
+		<!--
+		/*========================================*/
+		/*  Component: snackbar                   */
+		/*================================ begin =*/
+		-->
+		<style>
+		/*  Above the Fold begin    */
+		/*  Above the Fold end      */
+		</style>
+		<link rel="preload" href="components/snackbar/snackbar_skin.min.css" as="style" onload="this.rel='stylesheet'">
+		<!--
+		/*========================================*/
+		/*  Component: snackbar                   */
+		/*================================ end ===*/
+		-->
+
 	<!--
 	/*========================================*/
 	/*  Component: primebanr                  */
@@ -136,9 +152,91 @@ body,figcaption,figure,img,input,li,picture,section,ul{margin:0;padding:0}.l-gri
 	<style>
 	/*  Above the Fold begin    */
 
+
+
+
+/*  CSS category Base     */ /*  reset margin padding ...  */
+/* secbnr-shop     | The shop our site button on the left and a responsive imaage on the left  */
+/* secbnr-prodcard | A product card with QV on the left and Text on the right  */
+/* secbnr-carousel | Vertical carousel  */
+
+.l-secondbanr{}
+.l-secondbanr .secbnr-shop .l-grid{
+	align-items: flex-start;
+	display: flex;
+	flex-flow: row nowrap; /* Shorthand for flex-direction and flex-wrap */
+	justify-content: space-between;
+	margin: 0 auto;
+	padding: 24px 0;
+	width: 980px;
+}
+.l-secondbanr .secbnr-shop .secondbanr__left {
+	flex-basis: 18.2%;
+}
+.l-secondbanr .secbnr-shop .secondbanr__right {
+	flex-basis: 20%;
+}
+.l-secondbanr .secbnr-shop .secondbanr__btn {
+	border-radius: 3px;
+	border: 0;
+	box-shadow: none;
+	color: #fff;
+	cursor: pointer;
+	display: inline-block;
+	font-family: sans-serif;
+	font-size: 14px;
+	font-weight: 200;
+	line-height: 40px;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	text-align: center;
+	text-decoration: none;
+	transition: background-color 300ms ease-out;
+	vertical-align: middle;
+	width: 100%;
+}
+.l-secondbanr .secbnr-shop .secondbanr__text {
+	font-family: sans-serif;
+	font-size: 12px;
+	margin-top: 8px;
+}
+.l-secondbanr .secbnr-shop .cdn__viewport--sm{}
+@media only screen and (max-width: 47.9375em) {
+	/* small */
+	.l-secondbanr .secbnr-shop .secondbanr__left {
+		display: none;
+	}
+	.l-secondbanr .secbnr-shop .l-grid{
+		display: block;
+		width: inherit;
+	}
+	.l-secondbanr .secbnr-shop .secondbanr__image {
+		width: 100%;
+	}
+}
+@media only screen and (min-width:48em) and (max-width:61.1875em){
+	/* medium */
+	.l-secondbanr .secbnr-shop .secondbanr__left {
+		display: none;
+	}
+	.l-secondbanr .secbnr-shop .l-grid{
+		justify-content: center;
+		width: inherit;
+	}
+}
+/*  CSS category Theme    */ /*  color background hover ...  */
+body[data-brand="lsc"] .l-secondbanr .secbnr-shop .secondbanr__btn { background-color: #672634; }
+body[data-brand="ltd"] .l-secondbanr .secbnr-shop .secondbanr__btn { background-color: #007095; }
+body[data-brand="lsc"] .l-secondbanr .secbnr-shop .secondbanr__btn:hover { background-color: #4b000b; }
+body[data-brand="ltd"] .l-secondbanr .secbnr-shop .secondbanr__btn:hover { background-color: #004c85; }
+
+
+
+
+
 	/*  Above the Fold end      */
 	</style>
-	<link rel="preload" href="components/secondbanr/secondbanr_skin.min.css" as="style" onload="this.rel='stylesheet'">
 	<!--
 	/*========================================*/
 	/*  Component: secondbanr                  */
@@ -469,98 +567,26 @@ var jsnCat = {"cat51851":{"level1CategoryUrl":"/browse/For-the-Home/_/N-oni","le
 	    </figure>
 		</ltdc-primebanr><!--  Component End  -->
 
-<style>
-.l-secondbanr{}
-.l-secondbanr .l-grid{
-	align-items: flex-start;
-	display: flex;
-	flex-flow: row nowrap; /* Shorthand for flex-direction and flex-wrap */
-	justify-content: space-between;
-	margin: 0 auto;
-	padding: 24px 0;
-	width: 980px;
-}
-.l-secondbanr .secondbanr__left {
-	flex-basis: 18.2%;
-}
-.l-secondbanr .secondbanr__right {
-	flex-basis: 20%;
-}
-.l-secondbanr .secondbanr__btn {
-	background-color: #297fb8;
-	border-radius: 3px;
-	border: 0;
-	box-shadow: none;
-	color: #fff;
-	cursor: pointer;
-	display: inline-block;
-	font-family: sans-serif;
-	font-size: 14px;
-	font-weight: 200;
-	line-height: 40px;
-	margin: 0;
-	padding: 0;
-	position: relative;
-	text-align: center;
-	text-decoration: none;
-	transition: background-color 300ms ease-out;
-	vertical-align: middle;
-	width: 100%;
-}
-.l-secondbanr .secondbanr__text {
-	font-family: sans-serif;
-	font-size: 12px;
-	margin-top: 8px;
-}
-.l-secondbanr .cdn__viewport--sm{}
-@media only screen and (max-width: 47.9375em) {
-	/* small */
-	.l-secondbanr .secondbanr__left {
-		display: none;
-	}
-	.l-secondbanr .l-grid{
-		display: block;
-		width: inherit;
-	}
-	.l-secondbanr .secondbanr__image {
-		width: 100%;
-	}
-}
-@media only screen and (min-width:48em) and (max-width:61.1875em){
-	/* medium */
-	.l-secondbanr .secondbanr__left {
-		display: none;
-	}
-	.l-secondbanr .l-grid{
-		justify-content: center;
-		width: inherit;
-	}
-}
-/*  CSS category Theme    */ /*  color background hover ...  */
-body[data-brand="lsc"] .secondbanr__btn { background-color: #672634; }
-body[data-brand="ltd"] .secondbanr__btn { background-color: #007095; }
-body[data-brand="lsc"] .secondbanr__btn:hover { background-color: #4b000b; }
-body[data-brand="ltd"] .secondbanr__btn:hover { background-color: #004c85; }
-</style>
-
 		<ltdc-secondbanr class="l-secondbanr" role="banner"><!--  Component Begin  -->
-			<section class="l-grid">
-				<article class="secondbanr__left">
-				<a href="/homels"  class="brand--lsc__showb secondbanr__btn">Shop Our Site</a>
-				<a href="/homeltd" class="brand--ltd__showb secondbanr__btn">Shop Our Site</a>
-				<p class="brand--lsc__showb secondbanr__text">From gifts to toys to home decor and accessories, you&acute;ll always find something new when you shop Lakeside.
-				</p>
-				<p class="brand--ltd__showb secondbanr__text">From gifts to toys to home decor and accessories, you&acute;ll always find something new when you shop LTD.
-				</p>
-				</article>
-				<figure class="secondbanr__right">
-					<picture class="">
-						<img class="secondbanr__image"
-						src="./N-1z0uo43_files/lsc-222-book-bnr_lg.jpg"
-						alt="product name">
-					</picture>
-				</figure>
-			</section>
+			<div class="secbnr-shop">
+				<section class="l-grid">
+					<article class="secondbanr__left">
+					<a href="/homels"  class="brand--lsc__showb secondbanr__btn">Shop Our Site</a>
+					<a href="/homeltd" class="brand--ltd__showb secondbanr__btn">Shop Our Site</a>
+					<p class="brand--lsc__showb secondbanr__text">From gifts to toys to home decor and accessories, you&acute;ll always find something new when you shop Lakeside.
+					</p>
+					<p class="brand--ltd__showb secondbanr__text">From gifts to toys to home decor and accessories, you&acute;ll always find something new when you shop LTD.
+					</p>
+					</article>
+					<figure class="secondbanr__right">
+						<picture class="">
+							<img class="secondbanr__image"
+							src="./N-1z0uo43_files/lsc-222-book-bnr_lg.jpg"
+							alt="">
+						</picture>
+					</figure>
+				</section>
+			</div>
 		</ltdc-secondbanr><!--  Component End  -->
 
 <ltdc-breadpage class="breadpage__top"><!--  Component Begin  -->
@@ -2572,92 +2598,7 @@ body[data-brand="ltd"] .secondbanr__btn:hover { background-color: #004c85; }
 </section>
 <nav id="js-drawerright__menu"  class="drawerright__menu">
 
-<script>
-var nChanges = 0;
-	(function(d){ //  Toggle State as if a PIN was selected (twice)
-		"use strict";
-		var ePicker = d.getElementsByClassName("qv__picker");
-    	for (var i = 0, ln = ePicker.length; i < ln; i++) {
-        	ePicker[i].addEventListener("change", function(){
-						nChanges++;
-						if( nChanges === 2 ){
-							var eQV = d.getElementsByClassName("l-quickerview")[0];
-							eQV.classList.remove("pin__unselected");
-							eQV.classList.add("pin__selected");
-						}
-				}, false);
-    }
-	})(document);
 
-	(function(d){ //  Expand Collapse
-		"use strict";
-		var nSVG = d.getElementsByClassName("js-qv__person-svg");
-    for (var i = 0, ln = nSVG.length; i < ln; i++) {
-        	nSVG[i].addEventListener("click", function(){
-					var eCont = d.getElementsByClassName("qv__person--container")[0];
-					if( eCont.classList.contains("qv__person--closed") ){
-						eCont.classList.remove("qv__person--closed");
-						eCont.classList.add("qv__person--opened");
-						TweenMax.to(eCont, 1, {height: 290, ease:Power4.easeInOut});
-					}else{
-						eCont.classList.add("qv__person--closed");
-						eCont.classList.remove("qv__person--opened");
-						TweenMax.to(eCont, 1, {height: 24, ease:Power4.easeInOut});
-					}
-				}, false);
-    }
-	})(document);
-
-	(function(d){  //  arrow scroll anime
-		"use strict";
-		var aImages = [
-"./N-1z0uo43_files/65054_1239761_HAZ_STL_mn.jpg",
-"./N-1z0uo43_files/65054_1239762_HAZ_BAR_mn.jpg",
-"./N-1z0uo43_files/65054_1239763_HAZ_BRN_mn.jpg",
-"./N-1z0uo43_files/65054_1239764_HAZ_BRW_mn.jpg",
-"./N-1z0uo43_files/65054_1239765_HAZ_CLT_mn.jpg",
-"./N-1z0uo43_files/65054_1239766_HAZ_CWB_mn.jpg",
-"./N-1z0uo43_files/65054_1239767_HAZ_FRN_mn.jpg",
-"./N-1z0uo43_files/65054_1239768_HAZ_PCK_mn.jpg",
-"./N-1z0uo43_files/65054_1239769_HAZ_SNT_mn.jpg",
-"./N-1z0uo43_files/65054_1239770_HAZ_GNT_mn.jpg",
-"./N-1z0uo43_files/65054_1239771_HAZ_PTR_mn.jpg",
-"./N-1z0uo43_files/65054_1239772_HAZ_VKN_mn.jpg",
-"./N-1z0uo43_files/65054_1239773_HAZ_EGL_mn.jpg",
-"./N-1z0uo43_files/65054_1239774_HAZ_RDR_mn.jpg",
-"./N-1z0uo43_files/65054_1239775_HAZ_DLP_mn.jpg",
-"./N-1z0uo43_files/65054_1239776_HAZ_SHW_mn.jpg"
-	];
-		var eTh1 = d.getElementById("js-qv__image-th1--id").firstElementChild; eTh1.sku =0;
-		var eTh2 = d.getElementById("js-qv__image-th2--id").firstElementChild; eTh2.sku =1;
-		var eTh3 = d.getElementById("js-qv__image-th3--id").firstElementChild; eTh3.sku =2;
-
-		var eThumbs = d.getElementById("js-qv__thumbnails--id");
-		var eArrow_u = d.getElementById( "js-qv-svg__arrow-u--id" );
-		var eArrow_d = d.getElementById( "js-qv-svg__arrow-d--id" );
-		eArrow_u.addEventListener("click", function(){
-			if( eTh1.sku == 0 ) {eTh1.sku = (aImages.length -1) }else{ eTh1.sku-- };
-			if( eTh2.sku == 0 ) {eTh2.sku = (aImages.length -1) }else{ eTh2.sku-- };
-			if( eTh3.sku == 0 ) {eTh3.sku = (aImages.length -1) }else{ eTh3.sku-- };
-			eTh1.src = aImages[ eTh1.sku ];
-			eTh2.src = aImages[ eTh2.sku ];
-			eTh3.src = aImages[ eTh3.sku ];
-		});
-		eArrow_d.addEventListener("click", function(){
-			if( eTh1.sku >= (aImages.length -1) ) {eTh1.sku = 0 }else{ eTh1.sku++ };
-			if( eTh2.sku >= (aImages.length -1) ) {eTh2.sku = 0 }else{ eTh2.sku++ };
-			if( eTh3.sku >= (aImages.length -1) ) {eTh3.sku = 0 }else{ eTh3.sku++ };
-			eTh1.src = aImages[ eTh1.sku ];
-			eTh2.src = aImages[ eTh2.sku ];
-			eTh3.src = aImages[ eTh3.sku ];
-		});
-	})( document );
-
-	document.getElementById("js-qv__button-a2c--id").addEventListener("click", function(){
-		ltdc_flyoutcart.open();
-	});
-
-</script>
 
 
 
@@ -2713,7 +2654,7 @@ var nChanges = 0;
 	<section class="brand--ltd__showb">
 		<aside class="l-grid-footer1 h-no-border__top">
 			<nav class="footer1__sig">
-				<p class="footer1__p">&quot;LTD Commodities began as a family owned and operated business in 1963 and has grown into one of the nation's premier catalog retailers. We are a trusted source of quality products at the lowest prices, where you save BIG every day.&quot;</p>
+				<p class="footer1__p">&quot;LTD Commodities began as a family owned and operated business in 1963 and has grown into one of the nations premier catalog retailers. We are a trusted source of quality products at the lowest prices, where you save BIG every day.&quot;</p>
 				<img class="footer1__img" src="images/signature_LTD.jpg" alt="The LTD Family">
 			</nav>
 			<nav class="footer1__norton">
@@ -2983,11 +2924,11 @@ var nChanges = 0;
 						<section class="l-grid-cta">
 							<nav class="l-grid-qty-step">
 								<a class="qty-step__action qty-step__action--minus">-</a>
-								<input class="qty-step__action--input" type="tel"
+								<input id="js-qty__input--id" class="qty-step__action--input" type="tel"
 								maxlength="3" placeholder="Qty" value="1">
 								<a class="qty-step__action qty-step__action--plus">+</a>
 							</nav>
-							<a class="qv-button__cta--green">
+							<a id="js-qv__button-a2c--id" class="qv-button__cta--green">
 								<div class="svg-icon svg-baseline">
 								<svg style="left: -10px;" fill="#FFF" height="26" width="26" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0zm18.31 6l-2.76 5z" fill="none"
 									aria-label="Add to Cart"/><path d="M11 9h2V6h3V4h-3V1h-2v3H8v2h3v3zm-4 9c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2zm-9.83-3.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.86-7.01L19.42 4h-.01l-1.1 2-2.76 5H8.53l-.13-.27L6.16 6l-.95-2-.94-2H1v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.13 0-.25-.11-.25-.25z"/></svg>
@@ -3040,6 +2981,12 @@ var nChanges = 0;
 	</section>
 </ltdc-reveal><!--  Component End  -->
 
+<ltdc-snackbar class="l-snackbar"><!--  Component Begin  -->
+	<section id="js-snackbar__id" class="snackbar__cont snackbar__cont--hide"  aria-live="polite" aria-atomic="true">
+		<p class="snackbar__msg">2 item(s) added to your shopping cart.</p>
+	</section>
+</ltdc-snackbar><!--  Component End  -->
+
 
 <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 <!-- <script src="components/vue.runtime.min.js"></script> -->
@@ -3052,12 +2999,12 @@ var nChanges = 0;
 <script src="components/quickerview/quickerview.js" async></script>
 <script src="components/headnav/headnav.js" async></script>
 <script src="components/topfab/topfab.js" async></script>
+<script src="components/snackbar/snackbar.js" async></script>
 <script src="components/productcard/productcard.js" async></script>
 <script src="components/reveal/reveal.js" async></script>
 <script src="components/refinesort/refinesort.js" async></script>
 
 <script src="components/gsap/TweenMax.min.js" async></script>
-
 <script src="components/leftnav/leftnav.js" async></script>
 
 </body>
