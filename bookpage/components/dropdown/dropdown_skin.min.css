@@ -1,0 +1,30 @@
+/* completely rendered below the fold */
+/*  CSS category Base     */ /*  reset margin padding ...  */
+/*  CSS category Layout   */ /*  border display height media width ...  */
+.l-snackbar .snackbar__cont {
+	background-color: #323232;
+  left: 38%;
+  min-width: 188px;
+  padding: 14px 14px;
+  position: fixed;
+  transition: bottom 0.6s ease-in-out;
+	user-select: none;
+  z-index: 2000;
+}
+.l-snackbar .snackbar__cont--hide {
+    bottom: -112px;
+    transition: bottom 0.6s ease-in-out;
+}
+.l-snackbar .snackbar__cont--show {
+    bottom: 4px;
+    transition: bottom 0.6s ease-in-out;
+}
+.l-snackbar .snackbar__msg {
+	color: #fff;
+	font-family: sans-serif;
+	font-size: 11px;
+	margin: 2px;
+  text-align: center;
+	text-transform: uppercase;
+	white-space: nowrap;
+}
