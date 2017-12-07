@@ -8,7 +8,7 @@ var ltdc_snackbar = (function( doc, eID ) {
     _aQ.shift(); // fifo
     _eSb.classList.remove("snackbar__cont--show");
     _eSb.classList.add("snackbar__cont--hide");
-    if( _aQ.length != 0 ){ setTimeout( _fOpen, 1200 ); } // If more messages open again
+    if( _aQ.length != 0 ){ setTimeout( _fOpen, 1200 ); } // If more messages then open again
   };
   var _fOpen = function(){
     _eSbText.innerHTML = _aQ[0].replace("|","<br>");
@@ -19,7 +19,7 @@ var ltdc_snackbar = (function( doc, eID ) {
   return {
     q: function( sMsg ){
       _aQ.push( sMsg ); // fifo
-      if( _aQ.length == 1 ){ _fOpen(); } // If first message open
+      if( _aQ.length == 1 ){ _fOpen(); } // If first message then init open
     }
   }
 })( document, "js-snackbar__id" );
