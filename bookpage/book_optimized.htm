@@ -2863,16 +2863,37 @@ var jsnCat = {"cat51851":{"level1CategoryUrl":"/browse/For-the-Home/_/N-oni","le
 
 .l-dropdown .drop-container {
 	background-color: #fff;
-		border: solid 1px #ccc;
+		border: solid 1px #bbb;
 	border-radius: 2px;
 	box-sizing: border-box;
 	cursor: pointer;
 	display: block;
+	list-style: none;
 	max-height: 352px;
 	padding: 4px;
 	position: absolute;
 	z-index: 276;
 }
+
+.l-dropdown .l-grid {
+	align-items: flex-start;
+	border: 1px #ccc solid;
+	display: flex;
+	flex-flow: row nowrap; /* Shorthand for flex-direction and flex-wrap */
+	justify-content: space-between;
+	padding: 8px;
+}
+.l-dropdown .prod__text--item {
+color: #646464;
+font-size: 18px;
+margin: 4px;
+}
+.l-dropdown .prod__text--stock {
+color: #ccc;
+font-size: 16px;
+margin: 4px;
+}
+
 .l-dropdown .drop-container--opened {
 	display: block;
 }
@@ -2893,12 +2914,39 @@ var jsnCat = {"cat51851":{"level1CategoryUrl":"/browse/For-the-Home/_/N-oni","le
 	</nav>
 	<ul class="drop-container drop-container--closed"><!-- branded max-height overflow scroll -->
 
-		<li class="" data-sku=""><!-- sku clickable select -->
+		<li class="l-grid" data-sku=""><!-- sku clickable select -->
 			<div class=""><!-- grid left -->
-				<p class="">product</p><!-- product -->
+				<p class="prod__text--item">Steelers</p><!-- product -->
 			</div>
 			<div class=""><!-- grid right -->
-				<p class="">in stock</p><!-- stock avial -->
+				<p class="prod__text--stock">out of stock</p><!-- stock avial -->
+			</div>
+		</li>
+
+		<li class="l-grid" data-sku=""><!-- sku clickable select -->
+			<div class=""><!-- grid left -->
+				<p class="prod__text--item">Cowboys</p><!-- product -->
+			</div>
+			<div class=""><!-- grid right -->
+				<p class="prod__text--stock">out of stock</p><!-- stock avial -->
+			</div>
+		</li>
+
+		<li class="l-grid" data-sku=""><!-- sku clickable select -->
+			<div class=""><!-- grid left -->
+				<p class="prod__text--item">Packers</p><!-- product -->
+			</div>
+			<div class=""><!-- grid right -->
+				<p class="prod__text--stock">out of stock</p><!-- stock avial -->
+			</div>
+		</li>
+
+		<li class="l-grid" data-sku=""><!-- sku clickable select -->
+			<div class=""><!-- grid left -->
+				<p class="prod__text--item">Bears</p><!-- product -->
+			</div>
+			<div class=""><!-- grid right -->
+				<p class="prod__text--stock">out of stock</p><!-- stock avial -->
 			</div>
 		</li>
 
@@ -2911,7 +2959,10 @@ var ltdc_dropdown = (function( doc, sID ){
 	var _eDrop = doc.getElementById( sID ), _eSurf = _eDrop.firstElementChild, _eCont = _eSurf.nextElementSibling;
 	var _bInit = true; // Nothing has ever been selected
 	var _bOpen = false;
+
 	_eSurf.addEventListener("click", function( e ){
+
+		_eCont.style.width = _eSurf.offsetWidth + "px";
 		_bOpen = !_bOpen;
 		if( _bOpen ){
 			if( _bInit ){
@@ -2935,13 +2986,14 @@ var ltdc_dropdown = (function( doc, sID ){
 })( document, "js-dropdown-1--id" );
 </script>
 
-
+<!--
 <select id="js-person-select--id" class="qv__person--select">
 	<option value="">Select a Team</option>
 	<option value="Steelers">Steelers</option>
 	<option value="Cowboys">Cowboys</option>
 	<option value="Packers">Packers</option>
 </select>
+-->
 							</form>
 						<figure class="h-height__full"></figure>
 						<aside class="sku-panel__inner">

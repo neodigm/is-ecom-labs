@@ -25,7 +25,8 @@ var ltdc_quickerview = (function( doc, Opt ) {
 
   doc.getElementById( Opt.button_a2c_id ).addEventListener("click", function(){
     var eQty = doc.getElementById( "js-qty__input--id" );
-    var eSel = doc.getElementById( "js-person-select--id" );
+    //var eSel = doc.getElementById( "js-person-select--id" );
+var eSel = {"value":"Steelers"};
 
     if( eQty && (eQty.value > 0) ){
   	    ltdc_snackbar.q( eSel.value + "|" + nQty + " item(s) added to your shopping cart." );
