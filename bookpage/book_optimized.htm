@@ -2843,6 +2843,7 @@ var jsnCat = {"cat51851":{"level1CategoryUrl":"/browse/For-the-Home/_/N-oni","le
 	float:right;
 	position: relative;
 	top: -28px;
+	transition: all 0.2s linear 0.1s;
 }
 .l-dropdown .drop-surface__init--closed .drop-surface__svg,
 .l-dropdown .drop-surface__select--closed .drop-surface__svg {
@@ -2850,6 +2851,7 @@ var jsnCat = {"cat51851":{"level1CategoryUrl":"/browse/For-the-Home/_/N-oni","le
 	position: relative;
 	top: -28px;
 	transform: rotate(180deg);
+	transition: all 0.2s linear 0.1s;
 }
 
 /* nothing selected */
@@ -2898,7 +2900,7 @@ var jsnCat = {"cat51851":{"level1CategoryUrl":"/browse/For-the-Home/_/N-oni","le
 	padding: 2px;
 }
 .l-dropdown .l-grid--disabled {
-	cursor: default;
+	/*cursor: pointer;*/
 }
 
 .l-dropdown .prod__text__cont--top { width: 100%; }
@@ -2953,8 +2955,8 @@ color: #aaa;
 	body[data-brand="lsc"] .l-dropdown .drop-surface__select--opened { border: solid 1px #9c4a62; }
 	body[data-brand="ltd"] .l-dropdown .drop-surface__select--opened { border: solid 1px #2aa6ca; }
 
-	body[data-brand="lsc"] .l-dropdown .drop-container--opened { border: solid 1px #9c4a62; }
-	body[data-brand="ltd"] .l-dropdown .drop-container--opened { border: solid 1px #2aa6ca; }
+	body[data-brand="lsc"] .l-dropdown .drop-container--opened { border: solid 1px #9c4a62; border-top: none;}
+	body[data-brand="ltd"] .l-dropdown .drop-container--opened { border: solid 1px #2aa6ca; border-top: none;}
 
 	body[data-brand="lsc"] .l-dropdown .drop-surface__svg { fill: #7e2d3e; }
 	body[data-brand="ltd"] .l-dropdown .drop-surface__svg { fill: #297fb8; }
@@ -3002,6 +3004,33 @@ color: #aaa;
 		<li class="l-grid" data-sku=""><!-- sku clickable select -->
 			<div class="prod__text__cont--top"><!-- grid top -->
 				<p class="prod__text--item">Bears</p><!-- product -->
+			</div>
+			<div class="prod__text__cont--bottom"><!-- grid bottom -->
+				<p class="prod__text--stock"></p><!-- stock avial -->
+			</div>
+		</li>
+
+		<li class="l-grid" data-sku=""><!-- sku clickable select -->
+			<div class="prod__text__cont--top"><!-- grid top -->
+				<p class="prod__text--item">Broncos</p><!-- product -->
+			</div>
+			<div class="prod__text__cont--bottom"><!-- grid bottom -->
+				<p class="prod__text--stock"></p><!-- stock avial -->
+			</div>
+		</li>
+
+		<li class="l-grid" data-sku=""><!-- sku clickable select -->
+			<div class="prod__text__cont--top"><!-- grid top -->
+				<p class="prod__text--item">Browns</p><!-- product -->
+			</div>
+			<div class="prod__text__cont--bottom"><!-- grid bottom -->
+				<p class="prod__text--stock"></p><!-- stock avial -->
+			</div>
+		</li>
+
+		<li class="l-grid" data-sku=""><!-- sku clickable select -->
+			<div class="prod__text__cont--top"><!-- grid top -->
+				<p class="prod__text--item">Colts</p><!-- product -->
 			</div>
 			<div class="prod__text__cont--bottom"><!-- grid bottom -->
 				<p class="prod__text--stock"></p><!-- stock avial -->
