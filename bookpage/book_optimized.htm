@@ -2843,6 +2843,7 @@ var jsnCat = {"cat51851":{"level1CategoryUrl":"/browse/For-the-Home/_/N-oni","le
 	float:right;
 	position: relative;
 	top: -28px;
+	transform: rotate(180deg);
 	transition: all 0.2s linear 0.1s;
 }
 .l-dropdown .drop-surface__init--closed .drop-surface__svg,
@@ -2850,7 +2851,6 @@ var jsnCat = {"cat51851":{"level1CategoryUrl":"/browse/For-the-Home/_/N-oni","le
 	float:right;
 	position: relative;
 	top: -28px;
-	transform: rotate(180deg);
 	transition: all 0.2s linear 0.1s;
 }
 
@@ -3047,8 +3047,8 @@ var ltdc_dropdown = (function( doc, sID ){
 	var _bInit = true; // Nothing has ever been selected
 	var _bOpen = false;
 
-	_eSurf.addEventListener("click", function( e ){
 
+	_eSurf.addEventListener("click", function( e ){
 		_eCont.style.width = _eSurf.offsetWidth + "px";
 		_bOpen = !_bOpen;
 		if( _bOpen ){
@@ -3070,6 +3070,7 @@ var ltdc_dropdown = (function( doc, sID ){
 		}
 	});
 
+	return { "select" : function(){ alert("selected"); }};
 })( document, "js-dropdown-1--id" );
 </script>
 
