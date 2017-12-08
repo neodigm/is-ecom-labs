@@ -2939,7 +2939,6 @@ color: #aaa;
 .l-dropdown .drop-container--closed {
 	display: none;
 }
-
 </style>
 
 <style> /*BTF*/
@@ -2966,7 +2965,7 @@ color: #aaa;
 <ltdc-dropdown id="js-dropdown-1--id" class="l-dropdown"><!--  Component Begin  -->
 	<nav class="drop-surface drop-surface__init--closed" aria-expanded="false"><!-- branded clickable -->
 		<p class="drop-surface__text--label">Team</p><!-- floating label  -->
-		<p class="drop-surface__text">Select a Team</p><!-- Current selection -->
+		<p id="temp" class="drop-surface__text">Select a Team</p><!-- Current selection -->
 		<svg class="drop-surface__svg" height="32" viewBox="0 0 24 24" width="32" xmlns="http://www.w3.org/2000/svg">
 		<path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"/>
 		<path d="M0-.75h24v24H0z" fill="none"/>
@@ -2974,7 +2973,7 @@ color: #aaa;
 	</nav>
 	<ul class="drop-container drop-container--closed"><!-- branded max-height overflow scroll -->
 
-		<li class="l-grid" data-sku=""><!-- sku clickable select -->
+		<li class="l-grid" data-skupin="138152-4HAZ-STL"><!-- sku clickable select -->
 			<div class="prod__text__cont--top"><!-- grid top -->
 				<p class="prod__text--item">Pittsburgh Steelers</p><!-- product -->
 			</div>
@@ -2983,7 +2982,7 @@ color: #aaa;
 			</div>
 		</li>
 
-		<li class="l-grid" data-sku=""><!-- sku clickable select -->
+		<li class="l-grid" data-skupin="138152-4HAZ-CWB"><!-- sku clickable select -->
 			<div class="prod__text__cont--top"><!-- grid top -->
 				<p class="prod__text--item">Dallas Cowboys</p><!-- product -->
 			</div>
@@ -2992,7 +2991,7 @@ color: #aaa;
 			</div>
 		</li>
 
-		<li class="l-grid l-grid--disabled" data-sku=""><!-- sku clickable select -->
+		<li class="l-grid l-grid--disabled" data-skupin="138152-4HAZ-PCK"><!-- sku clickable select -->
 			<div class="prod__text__cont--top"><!-- grid top -->
 				<p class="prod__text--item">Green Bay Packers</p><!-- product -->
 			</div>
@@ -3001,7 +3000,7 @@ color: #aaa;
 			</div>
 		</li>
 
-		<li class="l-grid" data-sku=""><!-- sku clickable select -->
+		<li class="l-grid" data-skupin="138152-4HAZ-BAR"><!-- sku clickable select -->
 			<div class="prod__text__cont--top"><!-- grid top -->
 				<p class="prod__text--item">Chicago Bears</p><!-- product -->
 			</div>
@@ -3010,7 +3009,7 @@ color: #aaa;
 			</div>
 		</li>
 
-		<li class="l-grid" data-sku=""><!-- sku clickable select -->
+		<li class="l-grid" data-skupin="138152-4HAZ-BRN"><!-- sku clickable select -->
 			<div class="prod__text__cont--top"><!-- grid top -->
 				<p class="prod__text--item">Denver Broncos</p><!-- product -->
 			</div>
@@ -3019,7 +3018,7 @@ color: #aaa;
 			</div>
 		</li>
 
-		<li class="l-grid" data-sku=""><!-- sku clickable select -->
+		<li class="l-grid" data-skupin="138152-4HAZ-BRW"><!-- sku clickable select -->
 			<div class="prod__text__cont--top"><!-- grid top -->
 				<p class="prod__text--item">Cleveland Browns</p><!-- product -->
 			</div>
@@ -3028,7 +3027,7 @@ color: #aaa;
 			</div>
 		</li>
 
-		<li class="l-grid" data-sku=""><!-- sku clickable select -->
+		<li class="l-grid" data-skupin="138152-4HAZ-CLT"><!-- sku clickable select -->
 			<div class="prod__text__cont--top"><!-- grid top -->
 				<p class="prod__text--item">Indianapolis Colts</p><!-- product -->
 			</div>
@@ -3041,37 +3040,77 @@ color: #aaa;
 </ltdc-dropdown><!--  Component End  -->
 
 <script>
-var ltdc_dropdown = (function( doc, sID ){
-	"use strict";
+"use strict";
+var ltdc_dropdown_config = {"sID": "js-dropdown-1--id",
+"surf_IOpen" : "drop-surface__init--opened",
+"surf_IClose": "drop-surface__init--closed",
+"surf_SOpen" : "drop-surface__select--opened",
+"surf_SClose": "drop-surface__select--closed",
+"cont_Open"  : "drop-container--opened",
+"cont_Close" : "drop-container--closed"
+};
+
+var ltdc_dropdown = (function( doc, Opt ){
+	var sID = Opt.sID;
 	var _eDrop = doc.getElementById( sID ), _eSurf = _eDrop.firstElementChild, _eCont = _eSurf.nextElementSibling;
 	var _bInit = true; // Nothing has ever been selected
 	var _bOpen = false;
+	var _oSelected = {"sku_pin":"", "display_name":""};
 
+	var _fToggle = function(){
+		if( _bOpen ){
+			if( _bInit ){
+				_eSurf.classList.add( Opt.surf_IOpen );
+				_eSurf.classList.remove( Opt.surf_IClose );
+			}else{
+				_eSurf.classList.add( Opt.surf_SOpen );
+				_eSurf.classList.remove( Opt.surf_SClose, Opt.surf_IOpen, Opt.surf_IClose );
+			}
+			_eCont.classList.add( Opt.cont_Open);
+			_eCont.classList.remove( Opt.cont_Close );
+		}else{
+			if( _bInit ){
+				_eSurf.classList.add( Opt.surf_IClose );
+				_eSurf.classList.remove( Opt.surf_IOpen );
+			}else{
+				_eSurf.classList.add( Opt.surf_SClose );
+				_eSurf.classList.remove( Opt.surf_SOpen, Opt.surf_IOpen, Opt.surf_IClose );
+			}
+			_eCont.classList.add( Opt.cont_Close );
+			_eCont.classList.remove( Opt.cont_Open);
+		}
+	};
 
 	_eSurf.addEventListener("click", function( e ){
 		_eCont.style.width = _eSurf.offsetWidth + "px";
 		_bOpen = !_bOpen;
-		if( _bOpen ){
-			if( _bInit ){
-				_eSurf.classList.add( "drop-surface__init--opened" );
-				_eSurf.classList.remove( "drop-surface__init--closed" );
-			}else{
-			}
-			_eCont.classList.add("drop-container--opened");
-			_eCont.classList.remove("drop-container--closed");
-		}else{
-			if( _bInit ){
-				_eSurf.classList.add( "drop-surface__init--closed" );
-				_eSurf.classList.remove( "drop-surface__init--opened" );
-			}else{
-			}
-			_eCont.classList.add("drop-container--closed");
-			_eCont.classList.remove("drop-container--opened");
+		_fToggle();
+	});
+	_eCont.addEventListener("click", function( e ){
+		var eTarget = e.target;
+		while( eTarget.tagName !== "HTML" ){  //  Disregard clicks from within unless Done / Cancel
+			if( eTarget.dataset && eTarget.dataset.skupin ){ break; }
+			eTarget = eTarget.parentNode;
+		}
+		if( eTarget.dataset.skupin ){
+			_oSelected.sku_pin = eTarget.dataset.skupin;
+			_oSelected.display_name = eTarget.dataset.skupin;
+			_eSurf.getElementsByTagName("p")[1].innerHTML = _oSelected.display_name;
+			_bOpen = _bInit = false;
+			_fToggle();
 		}
 	});
-
-	return { "select" : function(){ alert("selected"); }};
-})( document, "js-dropdown-1--id" );
+	return {
+		"reset" : function(){
+			_bInit = true;
+			_bOpen = false;
+			_fToggle();
+		},
+		"getSeleted" : function(){
+			return _oSelected;
+		}
+};
+})( document, ltdc_dropdown_config );
 </script>
 
 <!--
