@@ -2828,10 +2828,10 @@ var jsnCat = {"cat51851":{"level1CategoryUrl":"/browse/For-the-Home/_/N-oni","le
 	user-select: none;
 	width: 100%;
 }
-.l-dropdown .drop-surface__init--opened {}
-.l-dropdown .drop-surface__init--closed {}
-.l-dropdown .drop-surface__select--opened {}
-.l-dropdown .drop-surface__select--closed {}
+.l-dropdown .drop-surface__init--closed,
+.l-dropdown .drop-surface__select--closed {
+	border: solid 1px #ccc;
+}
 
 .l-dropdown .drop-surface p {
 	color: #535353;
@@ -2877,21 +2877,45 @@ var jsnCat = {"cat51851":{"level1CategoryUrl":"/browse/For-the-Home/_/N-oni","le
 
 .l-dropdown .l-grid {
 	align-items: flex-start;
-	border: 1px #ccc solid;
+	background-color: #fff;
+	border: 1px #ddd solid;
 	display: flex;
-	flex-flow: row nowrap; /* Shorthand for flex-direction and flex-wrap */
+	flex-flow: column wrap; /* Shorthand for flex-direction and flex-wrap */
 	justify-content: space-between;
-	padding: 8px;
+	padding: 2px;
 }
+.l-dropdown .l-grid--disabled {
+	cursor: default;
+}
+
+.l-dropdown .prod__text__cont--top { width: 100%; }
+.l-dropdown .prod__text__cont--bottom { width: 100%; }
 .l-dropdown .prod__text--item {
 color: #646464;
-font-size: 18px;
-margin: 4px;
+font-size: 14px;
+margin: 0 2px;
+}
+.l-dropdown .l-grid--disabled .prod__text--item {
+color: #aaa;
+}
+.l-dropdown .l-grid:hover .prod__text--item {
+color: #fff;
+}
+.l-dropdown .l-grid--disabled:hover .prod__text--item {
+color: #aaa;
 }
 .l-dropdown .prod__text--stock {
-color: #ccc;
-font-size: 16px;
-margin: 4px;
+color: #aaa;
+font-size: 11px;
+margin: 0 2px;
+min-height: 12px;
+text-align: right;
+}
+.l-dropdown .l-grid:hover .prod__text--stock {
+color: #fff;
+}
+.l-dropdown .l-grid--disabled:hover .prod__text--stock {
+color: #aaa;
 }
 
 .l-dropdown .drop-container--opened {
@@ -2904,6 +2928,21 @@ margin: 4px;
 </style>
 
 <style> /*BTF*/
+/*  CSS category Theme    */ /*  color background hover ...  */
+	body[data-brand="lsc"] .l-dropdown .l-grid:hover { background-color: #9c4a62; }
+	body[data-brand="ltd"] .l-dropdown .l-grid:hover { background-color: #2aa6ca; }
+
+	body[data-brand="lsc"] .l-dropdown .l-grid--disabled:hover { background-color: #fff; }
+	body[data-brand="ltd"] .l-dropdown .l-grid--disabled:hover { background-color: #fff; }
+
+	body[data-brand="lsc"] .l-dropdown .drop-surface__init--opened { border: solid 1px #9c4a62; }
+	body[data-brand="ltd"] .l-dropdown .drop-surface__init--opened { border: solid 1px #2aa6ca; }
+	body[data-brand="lsc"] .l-dropdown .drop-surface__select--opened { border: solid 1px #9c4a62; }
+	body[data-brand="ltd"] .l-dropdown .drop-surface__select--opened { border: solid 1px #2aa6ca; }
+
+	body[data-brand="lsc"] .l-dropdown .drop-container--opened { border: solid 1px #9c4a62; }
+	body[data-brand="ltd"] .l-dropdown .drop-container--opened { border: solid 1px #2aa6ca; }
+
 </style>
 
 <ltdc-dropdown id="js-dropdown-1--id" class="l-dropdown"><!--  Component Begin  -->
@@ -2915,38 +2954,38 @@ margin: 4px;
 	<ul class="drop-container drop-container--closed"><!-- branded max-height overflow scroll -->
 
 		<li class="l-grid" data-sku=""><!-- sku clickable select -->
-			<div class=""><!-- grid left -->
+			<div class="prod__text__cont--top"><!-- grid top -->
 				<p class="prod__text--item">Steelers</p><!-- product -->
 			</div>
-			<div class=""><!-- grid right -->
-				<p class="prod__text--stock">out of stock</p><!-- stock avial -->
+			<div class="prod__text__cont--bottom"><!-- grid bottom -->
+				<p class="prod__text--stock"></p><!-- stock avial -->
 			</div>
 		</li>
 
 		<li class="l-grid" data-sku=""><!-- sku clickable select -->
-			<div class=""><!-- grid left -->
+			<div class="prod__text__cont--top"><!-- grid top -->
 				<p class="prod__text--item">Cowboys</p><!-- product -->
 			</div>
-			<div class=""><!-- grid right -->
-				<p class="prod__text--stock">out of stock</p><!-- stock avial -->
+			<div class="prod__text__cont--bottom"><!-- grid bottom -->
+				<p class="prod__text--stock"></p><!-- stock avial -->
 			</div>
 		</li>
 
-		<li class="l-grid" data-sku=""><!-- sku clickable select -->
-			<div class=""><!-- grid left -->
+		<li class="l-grid l-grid--disabled" data-sku=""><!-- sku clickable select -->
+			<div class="prod__text__cont--top"><!-- grid top -->
 				<p class="prod__text--item">Packers</p><!-- product -->
 			</div>
-			<div class=""><!-- grid right -->
+			<div class="prod__text__cont--bottom"><!-- grid bottom -->
 				<p class="prod__text--stock">out of stock</p><!-- stock avial -->
 			</div>
 		</li>
 
 		<li class="l-grid" data-sku=""><!-- sku clickable select -->
-			<div class=""><!-- grid left -->
+			<div class="prod__text__cont--top"><!-- grid top -->
 				<p class="prod__text--item">Bears</p><!-- product -->
 			</div>
-			<div class=""><!-- grid right -->
-				<p class="prod__text--stock">out of stock</p><!-- stock avial -->
+			<div class="prod__text__cont--bottom"><!-- grid bottom -->
+				<p class="prod__text--stock"></p><!-- stock avial -->
 			</div>
 		</li>
 
@@ -2995,7 +3034,7 @@ var ltdc_dropdown = (function( doc, sID ){
 </select>
 -->
 							</form>
-						<figure class="h-height__full"></figure>
+						<figure class="h-height__half"></figure>
 						<aside class="sku-panel__inner">
 							<p class="sku-desc__caption">Personalization Details
 							</p>
