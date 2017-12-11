@@ -13,6 +13,11 @@
 	padding: 24px 0;
 	width: 980px;
 }
+@media only screen and (min-width: 61.25em){
+	body[data-columns="2"] .l-secondbanr .secbnr-shop .l-grid { width: 780px; justify-content: center; width: inherit;}
+	body[data-columns="2"] .l-secondbanr .secbnr-shop .secondbanr__left { display: none; }
+}
+
 .l-secondbanr .secbnr-shop .secondbanr__left {
 	flex-basis: 18.2%;
 }
@@ -68,8 +73,3 @@
 		width: inherit;
 	}
 }
-/*  CSS category Theme    */ /*  color background hover ...  */
-body[data-brand="lsc"] .l-secondbanr .secbnr-shop .secondbanr__btn { background-color: #672634; }
-body[data-brand="ltd"] .l-secondbanr .secbnr-shop .secondbanr__btn { background-color: #007095; }
-body[data-brand="lsc"] .l-secondbanr .secbnr-shop .secondbanr__btn:hover { background-color: #4b000b; }
-body[data-brand="ltd"] .l-secondbanr .secbnr-shop .secondbanr__btn:hover { background-color: #004c85; }

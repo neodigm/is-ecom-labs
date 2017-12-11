@@ -16,6 +16,10 @@ justify-content: space-between;
 margin: 4px auto;
 width: 976px;
 }
+@media only screen and (min-width: 61.25em){
+	body[data-columns="2"] .l-grid-refinesort { width: 780px;}
+}
+
 .l-grid-refinesort .l-grid-sort {
 align-items: center;
 display: flex;

@@ -13,6 +13,11 @@ align-content: space-between;
 margin: 0 auto !important;
 width: 980px;
 }
+@media only screen and (min-width: 61.25em){
+  body[data-columns="2"] .l-grid-productcard > section { width: 780px; }
+  body[data-columns="2"] .productcard { flex-basis: 23.7%; }
+}
+
 .productcard {
 flex-basis: 18.8%;
 padding: 0; margin: 0 5px 8px 5px;

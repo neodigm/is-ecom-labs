@@ -1,0 +1,5 @@
+/*  CSS category Theme    */ /*  color background hover ...  */
+body[data-brand="lsc"] .l-secondbanr .secbnr-shop .secondbanr__btn { background-color: #672634; }
+body[data-brand="ltd"] .l-secondbanr .secbnr-shop .secondbanr__btn { background-color: #007095; }
+body[data-brand="lsc"] .l-secondbanr .secbnr-shop .secondbanr__btn:hover { background-color: #4b000b; }
+body[data-brand="ltd"] .l-secondbanr .secbnr-shop .secondbanr__btn:hover { background-color: #004c85; }
