@@ -29,10 +29,10 @@ Vue.component("ltdc-leftnav", {
     }
   },
   mounted: function(){
-	if( this.model.name === "level0" ){
-		this.open = true;
-		this.hidden = true;
-	}
+  	if( this.model.name === "level0" ){
+  		this.open = true;
+  		this.hidden = true;
+  	}
   }
 })
 
@@ -62,17 +62,24 @@ var vleftnav__id = new Vue({
               nL2Ct++;
             break;
             case 3:
-              if(typeof( oPush.children[nL2Ct] )!="undefined"){ 
-                if(typeof( oPush.children[nL2Ct].children )=="undefined"){ 
+              if(typeof( oPush.children[nL2Ct] )!="undefined"){
+                if(typeof( oPush.children[nL2Ct].children )=="undefined"){
                     oPush.children[nL2Ct].children=[];
                 }
                   oPush.children[nL2Ct].children.push( {name: sName, href: sHref} );
               }
           }
-      }      
+      }
     }
   },
   created: function(){
     this.parseJSONCat();
+  }
+})
+
+var vleftnav2Column__id = new Vue({
+  el: "#v-leftnav2Column__id",
+  data: {
+    ltdc_leftnav__hier: ltdc_leftnav
   }
 })
