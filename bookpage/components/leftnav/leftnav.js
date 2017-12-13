@@ -81,5 +81,27 @@ var vleftnav2Column__id = new Vue({
   el: "#v-leftnav2Column__id",
   data: {
     ltdc_leftnav__hier: ltdc_leftnav
+  },
+  methods: {
+    "openCurrent" : function( sURI ){ // Open current category folder
+      var oTop = this.$children[0], bTog = false;
+      sURI = sURI.toLowerCase();
+      var aL1 = oTop.$children.filter( function( child ){
+        if( sURI.indexOf( child.model.href.toLowerCase() ) != -1 ){
+          bTog = true;
+        }
+        if( child.$children.length >= 1){
+          var aL2 = child.$children.filter( function( grandchild ){
+            if( sURI.indexOf( grandchild.model.href.toLowerCase() ) != -1 ){
+              grandchild.toggle();
+              bTog = true;
+            }
+          } );
+        }
+        if( bTog ){ child.toggle(); bTog = false; }
+      } );
+    }
   }
 })
+
+vleftnav2Column__id.openCurrent( location.href );
