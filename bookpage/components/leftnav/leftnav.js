@@ -71,7 +71,7 @@ var vleftnav__id = new Vue({
           }
       }
     },
-    "openCurrent" : function( sURI ){ // Open current category folder
+    "openCurrent" : function( sURI ){ // Open current category folder(s)
       var oTop = this.$children[0], bTog = false;
       sURI = sURI.toLowerCase();
       var aL1 = oTop.$children.filter( function( oL1 ){
@@ -109,28 +109,30 @@ var vleftnav2Column__id = new Vue({
     ltdc_leftnav__hier: ltdc_leftnav
   },
   methods: {
-    "openCurrent" : function( sURI ){ // Open current category folder
+    "openCurrent" : function( sURI ){ // Open current category folder(s)
       var oTop = this.$children[0], bTog = false;
       sURI = sURI.toLowerCase();
       var aL1 = oTop.$children.filter( function( oL1 ){
         if( sURI.indexOf( oL1.model.href.toLowerCase() ) != -1 ){
           bTog = true;
-        }
-        if( oL1.$children.length >= 1){
-          var aL2 = oL1.$children.filter( function( oL2 ){
-            if( sURI.indexOf( oL2.model.href.toLowerCase() ) != -1 ){
-              oL2.toggle();
-              bTog = true;
-            }
-            if( oL2.$children.length >= 1){
-              var aL3 = oL2.$children.filter( function( oL3 ){
-                if( sURI.indexOf( oL3.model.href.toLowerCase() ) != -1 ){
-                  bTog = true;
+        }else{
+          if( oL1.$children.length >= 1){
+            var aL2 = oL1.$children.filter( function( oL2 ){
+              if( sURI.indexOf( oL2.model.href.toLowerCase() ) != -1 ){
+                //oL2.toggle();
+                bTog = true;
+              }else{
+                if( oL2.$children.length >= 1){
+                  var aL3 = oL2.$children.filter( function( oL3 ){
+                    if( sURI.indexOf( oL3.model.href.toLowerCase() ) != -1 ){
+                      bTog = true;
+                    }
+                  } );
                 }
-              } );
-            }
-          if( bTog ){ oL2.toggle(); }
-          } );
+              }
+            //if( bTog ){ oL2.toggle(); }  
+            } );
+          }
         }
         if( bTog ){ oL1.toggle(); bTog = false; }
       } );
