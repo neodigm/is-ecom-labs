@@ -12,7 +12,8 @@ Vue.component("ltdc-leftnav", {
   data: function () {
     return {
       open: false,
-      hidden: false
+      hidden: false,
+      leftnav__current: false
     }
   },
   computed: {
@@ -81,7 +82,7 @@ var vleftnav__id = new Vue({
         if( oL1.$children.length >= 1){
           var aL2 = oL1.$children.filter( function( oL2 ){
             if( sURI.indexOf( oL2.model.href.toLowerCase() ) != -1 ){
-              oL2.toggle();
+              oL2.toggle(); oL2.leftnav__current = true;
               bTog = true;
             }
             if( oL2.$children.length >= 1){
@@ -91,10 +92,10 @@ var vleftnav__id = new Vue({
                 }
               } );
             }
-          if( bTog ){ oL2.toggle(); }
+          if( bTog ){ oL2.toggle(); oL2.leftnav__current = true; }
           } );
         }
-        if( bTog ){ oL1.toggle(); bTog = false; }
+        if( bTog ){ oL1.toggle(); oL1.leftnav__current = true; bTog = false; }
       } );
     }
   },
@@ -115,30 +116,30 @@ var vleftnav2Column__id = new Vue({
       var aL1 = oTop.$children.filter( function( oL1 ){
         if( sURI.indexOf( oL1.model.href.toLowerCase() ) != -1 ){
           bTog = true;
-        }else{
-          if( oL1.$children.length >= 1){
-            var aL2 = oL1.$children.filter( function( oL2 ){
-              if( sURI.indexOf( oL2.model.href.toLowerCase() ) != -1 ){
-                //oL2.toggle();
-                bTog = true;
-              }else{
-                if( oL2.$children.length >= 1){
-                  var aL3 = oL2.$children.filter( function( oL3 ){
-                    if( sURI.indexOf( oL3.model.href.toLowerCase() ) != -1 ){
-                      bTog = true;
-                    }
-                  } );
-                }
-              }
-            //if( bTog ){ oL2.toggle(); }  
-            } );
-          }
         }
-        if( bTog ){ oL1.toggle(); bTog = false; }
+        if( oL1.$children.length >= 1){
+          var aL2 = oL1.$children.filter( function( oL2 ){
+            if( sURI.indexOf( oL2.model.href.toLowerCase() ) != -1 ){
+              oL2.toggle(); oL2.leftnav__current = true;
+              bTog = true;
+            }
+            if( oL2.$children.length >= 1){
+              var aL3 = oL2.$children.filter( function( oL3 ){
+                if( sURI.indexOf( oL3.model.href.toLowerCase() ) != -1 ){
+                  bTog = true;
+                }
+              } );
+            }
+          if( bTog ){ oL2.toggle(); oL2.leftnav__current = true; }
+          } );
+        }
+        if( bTog ){ oL1.toggle(); oL1.leftnav__current = true; bTog = false; }
       } );
     }
   }
 })
 
-vleftnav2Column__id.openCurrent( location.href );
 vleftnav__id.openCurrent( location.href );
+if( document.getElementById( "v-leftnav2Column__id" ) ){
+  vleftnav2Column__id.openCurrent( location.href );
+}

@@ -66,6 +66,7 @@
   body[data-brand="ltd"] .c-leftnav .isFolder { background-color: #f2faff; }
 }
 @media only screen and (min-width: 61.25em){
+  /*  large  */
   .c-leftnav .l-grid-leftnav {
   align-items: center;
   cursor: pointer;
@@ -76,7 +77,6 @@
   user-select: none;
   }
   .c-leftnav li {
-
   list-style-position: outside;
   list-style-type: none;
   display: block;
@@ -100,6 +100,9 @@
   font-weight: normal;
   line-height: 18px;
   padding-left: 32px;
+  }
+  .c-leftnav .leftnav__current {
+  font-weight: bold;
   }
   .c-leftnav .leftnav__open  svg.js-nav-minus { display: none; }
   .c-leftnav .leftnav__open  svg.js-nav-plus  { display: none; }
