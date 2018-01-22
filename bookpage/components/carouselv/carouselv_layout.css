@@ -1,33 +1,91 @@
-/*  CSS category Base     */ /*  reset margin padding ...  */
-.l-grid-headnav, body, figure, picture, img, figcaption, section, ul, li, input {
-	margin: 0;
-	padding: 0;
+.l-carouselv {}
+.l-carouselv .carov__grid {
+display: flex;
+flex-flow: row nowrap; /* Shorthand for flex-direction and flex-wrap */
 }
-/*  CSS category Layout   */ /*  border display height media width ...  */
-.l-grid-headnav {
-	align-items: flex-start;
-	border: 1px #ccc solid;
-	display: flex;
-	flex-flow: row nowrap; /* Shorthand for flex-direction and flex-wrap */
-	height: 42px;
-	justify-content: space-between;
-	margin: 0 auto;
-	width: 980px;
+.l-carouselv .carov__grid article{
+width: 33%;
+margin: auto;
+height: 310px;
+align-content: center;
+justify-content: center;
+padding: 4px;
 }
+.l-carouselv .carov__grid .carov__caption--img{
+height: 300px;
+width: 252px;
+}
+.l-carouselv .carov__caption {
+color: #48515F;	
+font-size: 30px;
+font-style: normal;
+font-weight: lighter;
+font-family: 'Roboto',sans-serif;
+margin: 0 0 16px 0;
+}
+.l-carouselv .carov__grid .carov__caption--desc {
+color: #222;
+font-size: 12px;
+font-family: 'Roboto',sans-serif;
+}
+
+.l-carouselv .carov__grid .carov__region {
+height: 310px;
+overflow-y: auto;
+overflow-x: hidden;
+}
+.l-carouselv .carov__subgrid {
+display: flex;
+flex-flow: row nowrap;
+padding: 18px 0 18px 0;
+border-bottom: solid 1px #ddd;
+border-top: solid 1px #ddd;
+}
+.l-carouselv .carov__subgrid--top {
+padding: 0 0 18px 0;
+border-bottom: solid 1px #ddd;
+border-top: none;
+}
+.l-carouselv .subgrid__img {
+margin-right: 10px;
+width: 105px;
+height: 124px;
+}
+.l-carouselv .carov__grid .subgrid__link{
+text-decoration: none;
+font-size: 15px;
+font-weight: bold;
+color: #46515F;
+margin: 0 0 4px 0;
+display: inline-block;
+line-height: 1.1em;
+font-family: 'Roboto',sans-serif;
+
+}.l-carouselv .carov__grid .subgrid__desc{
+font-size: 11px;
+font-weight: normal;
+color: #46515F;
+line-height: 1.1em;
+font-family: 'Roboto',sans-serif;
+margin-bottom: 2px;
+}
+
+.carov__region::-webkit-scrollbar { width: 12px; }
+.carov__region::-webkit-scrollbar-track { background: rgba(0, 0, 0, 0.1); }
+.carov__region::-webkit-scrollbar-thumb { background: rgba(126, 126, 126, 0.5); }
 
 @media only screen and (max-width: 47.9375em) {
 /* small */
-	.headnav__link {
+	.l-carouselv .carov__grid {
 		display: none;
 	}
-	.headnav__search { width: 100%; }
-	.headnav__search--go {
-		min-width: 112px;
+	.l-carouselv .carov__mobile {
+		display: inherit;
 	}
 }
-@media only screen and (max-width:61.1875em){
-/* small and medium */
-	.l-grid-headnav {
-		width: inherit;
+@media only screen and (min-width: 61.25em){
+/* large */
+	.l-carouselv .carov__mobile {
+		display: none;
 	}
 }
