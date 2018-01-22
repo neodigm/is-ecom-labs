@@ -1,0 +1,6 @@
+	/*  CSS category State    */ /*  color display font visibility ...  */
+
+	/*  CSS category Theme    */ /*  color background hover ...  */
+body[data-brand="lsc"] .l-carouselv .:hover { background-color: #fffaff; }
+body[data-brand="ltd"] .l-carouselv .:hover { background-color: #f2faff; }
+
