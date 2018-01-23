@@ -28,7 +28,13 @@ color: #222;
 font-size: 12px;
 font-family: 'Roboto',sans-serif;
 }
-
+.l-carouselv .carov__grid .carov__caption--link {
+font-size: 14px;
+font-weight: bold;
+color: #46515F;
+text-decoration: underline;
+text-align: left;
+}
 .l-carouselv .carov__grid .carov__region {
 height: 310px;
 overflow-y: auto;
