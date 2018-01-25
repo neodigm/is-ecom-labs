@@ -23,7 +23,9 @@
 }
 .l-secondbanr .secbnr-shop .secondbanr__right {
 	flex-basis: 20%;
+	padding: 0 8px;
 }
+
 .l-secondbanr .secbnr-shop .secondbanr__btn {
 	border-radius: 3px;
 	border: 0;
@@ -59,8 +61,8 @@
 		display: block;
 		width: inherit;
 	}
-	.l-secondbanr .secbnr-shop .secondbanr__image {
-		width: 100%;
+	.l-secondbanr .secbnr-shop .secondbanr__right img {
+		max-width: 100%;
 	}
 }
 @media only screen and (min-width:48em) and (max-width:61.1875em){
