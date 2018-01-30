@@ -598,22 +598,21 @@ display: flex;
 flex-flow: row nowrap; /* Shorthand for flex-direction and flex-wrap */
 }
 .l-catlevel2head .catl2__grid .catl2__grid--left {
-	background-color: #edba08;
-    width: 308px;
+display: flex;
+flex-flow: row nowrap;
+        min-width: 302px;
     margin: auto;
-    height: 310px;
     align-content: center;
     justify-content: center;
-    padding: 4px;
+    padding: 8px;
+    border-right: solid 1px #ccc;
 }
 .l-catlevel2head .catl2__grid .catl2__grid--right {
-	background-color: #edba08;
-    width: 50%;
+    width: 100%;
     margin: auto;
-    height: 310px;
     align-content: center;
     justify-content: center;
-    padding: 4px;
+    padding: 8px;
 }
 
 @media only screen and (max-width: 47.9375em) {
@@ -640,16 +639,18 @@ flex-flow: row nowrap; /* Shorthand for flex-direction and flex-wrap */
 			<section class="catl2__grid">
 				<article class="catl2__grid--left">
 					<aside class="catl2__gleft--prodimg">
-						<img src="" alt="" aria-describedby="proddesc__link--id">
+						<a href="">
+							<img src="https://www.ltdcommodities.com/images/product/70596_1254214_MPY_th.jpg" alt="" aria-describedby="proddesc__link--id">
+						</a>
 					</aside>
-					<aside class="catl2__gleft--proddesc catl2__gleft--image">
-						<img class="" src="" alt="" aria-describedby="proddesc__link--id">
+					<aside class="catl2__gleft--proddesc">
 						<a id="proddesc__link--id" class="proddesc__link">Product Name</a>
 						<p class="proddesc__price">$68.88</p>
 						<a class="proddesc__qv">Quick View</a>
 					</aside>
 				</article>
-				<article class="catl2__grid--right">
+				<article class="catl2__grid--right catl2__right--image">
+					<img class="" src="" alt="" aria-describedby="proddesc__link--id">
 					<h1 class="catl2__right--caption">Solar + Outdoor Lighting</h1>
 					<p class="catl2__right--desc">Make your garden glow ...</p>
 				</article>
