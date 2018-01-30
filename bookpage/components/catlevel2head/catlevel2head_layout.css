@@ -24,7 +24,7 @@ padding: 0 8px 8px 8px;
 max-width: 144px;
 }
 .l-catlevel2head .catl2__gleft--proddesc {
-min-width: 164px;
+min-width: 150px;
 }
 .l-catlevel2head .catl2__gleft--prodesc-block {
 display: block;
@@ -57,7 +57,7 @@ border: medium none;
 box-shadow: none;
 display: block;
 text-decoration: none;
-margin: 0 10px;
+margin: 0 8px 0 14px;
 }
 .l-catlevel2head .catl2__right--caption {
 color: #222;
