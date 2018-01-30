@@ -80,10 +80,19 @@ margin-bottom: 14px;
 }
 .l-catlevel2head .catl2__right--image h1,
 .l-catlevel2head .catl2__right--image p {
-	display: none;
+display: none;
 }
 .l-catlevel2head .catl2__right--noimage img {
-	display: none;
+display: none;
+}
+.l-catlevel2head .proddesc__price--strike {
+	color: #bbb;
+	font-size: 11px;
+	text-decoration: line-through;
+}
+.l-catlevel2head .proddesc__price--compare {
+	color: #ddd;
+	font-size: 11px;
 }
 
 body[data-brand="lsc"] .proddesc__qv { background-color: #672634; }
