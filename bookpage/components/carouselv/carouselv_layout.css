@@ -59,6 +59,9 @@ border-top: solid 1px #ddd;
     border-bottom: solid 1px #ddd;
     border-top: solid 1px #ddd;
 }
+.l-carouselv .carov__subgrid div {
+    width: 50%;
+}
 .l-carouselv aside:first-of-type {
 padding: 0 0 18px 0;
 border-bottom: solid 1px #ddd;
