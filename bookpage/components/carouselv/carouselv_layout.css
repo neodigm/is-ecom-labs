@@ -40,12 +40,24 @@ height: 310px;
 overflow-y: auto;
 overflow-x: hidden;
 }
-.l-carouselv .carov__subgrid {
+.QQQQl-carouselv .QQQQcarov__subgrid {
 display: flex;
 flex-flow: row nowrap;
 padding: 18px 0 18px 0;
 border-bottom: solid 1px #ddd;
 border-top: solid 1px #ddd;
+}
+.l-carouselv .carov__subgrid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    padding: 18px 0;
+    border-bottom: solid 1px #ddd;
+    border-top: solid 1px #ddd;
 }
 .l-carouselv aside:first-of-type {
 padding: 0 0 18px 0;
