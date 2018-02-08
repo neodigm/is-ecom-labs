@@ -48,7 +48,7 @@ var ltdc_dropdown = (function( doc, Opt ){
 	});
 	_eCont.addEventListener("click", function( e ){
 		var eTarget = e.target;
-		while( eTarget.tagName !== "HTML" ){  //  Disregard clicks from within unless Done / Cancel
+		while( eTarget.tagName !== "HTML" ){  //  Disregard clicks from within
 			if( eTarget.dataset && eTarget.dataset.skupin ){ break; }
 			eTarget = eTarget.parentNode;
 		}
