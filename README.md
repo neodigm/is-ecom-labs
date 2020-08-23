@@ -5,9 +5,13 @@ eCommerce UX experiments
 Random Web Notifications
 [Click Here for Web Notifications Prototype](https://neodigm.github.io/is-ecom-labs/fundraising_admin/fundraising_admin.htm)
 
+Enchanting Animation
+[Click Here for JavaScript Animation](https://neodigm.github.io/is-ecom-labs/vivid)
+
+Enchanting Animation 2
+[Click Here for JavaScript Animation](https://neodigm.github.io/is-ecom-labs/ltdc_vivid2/)
+
 ---
-
-
 
 #
 [Portfolio Blog](https://www.theScottKrause.com) |
