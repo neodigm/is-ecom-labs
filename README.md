@@ -8,10 +8,10 @@ eCommerce UX experiments
 Random Web Notifications
 [Click Here for Web Notifications Prototype](https://neodigm.github.io/is-ecom-labs/fundraising_admin/fundraising_admin.htm)
 
-Enchanting Holiday Animation
+Enchanting Holiday Animation (After Effects)
 [Click Here for JavaScript Animation](https://neodigm.github.io/is-ecom-labs/vivid)
 
-Enchanting 5-star Animation
+Enchanting 5-star Animation (JavaScript GSP)
 [Click Here for JavaScript Animation](https://neodigm.github.io/is-ecom-labs/ltdc_vivid2/)
 
 ---
