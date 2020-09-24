@@ -11,6 +11,8 @@ Enchanting Holiday Animation (After Effects)
 Enchanting 5-star Animation (JavaScript GSP)
 [Click Here for JavaScript Animation](https://neodigm.github.io/is-ecom-labs/ltdc_vivid2/)
 
+🏖️ Inspired Problem Solver 🚀 Visual Storyteller 
+
 ---
 
 #
