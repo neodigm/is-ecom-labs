@@ -8,7 +8,7 @@ Random Web Notifications
 Enchanting Holiday Animation (After Effects)
 [Click Here for JavaScript Animation](https://neodigm.github.io/is-ecom-labs/vivid)
 
-Enchanting 5-star Animation ([JavaScript](https://thescottkrause.com/tags/javascript/) GSP)
+Enchanting 5-star Animation ([JavaScript](https://www.thescottkrause.com/tags/javascript/) GSP)
 [Click Here for JavaScript Animation](https://neodigm.github.io/is-ecom-labs/ltdc_vivid2/)
 
 <details>
