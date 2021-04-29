@@ -22,7 +22,7 @@ eCommerce UX Experiments
 <img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvx.svg" width="96" alt="Vivid Vector Skulduggery">
 <br>
 <img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvi.svg" width="22" alt="🏖️ Inspired Problem Solver 🚀 Visual Storyteller ">
-<img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvn.svg" width="22" alt="3d dice">
+<img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvn.svg" width="22" alt="3d 🌑🌒🌓🌔🌕🌖🌗🌘🌑 ">
 <img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvt.svg" width="22" alt="3d dice">
 <img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vve.svg" width="22" alt="3d dice">
 <img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvr.svg" width="22" alt="3d dice">
