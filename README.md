@@ -15,8 +15,6 @@ Enchanting 5-star Animation ([JavaScript](https://www.thescottkrause.com/tags/ja
     <summary>
 <p align="center">
 eCommerce UX Experiments
-    
-🌑🌒🌓🌔🌕🌖🌗🌘🌑 
 </p>
   </summary>
  <p align="center">
