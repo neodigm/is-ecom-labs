@@ -1,4 +1,4 @@
-"use strict";
+"use strict";  //  Vue.js ✨ Three.js 🚀 TypeScript 🍭 WASM ✨ Go
 Vue.config.devtools = true;
 
 var ltdc_megamenu = new Vue( {
