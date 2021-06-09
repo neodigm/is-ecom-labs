@@ -27,14 +27,14 @@
     <p id="id-exp--p__time" class="exp--p__time">10</p>
     <p class="exp--p">Seconds</p>
     <script>
-      var el = document.getElementById("id-exp--p__time");
-      var nCnt = 10;
-      setInterval( doTimer, 1000);
+      var el = document.getElementById("id-exp--p__time")
+      var nCnt = 10
+      setInterval( doTimer, 1000)
       function doTimer(){
         if( nCnt > 1){
-          el.innerHTML = --nCnt;
+          el.innerHTML = --nCnt
         }else{
-          document.location.href = "/";
+          document.location.href = "/"
         }
       }
     </script>
