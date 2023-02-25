@@ -1,0 +1,17 @@
+/* completely rendered below the fold */
+/*  CSS category Base     */ /*  reset margin padding ...  */
+/*  CSS category Layout   */ /*  border display height media width ...  */
+.l-snackbar .snackbar__cont {
+	background-color: #edba08;
+	color: #fff;
+	height: 80px;
+	user-select: none;
+	width: 288px;
+}
+.l-snackbar .snackbar__msg {
+	font-family: sans-serif;
+	font-size: 14px;
+	margin: 2px;
+	text-transform: uppercase;
+	white-space: nowrap;
+}

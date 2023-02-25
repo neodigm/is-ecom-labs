@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<head>
+  <title>LTDC Resolution Proto</title>
+</head>
+<body>
+  <!--
+  -->
+  <style>
+    body { margin: 0; }
+    .ltdc-header {
+      margin: 0; padding: 0;
+     }
+    .ltdc-header .ltdc-header__email {
+      margin: 0; padding: 0;
+      background-color: #bedbfe;
+      height: 26px; }
+    .ltdc-header .ltdc-header__logo {
+      margin: 0; padding: 0;
+      background-color: #4a90e2;
+      height: 48px; }
+    .ltdc-header .ltdc-header__search {
+      margin: 0; padding: 0;
+      background-color: #30619a;
+      height: 58px; }
+      /* rgb(190, 219, 254); */
+      /* rgb(74, 144, 226); */
+      /* rgb(48, 97, 154); */
+    .ltdc-main {
+      background-color: #888;
+      height: 980px;
+      padding: 0;
+
+      margin: 0;
+      width: 100%;
+    }
+    @media only screen and (min-width: 125.468735448em) {
+      /* content container */
+        .ltdc-main {
+          margin: 0 auto;
+          width: 1920px;
+        }
+    }
+  </style>
+  <header class="ltdc-header">
+    <div  class="ltdc-header__email"></div>
+    <nav  class="ltdc-header__logo"></nav>
+    <nav  class="ltdc-header__search"></nav>
+  </header>
+  <main id="js-main__id" class="ltdc-main"><p id="js-width__id" style="font-size: 24px;font-family: sans-serif;text-align: center;color: #EDBA08;margin: 0;padding: 8px;">DUCKS</p></main>
+  <script>
+(function(){
+  "use strict";
+  var eMain   = document.getElementById("js-main__id");
+  var eOutput = document.getElementById("js-width__id");
+  setInterval(function(){ eOutput.innerHTML = eMain.clientWidth; }, 400);
+})();
+  </script>
+</body>
+</html>

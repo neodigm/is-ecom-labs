@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Interactive ⚡ Prototypes</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<body>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/css/foundation.min.css" type="text/css" media="all" />
+		<link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Architects+Daughter|Open+Sans|Material+Icons" rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css" media="all" />
+		<section class="row">
+			<header class="column small-12 color-back__neos10 text-center">
+				<h1 class="caption--p__roboto color-text__white text-center">
+UX ⚡ IA Microinteraction Prototype
+				</h1>
+				<p class="caption--p__opensans color-text__white text-center" style="color: #EEE; font-size: 14px;">
+The Interactive Prototype provides <b>technical / kinetic </b> guidance.  It visually depictis a card expanded, collapsed, validated and submitted.
+				</p>
+			</header>
+		</section>
+
+		<figure class="horz-spacer"></figure>
+
+		<section class="row">
+			<nav class="column small-12 text-left">
+
+				<section class="row">
+					<div class="column small-12 medium-6">
+<h1 class="caption--h1__roboto">Order Confirmation</h1>
+					</div>
+					<div class="column small-12 medium-6">
+<h6 class="caption--p__opensans">Projects: <span class="round alert label">SMS</span>&nbsp; <span class="round success label">Express Checkout</span>&nbsp; <span class="round default label">Installment Payments</span></h6>
+					</div>
+				</section>
+
+				<p class="caption--p__opensans">
+This "above the fold" design utilizes the Collapsible Content Card pattern.  The cards are mutually exclusive, meaning that each card can be expanded or collapsed individually but expanding one card will collapse all other cards.  This 'one at a time' behavior prevents the user from becoming overwhelmed with choices.
+The cards are passive in that they can be expanded or collapsed at will.  The user can engage them in any order, however they are hard-wired with a preferred sequence.  This preferred sequence is evident by the card's positional layout (top-bottom / left-right) and also nuanced in its behavior.  For example after the Express Checkout card has been submitted the SMS card will automatically become expanded.  Resulting in a passive yet guided customer journey.
+				</p>
+				<p class="caption--p__opensans">
+The cards are asynchronous.  When a card is submitted it will temporarily display a spinner on a faded background. The page will not be refreshed.
+				</p>
+				<p class="caption--p__opensans">
+Once the card has been successfully submitted its caption will display congratulatory micro-copy making it clear that the operation was a success.  Ideally the caption message would contain a confirmation, a noun and a verb.  For example 'Thank You for subscribing to our emails!'.  A successfully submitted card will be collapsed if there is another yet to be submitted card available.  The next card in the sequence will then be expanded.
+				</p>
+				<p class="caption--p__opensans">
+A Collapsible Content Card may have a small 'i' icon in the lower right corner.  This icon will toggle / expand the card if secondary actions or messaging exist.
+				</p>
+				<p class="caption--p__opensans">
+The stated business objected is to acquire new omni-channel touch points without cannibalizing existing customer engagement touch points. Meaning the IA should present the post check-out solicitations in a manor in which SMS sign-ups DO NOT negatively impact email sign-ups. I believe the goal has been achieved and the analytics support that conclusion.
+				</p>
+				<p class="caption--p__opensans">
+The user's participation in <span class="round default label">Installment Payments</span> will have no effect on the post checkout experience.
+				</p>
+<br>
+<h4 class="caption--p__roboto text-center">Authenticated User</h4>
+			</nav>
+			<div class="column small-12">
+				<table>
+					<tr>
+						<td>
+							<p>
+Subscribed to email
+<hr>
+<aside>
+	<div class="switch" sytle="margin: 0 auto;">
+	  <input id="js-option-1" class="js-option" type="checkbox">
+	  <label for="js-option-1"></label>
+	</div>
+</aside>
+							</p>
+						</td>
+						<td>
+							<p>
+Subscribed to <span class="round alert label">SMS</span>
+<hr>
+<aside>
+	<div class="switch" sytle="margin: 0 auto;">
+	  <input id="js-option-2" class="js-option" type="checkbox">
+	  <label for="js-option-2"></label>
+	</div>
+</aside>
+							</p>
+						</td>
+						<td>
+							<p>
+Activate <span class="round success label">Express Checkout</span>
+<hr>
+<aside>
+	<div class="switch" sytle="margin: 0 auto;">
+	  <input id="js-option-3" class="js-option" type="checkbox" checked>
+	  <label for="js-option-3"></label>
+	</div>
+</aside>
+							</p>
+						</td>
+						<td>
+							<p>
+Payment Saved <span class="round success label">Express Checkout</span>
+<hr>
+<aside>
+	<div class="switch" sytle="margin: 0 auto;">
+	  <input id="js-option-4" class="js-option" type="checkbox">
+	  <label for="js-option-4"></label>
+	</div>
+</aside>
+							</p>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div class="column small-12 text-center">
+
+<ul class="button-group round even-3">
+  <li><a href="https://www.TheScottKrause.com/utils/neodigm55-mobile-resizer/?vp=m&uri=https://neodigm.github.io/is-ecom-labs/ltdc_sms_mockup/order_conf_auth.htm"
+		class="js-launch-1 launch button success" target="_blank">Launch Phone</a>
+	</li>
+  <li><a href="https://www.TheScottKrause.com/utils/neodigm55-mobile-resizer/?vp=t&uri=https://neodigm.github.io/is-ecom-labs/ltdc_sms_mockup/order_conf_auth.htm"
+		class="js-launch-1 launch button success" target="_blank">Launch Tablet</a>
+	</li>
+  <li><a href="ltdc_sms_mockup/order_conf_auth.htm" data-href="ltdc_sms_mockup/order_conf_auth.htm"
+		class="js-launch-1 launch button success" target="_blank">Launch Desktop</a>
+	</li>
+</ul>
+			</div>
+		</section>
+
+		<section class="row"><div class="column small-12"><hr></div></section>
+
+		<section class="row">
+			<nav class="column small-12 text-left">
+
+<h4 class="caption--p__roboto text-center">Non-authenticated User</h4>
+
+			</nav>
+
+			<div class="column small-12 text-center">
+
+				<ul class="button-group round even-3">
+				  <li><a href="https://www.TheScottKrause.com/utils/neodigm55-mobile-resizer/?vp=m&uri=https://neodigm.github.io/is-ecom-labs/ltdc_sms_mockup/order_conf_auth.htm"
+						class="js-launch-2 launch button success" target="_blank">Launch Phone</a>
+					</li>
+				  <li><a href="https://www.TheScottKrause.com/utils/neodigm55-mobile-resizer/?vp=t&uri=https://neodigm.github.io/is-ecom-labs/ltdc_sms_mockup/order_conf_auth.htm"
+						class="js-launch-2 launch button success" target="_blank">Launch Tablet</a>
+					</li>
+				  <li><a href="sms_order_conf_create_accnt/sys_order_conf_create_accnt.htm"
+						class="js-launch-2 launch button success" target="_blank">Launch Desktop</a>
+					</li>
+				</ul>
+
+			</div>
+		</section>
+		<section class="row"><div class="column small-12"><hr></div></section>
+		<section class="row">
+				<nav class="column small-12 text-left">
+	
+	<h4 class="caption--p__roboto text-center">More Interactive Designs ...</h4>
+	
+				</nav>
+	
+				<div class="column small-12 text-center">
+	
+					<ul class="button-group round even-3">
+					  <li><a  href="https://neodigm.github.io/chi_capstone_prototype1/#/screens/174465675"
+							class="launch button success" target="_blank">Mobile App 🌮</a>
+						</li>
+					  <li><a  href="https://neodigm.github.io/is-ecom-labs/3dcat/index.html"
+							class="launch button success" target="_blank">Animation CSS 👁️</a>
+						</li>
+					  <li><a  href="https://neodigm.github.io/is-ecom-labs/ltdc_vivid2/index.html"
+							class="launch button success" target="_blank">Animation JS 🍭</a>
+						</li>
+					</ul>
+	
+				</div>
+		</section>
+
+		<section class="row"><div class="column small-12"><hr></div></section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/js/foundation/foundation.min.js" async></script>
+<script>
+	$( document ).ready( function(){
+		localStorage.setItem("sHrefOpts", "");  //  move querystring to local storage
+		$(".js-option").on("change", function( e ){
+			var sHrefOpts = "?", sHref = "";
+			if( $("#js-option-1").prop("checked") ) sHrefOpts = sHrefOpts + "opt1&";
+			if( $("#js-option-2").prop("checked") ) sHrefOpts = sHrefOpts + "opt2&";
+			if( $("#js-option-3").prop("checked") ) sHrefOpts = sHrefOpts + "opt3&";
+			if( $("#js-option-4").prop("checked") ) sHrefOpts = sHrefOpts + "opt4&";
+			//sHref = $(".js-launch-1").attr("data-href") + sHref;
+
+			localStorage.setItem("sHrefOpts", sHrefOpts);  //  move querystring to local storage
+console.log("sol | " + localStorage.getItem("sHrefOpts") );
+
+/*
+			$(".js-launch-1").each( function(){
+				sHref = $( this ).attr("data-href") + sHrefOpts;
+				$( this ).attr("href", sHref );
+console.log( $( this ).attr("href") );
+			});
+*/
+		} );
+	} );
+</script>
+
+
+
+</body>
+
+	<style>
+body, [role='main'] {
+    background: linear-gradient(to right, #fff, #f6f6f6, #fff)
+}	
+		
+.launch{
+	background-color: #A29980 !important;
+	color: #FFF !important;
+	font-size: 18px !important;
+}
+.launch:hover {
+	background-color: #FF6F61 !important;
+	color: #666 !important;
+	font-size: 18px !important;
+}
+.label {
+	opacity: .6;
+}
+table {width: 100%;}
+hr {
+    border: 0;
+    height: 2px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(194, 186, 162, 0.75), rgba(0, 0, 0, 0));
+}
+hr.jeweled {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(255, 230, 128, 0.75), rgba(0, 0, 0, 0));
+}
+.horz-spacer {max-height: 12px;}
+.fa {color: #edba08;}
+.caption--p__architectsdaughter{
+	font-family: "Architects Daughter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 1.1em;
+	font-weight: 400;
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.caption--p__roboto{
+	font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 1.4em;
+	font-weight: 500;
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.caption--h1__roboto{
+	font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 1.8em;
+	font-weight: 500;
+	line-height: 1.5;
+	color: #777;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.caption--p__opensans{
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.color-text__black{color: #000;}
+.color-text__white{color: #FFF;}
+.color-back__black{background-color: #000;}
+.color-back__white{background-color: #FFF;}
+
+.color-text__neos01{color:#FFE680;}
+.color-text__neos02{color:#F2D26A;}
+.color-text__neos03{color:#E4BE54;}
+.color-text__neos04{color:#D7AA3F;}
+.color-text__neos05{color:#C99629;}
+.color-text__neos06{color:#BC8213;}
+.color-text__neos07{color:#E0DDC5;}
+.color-text__neos08{color:#D3CDB4;}
+.color-text__neos09{color:#C2BAA2;}
+.color-text__neos10{color:#B3AB92;}
+.color-text__neos11{color:#A29980;}
+.color-text__neos12{color:#938970;}
+.color-text__neos13{color:#edba08;}
+.color-text__neos14{color:#3A3426;}
+
+.color-back__neos01{background-color:#FFE680;}
+.color-back__neos02{background-color:#F2D26A;}
+.color-back__neos03{background-color:#E4BE54;}
+.color-back__neos04{background-color:#D7AA3F;}
+.color-back__neos05{background-color:#C99629;}
+.color-back__neos06{background-color:#BC8213;}
+.color-back__neos07{background-color:#E0DDC5;}
+.color-back__neos08{background-color:#D3CDB4;}
+.color-back__neos09{background-color:#C2BAA2;}
+.color-back__neos10{background-color:#B3AB92;}
+.color-back__neos11{background-color:#A29980;}
+.color-back__neos12{background-color:#938970;}
+.color-back__neos13{background-color:#888;}
+
+.article--table_lab__roboto{
+	color: #BC8213;
+	font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	text-align: center;
+	font-size: 16px;
+	font-weight: normal;
+	margin: 2px;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+}
+	</style>
+<div style="text-align: center;">
+	<br>
+	<a href="https://thescottkrause.com/vcard_scott_c_krause.vcf">
+		<img src="https://neodigm.github.io/brand_logo_graphic_design/thescottkrause_contact_card.png" alt="Contact Card"
+		style="widht: 112px; height: 112px;">
+	</a>
+	<br><br>
+	<svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="208" height="48"><path fill="none" stroke="#000000" stroke-miterlimit="10" d="M79.801 7.355c-.784.59 1.219-.412 1.509-.543 1.498-.677 2.954-1.472 4.421-2.212 2.397-1.21 4.752-2.948 7.266-3.878-6.03-.055-12.003 3.59-17.662 5.386-5.115 1.624-10.112 3.833-15.151 5.672 4.472.065 8.88-1.108 13.401-1.111 5.101-.004 10.529.601 14.873 3.533 8.269 5.581 5.624 19.099-1.61 24.626-4.479 3.425-10.907 3.769-16.052 1.617-5.468-2.285-9.713-6.853-6.142-12.885 1.768-2.984 12.862-10.587 12.014-2.343-.404 3.926-2.391 3.12-2.57-.197"/><path fill="none" stroke="#000000" stroke-miterlimit="10" d="M82.009 23.917c.009-1.229.097-2.308.35-3.468-1.042-.055-4.722 4.063-3.9 4.994 1.393 1.576 3.095-3.506 3.186-4.23-.125.499-1.198 2.933-.518 3.218.756.319 2.922-3.189 3.278-3.818 1.2-2.12 1.631-4.938 2.209-7.234.242-.964.808-2.341.409-3.252-.736 2.979-2.185 5.516-2.253 8.643-.032 1.467-.806 4.323-.188 5.698.793 1.768 1.577-.779 2.073-1.839.86-1.836 1.099-3.757 1.607-5.704.596-2.284 1.704-5.157 1.44-7.53-2.147 2.267-1.703 7.396-2.227 10.344-.739 4.153-.863 8.287-.497 12.504.256 2.945.796 5.945 1.692 8.733.472 1.466 1 3.339 1.75 4.662.502.888 1.292 1.362 1.521 2.361-.591-.099-1.002-.515-1.283-1.082M110.235 14.164c-.459 2.401-2.991 5.247-4.272 7.318-1.66 2.683-5.366 6.118-5.837 9.247a.732.732 0 00.541-.373M123.116 9.196c-.057-.445.425-1 .905-1.448-4.367 1.41-9.241 5.299-12.377 8.638-1.392 1.483-2.335 3.589-4.486 4.229 1.371-.021 3.791-.487 4.881.399 1.516 1.233 1.154 5.112.965 6.769-.293 2.564-1.815 4.937-1.48 7.589.342 2.71 1.354 1.722 3.68 1.242"/><path fill="none" stroke="#000000" stroke-miterlimit="10" d="M116.124 24.652c-.198.207-.448.49-.681.713 1.91-.694 5.008-3.158 6.377-4.704-1.811 1.354-3.578 2.848-5.355 4.285.757-.611 1.695-1.646 2.576-1.737-.636 2.908 6.215-1.301 7.189-2.02-1.08.358-2.583 1.508-3.113 2.524 2.137-.186 5.527-1.799 7.115-3.275-.764.553-1.602 1.44-1.943 2.162 1.666.385 3.214-1.429 4.515-2.203-.458.557-.87 1.189-1.204 1.834 2.567.382 4.878-1.897 6.753-3.266.761 1.917.288 3.668-1.774 4.002a3.747 3.747 0 000-.497c3.135-.155 9.189.141 11.393-2.424 1.568-1.825-1.764-.838-2.589-.004-1.813 1.832.354 1.863 2.029 1.849 4.066-.034 8.237-1.591 12.368-1.849 2.702-.169 5.09.577 7.712.979 1.566.24 3.024.145 4.539.682.837.297 1.193.914 2.212.722.172-.498-.035-.716-.339-1.085"/></svg>
+</div>
+
+</html>

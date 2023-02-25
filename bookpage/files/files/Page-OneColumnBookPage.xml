@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ContentTemplate xmlns="http://endeca.com/schema/content-template/2008"
+                 xmlns:editors="editors" 
+                 type="Page"
+                 id="OneColumnBookPage">
+    <Description>Single-column page layout.</Description>
+    <ThumbnailUrl>/ifcr/tools/xmgr/img/template_thumbnails/Page_OneColumn.png</ThumbnailUrl>
+    <ContentItem>
+      <Name>Content</Name>
+      <Property name="MainContent">
+        <ContentItemList type="MainContent" />
+      </Property>
+        <Property name="PageType">
+            <String>default</String>
+        </Property>
+		<Property name="PageName">   
+			<String/>		
+        </Property>
+    </ContentItem>
+    <EditorPanel>
+      <BasicContentItemEditor>
+            <editors:ChoiceEditor label="Page Type" propertyName="PageType">
+				<choice label="Book" value="default"/>               
+            </editors:ChoiceEditor>
+			<editors:StringEditor label="Page Name" bottomLabel="Enter a value for page name (Landing Page)." propertyName="PageName"/>			
+      </BasicContentItemEditor>
+    </EditorPanel>
+</ContentTemplate>

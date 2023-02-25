@@ -1,0 +1,127 @@
+                    <section class="row">
+						<div class="column small-10">
+                            <!-- cont area begin  -->
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. M🚀Electron && Vue.js && TypeScript && Go 🪐, in vestibulum diam tristique. Sed aliquet convallis lorem, at cursus sapien lobortis et. Curabitur scelerisque magna at nibh imperdiet, et dictum lectus iaculis. In tempus metus ac efficitur auctor. Maecenas dignissim dolor et odio pellentesque, vitae finibus magna interdum. Proin a ultricies eros, eu semper justo. Sed ut velit dignissim, feugiat nisl eget, posuere ipsum. Donec sed euismod sapien. Etiam vel nisi non augue congue mollis.
+                            </p>
+                            <!-- cont area end    -->
+						</div>
+                    </section>
+	
+<script>
+$(document).ready(function() {
+	$(document).foundation();
+	$(".js-i--figure").on("click", function(){ // icon click hide / show
+		$(this).next().toggleClass("hidden");
+	});
+	$(".js-ccp").on("click", function( e ){  //  Collapsible Content Panel
+		$( this ).toggleClass("ccp-panel__active").next().toggleClass("hidden");
+		$( this ).find("i").text(( $( this ).hasClass("ccp-panel__active") )?"-":"+");
+	});
+});
+</script>
+                    <section class="row orderConfirm"><!-- collapsible card panels begin -->
+						<div class="column small-10 medium-5"> <!--  Left Column | Email Subscribe  -->
+
+                            <nav id="ccp-1" class="js-ccp ccp-panel radius text-center ccp-quest ccp-panel__active">
+                                <p>Send me promotional emails and discounts<i class="ccp-panel--i">-</i></p>
+                            </nav>
+                            <aside class="ccp-panel__content panel">
+                                <section class="row">
+                                    <div class="column small-8 no-padding-left">
+                                        <figure class="resp_half_height"></figure>
+                                        <div    class="rd-only--div">
+                                            <h6 class="rd-only--p text-center">email@address.com</h6>
+                                        </div>
+                                    </div>
+                                    <div class="column small-2 no-padding">
+                                        <figure class="resp_full_height"></figure>
+                                        <a class="cmd-subs--a button radius resp_btn_teal">Subscribe</a>
+                                    </div>
+                                </section>
+                                <figure class="resp_full_height"></figure>
+                                <p>We will never sell your email address. To learn more read our <a class="resp_u">Privacy Policy</a>.</p>
+                                <figure class="js-i--figure i--figure">
+										<div class="circle">i</div>
+                                </figure>
+                                <aside class="hidden">
+                                    <p class="no-margin-bottom">To change your email address visit <a class="resp_u">Your Account</a></p>
+                                    <figure class="resp_qtr_height"></figure>
+                                    <section class="row">
+                                        <div class="chkb--div column small-1 text-center">
+                                            <input class="chkb--input no-margin-bottom" type="checkbox">
+                                        </div>
+                                        <div class="column small-9">
+                                            <p class="chkb--p no-margin-bottom">Do not ask me again</p>
+                                        </div>
+                                    </section>
+                                </aside>
+                            </aside>
+
+						</div>
+						<div class="column small-10 medium-5">    <!--  Right Column | SMS  -->
+
+							<nav id="ccp-2" class="js-ccp ccp-panel radius text-center ccp-quest">
+								<p>Text me when my order ships<i class="ccp-panel--i">+</i></p>
+							</nav>
+							<aside class="ccp-panel__content panel hidden">
+								<section class="row">
+									<div class="column small-8 no-padding-left">
+										<figure class="resp_full_height"></figure>
+										<input id="subscribeSMS" class="resp_input_brand" name=""
+										type="text" maxlength="256" placeholder="* Mobile Phone Number"
+										value="" aria-required="true" aria-label="Mobile Phone Number"
+										autocorrect="off" autocomplete="off">
+									</div>
+									<div class="column small-2 no-padding">
+										<figure class="resp_full_height"></figure>
+                                		<a class="cmd-subs--a button radius resp_btn_teal">Subscribe</a>
+									</div>
+								</section>
+								<figure class="resp_qtr_height"></figure>
+								<p>Send text reminders to the mobile phone number that I entered.  Message and data rates may apply.  For help, text <strong>HELP</strong> to <strong>12345</strong>.  To opt out text <strong>STOP</strong> to <strong>12345</strong>.
+								</p>
+								<section class="row">
+									<div class="chkb--div column small-1 text-center">
+										<input class="chkb--input no-margin-bottom" type="checkbox">
+									</div>
+									<div class="column small-9">
+										<p class="chkb--p no-margin-bottom">I agree to the <a class="resp_u">Terms & Conditions</a></p>
+									</div>
+								</section>
+								<figure class="resp_full_height"></figure>
+                        		<figure class="js-i--figure i--figure">
+									<div class="circle">i</div>
+								</figure>
+								<aside class="hidden">
+									<p class="no-margin-bottom">To change your mobile phone number visit <a class="resp_u">Your Account</a></p>
+									<figure class="resp_half_height"></figure>
+								</aside>
+							</aside>
+
+						</div>
+
+						<div class="column small-10 medium-5">    <!--  🚀Electron && Vue.js && TypeScript && Go 🪐  -->
+
+                            <nav id="ccp-2" class="js-ccp ccp-panel radius text-center ccp-quest">
+                            	<p>Express Checkout<i class="ccp-panel--i">-</i></p>
+                            </nav>
+                            <aside class="ccp-panel__content panel hidden">
+	                            <section class="row">
+		                            <div class="column small-8 no-padding-left">
+			                            <figure class="resp_half_height"></figure>
+			                            <div class="rd-only--div">
+			                            <p class="rd-only--p text-center"><i class="fa fa-cc-visa fa-lg" aria-hidden="true"></i> XXXXXXXXXXXX1111</p>
+		                            </div>
+		                            </div>
+		                            <div class="column small-2 no-padding">
+			                            <figure class="resp_full_height"></figure>
+			                            <a class="cmd-subs--a button radius resp_btn_teal">Save</a>
+		                            </div>
+	                            </section>
+	                            <figure class="resp_full_height"></figure>
+	                            <p>Checkout faster by saving your payment information.
+	                            </p>
+                            </aside>
+
+						</div>
+                    </section><!-- collapsible panels begin -->

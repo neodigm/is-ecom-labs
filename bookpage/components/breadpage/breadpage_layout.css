@@ -1,0 +1,106 @@
+.l-grid-breadpage {
+align-items: center;
+border-bottom: 1px solid #ccc;
+border-top: 1px solid #ccc;
+display: flex;
+flex-flow: row nowrap; /* Shorthand for flex-direction and flex-wrap */
+justify-content: space-between;
+margin: 4px auto;
+width: 976px;
+}
+@media only screen and (min-width: 61.25em){
+  body[data-columns="2"] .l-grid-breadpage { width: 780px;}
+}
+
+.l-grid-breadpage .l-grid-page {
+align-items: center;
+display: flex;
+flex-flow: row nowrap; /* Shorthand for flex-direction and flex-wrap */
+justify-content: space-between;
+}
+.l-grid-breadpage .l-grid-page__nav {
+align-items: center;
+display: flex;
+flex-flow: row nowrap; /* Shorthand for flex-direction and flex-wrap */
+justify-content: space-between;
+}
+.l-grid-breadpage .bread {
+margin: 14px 0 18px 16px;
+}
+.l-grid-breadpage .bread-a {
+cursor: pointer;
+font-family: sans-serif;
+font-size: 13px;
+line-height: 18px;
+text-decoration: underline;
+text-transform: none;
+}
+.l-grid-breadpage .bread span {
+cursor: default;
+margin: 0 8px;
+}
+.l-grid-breadpage .page__p {
+font-family: sans-serif;
+font-size: 12px;
+height: 20px;
+line-height: 22px;
+margin: 8px 8px;
+}
+.l-grid-breadpage .page__num {
+background: 0;
+border-left: 0;
+border-radius: 3px;
+border: 1px solid #e9e9e9;
+cursor: pointer;
+font-family: sans-serif;
+font-size: 12px;
+font-weight: normal;
+line-height: 18px;
+padding: .8px 5px .8px 5px;
+text-decoration: none;
+}
+.l-grid-breadpage .page__num--current {
+cursor: default;
+font-weight: bold;
+}
+@media only screen and (max-width: 47.9375em) {
+/* small */
+.l-grid-page {
+justify-content: center;
+}
+.l-grid-breadpage {
+justify-content: center;
+}
+.breadpage__top .l-grid-page {
+display: none;
+}
+.breadpage__bottom .l-grid-page {
+flex-flow: column-reverse wrap; /* Shorthand for flex-direction and flex-wrap */
+justify-content: center;
+}
+.breadpage__bottom .l-grid-breadpage {
+display: block;
+text-align: center;
+border-top: 1px solid #fff;
+}
+.l-grid-breadpage .page__num {
+font-size: 22px;
+line-height: 35px;
+padding: 1px 9px 1px 9px;
+}
+}
+@media only screen and (min-width:48em) and (max-width:61.1875em){
+/* medium */
+.l-grid-breadpage .page__num {
+font-size: 15px;
+line-height: 22px;
+padding: .9px 6px .9px 6px;
+}
+}
+@media only screen and (max-width:61.1875em){
+/* small and medium */
+.l-grid-breadpage {
+width: inherit;
+margin: 4px 6px;
+}
+}

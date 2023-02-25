@@ -1,0 +1,960 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Compression Audit</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.3/foundation.css" />
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+<style>
+/*  EXISTING RESP BEGIN  */
+.btn-brand {
+	font-size: 1.100em;
+	font-weight: 200;
+	vertical-align: middle;
+}
+.btn-brand, .btn-brand-small {
+    background-color: #297FB8;
+}
+.btn-brand:hover, .btn-brand-small:hover {
+    background-color: #004C85;
+}
+.btn-brand:focus, .btn-brand-small:focus {
+    background-color: #003B64;
+}
+.resp_btn_green {
+	background-color: #4FB466;
+	margin: 0;
+}
+.resp_btn_green:hover, .resp_btn_green:focus {
+	background-color: #2F9446;
+}
+.resp_btn_teal {
+	background-color: #2AA6CA;
+}
+.resp_btn_teal:hover, .resp_btn_teal:focus {
+	background-color: #1A96BA;
+}
+.resp_full_height {height: 14px;}
+.resp_half_height {height: 8px;}
+.resp_qtr_height {height: 4px;}
+.resp_8th_height {height: 2px;}
+.no-padding {
+	padding: 0 !important;
+}
+/*  EXISTING RESP END  */
+
+.faq-cols  {
+	padding-right: 8px !important;
+	padding-left: 8px !important;
+}
+
+.detail-table     {color: #999; font-size: 10px; font-weight: 100; font-family: monospace;letter-spacing: -1px;line-height: 104%;}
+
+.faq-caption     {color: #999; font-size: 48px; font-weight: 100; font-family: 'Roboto', sans-serif;letter-spacing: -3px;line-height: 84%;margin-bottom: 24px !important}
+.faq-caption_sub {color: #444; font-size: 32px; font-weight: 100; font-family: 'Roboto', sans-serif;letter-spacing: -1px;line-height: 84%;margin-bottom: 24px !important;}
+.play-cmd__p  {color: #FFF; font-size: 32px; font-weight: 100; font-family: 'Roboto', sans-serif;letter-spacing: -1px;line-height: 84%;margin-bottom: 2px !important;}
+.faq-caption_h3  {color: #444; font-size: 24px; font-weight: 100; font-family: 'Roboto', sans-serif;letter-spacing: -1px;line-height: 84%;margin-bottom: 24px !important;}
+.faq-instr       {color: #000; font-size: 16px; font-weight: 400; font-family: 'Roboto', sans-serif;margin-bottom: 12px;}
+.faq-contact     {color: #000; font-size: 14px; font-weight: 400; font-family: 'Roboto', sans-serif;}
+
+.faq-togl {width: 100%;padding: 16px;}
+.faq-togl-cntnt {cursor: pointer;}
+.faq-split {padding: 0px !important;}
+
+.faq-table {
+	width: 100%;
+}
+
+.faq-smi__a {
+	margin-right: 8px;
+}
+
+.faq-smi__a > i {
+	color: #888;
+}
+
+.faq-smi__a:hover > i {
+	color: #2aa6ca;
+}
+
+.faq-panel {
+	border-style: solid;
+	border-width: 1px;
+	border-color: #BBB;
+	margin-bottom: 16px;
+	padding: 22px 12px 4px 12px;
+	background: #f2faff;
+	color: #333333;
+	border-radius: 3px;
+}
+
+.faq-panel__contact:hover {
+	background: linear-gradient(
+	rgba(255, 255, 255, 0.24), 
+	rgba(42, 166, 202, 0.32)
+	);
+}
+
+.faq-quest {
+	position: relative;
+	overflow: hidden;
+	min-height: 56px;
+	height: 72px;
+	cursor: pointer;
+	transition: background-color 80ms;
+	-webkit-transition: background-color 80ms;
+}
+
+.faq-quest p {
+	color: #000; font-size: 18px; font-weight: 300; font-family: 'Roboto', sans-serif;
+}
+
+.faq-quest:hover {
+	background-color: #2aa6ca;
+	transition: background-color 80ms;
+	-webkit-transition: background-color 80ms;
+}
+.faq-quest:active {
+	background-color: #297FB8;
+	transition: background-color 80ms;
+	-webkit-transition: background-color 80ms;
+}
+
+.faq-panel__active {
+	background: #297FB8;
+	margin-bottom: -4px;
+}
+
+.faq-quest__linebreak {
+	padding: 8px 12px 12px 18px;
+}
+
+.faq-quest:hover p, .faq-panel__active p {
+	color: #FFF;
+}
+ 
+.faq_ansr {
+	padding: 12px;
+	min-height: 56px;
+	background-color: #FFF;
+}
+.faq_ansr > p {
+	color: #111;
+	font-size: 16px;
+	font-weight: 400;
+	font-family: 'Roboto', sans-serif;
+	margin-bottom: 4px;
+}
+.respn_arw {color: #888;}
+.faq-icon {color: #888;}
+.st_hd_ini {display: none;}
+figure > img {
+	min-width: 100%;
+	height: auto;
+}
+.hide { display: none !important; }
+
+.play-green {
+	color: #00FF00;
+}
+
+.play-red {
+	color: #FF0000;
+}
+</style>  
+<div class="resp_full_height"></div>
+<section class="row">
+	<header class="columns small-12">
+		<p class="faq-caption text-center">
+Akamai AIC visual audit
+		</p>	
+		<p class="faq-instr text-justify">
+This audit presents 15 product images optimized with Adaptive Image Compression.  The image compression is lossy and the delta image shows exactly which pixels have changed as a result of the compression (see the pink dots).
+		</p>
+	</header>
+</section>
+<div class="resp_full_height"></div>
+<section class="row">
+	<div class="columns small-12 medium-6 no-padding">
+		<figure>
+			<img class="js-img-100" src="img/51054_mn.jpg">
+			<p class="faq-instr text-center">100% - 20,932 bytes
+			</p>
+		</figure>
+	</div>
+	<div class="columns small-12 medium-6 no-padding">
+		<figure>
+			<img class="js-img-60" src="img/aic_060_51054_mn.jpg">
+			<p class="js-60--p faq-instr text-center">60% - 20,839 bytes
+			</p>
+			<p class="js-80--p faq-instr text-center hide">80% - 20,839 bytes</p>
+		</figure>
+	</div>
+	<div class="columns small-12 medium-6 no-padding">
+		<figure>
+			<img src="img/aic_040_51054_mn.jpg">
+			<p class="faq-instr text-center">40% - 20,672 bytes
+			</p>
+		</figure>
+	</div>
+	<div class="columns small-12 medium-6 no-padding">
+		<figure>
+			<img src="img/51054_mn.png">
+			<p class="faq-instr text-center">100% vs 40% delta
+			</p>
+		</figure>
+	</div>
+</section><hr>
+<section class="row">
+	<div class="columns small-12 medium-6 no-padding">
+		<figure>
+			<img class="js-img-100" src="img/51055_1197895_PHP_SNS_mn.jpg">
+			<p class="faq-instr text-center">100% - 21,948 bytes
+			</p>
+		</figure>
+	</div>
+	<div class="columns small-12 medium-6 no-padding">
+		<figure>
+			<img class="js-img-60" src="img/aic_060_51055_1197895_PHP_SNS_mn.jpg">
+			<p class="js-60--p faq-instr text-center">60% - 21,855 bytes
+			</p>
+			<p class="js-80--p faq-instr text-center hide">80% - 21,855 bytes</p>
+		</figure>
+	</div>
+	<div class="columns small-12 medium-6 no-padding">
+		<figure>
+			<img src="img/aic_040_51055_1197895_PHP_SNS_mn.jpg">
+			<p class="faq-instr text-center">40% - 18,454 bytes
+			</p>
+		</figure>
+	</div>
+	<div class="columns small-12 medium-6 no-padding">
+		<figure>
+			<img src="img/51055_1197895_PHP_SNS_mn.png">
+			<p class="faq-instr text-center">100% vs 40% delta
+			</p>
+		</figure>
+	</div>
+</section><hr>
+<section class="row">
+	<div class="columns small-12 medium-6 no-padding">
+		<figure>
+			<img class="js-img-100" src="img/51117_mn.jpg">
+			<p class="faq-instr text-center">100% - 45,498 bytes
+			</p>
+		</figure>
+	</div>
+	<div class="columns small-12 medium-6 no-padding">
+		<figure>
+			<img class="js-img-60" src="img/aic_060_51117_mn.jpg">
+			<p class="js-60--p faq-instr text-center">60% - 45,405 bytes
+			</p>
+			<p class="js-80--p faq-instr text-center hide">80% - 45,405 bytes</p>
+		</figure>
+	</div>
+	<div class="columns small-12 medium-6 no-padding">
+		<figure>
+			<img src="img/aic_040_51117_mn.jpg">
+			<p class="faq-instr text-center">40% - 39,722 bytes
+			</p>
+		</figure>
+	</div>
+	<div class="columns small-12 medium-6 no-padding">
+		<figure>
+			<img src="img/51117_mn.png">
+			<p class="faq-instr text-center">100% vs 40% delta
+			</p>
+		</figure>
+	</div>
+</section><hr>
+<section class="row">
+	<div class="columns small-12 medium-6 no-padding">
+		<figure>
+			<img class="js-img-100" src="img/51161_1199398_TDH_mn.jpg">
+			<p class="faq-instr text-center">100% - 27,344 bytes
+			</p>
+		</figure>
+	</div>
+	<div class="columns small-12 medium-6 no-padding">
+		<figure>
+			<img class="js-img-60" src="img/aic_060_51161_1199398_TDH_mn.jpg">
+			<p class="js-60--p faq-instr text-center">60% - 27,251 bytes
+			</p>
+			<p class="js-80--p faq-instr text-center hide">80% - 27,251 bytes</p>
+		</figure>
+	</div>
+	<div class="columns small-12 medium-6 no-padding">
+		<figure>
+			<img src="img/aic_040_51161_1199398_TDH_mn.jpg">
+			<p class="faq-instr text-center">40% - 21,981 bytes
+			</p>
+		</figure>
+	</div>
+	<div class="columns small-12 medium-6 no-padding">
+		<figure>
+			<img src="img/51161_1199398_TDH_mn.png">
+			<p class="faq-instr text-center">100% vs 40% delta
+			</p>
+		</figure>
+	</div>
+</section><hr>
+<section class="row">
+	<div class="columns small-12 medium-6 no-padding">
+		<figure>
+			<img class="js-img-100" src="img/51925_1201882_KYE_ZZG_mn.jpg">
+			<p class="faq-instr text-center">100% - 239,761 bytes
+			</p>
+		</figure>
+	</div>
+	<div class="columns small-12 medium-6 no-padding">
+		<figure>
+			<img class="js-img-60" src="img/aic_060_51925_1201882_KYE_ZZG_mn.jpg">
+			<p class="js-60--p faq-instr text-center">60% - 40,447  bytes
+			</p>
+			<p class="js-80--p faq-instr text-center hide">80% - 64,734 bytes</p>
+		</figure>
+	</div>
+	<div class="columns small-12 medium-6 no-padding">
+		<figure>
+			<img src="img/aic_040_51925_1201882_KYE_ZZG_mn.jpg">
+			<p class="faq-instr text-center">40% - 30,142  bytes
+			</p>
+		</figure>
+	</div>
+	<div class="columns small-12 medium-6 no-padding">
+		<figure>
+			<img src="img/51925_1201882_KYE_ZZG_mn.png">
+			<p class="faq-instr text-center">100% vs 40% delta
+			</p>
+		</figure>
+	</div>
+</section><hr>
+<section class="row">
+	<div class="columns small-12 medium-6 no-padding">
+		<figure>
+			<img class="js-img-100" src="img/52234_1201799_RXN_CHK_mn.jpg">
+			<p class="faq-instr text-center">100% - 32,404 bytes
+			</p>
+		</figure>
+	</div>
+	<div class="columns small-12 medium-6 no-padding">
+		<figure>
+			<img class="js-img-60" src="img/aic_060_52234_1201799_RXN_CHK_mn.jpg">
+			<p class="js-60--p faq-instr text-center">60% - 32,311 bytes
+			</p>
+			<p class="js-80--p faq-instr text-center hide">80% - 32,311 bytes</p>
+		</figure>
+	</div>
+	<div class="columns small-12 medium-6 no-padding">
+		<figure>
+			<img src="img/aic_040_52234_1201799_RXN_CHK_mn.jpg">
+			<p class="faq-instr text-center">40% - 29,235 bytes
+			</p>
+		</figure>
+	</div>
+	<div class="columns small-12 medium-6 no-padding">
+		<figure>
+			<img src="img/52234_1201799_RXN_CHK_mn.png">
+			<p class="faq-instr text-center">100% vs 40% delta
+			</p>
+		</figure>
+	</div>
+</section><hr>
+<section class="row">
+	<div class="columns small-12 medium-6 no-padding">
+		<figure>
+			<img class="js-img-100" src="img/52408_1203128_DVU_mn.jpg">
+			<p class="faq-instr text-center">100% - 60,519 bytes
+			</p>
+		</figure>
+	</div>
+	<div class="columns small-12 medium-6 no-padding">
+		<figure>
+			<img class="js-img-60" src="img/aic_060_52408_1203128_DVU_mn.jpg">
+			<p class="js-60--p faq-instr text-center">60% - 38,596 bytes
+			</p>
+			<p class="js-80--p faq-instr text-center hide">80% - 58,145 bytes</p>
+		</figure>
+	</div>
+	<div class="columns small-12 medium-6 no-padding">
+		<figure>
+			<img src="img/aic_040_52408_1203128_DVU_mn.jpg">
+			<p class="faq-instr text-center">40% - 27,873 bytes
+			</p>
+		</figure>
+	</div>
+	<div class="columns small-12 medium-6 no-padding">
+		<figure>
+			<img src="img/52408_1203128_DVU_mn.png">
+			<p class="faq-instr text-center">100% vs 40% delta
+			</p>
+		</figure>
+	</div>
+</section><hr>
+<section class="row">
+	<div class="columns small-12 medium-6 no-padding">
+		<figure>
+			<img class="js-img-100" src="img/53187_1203879_NEW_mn.jpg">
+			<p class="faq-instr text-center">100% - 59,782 bytes
+			</p>
+		</figure>
+	</div>
+	<div class="columns small-12 medium-6 no-padding">
+		<figure>
+			<img class="js-img-60" src="img/aic_060_53187_1203879_NEW_mn.jpg">
+			<p class="js-60--p faq-instr text-center">60% - 38,755 bytes
+			</p>
+			<p class="js-80--p faq-instr text-center hide">80% - 56,685 bytes</p>
+		</figure>
+	</div>
+	<div class="columns small-12 medium-6 no-padding">
+		<figure>
+			<img src="img/aic_040_53187_1203879_NEW_mn.jpg">
+			<p class="faq-instr text-center">40% - 28,438 bytes
+			</p>
+		</figure>
+	</div>
+	<div class="columns small-12 medium-6 no-padding">
+		<figure>
+			<img src="img/53187_1203879_NEW_mn.png">
+			<p class="faq-instr text-center">100% vs 40% delta
+			</p>
+		</figure>
+	</div>
+</section><hr>
+<section class="row">
+	<div class="columns small-12 medium-6 no-padding">
+		<figure>
+			<img class="js-img-100" src="img/53284_mn.jpg">
+			<p class="faq-instr text-center">100% - 40,457 bytes
+			</p>
+		</figure>
+	</div>
+	<div class="columns small-12 medium-6 no-padding">
+		<figure>
+			<img class="js-img-60" src="img/aic_060_53284_mn.jpg">
+			<p class="js-60--p faq-instr text-center">60% - 40,364 bytes
+			</p>
+			<p class="js-80--p faq-instr text-center hide">80% - 40,364 bytes</p>
+		</figure>
+	</div>
+	<div class="columns small-12 medium-6 no-padding">
+		<figure>
+			<img src="img/aic_040_53284_mn.jpg">
+			<p class="faq-instr text-center">40% - 32,410 bytes
+			</p>
+		</figure>
+	</div>
+	<div class="columns small-12 medium-6 no-padding">
+		<figure>
+			<img src="img/53284_mn.png">
+			<p class="faq-instr text-center">100% vs 40% delta
+			</p>
+		</figure>
+	</div>
+</section><hr>
+<section class="row">
+	<div class="columns small-12 medium-6 no-padding">
+		<figure>
+			<img class="js-img-100" src="img/53433_1204799_ZIQ_DMS_mn.jpg">
+			<p class="faq-instr text-center">100% - 45,468 bytes
+			</p>
+		</figure>
+	</div>
+	<div class="columns small-12 medium-6 no-padding">
+		<figure>
+			<img class="js-img-60" src="img/aic_060_53433_1204799_ZIQ_DMS_mn.jpg">
+			<p class="js-60--p faq-instr text-center">60% - 44,078 bytes
+			</p>
+			<p class="js-80--p faq-instr text-center hide">80% - 45,375 bytes</p>
+		</figure>
+	</div>
+	<div class="columns small-12 medium-6 no-padding">
+		<figure>
+			<img src="img/aic_040_53433_1204799_ZIQ_DMS_mn.jpg">
+			<p class="faq-instr text-center">40% - 34,081 bytes
+			</p>
+		</figure>
+	</div>
+	<div class="columns small-12 medium-6 no-padding">
+		<figure>
+			<img src="img/53433_1204799_ZIQ_DMS_mn.png">
+			<p class="faq-instr text-center">100% vs 40% delta
+			</p>
+		</figure>
+	</div>
+</section><hr>
+<section class="row">
+	<div class="columns small-12 medium-6 no-padding">
+		<figure>
+			<img class="js-img-100" src="img/53518_1202122_TDT_BLM_mn.jpg">
+			<p class="faq-instr text-center">100% - 53,122 bytes
+			</p>
+		</figure>
+	</div>
+	<div class="columns small-12 medium-6 no-padding">
+		<figure>
+			<img class="js-img-60" src="img/aic_060_53518_1202122_TDT_BLM_mn.jpg">
+			<p class="js-60--p faq-instr text-center">60% - 35,743 bytes
+			</p>
+			<p class="js-80--p faq-instr text-center hide">80% - 50,370 bytes</p>
+		</figure>
+	</div>
+	<div class="columns small-12 medium-6 no-padding">
+		<figure>
+			<img src="img/aic_040_53518_1202122_TDT_BLM_mn.jpg">
+			<p class="faq-instr text-center">40% - 26,938 bytes
+			</p>
+		</figure>
+	</div>
+	<div class="columns small-12 medium-6 no-padding">
+		<figure>
+			<img src="img/53518_1202122_TDT_BLM_mn.png">
+			<p class="faq-instr text-center">100% vs 40% delta
+			</p>
+		</figure>
+	</div>
+</section><hr>
+<section class="row">
+	<div class="columns small-12 medium-6 no-padding">
+		<figure>
+			<img class="js-img-100" src="img/53986_1207157_TB3_ORN_mn.jpg">
+			<p class="faq-instr text-center">100% - 42,157 bytes
+			</p>
+		</figure>
+	</div>
+	<div class="columns small-12 medium-6 no-padding">
+		<figure>
+			<img class="js-img-60" src="img/aic_060_53986_1207157_TB3_ORN_mn.jpg">
+			<p class="js-60--p faq-instr text-center">60% - 42,064 bytes
+			</p>
+			<p class="js-80--p faq-instr text-center hide">80% - 42,064 bytes</p>
+		</figure>
+	</div>
+	<div class="columns small-12 medium-6 no-padding">
+		<figure>
+			<img src="img/aic_040_53986_1207157_TB3_ORN_mn.jpg">
+			<p class="faq-instr text-center">40% - 37,145 bytes
+			</p>
+		</figure>
+	</div>
+	<div class="columns small-12 medium-6 no-padding">
+		<figure>
+			<img src="img/53986_1207157_TB3_ORN_mn.png">
+			<p class="faq-instr text-center">100% vs 40% delta
+			</p>
+		</figure>
+	</div>
+</section><hr>
+<section class="row">
+	<div class="columns small-12 medium-6 no-padding">
+		<figure>
+			<img class="js-img-100" src="img/54059_mn.jpg">
+			<p class="faq-instr text-center">100% - 40,799 bytes
+			</p>
+		</figure>
+	</div>
+	<div class="columns small-12 medium-6 no-padding">
+		<figure>
+			<img class="js-img-60" src="img/aic_060_54059_mn.jpg">
+			<p class="js-60--p faq-instr text-center">60% - 40,605 bytes
+			</p>
+			<p class="js-80--p faq-instr text-center hide">80% - 40,706 bytes</p>
+		</figure>
+	</div>
+	<div class="columns small-12 medium-6 no-padding">
+		<figure>
+			<img src="img/aic_040_54059_mn.jpg">
+			<p class="faq-instr text-center">40% - 31,250 bytes
+			</p>
+		</figure>
+	</div>
+	<div class="columns small-12 medium-6 no-padding">
+		<figure>
+			<img src="img/54059_mn.png">
+			<p class="faq-instr text-center">100% vs 40% delta
+			</p>
+		</figure>
+	</div>
+</section><hr>
+<section class="row">
+	<div class="columns small-12 medium-6 no-padding">
+		<figure>
+			<img class="js-img-100" src="img/54556_mn.jpg">
+			<p class="faq-instr text-center">100% - 23,452 bytes
+			</p>
+		</figure>
+	</div>
+	<div class="columns small-12 medium-6 no-padding">
+		<figure>
+			<img class="js-img-60" src="img/aic_060_54556_mn.jpg">
+			<p class="js-60--p faq-instr text-center">60% - 23,433 bytes
+			</p>
+			<p class="js-80--p faq-instr text-center hide">80% - 23,433 bytes</p>
+		</figure>
+	</div>
+	<div class="columns small-12 medium-6 no-padding">
+		<figure>
+			<img src="img/aic_040_54556_mn.jpg">
+			<p class="faq-instr text-center">40% - 22,100 bytes
+			</p>
+		</figure>
+	</div>
+	<div class="columns small-12 medium-6 no-padding">
+		<figure>
+			<img src="img/54556_mn.png">
+			<p class="faq-instr text-center">100% vs 40% delta
+			</p>
+		</figure>
+	</div>
+</section><hr>
+<section class="row">
+	<div class="columns small-12 medium-6 no-padding">
+		<figure>
+			<img class="js-img-100" src="img/54691_1209562_Z7G_mn.jpg">
+			<p class="faq-instr text-center">100% - 36,902 bytes
+			</p>
+		</figure>
+	</div>
+	<div class="columns small-12 medium-6 no-padding">
+		<figure>
+			<img class="js-img-60" src="img/aic_060_54691_1209562_Z7G_mn.jpg">
+			<p class="js-60--p faq-instr text-center">60% - 36,809 bytes
+			</p>
+			<p class="js-80--p faq-instr text-center hide">80% - 36,809 bytes</p>
+		</figure>
+	</div>
+	<div class="columns small-12 medium-6 no-padding">
+		<figure>
+			<img src="img/aic_040_54691_1209562_Z7G_mn.jpg">
+			<p class="faq-instr text-center">40% - 33,205 bytes
+			</p>
+		</figure>
+	</div>
+	<div class="columns small-12 medium-6 no-padding">
+		<figure>
+			<img src="img/54691_1209562_Z7G_mn.png">
+			<p class="faq-instr text-center">100% vs 40% delta
+			</p>
+		</figure>
+	</div>
+</section><hr>
+
+<div class="resp_half_height"></div>
+<section class="row">
+	<aside class="columns small-12">
+		<p class="faq-caption text-center">
+Summary of all 15 product images (MN)
+		</p>	
+		<table class="faq-table" cellpadding="2" cellspacing="2">
+			<tr>
+				<td>Quality</td>
+				<td>100%</td>
+				<td><a class="js-cmd-80 button btn-brand tiny" style="margin-bottom: 1px;">80% &nbsp;
+				<i class="js-60--p      fa fa-circle-o"></i>
+				<i class="js-80--p hide fa fa-check-circle"></i>
+				</a></td>
+				<td><a class="js-cmd-60 button btn-brand tiny" style="margin-bottom: 1px;">60% &nbsp;
+				<i class="js-60--p      fa fa-check-circle"></i>
+				<i class="js-80--p hide fa fa-circle-o"></i>
+				</a></td>
+				<td>40%</td>
+			</tr>
+			<tr>
+				<td>Total Bytes</td>
+				<td>790,545</td>
+				<td>606,346</td>
+				<td>528,555</td>
+				<td>433,646</td>
+			</tr>
+			<tr>
+				<td>Bytes Saved</td>
+				<td>0</td>
+				<td>184,199</td>
+				<td>261,990</td>
+				<td>356,899</td>
+			</tr>
+		</table>
+	</aside>
+</section>
+<div class="resp_full_height"></div>
+<section class="row">
+	<aside class="columns small-12">
+
+<p class="faq-caption text-center">
+Detail Table
+</p>	
+
+		<table class="faq-table" cellpadding="2" cellspacing="2">
+			<tr>
+				<td>100%</td>
+				<td>80%</a></td>
+				<td>60%</a></td>
+				<td>40%</td>
+			</tr>
+			<tr>
+				<td class="detail-table">
+20,932  51054_mn.jpg<br>
+21,948  51055_1197895_PHP_SNS_mn.jpg<br>
+45,498  51117_mn.jpg<br>
+27,344  51161_1199398_TDH_mn.jpg<br>
+239,761 51925_1201882_KYE_ZZG_mn.jpg<br>
+32,404  52234_1201799_RXN_CHK_mn.jpg<br>
+60,519  52408_1203128_DVU_mn.jpg<br>
+59,782  53187_1203879_NEW_mn.jpg<br>
+40,457  53284_mn.jpg<br>
+45,468  53433_1204799_ZIQ_DMS_mn.jpg<br>
+53,122  53518_1202122_TDT_BLM_mn.jpg<br>
+42,157  53986_1207157_TB3_ORN_mn.jpg<br>
+40,799  54059_mn.jpg<br>
+23,452  54556_mn.jpg<br>
+36,902  54691_1209562_Z7G_mn.jpg<br>
+				</td>
+				<td class="detail-table">
+20,839  aic_080_51054_mn.jpg<br>
+21,855  aic_080_51055_1197895_PHP_SNS_mn.jpg<br>
+45,405  aic_080_51117_mn.jpg<br>
+27,251  aic_080_51161_1199398_TDH_mn.jpg<br>
+64,734  aic_080_51925_1201882_KYE_ZZG_mn.jpg<br>
+32,311  aic_080_52234_1201799_RXN_CHK_mn.jpg<br>
+58,145  aic_080_52408_1203128_DVU_mn.jpg<br>
+56,685  aic_080_53187_1203879_NEW_mn.jpg<br>
+40,364  aic_080_53284_mn.jpg<br>
+45,375  aic_080_53433_1204799_ZIQ_DMS_mn.jpg<br>
+50,370  aic_080_53518_1202122_TDT_BLM_mn.jpg<br>
+42,064  aic_080_53986_1207157_TB3_ORN_mn.jpg<br>
+40,706  aic_080_54059_mn.jpg<br>
+23,433  aic_080_54556_mn.jpg<br>
+36,809  aic_080_54691_1209562_Z7G_mn.jpg<br>
+				</td>
+				<td class="detail-table">
+20,839  aic_060_51054_mn.jpg<br>
+21,855  aic_060_51055_1197895_PHP_SNS_mn.jpg<br>
+45,405  aic_060_51117_mn.jpg<br>
+27,251  aic_060_51161_1199398_TDH_mn.jpg<br>
+40,447  aic_060_51925_1201882_KYE_ZZG_mn.jpg<br>
+32,311  aic_060_52234_1201799_RXN_CHK_mn.jpg<br>
+38,596  aic_060_52408_1203128_DVU_mn.jpg<br>
+38,755  aic_060_53187_1203879_NEW_mn.jpg<br>
+40,364  aic_060_53284_mn.jpg<br>
+44,078  aic_060_53433_1204799_ZIQ_DMS_mn.jpg<br>
+35,743  aic_060_53518_1202122_TDT_BLM_mn.jpg<br>
+42,064  aic_060_53986_1207157_TB3_ORN_mn.jpg<br>
+40,605  aic_060_54059_mn.jpg<br>
+23,433  aic_060_54556_mn.jpg<br>
+36,809  aic_060_54691_1209562_Z7G_mn.jpg<br>
+				</td>
+				<td class="detail-table">
+20,672  aic_040_51054_mn.jpg<br>
+18,454  aic_040_51055_1197895_PHP_SNS_mn.jpg<br>
+39,722  aic_040_51117_mn.jpg<br>
+21,981  aic_040_51161_1199398_TDH_mn.jpg<br>
+30,142  aic_040_51925_1201882_KYE_ZZG_mn.jpg<br>
+29,235  aic_040_52234_1201799_RXN_CHK_mn.jpg<br>
+27,873  aic_040_52408_1203128_DVU_mn.jpg<br>
+28,438  aic_040_53187_1203879_NEW_mn.jpg<br>
+32,410  aic_040_53284_mn.jpg<br>
+34,081  aic_040_53433_1204799_ZIQ_DMS_mn.jpg<br>
+26,938  aic_040_53518_1202122_TDT_BLM_mn.jpg<br>
+37,145  aic_040_53986_1207157_TB3_ORN_mn.jpg<br>
+31,250  aic_040_54059_mn.jpg<br>
+22,100  aic_040_54556_mn.jpg<br>
+33,205  aic_040_54691_1209562_Z7G_mn.jpg<br>
+				</td>
+			</tr>
+		</table>
+
+	</aside>
+</section>
+
+<div class="resp_full_height"></div>
+
+<section class="row">
+	<div class="column small-12 text-center">
+		<nav class="text-center">
+			<hr>
+			<a class="js-play button radius resp_btn_teal" style="width: 256px !important" data-open="modPlay"><p class="play-cmd__p">Play "Is It Compressed?"</p></a>
+			<hr>
+		</nav>
+	</div>
+</section>
+<div class="resp_full_height"></div>
+
+<div class="reveal" id="modPlay" data-reveal>
+	<button class="close-button" data-close aria-label="Close modal" type="button">
+		<span aria-hidden="true">&times;</span>
+	</button>
+	<section class="row">
+		<div class="columns small-12">
+			<figure class="text-center">
+					<img class="js-play--img" src="img/51054_mn.jpg">
+			</figure>
+		</div>
+		<hr>
+	</section>
+	<section class="row">
+		<div class="columns small-6 text-center">
+			<a class="js-play--a__orig button radius resp_btn_green" style="width: 256px !important">Original&nbsp;100%</a>
+		</div>
+		<div class="columns small-6 text-center">
+			<a class="js-play--a__comp button radius resp_btn_teal"  style="width: 256px !important">Compressed&nbsp;60%</a>
+		</div>
+		<hr>
+	</section>
+	<section class="row">
+		<div class="columns small-12 text-center">
+			<p class="faq-caption_sub">Correct <span class="js-play__correct">0</span> of <span class="js-play__total">1</span><p>
+		</div>
+	</section>
+	<output class="row">
+		<hr>
+		<div class="columns small-12 text-center">
+			<p class="js-play--output faq-caption_sub"><p>
+		</div>
+	</output>
+</div>
+
+<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.3/plugins/foundation.core.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.3/plugins/foundation.reveal.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.3/plugins/foundation.util.keyboard.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.3/plugins/foundation.util.box.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.3/plugins/foundation.util.triggers.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.3/plugins/foundation.util.mediaQuery.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.3/plugins/foundation.util.motion.js"></script>
+
+<!--  <script src="https://cdn.foundation5.zurb.com/foundation.js"></script>  -->
+<!-- <script src="../foundation.js"></script> -->
+
+<script>
+var oP = {nCorrect: 0, nTotal: 0};
+function getRndImgSrc(){
+	var sClass = "js-img-100";
+	var n0to14 = Math.floor(Math.random() * 15);
+	if( (Math.random()+.5|0) === 1 ){
+		sClass = "js-img-60";
+	}
+	return $( "."+sClass+":nth("+ n0to14 +")" ).attr("src");
+}
+$(document).ready(function() {
+	$(document).foundation();
+	$(".js-play").on("click", function( e ){
+		e.preventDefault();
+		$(".js-cmd-60").click();
+		oP.nCorrect = 0;	oP.nTotal = 1;
+		$(".js-play__correct").text( oP.nCorrect );
+		$(".js-play__total").text( oP.nTotal );
+		$(".js-play--img").attr("src", getRndImgSrc() );
+		console.log( $(".js-play--img").attr("src") );
+		$(".js-play--output").html("");
+	});
+	$(".js-play--a__orig").on("click", function( e ){
+		e.preventDefault();
+		if(  $(".js-play--img").attr("src").indexOf("aic_060_") === -1 ){
+			oP.nCorrect++;
+			$(".js-play--output").html( $(".js-play--output").html() + " " + "<i class='fa fa-smile-o play-green'></i>" );
+		} else {
+			$(".js-play--output").html( $(".js-play--output").html() + " " + "<i class='fa fa-frown-o play-red'></i>" );
+		}
+		oP.nTotal++;
+		$(".js-play__correct").text( oP.nCorrect );
+		$(".js-play__total").text( oP.nTotal );
+		$(".js-play--img").attr("src", getRndImgSrc() );
+		console.log( $(".js-play--img").attr("src") );
+	});
+	$(".js-play--a__comp").on("click", function( e ){
+		e.preventDefault();
+		if(  $(".js-play--img").attr("src").indexOf("aic_060_") >= 0 ){
+			oP.nCorrect++;
+			$(".js-play--output").html( $(".js-play--output").html() + " " + "<i class='fa fa-smile-o play-green'></i>" );
+		} else {
+			$(".js-play--output").html( $(".js-play--output").html() + " " + "<i class='fa fa-frown-o play-red'></i>" );
+		}
+		oP.nTotal++;
+		$(".js-play__correct").text( oP.nCorrect );
+		$(".js-play__total").text( oP.nTotal );
+		$(".js-play--img").attr("src", getRndImgSrc() );
+		console.log( $(".js-play--img").attr("src") );
+	});
+ 
+	$(".js-cmd-80").on("click", function(){
+		$("img").each( function(){
+			$( this ).attr("src", $( this ).attr("src").replace("aic_060_", "aic_080_") );
+			$(".js-80--p").removeClass("hide");
+			$(".js-60--p").removeClass("hide").addClass("hide");
+		});
+	});
+	$(".js-cmd-60").on("click", function(){
+		$("img").each( function(){
+			$( this ).attr("src", $( this ).attr("src").replace("aic_080_", "aic_060_") );
+			$(".js-60--p").removeClass("hide");
+			$(".js-80--p").removeClass("hide").addClass("hide");
+		});
+	});
+	// Like Equalizer - but does not make the container taller
+	$(".faq-quest > p").each(function(){
+		if( $( this ).text().length >= 56 ){
+			$( this ).parent().addClass("faq-quest__linebreak");
+		}
+	});
+	// (nnn) nnn-nnnn for auto iOS and Andr
+	$(function(){
+		if( ("ontouchstart" in window) || (navigator.msMaxTouchPoints > 0) ){
+			$.each($(".tel_link"), function () {
+				$(this).wrapInner( $("<a />", {class: "voice_link", href: "tel:"+parseInt( $(this).text().replace(/[^0-9.]/g, "") )}) );
+			});
+		}
+	});
+	$( ".drop_nav" ).click( function( e ){
+		if( $("#FAQ_contents").hasClass("hide") ){
+			 $( "#faq-togl" ).click();
+		}
+	});
+	$(".faq-togl").click(function( e ) {
+		e.preventDefault();
+		var $txt = $( this ).text();
+		$( this ).text( $( this ).attr("data-alt") );
+		$( this ).attr("data-alt", $txt );
+		$(".FAQ_contents").toggleClass("hide");
+	});
+	$(".faq-togl-cntnt").click(function( e ) {
+		$el = $("#"+$( this ).attr("data-tog"));
+		$el_i = $("."+$( this ).attr("data-tog"));
+		$el.toggleClass( "st_hd" );
+		$el_i.toggleClass("fa-angle-up");
+		$el_i.toggleClass("fa-angle-down");
+		if( $el.hasClass( "st_hd" )){
+				$el.fadeOut("400");
+		}else{
+				$el.fadeIn("400");	
+		}
+	});
+	$(".faq-quest").click(function( e ) {
+		$( this ).attr("data-faq-quest-active","true");
+		$(".faq-quest").each(function(){
+			if( $( this ).attr("data-faq-quest-active") !== "true" ){
+				$( this ).removeClass("faq-panel__active");
+				$( this ).next().attr("style","display: none;").removeClass("st_hd").addClass("st_hd");
+			}else{
+				$( this ).attr("data-faq-quest-active","false");
+			}
+		});
+
+		$( this ).toggleClass("faq-panel__active");
+		$ans = $( this ).next();
+
+		if( $ans.hasClass("st_hd") ){
+			$ans.slideDown("400",  function(){ 
+				$ans.removeClass("st_hd");
+			} );
+		}else{
+			$ans.attr("style","display: none;").addClass("st_hd");
+		}
+	});
+});</script>
+	</body>
+</html>

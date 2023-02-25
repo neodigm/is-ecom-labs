@@ -1,0 +1,22 @@
+	/*  CSS category State    */ /*  color display font visibility ...  */
+.l-grid-breadpage .bread span {
+color: #aaa;
+cursor: default;
+}
+.l-grid-breadpage .page__p {
+color: #888;
+}
+.l-grid-breadpage .page__num {
+color: #999;
+}
+.l-grid-breadpage .page__num:not(.page__num--current):hover {
+background-color: #ededed;
+}
+.l-grid-breadpage .page__num--current {
+color: #fff;
+cursor: default;
+}
+body[data-brand="lsc"] .l-grid-breadpage .bread-a { color: #7e2d3e; }
+body[data-brand="ltd"] .l-grid-breadpage .bread-a { color: #2ba6cb; }
+body[data-brand="lsc"] .l-grid-breadpage .page__num--current { background-color: #7e2d3e; }
+body[data-brand="ltd"] .l-grid-breadpage .page__num--current { background-color: #2ba6cb; }

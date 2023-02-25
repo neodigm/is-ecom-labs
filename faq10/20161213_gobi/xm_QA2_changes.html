@@ -1,0 +1,1583 @@
+<style>
+.faq_ansr a {text-decoration: underline !important;}
+.vaf--i {
+    position: absolute;
+    float: right;
+    top: 4px;
+    right: 6px;
+    color: #AFA !important;
+}
+
+.resp_btn_brand__1 {
+	font-size: 1em;
+}
+
+::selection {
+    background: #fff600;
+    color: #7D2A35;
+    text-shadow: none;
+}
+
+ul { margin-left: 14px; }
+
+.faq-cols  {
+	padding-right: 8px !important;
+	padding-left: 8px !important;
+}
+
+.faq-caption     {color: #999; font-size: 48px !important; font-weight: 100; font-family: 'Roboto', sans-serif;letter-spacing: -3px;line-height: 84%;margin-bottom: 24px !important}
+.faq-caption_sub {color: #444; font-size: 32px !important; font-weight: 100; font-family: 'Roboto', sans-serif;letter-spacing: -1px;line-height: 84%;margin-bottom: 24px !important;}
+.faq-caption_h3  {color: #444; font-size: 24px !important; font-weight: 100; font-family: 'Roboto', sans-serif;letter-spacing: -1px;line-height: 84%;margin-bottom: 24px !important;}
+.faq-instr       {color: #000; font-size: 16px !important; font-weight: 400; font-family: 'Roboto', sans-serif;margin-bottom: 12px;}
+.faq-contact     {color: #000; font-size: 14px !important; font-weight: 400; font-family: 'Roboto', sans-serif;}
+
+.faq-togl {width: 100%;padding: 6px;}
+.faq-togl-cntnt {
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.faq-split {padding: 0px !important;}
+
+.faq-table {
+	width: 100%;
+}
+
+.faq-smi__a {
+	margin-right: 8px;
+}
+
+.faq-smi__a > i {
+	color: #888;
+}
+
+.faq-smi__a:hover > i {
+	color: #2aa6ca;
+}
+.brand_lsc .faq-smi__a:hover > i {
+	color: #632434;
+}
+
+.faq-panel {
+	border-style: solid;
+	border-width: 1px;
+	border-color: #BBB;
+	margin-bottom: 16px;
+	padding: 22px 12px 4px 12px;
+	background: #f2faff;
+	color: #333333;
+	border-radius: 3px;
+}
+
+.brand_lsc .faq-panel__contact {
+	background: #FFFBFF;
+}
+
+.brand_lsc .faq-quest {
+	background: #FFFAFF;
+}
+
+.faq-panel--i {
+	position: absolute;
+	float: right;
+	top: 4px;
+	right: 6px;
+	color: #AAA;
+}
+.faq-panel__contact:hover {
+	background: linear-gradient(
+	rgba(255, 255, 255, 0.24),
+	rgba(42, 166, 202, 0.32)
+	);
+}
+.brand_lsc .faq-panel__contact:hover {
+	background: linear-gradient(
+	rgba(255, 255, 255, 0.24),
+	rgba(156, 74, 98, 0.32)
+	);
+}
+
+.faq-quest {
+	position: relative;
+	overflow: hidden;
+	min-height: 56px;
+	height: 72px;
+	cursor: pointer;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	transition: background-color 80ms;
+	-webkit-transition: background-color 80ms;
+}
+
+.faq-quest p {
+	color: #000; font-size: 18px !important; font-weight: 300; font-family: 'Roboto', sans-serif;
+}
+
+.faq-quest:hover {
+	background-color: #2aa6ca;
+	transition: background-color 80ms;
+	-webkit-transition: background-color 80ms;
+	box-shadow: 0 4px 8px rgba(3,3,3,0.22);/*, 0 3px 3px rgba(3,3,3,0.22);*/
+}
+.brand_lsc .faq-quest:hover {
+	background-color: #9c4a62;
+}
+.faq-quest:hover .faq-panel--i {
+	color: #FFF;
+}
+.faq-quest:active {
+	background-color: #297FB8;
+	transition: background-color 80ms;
+	-webkit-transition: background-color 80ms;
+}
+
+.faq-panel__active {
+	background: #297FB8;
+	margin-bottom: -4px;
+	box-shadow: 0 4px 8px rgba(3,3,3,0.16);
+}
+
+.brand_lsc .faq-panel__active {
+	background: #632434;
+	box-shadow: 0 4px 8px rgba(3,3,3,0.16);
+}
+
+.faq-quest__linebreak {
+	padding: 8px 22px 12px 18px;
+}
+
+.faq-quest:hover p, .faq-panel__active p {
+	color: #FFF;
+}
+
+.faq_ansr {
+	padding: 12px;
+	min-height: 56px;
+	background-color: #FFF;
+	box-shadow: 0 4px 8px rgba(3,3,3,0.22);
+}
+.faq_ansr p {
+	color: #111;
+	font-size: 16px !important;
+	font-weight: 400;
+	font-family: 'Roboto', sans-serif;
+	margin-bottom: 4px;
+}
+.faq_ansr li > p {
+	color: #111;
+	font-size: 14px !important;
+	font-weight: 400;
+	font-family: 'Roboto', sans-serif;
+	margin-bottom: 4px;
+}
+.respn_arw {color: #888;}
+.faq-icon {color: #888;}
+.st_hd_ini {display: none;}
+
+.brand_ltd .brand--ltd__show { display:inline; }
+.brand_lsc .brand--lsc__show { display:inline; }
+.brand_ltd .brand--ltd__showb { display:block; }
+.brand_lsc .brand--lsc__showb { display:block; }
+.brand_ltd .brand--lsc__show { display:none; }
+.brand_lsc .brand--ltd__show { display:none; }
+.brand_ltd .brand--lsc__showb { display:none; }
+.brand_lsc .brand--ltd__showb { display:none; }
+
+</style>
+
+<div class="resp_half_height"></div>
+<section class="row">
+	<header class="column small-10">
+		<p class="faq-caption text-left">
+Customer Service
+		</p>
+		<p class="faq-instr text-justify">
+Welcome to <span class="brand--lsc__show">Lakeside</span><span class="brand--ltd__show">LTD Commodities</span>.com. We are committed to providing unique products at tremendous values for our customers. By clicking through the menu you will find detailed information on our policies, guarantee and answers to many of the questions you may have. Our goal is to help make your shopping experience with <span class="brand--lsc__show">Lakeside</span><span class="brand--ltd__show">LTD</span> a pleasant one.
+		</p>
+	</header>
+</section>
+<div class="resp_full_height"></div>
+<nav class="row">
+	<p class="faq-caption_sub text-center"><span data-tog="sub_faq" class="faq-togl-cntnt">Frequently Asked Questions &nbsp; <i class="sub_faq respn_arw fa fa-angle-up fa-lg"></i></span></p>
+</nav>
+<section id="sub_faq">
+	<section class="row">
+		<div class="small-10 large-5 faq-cols columns">
+			<article class="faq-panel radius text-center faq-quest"><p>How do I open an account with <span class="brand--lsc__show">Lakeside</span><span class="brand--ltd__show">LTD</span>?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+				<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr">
+<p>
+You can easily <a href="/my_account/index.jsp">create an account</a> online using your valid email address as your User ID and creating a password.
+</p>
+				</div>
+			<article class="faq-panel radius text-center faq-quest"><p>How do I request a catalog?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+				<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr">
+<p>
+To join our mailing list, simply click <a href="/catalog_request/index.jsp">Request a FREE Catalog</a> and complete the form. In most cases, you will receive our most recent catalog within the next 2 weeks. You can also request a catalog by speaking to one of our agents by calling
+ <span class="brand--lsc__show tel_link">(847) 444-3150</span><span class="brand--ltd__show tel_link">(847) 295-5532</span>. But no need to wait - you can shop online NOW for all of the great deals printed in our <a href="/shopCatalogs">catalogs</a> plus hundreds of online only deals!
+</p>
+				</div>
+			<article class="faq-panel radius text-center faq-quest"><p>What will my shipping costs be?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+				<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>
+
+<p>Shipping charges are based on the dollar amount of your purchase. There's just one shipping cost per order, no matter how many boxes we ship. Items that require an additional delivery charge due to their size and weight are advertised with an AD icon and additional charges are noted. Sales tax and shipping will be calculated during the checkout process. These charges will be billed at the time your item is shipped to you.</p>
+<div class="resp_half_height"></div>
+<style>
+	td:nth-child(2) {
+		text-align: right;
+	}
+</style>
+<table class="faq-table" cellspacing="2" cellpadding="2" border="1">
+	<tr><td style="text-align: center;"><strong>If Your Order Amount Is</strong></td><td style="text-align: center;"><strong>Shipping Charges Are</strong></td></tr><tr><td>up to $14.99</td><td>$5.99</td></tr><tr><td>$15.00 to $24.99</td><td>$7.99</td></tr><tr><td>$25.00 to $49.99</td><td>$9.99</td></tr><tr><td>$50.00 to $59.99</td><td>$11.99</td></tr><tr><td>$60.00 to $74.99</td><td>$13.99</td></tr><tr><td>$75.00 to $99.99</td><td>$16.99</td></tr><tr><td>$100.00 to $149.99</td><td>$19.99</td></tr><tr><td>$150.00 to $199.99</td><td>$23.99</td></tr><tr><td>$200.00 to $249.99</td><td>$27.99</td></tr><tr><td>$250.00 to $299.99</td><td>$30.99</td></tr><tr><td>over $300.00</td><td>11%</td></tr>
+</table>
+<p>* Please check item pages for additional delivery charges</p>
+
+			</p></div>
+			<article class="faq-panel radius text-center faq-quest"><p>Can I send the order as a gift?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+				<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>Yes, an order can be sent to a gift address. During the checkout process, you will have the option to enter a personalized gift message (up to 110 characters). The message will be printed on the packing list included with each shipment of the order, and the product prices will not be shown.</p></div>
+			<article class="faq-panel radius text-center faq-quest"><p>How do I check the status of my order?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+				<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>You may check on the status of your current and previous orders on our <a href="/my_account/index.jsp">Your Account</a> page.
+You may also check on the status of your order by calling <span class="tel_link brand--ltd__show">(847) 295-5532</span><span class="tel_link brand--lsc__show">(847) 444-3150</span>, Monday- Friday 7:00 am until 11:00pm CST as well as Sat and Sun 8:00 am until 5:00 pm.
+</p></div>
+		</div>
+		<div class="small-10 large-5 faq-cols columns">
+			<article class="faq-panel radius text-center faq-quest"><p>What is your return policy?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+				<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr">
+<p>
+In the unlikely event that your order arrives damaged or defective, please call us at <span class="tel_link">(847) 235-8159</span> within 30 days of delivery, and our Customer Service team will work with you to immediately correct this situation!
+</p>
+<br>
+<p>
+If for any other reason, you are not completely satisfied with all or part of your order, simply contact us at <span class="tel_link">(847) 235-8159</span> and we will arrange for a convenient, prepaid UPS return label to be sent to you. Then return the item to us for a replacement, credit or refund on your invoice (shipping charges are not refundable). Monogrammed and personalized items cannot be returned except when due to defect. Remember to keep a copy of your invoice and tracking number for your records, although duplicate documentation can be printed from the <a href="/my_account/index.jsp">Your Account</a> page.
+</p>
+<br>
+<p>
+<strong>Additional Returns Information:</strong>
+</p>
+<p>
+When using our prepaid UPS return label, there is no up-front charge, however your return may be subject to a $7.99 per package fee for the pre-paid return label. This amount will be deducted from your return refund or credit, and will be reflected on your original method of payment. Your satisfaction is our concern and items you are not happy with may be returned at any time.
+</p>
+				</div>
+			<article class="faq-panel radius text-center faq-quest"><p>How do I update My Account information?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+				<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>Once you have logged into <a href="/my_account/index.jsp">Your Account</a>, you have the option to update and change your Sign-in &amp; Subscriptions, Address Book, Stored Payment Methods and Business Account Information. After entering the new information, click the UPDATE button for your changes to be effective.</p></div>
+			<article class="faq-panel radius text-center faq-quest"><p>What do you do with my email address?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+				<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p><span class="brand--lsc__show">The Lakeside Collection</span><span class="brand--ltd__show">LTD Commodities LLC</span> collects your email address as part of your registration with us. We use this address to communicate with you about your account. We do not sell your email address to others.</p></div>
+			<article class="faq-panel radius text-center faq-quest"><p>What kind of information do you collect from me when I visit your web site?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+				<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>We do not collect any personally identifiable information from those merely visiting our site. We do ask for additional information if you would like to place an order, request an order status or a free catalog, or if you need to communicate with us regarding an account issue.</p></div>
+			<article class="faq-panel radius text-center faq-quest"><p>Does <span class="brand--lsc__show">Lakeside</span><span class="brand--ltd__show">LTD</span> offer secure online ordering?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+				<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>Yes, we do. All customer and order information is securely stored behind a firewall and protected from unauthorized access. Your online session is encrypted using SSL with a certificate provided by Verisign. Therefore, none of your personal information, including credit card number, name and address, can be read as the information travels over the internet. Your credit card number is protected by our encryption methods as soon as we capture it and before it is stored in our database to protect it from potential theft. <span class="brand--lsc__show">Lakeside</span><span class="brand--ltd__show">LTD</span> does not store your CVV2 credit card security code anywhere on its system.</p></div>
+		</div>
+	</section>
+	<section class="row">
+		<div class="column hide-for-small hide-for-medium large-5 faq-cols">&nbsp;</div>
+		<div class="column small-10 large-5 faq-cols text-right">
+			<a href="#" class="button radius resp_btn_green expand">
+				<div id="faq-togl-1" class="faq-togl">View All FAQs <i class="vaf--i respn_arw fa fa-angle-down fa-lg"></i></div></a>
+			<a href="#" class="button radius resp_btn_green expand hidden">
+				<div id="faq-togl-2" class="faq-togl">Hide FAQs <i class="vaf--i respn_arw fa fa-angle-up fa-lg"></i></div></a>
+		</div>
+	</section>
+	<section id="FAQ_contents" class="hide FAQ_contents">
+
+		<section class="row">
+			<div class="column small-10 no-padding text-center">
+				<div class="resp_half_height"></div>
+				<h3 id="Address Change" class="faq-caption_h3">Address Change</h3>
+				<div class="small-10 large-5 faq-cols columns">
+					<article class="faq-panel radius text-center faq-quest"><p>How do I change the address listed for the account?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>You can change your address by clicking on the <a href="/my_account/index.jsp">Your Account</a> page and selecting "Update Address Book." You can also update your address on your account when you place your next order. Please note that these changes must be made prior to submitting your order. Unfortunately, we cannot change "ship to" addresses on orders already placed or in process. If you are having difficulty completing your address change online, please call one of our account support specialists at <span class="tel_link brand--ltd__show">(847) 295-5532</span> <span class="tel_link brand--lsc__show">(847) 444-3150</span> from 7:00 am to 11:00 pm CST M-F, or Saturday and Sunday 8:00 am to 5:00 pm CST.
+</p></div>
+					<article class="faq-panel radius text-center faq-quest"><p>How can I change my Address Online?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>You can update your account information at any time by logging into <a href="/my_account/index.jsp">Your Account</a>. In Your Account you can make changes to your address and personal contact information, as well as manage your gift addresses and email preferences. You can also update your address during the checkout process on your next order. Please note that changes to your shipping address must be made prior to submitting your order. <strong>If you need assistance please contact us at <span class="tel_link brand--ltd__show">(847) 295-5532</span> <span class="tel_link brand--lsc__show">(847) 444-3150</span> from 7:00 am to 11:00 pm CST M-F, or Saturday and Sunday 8:00 am to 5:00 pm CST, and one of our friendly customer service associates will assist you</strong><br></p></div>
+				</div>
+				<div class="small-10 large-5 faq-cols columns">
+					<article class="faq-panel radius text-center faq-quest"><p>How do I update My Account information?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>Once you have logged into <a href="/my_account/index.jsp">Your Account</a>, you have the option to update and change your Sign-in &amp; Subscriptions, Address Book, Stored Payment Methods and Business Account Information. After entering the new information, click the UPDATE button for your changes to be effective.</p></div>
+				</div>
+			</div>
+		</section>
+
+		<section class="row">
+			<div class="column small-10 no-padding text-center">
+				<div class="resp_half_height"></div>
+				<h3 id="Payment" class="faq-caption_h3">Payment</h3>
+				<div class="small-10 large-5 faq-cols columns">
+					<article class="faq-panel radius text-center faq-quest"><p>What forms of payment are accepted to place an order?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr">
+<p><strong>Credit Cards</strong></p>
+<br>
+<p>
+<span class="brand--lsc__show">Lakeside Collection</span><span class="brand--ltd__show">LTD Commodities</span> accepts Visa, MasterCard, American Express and Discover credit cards as well as PAYPAL.
+</p>
+<div class="text-center">
+		<img src="/images/credit_cards_paypal.jpg" alt="Credit Cards and PayPal">
+</div>
+<br>
+<p><strong>Check or Money Order</strong></p>
+<br>
+<p>If you prefer to pay by Check or Money Order, please mail your order with payment to the address below.</p>
+<br>
+<p class="brand--ltd__show">
+LTD Commodities</br>
+2800 Lakeside Drive</br>
+P.O. Box 738</br>
+Bannockburn, IL 60015-0738</br>
+</p>
+<p class="brand--lsc__show">
+The Lakeside Collection</br>
+P.O. Box 740</br>
+Deerfield, IL 60015-0740</br>
+</p>
+<div class="brand--ltd__show">
+<br>
+<p><strong>Customers With Open Account Agreements</strong></p>
+<br>
+<p>
+From time to time, <span class="brand--lsc__show">Lakeside Collection</span><span class="brand--ltd__show">LTD Commodities</span> may offer limited promotions with a variety of payment options. For customers with open account agreements with <span class="brand--lsc__show">Lakeside Collection</span><span class="brand--ltd__show">LTD Commodities</span>, you may continue to shop under open account terms as long as you maintain a good financial standing, or use your credit card to pay when you place a new order.
+</p>
+</div>
+						</div>
+					<article class="faq-panel radius text-center faq-quest"><p>Do I owe sales tax on my purchase?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr">
+<p><span class="brand--lsc__show">Lakeside</span><span class="brand--ltd__show">LTD</span> is not required to and does not collect sales or use taxes in all states. We currently collect sales tax only to orders shipped within Illinois. Sales tax for Illinois orders should be calculated at 7.5% of total, including merchandise subtotal and shipping charges.
+</p>
+<br>
+<p>
+For all other states imposing sales or use taxes, your purchase is subject to sales/use tax unless it is specifically exempt from taxation. Your purchase is not exempt merely because it is made over the Internet, by catalog or other remote means. You are still responsible for tax on your purchase. Most states require purchasers to file a use tax return to report any purchase that was not taxed and pay tax on the purchase. Details of how to report and pay tax to your state may be found at your state taxing authority's website. In addition, the states of Colorado, Kentucky, Oklahoma, South Dakota and Vermont require us to provide the following additional information:
+</p>
+<br><br>
+<p>
+<strong>Kentucky</strong> <br>
+For Kentucky purchasers: <span class="brand--lsc__show">Lakeside</span><span class="brand--ltd__show">LTD</span> is not required to and does not collect Kentucky sales or use tax. Your purchase may be subject to Kentucky use tax unless the purchase is exempt from tax in Kentucky. The purchase is not exempt merely because it is made over the Internet, by catalog or by other remote means. The Commonwealth of Kentucky requires Kentucky purchasers to report all purchases of tangible personal property or digital property that are not taxed by the retailer and pay use tax on those purchases unless exempt under Kentucky law. The tax may be reported and paid on the Kentucky individual income tax return or by filing a consumer use tax return with the Kentucky Department of Revenue. These forms and corresponding instructions may be found on the Kentucky Department of Revenue's Internet Web site at www.revenue.ky.gov/individual/usetax.
+<br><br>
+<strong>Oklahoma</strong> <br>
+For Oklahoma purchasers, the tax may be reported and paid on the Oklahoma individual income tax return or by filing a consumer use tax return. The referenced forms and corresponding instructions are available on the Oklahoma Tax Commissioner website at www.tax.ok.gov.
+<br><br>
+<strong>South Dakota</strong> <br>
+For South Dakota purchasers, the tax may be reported and paid on the South Dakota use tax form. The use tax form and corresponding instructions are available from the South Dakota Department of Revenue website at www.state.sd.us/drr/.
+<br><br>
+<strong>Vermont</strong> <br>
+For Vermont purchasers, the tax may be reported and paid on the Vermont use tax form. The use tax form and corresponding instructions are available from the Vermont Department of Revenue website at www.state.vt.us/tax/usetax.
+<br><br>
+<strong>Colorado</strong> <br>
+For Colorado purchasers, the tax may be reported and paid on the Colorado use tax form. Details of how to file this return may be found at the Colorado Department of Revenue's website at www.taxcolorado.com.
+</p>						
+						</div>
+					<article class="faq-panel radius text-center faq-quest"><p>How do I pay a statement received in the mail?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr">
+<output class="brand--ltd__show">
+<p>
+You can pay for your shipped orders online with an electronic check quickly and easily using our Pay Online feature. Log in to <a href="/my_account/index.jsp">Your Account</a> to make a payment.
+</p>
+<br>
+<p>
+In addition to online payments, we accept mailed payments in the form of check or money order. Be sure to include the payment copy of your invoice or statement with your payment, indicating the amount paid per invoice, and write your account number on your check or money order and mail to:
+</p>
+<br>
+<p>
+LTD Commodities</br>
+2800 Lakeside Drive</br>
+P.O. Box 738</br>
+Bannockburn, IL 60015-0738</br>
+</p>
+<br>
+<p>
+Please note that payment is typically due within 10 days of receipt of merchandise. However, from time to time we do run special programs that offer extended terms; details of these promotional programs are provided at time of purchase. Please be advised that returned payments are subject to a $30 fee that will be billed to your <span class="brand--lsc__show">Lakeside</span><span class="brand--ltd__show">LTD</span> account.
+</p>
+</output>
+<output class="brand--lsc__show">
+<p>
+We accept mailed payments in the form of check or money order. Be sure to include the payment copy of your invoice or statement with your payment, indicating the amount paid per invoice, and write your account number on your check or money order and mail to: The Lakeside Collection, P.O. Box 740, Deerfield, IL 60015-0740
+</p>
+<br>
+<p>
+Please be advised that returned payments may be recovered electronically along with a $30 fee.
+</p>
+</output>
+						</div>
+					<article class="faq-panel radius text-center faq-quest"><p>When do you charge my credit card?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr">
+<p>
+Your credit card will not be charged until your merchandise has been shipped. However, at the time you place and pay for your order, we pre-authorize for the amount of all in-stock merchandise, plus applicable shipping fees, with your credit or debit card issuer. This may have an effect on your account balance. For more information about credit card authorizations and charges, please contact your credit card issuer at the customer service phone number on the back of your card.
+</p>
+						</div>
+<output class="brand--ltd__show">
+						<article class="faq-panel radius text-center faq-quest"><p>Does <span class="brand--lsc__show">Lakeside</span><span class="brand--ltd__show">LTD</span> Commodities guarantee its prices?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr">
+<p>
+Yes - If within two weeks of your order/purchase from <span class="brand--lsc__show">Lakeside</span><span class="brand--ltd__show">LTD</span> Commodities you find the identical item advertised elsewhere for less, we will refund 115% of the difference between our price and our competitor's price. For additional details, please refer to our <a class="js-click-href" href="#">115% Lowest Price Guarantee</a>.
+</p>
+						</div>
+</output>
+<output class="brand--ltd__show">
+						<article class="faq-panel radius text-center faq-quest"><p>What competitor ads qualify for the 115% Lowest Price Guarantee?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr">
+<p>
+Yes - If within two weeks of your order/purchase from <span class="brand--lsc__show">Lakeside</span><span class="brand--ltd__show">LTD</span> Commodities you find the identical item advertised elsewhere for less, we will refund 115% of the difference between our price and our competitor's price. For additional details, please refer to our <a class="js-click-href" href="#">115% Lowest Price Guarantee</a>.
+</p>
+</div>
+					<article class="faq-panel radius text-center faq-quest"><p>What competitor ads qualify for the 115% Lowest Price Guarantee?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr">
+<p>
+To qualify for the 115% Lowest Price Guarantee, you must submit a current competitor ad offering the identical product at a lower price. An item is considered identical when it has the same model number, features, and piece count. The item must be in stock and available to purchase. No additional offers in the form of coupons, rebates, promotional offers, free shipping, product bundle pricing or other promotions can be considered in the Price Guarantee. "Price" includes product price only; shipping charges are not applicable.
+
+To qualify for this exclusive offer:
+<ol>
+	<li>The competitor must have the item in stock and available for purchase with immediate shipping</li>
+	<li>The items must be new and identical (manufacturer, model number, features, size/piece count)</li>
+	<li>Items may not be found or purchased from an on-line auction site, a private individual, overstock liquidation dealer, or from outside the U.S., nor in used condition. The advertised price must be provided for verification via untouched print media or reprinted on-line advertisement, and must include the date to ensure pricing is current.</li>
+</ol>
+
+For additional details, please refer to our <a class="js-click-href" href="#">115% Lowest Price Guarantee</a>.
+</p>
+						</div>
+</output>
+				</div>
+				<div class="small-10 large-5 faq-cols columns">
+					<article class="faq-panel radius text-center faq-quest"><p>What is my Credit Card Security Code?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr">
+<p>
+The Credit Card Security Code is:
+</p>
+<br>
+<p>
+A three-digit security code that is printed on the back of VISA, MasterCard or Discover credit cards in reverse italics in the card's signature panel.
+</p>
+<br>
+<p>
+A four-digit security code that is printed on the front of American Express cards above the credit card number.
+</p>
+<br>
+<p>
+The code is used to verify that the card is in the user's possession.
+</p>
+						</div>
+					<article class="faq-panel radius text-center faq-quest"><p>Why was my credit card declined?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr">
+<p>
+The bank that issued your credit card was unable to authorize the charge. Please contact your bank directly for specific information.
+</p>
+						</div>
+					<article class="faq-panel radius text-center faq-quest"><p>If you refund my credit card, how long does it take for the credit to appear on my account?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr">
+<p>
+Please allow one billing cycle for the credit to appear on your account.
+</p>
+						</div>
+<output class="brand--ltd__show">
+						<article class="faq-panel radius text-center faq-quest"><p>How do I take advantage of the 115% Lowest Price Guarantee?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr">
+<p>
+If you find a competitor advertising a qualified purchase for less, simply call se for less, simply call 847-295-6058 either
+<span class="tel_link">(847) 295-6058</span> either before or within two weeks of placing your order, and one of our associates will assist you in taking advantage of our 115% Lowest Price Guarantee. Once we receive the competitor ad or validate a web link you submit for verification, we will refund your original method of payment, or credit a new order for the difference in price PLUS an additional 15% of the difference in our price and the competitor's (not including shipping).
+<ul>
+	<li>Our Price Guarantee is subject to change at any time.</li>
+	<li>We reserve the right not to sell products below our cost.</li>
+	<li>Credit card and account refunds may take up to 72 hours to be applied; refunds issued by check may take up to 10 days.</li>
+	<li>This offer is valid on phone, mail, fax and web orders that have been placed.</li>
+</ul>
+For additional details, please refer to our <a class="js-click-href" href="#">115% Lowest Price Guarantee</a>.
+</p>
+						</div>
+</output>
+<output class="brand--ltd__show">
+						<article class="faq-panel radius text-center faq-quest"><p>Do I have to submit a claim for a lower price before I place my order?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr">
+<p>
+No - while you may certainly submit your claim prior to placing your order, if you find a competitor advertising a qualified purchase for less within 2 weeks of placing your order, simply call 847-295-6058 and one of our associates will assist you in taking advantage of our 115% Lowest Price Guarantee.
+For additional details, please refer to our <a class="js-click-href" href="#">115% Lowest Price Guarantee</a>.
+</p>
+						</div>
+</output>
+<output class="brand--ltd__show">
+						<article class="faq-panel radius text-center faq-quest"><p>If I find a qualified competitor ad at a lower price, how and when will I receive my refund?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr">
+<p>
+Once we receive the competitor ad or validate a web link you submit for verification, we will refund your original method of payment, or credit a new order for the difference in price PLUS an additional 15% of the difference in our price and the competitor's (not including shipping)!
+</p>
+<br>
+</p>
+<p>
+If you submit the claim prior to placing your order, one of our associates will adjust the price for you at the time of ordering. For previously placed orders paid by credit card, the refund will be issued to your credit card within 72 hours of receiving the competitor ad for verification. If you paid by check and your refund amount is over $2, a refund check will be issued and mailed to you within 10 days of receiving the competitor ad for verification. For orders billed to your account or check orders in which the refund is less than $2, the credit will be applied to your account and may be used to pay open balances or applied to a future order.
+</p>
+						</div>
+</output>
+				</div>
+			</div>
+		</section>
+		<section class="row">
+			<div class="column small-10 no-padding text-center">
+				<div class="resp_half_height"></div>
+				<h3 id="catalogs" class="faq-caption_h3">Catalogs</h3>
+				<div class="small-10 large-5 faq-cols columns">
+					<article class="faq-panel radius text-center faq-quest"><p>How do I request a catalog?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr">
+<p>
+To join our mailing list, simply click <a href="/catalog_request/index.jsp">Request a FREE Catalog</a> and complete the form. In most cases, you will receive our most recent catalog within the next 2 weeks. You can also request a catalog by speaking to one of our agents by calling
+ <span class="brand--lsc__show tel_link">(847) 444-3150</span><span class="brand--ltd__show tel_link">(847) 295-5532</span>. But no need to wait - you can shop online NOW for all of the great deals printed in our <a href="/shopCatalogs">catalogs</a> plus hundreds of online only deals!
+</p>
+						</div>
+					<article class="faq-panel radius text-center faq-quest"><p>Why don't I receive your catalog anymore?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>We are trying to be a bit greener - if we notice you haven't ordered in a while, we may stop sending you a printed catalog. If you think this was our oversight, we apologize, just order a new book by <a href="/catalog_request/index.jsp">Request a FREE Catalog</a></p></div>
+				</div>
+				<div class="small-10 large-5 faq-cols columns">
+					<article class="faq-panel radius text-center faq-quest"><p>It's past two weeks I still don't have a new catalog, what do I do?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>No worries, you can shop all the great values in any of our catalogs <a href="/shopCatalogs">online</a> - plus hundreds of other values not found in our printed catalogs. However, if you still want to make sure your book is on its way, please call us at <span class="tel_link brand--lsc__show">(847) 444-3150</span><span class="tel_link brand--ltd__show">(847) 295-5532</span> and our friendly customer care agents will be happy to help you.</p></div>
+					<article class="faq-panel radius text-center faq-quest"><p>When does a catalog expire?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>Our catalogs do not expire until the products offered sell out. All of our available products are on our website today, and if an item you wish to order is not currently online, we have thousands of different items that may interest you.  From time to time, popular items that have sold out may be offered again in the future.</p></div>
+				</div>
+			</div>
+		</section>
+		<section class="row">
+			<div class="column small-10 no-padding text-center">
+				<div class="resp_half_height"></div>
+				<h3 id="ordering" class="faq-caption_h3">Ordering</h3>
+				<div class="small-10 large-5 faq-cols columns">
+					<article class="faq-panel radius text-center faq-quest"><p>How do I open an account with <span class="brand--lsc__show">Lakeside</span><span class="brand--ltd__show">LTD</span>?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr">
+<p>
+You can easily <a href="/my_account/index.jsp">create an account</a> online using your valid email address as your User ID and creating a password.
+</p>
+						</div>
+					<article class="faq-panel radius text-center faq-quest"><p>Can I order items not pictured on the web site?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>While all of our current products are available on our website, you may use the <a href="/catalog/catalog_quick_order.jsp">Quick Order Form</a> form to order items you're not able to find on the web. If they are still in stock they will be shipped to you. If they are no longer available, our messaging will tell you the item is "no longer available" or "out of stock".</p></div>
+				</div>
+				<div class="small-10 large-5 faq-cols columns">
+					<article class="faq-panel radius text-center faq-quest"><p>Can I send an order as a gift?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>Yes, an order can be sent to a gift address. During the checkout process, you have the option to enter a personalized gift message (up to 110 characters). The message will be printed on the packing list included with each shipment of the order, and the product prices will not be shown.</p></div>
+				</div>
+			</div>
+		</section>
+		
+<output class="brand--ltd__show">
+		<section class="row">
+			<div class="column small-10 no-padding text-center">
+				<div class="resp_half_height"></div>
+				<h3 id="Pay Online Help" class="faq-caption_h3">Pay Online Help</h3>
+				<div class="small-10 large-5 faq-cols columns">
+					<article class="faq-panel radius text-center faq-quest"><p>How do I make an online payment?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>You can pay for your shipped orders online with an electronic check quickly, easily <strong> and with no service fees </strong> using our Pay Online feature. Log in to <a href="/my_account/index.jsp">Your Account</a> now to make a payment.<br>
+
+<br> In addition to online payments, we accept mailed payments in the form of check or money order. Be sure to include the payment copy of your invoice or statement with your payment, indicating the amount paid per invoice, and write your account number on your check or money order and mail to: 
+<strong>LTD Commodities LLC, PO Box 738, Bannockburn, IL 60015-0738.</strong>
+<br>
+
+<br> Please note that payment is typically due within 10 days of receipt of merchandise. However, from time to time we do run special programs that offer extended terms; details of these promotional programs are provided at time of purchase. Please be advised that returned payments may be subject to a $30 fee, that will be billed to your <span class="brand--lsc__show">Lakeside</span><span class="brand--ltd__show">LTD</span> account.
+</p></div>
+					<article class="faq-panel radius text-center faq-quest"><p>What is an electronic check payment?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>An electronic check payment is a paperless check. Over 1 billion electronic payments take place in the U.S. each year - it's that reliable! You simply enter your checking account information in our secure form and we send it through the banking system as an ACH (Automated Clearing house) payment. We then post the payment to your <span class="brand--lsc__show">Lakeside Collection</span><span class="brand--ltd__show">LTD Commodities</span> account within 2 business days. </p></div>
+					<article class="faq-panel radius text-center faq-quest"><p>What is the timing of the payment against my checking account?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>We process electronic payments nightly. Therefore, your electronic payment can post against your checking account as early as the next morning.</p></div>
+					<article class="faq-panel radius text-center faq-quest"><p>When will the payment show on my <span class="brand--lsc__show">Lakeside Collection</span><span class="brand--ltd__show">LTD Commodities</span> account?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>We process payments transacted against our accounts nightly. Your account will reflect the payment after the overnight processing. You may see your payment on your <span class="brand--lsc__show">Lakeside Collection</span><span class="brand--ltd__show">LTD Commodities</span> account as early as the next day. Payments will not be posted on weekends and holidays. These transactions will post on the next business day.
+
+</p></div>
+					<article class="faq-panel radius text-center faq-quest"><p>What if I receive validation errors?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>If you receive error messages regarding the data you entered, please verify the information and correct your entries.</p></div>
+					<article class="faq-panel radius text-center faq-quest"><p>What if my account information is incorrect?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>If your account information is incorrect, contact an <span class="brand--lsc__show">Lakeside</span><span class="brand--ltd__show">LTD</span> Customer Service Representative using our <a class="js-contact-us" href="#">Contact Us</a> form or by phone at <strong><span class="brand--lsc__show tel_link">(847) 444-3150</span><span class="brand--ltd__show tel_link">(847) 295-5532</span> from 7:00 am to 11:00 pm CST M-F, or Saturday and Sunday 8:00am to 5:00 pm CST, and one of our friendly customer service associates will assist you.</strong></p></div>
+	<article class="faq-panel radius text-center faq-quest"><p>What steps can I take to ensure the security of my account information?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr">
+<p><strong>To protect the security of your account information:</strong>
+<br>
+	<ol>
+		<li>Don't share your User ID or Password</li>
+		<li>Change your password periodically</li>
+		<li>Log out of your account before visiting another site</li>
+		<li>Close your web browser after each internet session</li>
+	</ol>
+</p>
+						</div>
+				</div>
+				<div class="small-10 large-5 faq-cols columns">
+					<article class="faq-panel radius text-center faq-quest"><p>Can I make a Lump Sum Payment?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>Yes - you can authorize one payment which will cover multiple open invoices. Simply select each of the invoices you would like to pay, and we will add them together into a single, lump sum amount for you.</p></div>
+					<article class="faq-panel radius text-center faq-quest"><p>How do I get confirmation of my payment?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>We encourage you to print your confirmation page at the end of the payment transaction. We will also email your confirmation using the email address on your account. Please save this email for your records.</p></div>
+					<article class="faq-panel radius text-center faq-quest"><p>What do I do if I encountered communication errors during the Pay Online process?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>If you lost Internet service or had other communication problems after initiating the payment and did not receive the confirmation, please contact an <span class="brand--lsc__show">Lakeside</span><span class="brand--ltd__show">LTD</span> Customer Service Representative using our  <a class="js-contact-us" href="#">Contact Us</a> form or by phone at <strong> <span class="brand--lsc__show tel_link">(847) 444-3150</span><span class="brand--ltd__show tel_link">(847) 295-5532</span> from 7:00 am to 11:00 pm CST M-F, or Saturday and Sunday 8:00 am to 5:00 pm CST, and one of our friendly customer service associates will assist you.</strong></p></div>
+					<article class="faq-panel radius text-center faq-quest"><p>Does <span class="brand--lsc__show">Lakeside</span><span class="brand--ltd__show">LTD</span> offer secure online ordering?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr">
+<p>Yes, we do. All customer and order information is securely stored behind a firewall and protected from unauthorized access. Your online session is encrypted using SSL with a certificate provided by Verisign. Therefore, none of your personal information, including credit card number, name and address, can be read as the information travels over the internet. Your credit card number is protected by our encryption methods as soon as we capture it and before it is stored in our database to protect it from potential theft. <span class="brand--lsc__show">Lakeside</span><span class="brand--ltd__show">LTD</span> does not store your CVV2 credit card security code anywhere on its system.</p>
+						</div>
+					<article class="faq-panel radius text-center faq-quest"><p>What are cookies and how do you use them?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>Our web server sends cookies, small bits of information, to your browser to remember who you are as you browse from page to page on our site. The cookie is simply a number that identifies you and your order/shopping bag information. Your computer doesn't store the cookie; it's only kept in memory until you exit the browser. You need to have cookies enabled on your browser to use our online ordering system.</p></div>
+					<article class="faq-panel radius text-center faq-quest"><p>How can I change my Password or Username?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr">
+<p>
+If you know your existing password, you may reset it by logging in to <a href="/my_account/index.jsp">Your Account</a> and going to the sign-in and subscriptions section. If you don't remember your existing password, use the Forgot Password form found on the sign-in page.
+</p>
+
+<p class="brand--ltd__show">
+	<br>
+	<strong>abc distributing customers:</strong> Your abc distributing account number, username and password are also valid on our LTD Commodities website.
+</p>
+						</div>
+	</div>
+			</div>
+		</section>
+</output>
+
+		<section class="row">
+			<div class="column small-10 no-padding text-center">
+				<div class="resp_half_height"></div>
+				<h3 id="privacy_policy" class="faq-caption_h3">Privacy Policy</h3>
+				<div class="small-10 large-5 faq-cols columns">
+					<article class="faq-panel radius text-center faq-quest"><p>What kind of information do you collect from me when I visit your web site?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr">
+<p>
+We do not collect any personally identifiable information from those merely visiting our site. We do ask for additional information if you would like to place an order, request an order status or a free catalog, or if you need to communicate with us regarding an account issue.
+</p>
+						</div>
+					<article class="faq-panel radius text-center faq-quest"><p>Does <span class="brand--lsc__show">Lakeside</span><span class="brand--ltd__show">LTD</span> share information it collects from me with outside parties?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr">
+<p>
+The information you provided on the website is used to fulfill a product order, a catalog request or research a customer inquiry. The information that you provide is stored in-house separate from the Internet.
+</P>
+<br>
+<p>
+We do occasionally share name and address information with other catalog companies that offer similar products. We will not share any personal financial information. If you are on our catalog mailing list, or order from one of our catalogs, and would prefer not to have your name shared with other catalog companies, please email at <strong>MarketingDepartment@<span class="brand--lsc__show">lakeside</span><span class="brand--ltd__show">ltdcommodities</span>.com</strong> and ask that your name not be shared.
+</P>
+<br>
+<p>
+From time to time, we may modify or amend this privacy and security policy in order to comply with new laws or regulations or to reflect future changes in our business practices. All such modifications and amendments to the privacy and security policy shall be posted here in the Customer Service section of www.<span class="brand--lsc__show">lakeside</span><span class="brand--ltd__show">ltdcommodities</span>.com. The current policy has been in effect since April 2015.
+</p>
+						</div>
+					<article class="faq-panel radius text-center faq-quest"><p>What do you do with my email address?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr">
+<p>
+<span class="brand--lsc__show">The Lakeside Collection</span><span class="brand--ltd__show">LTD Commodities LLC</span> collects your email address as part of your registration with us. We use this address to communicate with you about your account. We do not sell your email address to others.
+</p>
+						</div>
+				</div>
+				<div class="small-10 large-5 faq-cols columns">
+					<article class="faq-panel radius text-center faq-quest"><p>How do you use information about my company?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr">
+<p>
+Once you provide your company information and make a purchase from us, your company becomes a part of our customer file. As a valued <span class="brand--lsc__show">Lakeside Collection</span><span class="brand--ltd__show">LTD Commodities</span> customer, we will add you to our mailing list to receive future catalogs and offers.
+</p>
+						</div>
+					<article class="faq-panel radius text-center faq-quest"><p>How do I remove my company name from the <span class="brand--lsc__show">Lakeside</span><span class="brand--ltd__show">LTD</span> mailing lists?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr">
+<p>
+If, at any time, you wish to be removed from our mailing list, you can reach us by calling <strong>us at <span class="brand--lsc__show tel_link">(847) 444-3150</span><span class="brand--ltd__show tel_link">(847) 295-5532</span> from 7:00 am to 11:00 pm CST M-F, or Saturday and Sunday 8:00am to 5:00 pm CST, and one of our friendly customer service associates will assist you.</strong>
+</p>
+						</div>
+				</div>
+			</div>
+		</section>
+		<section class="row">
+			<div class="column small-10 no-padding text-center">
+				<div class="resp_half_height"></div>
+				<h3 id="product" class="faq-caption_h3">Product</h3>
+				<div class="small-10 large-5 faq-cols columns">
+					<article class="faq-panel radius text-center faq-quest"><p>Can you tell me whether or not an item is in stock?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr">
+<p>
+The status of all of our items are available when you order through our website and on our Quick Order Form. The stock status will be shown next to the item number of each product. And while most of our items are in stock, in cases where products have extremely high demand, we may be awaiting additional stock to fulfill customer orders. In these cases, we strive to provide an accurate date range within which we expect to receive our stock from our manufacturer.
+</p>
+<br>
+<p>
+By placing your order now, we'll put you on our priority list to receive your selection shortly after stock arrives to our warehouse. Be assured that your credit card will not be charged until we ship your item.
+</p>
+<br>
+<p>
+<strong>
+If you are unable to find a specific item you are looking for, and also don't find a suitable replacement, please call our contact center at:
+</strong>
+</p>
+<br>
+<p>
+<strong>
+<span class="brand--lsc__show tel_link">(847) 444-3150</span><span class="brand--ltd__show tel_link">(847) 295-5532</span> from 7:00 am to 11:00 pm CST M-F, or Saturday and Sunday 8:00 am to 5:00 pm CST, and one of our friendly customer service associates will assist you.
+</strong>
+</p>
+
+						</div>
+					<article class="faq-panel radius text-center faq-quest"><p>The product I'd like to purchase says you have Limited Quantities Available. What does this mean?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr">
+<p>
+While items with the "Limited Quantities" message are likely in stock, some items are in such high demand that our inventory may be exhausted faster than our product availability information can be updated. Therefore, it's recommended you place your order quickly while our supplies last to ensure receipt of your selection.
+</p>
+						</div>
+					<article class="faq-panel radius text-center faq-quest"><p>Are your products tested for safety?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr">
+<p>
+We strive to thoroughly test our products, both imported and domestic, for both safety and quality. It is our goal to exceed industry standards.
+</p>
+						</div>
+					<article class="faq-panel radius text-center faq-quest"><p>How can I tell if a product is age appropriate for my child?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr">
+<p>
+We typically advertise the recommended age range for our toys on our print and online product ads, and <span class="brand--lsc__show">The Lakeside Collection</span><span class="brand--ltd__show">LTD Commodities</span> complies with all state and federal regulations for safety standards. Many of our product pages contain safety warnings for young children. Please refer to these warnings when purchasing a toy or product for your child.
+</p>
+						</div>
+				</div>
+				<div class="small-10 large-5 faq-cols columns">
+					<article class="faq-panel radius text-center faq-quest"><p>How do I submit a Product Review?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr">
+<p>
+To write and submit a product review on products you have already received, follow these simple steps:
+</p>
+<br>
+<p>
+		<ol>
+			<li>
+Find the product you want to review on <span class="brand--lsc__show">Lakeside</span><span class="brand--ltd__show">LTDCommodities</span>.com.
+			</li>
+			<li>
+From the product page, click "write a review".
+			</li>
+			<li>
+Complete the required fields, making sure that your responses are specific to the product itself, and free of profanity or offensive language, personally identifiable information (such as full names or phone numbers), references to competitors, or comments about service.
+			</li>
+			<li>
+When finished, click "post review."
+			</li>
+		</ol>
+</p>
+<br>
+<p>
+You will receive an email within 2 business days indicating when your review will be posted to our site, or if additional information or modifications might be needed.
+</p>
+						</div>
+					<article class="faq-panel radius text-center faq-quest"><p>What are the guidelines for writing a Product Review?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr">
+<p>
+When writing a review, other customers will find it most helpful if you stay focused on the specific reasons you like or dislike the product you've purchased. Make sure you keep it easy-to-read and concise, preferably 75-300 words (there is a 50 character minimum).
+</p>
+<br>
+<p>
+In addition, your review will not be published if it contains profanity or other offensive language, mentions competitors or the specific price you paid for the product, or personally identifiable information (such as your full name, phone number, etc.)
+</p>
+<br>
+<p>
+Your feedback is important to us, and writing a product review is a great way to let us know what products you like or dislike, and why. However, to provide feedback regarding service, shipping, or other non-product information, please <a class="js-contact-us" href="#">Contact Us</a> rather than submitting them through product ratings and reviews.
+</p>
+						</div>
+					<article class="faq-panel radius text-center faq-quest"><p>Can my review be blocked or removed?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr">
+<p>
+Yes, while <span class="brand--lsc__show">The Lakeside Collection</span><span class="brand--ltd__show">LTD Commodities</span> does value both positive and negative customer feedback regarding our products and services, and is committed to posting product reviews in order to help our customers make educated buying decisions, we do reserve the right block or remove a product review for any reason. To help ensure we are able to post your review, please make your review <strong>does not include</strong> any of the following:
+</p>
+<br>
+<p>
+	<ul>
+		<li>
+Profanity, obscenities, inappropriate comments or other language that might be deemed offensive.
+		</li>
+		<li>
+Comments regarding our competitors or competitive products, offers, or websites.
+		</li>
+		<li>
+Any form of "spam", including political campaigning, commercial solicitation, chain letters, mass mailings, etc.
+		</li>
+		<li>
+Time-sensitive material, such as current product price, sales or promotional offers, product availability, etc.
+		</li>
+		<li>
+Full names, phone numbers, email addresses, physical addresses, URLs or other forms of personally identifiable information.
+		</li>
+		<li>
+Solicitations for additional reviews.
+		</li>
+		<li>
+More than 1 review per item.
+		</li>
+	</ul>
+</p>
+						</div>
+				</div>
+			</div>
+		</section>
+		<section class="row">
+			<div class="column small-10 no-padding text-center">
+				<div class="resp_half_height"></div>
+				<h3 id="returns" class="faq-caption_h3">Returns</h3>
+				<div class="small-10 large-5 faq-cols columns">
+					<article class="faq-panel radius text-center faq-quest"><p>What is your return policy?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr">
+<p>
+In the unlikely event that your order arrives damaged or defective, please call us at <span class="tel_link">(847) 235-8159</span> within 30 days of delivery, and our Customer Service team will work with you to immediately correct this situation!
+</p>
+<br>
+<p>
+If for any other reason, you are not completely satisfied with all or part of your order, simply contact us at <span class="tel_link">(847) 235-8159</span> and we will arrange for a convenient, prepaid UPS return label to be sent to you. Then return the item to us for a replacement, credit or refund on your invoice (shipping charges are not refundable). Monogrammed and personalized items cannot be returned except when due to defect. Remember to keep a copy of your invoice and tracking number for your records, although duplicate documentation can be printed from the <a href="/my_account/index.jsp">Your Account</a> page.
+</p>
+<br>
+<p>
+<strong>Additional Returns Information:</strong>
+</p>
+<p>
+When using our prepaid UPS return label, there is no up-front charge, however your return may be subject to a $7.99 per package fee for the pre-paid return label. This amount will be deducted from your return refund or credit, and will be reflected on your original method of payment. Your satisfaction is our concern and items you are not happy with may be returned at any time.
+</p>
+
+						</div>
+					<article class="faq-panel radius text-center faq-quest"><p>How do I return an item?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr">
+<div class="text-center">
+<strong>
+Return Policy
+</strong>
+</div>
+<hr>
+
+<p>
+	<strong>
+No-hassle Returns &amp; Exchanges:
+	</strong>
+</p>
+<p>
+We hope you are pleased with the item(s) you have selected! But if you need to make a Return or Exchange, we're here to serve you&hellip; It's as easy as 1-2-3:
+</p>
+<br>
+
+<p>
+	<strong>
+Call Us!
+	</strong>
+</p>
+<p>
+If for any reason you are not satisfied with your purchase, please contact us at <span class="tel_link">(847) 235-8159</span> and we will arrange for a convenient, prepaid UPS return label to be sent to you.
+</p>
+<br>
+
+<p>
+	<strong>
+Pack It!
+	</strong>
+</p>
+Fill out the Returns and Replacement form, and pack it with the items you'd like to return or exchange in a shipping box.
+<p>
+</p>
+<br>
+
+<p>
+	<strong>
+Print and Ship!
+	</strong>
+</p>
+<p>
+Simply print your pre-paid label, attach it to your shipping box, and drop it at the nearest UPS facility! To ensure delivery, please don't forget to remove any old shipping labels or barcodes from your box before sending.
+</p>
+<br>
+
+<p>
+	<strong>
+Additional Returns Information:
+	</strong>
+</p>
+<p>
+When using our prepaid UPS return label, your return may be subject to a $7.99 per package fee for the pre-paid return label. This amount will be deducted from your return refund or credit, and will be reflected on your original method of payment. Your satisfaction is our concern and items you are not happy with may be returned at any time. In the unlikely event that your order arrives damaged or defective, please call us at <span class="tel_link">(847) 235-8159</span> within 30 days of delivery, and our Customer Service team will work with you to immediately correct this situation!
+</p>
+<br>
+<p>
+Should you choose to make arrangements with your own shipping carrier, the return shipping addresses are below. Please note return shipping expenses are not refundable. Personalized items may not be returned unless delivered damaged or defective.
+</p>
+<br>
+<p>
+	<strong>
+To return using UPS
+	</strong>
+</p>
+<br>
+<table width="100%">
+	<tr>
+		<td width="112">
+			<img src="/images/upslogo.jpg" alt="UPS">
+		</td>
+		<td class="text-left">
+<p class="brand--ltd__show">
+Returns Department</br>
+LTD Commodities</br>
+2800 Lakeside Drive</br>
+Bannockburn, IL 60015-1246</br>
+</p>
+<p class="brand--lsc__show">
+Returns Department</br>
+Lakeside Collections</br>
+2800 Lakeside Dr</br>
+Bannockburn, IL 60015-1246</br>
+</p>
+		</td>
+	</tr>
+</table>
+
+<br>
+<p>
+	<strong>
+To return using US Post Office
+	</strong>
+</p>
+<br>
+<table width="100%">
+	<tr>
+		<td width="112">
+			<img src="/images/uspslogo.jpg" alt="US Post Office">
+		</td>
+		<td class="text-left">
+<p class="brand--ltd__show">
+Returns Department</br>
+LTD Commodities</br>
+PO Box 94333</br>
+Palatine, IL 60094-4333</br>
+</p>
+<p class="brand--lsc__show">
+Returns Department</br>
+Lakeside Collections</br>
+PO Box 94835</br>
+Palatine, IL 60094-4835</br>
+</p>
+		</td>
+	</tr>
+</table>
+<br>
+<p>
+If you like your product but would care to do an even exchange for a different size, color or style we currently have in stock, your replacement order will not be charged a new outbound shipping fee.
+</p>
+
+						</div>
+				</div>
+				<div class="small-10 large-5 faq-cols columns">
+					<article class="faq-panel radius text-center faq-quest"><p>For gift orders, can the person to whom I am shipping return an item?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr">
+<p>
+Yes, a copy of the packing list will need to be included with the items being returned. A credit to your original form of payment will be made after we receive the return. If the gift recipient elects to receive an exchange or replacement, you will not see a financial adjustment to your method of payment.
+</p>
+						</div>
+				</div>
+			</div>
+		</section>
+		<section class="row">
+			<div class="column small-10 no-padding text-center">
+				<div class="resp_half_height"></div>
+				<h3 id="security" class="faq-caption_h3">Security</h3>
+				<div class="small-10 large-5 faq-cols columns">
+					<article class="faq-panel radius text-center faq-quest"><p>Does <span class="brand--lsc__show">Lakeside</span><span class="brand--ltd__show">LTD</span> offer secure online ordering?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr">
+<p>
+Yes, we do. All customer and order information is securely stored behind a firewall and protected from unauthorized access. Your online session is encrypted using SSL with a certificate provided by Verisign. Therefore, none of your personal information, including credit card number, name and address, can be read as the information travels over the internet. Your credit card number is protected by our encryption methods as soon as we capture it and before it is stored in our database to protect it from potential theft. <span class="brand--lsc__show">The Lakeside Collection</span><span class="brand--ltd__show">LTD Commodities</span> does not store your CVV2 credit card security code anywhere on its system.
+</p>
+						</div>
+					<article class="faq-panel radius text-center faq-quest"><p>What are cookies and how do you use them?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr">
+<p>
+"Cookies" are files that are stored on your device's hard drive by your web browser and are used to improve your online experience. Cookies help us identify account holders and optimize their shopping experience by allowing functions such as online shopping carts. Accepting cookies through your web browser is your personal choice. You can set your browser to disable cookies.
+</p>
+<br>
+<p>
+However, if you choose not to accept cookies, we may not be able to provide you with as good of an experience as one that is specifically tailored to your needs by utilizing the cookie.
+</p>
+<br>
+<p>
+We may also use technologies, such as our own cookies, to provide you with personalized online display advertising tailored to your interests. To opt out of our cookies used for this online advertising, click here. We may use the services of third parties to collect and use anonymous information about your visits to and interactions with our website through the use of technologies such as cookies to personalize advertisements for goods and services. To learn more, or to opt-out of receiving advertisements tailored to your interests by our third party partners, visit the Network Advertising Initiative at www.networkadvertising.org/choices.
+</p>
+						</div>
+					<article class="faq-panel radius text-center faq-quest"><p>How can I change my Password or Username?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr">
+<p>
+If you know your existing password, you may reset it by logging in to <a href="/my_account/index.jsp">Your Account</a> and going to the sign-in and subscriptions section. If you don't remember your existing password, use the <a href="/my_account/index.jsp">Forgot Password</a> form found on the sign-in page.
+</p>
+						</div>
+				</div>
+				<div class="small-10 large-5 faq-cols columns">
+					<article class="faq-panel radius text-center faq-quest"><p>What happens if I don't log out of <span class="brand--lsc__show">Lakeside</span><span class="brand--ltd__show">LTDCommodities</span>.com?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr">
+<p>
+A customer has the option to enable "remember me" when signing in. If this is enabled the customer will be logged in next time they return to the site. If not enabled, the customer will be logged out when they close the browser (however the cart will remain intact). The customer can log out at any time by clicking logout on the <a href="/my_account/index.jsp">Your Account</a> page.
+</p>
+						</div>
+					<article class="faq-panel radius text-center faq-quest"><p>What steps can I take to ensure the security of my account information?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr">
+<p>
+	<ul>
+		<li><p>
+Don't share your User ID or Password. We will never request your user ID or password via email or phone.
+		</p></li>
+		<li><p>
+Change your password periodically
+		</p></li>
+		<li><p>
+Log out of Lakeside.com before visiting another site
+		</p></li>
+		<li><p>
+Close your web browser after each Internet session
+		</p></li>
+		<li><p>
+Be informed about fraudulent internet and phone practices:
+		</p></li>
+		<li><p>
+<strong>Phishing</strong> is a technique of fraudulently obtaining private information. Typically, the phisher sends an e-mail that appears to come from a legitimate business requesting verification of information and warning of some consequence if it is not provided. The email usually contains a link to a fraudulent web page that seems legitimate or has a form requesting everything from a home address to an ATM card's PIN.
+		</p></li>
+		<li><p>
+<strong>Pretexting</strong> is a practice in which someone assumes the guise of another person in order to establish trust and extract private information, typically over the phone or through online communication. The scammer not only pretends to be someone they're not, but also creates a credible "pretext" for why such information is needed.
+		</p></li>
+		<li><p>
+Forward suspicious emails to <strong>security@<span class="brand--lsc__show">lakeside</span><span class="brand--ltd__show">ltdcommodities</span>.com</strong>. Contact our Customer Service Department to report suspicious phone inquiries.
+		</p></li>
+	</ul>
+</p>
+						</div>
+				</div>
+			</div>
+		</section>
+
+
+<section class="row">
+			<div class="column small-10 no-padding text-center">
+				<div class="resp_half_height"></div>
+				<h3 id="Shipping" class="faq-caption_h3">Shipping</h3>
+				<div class="small-10 large-5 faq-cols columns">
+					<article class="faq-panel radius text-center faq-quest"><p>When will my order ship?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>In-stock merchandise typically leaves our warehouse within 3 to 5 business days from the time we process your completed order.</p></div>
+					<article class="faq-panel radius text-center faq-quest"><p>How will the merchandise be shipped to me?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>Our distribution center determines the best parcel carrier for your package's delivery. The parcel carrier is based on the location, size and number of packages going to a specific area and could be delivered by UPS, U.S. Postal Service, etc. Customer requests for express shipping cannot be met by our company at this time.</p></div>
+					<article class="faq-panel radius text-center faq-quest"><p>What will my shipping costs be?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>Shipping charges are based on the dollar amount of your purchase. There's just one shipping cost per order, no matter how many boxes we ship. Items that require an additional delivery charge due to their size and weight are advertised with an AD icon and additional charges are noted. Sales tax and shipping will be calculated during the checkout process. These charges will be billed at the time your item is shipped to you.</p>
+<br>
+						<table class="faq-table" cellspacing="2" cellpadding="2" border="1">
+						<tr><th style="text-align: center;" >If Your Order Amount Is</th><th style="text-align: center;" >Shipping Charges Are</th></tr>
+						<tr><td>up to $14.99</td><td>$5.99</td></tr>
+						<tr><td>$15.00 to $24.99</td><td>$7.99</td></tr>
+						<tr><td>$25.00 to $49.99</td><td>$9.99</td></tr>
+						<tr><td>$50.00 to $59.99</td><td>$11.99</td></tr>
+						<tr><td>$60.00 to $74.99</td><td>$13.99</td></tr>
+						<tr><td>$75.00 to $99.99</td><td>$16.99</td></tr>
+						<tr><td>$100.00 to $149.99</td><td>$19.99</td></tr>
+						<tr><td>$150.00 to $199.99</td><td>$23.99</td></tr>
+						<tr><td>$200.00 to $249.99</td><td>$27.99</td></tr>
+						<tr><td>$250.00 to $299.99</td><td>$30.99</td></tr>
+						<tr><td>over $300.00</td><td>11%</td></tr>
+						</table>
+						* Please check item pages for additional delivery charges
+						</div>
+					<article class="faq-panel radius text-center faq-quest"><p>Will shipping charges be applied to the total order or to each carton?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>There's just one shipping cost per order, no matter how many boxes we ship. To ensure total shipping charges are billed exactly as quoted on our shipping chart, each item in your order is assigned a prorated portion of the order's total shipping charge, which is billed at the time that item is shipped. Additional delivery charges for oversized items, as indicated on product ads, will also be billed at the time of shipment.</p></div>
+					<article class="faq-panel radius text-center faq-quest"><p>How are shipping charges calculated?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>Shipping charges are based on the dollar amount of your purchase. Each item in your order is assigned a prorated portion of the order's total shipping charge to ensure total charges do not exceed what was quoted. Items that require an additional delivery charge, due to their size and weight, are advertised with an icon and additional charges are noted. These charges will be billed at the time your item is shipped to you.</p>
+<br>
+						<table class="faq-table" cellspacing="2" cellpadding="2" border="1">
+						<tr><th style="text-align: center;" >If Your Order Amount Is</th><th style="text-align: center;" >Shipping Charges Are</th></tr>
+						<tr><td>up to $14.99</td><td>$5.99</td></tr>
+						<tr><td>$15.00 to $24.99</td><td>$7.99</td></tr>
+						<tr><td>$25.00 to $49.99</td><td>$9.99</td></tr>
+						<tr><td>$50.00 to $59.99</td><td>$11.99</td></tr>
+						<tr><td>$60.00 to $74.99</td><td>$13.99</td></tr>
+						<tr><td>$75.00 to $99.99</td><td>$16.99</td></tr>
+						<tr><td>$100.00 to $149.99</td><td>$19.99</td></tr>
+						<tr><td>$150.00 to $199.99</td><td>$23.99</td></tr>
+						<tr><td>$200.00 to $249.99</td><td>$27.99</td></tr>
+						<tr><td>$250.00 to $299.99</td><td>$30.99</td></tr>
+						<tr><td>over $300.00</td><td>11%</td></tr>
+						</table>
+						* Please check item pages for additional delivery charges						
+						</div>
+					<article class="faq-panel radius text-center faq-quest"><p>Can I request a specific shipper?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>Our parcel distribution center determines the best parcel carrier for your package's delivery and cannot accommodate special requests. The parcel carrier is based on the location, size and number of packages going to a specific area and can be delivered by the U.S. Postal Service, FedEx, UPS, etc.</p></div>
+				</div>
+				<div class="small-10 large-5 faq-cols columns">
+					<article class="faq-panel radius text-center faq-quest"><p>Can you ship my package(s) on the dates I request?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>No, that option is not available at this time.</p></div>
+					<article class="faq-panel radius text-center faq-quest"><p>Where can orders be shipped?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>Orders can only be shipped to the contiguous 48 states and APO/FPO destinations. If you live in Alaska, Hawaii, Puerto Rico or another part of the world, we are unable to ship to you at this time.</p>
+<br>
+						<p>*APO/FPO restrictions apply on a few pieces of merchandise.<span class="brand--ltd__show">LTD Commodities</span><span class="brand--lsc__show">Lakeside Collections<SUP>&reg;</SUP></span> will contact you if we are unable to deliver a portion of your order to the APO/FPO address you supply.
+						</p></div>
+					<article class="faq-panel radius text-center faq-quest"><p>Sometimes I receive my order in multiple shipments. Why is this?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>It is our policy to do all we can to pack your order in a single shipment. Our ability to ship an order all together depends upon the availability, size, weight, and compatibility of the items ordered. If an item is out-of-stock, it will be sent when it becomes available. You will not incur any additional charges if your items ship in separate boxes.</p></div>
+					<article class="faq-panel radius text-center faq-quest"><p>Can I send the order as a gift?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>Yes, an order can be sent to a gift address. During the checkout process, you will have the option to enter a personalized gift message (up to 110 characters). The message will be printed on the packing list included with each shipment of the order, and the product prices will not be shown.</p></div>
+					<article class="faq-panel radius text-center faq-quest"><p>Why is this item not permitted to ship to a particular state?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>Orders can only be shipped to the contiguous 48 states and APO/FPO destinations. If you live in Alaska, Hawaii, Puerto Rico or another part of the world, we are unable to ship to you at this time.</p></div>
+					<article class="faq-panel radius text-center faq-quest"><p>How do I check the status of my order?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>You may check on the status of your current and previous orders on our <a href="/my_account/index.jsp">Your Account</a> page.
+						You may also check on the status of your order by calling <span class="tel_link brand--ltd__show">(847) 295-5532</span><span class="tel_link brand--lsc__show">(847) 444-3150</span>, Monday- Friday 7:00 am until 11:00pm CST as well as Sat and Sun 8:00 am until 5:00 pm.
+						</p></div>
+				</div>
+			</div>
+		</section>
+
+
+		<section class="row">
+			<div class="column small-10 no-padding text-center">
+				<div class="resp_half_height"></div>
+				<h3 id="web_site_features" class="faq-caption_h3">Website Features &amp; Functionality</h3>
+				<div class="small-10 large-5 faq-cols columns">
+					<article class="faq-panel radius text-center faq-quest"><p>What happened to "My Favorites"?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr">					
+						<p>With our most recent site upgrade, we focused our energy and resources on improving the mobile experience for the things that are most critical to our customers: order status, "your account", shopping cart, and checkout. However, because our product line is constantly changing, with our hottest items selling fast and new merchandise being added every week, we found that the majority of our customers were not using or benefiting from "My Favorites," and therefore did not include it in our upgrade.</p>						
+						<p>While we encourage our customers to order our exciting values while supplies last, we do realize there may be items you'd like to save for later consideration. There are many great ways you can do this:</p>						
+						<ul>
+							<li>Add the items to your shopping cart to make buying later easy! For your convenience, items that remain in stock will be saved in your shopping cart for 30 days.</li>
+							<li>Post your favorite items to your Facebook page for easy reference, as well as to get feedback from your friends to help guide your purchase decision.</li>
+							<li>Create a Pinterest board where you can collect and review all of the items you're considering.</li>
+							<li>Use the "bookmarks" or "favorites" menu within your browser to save the web address/link for that product (For suggestions on how to do this on your specific browser or device, <a href="https://www.wikihow.com/Bookmark-a-Website" target="_blank">click here</a>.)</li>
+						</ul>						
+						</div>
+					<article class="faq-panel radius text-center faq-quest"><p>What is a Product Note?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>This is a great way to keep track of what you ordered and why. Use this handy feature to notate your gift list, or when placing a large group order, note who ordered what, who has paid, and more. Whether shopping our website or using <a href="/catalog/catalog_quick_order.jsp">Quick Order Form</a>, you may enter notes that will stay with your items in the shopping cart, order status and order confirmation.</p></div>					
+					<article class="faq-panel radius text-center faq-quest"><p>How do I use my Address Book?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>The Address Book is a great way to store your most frequently used addresses. It stores up to 10 shipping/gift addresses and up to 10 billing addresses. To locate your Address Book to add or change addresses, Log in to <a href="/my_account/index.jsp">Your Account</a> and click on the Address Book link. You may also edit or add addresses to your address book during checkout.</p></div>
+					<article class="faq-panel radius text-center faq-quest"><p>How can I change my Address Online?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>You can update your account information at any time by logging into <a href="/my_account/index.jsp">Your Account</a>. In Your Account you can make changes to your address and personal contact information, as well as manage your gift addresses and email preferences. You can also update your address during the checkout process on your next order. Please note that changes to your shipping address must be made prior to submitting your order. <strong>If you need assistance please contact us at <span class="brand--lsc__show tel_link">(847) 444-3150</span><span class="brand--ltd__show tel_link">(847) 295-5532</span> from 7:00 am to 11:00 pm CST M-F, or Saturday and Sunday 8:00 am to 5:00 pm CST, and one of our friendly customer service associates will assist you.</strong></p></div>
+<output class="brand--ltd__show">
+					<article class="faq-panel radius text-center faq-quest"><p>Why can I no longer log in using my Account Number?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>Our new and improved website offers enhanced customer account features, including the ability to store multiple addresses and credit cards to your account. In order to provide the highest level of security for our customers, <span class="brand--lsc__show">The Lakeside Collection</span><span class="brand--ltd__show">LTD Commodities</span> now requires every online account to be secured with a unique Username and password to be entered prior to gaining access to private account information. If you choose not to create a web account with <span class="brand--lsc__show">The Lakeside Collection</span><span class="brand--ltd__show">LTD Commodities</span>, you may still place orders using our Guest Checkout.</p></div>
+</output>						
+					<article class="faq-panel radius text-center faq-quest"><p>Why is my shopping cart empty? Why can't I add items to my Shopping Cart?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>Our web site uses cookies to keep track of which items you have placed in your shopping cart. It is possible that you have your browser set to refuse cookies. If this is the case, the shopping cart feature will not function correctly. Please be sure your browser has been set to accept cookies.</p></div>						
+					<article class="faq-panel radius text-center faq-quest"><p>What are cookies?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>Cookies are small bits of information that are sent from the Web server and kept on your browser. They are used by the Web server so it can remember who you are as you browse from page to page of our web site. The content of the cookie we send to your PC is simply a single number that helps us remember your order information and the contents of your shopping bag.</p></div>
+				</div>
+				<div class="small-10 large-5 faq-cols columns">
+					<article class="faq-panel radius text-center faq-quest"><p>How do I set my browser to accept cookies?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>Each web browser may provide different methods for their cookie settings. Below is an example of how Internet Explorer 9.0 can be configured, but if this does not work for you, please seek help from your browser assistance tool.</p>
+						<p><strong>To configure your browser:</strong></p>
+						<ol>
+						 <li>Open Internet Explorer</li>
+						 <li>Go to Tools (menu) > Internet Options</li> 
+						 <li>On the Internet Options window, in the Privacy section, restore the default settings by selecting the Default button and click OK to apply and close the window. If the Default button is disabled, then the default settings are already in use.</li>
+						 </ol>
+						<img src="/images/ie10_internet_options.jpg">
+						</div>	
+					<article class="faq-panel radius text-center faq-quest"><p>What is Javascript?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>JavaScript is a language that adds interactivity to web sites. It has the ability to work with the HTML code to enhance interactive navigation and user validation. It will also improve the dynamic content. With Microsoft Internet Explorer 6 and above and Mozilla Firefox 2.0 and above, JavaScript is enabled by default. Some functions on our site will not be available if you do not have JavaScript enabled.</p></div>	
+					<article class="faq-panel radius text-center faq-quest"><p>How do I enable Javascript?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>Most browsers have JavaScript already turned ON by default, unless you or someone else has turned it off. To enable JavaScript, follow the instructions below for your browser- </p>
+						<div class="resp_half_height"></div>
+						<p><strong>For Microsoft Internet Explorer browser (version 6 and above)</strong></p>
+						<div class="resp_half_height"></div>
+						<ul>
+						<li>Click Tools, then click Internet Options</li>
+						<li>Click on the 'Security' tab at the top</li>
+						<li>Click the Custom Level buttonScroll to the Scripting section Check Enable under Active scripting, Allow paste operations via script, and Scripting of Java applets</li>
+						<li>Click the OK button.</li>
+						<li>Click the 'Back' button on your browser to return to the previous page Note: If this does not work for your version of Explorer, simply changing your security settings to 'Medium' will usually work.</li>
+						</ul>						
+						<p><strong>Mozilla Firefox 2.0 and above</strong></p>
+						<div class="resp_half_height"></div>
+						<ul>
+						<li>Select "Options" from the Tools menu.</li>
+						<li>Click on the "Content" icon.</li>
+						<li>Check the box corresponding to "Enable JavaScript".</li>
+						<li>Click "OK" to save changes. Apple Safari 3.0 and above</li>
+						<li>Select "Options" from the Tools menu.</li>
+						<li>Click on the "Security" icon.</li>
+						<li>Check "Enable JavaScript" under "Web content".</li>
+						<li>Close window to save changes. Opera 9.0 and above</li>
+						<li>Select "Preferences" from the Edit menu.</li>
+						<li>Click on the "Advanced" tab.</li>
+						<li>Select "Content" from left bar.</li>
+						<li>Check "Enable JavaScript".</li>
+						<li>Click "OK" to save changes. Please consult your browser's help section for further information concerning these settings.</li>	
+						</ul>						
+						</div>
+<output class="brand--ltd__show">
+					<article class="faq-panel radius text-center faq-quest"><p>I am an abc distributing customer - how do I shop with LTD Commodities?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>It's simple! Your abc distributing account number, username and password are also valid on our LTD Commodities website, so you can already access your abc account, view past orders, make payments, and place new orders on <a href="https://ltdcommodities.com">www.ltdcommodities.com</a> with your abc distributing sign in information.</p>
+						<div class="resp_half_height"></div>
+						<p>Welcome to LTD Commodities! </p>
+						</div>	
+</output>
+					<article class="faq-panel radius text-center faq-quest"><p>How do I submit a Product Review?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>To write and submit a product review on products you have already received, follow these simple steps:</p>
+						<div class="resp_half_height"></div>
+						<ol>
+							<li>Find the product you want to review on <span class="brand--lsc__show">Lakeside</span><span class="brand--ltd__show">LTD Commodities</span>.</li>
+							<li>From the product page, click "write a review".</li>
+							<li>Complete the required fields, making sure that your responses are specific to the product itself, and free of profanity or offensive language, personally identifiable information (such as full names or phone numbers), references to competitors, or comments about service.</li>
+							<li>When finished, click "post review."</li>
+						</ol>												
+						<p>You will receive an email within 2 business days indicating when your review will be posted to our site, or if additional information or modifications might be needed.</p>
+						</div>
+					<article class="faq-panel radius text-center faq-quest"><p>What are the guidelines for writing a Product Review?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>When writing a review, other customers will find it most helpful if you stay focused on the specific reasons you like or dislike the product you've purchased. Make sure you keep it easy-to-read and concise, preferably 75-300 words (there is a 50 character minimum).</p>
+						<p>In addition, your review will not be published if it contains profanity or other offensive language, mentions competitors or the specific price you paid for the product, or personally identifiable information (such as your full name, phone number, etc.)</p>
+						<p>Your feedback is important to us, and writing a product review is a great way to let us know what products you like or dislike, and why. However, to provide feedback regarding service, shipping, or other non-product information, please <a class="js-contact-us" href="#">Contact Us</a> rather than submitting them through product ratings and reviews. </p>
+						</div>	
+					<article class="faq-panel radius text-center faq-quest"><p>Can my review be blocked or removed?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>Yes, while <span class="brand--lsc__show">Lakeside</span><span class="brand--ltd__show">LTD Commodities</span> does value both positive and negative customer feedback regarding our products and services, and is committed to posting product reviews in order to help our customers make educated buying decisions, we do reserve the right block or remove a product review for any reason. To help ensure we are able to post your review, please make your review <strong>does not include</strong> any of the following:</p>
+						<div class="resp_half_height"></div>
+						<ul>
+						<li>Profanity, obscenities, inappropriate comments or other language that might be deemed offensive.</li>
+						<li>Comments regarding our competitors or competitive products, offers, or websites.</li>
+						<li>Any form of "spam", including political campaigning, commercial solicitation, chain letters, mass mailings, etc.</li>
+						<li>Time-sensitive material, such as current product price, sales or promotional offers, product availability, etc.</li>
+						<li>Full names, phone numbers, email addresses, physical addresses, URLs or other forms of personally identifiable information.</li>
+						<li>Solicitations for additional reviews.</li>
+						<li>More than 1 review per item.</li>
+						<ul>						
+						</div>						
+				</div>										
+			</div>
+		</section>
+
+	</section>
+</section>
+<br>
+<nav class="row">
+	<p class="faq-caption_sub text-center"><span data-tog="sub_contact" class="faq-togl-cntnt">Our Contact Information &nbsp; <i class="sub_contact respn_arw fa fa-angle-up fa-lg"></i></span></p>
+</nav>
+<section id="sub_contact">
+	<section class="row">
+		<div class="column small-10 medium-5 large-4">
+			<div class="faq-panel faq-panel__contact radius">
+				<p class="faq-icon">
+					<i class="faq-icon fa fa-envelope fa-lg"></i> &nbsp; Email
+				</p>
+				<p class="faq-contact text-left">
+Can't find the information you're looking for? Contact us via e-mail to receive quick and accurate responses to your questions.
+				</p>
+				<a class="button resp_btn_teal expand radius js-contact-us">Ask a Question</a>
+				<div class="resp_half_height"></div>
+			</div>
+			<div class="resp_half_height"></div>
+			<nav class="faq-contact text-center brand--ltd__showb">
+				<a class="faq-smi__a" href="https://twitter.com/ltdcommodities" target="_blank"><i class="faq-icon fa fa-twitter fa-2x"
+				title="" aria-x=""></i></a>
+				<a class="faq-smi__a" href="https://www.pinterest.com/ltdcommodities/" target="_blank"><i class="faq-icon fa fa-pinterest fa-2x"
+				title="" aria-x=""></i></a>
+				<a class="faq-smi__a" href="https://plus.google.com/+LtdcommoditiesLLC/about" target="_blank"><i class="faq-icon fa fa-google-plus-square fa-2x"
+				title="" aria-x=""></i></a>
+				<a class="faq-smi__a" href="https://www.facebook.com/LTDCommodities" target="_blank"><i class="faq-icon fa fa-facebook-square fa-2x"
+				title="" aria-x=""></i></a>
+				<a class="faq-smi__a" href="https://www.instagram.com/ltdcommodities/" target="_blank"><i class="faq-icon fa fa-instagram fa-2x"
+				title="" aria-x=""></i></a>
+				<a class="faq-smi__a" href="https://www.youtube.com/channel/UCWbBd7OKnN2yJ1K0GV5GHGQ" target="_blank"><i class="faq-icon fa fa-youtube fa-2x"
+				title="" aria-x=""></i></a>
+				<a class="faq-smi__a" href="https://www.ltdcommodities.com/common/rss.jsp" target="_blank"><i class="faq-icon fa fa-rss-square fa-2x"
+				title="" aria-x=""></i></a>
+				<a class="faq-smi__a" href="http://blog.ltdcommodities.com/" target="_blank"><i class="faq-icon fa fa-bullhorn fa-2x"
+				title="" aria-x=""></i></a>
+			</nav>
+			<nav class="faq-contact text-center brand--lsc__showb">
+				<a class="faq-smi__a" href="https://twitter.com/lscollection" target="_blank"><i class="faq-icon fa fa-twitter fa-2x"
+				title="" aria-x=""></i></a>
+				<a class="faq-smi__a" href="https://www.pinterest.com/lakesidecollect/" target="_blank"><i class="faq-icon fa fa-pinterest fa-2x"
+				title="" aria-x=""></i></a>
+				<a class="faq-smi__a" href="https://plus.google.com/109570882605330140042" target="_blank"><i class="faq-icon fa fa-google-plus-square fa-2x"
+				title="" aria-x=""></i></a>
+				<a class="faq-smi__a" href="https://www.facebook.com/thelakesidecollection" target="_blank"><i class="faq-icon fa fa-facebook-square fa-2x"
+				title="" aria-x=""></i></a>
+				<a class="faq-smi__a" href="https://www.instagram.com/thelscollection/" target="_blank"><i class="faq-icon fa fa-instagram fa-2x"
+				title="" aria-x=""></i></a>
+				<a class="faq-smi__a" href="https://www.youtube.com/channel/UCneqo5LldqG5OIpGoAsBz9A" target="_blank"><i class="faq-icon fa fa-youtube fa-2x"
+				title="" aria-x=""></i></a>
+				<a class="faq-smi__a" href="https://www.lakeside.com/common/rss.jsp" target="_blank"><i class="faq-icon fa fa-rss-square fa-2x"
+				title="" aria-x=""></i></a>
+				<a class="faq-smi__a" href="http://blog.lakeside.com/" target="_blank"><i class="faq-icon fa fa-bullhorn fa-2x"
+				title="" aria-x=""></i></a>
+			</nav>
+			<div class="resp_full_height"></div>
+		</div>
+		<div class="column small-10 medium-5 large-3">
+			<div class="faq-panel faq-panel__contact radius">
+				<p class="faq-icon">
+					<i class="faq-icon fa fa-phone-square fa-lg"></i> &nbsp; Telephone
+				</p>
+				<div class="brand--ltd__show">
+					<p class="faq-contact text-left">
+Phone Orders &nbsp;<span class="tel_link">(847) 295-5532</span><br>
+Customer Service &nbsp;<span class="tel_link">(847) 295-6058</span><br>
+<br>
+Our customer service representatives are ready to assist you Mon.-Fri., 7:00 a.m. - 11:00 p.m. and Sat.-Sun., 8:00 a.m. - 5:00 p.m. Central Time to place your order or handle any customer care issue you have.
+					</p>
+				</div>
+				<div class="brand--lsc__show">
+					<p class="faq-contact text-left">
+Customer Service and Phone Orders &nbsp;<br>
+<span class="tel_link">(847) 444-3150</span><br>
+<br>
+Our customer service representatives are ready to assist you Mon.-Fri., 7:00 a.m. - 11:00 p.m. and Sat.-Sun., 8:00 a.m. - 5:00 p.m. Central Time to place your order or handle any customer care issue you have.<br>
+					</p>
+				</div>
+				<p class="hide-for-small-only faq-icon">
+					<i class="faq-icon fa fa-comments-o fa-lg"></i> &nbsp; Live Chat
+				</p>
+				<!--<p class="show-for-small-only faq-icon">
+					<i class="faq-icon fa fa-mobile fa-lg"></i> &nbsp; Tap to Call
+				</p>-->
+				<aside class="hide-for-small-only text-center" style="background-color: #FFF; padding: 10px; border-radius: 8px;">
+					<a href="#" id="chat-available">
+						<img src="/media/ltd/images/popups/chat1_ava_ltd.png" alt="chat1_ava_ltd">
+					</a>
+				</aside>
+				<aside class="show-for-small-only text-center">
+					<a class="button resp_btn_teal expand radius brand--lsc__showb" href="tel:18474443104">
+Tap to Call
+					</a>
+					<a class="button resp_btn_teal expand radius brand--ltd__showb" href="tel:18474443118">
+Tap to Call
+					</a>
+				</aside>
+				<div class="resp_half_height"></div>
+			</div>
+		</div>
+		<div class="column small-10 medium-5 large-3">
+			<div class="faq-panel faq-panel__contact radius">
+				<p class="faq-icon">
+					<i class="faq-icon fa fa-map-marker fa-lg"></i> &nbsp; Address
+				</p>
+				<div class="brand--ltd__show">
+					<p class="faq-contact text-left">
+LTD Commodities LLC<br>
+2800 Lakeside Dr.<br>
+Bannockburn, IL 60015
+					</p>
+				</div>
+				<div class="brand--lsc__show">
+					<p class="faq-contact text-left">
+The Lakeside Collection<SUP>&reg;</SUP><br>
+P.O. Box 3088<br>
+Northbrook, IL 60065-3088
+					</p>
+				</div>
+				<p class="faq-icon">
+					<i class="faq-icon fa fa-user fa-lg"></i> &nbsp; Add to Contacts
+				</p>
+				<aside class="text-center" style="background-color: #FFF; padding: 1px; border-radius: 8px;">
+					<a class="brand--ltd__show" href="/images/ltd_contact.vcf" target="_blank">
+						<img src="/images/qr_vcf_ltd.png" alt="qr">
+					</a>
+					<a class="brand--lsc__show" href="/images/lsc_contact.vcf" target="_blank">
+						<img src="/images/qr_vcf_lsc.png" alt="qr">
+					</a>
+				</aside>
+				<div class="resp_half_height"></div>
+			</div>
+		</div>
+	</section>
+</section>
+<br>
+<section id="modalRSSConfirm" class="reveal-modal small" data-reveal>
+	<a class="close-reveal-modal resp_x">&#215;</a>
+	<br>
+	<output class="hide-for-medium-down show-for-large-up">
+		<!-- rss_ext_instructions begin --> 
+		<style>
+		.rss-pop a {text-decoration: underline;}
+		.rss-pop a:hover {text-decoration: none;}
+		</style>
+		<div class="rss-pop">
+		<h1 style="font-size:1em; line-height:1.2em;">How To Subscribe to the LTD RSS Feed in Chrome</h1>
+		<p>Your Chrome browser requires you to install an RSS Reader first. If you have a reader installed already and wish to subscribe, please click the <strong>Continue</strong> button below.</p>
+		<p>If you do not already have a reader installed, please click the <strong>Cancel</strong> button to close this dialog. Then, you will need to find and install an RSS Reader for your Chrome browser before you can subscribe.  You can find an RSS reader for the Chrome browser by searching the <a target="_blank" href="https://chrome.google.com/webstore/search/rss%20reader?_category=extensions">Chrome Web Store</a>.</p>
+		<h1 style="font-size:1em; line-height:1.2em;">What is RSS?</h1>
+		<p>Rich Site Summary (RSS) is a web standard that allows users to subscribe to a feed of content from a web site. By subscribing to the LTD article feed, you will always have access to the most recent articles through the feed reader in your browser.</p>
+		</div>
+		<!-- rss_ext_instructions end --> 
+	</output>
+	<output class="show-for-medium-down hide-for-large-up">
+		<!-- rss_mob_instructions begin --> 
+		<h1 style="font-size:1em; line-height:1.2em;">How to Subscribe to the RSS feed on a mobile device or tablet</h1>
+		<p>Most mobile browsers do not support RSS. However, if your browser does support RSS and you wish to subscribe, please click the <strong>Continue</strong> button.</p>
+
+		<p>Otherwise, click the <strong>Cancel</strong> button and choose one of these options:</p>
+		<p>
+		</p>
+		<ul style="margin-left:1em;">
+			<li>You may subscribe by using an RSS Reader app. Please install an app and follow the directions to subscribe to this page.</li>
+			<li>iOS devices may also subscribe through Bookmarks in your Safari browser</li>
+			<ul style="margin-left:1em;">
+				<li>Tap on the Bookmarks icon in your Safari browser</li>
+				<li>Tap on @ at the Shared Links tab</li>
+				<li>Tap on Subscriptions</li>
+				<li>Tap on Add Current Site</li>
+				<li>Tap on done</li>
+			</ul>
+		</ul>
+		<h1 style="font-size:1em; line-height:1.2em;">What is RSS?</h1>
+		<p>Rich Site Summary (RSS) is a web standard that allows users to subscribe to a feed of content from a web site. By subscribing to the LTD article feed, you will always have access to the most recent articles through the feed reader in your browser.</p>
+		<!-- rss_mob_instructions end --> 
+	</output>
+	<hr>
+	<nav class="row">
+		<div class="columns small-10 medium-5 large-5 push-5 small-padding-top">
+			<a id="cmdRSSContinue" class="closeMod button radius expand resp_btn_green"
+			target="_blank">Continue</a>				
+		</div>
+		<div class="columns small-10 medium-5 large-5 pull-5 small-padding-top">
+			<a id="cancelRSS" class="closeMod button radius expand resp_btn_brand">Cancel</a>
+		</div>
+	</nav>
+</section>
+
+<script>
+function setBrand( sSelect ){
+	if( getBrand() === "LTD" ) {
+		$( sSelect ).removeClass("brand_lsc").addClass("brand_ltd");
+	} else {
+		$( sSelect ).removeClass("brand_ltd").addClass("brand_lsc");
+	}
+}
+function setLineBreak( sSelect ){  //  
+	$( sSelect ).each(function(){
+		var p_height = $( this ).css("height").replace("px", "");
+		if( p_height >= 29 ){
+			$( this ).parent().addClass("faq-quest__linebreak");
+		}
+	});
+}
+
+$(document).ready(function() {
+	faq_logic_ready();
+});
+$(window).load(function() {
+	faq_logic_load();
+});
+function faq_logic_load(){
+	deepLinkContactUs( "contactus", ".js-contact-us" );  //  Click Contact Us if in query string
+	deepLinkThanYou( "thankyou", "#rev-thank-you" );     //  Open Reveal if in query string
+	if( ("ontouchstart" in window) || (navigator.msMaxTouchPoints > 0) ){
+		wrapPhoneNumbers( "tel_link" );
+	}
+}
+function wrapPhoneNumbers( span_class ){
+	$.each($("."+span_class), function () {
+		// (nnn) nnn-nnnn for auto iOS and Andr
+		$(this).wrapInner( $("<a />", {class: "voice_link", href: "tel:"+parseInt( $(this).text().replace(/[^0-9.]/g, "") )}) );
+	});
+}
+function faq_logic_ready(){
+
+	setBrand( "body" );
+	var CnfState = {"hist": true};
+	$(document).foundation();
+
+	$(".js-click-href").on("click", function( e ){
+		$('a[href="#modalLowPriceGuarantee"]')[0].click();
+		e.preventDefault();
+	});
+
+	$(".js-contact-us").on("click", function( e ){
+		$.get("/cartridges/ContactusModal/ContactusModal.jsp", function( data ) {
+			$('#contact-us-container').empty().append( data );
+			$("#rev-contact-us").foundation("reveal", "open");
+		});
+		e.preventDefault();
+	});
+
+	$(".fa-rss-square").on("click", function(e){
+		if( !jsMQ.isLarge() || isBrowser("chrome") ){
+			$("#modalRSSConfirm").foundation('reveal', 'open');
+			$("#cmdRSSContinue").attr("href", $( this ).parent().attr("href"));
+			e.preventDefault();
+		}
+	});
+	$(".closeMod").on("click", function(e){
+		$('#modalRSSConfirm').foundation('reveal', 'close');
+	});
+
+	$(".js-continue-shopping").on("click", function( e ){
+		window.location = "/";
+	});
+	$(".js-contact-us-cancel").on("click", function( e ){
+		$(".reveal-modal").foundation("reveal", "close");
+		e.preventDefault();
+	});
+
+	history.replaceState({"uid_hash":"faq"}, document.location, "#faq");
+	$( ".faq-quest" ).each( function(){//  Establish unique ids, assuming dyn content, not declairative
+		$( this ).attr("id", makeId( $( this ).text() ) );
+	});
+	//  On Small force chevons onto new line / Do this in CSS Media Qry
+	if( jsMQ.isSmall() ){
+		$(".fa-angle-down").css("display", "block");
+		$(".fa-angle-up").css("display", "block");
+	}
+
+	setLineBreak( ".faq-quest > p" );
+
+	$( ".drop_nav" ).click( function( e ){
+		if( $("#FAQ_contents").hasClass("hide") ){
+			 $( "#faq-togl" ).click();
+		}
+	});
+	$( ".faq-togl" ).click(function( e ) {
+		e.preventDefault();
+		$( this ).parent().addClass("hidden");
+		if( $( this ).attr("id") === "faq-togl-1" ){
+			$( "#faq-togl-2" ).parent().removeClass("hidden");
+		}else{
+			$( "#faq-togl-1" ).parent().removeClass("hidden");
+		}
+		$(".FAQ_contents").toggleClass("hide");
+		setLineBreak( ".faq-quest > p" );
+	});
+	$( ".faq-togl-cntnt" ).click(function( e ) {
+		$el = $("#"+$( this ).attr("data-tog"));
+		$el_i = $("."+$( this ).attr("data-tog"));
+		$el.toggleClass( "st_hd" );
+		$el_i.toggleClass("fa-angle-up");
+		$el_i.toggleClass("fa-angle-down");
+		if( $el.hasClass( "st_hd" )){
+				$el.fadeOut("400");
+		}else{
+				$el.fadeIn("400");
+		}
+	});
+	$(".faq-quest").click(function( e ) {
+		var sHash = makeId( $( this ).text() );
+		$el_i = $( this ).find("i");
+		$el_i.toggleClass("fa-angle-up").toggleClass("fa-angle-down");
+		$( this ).attr("data-faq-quest-active","true");
+		$(".faq-quest").each(function(){
+			if( $( this ).attr("data-faq-quest-active") !== "true" ){
+				$( this ).removeClass("faq-panel__active");
+				$( this ).next().attr("style","display: none;").removeClass("st_hd").addClass("st_hd");
+				$el_i = $( this ).find("i");
+				$el_i.addClass("fa-angle-down").removeClass("fa-angle-up");
+			}else{
+				$( this ).attr("data-faq-quest-active","false");
+			}
+		});
+
+		$( this ).toggleClass("faq-panel__active");
+		$ans = $( this ).next();
+
+		if( $ans.hasClass("st_hd") ){
+			$ans.slideDown("400",  function(){
+				if( !CnfState.hist ){
+					CnfState.hist = true;
+				}else{
+					history.pushState({"uid_hash":sHash}, sHash, "#" + sHash);
+				}
+			$ans.removeClass("st_hd");
+			} );
+		}else{
+			$ans.attr("style","display: none;").addClass("st_hd");
+		}
+	});
+	window.addEventListener("popstate", function( e ) {
+		setBrand( "body" );
+		if (typeof e.state.uid_hash !== "undefined") {
+			if( e.state.uid_hash === "faq" ){
+					CnfState.hist = false;
+					$( ".faq-panel__active" ).click();
+					CnfState.hist = true;
+			}else{
+				if( !$( "#" + e.state.uid_hash ).hasClass("faq-panel__active") ){
+					CnfState.hist = false;
+					$( "#" + e.state.uid_hash ).click();
+				}
+			}
+		}
+	});
+	function makeId( sText ){
+		return sText.toLowerCase().replace(/\W+/g,"-").slice(0, -1);
+	}
+};
+
+function deepLinkContactUs( sURLQuery, sButton_js ){
+	//if( window.location.href.indexOf( sURLQuery ) > -1 ) $( sButton_js ).click();
+}
+
+function deepLinkThanYou( sURLQuery, sReveal_id ){
+	//if( window.location.href.indexOf( sURLQuery ) > -1 ) $( sReveal_id ).foundation("reveal", "open");
+}
+
+</script>

@@ -1,0 +1,71 @@
+/*
+ * ltd.modal.js
+ *
+ * this file contains an updated version of the showModal function from /media/ltd/application.js.
+ * this allows us to use the existing modal calls with the updated "reveal" modal plugin.
+ *
+ */
+function showModal(link) {
+
+	if (!window.location.origin) {
+		window.location.origin = window.location.protocol + "//" + window.location.hostname + (window.location.port ? ':' + window.location.port: '');
+	}
+
+	var $modal = $('#footerModal'),
+		contentId = $(link).attr('href'),
+		$element = $(contentId),
+		faq = window.location.origin + '/content/modal_FAQs.jsp';
+
+	// if the modal should adjust it's width to an image, add an || to the following if statement
+	if (contentId == '#cc_security_code_modal' || contentId == '#order_source_code_modal' || contentId =='#sales_tax_info_modal' ) {
+		$( document ).on("opened.fndtn.reveal", "#footerModal", function () {
+		//$modal.on('opened', function(){
+			var width = $('#footerModal img').width(),
+				margin = -width/2;
+			$modal.width(width);
+//			$modal.css('marginLeft', margin);
+		});
+	}
+	else if (contentId == '#emailModal') {
+		$( document ).on("opened.fndtn.reveal", "#footerModal", function () {
+		//$modal.on('opened', function(){
+			var width = 465,
+				margin = -width/2;
+			$modal.width(width);
+			//$modal.css('marginLeft', margin);
+		});
+	}
+	else if (contentId == '#invoiceReprintModal') {
+		$( document ).on("opened.fndtn.reveal", "#footerModal", function () {
+		//$modal.on('opened', function(){
+			var width = 700,
+				margin = -width/2;
+			$modal.width(width);
+			//$modal.css('marginLeft', margin);
+		});
+	}
+	else if (contentId == '#confirmationModal' ||contentId == '#confirmationModalConfirm') {
+		$( document ).on("opened.fndtn.reveal", "#footerModal", function () {
+		//$modal.on('opened', function(){
+			var width = 720,
+				margin = -width/2;
+			$modal.width(width);
+			//$modal.css('marginLeft', margin);
+		});
+	}
+
+	if (contentId == '#modalFaqs') {
+		$modal.foundation('reveal', 'open', {url: faq});
+	}
+	else {
+		$modal.append( $element.clone() );
+		$modal.foundation('reveal', 'open');
+	}
+
+	$( document ).on("closed.fndtn.reveal", "#footerModal", function () {
+	//$modal.foundation('reveal', {'closed': function () {
+		$modal.html('<a class="close-reveal-modal">&#215;</a>');
+		//modal.css('width', '70%').css('marginLeft', '-35%');
+	});
+
+}

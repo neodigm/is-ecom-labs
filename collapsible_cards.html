@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Collapsible Cards Patterns</title>
+	<link rel="stylesheet" href="foundation.css" />
+</head>
+<body class="brand_lsc">
+<style>
+	.ccp-panel {
+		border-style: solid;
+		border-width: 1px;
+		border-color: #BBB;
+		margin-bottom: 16px;
+		padding: 12px 12px 4px 12px;
+		background: #f2faff;
+		color: #333333;
+		border-radius: 3px;
+	}
+
+	.ccp-panel--i {
+		position: absolute;
+		float: right;
+		top: 2px;
+		right: 8px;
+		color: #AAA;
+		font-size: 22px;
+	}
+
+	.ccp-quest {
+		position: relative;
+		overflow: hidden;
+		min-height: 42px;
+		cursor: pointer;
+		cursor: pointer;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+		transition: background-color .6s;
+	}
+
+	.ccp-quest p {
+		color: #000; font-size: 18px; font-weight: 300; font-family: 'Roboto', sans-serif;
+	}
+
+	.ccp-quest:hover {
+		background-color: #2aa6ca;
+	}
+	.ccp-quest:hover .ccp-panel--i {
+		color: #FFF;
+	}
+	.ccp-quest:active {
+		background-color: #297FB8;
+	}
+
+	.ccp-panel__active {
+		background: #297FB8;
+		margin-bottom: -4px;
+	}
+
+	.ccp-quest__linebreak {
+		padding: 8px 12px 12px 18px;
+	}
+
+	.ccp-quest:hover p, .ccp-panel__active p {
+		color: #FFF;
+	}
+
+	.brand_lsc .ccp-panel {
+		background: #FFFBFF;
+	}
+
+	.brand_lsc .ccp-quest {
+		background: #FFFAFF;
+	}
+
+	.brand_lsc .ccp-quest:hover {
+		background-color: #9c4a62;
+	}
+
+	.brand_lsc .ccp-panel__active {
+		background: #632434;
+		box-shadow: 0 4px 8px rgba(3,3,3,0.16);
+	}
+
+	.hidden {
+		display: none !important;
+	}
+</style>
+	<br>
+	<section class="row">
+		<div class="column small-12">
+			<nav id="ccp-1" class="js-ccp ccp-panel radius text-center ccp-quest">
+				<p>Collapsible Card API<i class="ccp-panel--i">+</i></p>
+			</nav>
+			<aside class="panel hidden">
+				<p>CCP usage:  Add brand_lsc class to the body for the Lakeside motif, else defaults to LTD.  Style as needed.  This pattern is not mutually exclusive but that can be added if needed.
+				</p>
+				<p>To make open by default, remove hidden class from the aside element and add ccp-panel__active to the nav element.  Also remember to change the + (plus) to a - (minus).
+				</p>
+			</aside>
+		</div>
+		<div class="column small-12">
+			<nav id="ccp-2" class="js-ccp ccp-panel radius text-center ccp-quest">
+				<p>Collapsible Content Pattern<i class="ccp-panel--i">+</i></p>
+			</nav>
+			<aside class="panel hidden">
+				<p>Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque volutpat condimentum velit. .
+				</p>
+			</aside>
+		</div>
+	</section>
+<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+<script src="foundation.js"></script>
+<script>
+$(document).ready(function() { // 🌑🌒🌓🌔🌕🌖🌗🌘🌑 
+	$(document).foundation();
+	$(".js-ccp").on("click", function( e ){  //  Collapsible Content Pattern
+		$( this ).toggleClass("ccp-panel__active").next().toggleClass("hidden");
+		$( this ).find("i").text(( $( this ).hasClass("ccp-panel__active") )?"-":"+");
+	});
+});</script>
+</body>
+</html>

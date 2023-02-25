@@ -1,0 +1,18 @@
+.l-primebanr {
+		display: block;
+		margin: 0 auto;
+    padding: 0;
+    width: 980px;
+}
+.l-primebanr__whitespace {
+    height: 10px;
+}
+.l-primebanr__img {
+    width: 100%;
+}
+@media only screen and (max-width:61.1875em){
+/* small and medium */
+	.l-primebanr {
+    width: inherit;
+	}
+}

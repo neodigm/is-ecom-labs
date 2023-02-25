@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta charset="UTF-8">
+		<title>UX ⚡ Scott Krause | Vue.js TypeScript GoLang WASM GraphQL</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1, maximum-scale=2, minimum-scale=1, width=device-width, height=device-height"/>
+		
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@neodigm24" />
+<meta name="twitter:title" content="Scott C. Krause JavaScript Engineer and UX Designer | eCommerce, SaaS and Gamification" />
+<meta name="twitter:description" content="Lead product storyteller, UX artisan, front-end engineer, and prolific open source contributor. Reimagine product narratives as interactive dashboards, persuasive infographics, and succinct data visualizations. Advocate for performant, functional, testable, future-proof, and trusted JavaScript, TypeScript, and Go." />
+<meta name="twitter:image" content="https://neodigm.github.io/brand_logo_graphic_design/fantastic/discerning/22.jpg" />
+
+<meta property="og:title" content="Scott C. Krause Front-end Engineer | Vue.js TypeScript GoLang WASM">
+<meta property="og:site_name" content="Scott C. Krause UX Developer">
+<meta property="og:url" content="https://thescottkrause.com/">
+<meta property="og:description" content="Lead product storyteller, UX artisan, front-end engineer, and prolific open source contributor. Reimagine product narratives as interactive dashboards, persuasive infographics, and succinct data visualizations. Advocate for performant, functional, testable, future-proof, and trusted JavaScript, TypeScript, and Go.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://neodigm.github.io/brand_logo_graphic_design/fantastic/discerning/22.jpg">
+		
+        <style>
+            html {
+            	background: url(lsc_back.png) no-repeat !important;
+            }
+            .mg-pale--img__star {
+            	position: relative;
+            	max-width: 144px;
+            	max-height: 144px;
+            	display: inline-block;
+            	/*filter: grayscale(1.0);*/
+            	/*opacity: .4;*/
+            	margin: 2px;
+            	transform-origin: 50% 50%;
+            }
+            .mg--img__star {
+            	position: relative;
+            	max-width: 158px;
+            	max-height: 158px;
+            	display: inline-block;
+            	margin: 1px;
+            	transform-origin: 50% 50%;
+            }
+        </style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+<script>
+
+	$(document).on("ready", function(){
+
+		var tlPale = new TimelineMax({repeat:-1, repeatDelay:0});
+		var tlFall = new TimelineMax({repeat: 4, repeatDelay:4});
+		var aStarPale = $(".mg-pale--img__star");
+		var eStar1 = $(".js-img__star1");
+
+		//tlPale.append( TweenLite.to(aStarPale, 1, {x:100}) );
+		//tlPale.append( TweenLite.to(aStarPale, 1, {y:50}) );
+		//tlPale.append( TweenLite.to(aStarPale, 1, {alpha:.4}) );
+		tlPale.append( TweenLite.to(aStarPale, 4, {rotation:360}) );
+		tlFall.append( TweenLite.to(eStar1, 16, {rotation:360}) );
+		tlFall.append( TweenLite.to(eStar1, 16, {y:500}) );
+
+	});
+
+</script>
+	</head>
+	<body>
+        <div style="position: absolute; left: 208px; top: 364px; width: 774px; height: 434px;
+background: #38043B;
+background: -moz-linear-gradient(top, #38043B 0%, #ad1283 50%, #38043B 100%);
+background: -webkit-linear-gradient(top, #38043B 0%,#ad1283 50%,#38043B 100%);
+background: linear-gradient(to bottom, #38043B 0%,#ad1283 50%,#38043B 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#38043B', endColorstr='#38043B',GradientType=0 );">
+
+<!--
+			<img class="js-img__star1 mg--img__star" src="star.png">
+-->
+			<aside style="margin-top: 20%;margin-left: 4px;">
+					<img class="mg-pale--img__star" src="star.png">
+					<img class="mg-pale--img__star" src="star.png">
+					<img class="mg-pale--img__star" src="star.png">
+					<img class="mg-pale--img__star" src="star.png">
+					<img class="mg-pale--img__star" src="star.png">
+			</aside>
+        </div>
+	</body>
+</html>

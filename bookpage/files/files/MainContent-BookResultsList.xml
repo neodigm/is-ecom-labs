@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ContentTemplate xmlns="http://endeca.com/schema/content-template/2008" 
+    xmlns:editors="editors"
+    xmlns:xavia="http://endeca.com/schema/xavia/2010"
+    type="MainContent" 
+    id="BookResultsList">
+    
+    <Description>Displays search and navigation results in a grid view.</Description>
+    <ThumbnailUrl>/ifcr/tools/xmgr/img/template_thumbnails/Main_ProductGrid.png</ThumbnailUrl>
+    
+    <ContentItem>
+        <Name>Results List</Name>
+        <Property name="boostStrata">
+            <xavia:List/>
+        </Property>
+        <Property name="buryStrata">
+            <xavia:List/>
+        </Property>
+        <Property name="recordsPerPage">
+            <String>50</String>
+        </Property>
+    </ContentItem>
+    
+    
+    <EditorPanel>
+        <BasicContentItemEditor>
+        
+            <editors:NumericStepperEditor label="Records per page" propertyName="recordsPerPage" minValue="10" maxValue="100">
+            </editors:NumericStepperEditor>
+            
+            <editors:RecordStratificationEditor propertyName="boostStrata" buryProperty="buryStrata" label="Customize Results List"/>
+            
+            <GroupLabel label="Search Result Settings (apply when user provides search terms)"/>
+           
+            <GroupLabel label="Navigation Result Settings (apply when user does not provide search terms)"/>
+            
+        </BasicContentItemEditor>
+    </EditorPanel>
+</ContentTemplate>
+<!-- @version $Id: //hosting-blueprint/B2CBlueprint/version/10.2/Storefront/deploy/cartridge_templates/MainContent-ResultsList.xml#3 $$Change: 788278 $-->
+

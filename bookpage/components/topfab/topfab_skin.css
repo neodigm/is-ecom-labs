@@ -1,0 +1,18 @@
+/*  CSS category State    */ /*  color display font visibility ...  */
+.l-topfab .l-topfab__a {
+border-color: #fff;
+border-radius: 3px;
+bottom: 30px;
+cursor: pointer;
+display: inline;
+left: 90%;
+margin: 0;
+padding: 6px;
+position: fixed;
+width: 26px;
+z-index: 14;
+}
+
+/*  CSS category Theme    */ /*  color background hover ...  */
+body[data-brand="lsc"] .l-topfab .l-topfab__a { background-color: #672634; }
+body[data-brand="ltd"] .l-topfab .l-topfab__a { background-color: #246fa1; }

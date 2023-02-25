@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<!-- An object in motion stays in motion -->
+
+<!--  https://www.google.com/search?q=oscillation+overthruster&espv=2&tbm=isch&tbo=u&source=univ&sa=X&ved=0ahUKEwjI4MuiidnSAhVp9YMKHXyRA7QQsAQIJg&biw=1680&bih=920  -->
+<html class=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel='stylesheet' type='text/css'>
+
+<style class="cp-pen-styles">.cube {
+  -webkit-perspective: 1200px;
+          perspective: 1200px;
+  -webkit-transform-style: preserve-3D;
+          transform-style: preserve-3D;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 180px;
+  height: 280px;
+  -webkit-transition: all 1s cubic-bezier(0.815, 0.005, 0.18, 1.005);
+  transition: all 1s cubic-bezier(0.815, 0.005, 0.18, 1.005);
+  top: 10px;
+  -webkit-transform: rotateY(0deg) rotateX(40deg) rotateZ(-20deg) scale(1);
+          transform: rotateY(0deg) rotateX(40deg) rotateZ(-20deg) scale(1);
+}
+.cube_inner {
+  width: 210px;
+  height: 280px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+.cube_inner div {
+  position: absolute;
+  width: 210px;
+  height: 280px;
+  background: #9c4a62;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+}
+.cube_inner div.cube_front {
+  -webkit-transform-origin: 1px 0px;
+          transform-origin: 1px 0px;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transform: translateZ(6px);
+          transform: translateZ(6px);
+  -webkit-transition: -webkit-transform 1s cubic-bezier(0.815, 0.005, 0.18, 1.005);
+  transition: -webkit-transform 1s cubic-bezier(0.815, 0.005, 0.18, 1.005);
+  transition: transform 1s cubic-bezier(0.815, 0.005, 0.18, 1.005);
+  transition: transform 1s cubic-bezier(0.815, 0.005, 0.18, 1.005), -webkit-transform 1s cubic-bezier(0.815, 0.005, 0.18, 1.005);
+  background: url("ls-signup-catalog.jpg");
+  background-size: cover !important;
+}
+.cube_inner div.page_left {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.24);
+  -webkit-transform-origin: 1px 0px;
+          transform-origin: 1px 0px;
+  -webkit-transition: -webkit-transform 1s cubic-bezier(0.815, 0.005, 0.18, 1.005);
+  transition: -webkit-transform 1s cubic-bezier(0.815, 0.005, 0.18, 1.005);
+  transition: transform 1s cubic-bezier(0.815, 0.005, 0.18, 1.005);
+  transition: transform 1s cubic-bezier(0.815, 0.005, 0.18, 1.005), -webkit-transform 1s cubic-bezier(0.815, 0.005, 0.18, 1.005);
+  -webkit-transform: translateZ(5px -1);
+          transform: translateZ(5px -1);
+  background: url("magazine_left2.jpg");
+  background-size: cover !important;
+}
+.cube_inner div.page_right {
+  -webkit-transform: translateZ(4px);
+          transform: translateZ(4px);
+  background: url("magazine_right2.jpg");
+  background-size: cover !important;
+}
+.cube_inner div.cube_back {
+  -webkit-transform: translateZ(-5px);
+          transform: translateZ(-5px);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+}
+.cube_inner div.cube_left {
+  width: 10px;
+  -webkit-transform: rotateY(90deg) translateZ(-5px);
+          transform: rotateY(90deg) translateZ(-5px);
+  background-color: #062738;
+}
+.cube_inner div.cube_right {
+  width: 10px;
+  -webkit-transform: rotateY(90deg) translateZ(205px);
+          transform: rotateY(90deg) translateZ(205px);
+  background-color: #d80079;
+}
+.cube_inner div.cube_top {
+  height: 10px;
+  -webkit-transform: rotateX(90deg) translateZ(5px);
+          transform: rotateX(90deg) translateZ(5px);
+  background-color: #b00063;
+}
+.cube_inner div.cube_bottom {
+  height: 10px;
+  -webkit-transform: rotateX(90deg) translateZ(-275px);
+          transform: rotateX(90deg) translateZ(-275px);
+  background-color: #fff;
+}
+
+hr {
+  background: #FFFAFF;
+  width: 16px;
+  float: left;
+  height: 2px;
+  border: none;
+}
+
+.box {
+  background-image: url("clouds.jpg");
+  background-size: 1000px 1000px;
+  width: 500px;
+  QQQQbackground-color: #e8cbb1;
+  QQQQbackground-blend-mode: difference;
+  height: 400px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 50%;
+  -webkit-transition: width 1s cubic-bezier(0.815, 0.005, 0.18, 1.005), background-color 1s cubic-bezier(0.815, 0.005, 0.18, 1.005), background-position 0.6s 0.51s ease;
+  transition: width 1s cubic-bezier(0.815, 0.005, 0.18, 1.005), background-color 1s cubic-bezier(0.815, 0.005, 0.18, 1.005), background-position 0.6s 0.51s ease;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.box:hover {
+  width: 660px;
+  background-position: -300px 0px;
+}
+.box:hover .cube {
+  -webkit-transform: rotateY(0deg) rotateX(0deg) rotateZ(0deg) scale(1) translateY(50px) translateX(-220px);
+          transform: rotateY(0deg) rotateX(0deg) rotateZ(0deg) scale(1) translateY(50px) translateX(-220px);
+}
+.box:hover .cube .cube_front {
+  -webkit-transform: translateZ(5px) rotatey(-179deg);
+          transform: translateZ(5px) rotatey(-179deg);
+}
+.box:hover .cube .page_left {
+  -webkit-transform: translateZ(5px) rotatey(-180deg);
+          transform: translateZ(5px) rotatey(-180deg);
+}
+.box:hover .description {
+  left: 426px;
+  top: -10px;
+  height: 160px;
+  width: 200px;
+}
+.box:hover .pink {
+  -webkit-transform: scale(1) rotate(-10deg);
+          transform: scale(1) rotate(-10deg);
+  -webkit-transition: all 0.7s 0.3s cubic-bezier(0.815, 0.005, 0.18, 1.005);
+  transition: all 0.7s 0.3s cubic-bezier(0.815, 0.005, 0.18, 1.005);
+}
+.box:hover .holder {
+  width: 700px;
+}
+.box:hover .big {
+  opacity: 1;
+  top: 180px;
+  left: 180px;
+}
+.box:hover .button {
+  z-index: 3;
+  bottom: 82px;
+  left: 510px;
+  background: #9c4a62;
+}
+.box .pink {
+  position: absolute;
+  -webkit-transition: all 0.7s 0s cubic-bezier(0.815, 0.005, 0.18, 1.005);
+  transition: all 0.7s 0s cubic-bezier(0.815, 0.005, 0.18, 1.005);
+  width: 80px;
+  border-radius: 100px;
+  height: 62px;
+  z-index: 2;
+  background: #9c4a62;
+  color: white;
+  left: 160px;
+  top: 22px;
+  font-family: roboto;
+  text-align: center;
+  line-height: 20px;
+  padding: 18px 0px 0px 0px;
+  box-shadow: 0px 0px 0px black;
+  -webkit-transform: scale(0) rotate(-80deg);
+          transform: scale(0) rotate(-80deg);
+}
+.box .holder {
+  -webkit-transition: all 1s .2s;
+  transition: all 1s .2s;
+  overflow: hidden;
+  width: 500px;
+  height: 400px;
+  background: transparent;
+  position: absolute;
+}
+.box .big {
+  background: #FF6F61;
+  padding: 20px;
+  -webkit-transition: all 1s cubic-bezier(0.815, 0.005, 0.18, 1.005);
+  transition: all 1s cubic-bezier(0.815, 0.005, 0.18, 1.005);
+  position: absolute;
+  opacity: 1;
+  z-index: 2;
+  top: -136px;
+  left: 90px;
+  width: 370px;
+}
+.box .big hr {
+  background: white;
+}
+.box .big h1 {
+  font-family: roboto;
+  font-size: 20px;
+  margin: 0;
+  font-weight: normal;
+  color: #583447;
+}
+.box .big p {
+  clear: left;
+  margin: 0;
+  font-size: 14px;
+  font-family: roboto;
+  opacity: 0.8;
+  color: #583447;
+}
+.box .button {
+  background: #7e2d3e;
+  position: absolute;
+  bottom: 14px;
+  cursor: pointer;
+  -webkit-transition: bottom 1s cubic-bezier(0.815, 0.005, 0.18, 1.005), left 1s cubic-bezier(0.815, 0.005, 0.18, 1.005), box-shadow 1s, background-color 1s;
+  transition: bottom 1s cubic-bezier(0.815, 0.005, 0.18, 1.005), left 1s cubic-bezier(0.815, 0.005, 0.18, 1.005), box-shadow 1s, background-color 1s;
+  z-index: 4;
+  left: 360px;
+  padding: 10px 24px;
+  color: white;
+  box-shadow: 0px 0px 0px #f31893;
+  border-radius: 100px;
+  font-family: roboto;
+  font-size: 12px;
+}
+.box .description {
+  -webkit-transition: all 1s cubic-bezier(0.815, 0.005, 0.18, 1.005);
+  transition: all 1s cubic-bezier(0.815, 0.005, 0.18, 1.005);
+  background: #92A8D1;
+  position: absolute;
+  height: 86px;
+  z-index: 1;
+  top: 240px;
+  width: 400px;
+  color: white;
+  left: 0px;
+  padding: 22px;
+}
+.box .description h1 {
+  font-family: roboto;
+  font-weight: normal;
+  margin: 0;
+  font-size: 18px;
+}
+.box .description p {
+  clear: left;
+  font-family: roboto;
+  margin: 0;
+  font-weight: normal;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+
+html {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background: #468966;
+    background-repeat:no-repeat;
+
+  background: linear-gradient(to right, rgb(15, 12, 41), rgb(48, 43, 99), rgb(36, 36, 62));
+}
+</style>
+</head>
+<body>
+<div class="box">
+  <div class="pink">
+    Summer 2023
+  </div>
+  <div class="button">
+    Sign Up Now
+  </div>
+  <div class="holder">
+    <div class="big">
+      <h1>No need to wait</h1>
+      <hr>
+      <p>You can shop online NOW for all of the great deals printed in our catalogs plus hundreds of online only deals!</p>
+    </div>
+  </div>
+  <div class="description">
+    <h1>Sign Up for FREE CATALOGS</h1>
+    <hr>
+    <p>In most cases, you will receive our most recent catalog within the next 2 weeks. You can also request a catalog by speaking to one of our agents by calling (555) 867-5309.</p>
+  </div>
+  <div class="cube">
+    <div class="cube_inner">
+      <div class="cube_front"></div>
+      <div class="page_left"></div>
+      <div class="page_right"></div>
+      <div class="cube_back"></div>
+      <div class="cube_left"></div>
+      <div class="cube_right"></div>
+      <div class="cube_top"></div>
+      <div class="cube_bottom"></div>
+    </div>
+  </div>
+</div>
+<script src="./stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js.download"></script>
+<script>(function() {
+
+
+}).call(this);
+
+//# sourceURL=pen.js
+</script>
+</body></html>

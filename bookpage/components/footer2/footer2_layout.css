@@ -1,0 +1,109 @@
+
+/*  CSS category Base     */ /*  reset margin padding ...  */
+.l-grid-footer2, body, figure, picture, img, figcaption, section, ul, li, input {
+  margin: 0;
+  padding: 0;
+}
+/*  CSS category Layout   */ /*  border display height media width ...  */
+.l-footer2 {
+font-family: sans-serif;
+display: block;
+padding-bottom: 18px;
+}
+.l-grid-footer2 {
+  /* align-content: not used if only one row */
+align-items: flex-start;
+display: flex;
+flex-flow: row nowrap; /* Shorthand for flex-direction and flex-wrap */
+justify-content: space-between;
+margin: 0 auto;
+padding: 24px 0 2px;
+width: 980px;
+}
+.l-grid-footer2__shop {
+  /* align-content: not used if only one row */
+align-items: flex-start;
+display: flex;
+flex-flow: row nowrap; /* Shorthand for flex-direction and flex-wrap */
+justify-content: space-between;
+}
+.l-grid-footer2__bottom {
+/* align-content: not used if only one row */
+align-items: flex-start;
+border-top: 1px solid #fff;
+display: flex;
+flex-flow: row nowrap; /* Shorthand for flex-direction and flex-wrap */
+justify-content: space-between;
+margin: 0 auto;
+width: 964px;
+}
+.l-grid-footer2__bottom aside { padding-top: 10px; }
+.l-grid-footer2__bottom aside:nth-of-type(1) { text-align: left; }
+.l-grid-footer2__bottom aside:nth-of-type(2) { text-align: right; }
+.footer2__aside {
+padding: 2px 6px;
+}
+.footer2__top--small {text-align: center; padding: 8px;}
+.footer2__aside--need { width: 20%; }
+.footer2__aside--about { width: 20%; }
+.footer2__aside--shop { width: 60%; }
+
+.footer2__aside h5 {
+border-bottom: 1px solid #fff;
+font-size: 16px;
+font-weight: 600;
+margin: 4px 0 8px 0;
+padding-bottom: 8px;
+}
+.footer2__aside ul {
+padding: 8px 0 0 0;
+}
+.footer2__aside--ul {
+list-style: none;
+margin-bottom: 20px;
+}
+.l-footer2 a {
+font-size: 12px;
+}
+.l-footer2 aside > a {
+text-decoration: underline;
+}
+.l-grid-footer2 .footer2__aside--li a {
+text-decoration: none;
+}
+.footer2__copyr {
+font-family: sans-serif;
+font-size: 12px;
+line-height: 12px;
+}
+.footer2__top--small {
+display: none;
+}
+@media only screen and (max-width: 47.9375em) {
+/* small */
+.l-grid-footer2__bottom aside {
+text-align: center!important;
+}
+.l-grid-footer2__bottom {
+display: block;
+}
+.l-grid-footer2 {
+display: none;
+}
+.footer2__top--small {
+display: block;
+}
+}
+@media only screen and (min-width:48em) and (max-width:61.1875em){
+/* medium */
+}
+@media only screen and (max-width:61.1875em){
+/* small and medium */
+.l-grid-footer2 {
+ width: inherit;
+}
+.l-grid-footer2__bottom {
+padding: 0 8px;
+width: inherit;
+}
+}

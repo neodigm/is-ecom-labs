@@ -1,0 +1,41 @@
+/*  CSS category State    */ /*  color display font visibility ...  */
+.headtop__hb {
+  cursor: pointer;
+}
+.headtop__hb--a {
+  background-color: #6e6e6e;
+  border-radius: 3px;
+  color: #fff;
+}
+.headtop__hb--p {
+  font-family: sans-serif;
+}
+.headtop__img {
+  background-position: 8px 0;
+  background-repeat: no-repeat;
+}
+.headtop__link {
+  color: #666;
+  font-family: sans-serif;
+}
+.headtop__link a {
+  cursor: pointer;
+  white-space: nowrap;
+}
+.headtop--input__cart {
+  color: #FFF;
+  font-family: sans-serif;
+}
+.headtop--input__cartqty {
+  background-color: #fff;
+  color: #1f8436;
+}
+/*  CSS category Theme    */ /*  color background hover ...  */
+body[data-brand="lsc"] .headtop__link a { color: #7e2d3e; }
+body[data-brand="ltd"] .headtop__link a { color: #2ba6cb; }
+body[data-brand="lsc"] .headtop__link a:hover, a:focus { color: #5e0d1e; }
+body[data-brand="ltd"] .headtop__link a:hover, a:focus { color: #0078a0; }
+body[data-brand="lsc"] .headtop--input__cart { background-color: #7e2d3e; }
+body[data-brand="ltd"] .headtop--input__cart { background-color: #297fb8; }
+body[data-brand="lsc"] .headtop--input__cart:hover, .headtop--input__cart:focus { background-color: #672634; }
+body[data-brand="ltd"] .headtop--input__cart:hover, .headtop--input__cart:focus { background-color: #20628f; }

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!-- Display a 10 second countdown then client redirect to home page -->
+<html>
+  <head>
+    <title>Expired Redirect</title>
+  </head>
+  <body>
+    <style>
+      .exp--p {
+        font-family: sans-serif;
+        font-size: 1.6em !important;
+        text-align: center;
+        color: #444;
+      }
+      .exp--p__time {
+        font-family: serif;
+        font-size: 68px !important;
+        text-align: center;
+        color: #888;
+        margin: 16px;
+      }
+    </style>
+    <h2>Three.js 🚀 TypeScript 🍭 WASM ✨ Go</h2>
+    <br><br>
+    <p class="exp--p">Sorry, this promotion has expired. Please check back soon for more exciting fundraising opportunities.</p>
+    <br><br>
+    <p class="exp--p">Going Home in</p>
+    <p id="id-exp--p__time" class="exp--p__time">10</p>
+    <p class="exp--p">Seconds!</p>
+    <script>
+      var el = document.getElementById("id-exp--p__time")
+      var nCnt = 10
+      setInterval( doTimer, 1000)
+      function doTimer(){
+        if( nCnt > 1){
+          el.innerHTML = --nCnt
+        }else{
+          document.location.href = "/"
+        }
+      }
+    </script>
+  </body>
+</html>

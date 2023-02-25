@@ -1,0 +1,806 @@
+<style>
+.resp_btn_brand__1 {
+	font-size: 1em;
+}
+
+::selection {
+    background: #fff600;
+    color: #7D2A35;
+    text-shadow: none;
+}
+
+.faq-cols  {
+	padding-right: 8px !important;
+	padding-left: 8px !important;
+}
+
+.faq-caption     {color: #999; font-size: 48px !important; font-weight: 100; font-family: 'Roboto', sans-serif;letter-spacing: -3px;line-height: 84%;margin-bottom: 24px !important}
+.faq-caption_sub {color: #444; font-size: 32px !important; font-weight: 100; font-family: 'Roboto', sans-serif;letter-spacing: -1px;line-height: 84%;margin-bottom: 24px !important;}
+.faq-caption_h3  {color: #444; font-size: 24px !important; font-weight: 100; font-family: 'Roboto', sans-serif;letter-spacing: -1px;line-height: 84%;margin-bottom: 24px !important;}
+.faq-instr       {color: #000; font-size: 16px !important; font-weight: 400; font-family: 'Roboto', sans-serif;margin-bottom: 12px;}
+.faq-contact     {color: #000; font-size: 14px !important; font-weight: 400; font-family: 'Roboto', sans-serif;}
+
+.faq-togl {width: 100%;padding: 6px;}
+.faq-togl-cntnt {
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.faq-split {padding: 0px !important;}
+
+.faq-table {
+	width: 100%;
+}
+
+.faq-smi__a {
+	margin-right: 8px;
+}
+
+.faq-smi__a > i {
+	color: #888;
+}
+
+.faq-smi__a:hover > i {
+	color: #2aa6ca;
+}
+.brand_lsc .faq-smi__a:hover > i {
+	color: #632434;
+}
+
+.faq-panel {
+	border-style: solid;
+	border-width: 1px;
+	border-color: #BBB;
+	margin-bottom: 16px;
+	padding: 22px 12px 4px 12px;
+	background: #f2faff;
+	color: #333333;
+	border-radius: 3px;
+}
+
+.brand_lsc .faq-panel__contact {
+	background: #FFFBFF;
+}
+
+.brand_lsc .faq-quest {
+	background: #FFFAFF;
+}
+
+.faq-panel--i {
+	position: absolute;
+	float: right;
+	top: 4px;
+	right: 6px;
+	color: #AAA;
+}
+.faq-panel__contact:hover {
+	background: linear-gradient(
+	rgba(255, 255, 255, 0.24),
+	rgba(42, 166, 202, 0.32)
+	);
+}
+.brand_lsc .faq-panel__contact:hover {
+	background: linear-gradient(
+	rgba(255, 255, 255, 0.24),
+	rgba(156, 74, 98, 0.32)
+	);
+}
+
+.faq-quest {
+	position: relative;
+	overflow: hidden;
+	min-height: 56px;
+	height: 72px;
+	cursor: pointer;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	transition: background-color 80ms;
+	-webkit-transition: background-color 80ms;
+}
+
+.faq-quest p {
+	color: #000; font-size: 18px !important; font-weight: 300; font-family: 'Roboto', sans-serif;
+}
+
+.faq-quest:hover {
+	background-color: #2aa6ca;
+	transition: background-color 80ms;
+	-webkit-transition: background-color 80ms;
+	box-shadow: 0 4px 8px rgba(3,3,3,0.22);/*, 0 3px 3px rgba(3,3,3,0.22);*/
+}
+.brand_lsc .faq-quest:hover {
+	background-color: #9c4a62;
+}
+.faq-quest:hover .faq-panel--i {
+	color: #FFF;
+}
+.faq-quest:active {
+	background-color: #297FB8;
+	transition: background-color 80ms;
+	-webkit-transition: background-color 80ms;
+}
+
+.faq-panel__active {
+	background: #297FB8;
+	margin-bottom: -4px;
+	box-shadow: 0 4px 8px rgba(3,3,3,0.16);
+}
+
+.brand_lsc .faq-panel__active {
+	background: #632434;
+	box-shadow: 0 4px 8px rgba(3,3,3,0.16);
+}
+
+.faq-quest__linebreak {
+	padding: 8px 12px 12px 18px;
+}
+
+.faq-quest:hover p, .faq-panel__active p {
+	color: #FFF;
+}
+
+.faq_ansr {
+	padding: 12px;
+	min-height: 56px;
+	background-color: #FFF;
+	box-shadow: 0 4px 8px rgba(3,3,3,0.22);
+}
+.faq_ansr > p {
+	color: #111;
+	font-size: 16px;
+	font-weight: 400;
+	font-family: 'Roboto', sans-serif;
+	margin-bottom: 4px;
+}
+.respn_arw {color: #888;}
+.faq-icon {color: #888;}
+.st_hd_ini {display: none;}
+
+.brand_ltd .brand--lsc__show { display:none }
+.brand_ltd .brand--ltd__show { display:block }
+.brand_lsc .brand--lsc__show { display:block }
+.brand_lsc .brand--ltd__show { display:none }
+
+</style>
+
+<div class="resp_half_height"></div>
+<section class="row">
+	<header class="column small-10 medium-10 large-6">
+		<p class="faq-caption text-left">
+Customer Service
+		</p>
+		<p class="faq-instr text-justify">
+Welcome to LTD Commodities.com. We are committed to providing unique products at tremendous values for our customers. By clicking through the menu you will find detailed information on our policies, guarantee and answers to many of the questions you may have. Our goal is to help make your shopping experience with LTD a pleasant one.
+		</p>
+	</header>
+	<nav class="column small-10 medium-10 large-4">
+		<div class="resp_full_height show-for-large-up"></div>
+		<ul class="stack button-group show-for-large-up radius">
+<!-- The below link should not display if the user is logged in -->
+			<li>
+				<a class="button resp_btn_brand expand" href="/my_account/manage_account.jsp">Forgot User Name / Password</a></li>
+			<li>
+				<a class="button resp_btn_brand expand" href="/my_account/manage_account.jsp">View My Account</a></li>
+			<li>
+				<a class="button resp_btn_brand expand" href="/my_account/manage_account.jsp">Request Account Information</a></li>
+		</ul>
+		<div class="show-for-medium text-center">
+			<ul class="button-group round">
+				<li>
+					<a class="button resp_btn_brand small" href="/my_account/manage_account.jsp">Forgot User Name / Password</a></li>
+				<li>
+					<a class="button resp_btn_brand small" href="/my_account/manage_account.jsp">View My Account</a></li>
+				<li>
+					<a class="button resp_btn_brand small" href="/my_account/manage_account.jsp">Request Account Information</a></li>
+			</ul>
+		</div>
+		<div class="show-for-small text-center">
+			<ul class="stack button-group radius">
+				<li>
+					<a class="button resp_btn_brand expand" href="/my_account/manage_account.jsp">Forgot User Name / Password</a></li>
+				<li>
+					<a class="button resp_btn_brand expand" href="/my_account/manage_account.jsp">View My Account</a></li>
+				<li>
+					<a class="button resp_btn_brand expand" href="/my_account/manage_account.jsp">Request Account Information</a></li>
+			</ul>
+		</div>
+	</nav>
+</section>
+<div class="resp_full_height"></div>
+<nav class="row">
+	<p class="faq-caption_sub text-center"><span data-tog="sub_faq" class="faq-togl-cntnt">Frequently Asked Questions &nbsp; <i class="sub_faq respn_arw fa fa-angle-up fa-lg"></i></span></p>
+</nav>
+<section id="sub_faq">
+	<section class="row">
+		<div class="small-10 large-5 faq-cols columns">
+			<article class="faq-panel radius text-center faq-quest"><p>How do I open an account with LTD?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+				<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>Simply request a catalog, place an order or go to <a href="https://www.ltdcommodities.com/my_account/index.jsp">My Account</a> to create a new account.
+</p><div class="resp_half_height"></div><p>
+If you would like to provide your business information to maximize your shopping opportunities, you may do so by selecting the "I'd like to provide my business information?" check box during checkout or the account creation process. In doing so, we will send you bonus catalogs to share with colleagues, and you will become eligible for exclusive offers and promotions.
+				</p></div>
+			<article class="faq-panel radius text-center faq-quest"><p>How do I request a catalog?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+				<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>
+If you are looking to receive a free print catalog, simply
+click on<a href="/catalog_request/index.jsp"> Send Me Free Catalogs &amp; E-mail Offers</a> and
+you will receive our most recent catalog in 2 to 3 weeks. You can also request one through an
+agent by calling <span class="tel_link">(847) 295-5532</span> 24 hours a day 7 days a week. Our entire
+catalog is also available online, <a href="https://www.ltdcommodities.com/homeltd">so shop today!</a>
+				</p></div>
+			<article class="faq-panel radius text-center faq-quest"><p>What will my shipping costs be?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+				<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>
+
+<p>Shipping charges are based on the dollar amount of your purchase. There's just one shipping cost per order, no matter how many boxes we ship. Items that require an additional delivery charge due to their size and weight are advertised with an AD icon and additional charges are noted. Sales tax and shipping will be calculated during the checkout process. These charges will be billed at the time your item is shipped to you.</p>
+<div class="resp_qtr_height"></div>
+<style>
+	td:nth-child(2) {
+		text-align: right;
+	}
+</style>
+<table class="faq-table" cellspacing="2" cellpadding="2" border="1">
+	<tr><td style="text-align: center;"><b>If Your Order Amount Is</b></td><td style="text-align: center;"><b>Shipping Charges Are</b></td></tr><tr><td>up to $14.99</td><td>$5.99</td></tr><tr><td>$15.00 to $24.99</td><td>$7.99</td></tr><tr><td>$25.00 to $49.99</td><td>$9.99</td></tr><tr><td>$50.00 to $59.99</td><td>$11.99</td></tr><tr><td>$60.00 to $74.99</td><td>$13.99</td></tr><tr><td>$75.00 to $99.99</td><td>$16.99</td></tr><tr><td>$100.00 to $149.99</td><td>$19.99</td></tr><tr><td>$150.00 to $199.99</td><td>$23.99</td></tr><tr><td>$200.00 to $249.99</td><td>$27.99</td></tr><tr><td>$250.00 to $299.99</td><td>$30.99</td></tr><tr><td>over $300.00</td><td>11%</td></tr>
+</table>
+<p>* Please check item pages for additional delivery charges</p>
+
+			</p></div>
+			<article class="faq-panel radius text-center faq-quest"><p>Can I send the order as a gift?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+				<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>Yes, an order can be sent to a gift address. During the checkout process, you will have the option to enter a personalized gift message (up to 110 characters). The message will be printed on the packing list included with each shipment of the order, and the product prices will not be shown.</p></div>
+			<article class="faq-panel radius text-center faq-quest"><p>How do I check the status of my order?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+				<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>
+
+<p>You may check on the status of your current and previous orders on our <a href="https://ltdcommodities.com/my_account/index.jsp">My Account</a> page.</p>
+
+<p>You may also check on the status of your order by calling <span class="tel_link">(847) 295-5532</span>, 24 hours a day, 7 days a week.</p>
+
+<p>Orders placed with abc distributing can also be viewed on the My Account page at ltdcommodities.com - simply use your existing abc log-in information. Because your abc distributing account number, username and password are also valid on our LTD Commodities website, you can already access your abc account, view past orders, make payments, and place new orders on <a href="https://ltdcommodities.com">www.ltdcommodities.com</a>.</p>
+
+				</p></div>
+		</div>
+		<div class="small-10 large-5 faq-cols columns">
+			<article class="faq-panel radius text-center faq-quest"><p>What is your return policy?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+				<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>If you are not completely satisfied with all or part of your order, simply return it to us for a replacement, credit or refund on your invoice for the purchase price. (*Note: monogrammed and personalized items cannot be returned except when due to defect. Once placed, your order for these items cannot be returned.) Remember to keep a copy of your invoice and mailing receipt for your records, although duplicate documentation can be printed from the <a href="https://www.ltdcommodities.com/my_account/index.jsp">My Account</a> page. We have included our address label on the back of your packing list to attach to your box.</p></div>
+			<article class="faq-panel radius text-center faq-quest"><p>How do I update My Account information?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+				<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>
+
+<p>Once you have logged into <a href="https://ltdcommodities.com/my_account/index.jsp">My Account</a>, you have the option to update and change your Sign-in &amp; Subscriptions, Address Book, Stored Payment Methods and Business Account Information. After entering the new information, click the UPDATE button for your changes to be effective.</p>
+</p><div class="resp_half_height"></div><p>
+<p><b>abc distributing customers</b>: Your abc distributing account number, username and password are also valid on our LTD Commodities website, you can already access your abc account, view past orders, make payments, and place new orders on <a href="https://ltdcommodities.com">www.ltdcommodities.com</a> with your abc distributing sign in information.</p>
+
+				</p></div>
+			<article class="faq-panel radius text-center faq-quest"><p>What do you do with my email address?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+				<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>LTD Commodities LLC collects your email address as part of your registration with us. We use this address to communicate with you about your account. We do not sell your email address to others.</p></div>
+			<article class="faq-panel radius text-center faq-quest"><p>What kind of information do you collect from me when I visit your web site?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+				<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>We do not collect any personally identifiable information from those merely visiting our site. We do ask for additional information if you would like to place an order, request an order status or a free catalog, or if you need to communicate with us regarding an account issue.</p></div>
+			<article class="faq-panel radius text-center faq-quest"><p>Does LTD offer secure online ordering?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+				<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>Yes, we do. All customer and order information is securely stored behind a firewall and protected from unauthorized access. Your online session is encrypted using SSL with a certificate provided by Verisign. Therefore, none of your personal information, including credit card number, name and address, can be read as the information travels over the internet. Your credit card number is protected by our encryption methods as soon as we capture it and before it is stored in our database to protect it from potential theft. LTD Commodities does not store your CVV2 credit card security code anywhere on its system.</p></div>
+		</div>
+	</section>
+	<section class="row">
+		<div class="column hide-for-small hide-for-medium large-5 faq-cols">&nbsp;</div>
+		<div class="column small-10 large-5 faq-cols text-right">
+			<a href="#" class="button radius resp_btn_green expand YYYYsplit YYYYfaq-split">
+				<div id="faq-togl" data-alt="Hide FAQs" class="faq-togl">View All FAQs</div></a>
+		</div>
+	</section>
+	<section id="FAQ_contents" class="hide FAQ_contents">
+		<section class="row">
+			<div class="column small-10 no-padding text-center">
+				<div class="resp_half_height"></div>
+				<h3 id="address_change" class="faq-caption_h3">Address Change</h3>
+				<div class="small-10 large-5 faq-cols columns">
+					<article class="faq-panel radius text-center faq-quest"><p>How do I change the address listed for the account?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>
+
+You can change your address by clicking on the <a href="https://www.ltdcommodities.com/my_account/index.jsp">My Account</a> page and selecting "Change the account information." You can also update your address on your account when you place your next order. Please note that these changes must be made prior to submitting your order. Unfortunately, we cannot change "ship to" addresses on orders already placed or in process.
+</p><div class="resp_half_height"></div><p>
+If you are having difficulty completing your address change online, please call one of our account support specialists at <span class="tel_link">847-444-2365</span> from 7:00 am to 8:00 pm CST M-F.
+</p><div class="resp_half_height"></div><p>
+abc distributing customers: Your abc distributing account number, username and password are also valid on our LTD Commodities website, you can already access your abc account, view past orders, make payments, and place new orders on <a href="https://www.ltdcommodities.com/homeltd">www.ltdcommodities.com</a> with your abc distributing sign in information.
+
+
+						</p></div>
+					<article class="faq-panel radius text-center faq-quest"><p>How do I update My Account information?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>
+
+Once you have logged into <a href="https://www.ltdcommodities.com/my_account/index.jsp">My Account</a>, you have the option to update and change your Sign-in & Subscriptions, Address Book, Stored Payment Methods and Business Account Information. After entering the new information, click the UPDATE button for your changes to be effective.
+<br>
+abc distributing customers: Your abc distributing account number, username and password are also valid on our LTD Commodities website, you can already access your abc account, view past orders, make payments, and place new orders on <a href="https://www.ltdcommodities.com/homeltd">www.ltdcommodities.com</a> with your abc distributing sign in information.
+
+						</p></div>
+				</div>
+				<div class="small-10 large-5 faq-cols columns">
+					<article class="faq-panel radius text-center faq-quest"><p>How can I change my Address Online?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>
+
+You can update your account information at any time by logging into <a href="https://www.ltdcommodities.com/my_account/index.jsp">My Account</a>. In My Account you can make changes to your address, personal contact information and manage your gift addresses and email preferences. You can also update your address during the checkout process on your next order. Please note that changes to your shipping address must be made prior to submitting your order.
+</p><div class="resp_half_height"></div><p>
+Or
+</p><div class="resp_half_height"></div><p>
+Submit your request in writing via mail or fax. Please include the company account number and the old and new address.
+</p><div class="resp_half_height"></div><p>
+Fax: (847) 283-8124<br>
+</p><div class="resp_half_height"></div><p>
+Mail: LTD Commodities<br>
+Account Maintenance<br>
+2800 Lakeside Drive<br>
+Bannockburn, IL 60015
+
+						</p></div>
+<!--					<article class="faq-panel radius text-center faq-quest"><p>Question?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ant.</p></div>-->
+				</div>
+			</div>
+		</section>
+		<section class="row">
+			<div class="column small-10 no-padding text-center">
+				<br>
+				<h3 id="catalogs" class="faq-caption_h3">Catalogs</h3>
+				<div class="small-10 large-5 faq-cols columns">
+					<article class="faq-panel radius text-center faq-quest"><p>Question?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ant.</p></div>
+					<article class="faq-panel radius text-center faq-quest"><p>Question?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ant.</p></div>
+				</div>
+				<div class="small-10 large-5 faq-cols columns">
+					<article class="faq-panel radius text-center faq-quest"><p>Question?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ant.</p></div>
+					<article class="faq-panel radius text-center faq-quest"><p>Question?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ant.</p></div>
+				</div>
+			</div>
+		</section>
+		<section class="row">
+			<div class="column small-10 no-padding text-center">
+				<br>
+				<h3 id="ordering" class="faq-caption_h3">Ordering</h3>
+				<div class="small-10 large-5 faq-cols columns">
+					<article class="faq-panel radius text-center faq-quest"><p>Question?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ant.</p></div>
+					<article class="faq-panel radius text-center faq-quest"><p>Question?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ant.</p></div>
+				</div>
+				<div class="small-10 large-5 faq-cols columns">
+					<article class="faq-panel radius text-center faq-quest"><p>Question?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ant.</p></div>
+					<article class="faq-panel radius text-center faq-quest"><p>Question?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ant.</p></div>
+				</div>
+			</div>
+		</section>
+		<section class="row">
+			<div class="column small-10 no-padding text-center">
+				<br>
+				<h3 id="pay_online_help" class="faq-caption_h3">Pay Online Help</h3>
+				<div class="small-10 large-5 faq-cols columns">
+					<article class="faq-panel radius text-center faq-quest"><p>How do I make an online payment?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr">
+						<p>You can pay for your shipped orders online with an electronic check quickly and easily using our Pay Online feature. Log in to My Account now to make a payment or see our Online Payments help section for additional details.</p>
+						<p>In addition to online payments, we accept mailed payments in the form of check or money order. Be sure to include the payment copy of your invoice or statement with your payment, indicating the amount paid per invoice, and write your account number on your check or money order and mail to: <hr><b>LTD Commodities LLC<br> PO Box 738<br> Bannockburn, IL 60015-0738.</b></p><hr>
+						<p>Please note that payment is typically due within 10 days of receipt of merchandise. However, from time to time we do run special programs that offer extended terms; details of these promotional programs are provided at time of purchase. Please be advised that returned payments may be recovered electronically. Additionally, returned payments may be subject to a $30 fee, that will be billed to your LTD account.</p>
+						</div>
+					<article class="faq-panel radius text-center faq-quest"><p>What is an electronic check payment?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr">
+						<p>An electronic check payment is a paperless check. Over 1 billion electronic payments take place in the U.S. each year - it's that reliable! You simply enter your checking account information in our secure form and we send it through the banking system as an ACH (Automated Clearinghouse) payment. We then post the payment to your LTD Commodities account within 2 business days.<br> Please note that when you provide an electronic check as payment for goods or services, you authorize us to collect a State of Illinois allowable fee of $30.00 through electronic fund transfer from your account if your check is returned unpaid. By agreeing to these terms and the terms and conditions of LTD Commodities, you acknowledge that you have printed a copy of this authorization.<br></p>
+						<p>This authorization may be revoked at any time prior to the electronic debiting of your account for this state allowable fee by written notice to LTD Commodities, sent certified mail return receipt requested. When you provide a check as payment, you authorize us to use information from the check to make a one-time electronic fund transfer from your account, or to process the payment as a check transaction.</p>
+						</div>
+				</div>
+				<div class="small-10 large-5 faq-cols columns">
+					<article class="faq-panel radius text-center faq-quest"><p>What is the timing of the payment against my checking account?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr">
+						<p>We process electronic payments nightly. Therefore, your electronic payment can post against your checking account as early as the next morning.</p>
+						</div>
+					<article class="faq-panel radius text-center faq-quest"><p>When will the payment show on my LTD Commodities account?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr">
+						<p>We process payments transacted against our accounts nightly. Your account will reflect the payment after the overnight processing. You may see your payment on your LTD Commodities account as early as the next day. Payments will not be posted on weekends and holidays. These transactions will post on the next business day.</p>
+						<p>Please note that when you provide an electronic check as payment for goods or services, you authorize us to collect a State of Illinois allowable fee of $30.00 through electronic fund transfer from your account if your check is returned unpaid. By agreeing to these terms and the terms and conditions of LTD Commodities, you acknowledge that you have printed a copy of this authorization. This authorization may be revoked at any time prior to the electronic debiting of your account for this state allowable fee by written notice to LTD Commodities, sent certified mail return receipt requested. When you provide a check as payment, you authorize us to use information from the check to make a one-time electronic fund transfer from your account, or to process the payment as a check transaction.</p>
+						</div>
+				</div>
+			</div>
+		</section>
+		<section class="row">
+			<div class="column small-10 no-padding text-center">
+				<br>
+				<h3 id="privacy_policy" class="faq-caption_h3">Privacy Policy</h3>
+				<div class="small-10 large-5 faq-cols columns">
+					<article class="faq-panel radius text-center faq-quest"><p>Question?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ant.</p></div>
+					<article class="faq-panel radius text-center faq-quest"><p>Question?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ant.</p></div>
+				</div>
+				<div class="small-10 large-5 faq-cols columns">
+					<article class="faq-panel radius text-center faq-quest"><p>Question?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ant.</p></div>
+					<article class="faq-panel radius text-center faq-quest"><p>Question?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ant.</p></div>
+				</div>
+			</div>
+		</section>
+		<section class="row">
+			<div class="column small-10 no-padding text-center">
+				<br>
+				<h3 id="product" class="faq-caption_h3">Product</h3>
+				<div class="small-10 large-5 faq-cols columns">
+					<article class="faq-panel radius text-center faq-quest"><p>Question?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ant.</p></div>
+					<article class="faq-panel radius text-center faq-quest"><p>Question?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ant.</p></div>
+				</div>
+				<div class="small-10 large-5 faq-cols columns">
+					<article class="faq-panel radius text-center faq-quest"><p>Question?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ant.</p></div>
+					<article class="faq-panel radius text-center faq-quest"><p>Question?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ant.</p></div>
+				</div>
+			</div>
+		</section>
+		<section class="row">
+			<div class="column small-10 no-padding text-center">
+				<br>
+				<h3 id="returns" class="faq-caption_h3">Returns</h3>
+				<div class="small-10 large-5 faq-cols columns">
+					<article class="faq-panel radius text-center faq-quest"><p>Question?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ant.</p></div>
+					<article class="faq-panel radius text-center faq-quest"><p>Question?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ant.</p></div>
+				</div>
+				<div class="small-10 large-5 faq-cols columns">
+					<article class="faq-panel radius text-center faq-quest"><p>Question?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ant.</p></div>
+					<article class="faq-panel radius text-center faq-quest"><p>Question?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ant.</p></div>
+				</div>
+			</div>
+		</section>
+		<section class="row">
+			<div class="column small-10 no-padding text-center">
+				<br>
+				<h3 id="security" class="faq-caption_h3">Security</h3>
+				<div class="small-10 large-5 faq-cols columns">
+					<article class="faq-panel radius text-center faq-quest"><p>Question?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ant.</p></div>
+					<article class="faq-panel radius text-center faq-quest"><p>Question?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ant.</p></div>
+				</div>
+				<div class="small-10 large-5 faq-cols columns">
+					<article class="faq-panel radius text-center faq-quest"><p>Question?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ant.</p></div>
+					<article class="faq-panel radius text-center faq-quest"><p>Question?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ant.</p></div>
+				</div>
+			</div>
+		</section>
+		<section class="row">
+			<div class="column small-10 no-padding text-center">
+				<br>
+				<h3 id="shipping" class="faq-caption_h3">Shipping</h3>
+				<div class="small-10 large-5 faq-cols columns">
+					<article class="faq-panel radius text-center faq-quest"><p>Question?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ant.</p></div>
+					<article class="faq-panel radius text-center faq-quest"><p>Question?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ant.</p></div>
+				</div>
+				<div class="small-10 large-5 faq-cols columns">
+					<article class="faq-panel radius text-center faq-quest"><p>Question?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ant.</p></div>
+					<article class="faq-panel radius text-center faq-quest"><p>Question?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ant.</p></div>
+				</div>
+			</div>
+		</section>
+		<section class="row">
+			<div class="column small-10 no-padding text-center">
+				<br>
+				<h3 id="web_site_features" class="faq-caption_h3">Web Site Features</h3>
+				<div class="small-10 large-5 faq-cols columns">
+					<article class="faq-panel radius text-center faq-quest"><p>Question?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ant.</p></div>
+					<article class="faq-panel radius text-center faq-quest"><p>Question?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ant.</p></div>
+				</div>
+				<div class="small-10 large-5 faq-cols columns">
+					<article class="faq-panel radius text-center faq-quest"><p>Question?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ant.</p></div>
+					<article class="faq-panel radius text-center faq-quest"><p>Question?<i class="faq-panel--i fa fa-angle-down"></i></p></article>
+						<div class="st_hd_ini st_hd faq-panel radius text-left faq_ansr"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ant.</p></div>
+				</div>
+			</div>
+		</section>
+	</section>
+</section>
+<br>
+<nav class="row">
+	<p class="faq-caption_sub text-center"><span data-tog="sub_contact" class="faq-togl-cntnt">Our Contact Information &nbsp; <i class="sub_contact respn_arw fa fa-angle-up fa-lg"></i></span></p>
+</nav>
+<section id="sub_contact">
+	<section class="row">
+		<div class="column small-10 medium-5 large-4">
+			<div class="faq-panel faq-panel__contact radius">
+				<p class="faq-icon">
+					<i class="faq-icon fa fa-envelope fa-lg"></i> &nbsp; Email
+				</p>
+				<p class="faq-contact text-left">
+Can't find the information you're looking for? Contact us via e-mail to receive quick and accurate responses to your questions.
+				</p>
+				<a class="button resp_btn_teal expand radius js-contact-us">Ask a Question</a>
+				<div class="resp_half_height"></div>
+			</div>
+			<div class="resp_half_height"></div>
+			<nav class="faq-contact text-center brand--ltd__show">
+				<a class="faq-smi__a" href="https://twitter.com/ltdcommodities" target="_blank"><i class="faq-icon fa fa-twitter fa-2x"
+				title="" aria-x=""></i></a>
+				<a class="faq-smi__a" href="https://www.pinterest.com/ltdcommodities/" target="_blank"><i class="faq-icon fa fa-pinterest fa-2x"
+				title="" aria-x=""></i></a>
+				<a class="faq-smi__a" href="https://plus.google.com/+LtdcommoditiesLLC/about" target="_blank"><i class="faq-icon fa fa-google-plus-square fa-2x"
+				title="" aria-x=""></i></a>
+				<a class="faq-smi__a" href="https://www.facebook.com/LTDCommodities" target="_blank"><i class="faq-icon fa fa-facebook-square fa-2x"
+				title="" aria-x=""></i></a>
+				<a class="faq-smi__a" href="https://www.instagram.com/ltdcommodities/" target="_blank"><i class="faq-icon fa fa-instagram fa-2x"
+				title="" aria-x=""></i></a>
+				<a class="faq-smi__a" href="https://www.youtube.com/channel/UCWbBd7OKnN2yJ1K0GV5GHGQ" target="_blank"><i class="faq-icon fa fa-youtube fa-2x"
+				title="" aria-x=""></i></a>
+				<a class="faq-smi__a" href="http://www.ltdcommodities.com/common/rss.jsp" target="_blank"><i class="faq-icon fa fa-rss-square fa-2x"
+				title="" aria-x=""></i></a>
+				<a class="faq-smi__a" href="http://blog.ltdcommodities.com/" target="_blank"><i class="faq-icon fa fa-bullhorn fa-2x"
+				title="" aria-x=""></i></a>
+			</nav>
+			<nav class="faq-contact text-center brand--lsc__show">
+				<a class="faq-smi__a" href="https://twitter.com/lscollection" target="_blank"><i class="faq-icon fa fa-twitter fa-2x"
+				title="" aria-x=""></i></a>
+				<a class="faq-smi__a" href="https://www.pinterest.com/lakesidecollect/" target="_blank"><i class="faq-icon fa fa-pinterest fa-2x"
+				title="" aria-x=""></i></a>
+				<a class="faq-smi__a" href="https://plus.google.com/109570882605330140042" target="_blank"><i class="faq-icon fa fa-google-plus-square fa-2x"
+				title="" aria-x=""></i></a>
+				<a class="faq-smi__a" href="https://www.facebook.com/thelakesidecollection" target="_blank"><i class="faq-icon fa fa-facebook-square fa-2x"
+				title="" aria-x=""></i></a>
+				<a class="faq-smi__a" href="https://www.instagram.com/thelscollection/" target="_blank"><i class="faq-icon fa fa-instagram fa-2x"
+				title="" aria-x=""></i></a>
+				<a class="faq-smi__a" href="https://www.youtube.com/channel/UCneqo5LldqG5OIpGoAsBz9A" target="_blank"><i class="faq-icon fa fa-youtube fa-2x"
+				title="" aria-x=""></i></a>
+				<a class="faq-smi__a" href="http://www.lakeside.com/common/rss.jsp" target="_blank"><i class="faq-icon fa fa-rss-square fa-2x"
+				title="" aria-x=""></i></a>
+				<a class="faq-smi__a" href="http://blog.lakeside.com/" target="_blank"><i class="faq-icon fa fa-bullhorn fa-2x"
+				title="" aria-x=""></i></a>
+			</nav>
+			<div class="resp_full_height"></div>
+		</div>
+		<div class="column small-10 medium-5 large-3">
+			<div class="faq-panel faq-panel__contact radius">
+				<p class="faq-icon">
+					<i class="faq-icon fa fa-phone-square fa-lg"></i> &nbsp; Telephone
+				</p>
+				<p class="faq-contact text-left">
+Customer Service<br>
+<span class="tel_link">(847) 295-6058</span><br>
+M-F 7:00 AM to 8:00 PM Central Time<br>
+<br>
+Order Department<br><span class="tel_link">(847) 295-5532</span><br>
+24 hours a day, 7 days a week<br>
+Place orders, check order status or request
+a catalog 24 hours a day, 7 days a week.<br>
+				</p>
+				<p class="hide-for-small-only faq-icon">
+					<i class="faq-icon fa fa-comments-o fa-lg"></i> &nbsp; Live Chat
+				</p>
+				<p class="show-for-small-only faq-icon">
+					<i class="faq-icon fa fa-mobile fa-lg"></i> &nbsp; Tap to Call
+				</p>
+				<aside class="hide-for-small-only text-center" style="background-color: #FFF; padding: 10px; border-radius: 8px;">
+					<a href="#" id="chat-available">
+						<img src="/media/ltd/images/popups/chat1_ava_ltd.png" alt="chat1_ava_ltd">
+					</a>
+				</aside>
+				<aside class="show-for-small-only text-center">
+					<a class="button resp_btn_teal expand radius" href="#">
+Dial Now
+					</a>
+				</aside>
+				<div class="resp_half_height"></div>
+			</div>
+		</div>
+		<div class="column small-10 medium-5 large-3">
+			<div class="faq-panel faq-panel__contact radius">
+				<p class="faq-icon">
+					<i class="faq-icon fa fa-map-marker fa-lg"></i> &nbsp; Address
+				</p>
+				<p class="faq-contact text-left">
+LTD Commodities LLC<br>
+2800 Lakeside Dr.<br>
+Bannockburn, IL 60015
+				</p>
+				<p class="faq-icon">
+					<i class="faq-icon fa fa-user fa-lg"></i> &nbsp; Add to Contacts
+				</p>
+				<aside class="text-center" style="background-color: #FFF; padding: 1px; border-radius: 8px;">
+					<a class="brand--ltd__show" href="/images/ltd.vcf" target="_blank">
+						<img src="/images/qr_vcf_ltd.png" alt="qr">
+					</a>
+					<a class="brand--lsc__show" href="/images/lsc.vcf" target="_blank">
+						<img src="/images/qr_vcf_lsc.png" alt="qr">
+					</a>
+				</aside>
+				<div class="resp_half_height"></div>
+			</div>
+		</div>
+	</section>
+</section>
+<br>
+
+<!--  <script src="https://cdn.foundation5.zurb.com/foundation.js"></script>  -->
+<!-- FAQ10 -->
+<!-- <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script> -->
+<!-- <script src="foundation.js"></script> -->
+
+<script>
+function setBrand( sSelect ){
+	if( getBrand() === "LTD" ) {
+		$( sSelect ).removeClass("brand_lsc").addClass("brand_ltd");
+	} else {
+		$( sSelect ).removeClass("brand_ltd").addClass("brand_lsc");
+	}
+}
+
+$(document).ready(function() {
+	faq_logic_ready();
+});
+$(window).load(function() {
+	faq_logic_load();
+});
+function faq_logic_load(){
+	deepLinkContactUs( "contactus", ".js-contact-us" );  //  Click Contact Us if in query string
+	deepLinkThanYou( "thankyou", "#rev-thank-you" );     //  Open Reveal if in query string
+}
+function faq_logic_ready(){
+
+	setBrand( "body" );
+
+	var CnfState = {"hist": true};
+	jsMQcallback = $.Callbacks(), jsMQcurrent = "";
+	var jsMQ = {
+		getVW : function(){
+			vw=jQuery(window).width();
+			if(vw  <= 480) return "s";
+			if((vw >= 480) && (vw <= 748)) return "sl";
+			if((vw >= 749) && (vw <= 965)) return "m";
+			if(vw  >= 966) return "l";
+		},
+		pubVW : function(){
+			vw = jsMQ.getVW();
+			if(jsMQcurrent != vw){
+				jsMQcurrent = vw;
+				jsMQcallback.fire(vw);
+			}
+		},
+		isSmall  : function(){ return ( jsMQ.getVW().charAt(0)=="s" ) ? true : false; },
+		isMedium : function(){ return ( jsMQ.getVW()=="m" ) ? true : false; },
+		isLarge  : function(){ return ( jsMQ.getVW()=="l" ) ? true : false; }
+	};
+	setInterval(jsMQ.pubVW, 1800);
+	$(document).foundation();
+
+$(".js-contact-us").on("click", function( e ){
+	$.get("/cartridges/ContactusModal/ContactusModal.jsp", function( data ) {
+	    $('#contact-us-container').empty().append( data );
+		$("#rev-contact-us").foundation("reveal", "open");
+	});
+	e.preventDefault();
+});
+
+	$(".js-continue-shopping").on("click", function( e ){
+		window.location = "/";
+	});
+	$(".js-contact-us-cancel").on("click", function( e ){
+		$(".reveal-modal").foundation("reveal", "close");
+		e.preventDefault();
+	});
+
+	history.replaceState({"uid_hash":"faq"}, document.location, "#faq");
+	$( ".faq-quest" ).each( function(){//  Establish unique ids, assuming dyn content, not declairitive
+		$( this ).attr("id", makeId( $( this ).text() ) );
+	});
+	//  On Small force chevons onto new line / Do this in CSS Media Qry
+	if( jsMQ.isSmall() ){
+		$(".fa-angle-down").css("display", "block");
+		$(".fa-angle-up").css("display", "block");
+	}
+	// Like Equalizer - but does not make the container taller
+	$(".faq-quest > p").each(function(){
+		var nMxCC = 56;
+		if( jsMQ.isSmall() ) nMxCC = 48;
+		if( $( this ).text().length >= nMxCC ){
+			$( this ).parent().addClass("faq-quest__linebreak");
+		}
+	});
+	// (nnn) nnn-nnnn for auto iOS and Andr
+	$(function(){
+		if( ("ontouchstart" in window) || (navigator.msMaxTouchPoints > 0) ){
+			$.each($(".tel_link"), function () {
+				$(this).wrapInner( $("<a />", {class: "voice_link", href: "tel:"+parseInt( $(this).text().replace(/[^0-9.]/g, "") )}) );
+			});
+		}
+	});
+	$( ".drop_nav" ).click( function( e ){
+		if( $("#FAQ_contents").hasClass("hide") ){
+			 $( "#faq-togl" ).click();
+		}
+	});
+	$( ".faq-togl" ).click(function( e ) {
+		e.preventDefault();
+		var $txt = $( this ).text();
+		$( this ).text( $( this ).attr("data-alt") );
+		$( this ).attr("data-alt", $txt );
+		$(".FAQ_contents").toggleClass("hide");
+	});
+	$( ".faq-togl-cntnt" ).click(function( e ) {
+		$el = $("#"+$( this ).attr("data-tog"));
+		$el_i = $("."+$( this ).attr("data-tog"));
+		$el.toggleClass( "st_hd" );
+		$el_i.toggleClass("fa-angle-up");
+		$el_i.toggleClass("fa-angle-down");
+		if( $el.hasClass( "st_hd" )){
+				$el.fadeOut("400");
+		}else{
+				$el.fadeIn("400");
+		}
+	});
+	$(".faq-quest").click(function( e ) {
+		var sHash = makeId( $( this ).text() );
+		$el_i = $( this ).find("i");
+		$el_i.toggleClass("fa-angle-up").toggleClass("fa-angle-down");
+		$( this ).attr("data-faq-quest-active","true");
+		$(".faq-quest").each(function(){
+			if( $( this ).attr("data-faq-quest-active") !== "true" ){
+				$( this ).removeClass("faq-panel__active");
+				$( this ).next().attr("style","display: none;").removeClass("st_hd").addClass("st_hd");
+				$el_i = $( this ).find("i");
+				$el_i.addClass("fa-angle-down").removeClass("fa-angle-up");
+			}else{
+				$( this ).attr("data-faq-quest-active","false");
+			}
+		});
+
+		$( this ).toggleClass("faq-panel__active");
+		$ans = $( this ).next();
+
+		if( $ans.hasClass("st_hd") ){
+			$ans.slideDown("400",  function(){
+				if( !CnfState.hist ){
+					CnfState.hist = true;
+				}else{
+					history.pushState({"uid_hash":sHash}, sHash, "#" + sHash);
+				}
+			$ans.removeClass("st_hd");
+			} );
+		}else{
+			$ans.attr("style","display: none;").addClass("st_hd");
+		}
+	});
+	window.addEventListener("popstate", function( e ) {
+		setBrand( "body" );
+		if (typeof e.state.uid_hash !== "undefined") {
+			if( e.state.uid_hash === "faq" ){
+					CnfState.hist = false;
+					$( ".faq-panel__active" ).click();
+					CnfState.hist = true;
+			}else{
+				if( !$( "#" + e.state.uid_hash ).hasClass("faq-panel__active") ){
+					CnfState.hist = false;
+					$( "#" + e.state.uid_hash ).click();
+				}
+			}
+		}
+	});
+	function makeId( sText ){
+		return sText.toLowerCase().replace(/\W+/g,"-").slice(0, -1);
+	}
+};
+function deepLinkContactUs( sURLQuery, sButton_js ){
+	if( window.location.href.indexOf( sURLQuery ) > -1 ) $( sButton_js ).click();
+}
+function deepLinkThanYou( sURLQuery, sReveal_id ){
+		if( window.location.href.indexOf( sURLQuery ) > -1 ) $( sReveal_id ).foundation("reveal", "open");
+}
+</script>

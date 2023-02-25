@@ -1,0 +1,125 @@
+.l-catlevel2head {
+font-family: 'Roboto',sans-serif;
+}
+.l-catlevel2head .catl2__grid {
+display: flex;
+flex-flow: row nowrap; /* Shorthand for flex-direction and flex-wrap */
+}
+.l-catlevel2head .catl2__grid .catl2__grid--left {
+display: flex;
+flex-flow: row nowrap;
+min-width: 302px;
+margin: auto;
+align-content: center;
+padding: 0 8px 8px 8px;
+border-right: solid 1px #ccc;
+}
+.l-catlevel2head .catl2__grid .catl2__grid--right {
+width: 100%;
+align-content: center;
+justify-content: center;
+padding: 0 8px 8px 8px;
+}
+.l-catlevel2head .catl2__grid .catl2__gleft--prodimg img {
+max-width: 144px;
+}
+.l-catlevel2head .catl2__gleft--proddesc {
+min-width: 150px;
+}
+.l-catlevel2head .catl2__gleft--prodesc-block {
+display: block;
+text-align: center;
+margin-top: 24px;    
+}
+.l-catlevel2head .proddesc__link {
+font-size: .8em;
+text-decoration: underline;
+color: #2ba6cb;
+cursor: pointer;
+}
+.l-catlevel2head .proddesc__price {
+display: block;
+font-size: 13px;
+font-weight: bold;
+color: #f00;
+margin: 10px 0;
+width: auto;
+line-height: 1em;
+}
+.l-catlevel2head .proddesc__qv {
+cursor: pointer;
+background-color: #2b7ec0;
+color: #fff!important;
+padding: .75em .5em;
+border-radius: 3px;
+line-height: normal;
+border: medium none;
+box-shadow: none;
+display: block;
+text-decoration: none;
+margin: 0 8px 0 14px;
+}
+.l-catlevel2head .catl2__right--caption {
+color: #222;
+display: block;
+height: 47px;
+margin: 0;
+padding: 0;
+font-size: 32px;
+font-weight: 100;
+line-height: 1.5em;
+}
+.l-catlevel2head .catl2__right--desc {
+color: #666;
+font-size: 14px;
+font-weight: 300;
+font-size: 11.2px!important;
+font-weight: 300;
+line-height: 17.92px;
+margin-bottom: 14px;
+}
+.l-catlevel2head .catl2__right--image h1,
+.l-catlevel2head .catl2__right--image p {
+display: none;
+}
+.l-catlevel2head .catl2__right--noimage img {
+display: none;
+}
+.l-catlevel2head .proddesc__price--strike {
+	color: #bbb;
+	font-size: 11px;
+	text-decoration: line-through;
+}
+.l-catlevel2head .proddesc__price--compare {
+	color: #ddd;
+	font-size: 11px;
+}
+
+body[data-brand="lsc"] .proddesc__qv { background-color: #672634; }
+body[data-brand="ltd"] .proddesc__qv { background-color: #246fa1; }
+
+@media only screen and (max-width: 47.9375em) {
+/* small */
+	.l-catlevel2head .catl2__grid {
+		display: none;
+	}
+	.l-catlevel2head .catl2__mobile {
+		display: inherit;
+		text-align: center;
+	}
+	.l-catlevel2head .catl2__right--caption {
+		font-size: 25px;
+	}
+}
+@media only screen and (min-width:48em) and (max-width:61.1875em){
+/* medium */
+	.l-catlevel2head .catl2__mobile {
+		display: none;
+	}
+}
+@media only screen and (min-width: 61.25em){
+/* large */
+	.l-catlevel2head .catl2__mobile {
+		display: none;
+	}
+}

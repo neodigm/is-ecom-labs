@@ -1,0 +1,216 @@
+/*  CSS category Base     */ /*  reset margin padding ...  */
+.l-grid-headtop, body, figure, picture, img, figcaption, section, ul, li, input {
+  margin: 0;
+  padding: 0;
+}
+/*  CSS category Layout   */ /*  border display height media width ...  */
+.l-grid-headtop {
+  /* align-content: not used if only one row */
+  align-items: flex-start;
+  display: flex;
+  flex-flow: row nowrap; /* Shorthand for flex-direction and flex-wrap */
+  height: 89px;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 8px 0 2px;
+  width: 980px;
+}
+.headtop__hb {
+  display: none;
+}
+body[data-brand="lsc"] .headtop__hb { padding: 8px 0 8px 8px; }
+body[data-brand="ltd"] .headtop__hb { padding: 1px 0 8px 8px; }
+.l-grid-headtop nav:nth-of-type(3) { width: 50px; }
+.l-grid-headtop nav:nth-of-type(4) { width: 92px; }
+.l-grid-headtop nav:nth-of-type(5) { width: 83px; }
+.l-grid-headtop nav:nth-of-type(6) { width: 74px; }
+.is-signed-in nav:nth-of-type(3) { width: 11% !important; }
+.is-signed-in nav:nth-of-type(4) { display: none; }
+.headtop__hb--a {
+  display: block;
+  height: 40px;
+  margin: 0 auto;
+  padding-top: 4px;
+  width: 34px;
+}
+.headtop__hb--hr {
+  border-top: 1px solid #FFF;
+  margin: 5px auto;
+  width: 55%;
+}
+.headtop__hb--p {
+  font-family: sans-serif;
+  font-size: 9px;
+  line-height: .8;
+  margin: 0;
+  text-align: center;
+}
+.headtop__img {
+  height: 100%;
+  width: 620px;
+}
+.headtop__img--a {
+  display: block;
+  height: 100%;
+  width: 88%;
+}
+.headtop__link {
+  border-right: solid .6px #999;
+  flex-grow: 0;
+  flex-shrink: 1;
+  font-size: 11px;
+  height: 32px;
+  line-height: 16px;
+  margin: 36px 1px 1px 1px;
+  padding: 1px 0 1px 6px;
+}
+body[data-brand="lsc"] .headtop__link { margin: 36px 1px 1px 1px; }
+body[data-brand="ltd"] .headtop__link { margin: 25px 1px 1px 1px; }
+.headtop__cart {
+  margin: 0 2px 0 6px;
+}
+.headtop--input__cart {
+  /*align-items: center; -safar */
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 14px;
+  font-weight: 300;
+  height: 39px;
+  margin: 34px 1px 0 0;
+  min-width: 104px;
+  text-decoration: none;
+}
+.headtop--input__cart p {
+  margin: 0;
+  line-height: 2.8;
+}
+body[data-brand="lsc"] .headtop--input__cart { margin: 34px 1px 0 0; }
+body[data-brand="ltd"] .headtop--input__cart { margin: 22px 1px 0 0; }
+.headtop--input__cart svg {
+  margin: 6px 2px 1px 6px;
+}
+.headtop--input__cartqty {
+  border-radius: 1000px;
+  font-weight: bold;
+  margin: 4px 2px 4px 6px;
+  padding: 2px 8px 2px 8px;
+}
+.headtop--input__carttxt { margin-top: 5px; }
+body[data-brand="lsc"] .headtop__img { background-image: url("/media/global/images/foundation/img/fpo/lsc-logo-lg.jpg"); background-size: 380px 112px; }
+body[data-brand="ltd"] .headtop__img { background-image: url("/media/global/images/foundation/img/fpo/ltd-logo-lg.jpg"); background-size: auto 87px; }
+body[data-brand="lsc"] .l-grid-headtop { height: 114px; }
+body[data-brand="ltd"] .l-grid-headtop { height: 89px; }
+.drawerleft__menu {
+  box-shadow: 4px 4px 2px #767676;
+  background-color: #fff;
+  overflow-y: scroll;
+  position: fixed;
+  top: 0; bottom: 0; left: -400px;
+  transition: all 0.3s;
+  width: 0;
+  z-index: 172;
+}
+
+.drawerleft__menu::-webkit-scrollbar { width: 8px; }
+.drawerleft__menu::-webkit-scrollbar-track { background: rgba(0, 0, 0, 0.1); }
+
+body[data-brand="lsc"] .drawerleft__menu::-webkit-scrollbar-thumb { background: rgba(126, 45, 62, 0.5); }
+body[data-brand="ltd"] .drawerleft__menu::-webkit-scrollbar-thumb { background: rgba(41, 127, 184, 0.5); }
+
+.drawerleft__scrim {
+  display: none;
+  background-color: #000;
+  opacity: .4;
+  position: fixed;
+  top: 0; right: 0; bottom: 0; left: 0;
+  z-index: 156;
+  cursor: pointer;
+}
+.isOpen__menu {
+  left: 0;
+}
+.isOpen__scrim {
+  display: block;
+}
+
+@media only screen and (max-width: 47.9375em) {
+/* small */
+  .headtop__link, .headtop--input__cart span:first-of-type {
+    display: none;
+  }
+  .headtop--input__cart {
+    min-width: 66px;
+  }
+  .headtop--input__cartqty {
+    margin: 0;
+  }
+  body[data-brand="lsc"] .l-grid-headtop { height: 66px !important; }
+  body[data-brand="ltd"] .l-grid-headtop { height: 56px !important; }
+  body[data-brand="lsc"] .headtop__hb { padding: 12px 0 8px 8px; }
+  body[data-brand="ltd"] .headtop__hb { padding: 0 0 8px 8px; }
+
+  body[data-brand="lsc"] .headtop--input__cart { margin: 1px 6px 0 0; }
+  body[data-brand="ltd"] .headtop--input__cart { margin: 0 6px 0 0; }
+  .isOpen__menu {
+    width: 70%;
+  }
+	.l-2col-grid .l-2col-left {
+		display: none;
+	}
+}
+@media only screen and (min-width:48em) and (max-width:61.1875em){
+/* medium */
+  body[data-brand="lsc"] .l-grid-headtop { height: 63px !important; }
+  body[data-brand="ltd"] .l-grid-headtop { height: 56px !important; }
+
+  body[data-brand="lsc"] .headtop--input__cart { margin: 1px 1px 0 0; }
+  body[data-brand="ltd"] .headtop--input__cart { margin: 0 1px 0 0; }
+  .isOpen__menu {
+    width: 32%;
+  }
+	.l-2col-grid .l-2col-left {
+		display: none;
+	}
+}
+@media only screen and (max-width:61.1875em){
+/* small and medium */
+  .l-grid-headtop {
+    width: inherit;
+  }
+  .headtop__hb {
+    display: block;
+  }
+  .headtop__img {
+    width: 352px;
+  }
+  body[data-brand="lsc"] .headtop__img { background-image: url("/media/global/images/foundation/img/fpo/lsc-logo-md-sm.jpg"); background-size: auto;}
+  body[data-brand="ltd"] .headtop__img { background-image: url("/media/global/images/foundation/img/fpo/ltd-logo-md.jpg"); background-size: auto auto; }
+  body[data-brand="lsc"] .headtop__link { margin: 7px 1px 1px 1px; }
+  body[data-brand="ltd"] .headtop__link { margin: 5px 1px 1px 1px; }
+  .is-signed-in nav:nth-of-type(3) { width: 15% !important; }
+}
+
+@media only screen and (min-width: 61.25em){
+	/* large up */
+	.l-2col-grid {
+		align-items: flex-start;
+		display: flex;
+		flex-flow: row nowrap; /* Shorthand for flex-direction and flex-wrap */
+		justify-content: space-between;
+		margin: 0 auto;
+		padding: 0;
+		width: 980px;
+	}
+	.l-2col-grid .l-2col-left {
+		display: block;
+    padding-top: 14px;
+		width: 200px;
+	}
+	.l-2col-grid .l-2col-right {
+    border-left: solid 1px #ccc;
+    padding-left: 4px;
+		width: 780px;
+	}
+}

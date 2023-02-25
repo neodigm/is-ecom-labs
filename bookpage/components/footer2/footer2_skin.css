@@ -1,0 +1,21 @@
+/*  CSS category State    */ /*  color display font visibility ...  */
+.l-grid-footer2 {
+color: #fff;
+}
+.footer2__aside h5 {
+color: #fff;
+}
+.l-footer2 a:hover {
+color: #fff;
+}
+.footer2__copyr {
+color: #fff;
+}
+
+/*  CSS category Theme    */ /*  color background hover ...  */
+body[data-brand="lsc"] .l-footer2 a { color: #fcb9c7; }
+body[data-brand="ltd"] .l-footer2 a { color: #9de8ff; }
+body[data-brand="lsc"] .l-footer2 a:hover { color: #fff; }
+body[data-brand="ltd"] .l-footer2 a:hover { color: #fff; }
+body[data-brand="lsc"] .l-footer2 { background-color: #7e2d3e; }
+body[data-brand="ltd"] .l-footer2 { background-color: #1f5f8b; }
