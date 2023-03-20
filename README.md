@@ -18,8 +18,10 @@ eCommerce UX Experiments
 </p>
   </summary>
  <p align="center">
+<a href="https://www.thescottkrause.com/emerging_tech/curated-creative-links/">
 <img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvu.svg" width="96" alt="🏖️ Inspired Problem Solver 🚀 Visual Storyteller">
 <img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvx.svg" width="96" alt="👁️ D3 Parallax Three.js && WebGL && GSAP 🍭">
+</a>
 <br>
 <img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvi.svg" width="22" alt="🏖️ Inspired Problem Solver 🚀 Visual Storyteller ">
 <img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvn.svg" width="22" alt="3d 🌑🌒🌓🌔🌕🌖🌗🌘🌑 ">
