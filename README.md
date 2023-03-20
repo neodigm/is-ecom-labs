@@ -19,7 +19,7 @@ eCommerce UX Experiments
   </summary>
  <p align="center">
 <img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvu.svg" width="96" alt="🏖️ Inspired Problem Solver 🚀 Visual Storyteller">
-<img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvx.svg" width="96" alt="Vivid Vector Skulduggery">
+<img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvx.svg" width="96" alt="👁️ D3 Parallax Three.js && WebGL && GSAP 🍭">
 <br>
 <img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvi.svg" width="22" alt="🏖️ Inspired Problem Solver 🚀 Visual Storyteller ">
 <img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvn.svg" width="22" alt="3d 🌑🌒🌓🌔🌕🌖🌗🌘🌑 ">
