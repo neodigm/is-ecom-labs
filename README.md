@@ -28,7 +28,7 @@ eCommerce UX Experiments
 <img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvt.svg" width="22" alt="Three.js 🚀 TypeScript 🍭 WASM ✨ Go">
 <img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vve.svg" width="22" alt="3d dice">
 <img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvr.svg" width="22" alt="3d dice TypeScript ⚡ WASM ✨ Vue.J 🚀 Svelte">
-<img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vva.svg" width="22" alt="3d dice">
+<img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vva.svg" width="22" alt="👁️ D3 Parallax Three.js && WebGL && GSAP 🍭">
 <img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvc.svg" width="22" alt="3d dice">
 <img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvt.svg" width="22" alt="3d dice">
 <img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvi.svg" width="22" alt="3d dice">
