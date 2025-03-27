@@ -32,7 +32,7 @@ eCommerce UX Experiments
 <img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvc.svg" width="22" alt="Lit Web Components WASM UX PWA">
 <img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvt.svg" width="22" alt="3d dice">
 <img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvi.svg" width="22" alt="3d dice">
-<img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvv.svg" width="22" alt="3d dice">
+<img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvv.svg" width="22" alt="3d Cloudflare UX PWA SolidJS Lit ThreeJS Vue ✨HTMX Rust WASM">
 <img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vve.svg" width="22" alt="3d 🌑🌒🌓🌔🌕🌖🌗🌘🌑 ">
 <br>
 </p>
